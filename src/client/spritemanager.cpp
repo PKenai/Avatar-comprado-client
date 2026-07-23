@@ -26,6 +26,7 @@
 #include <framework/core/filestream.h>
 #include <framework/graphics/image.h>
 #include <framework/graphics/atlas.h>
+#include <framework/graphics/xbrz.h>
 #include <framework/util/crypt.h>
 #include <framework/util/pngunpacker.h>
 
@@ -307,14 +308,29 @@ ImagePtr SpriteManager::getSpriteImage(int id)
     if (m_isHdMod) {
         return getSpriteImageHd(id);
     }
-    else {
-        return getSpriteImageCasual(id);
+
+    ImagePtr image = getNativeSpriteImage(id);
+    if (!image)
+        return nullptr;
+
+    // xBRZ upscale for standard 32x32 sprites
+    if (image->getWidth() == 32) {
+        return upscaleImage(image, 2);
     }
+    return image;
+}
+
+ImagePtr SpriteManager::getNativeSpriteImage(int id)
+{
+    if (m_isHdMod) {
+        return getSpriteImageHd(id);
+    }
+    return getSpriteImageCasual(id);
 }
 
 bool SpriteManager::loadCasualSpr(std::string file)
 {
-    m_spriteSize = 32u;
+    m_spriteSize = 64u;
     try {
         file = g_resources.guessFilePath(file, "spr");
 
@@ -383,8 +399,6 @@ bool SpriteManager::loadCwmSpr(std::string file)
 ImagePtr SpriteManager::getSpriteImageCasual(int id)
 {
     try {
-        int spriteDataSize = m_spriteSize * m_spriteSize * 4;
-
         if (!m_sprites.empty()) {
             if (id >= (int)m_sprites.size())
                 return nullptr;
@@ -450,8 +464,14 @@ ImagePtr SpriteManager::getSpriteImageCasual(int id)
         m_spritesFile->getU8();
 
         uint16 pixelDataSize = m_spritesFile->getU16();
+        // Classic .spr sprites are always 32x32; m_spriteSize is the upscaled logical size (64)
+        const uint16_t spriteSize = 32;
+        const uint16 spriteDataSize = spriteSize * spriteSize * 4;
 
-        ImagePtr image(new Image(Size(m_spriteSize, m_spriteSize)));
+        if (pixelDataSize == 0 || spriteSize == 0)
+            return nullptr;
+
+        ImagePtr image(new Image(Size(spriteSize, spriteSize)));
 
         uint8* pixels = image->getPixelData();
         int writePos = 0;
@@ -482,12 +502,55 @@ ImagePtr SpriteManager::getSpriteImageCasual(int id)
             }
         }
 
+        if (writePos < spriteDataSize) {
+            while (writePos < spriteDataSize) {
+                pixels[writePos++] = 0;
+                pixels[writePos++] = 0;
+                pixels[writePos++] = 0;
+                pixels[writePos++] = 0;
+            }
+        }
+
         return image;
     }
     catch (stdext::exception& e) {
         g_logger.error(stdext::format("Failed to get sprite id %d: %s", id, e.what()));
         return nullptr;
     }
+}
+
+ImagePtr SpriteManager::upscaleImage(const ImagePtr& image, int scaleFactor)
+{
+    if (!image || scaleFactor <= 1)
+        return image;
+
+    int width = image->getWidth();
+    int height = image->getHeight();
+    uint8* pixels = image->getPixelData();
+
+    std::vector<uint32_t> srcData(width * height);
+    for (int i = 0; i < width * height; ++i) {
+        uint32_t r = pixels[i * 4 + 0];
+        uint32_t g = pixels[i * 4 + 1];
+        uint32_t b = pixels[i * 4 + 2];
+        uint32_t a = pixels[i * 4 + 3];
+        srcData[i] = (a << 24) | (r << 16) | (g << 8) | b;
+    }
+
+    std::vector<uint32_t> trgData((width * scaleFactor) * (height * scaleFactor));
+    xbrz::scale(static_cast<size_t>(scaleFactor), srcData.data(), trgData.data(),
+                width, height, xbrz::ColorFormat::ARGB);
+
+    std::vector<uint8_t> newPixelData(trgData.size() * 4);
+    for (size_t i = 0; i < trgData.size(); ++i) {
+        uint32_t pixel = trgData[i];
+        newPixelData[i * 4 + 0] = (pixel >> 16) & 0xFF;
+        newPixelData[i * 4 + 1] = (pixel >> 8) & 0xFF;
+        newPixelData[i * 4 + 2] = pixel & 0xFF;
+        newPixelData[i * 4 + 3] = (pixel >> 24) & 0xFF;
+    }
+
+    return ImagePtr(new Image(Size(width * scaleFactor, height * scaleFactor), 4, newPixelData.data()));
 }
 
 ImagePtr SpriteManager::getSpriteImageHd(int id)

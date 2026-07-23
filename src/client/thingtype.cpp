@@ -757,31 +757,58 @@ const TexturePtr& ThingType::getTexture(int animationPhase)
                                                frameIndex / (textureSize.width() / m_size.width()) * m_size.height()) * spriteSize;
 
                         if (!useCustomImage) {
-                            for (int h = 0; h < m_size.height(); ++h) {
-                                for (int w = 0; w < m_size.width(); ++w) {
-                                    uint spriteIndex = getSpriteIndex(w, h, spriteMask ? 1 : l, x, y, z, animationPhase);
-                                    ImagePtr spriteImage = g_sprites.getSpriteImage(m_spritesIndex[spriteIndex]);
-                                    if (!spriteImage) {
-                                        continue;
+                            int scaleFactor = spriteSize / 32;
+                            if (scaleFactor > 1) {
+                                // Compose at native 32px, then xBRZ-upscale the whole frame
+                                // so seams between tiles stay clean.
+                                ImagePtr compositeNative(new Image(Size(m_size.width(), m_size.height()) * 32));
+                                for (int h = 0; h < m_size.height(); ++h) {
+                                    for (int w = 0; w < m_size.width(); ++w) {
+                                        uint spriteIndex = getSpriteIndex(w, h, spriteMask ? 1 : l, x, y, z, animationPhase);
+                                        ImagePtr spriteImage = g_sprites.getNativeSpriteImage(m_spritesIndex[spriteIndex]);
+                                        if (!spriteImage) {
+                                            continue;
+                                        }
+                                        Point nativePos = Point(m_size.width() - w - 1,
+                                                                m_size.height() - h - 1) * 32;
+                                        compositeNative->blit(nativePos, spriteImage);
                                     }
-                                    Point spritePos = Point(m_size.width() - w - 1,
-                                                            m_size.height() - h - 1) * spriteSize;
-                                    fullImage->blit(framePos + spritePos, spriteImage);
+                                }
+                                compositeNative = g_sprites.upscaleImage(compositeNative, scaleFactor);
+                                fullImage->blit(framePos, compositeNative);
+                            } else {
+                                for (int h = 0; h < m_size.height(); ++h) {
+                                    for (int w = 0; w < m_size.width(); ++w) {
+                                        uint spriteIndex = getSpriteIndex(w, h, spriteMask ? 1 : l, x, y, z, animationPhase);
+                                        ImagePtr spriteImage = g_sprites.getSpriteImage(m_spritesIndex[spriteIndex]);
+                                        if (!spriteImage) {
+                                            continue;
+                                        }
+                                        Point spritePos = Point(m_size.width() - w - 1,
+                                                                m_size.height() - h - 1) * spriteSize;
+                                        fullImage->blit(framePos + spritePos, spriteImage);
+                                    }
                                 }
                             }
                         }
 
-                        Rect drawRect(framePos + Point(m_size.width(), m_size.height()) * spriteSize - Point(1,1), framePos);
-                        for(int x = framePos.x; x < framePos.x + m_size.width() * spriteSize; ++x) {
-                            for(int y = framePos.y; y < framePos.y + m_size.height() * spriteSize; ++y) {
-                                uint8 *p = fullImage->getPixel(x,y);
-                                if(p[3] != 0x00) {
-                                    drawRect.setTop   (std::min<int>(y, (int)drawRect.top()));
-                                    drawRect.setLeft  (std::min<int>(x, (int)drawRect.left()));
-                                    drawRect.setBottom(std::max<int>(y, (int)drawRect.bottom()));
-                                    drawRect.setRight (std::max<int>(x, (int)drawRect.right()));
+                        Rect drawRect(framePos, Size(m_size.width(), m_size.height()) * spriteSize);
+                        if (spriteSize <= 32) {
+                            drawRect = Rect(framePos + Point(m_size.width(), m_size.height()) * spriteSize - Point(1,1), framePos);
+                            for(int x = framePos.x; x < framePos.x + m_size.width() * spriteSize; ++x) {
+                                for(int y = framePos.y; y < framePos.y + m_size.height() * spriteSize; ++y) {
+                                    uint8 *p = fullImage->getPixel(x,y);
+                                    if(p[3] != 0x00) {
+                                        drawRect.setTop   (std::min<int>(y, (int)drawRect.top()));
+                                        drawRect.setLeft  (std::min<int>(x, (int)drawRect.left()));
+                                        drawRect.setBottom(std::max<int>(y, (int)drawRect.bottom()));
+                                        drawRect.setRight (std::max<int>(x, (int)drawRect.right()));
+                                    }
                                 }
                             }
+
+                            if (!drawRect.isValid())
+                                drawRect = Rect(framePos, Size(1, 1));
                         }
 
                         m_texturesFramesRects[animationPhase][frameIndex] = drawRect;

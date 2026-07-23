@@ -49,11 +49,13 @@ public:
     int getSpritesCount() { return m_spritesCount; }
 
     ImagePtr getSpriteImage(int id);
+    ImagePtr getNativeSpriteImage(int id);
     bool isLoaded() { return m_loaded; }
 
     int spriteSize() { return m_spriteSize; }
     float getOffsetFactor() const { return static_cast<float>(m_spriteSize) / 32.0f; }
     bool isHdMod() const { return m_isHdMod; }
+    ImagePtr upscaleImage(const ImagePtr& image, int scaleFactor);
 
 private:
     bool loadCasualSpr(std::string file);

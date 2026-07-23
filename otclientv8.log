@@ -772,3 +772,53 @@ Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
 == application started at Jul 23 2026 10:56:31
 OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
 ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 11:28:01
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water IceSpikes
+ERROR: unhandled onTalk message mode 44: Water Res
+ERROR: unhandled onTalk message mode 44: Water Shards
+ERROR: unhandled onTalk message mode 44: Water Regen
+ERROR: unhandled onTalk message mode 44: Water Cannon
+ERROR: unhandled onTextMessage message mode 46: Dica: Você pode utilizar esta dobra de duas outras formas: Water Heal "NomeDoJogador" - para curar este jogador em específico (sio) ou Water Sheal - para utilizar em si mesmo.
+ERROR: unhandled onTalk message mode 44: Water Heal
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Splipsh Splash
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Blubb
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water IceSpikes
+ERROR: unhandled onTalk message mode 44: Water Shards
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Surf
+ERROR: unhandled onTalk message mode 44: Water Cannon
+ERROR: unhandled onTalk message mode 44: Water Regen
