@@ -1,0 +1,13 @@
+# Visual Studio
+*.pdb
+*.VC.db
+*.iobj
+
+# Arquivos específicos
+modules/corelib/ui/zUniD.spr
+
+# Caso queira ignorar apenas esses arquivos:
+otclient_gl.pdb
+vc16/.vs/otclient/v17/Browse.VC.db
+vc16/otclient/OpenGL/otclient_gl.iobj
+vc16/otclient/OpenGL/vc143.pdb

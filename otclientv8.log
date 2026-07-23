@@ -1,0 +1,716 @@
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 22 2026 19:26:56
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: invalid thing type client id 7 in category 2
+ERROR: invalid thing type client id 16 in category 2
+ERROR: invalid thing type client id 35 in category 2
+ERROR: invalid thing type client id 53 in category 2
+ERROR: invalid thing type client id 62 in category 2
+ERROR: invalid thing type client id 76 in category 2
+ERROR: invalid thing type client id 77 in category 2
+ERROR: invalid thing type client id 78 in category 2
+ERROR: invalid thing type client id 80 in category 2
+ERROR: invalid thing type client id 84 in category 2
+ERROR: invalid thing type client id 94 in category 2
+ERROR: invalid thing type client id 95 in category 2
+ERROR: invalid thing type client id 96 in category 2
+ERROR: invalid thing type client id 117 in category 2
+ERROR: invalid thing type client id 118 in category 2
+ERROR: invalid thing type client id 119 in category 2
+ERROR: invalid thing type client id 120 in category 2
+ERROR: invalid thing type client id 121 in category 2
+ERROR: invalid thing type client id 123 in category 2
+ERROR: invalid thing type client id 127 in category 2
+ERROR: invalid thing type client id 130 in category 2
+ERROR: invalid thing type client id 131 in category 2
+ERROR: invalid thing type client id 133 in category 2
+ERROR: invalid thing type client id 134 in category 2
+ERROR: invalid thing type client id 135 in category 2
+ERROR: invalid thing type client id 136 in category 2
+ERROR: invalid thing type client id 137 in category 2
+ERROR: invalid thing type client id 138 in category 2
+ERROR: invalid thing type client id 139 in category 2
+ERROR: invalid thing type client id 140 in category 2
+ERROR: invalid thing type client id 145 in category 2
+ERROR: invalid thing type client id 12 in category 3
+ERROR: invalid thing type client id 37 in category 3
+ERROR: invalid thing type client id 43 in category 3
+ERROR: invalid thing type client id 49 in category 3
+ERROR: invalid thing type client id 52 in category 3
+ERROR: invalid thing type client id 622 in category 0
+ERROR: invalid thing type client id 11348 in category 0
+ERROR: invalid thing type client id 13143 in category 0
+ERROR: invalid thing type client id 13144 in category 0
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:130: in function </modules/game_textmessage/textmessage.lua:106>
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 06:43:03
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: invalid thing type client id 7 in category 2
+ERROR: invalid thing type client id 16 in category 2
+ERROR: invalid thing type client id 35 in category 2
+ERROR: invalid thing type client id 53 in category 2
+ERROR: invalid thing type client id 62 in category 2
+ERROR: invalid thing type client id 76 in category 2
+ERROR: invalid thing type client id 77 in category 2
+ERROR: invalid thing type client id 78 in category 2
+ERROR: invalid thing type client id 80 in category 2
+ERROR: invalid thing type client id 84 in category 2
+ERROR: invalid thing type client id 94 in category 2
+ERROR: invalid thing type client id 95 in category 2
+ERROR: invalid thing type client id 96 in category 2
+ERROR: invalid thing type client id 117 in category 2
+ERROR: invalid thing type client id 118 in category 2
+ERROR: invalid thing type client id 119 in category 2
+ERROR: invalid thing type client id 120 in category 2
+ERROR: invalid thing type client id 121 in category 2
+ERROR: invalid thing type client id 123 in category 2
+ERROR: invalid thing type client id 127 in category 2
+ERROR: invalid thing type client id 130 in category 2
+ERROR: invalid thing type client id 131 in category 2
+ERROR: invalid thing type client id 133 in category 2
+ERROR: invalid thing type client id 134 in category 2
+ERROR: invalid thing type client id 135 in category 2
+ERROR: invalid thing type client id 136 in category 2
+ERROR: invalid thing type client id 137 in category 2
+ERROR: invalid thing type client id 138 in category 2
+ERROR: invalid thing type client id 139 in category 2
+ERROR: invalid thing type client id 140 in category 2
+ERROR: invalid thing type client id 145 in category 2
+ERROR: invalid thing type client id 12 in category 3
+ERROR: invalid thing type client id 37 in category 3
+ERROR: invalid thing type client id 43 in category 3
+ERROR: invalid thing type client id 49 in category 3
+ERROR: invalid thing type client id 52 in category 3
+ERROR: invalid thing type client id 622 in category 0
+ERROR: invalid thing type client id 11348 in category 0
+ERROR: invalid thing type client id 13143 in category 0
+ERROR: invalid thing type client id 13144 in category 0
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+ERROR: unhandled onTalk message mode 51: Do you want to change your {password}, generate a {recovery key}, create a {character}, or {delete} an existing character?
+ERROR: unhandled onTalk message mode 51: Sorry, but I can't understand you, please try to repeat.
+ERROR: unhandled onTalk message mode 51: Sorry, but I can't understand you, please try to repeat.
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 06:44:55
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: invalid thing type client id 7 in category 2
+ERROR: invalid thing type client id 16 in category 2
+ERROR: invalid thing type client id 35 in category 2
+ERROR: invalid thing type client id 53 in category 2
+ERROR: invalid thing type client id 62 in category 2
+ERROR: invalid thing type client id 76 in category 2
+ERROR: invalid thing type client id 77 in category 2
+ERROR: invalid thing type client id 78 in category 2
+ERROR: invalid thing type client id 80 in category 2
+ERROR: invalid thing type client id 84 in category 2
+ERROR: invalid thing type client id 94 in category 2
+ERROR: invalid thing type client id 95 in category 2
+ERROR: invalid thing type client id 96 in category 2
+ERROR: invalid thing type client id 117 in category 2
+ERROR: invalid thing type client id 118 in category 2
+ERROR: invalid thing type client id 119 in category 2
+ERROR: invalid thing type client id 120 in category 2
+ERROR: invalid thing type client id 121 in category 2
+ERROR: invalid thing type client id 123 in category 2
+ERROR: invalid thing type client id 127 in category 2
+ERROR: invalid thing type client id 130 in category 2
+ERROR: invalid thing type client id 131 in category 2
+ERROR: invalid thing type client id 133 in category 2
+ERROR: invalid thing type client id 134 in category 2
+ERROR: invalid thing type client id 135 in category 2
+ERROR: invalid thing type client id 136 in category 2
+ERROR: invalid thing type client id 137 in category 2
+ERROR: invalid thing type client id 138 in category 2
+ERROR: invalid thing type client id 139 in category 2
+ERROR: invalid thing type client id 140 in category 2
+ERROR: invalid thing type client id 145 in category 2
+ERROR: invalid thing type client id 12 in category 3
+ERROR: invalid thing type client id 37 in category 3
+ERROR: invalid thing type client id 43 in category 3
+ERROR: invalid thing type client id 49 in category 3
+ERROR: invalid thing type client id 52 in category 3
+ERROR: invalid thing type client id 622 in category 0
+ERROR: invalid thing type client id 11348 in category 0
+ERROR: invalid thing type client id 13143 in category 0
+ERROR: invalid thing type client id 13144 in category 0
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 06:45:12
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: invalid thing type client id 7 in category 2
+ERROR: invalid thing type client id 16 in category 2
+ERROR: invalid thing type client id 35 in category 2
+ERROR: invalid thing type client id 53 in category 2
+ERROR: invalid thing type client id 62 in category 2
+ERROR: invalid thing type client id 76 in category 2
+ERROR: invalid thing type client id 77 in category 2
+ERROR: invalid thing type client id 78 in category 2
+ERROR: invalid thing type client id 80 in category 2
+ERROR: invalid thing type client id 84 in category 2
+ERROR: invalid thing type client id 94 in category 2
+ERROR: invalid thing type client id 95 in category 2
+ERROR: invalid thing type client id 96 in category 2
+ERROR: invalid thing type client id 117 in category 2
+ERROR: invalid thing type client id 118 in category 2
+ERROR: invalid thing type client id 119 in category 2
+ERROR: invalid thing type client id 120 in category 2
+ERROR: invalid thing type client id 121 in category 2
+ERROR: invalid thing type client id 123 in category 2
+ERROR: invalid thing type client id 127 in category 2
+ERROR: invalid thing type client id 130 in category 2
+ERROR: invalid thing type client id 131 in category 2
+ERROR: invalid thing type client id 133 in category 2
+ERROR: invalid thing type client id 134 in category 2
+ERROR: invalid thing type client id 135 in category 2
+ERROR: invalid thing type client id 136 in category 2
+ERROR: invalid thing type client id 137 in category 2
+ERROR: invalid thing type client id 138 in category 2
+ERROR: invalid thing type client id 139 in category 2
+ERROR: invalid thing type client id 140 in category 2
+ERROR: invalid thing type client id 145 in category 2
+ERROR: invalid thing type client id 12 in category 3
+ERROR: invalid thing type client id 37 in category 3
+ERROR: invalid thing type client id 43 in category 3
+ERROR: invalid thing type client id 49 in category 3
+ERROR: invalid thing type client id 52 in category 3
+ERROR: invalid thing type client id 622 in category 0
+ERROR: invalid thing type client id 11348 in category 0
+ERROR: invalid thing type client id 13143 in category 0
+ERROR: invalid thing type client id 13144 in category 0
+ERROR: unhandled onTalk message mode 51: Sorry, but I can't understand you, please try to repeat.
+ERROR: unhandled onTalk message mode 51: Sorry, but I can't understand you, please try to repeat.
+ERROR: unhandled onTalk message mode 51: Sorry, but I can't understand you, please try to repeat.
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 06:45:36
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: invalid thing type client id 7 in category 2
+ERROR: invalid thing type client id 16 in category 2
+ERROR: invalid thing type client id 35 in category 2
+ERROR: invalid thing type client id 53 in category 2
+ERROR: invalid thing type client id 62 in category 2
+ERROR: invalid thing type client id 76 in category 2
+ERROR: invalid thing type client id 77 in category 2
+ERROR: invalid thing type client id 78 in category 2
+ERROR: invalid thing type client id 80 in category 2
+ERROR: invalid thing type client id 84 in category 2
+ERROR: invalid thing type client id 94 in category 2
+ERROR: invalid thing type client id 95 in category 2
+ERROR: invalid thing type client id 96 in category 2
+ERROR: invalid thing type client id 117 in category 2
+ERROR: invalid thing type client id 118 in category 2
+ERROR: invalid thing type client id 119 in category 2
+ERROR: invalid thing type client id 120 in category 2
+ERROR: invalid thing type client id 121 in category 2
+ERROR: invalid thing type client id 123 in category 2
+ERROR: invalid thing type client id 127 in category 2
+ERROR: invalid thing type client id 130 in category 2
+ERROR: invalid thing type client id 131 in category 2
+ERROR: invalid thing type client id 133 in category 2
+ERROR: invalid thing type client id 134 in category 2
+ERROR: invalid thing type client id 135 in category 2
+ERROR: invalid thing type client id 136 in category 2
+ERROR: invalid thing type client id 137 in category 2
+ERROR: invalid thing type client id 138 in category 2
+ERROR: invalid thing type client id 139 in category 2
+ERROR: invalid thing type client id 140 in category 2
+ERROR: invalid thing type client id 145 in category 2
+ERROR: invalid thing type client id 12 in category 3
+ERROR: invalid thing type client id 37 in category 3
+ERROR: invalid thing type client id 43 in category 3
+ERROR: invalid thing type client id 49 in category 3
+ERROR: invalid thing type client id 52 in category 3
+ERROR: invalid thing type client id 622 in category 0
+ERROR: invalid thing type client id 11348 in category 0
+ERROR: invalid thing type client id 13143 in category 0
+ERROR: invalid thing type client id 13144 in category 0
+ERROR: protected lua call failed: /modules/game_console/console.lua:649: attempt to call method 'setMultiColor' (a nil value)
+stack traceback:
+	[C]: in function 'setMultiColor'
+	/modules/game_console/console.lua:649: in function 'addTabText'
+	/modules/game_console/console.lua:507: in function 'addText'
+	/modules/game_textmessage/textmessage.lua:129: in function </modules/game_textmessage/textmessage.lua:106>
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 08:28:29
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+FATAL ERROR: Unable to load module 'game_console': /modules/game_console/console.lua:34: table index is nil
+stack traceback:
+	[C]: in function '__newindex'
+	/modules/game_console/console.lua:34: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:76: in function 'loadModules'
+	/init.lua:93: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 08:46:07
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: invalid thing type client id 7 in category 2
+ERROR: invalid thing type client id 16 in category 2
+ERROR: invalid thing type client id 35 in category 2
+ERROR: invalid thing type client id 53 in category 2
+ERROR: invalid thing type client id 62 in category 2
+ERROR: invalid thing type client id 76 in category 2
+ERROR: invalid thing type client id 77 in category 2
+ERROR: invalid thing type client id 78 in category 2
+ERROR: invalid thing type client id 80 in category 2
+ERROR: invalid thing type client id 84 in category 2
+ERROR: invalid thing type client id 94 in category 2
+ERROR: invalid thing type client id 95 in category 2
+ERROR: invalid thing type client id 96 in category 2
+ERROR: invalid thing type client id 117 in category 2
+ERROR: invalid thing type client id 118 in category 2
+ERROR: invalid thing type client id 119 in category 2
+ERROR: invalid thing type client id 120 in category 2
+ERROR: invalid thing type client id 121 in category 2
+ERROR: invalid thing type client id 123 in category 2
+ERROR: invalid thing type client id 127 in category 2
+ERROR: invalid thing type client id 130 in category 2
+ERROR: invalid thing type client id 131 in category 2
+ERROR: invalid thing type client id 133 in category 2
+ERROR: invalid thing type client id 134 in category 2
+ERROR: invalid thing type client id 135 in category 2
+ERROR: invalid thing type client id 136 in category 2
+ERROR: invalid thing type client id 137 in category 2
+ERROR: invalid thing type client id 138 in category 2
+ERROR: invalid thing type client id 139 in category 2
+ERROR: invalid thing type client id 140 in category 2
+ERROR: invalid thing type client id 145 in category 2
+ERROR: invalid thing type client id 12 in category 3
+ERROR: invalid thing type client id 37 in category 3
+ERROR: invalid thing type client id 43 in category 3
+ERROR: invalid thing type client id 49 in category 3
+ERROR: invalid thing type client id 52 in category 3
+ERROR: invalid thing type client id 622 in category 0
+ERROR: invalid thing type client id 11348 in category 0
+ERROR: invalid thing type client id 13143 in category 0
+ERROR: invalid thing type client id 13144 in category 0
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 09:20:55
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: invalid thing type client id 7 in category 2
+ERROR: invalid thing type client id 16 in category 2
+ERROR: invalid thing type client id 35 in category 2
+ERROR: invalid thing type client id 53 in category 2
+ERROR: invalid thing type client id 62 in category 2
+ERROR: invalid thing type client id 76 in category 2
+ERROR: invalid thing type client id 77 in category 2
+ERROR: invalid thing type client id 78 in category 2
+ERROR: invalid thing type client id 80 in category 2
+ERROR: invalid thing type client id 84 in category 2
+ERROR: invalid thing type client id 94 in category 2
+ERROR: invalid thing type client id 95 in category 2
+ERROR: invalid thing type client id 96 in category 2
+ERROR: invalid thing type client id 117 in category 2
+ERROR: invalid thing type client id 118 in category 2
+ERROR: invalid thing type client id 119 in category 2
+ERROR: invalid thing type client id 120 in category 2
+ERROR: invalid thing type client id 121 in category 2
+ERROR: invalid thing type client id 123 in category 2
+ERROR: invalid thing type client id 127 in category 2
+ERROR: invalid thing type client id 130 in category 2
+ERROR: invalid thing type client id 131 in category 2
+ERROR: invalid thing type client id 133 in category 2
+ERROR: invalid thing type client id 134 in category 2
+ERROR: invalid thing type client id 135 in category 2
+ERROR: invalid thing type client id 136 in category 2
+ERROR: invalid thing type client id 137 in category 2
+ERROR: invalid thing type client id 138 in category 2
+ERROR: invalid thing type client id 139 in category 2
+ERROR: invalid thing type client id 140 in category 2
+ERROR: invalid thing type client id 145 in category 2
+ERROR: invalid thing type client id 12 in category 3
+ERROR: invalid thing type client id 37 in category 3
+ERROR: invalid thing type client id 43 in category 3
+ERROR: invalid thing type client id 49 in category 3
+ERROR: invalid thing type client id 52 in category 3
+ERROR: invalid thing type client id 622 in category 0
+ERROR: invalid thing type client id 11348 in category 0
+ERROR: invalid thing type client id 13143 in category 0
+ERROR: invalid thing type client id 13144 in category 0
+ERROR: unhandled onTextMessage message mode 46: You can only use Cast System if you are Premium Account.
+ERROR: unhandled onTextMessage message mode 46: You can only use Cast System if you are Premium Account.
+ERROR: unhandled onTextMessage message mode 46: You can only use Cast System if you are Premium Account.
+ERROR: unhandled onTextMessage message mode 46: You can only use Cast System if you are Premium Account.
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 09:25:41
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: invalid thing type client id 7 in category 2
+ERROR: invalid thing type client id 16 in category 2
+ERROR: invalid thing type client id 35 in category 2
+ERROR: invalid thing type client id 53 in category 2
+ERROR: invalid thing type client id 62 in category 2
+ERROR: invalid thing type client id 76 in category 2
+ERROR: invalid thing type client id 77 in category 2
+ERROR: invalid thing type client id 78 in category 2
+ERROR: invalid thing type client id 80 in category 2
+ERROR: invalid thing type client id 84 in category 2
+ERROR: invalid thing type client id 94 in category 2
+ERROR: invalid thing type client id 95 in category 2
+ERROR: invalid thing type client id 96 in category 2
+ERROR: invalid thing type client id 117 in category 2
+ERROR: invalid thing type client id 118 in category 2
+ERROR: invalid thing type client id 119 in category 2
+ERROR: invalid thing type client id 120 in category 2
+ERROR: invalid thing type client id 121 in category 2
+ERROR: invalid thing type client id 123 in category 2
+ERROR: invalid thing type client id 127 in category 2
+ERROR: invalid thing type client id 130 in category 2
+ERROR: invalid thing type client id 131 in category 2
+ERROR: invalid thing type client id 133 in category 2
+ERROR: invalid thing type client id 134 in category 2
+ERROR: invalid thing type client id 135 in category 2
+ERROR: invalid thing type client id 136 in category 2
+ERROR: invalid thing type client id 137 in category 2
+ERROR: invalid thing type client id 138 in category 2
+ERROR: invalid thing type client id 139 in category 2
+ERROR: invalid thing type client id 140 in category 2
+ERROR: invalid thing type client id 145 in category 2
+ERROR: invalid thing type client id 12 in category 3
+ERROR: invalid thing type client id 37 in category 3
+ERROR: invalid thing type client id 43 in category 3
+ERROR: invalid thing type client id 49 in category 3
+ERROR: invalid thing type client id 52 in category 3
+ERROR: invalid thing type client id 622 in category 0
+ERROR: invalid thing type client id 11348 in category 0
+ERROR: invalid thing type client id 13143 in category 0
+ERROR: invalid thing type client id 13144 in category 0
+ERROR: unhandled onTextMessage message mode 46: You can only use Cast System if you are Premium Account.
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 09:46:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to read dat '/modules/corelib/ui/zUniD.dat': corrupt data (id: 770, category: 0, count: 255, lastAttr: 0)'
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 09:47:07
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 09:50:54
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 09:52:15
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 09:58:16
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
+== application started at Jul 23 2026 10:01:07
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
