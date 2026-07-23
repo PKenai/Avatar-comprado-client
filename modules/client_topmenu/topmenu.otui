@@ -46,4 +46,4 @@ TopMenuPanel
     anchors.bottom: parent.bottom
     anchors.right: parent.right
     visible: false
-    margim-right: 3
+    margin-right: 3

@@ -714,3 +714,61 @@ Found work dir at 'C:/Users/imfis/Desktop/Avinha/cliente/'
 OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
 ERROR: Layour mobile doesn't exist, using default
 Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 10:34:06
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unable to load cursors file: unable to open file '/cursors/cursors.otml': not found
+ERROR: failed to load UI from 'topmenu.otui': 'TopMenuPanel' is not a defined style
+FATAL ERROR: Unable to load module 'client_topmenu': /modules/client_topmenu/topmenu.lua:47: attempt to index upvalue 'topMenu' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:47: in function 'init'
+	/modules/client_topmenu/topmenu.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 10:34:44
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unable to load cursors file: unable to open file '/cursors/cursors.otml': not found
+ERROR: failed to load UI from 'topmenu.otui': 'TopMenuPanel' is not a defined style
+FATAL ERROR: Unable to load module 'client_topmenu': /modules/client_topmenu/topmenu.lua:47: attempt to index upvalue 'topMenu' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:47: in function 'init'
+	/modules/client_topmenu/topmenu.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 10:35:08
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unable to load cursors file: unable to open file '/cursors/cursors.otml': not found
+ERROR: failed to load UI from 'topmenu.otui': 'TopMenuPanel' is not a defined style
+FATAL ERROR: Unable to load module 'client_topmenu': /modules/client_topmenu/topmenu.lua:47: attempt to index upvalue 'topMenu' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:47: in function 'init'
+	/modules/client_topmenu/topmenu.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 10:56:31
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 22 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
