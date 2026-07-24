@@ -21,7 +21,10 @@ local defaultOptions = {
   autoloot = false,
   displayNames = true,
   displayHealth = true,
-  displayText = true
+  displayText = true,
+  hdMode = true,
+  drawShadows = true,
+  floorShadow = true
 }
 
 local optionsWindow
@@ -60,6 +63,14 @@ function init()
   for k,v in pairs(defaultOptions) do
     g_settings.setDefault(k, v)
     options[k] = v
+  end
+
+  g_app.setDrawShadows(g_settings.getBoolean('drawShadows'))
+  if g_settings.getBoolean('floorShadow') then
+    g_game.enableFeature(GameDrawFloorShadow)
+  end
+  if g_sprites.setHdMode then
+    g_sprites.setHdMode(g_settings.getBoolean('hdMode'))
   end
 
   optionsWindow = g_ui.displayUI('options')
@@ -188,6 +199,18 @@ function setOption(key, value, force)
     gameMapPanel:setDrawHealthBars(value)
   elseif key == 'displayText' then
     gameMapPanel:setDrawTexts(value)
+  elseif key == 'hdMode' then
+    if g_sprites.setHdMode then
+      g_sprites.setHdMode(value)
+    end
+  elseif key == 'drawShadows' then
+    g_app.setDrawShadows(value)
+  elseif key == 'floorShadow' then
+    if value then
+      g_game.enableFeature(GameDrawFloorShadow)
+    else
+      g_game.disableFeature(GameDrawFloorShadow)
+    end
   end
 
   -- change value for keybind updates

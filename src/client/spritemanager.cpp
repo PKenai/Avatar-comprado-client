@@ -22,6 +22,7 @@
 
 #include "spritemanager.h"
 #include "game.h"
+#include "thingtypemanager.h"
 #include <framework/core/resourcemanager.h>
 #include <framework/core/filestream.h>
 #include <framework/graphics/image.h>
@@ -313,8 +314,8 @@ ImagePtr SpriteManager::getSpriteImage(int id)
     if (!image)
         return nullptr;
 
-    // xBRZ upscale for standard 32x32 sprites
-    if (image->getWidth() == 32) {
+    // xBRZ upscale for standard 32x32 sprites when HD mode is enabled
+    if (m_hdMode && image->getWidth() == 32) {
         return upscaleImage(image, 2);
     }
     return image;
@@ -328,9 +329,24 @@ ImagePtr SpriteManager::getNativeSpriteImage(int id)
     return getSpriteImageCasual(id);
 }
 
+void SpriteManager::setHdMode(bool enabled)
+{
+    if (m_isHdMod) {
+        m_hdMode = true;
+        return;
+    }
+
+    if (m_hdMode == enabled)
+        return;
+
+    m_hdMode = enabled;
+    m_spriteSize = enabled ? 64u : 32u;
+    g_things.unloadTextures();
+}
+
 bool SpriteManager::loadCasualSpr(std::string file)
 {
-    m_spriteSize = 64u;
+    m_spriteSize = m_hdMode ? 64u : 32u;
     try {
         file = g_resources.guessFilePath(file, "spr");
 

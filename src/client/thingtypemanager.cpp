@@ -93,6 +93,16 @@ void ThingTypeManager::check()
     }
 }
 
+void ThingTypeManager::unloadTextures()
+{
+    for (size_t i = 0; i < ThingLastCategory; ++i) {
+        for (size_t j = 0; j < m_thingTypes[i].size(); ++j) {
+            if (m_thingTypes[i][j] && m_thingTypes[i][j]->isLoaded())
+                m_thingTypes[i][j]->unload();
+        }
+    }
+}
+
 #ifdef WITH_ENCRYPTION
 void ThingTypeManager::saveDat(std::string fileName)
 {

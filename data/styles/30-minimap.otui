@@ -74,19 +74,19 @@ Minimap < UIMinimap
   color: black
 
   MinimapFloorUpButton
-    id: floorUp
+    id: floorUpButton
     @onClick: self:getParent():floorUp(1)
 
   MinimapFloorDownButton
-    id: floorDown
+    id: floorDownButton
     @onClick: self:getParent():floorDown(1)
 
   MinimapZoomInButton
-    id: zoomIn
+    id: zoomInButton
     @onClick: self:getParent():zoomIn()
 
   MinimapZoomOutButton
-    id: zoomOut
+    id: zoomOutButton
     @onClick: self:getParent():zoomOut()
 
   MinimapCloseButton
@@ -94,7 +94,7 @@ Minimap < UIMinimap
     @onClick: addEvent(function() modules.game_minimap.toggleFullMap() end)
 
   MinimapResetButton
-    id: reset
+    id: resetButton
     @onClick: self:getParent():reset()
 
 

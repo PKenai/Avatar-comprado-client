@@ -65,6 +65,9 @@ public:
 
     void doMapScreenshot(std::string fileName);
 
+    void setDrawShadows(bool value) { m_drawShadows = value; }
+    bool isDrawShadows() { return m_drawShadows; }
+
 protected:
     void resize(const Size& size);
     void inputEvent(InputEvent event);
@@ -80,6 +83,7 @@ private:
     FrameCounter m_graphicsFrames;
     FrameCounter m_processingFrames;
     stdext::timer m_windowPollTimer;
+    stdext::boolean<true> m_drawShadows;
 };
 
 extern GraphicalApplication g_app;

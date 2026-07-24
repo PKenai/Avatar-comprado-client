@@ -162,6 +162,7 @@ private:
     std::vector<TilePtr> m_cachedVisibleTiles[Otc::MAX_Z + 1];
     CreaturePtr m_followingCreature;
     Otc::DrawFlags m_drawFlags;
+    Color m_floorShadow = Color(0.0f, 0.0f, 0.0f, 0.5f);
     bool m_drawLight = false;
     float m_minimumAmbientLight;
     std::unique_ptr<LightView> m_lightView;

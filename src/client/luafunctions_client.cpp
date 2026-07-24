@@ -79,6 +79,7 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_things", "findItemTypeByCategory", &ThingTypeManager::findItemTypeByCategory, &g_things);
     g_lua.bindSingletonFunction("g_things", "findThingTypeByAttr", &ThingTypeManager::findThingTypeByAttr, &g_things);
     g_lua.bindSingletonFunction("g_things", "getMarketCategories", &ThingTypeManager::getMarketCategories, &g_things);
+    g_lua.bindSingletonFunction("g_things", "unloadTextures", &ThingTypeManager::unloadTextures, &g_things);
     
     g_lua.registerSingletonClass("g_houses");
     g_lua.bindSingletonFunction("g_houses", "clear",          &HouseManager::clear,          &g_houses);
@@ -112,6 +113,8 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_sprites", "isLoaded", &SpriteManager::isLoaded, &g_sprites);
     g_lua.bindSingletonFunction("g_sprites", "getSprSignature", &SpriteManager::getSignature, &g_sprites);
     g_lua.bindSingletonFunction("g_sprites", "getSpritesCount", &SpriteManager::getSpritesCount, &g_sprites);
+    g_lua.bindSingletonFunction("g_sprites", "setHdMode", &SpriteManager::setHdMode, &g_sprites);
+    g_lua.bindSingletonFunction("g_sprites", "isHdMode", &SpriteManager::isHdMode, &g_sprites);
 
     g_lua.registerSingletonClass("g_map");
     g_lua.bindSingletonFunction("g_map", "isLookPossible", &Map::isLookPossible, &g_map);

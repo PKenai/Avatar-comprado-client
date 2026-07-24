@@ -24,6 +24,7 @@
 #include "game.h"
 #include "spritemanager.h"
 
+#include <algorithm>
 #include <framework/graphics/painter.h>
 #include <framework/graphics/drawcache.h>
 #include <framework/graphics/drawqueue.h>
@@ -372,6 +373,16 @@ void Outfit::draw(const Rect& dest, Otc::Direction direction, uint animationPhas
     g_drawQueue->correctOutfit(dest, size, oldScaling);
 }
 
+void Outfit::drawShadow(Point dest, Otc::Direction direction, uint walkAnimationPhase, bool animate, float opacity)
+{
+    size_t drawStart = g_drawQueue->size();
+    Outfit shadowOutfit = *this;
+    shadowOutfit.draw(dest, direction, walkAnimationPhase, animate, nullptr, false);
+    g_drawQueue->setShadow(drawStart);
+    const float clampedOpacity = std::max(0.f, std::min(1.f, opacity));
+    g_drawQueue->setOpacity(drawStart, clampedOpacity);
+}
+
 void Outfit::resetClothes()
 {
     setHead(0);
@@ -388,6 +399,8 @@ void Outfit::resetClothes()
 
 bool DrawQueueItemOutfit::cache()
 {
+    if (m_noCache || m_isShadow)
+        return false;
     m_texture->update();
     uint64_t hash = (((uint64_t)m_texture->getUniqueId()) << 48) +
         (((uint64_t)m_src.x()) << 36) +
@@ -410,6 +423,34 @@ bool DrawQueueItemOutfit::cache()
 void DrawQueueItemOutfit::draw()
 {
     if (!m_texture) return;
+    if (m_isShadow) {
+        g_framebuffers.getTemporaryFrameBuffer()->resize(m_src.size());
+        g_framebuffers.getTemporaryFrameBuffer()->setSmooth(true);
+        g_framebuffers.getTemporaryFrameBuffer()->bind();
+        g_painter->clear(Color::alpha);
+
+        Matrix4 mat4;
+        for (int x = 0; x < 4; ++x) {
+            Color color = Color::getOutfitColor((m_colors >> (x * 8)) & 0xFF);
+            mat4(x + 1, 1) = color.rF();
+            mat4(x + 1, 2) = color.gF();
+            mat4(x + 1, 3) = color.bF();
+            mat4(x + 1, 4) = color.aF();
+        }
+        g_painter->setDrawOutfitLayersProgram();
+        g_painter->setMatrixColor(mat4);
+        g_painter->setOffset(m_offset);
+        g_painter->drawTexturedRect(Rect(0, 0, m_src.size()), m_texture, m_src);
+        g_painter->resetShaderProgram();
+
+        g_framebuffers.getTemporaryFrameBuffer()->release();
+
+        g_painter->setDrawColorOnTextureShaderProgram();
+        g_painter->setColor(Color(0, 0, 0, 70));
+        g_framebuffers.getTemporaryFrameBuffer()->draw(m_dest);
+        g_painter->resetShaderProgram();
+        return;
+    }
     Matrix4 mat4;
     for (int x = 0; x < 4; ++x) {
         Color color = Color::getOutfitColor((m_colors >> (x * 8)) & 0xFF);
@@ -428,6 +469,34 @@ void DrawQueueItemOutfit::draw()
 void DrawQueueItemOutfit::draw(const Point& pos)
 {
     if (!m_texture) return;
+    if (m_isShadow) {
+        g_framebuffers.getTemporaryFrameBuffer()->resize(m_src.size());
+        g_framebuffers.getTemporaryFrameBuffer()->setSmooth(true);
+        g_framebuffers.getTemporaryFrameBuffer()->bind();
+        g_painter->clear(Color::alpha);
+
+        Matrix4 mat4;
+        for (int x = 0; x < 4; ++x) {
+            Color color = Color::getOutfitColor((m_colors >> (x * 8)) & 0xFF);
+            mat4(x + 1, 1) = color.rF();
+            mat4(x + 1, 2) = color.gF();
+            mat4(x + 1, 3) = color.bF();
+            mat4(x + 1, 4) = color.aF();
+        }
+        g_painter->setDrawOutfitLayersProgram();
+        g_painter->setMatrixColor(mat4);
+        g_painter->setOffset(m_offset);
+        g_painter->drawTexturedRect(Rect(0, 0, m_src.size()), m_texture, m_src);
+        g_painter->resetShaderProgram();
+
+        g_framebuffers.getTemporaryFrameBuffer()->release();
+
+        g_painter->setDrawColorOnTextureShaderProgram();
+        g_painter->setColor(Color(0, 0, 0, 70));
+        g_framebuffers.getTemporaryFrameBuffer()->draw(Rect(pos, m_src.size()));
+        g_painter->resetShaderProgram();
+        return;
+    }
     Matrix4 mat4;
     for (int x = 0; x < 4; ++x) {
         Color color = Color::getOutfitColor((m_colors >> (x * 8)) & 0xFF);

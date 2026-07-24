@@ -23,6 +23,21 @@ Panel
     !text: tr('Fullscreen')
     tooltip: Ctrl+Shift+F
 
+  OptionCheckBox
+    id: hdMode
+    !text: tr('HD Mode')
+    !tooltip: tr('Upscale sprites with xBRZ (64px). Toggle may reload textures.')
+
+  OptionCheckBox
+    id: drawShadows
+    !text: tr('Shadows')
+    !tooltip: tr('Draw soft shadows under creatures')
+
+  OptionCheckBox
+    id: floorShadow
+    !text: tr('Floor Shadow')
+    !tooltip: tr('Darken underground floors')
+
   Label
     id: backgroundFrameRateLabel
     !text: tr('Game framerate limit: %s', 'max')

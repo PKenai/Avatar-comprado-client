@@ -41,6 +41,9 @@ struct DrawQueueItemTexturedRect : public DrawQueueItem {
     virtual void draw(const Point& pos);
     virtual bool cache();
 
+    bool m_noCache = false;   // skip atlas cache (needed for rotated/shadow draws)
+    bool m_isShadow = false;  // draw as black silhouette via color shader
+
     Rect m_dest;
     Rect m_src;
 };
@@ -309,6 +312,17 @@ public:
     {
         if (start == m_queue.size()) return;
         m_conditions.push_back(new DrawQueueConditionMark(start, m_queue.size(), color));
+    }
+
+    void setShadow(size_t start)
+    {
+        for (size_t i = start; i < m_queue.size(); ++i) {
+            DrawQueueItemTexturedRect* texture = dynamic_cast<DrawQueueItemTexturedRect*>(m_queue[i]);
+            if (texture) {
+                texture->m_noCache = true;
+                texture->m_isShadow = true;
+            }
+        }
     }
 
     void markMapPosition()

@@ -1,9 +1,9 @@
 function UIMinimap:onSetup()
   self.flagWindow = nil
-  self.floorUpWidget = self:getChildById('floorUp')
-  self.floorDownWidget = self:getChildById('floorDown')
-  self.zoomInWidget = self:getChildById('zoomIn')
-  self.zoomOutWidget = self:getChildById('zoomOut')
+  self.floorUpWidget = self:getChildById('floorUpButton')
+  self.floorDownWidget = self:getChildById('floorDownButton')
+  self.zoomInWidget = self:getChildById('zoomInButton')
+  self.zoomOutWidget = self:getChildById('zoomOutButton')
   self.flags = {}
   self.alternatives = {}
   self.autowalk = true

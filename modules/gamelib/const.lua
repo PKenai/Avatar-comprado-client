@@ -135,6 +135,7 @@ GameDeathType = 70
 GameIdleAnimations = 71 -- Frame Groups (idle + walking) no DAT
 GameKeepUnawareTiles = 72
 GameIngameStore = 73
+GameDrawFloorShadow = 128
 
 TextColors = {
   red       = '#f55e5e', --'#c83200'

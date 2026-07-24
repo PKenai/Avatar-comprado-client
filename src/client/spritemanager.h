@@ -57,6 +57,9 @@ public:
     bool isHdMod() const { return m_isHdMod; }
     ImagePtr upscaleImage(const ImagePtr& image, int scaleFactor);
 
+    void setHdMode(bool enabled);
+    bool isHdMode() { return m_hdMode; }
+
 private:
     bool loadCasualSpr(std::string file);
     bool loadCwmSpr(std::string file);
@@ -65,6 +68,7 @@ private:
     ImagePtr getSpriteImageHd(int id);
     bool m_loaded = false;
     bool m_isHdMod = false;
+    bool m_hdMode = true;
     uint32 m_signature;
     int m_spritesCount;
     int m_spritesOffset;

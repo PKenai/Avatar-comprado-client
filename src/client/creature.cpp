@@ -103,6 +103,26 @@ void Creature::draw(const Point& dest, bool animate, LightView* lightView)
     if (m_outfit.getCategory() != ThingCategoryCreature)
         animationOffset -= getDisplacement();
 
+    // Soft creature shadow (Sakken-style, lighter: creatures only)
+    if (g_app.isDrawShadows()) {
+        Point shadowOffset = Point(-2, -1);
+        size_t shadowDrawQueueStart = g_drawQueue->size();
+
+        // Keep shadow on the ground while jumping
+        Point shadowPos = dest + animationOffset + shadowOffset;
+        Outfit shadowOutfit = m_outfit;
+        shadowOutfit.setWings(0);
+        shadowOutfit.setAura(0);
+        shadowOutfit.resetShader();
+        shadowOutfit.drawShadow(shadowPos, m_walking ? m_walkDirection : m_direction,
+                                m_walkAnimationPhase, animate, 0.28f);
+
+        int pivotX = (rawGetThingType()->getWidth() % 2 == 1) ? sprSize / 2 : 0;
+        Point shadowCenter = shadowPos + Point(pivotX, sprSize) - getDisplacement();
+        const float angleRad = -12.0f * 3.14159265f / 180.0f;
+        g_drawQueue->setRotation(shadowDrawQueueStart, shadowCenter, angleRad);
+    }
+
     size_t drawQueueSize = g_drawQueue->size();
     m_outfit.draw(dest - jumpOffset + animationOffset, m_walking ? m_walkDirection : m_direction, m_walkAnimationPhase, true, lightView);
     if (m_marked) {

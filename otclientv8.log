@@ -822,3 +822,743 @@ ERROR: unhandled onTalk message mode 44: Water Whip
 ERROR: unhandled onTalk message mode 44: Water Surf
 ERROR: unhandled onTalk message mode 44: Water Cannon
 ERROR: unhandled onTalk message mode 44: Water Regen
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 12:14:10
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTextMessage message mode 46: Invalid param specified.
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water IceSpikes
+ERROR: unhandled onTalk message mode 44: Water Res
+ERROR: unhandled onTalk message mode 44: Water Shards
+ERROR: unhandled onTalk message mode 44: Water Surf
+ERROR: unhandled onTalk message mode 44: Water Cannon
+ERROR: unhandled onTalk message mode 44: Splipsh Splash
+ERROR: unhandled onTalk message mode 44: Water Regen
+ERROR: unhandled onTalk message mode 44: Water Heal
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Splipsh Splash
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Splipsh Splash
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Blubb
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Chomp.
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 15:39:28
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 15:46:39
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Water Surf
+ERROR: unhandled onTalk message mode 44: Water Res
+ERROR: unhandled onTalk message mode 44: Splipsh Splash
+ERROR: unhandled onTalk message mode 44: Zuko is most stronger than all fire benders!
+ERROR: unhandled onTalk message mode 44: Zuko is most stronger than all fire benders!
+ERROR: unhandled onTalk message mode 44: Have you seen Wan Shi Tong?
+ERROR: unhandled onTextMessage message mode 46: Town 11 does not exists or has invalid temple position.
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 18:26:29
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: unhandled onTalk message mode 44: Water Regen
+ERROR: unhandled onTalk message mode 44: Water Cannon
+ERROR: unhandled onTalk message mode 44: Water Surf
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 19:11:49
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Você precisa de Level 125+ e Paragon 60+ para entrar na Lost Avatar Quest.
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 20:54:10
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTextMessage message mode 46: Couldn't add item: 18199
+ERROR: unhandled onTextMessage message mode 46: Apenas dobradores de terra podem usar o Spiritual Earth Totem.
+ERROR: unhandled onTextMessage message mode 46: Apenas dobradores de terra podem usar o Spiritual Earth Totem.
+ERROR: unhandled onTextMessage message mode 46: Apenas dobradores de terra podem usar o Spiritual Earth Totem.
+ERROR: unhandled onTextMessage message mode 46: Voce absorveu o poder do Spiritual Water Totem e ganhou 1 ponto de atributo para distribuir. (Total pendente: 1)
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Apenas dobradores de terra podem usar o Spiritual Earth Totem.
+ERROR: unhandled onTextMessage message mode 46: Apenas dobradores de terra podem usar o Spiritual Earth Totem.
+ERROR: unhandled onTalk message mode 44: Grunt!
+ERROR: unhandled onTalk message mode 44: Munch.
+ERROR: unhandled onTalk message mode 44: Munch.
+ERROR: unhandled onTalk message mode 44: Hand me your purse!
+ERROR: unhandled onTalk message mode 44: Hand me your purse!
+ERROR: unhandled onTalk message mode 44: Hand me your purse!
+ERROR: unhandled onTalk message mode 44: Grunt!
+ERROR: unhandled onTalk message mode 44: Munch.
+ERROR: unhandled onTalk message mode 44: cluck cluck
+ERROR: unhandled onTextMessage message mode 46: Voce absorveu o poder do Spiritual Earth Totem e ganhou 1 ponto de atributo para distribuir. (Total pendente: 1)
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:90: [@onClick]:2: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/data/styles/30-minimap.otui:90: [@onClick]:2: in function </data/styles/30-minimap.otui:90: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:86: [@onClick]:2: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/data/styles/30-minimap.otui:86: [@onClick]:2: in function </data/styles/30-minimap.otui:86: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:86: [@onClick]:2: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/data/styles/30-minimap.otui:86: [@onClick]:2: in function </data/styles/30-minimap.otui:86: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:86: [@onClick]:2: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/data/styles/30-minimap.otui:86: [@onClick]:2: in function </data/styles/30-minimap.otui:86: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:86: [@onClick]:2: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/data/styles/30-minimap.otui:86: [@onClick]:2: in function </data/styles/30-minimap.otui:86: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:90: [@onClick]:2: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/data/styles/30-minimap.otui:90: [@onClick]:2: in function </data/styles/30-minimap.otui:90: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:90: [@onClick]:2: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/data/styles/30-minimap.otui:90: [@onClick]:2: in function </data/styles/30-minimap.otui:90: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:90: [@onClick]:2: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/data/styles/30-minimap.otui:90: [@onClick]:2: in function </data/styles/30-minimap.otui:90: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:90: [@onClick]:2: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/data/styles/30-minimap.otui:90: [@onClick]:2: in function </data/styles/30-minimap.otui:90: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:82: [@onClick]:2: attempt to call method 'floorDown' (a userdata value)
+stack traceback:
+	[C]: in function 'floorDown'
+	/data/styles/30-minimap.otui:82: [@onClick]:2: in function </data/styles/30-minimap.otui:82: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:82: [@onClick]:2: attempt to call method 'floorDown' (a userdata value)
+stack traceback:
+	[C]: in function 'floorDown'
+	/data/styles/30-minimap.otui:82: [@onClick]:2: in function </data/styles/30-minimap.otui:82: [@onClick]:1>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:199: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/modules/gamelib/ui/uiminimap.lua:199: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:86: [@onClick]:2: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/data/styles/30-minimap.otui:86: [@onClick]:2: in function </data/styles/30-minimap.otui:86: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:86: [@onClick]:2: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/data/styles/30-minimap.otui:86: [@onClick]:2: in function </data/styles/30-minimap.otui:86: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:86: [@onClick]:2: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/data/styles/30-minimap.otui:86: [@onClick]:2: in function </data/styles/30-minimap.otui:86: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:78: [@onClick]:2: attempt to call method 'floorUp' (a userdata value)
+stack traceback:
+	[C]: in function 'floorUp'
+	/data/styles/30-minimap.otui:78: [@onClick]:2: in function </data/styles/30-minimap.otui:78: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:78: [@onClick]:2: attempt to call method 'floorUp' (a userdata value)
+stack traceback:
+	[C]: in function 'floorUp'
+	/data/styles/30-minimap.otui:78: [@onClick]:2: in function </data/styles/30-minimap.otui:78: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:82: [@onClick]:2: attempt to call method 'floorDown' (a userdata value)
+stack traceback:
+	[C]: in function 'floorDown'
+	/data/styles/30-minimap.otui:82: [@onClick]:2: in function </data/styles/30-minimap.otui:82: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:82: [@onClick]:2: attempt to call method 'floorDown' (a userdata value)
+stack traceback:
+	[C]: in function 'floorDown'
+	/data/styles/30-minimap.otui:82: [@onClick]:2: in function </data/styles/30-minimap.otui:82: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:90: [@onClick]:2: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/data/styles/30-minimap.otui:90: [@onClick]:2: in function </data/styles/30-minimap.otui:90: [@onClick]:1>
+ERROR: protected lua call failed: /data/styles/30-minimap.otui:90: [@onClick]:2: attempt to call method 'zoomOut' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomOut'
+	/data/styles/30-minimap.otui:90: [@onClick]:2: in function </data/styles/30-minimap.otui:90: [@onClick]:1>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: protected lua call failed: /modules/gamelib/ui/uiminimap.lua:197: attempt to call method 'zoomIn' (a userdata value)
+stack traceback:
+	[C]: in function 'zoomIn'
+	/modules/gamelib/ui/uiminimap.lua:197: in function </modules/gamelib/ui/uiminimap.lua:194>
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Hicks!
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Punch
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 23 2026 23:54:44
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: unhandled onTextMessage message mode 46: Apenas dobradores de terra podem usar o Spiritual Earth Totem.
+ERROR: unhandled onTextMessage message mode 46: Voce ja usou este totem neste personagem.
+ERROR: ProtocolGame parse message exception (9409 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTextMessage message mode 46: New general task started: Initial Rotworms. For more information, type !tasks.
+ERROR: unhandled onTextMessage message mode 46: New general task started: Tortoise Easy. For more information, type !tasks.
+ERROR: unhandled onTextMessage message mode 46: New general task started: Thornback Tortoise Easy. For more information, type !tasks.
+ERROR: unhandled onTextMessage message mode 46: New general task started: Cyclops Easy. For more information, type !tasks.
+ERROR: unhandled onTextMessage message mode 46: New general task started: Orc Easy. For more information, type !tasks.
+ERROR: unhandled onTextMessage message mode 46: New general task started: Monkeys Easy. For more information, type !tasks.
+ERROR: unhandled onTalk message mode 44: Earth Punch
+Exiting application..
+WARNING: attempt to destroy widget 'deathWindow' two times
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 06:02:59
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 06:03:38
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (9416 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 07:38:54
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (9416 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (9416 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (9416 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (9416 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (9416 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 08:05:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (9416 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (6425 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 08:23:26
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (8275 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (8759 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: unhandled onTalk message mode 44: Air Boost
+ERROR: unhandled onTalk message mode 44: Air Fan
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 08:33:48
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (8759 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 09:04:02
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (8755 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:18: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:18: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:18: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:18: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 09:25:56
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (6047 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:18: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:18: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:18: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:18: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 09:34:53
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (6047 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Growth
+ERROR: unhandled onTalk message mode 44: Earth Track
+ERROR: unhandled onTalk message mode 44: Earth Petrify
+ERROR: unhandled onTalk message mode 44: snort
+ERROR: unhandled onTalk message mode 44: Earth Fury
+ERROR: unhandled onTalk message mode 44: Earth Collapse
+ERROR: unhandled onTalk message mode 44: Earth Pull
+ERROR: unhandled onTalk message mode 44: Earth Rock

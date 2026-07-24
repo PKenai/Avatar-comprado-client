@@ -78,12 +78,31 @@ void DrawQueueItemImageWithShader::draw(const Point& pos)
 
 void DrawQueueItemTexturedRect::draw()
 {
+    if (m_isShadow) {
+        g_framebuffers.getTemporaryFrameBuffer()->resize(m_src.size());
+        g_framebuffers.getTemporaryFrameBuffer()->setSmooth(true);
+        g_framebuffers.getTemporaryFrameBuffer()->bind();
+        g_painter->clear(Color::alpha);
+
+        g_painter->setColor(Color::white);
+        g_painter->drawTexturedRect(Rect(0, 0, m_src.size()), m_texture, m_src);
+
+        g_framebuffers.getTemporaryFrameBuffer()->release();
+
+        g_painter->setDrawColorOnTextureShaderProgram();
+        g_painter->setColor(Color(0, 0, 0, 70));
+        g_framebuffers.getTemporaryFrameBuffer()->draw(m_dest);
+        g_painter->resetShaderProgram();
+        return;
+    }
     g_painter->setColor(m_color);
     g_painter->drawTexturedRect(m_dest, m_texture, m_src);
 }
 
 bool DrawQueueItemTexturedRect::cache()
 {
+    if (m_noCache || m_isShadow)
+        return false;
     if (m_dest.size() > m_src.size()) // upscaling may create artifacts
         return false;
     if (!m_texture->canCache())
@@ -105,6 +124,23 @@ bool DrawQueueItemTexturedRect::cache()
 
 void DrawQueueItemTexturedRect::draw(const Point& pos)
 {
+    if (m_isShadow) {
+        g_framebuffers.getTemporaryFrameBuffer()->resize(m_src.size());
+        g_framebuffers.getTemporaryFrameBuffer()->setSmooth(true);
+        g_framebuffers.getTemporaryFrameBuffer()->bind();
+        g_painter->clear(Color::alpha);
+
+        g_painter->setColor(Color::white);
+        g_painter->drawTexturedRect(Rect(0, 0, m_src.size()), m_texture, m_src);
+
+        g_framebuffers.getTemporaryFrameBuffer()->release();
+
+        g_painter->setDrawColorOnTextureShaderProgram();
+        g_painter->setColor(Color(0, 0, 0, 70));
+        g_framebuffers.getTemporaryFrameBuffer()->draw(Rect(pos, m_src.size()));
+        g_painter->resetShaderProgram();
+        return;
+    }
     g_painter->resetColor();
     g_painter->drawTexturedRect(Rect(pos, m_texture->getSize()), m_texture);
 }

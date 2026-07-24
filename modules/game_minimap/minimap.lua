@@ -27,7 +27,7 @@ function init()
 
   minimapWidget = minimapWindow:recursiveGetChildById('minimap')
   btnClose  = minimapWidget:getChildById('close')
-  btnCenter = minimapWidget:getChildById('reset')
+  btnCenter = minimapWidget:getChildById('resetButton')
 
   local gameRootPanel = modules.game_interface.getRootPanel()
   g_keyboard.bindKeyPress('Alt+Left', function() minimapWidget:move(1,0) end, gameRootPanel)
