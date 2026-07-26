@@ -224,6 +224,7 @@ function configureFolds(voc)
         current:setImageSource(images[voc]..x)		
         progress:setTooltip(progress.info)
         progress.name = spellInfos[voc][x].name
+        progress.slotIndex = x
 
         progress.onClick = function(self) g_game.talk(self.name) end
 		g_mouse.bindPress(progress, function() createMenu(progress) end, MouseRightButton) 

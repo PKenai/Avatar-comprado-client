@@ -1562,3 +1562,558 @@ ERROR: unhandled onTalk message mode 44: Earth Fury
 ERROR: unhandled onTalk message mode 44: Earth Collapse
 ERROR: unhandled onTalk message mode 44: Earth Pull
 ERROR: unhandled onTalk message mode 44: Earth Rock
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:18: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:18: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:18: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:18: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 11:59:59
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 23 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: ProtocolGame parse message exception (6274 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (6274 bytes, 126 unread, last opcode is 0x80 (128), prev opcode is 0x8f (143)): unhandled opcode 128
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 13:50:04
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 14:46:38
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 14:54:43
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 15:38:04
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 15:45:12
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 20:26:44
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 24 2026 21:14:18
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 25 2026 02:33:27
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 25 2026 02:48:25
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 25 2026 05:06:08
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 01:37:08
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Fire Skyfall
+ERROR: unhandled onTalk message mode 44: Fire Kick
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: ProtocolGame parse message exception (366 bytes, 109 unread, last opcode is 0x66 (102), prev opcode is 0x65 (101)): unable to create item with invalid id 18943
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: ProtocolGame parse message exception (139 bytes, 105 unread, last opcode is 0x66 (102), prev opcode is 0x6d (109)): unable to create item with invalid id 18943
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: ProtocolGame parse message exception (325 bytes, 257 unread, last opcode is 0x67 (103), prev opcode is 0x6d (109)): unable to create item with invalid id 26623
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (223 bytes, 115 unread, last opcode is 0x68 (104), prev opcode is 0x6d (109)): unable to create item with invalid id 41983
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: unhandled onTalk message mode 44: Air Wings
+ERROR: ProtocolGame parse message exception (405 bytes, 365 unread, last opcode is 0x65 (101), prev opcode is 0x6d (109)): unable to create item with invalid id 41983
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: unhandled onTalk message mode 44: Air Fan
+ERROR: unhandled onTalk message mode 44: Air Boost
+ERROR: ProtocolGame parse message exception (350 bytes, 306 unread, last opcode is 0x68 (104), prev opcode is 0x6d (109)): unable to create item with invalid id 42751
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: no thing at pos:493 348 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:493 347 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:493 346 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:494 346 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:495 346 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:496 343 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:496 345 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:496 346 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:496 347 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 01:43:13
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 02:18:36
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Skyfall
+ERROR: unhandled onTalk message mode 44: Fire Impulse
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 02:30:42
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Heal
+ERROR: unhandled onTalk message mode 44: Water Heal
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Air Recover
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Run
+ERROR: unhandled onTalk message mode 44: Air Ball
+ERROR: unhandled onTalk message mode 44: Air Ball
+ERROR: unhandled onTalk message mode 44: Air Ball
+ERROR: unhandled onTalk message mode 44: Air Recover
+ERROR: unhandled onTalk message mode 44: Air Recover
+ERROR: unhandled onTalk message mode 44: Air Ball
+ERROR: unhandled onTalk message mode 44: Air Ball
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Fire Kick
+ERROR: unhandled onTalk message mode 44: Fire Skyfall
+ERROR: unhandled onTalk message mode 44: Fire Kick
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Kick
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Ball
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Recover
+ERROR: unhandled onTalk message mode 44: Air Run
+ERROR: unhandled onTalk message mode 44: Air Burst
+ERROR: unhandled onTalk message mode 44: Air Recover
+ERROR: unhandled onTalk message mode 44: Air Burst
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 02:33:24
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Punch
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 02:36:54
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Skyfall
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Kick
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Kick
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk

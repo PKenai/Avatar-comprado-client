@@ -64,7 +64,7 @@ end
 
 function Market.online()
   numPage = g_settings.getNumber('mNumPage', 1)
-  g_game.getProtocolGame():sendExtendedOpcode(mOpcode, "getOffer>"..numPage) 
+  -- g_game.getProtocolGame():sendExtendedOpcode(mOpcode, "getOffer>"..numPage) 
 end
 
 function Market.offline()

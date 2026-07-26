@@ -48,8 +48,12 @@
     </OTCLIENT_LIBDEPS>
   </PropertyGroup>
   <PropertyGroup>
+    <!-- .exe stays in the client root (OutDir). Intermediate .obj/.pdb go to C:\otc-build because
+         vc16\otclient\OpenGL on this machine fails with MSB6003 / C1083 (mapped-file lock on *.tlog). -->
+    <IntDir>C:\otc-build\otclient\$(Configuration)\</IntDir>
     <OutDir>$(ProjectDir)../</OutDir>
     <LinkIncremental>false</LinkIncremental>
+    <TrackFileAccess>false</TrackFileAccess>
   </PropertyGroup>
   <PropertyGroup Label="Globals">
    <VcpkgConfiguration>Release</VcpkgConfiguration>
@@ -66,6 +70,8 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <ObjectFileName>$(IntDir)\obj_r\%(RelativeDir)</ObjectFileName>
+      <!-- Required when several CL.exe write the same vc143.pdb (parallel compile / VS) -->
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(OTCLIENT_LIBDEPS)</AdditionalDependencies>

@@ -225,6 +225,9 @@ void ProtocolGame::parseMessage(const InputMessagePtr& msg)
             case Proto::GameServerCreatureParty:
                 parseCreatureShields(msg);
                 break;
+            case Proto::GameServerCreatureVocationEmblem:
+                parseCreatureVocationEmblem(msg);
+                break;
             case Proto::GameServerCreatureUnpass:
                 parseCreatureUnpass(msg);
                 break;
@@ -1687,6 +1690,18 @@ void ProtocolGame::parseCreatureShields(const InputMessagePtr& msg)
     CreaturePtr creature = g_map.getCreatureById(id);
     if (creature)
         creature->setShield(shield);
+    else
+        g_logger.traceError("could not get creature");
+}
+
+void ProtocolGame::parseCreatureVocationEmblem(const InputMessagePtr& msg)
+{
+    uint id = msg->getU32();
+    int vocationEmblem = msg->getU8();
+
+    CreaturePtr creature = g_map.getCreatureById(id);
+    if (creature)
+        creature->setVocationEmblem(vocationEmblem);
     else
         g_logger.traceError("could not get creature");
 }

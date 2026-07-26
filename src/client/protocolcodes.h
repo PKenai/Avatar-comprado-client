@@ -110,6 +110,7 @@ namespace Proto {
         GameServerOwnTrade                  = 125,
         GameServerCounterTrade              = 126,
         GameServerCloseTrade                = 127,
+        GameServerCreatureVocationEmblem    = 128, // Avatar custom (TFS 0.4)
         GameServerAmbient                   = 130,
         GameServerGraphicalEffect           = 131,
         GameServerTextEffect                = 132,

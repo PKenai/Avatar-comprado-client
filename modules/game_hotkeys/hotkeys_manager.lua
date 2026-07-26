@@ -367,10 +367,27 @@ function addKeyCombo(keyCombo, keySettings, focus)
   
   if ( spellHotkey ) then
     spellHotkey:setTooltip(spellHotkey.info.." - Hotkey: "..keyCombo)
-    onHotkeyTextChange(spellHotkey.name)
+    onHotkeyTextChange("@slot:" .. spellHotkey.slotIndex)
 	onSendAutomaticallyChange(true)
 	ok()
   end
+end
+
+function resolveHotkeyValue(value)
+  if value and #value >= 7 and value:sub(1, 6) == "@slot:" then
+    local slotIndex = tonumber(value:sub(7))
+    if slotIndex then
+      -- Access spellInfos and infos from the folds module (sandboxed)
+      local folds = modules.game_folds
+      if folds and folds.spellInfos and folds.infos and folds.infos.vocation then
+        local spells = folds.spellInfos[folds.infos.vocation]
+        if spells and spells[slotIndex] and spells[slotIndex].name then
+          return spells[slotIndex].name
+        end
+      end
+    end
+  end
+  return value
 end
 
 function doKeyCombo(keyCombo)
@@ -379,10 +396,11 @@ function doKeyCombo(keyCombo)
   if not hotKey then return end
   if hotKey.itemId == nil then
     if not hotKey.value or #hotKey.value == 0 then return end
+    local resolvedValue = resolveHotkeyValue(hotKey.value)
     if hotKey.autoSend then
-      modules.game_console.sendMessage(hotKey.value)
+      modules.game_console.sendMessage(resolvedValue)
     else
-      modules.game_console.setTextEditText(hotKey.value)
+      modules.game_console.setTextEditText(resolvedValue)
     end
   elseif hotKey.useType == HOTKEY_MANAGER_USE then
     g_game.useInventoryItem(hotKey.itemId)
@@ -413,9 +431,10 @@ function updateHotkeyLabel(hotkeyLabel)
     hotkeyLabel:setText(tr('%s: (use object)', hotkeyLabel.keyCombo))
     hotkeyLabel:setColor(HotkeyColors.itemUse)
   else
+    local displayValue = resolveHotkeyValue(hotkeyLabel.value)
     local text = hotkeyLabel.keyCombo .. ': '
-    if hotkeyLabel.value then
-      text = text .. hotkeyLabel.value
+    if displayValue then
+      text = text .. displayValue
     end
     hotkeyLabel:setText(text)
     if hotkeyLabel.autoSend then
@@ -574,8 +593,22 @@ end
 
 function checkSpell(spellName)
   for key, hotkey in pairs(hotkeyList) do
-    if ( hotkey.value == spellName ) then
+    if hotkey.value == spellName then
 	  return key
+	end
+	-- Check slot-based hotkeys: resolve @slot:N and compare
+	if hotkey.value and #hotkey.value >= 7 and hotkey.value:sub(1, 6) == "@slot:" then
+	  local slotIndex = tonumber(hotkey.value:sub(7))
+	  if slotIndex then
+	    -- Access spellInfos and infos from the folds module (sandboxed)
+	    local folds = modules.game_folds
+	    if folds and folds.spellInfos and folds.infos and folds.infos.vocation then
+	      local spells = folds.spellInfos[folds.infos.vocation]
+	      if spells and spells[slotIndex] and spells[slotIndex].name == spellName then
+	        return key
+	      end
+	    end
+	  end
 	end
   end
   return false

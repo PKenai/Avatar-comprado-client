@@ -1,5 +1,9 @@
 local FADE_MS = 2000
 local fadeTimer = nil
+local SPIRITUAL_SHADER = "outfit_spiritual"
+local SPIRITUAL_PREFIX = "Spiritual "
+local appliedSpiritual = {}
+local applyingSpiritual = false
 
 function init()
   g_shaders.createShader("map_default", "/shaders/map_default_vertex", "/shaders/map_default_fragment")
@@ -9,15 +13,27 @@ function init()
 
   g_shaders.createShader("map_cloudy", "/shaders/map_cloudy_vertex", "/shaders/map_cloudy_fragment")
   createFadeShaders()
+  createOutfitShaders()
 
   ProtocolGame.registerExtendedOpcode(ExtendedIds.MapShader, onMapShader)
   connect(g_game, { onGameEnd = onGameEndClearShader })
+  connect(Creature, {
+    onAppear = onCreatureAppearSpiritual,
+    onDisappear = onCreatureDisappearSpiritual,
+    onOutfitChange = onCreatureOutfitSpiritual
+  })
 end
 
 function terminate()
   clearFadeTimer()
   ProtocolGame.unregisterExtendedOpcode(ExtendedIds.MapShader)
   disconnect(g_game, { onGameEnd = onGameEndClearShader })
+  disconnect(Creature, {
+    onAppear = onCreatureAppearSpiritual,
+    onDisappear = onCreatureDisappearSpiritual,
+    onOutfitChange = onCreatureOutfitSpiritual
+  })
+  appliedSpiritual = {}
 end
 
 function createFadeShaders()
@@ -25,6 +41,10 @@ function createFadeShaders()
   g_shaders.createShader("map_fade_out", "/shaders/map_default_vertex", "/shaders/map_fade_out_fragment")
   g_shaders.createShader("map_fade_in", "/shaders/map_default_vertex", "/shaders/map_fade_in_fragment")
   g_shaders.createShader("map_cloudy_fade_out", "/shaders/map_cloudy_vertex", "/shaders/map_cloudy_fade_out_fragment")
+end
+
+function createOutfitShaders()
+  g_shaders.createOutfitShader(SPIRITUAL_SHADER, "/shaders/outfit_spiritual_vertex", "/shaders/outfit_spiritual_fragment")
 end
 
 local function setMapShader(name)
@@ -89,4 +109,49 @@ end
 function onGameEndClearShader()
   clearFadeTimer()
   setMapShader("")
+  appliedSpiritual = {}
+end
+
+local function isSpiritualName(name)
+  return name and name:sub(1, #SPIRITUAL_PREFIX) == SPIRITUAL_PREFIX
+end
+
+function applySpiritualOutfitShader(creature)
+  if applyingSpiritual or not creature or creature:isLocalPlayer() then
+    return
+  end
+  if not isSpiritualName(creature:getName()) then
+    return
+  end
+
+  local id = creature:getId()
+  if appliedSpiritual[id] then
+    return
+  end
+
+  local outfit = creature:getOutfit()
+  outfit.shader = SPIRITUAL_SHADER
+  appliedSpiritual[id] = true
+  applyingSpiritual = true
+  creature:setOutfit(outfit)
+  applyingSpiritual = false
+end
+
+function onCreatureAppearSpiritual(creature)
+  applySpiritualOutfitShader(creature)
+end
+
+function onCreatureDisappearSpiritual(creature)
+  if creature then
+    appliedSpiritual[creature:getId()] = nil
+  end
+end
+
+function onCreatureOutfitSpiritual(creature, outfit, oldOutfit)
+  if applyingSpiritual or not creature then
+    return
+  end
+  -- External outfit update from server clears shader; mark dirty and re-apply.
+  appliedSpiritual[creature:getId()] = nil
+  applySpiritualOutfitShader(creature)
 end

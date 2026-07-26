@@ -52,10 +52,9 @@ int push_luavalue(const Outfit& outfit)
         g_lua.pushInteger(outfit.getAura());
         g_lua.setField("aura");
     }
-    if (g_game.getFeature(Otc::GameOutfitShaders)) {
-        g_lua.pushString(outfit.getShader());
-        g_lua.setField("shader");
-    }
+    // Always expose shader to Lua (client-side outfit shaders don't need the protocol feature).
+    g_lua.pushString(outfit.getShader());
+    g_lua.setField("shader");
     if (g_game.getFeature(Otc::GameHealthInfoBackground)) {
         g_lua.pushInteger(outfit.getHealthBar());
         g_lua.setField("healthBar");
