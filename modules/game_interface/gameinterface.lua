@@ -575,6 +575,16 @@ function createThingMenu(menuPosition, lookThing, useThing, creatureThing)
 
     menu:addSeparator()
     menu:addOption(tr('Copy Name'), function() g_window.setClipboardText(creatureThing:getName()) end)
+
+    -- Inspect Creature (for non-player creatures)
+    if not creatureThing:isLocalPlayer() and not creatureThing:isPlayer() then
+      menu:addOption(tr('Inspect Creature'), function()
+        local name = creatureThing:getName()
+        if name then
+          modules.game_inspectcreature.requestMonsterInfo(name)
+        end
+      end)
+    end
   end
 
   -- hooked menu options

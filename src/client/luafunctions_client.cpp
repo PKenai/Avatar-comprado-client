@@ -80,6 +80,7 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_things", "findThingTypeByAttr", &ThingTypeManager::findThingTypeByAttr, &g_things);
     g_lua.bindSingletonFunction("g_things", "getMarketCategories", &ThingTypeManager::getMarketCategories, &g_things);
     g_lua.bindSingletonFunction("g_things", "unloadTextures", &ThingTypeManager::unloadTextures, &g_things);
+    g_lua.bindSingletonFunction("g_things", "tryGetItemType", &ThingTypeManager::tryGetItemType, &g_things);
     
     g_lua.registerSingletonClass("g_houses");
     g_lua.bindSingletonFunction("g_houses", "clear",          &HouseManager::clear,          &g_houses);
@@ -369,6 +370,7 @@ void Client::registerLuaFunctions()
     g_lua.bindGlobalFunction("getOutfitColor", Outfit::getColor);
     g_lua.bindGlobalFunction("getAngleFromPos", Position::getAngleFromPositions);
     g_lua.bindGlobalFunction("getDirectionFromPos", Position::getDirectionFromPositions);
+    g_lua.bindGlobalFunction("ItemType", [](uint16 id) -> const ItemTypePtr& { return g_things.tryGetItemType(id); });
 
     g_lua.registerClass<ProtocolGame, Protocol>();
     g_lua.bindClassStaticFunction<ProtocolGame>("create", []{ return ProtocolGamePtr(new ProtocolGame); });
@@ -586,6 +588,7 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<ItemType>("getServerId", &ItemType::getServerId);
     g_lua.bindClassMemberFunction<ItemType>("getClientId", &ItemType::getClientId);
     g_lua.bindClassMemberFunction<ItemType>("isWritable",  &ItemType::isWritable);
+    g_lua.bindClassMemberFunction<ItemType>("isNull", &ItemType::isNull);
 
     g_lua.registerClass<ThingType>();
     g_lua.bindClassStaticFunction<ThingType>("create", []{ return ThingTypePtr(new ThingType); });

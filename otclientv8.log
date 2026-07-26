@@ -2117,3 +2117,990 @@ stack traceback:
 	[C]: in function 'clearFadeTimer'
 	/modules/game_shaders/shaders.lua:28: in function 'terminate'
 	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 02:54:15
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water Heal
+ERROR: unhandled onTalk message mode 44: Water Whip
+ERROR: unhandled onTalk message mode 44: Water Recover
+ERROR: unhandled onTalk message mode 44: Water Explosion
+ERROR: unhandled onTalk message mode 44: Water IceSpikes
+ERROR: unhandled onTalk message mode 44: Water Shards
+ERROR: unhandled onTalk message mode 44: Munch.
+ERROR: unhandled onTalk message mode 44: Chomp.
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 03:23:26
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTextMessage message mode 46: Usage: /spawnspiritual monsterName
+ERROR: unhandled onTextMessage message mode 46: Usage: !inspect MonsterName
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 03:31:29
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 03:35:09
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 03:38:08
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Rock
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 03:48:55
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 03:52:39
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sending !inspect command via talkChannel...
+[Inspect] Command sent!
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 03:54:36
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sending !inspect command via talkChannel...
+[Inspect] Command sent!
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 04:01:14
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 04:05:20
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 04:07:25
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+ERROR: failed to load UI from '.otui': unable to open file '/modules/game_inspectcreature/.otui': not found
+[Inspect] ERROR: displayUI failed: nil
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 04:09:34
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+ERROR: failed to load UI from 'inspectcreature.otui': '# -- Inspect Creature Loot Item Widget --' is not a defined style
+[Inspect] ERROR: displayUI failed: nil
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 04:12:14
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+ERROR: font 'sans-10px' not found
+ERROR: font 'sans-10px' not found
+ERROR: font 'sans-bold-12px' not found
+ERROR: font 'sans-10px' not found
+ERROR: font 'sans-10px' not found
+ERROR: failed to apply style to widget 'widget785': LUA ERROR: ...s/game_inspectcreature/inspectcreature.otui:144: [!text]:1: ')' expected near 'at'
+stack traceback:
+	[builtin#142]: at 0x014d83b0
+	[C]: at 0x013458e0
+	[C]: in function 'pcall'
+	/modules/game_inspectcreature/inspectcreature.lua:217: in function 'init'
+	...s/game_inspectcreature/inspectcreature.otmod:9:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:87: in function 'loadModules'
+	/init.lua:101: in main chunk
+stack traceback:
+	[C]: at 0x013458e0
+	[C]: in function 'pcall'
+	/modules/game_inspectcreature/inspectcreature.lua:217: in function 'init'
+	...s/game_inspectcreature/inspectcreature.otmod:9:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:87: in function 'loadModules'
+	/init.lua:101: in main chunk
+at:
+	[C++]: ?applyStyle@UIWidget@@QAEXABV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+ERROR: failed to load UI from 'inspectcreature.otui': cannot have multiple main widgets in otui files
+[Inspect] ERROR: displayUI failed: nil
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 04:15:10
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 04:20:17
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {name="Skeleton",outfit={feet=0,type=33,legs=0,aux
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {name="Skeleton",outfit={feet=0,type=33,legs=0,aux
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+[Inspect] requestMonsterInfo called with: 'Black Knight'
+[Inspect] Sent: !inspect Black Knight
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 1061 First 50 chars: {name="Black Knight",outfit={feet=95,type=131,legs
+[Inspect] Parsed OK - name: Black Knight
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Black Knight loot: 18
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:98: attempt to index global 'g_items' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_inspectcreature/inspectcreature.lua:98: in function 'getItemDescription'
+	/modules/game_inspectcreature/inspectcreature.lua:123: in function 'openItemDetail'
+	/modules/game_inspectcreature/inspectcreature.lua:182: in function </modules/game_inspectcreature/inspectcreature.lua:180>
+ERROR: unhandled onTalk message mode 44: Earth Collapse
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+[Inspect] requestMonsterInfo called with: 'Black Knight'
+[Inspect] Sent: !inspect Black Knight
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 1061 First 50 chars: {name="Black Knight",outfit={feet=95,type=131,legs
+[Inspect] Parsed OK - name: Black Knight
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Black Knight loot: 18
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {name="Skeleton",outfit={feet=0,type=33,legs=0,aux
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 04:25:09
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 24 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {name="Skeleton",outfit={feet=0,addons=0,legs=0,au
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+ERROR: invalid thing type, server id: 2920
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {name="Skeleton",outfit={feet=0,addons=0,legs=0,au
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+ERROR: invalid thing type, server id: 3286
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 05:31:02
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Kick
+ERROR: unhandled onTalk message mode 44: Fire Kick
+ERROR: unhandled onTalk message mode 44: Fire Kick
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Kick
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 05:41:10
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {outfit={feet=0,addons=0,legs=0,auxType=0,head=0,t
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 05:46:46
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {outfit={head=0,body=0,type=33,feet=0,addons=0,leg
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {outfit={head=0,body=0,type=33,feet=0,addons=0,leg
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 05:51:41
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {outfit={head=0,feet=0,addons=0,legs=0,auxType=0,t
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 06:18:09
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+ERROR: unhandled onTalk message mode 44: Water Explosion
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {name="Skeleton",outfit={type=33,addons=0,legs=0,a
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:95: attempt to call global 'ItemType' (a table value)
+stack traceback:
+	[C]: in function 'ItemType'
+	/modules/game_inspectcreature/inspectcreature.lua:95: in function 'resolveItemId'
+	/modules/game_inspectcreature/inspectcreature.lua:191: in function 'setMonsterInfo'
+	/modules/game_inspectcreature/inspectcreature.lua:241: in function 'receiveMonsterData'
+	/modules/game_inspectcreature/inspectcreature.lua:255: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {name="Skeleton",outfit={type=33,addons=0,legs=0,a
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:95: attempt to call global 'ItemType' (a table value)
+stack traceback:
+	[C]: in function 'ItemType'
+	/modules/game_inspectcreature/inspectcreature.lua:95: in function 'resolveItemId'
+	/modules/game_inspectcreature/inspectcreature.lua:191: in function 'setMonsterInfo'
+	/modules/game_inspectcreature/inspectcreature.lua:241: in function 'receiveMonsterData'
+	/modules/game_inspectcreature/inspectcreature.lua:255: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+[Inspect] requestMonsterInfo called with: 'Black Knight'
+[Inspect] Sent: !inspect Black Knight
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 1061 First 50 chars: {name="Black Knight",outfit={type=131,addons=3,leg
+[Inspect] Parsed OK - name: Black Knight
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Black Knight loot: 18
+ERROR: protected lua call failed: /modules/game_inspectcreature/inspectcreature.lua:95: attempt to call global 'ItemType' (a table value)
+stack traceback:
+	[C]: in function 'ItemType'
+	/modules/game_inspectcreature/inspectcreature.lua:95: in function 'resolveItemId'
+	/modules/game_inspectcreature/inspectcreature.lua:191: in function 'setMonsterInfo'
+	/modules/game_inspectcreature/inspectcreature.lua:241: in function 'receiveMonsterData'
+	/modules/game_inspectcreature/inspectcreature.lua:255: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 06:22:19
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+ERROR: protected lua call failed: /modules/game_interface/widgets/uigamemap.lua:42: attempt to index local 'thingPos' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_interface/widgets/uigamemap.lua:42: in function </modules/game_interface/widgets/uigamemap.lua:32>
+ERROR: protected lua call failed: /modules/game_interface/widgets/uigamemap.lua:42: attempt to index local 'thingPos' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_interface/widgets/uigamemap.lua:42: in function </modules/game_interface/widgets/uigamemap.lua:32>
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 06:27:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Black Knight'
+[Inspect] Sent: !inspect Black Knight
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 1061 First 50 chars: {loot={{id=3031,chance="Common",name="gold coin",c
+[Inspect] Parsed OK - name: Black Knight
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Black Knight loot: 18
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 06:30:28
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+ERROR: Unable to load texture '/modules/game_inspectcreature/''': unable to open file '/modules/game_inspectcreature/''.png': not found
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 06:36:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+ERROR: Unable to load texture '/modules/game_inspectcreature/''': unable to open file '/modules/game_inspectcreature/''.png': not found
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Black Knight'
+[Inspect] Sent: !inspect Black Knight
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 1061 First 50 chars: {loot={{id=3031,chance="Common",name="gold coin",c
+[Inspect] Parsed OK - name: Black Knight
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Black Knight loot: 18
+[Inspect] requestMonsterInfo called with: 'Black Knight'
+[Inspect] Sent: !inspect Black Knight
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 1061 First 50 chars: {loot={{id=3031,chance="Common",name="gold coin",c
+[Inspect] Parsed OK - name: Black Knight
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Black Knight loot: 18
+ERROR: unhandled onTalk message mode 44: Water Regen
+ERROR: unhandled onTalk message mode 44: Water Cannon
+ERROR: unhandled onTalk message mode 44: Water Heal
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 06:40:43
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Inspect] === MODULE INIT ===
+[Inspect] Opcode 164 registered: true
+ERROR: Unable to load texture '/modules/game_inspectcreature/''': unable to open file '/modules/game_inspectcreature/''.png': not found
+[Inspect] === MODULE READY ===
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6
+[Inspect] requestMonsterInfo called with: 'Skeleton'
+[Inspect] Sent: !inspect Skeleton
+[Inspect] Opcode 164 RECEIVED from server!
+[Inspect] receiveMonsterData called
+[Inspect] Buffer length: 394 First 50 chars: {loot={{id=2920,chance="Common",name="torch",count
+[Inspect] Parsed OK - name: Skeleton
+[Inspect] setMonsterInfo called
+[Inspect] Displaying: Skeleton loot: 6

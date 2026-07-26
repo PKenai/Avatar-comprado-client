@@ -95,6 +95,18 @@ function load()
     g_things.loadOtml('/things/things.otml')
   end
 
+  -- Global helper: ItemType(id) — SakkenOT pattern. Without OTB the lookup
+  -- returns null (handled gracefully via isNull()), but the C++ binding
+  -- g_lua.bindGlobalFunction("ItemType", ...) stays in the source for future use.
+  -- Prevent registerClass<ItemType>() table from shadowing the function.
+  if type(ItemType) ~= "function" then
+    if g_things.tryGetItemType then
+      ItemType = function(id) return g_things.tryGetItemType(id) end
+    else
+      ItemType = function(id) return g_things.getItemType(id) end
+    end
+  end
+
   loaded = (errorMessage:len() == 0)
 
   if errorMessage:len() > 0 then

@@ -93,6 +93,9 @@ public:
     bool isValidDatId(uint16 id, ThingCategory category) { return id >= 1 && id < m_thingTypes[category].size(); }
     bool isValidOtbId(uint16 id) { return id >= 1 && id < m_itemTypes.size(); }
 
+    // Safe ItemType lookup: returns null ItemType if not found (no error log)
+    const ItemTypePtr& tryGetItemType(uint16 id) { if(id >= m_itemTypes.size() || m_itemTypes[id] == m_nullItemType) return m_nullItemType; return m_itemTypes[id]; }
+
 private:
     ThingTypeList m_thingTypes[ThingLastCategory];
     ItemTypeList m_reverseItemTypes;
