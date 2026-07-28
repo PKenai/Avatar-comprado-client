@@ -12,6 +12,7 @@ function init()
   g_shaders.addTexture("map_rainbow", "/images/shaders/rainbow.png")
 
   g_shaders.createShader("map_cloudy", "/shaders/map_cloudy_vertex", "/shaders/map_cloudy_fragment")
+  g_shaders.createShader("background_particles", "/shaders/map_default_vertex", "/shaders/background_particles_fragment")
   createFadeShaders()
   createOutfitShaders()
 

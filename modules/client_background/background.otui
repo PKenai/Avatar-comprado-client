@@ -1,6 +1,7 @@
 Panel
   id: background
   image-source: /images/background
+  image-shader: background_particles
   image-smooth: true
   image-fixed-ratio: true
   anchors.top: parent.top

@@ -5,6 +5,6 @@ Module
   website: www.otclient.info
   sandboxed: true
   scripts: [ background ]
-  dependencies: [ client_topmenu ]
+  dependencies: [ client_topmenu, game_shaders ]
   @onLoad: init()
   @onUnload: terminate()
