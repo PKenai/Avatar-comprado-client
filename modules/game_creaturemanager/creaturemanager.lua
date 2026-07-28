@@ -51,19 +51,18 @@ local function sendToServer(msg)
   end)
 end
 
-local function setItemWidget(widget, serverId)
-  if not widget or not serverId or serverId <= 0 then return end
-  pcall(function()
-    local clientId = serverId
-    if type(ItemType) == "function" then
-      local ok, itype = pcall(ItemType, serverId)
-      if ok and itype and not itype:isNull() then
-        local cid = itype:getClientId()
-        if cid and cid > 0 then clientId = cid end
-      end
+local function setItemWidget(widget, id)
+  if not widget or not id or id <= 0 then return end
+  -- The server already sends client IDs (translated via ItemType(id):getClientId() server-side).
+  -- We still attempt g_things.tryGetItemType as a safety-net for edge cases.
+  local cid = 0
+  if g_things and g_things.tryGetItemType then
+    local it = g_things.tryGetItemType(id)
+    if it and not it:isNull() then
+      cid = it:getClientId()
     end
-    widget:setItemId(clientId)
-  end)
+  end
+  widget:setItemId(cid > 0 and cid or id)
 end
 
 -- ─── Parsing ──────────────────────────────────────────────────
