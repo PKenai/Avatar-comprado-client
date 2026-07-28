@@ -44,6 +44,7 @@ SpeakTypes = {
   [MessageModes.Spell] = SpeakTypesSettings.none,
   [MessageModes.BarkLow] = SpeakTypesSettings.none,
   [MessageModes.BarkLoud] = SpeakTypesSettings.none,
+  [44] = SpeakTypesSettings.none,  -- deprecated MessageMonsterSay
 }
 
 SayModes = {

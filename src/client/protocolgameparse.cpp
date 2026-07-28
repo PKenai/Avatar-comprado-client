@@ -1495,7 +1495,7 @@ void ProtocolGame::parseMagicEffect(const InputMessagePtr& msg)
             } else if (effectType == Otc::MAGIC_EFFECTS_CREATE_EFFECT) {
                 uint8_t effectId = msg->getU8();
                 if (!g_things.isValidDatId(effectId, ThingCategoryEffect)) {
-                    g_logger.traceError(stdext::format("invalid effect id %d", effectId));
+                    /* invalid effect id - silently ignored */;
                     continue;
                 }
                 EffectPtr effect = EffectPtr(new Effect());
@@ -1514,7 +1514,7 @@ void ProtocolGame::parseMagicEffect(const InputMessagePtr& msg)
         effectId = msg->getU8();
 
     if (!g_things.isValidDatId(effectId, ThingCategoryEffect)) {
-        g_logger.traceError(stdext::format("invalid effect id %d", effectId));
+        /* invalid effect id - silently ignored */;
         return;
     }
 
@@ -2191,7 +2191,6 @@ void ProtocolGame::parseTalk(const InputMessagePtr& msg)
         msg->getU32();
         break;
     default:
-        stdext::throw_exception(stdext::format("unknown message mode %d", mode));
         break;
     }
 
@@ -2363,7 +2362,6 @@ void ProtocolGame::parseTextMessage(const InputMessagePtr& msg)
         break;
     }
     case Otc::MessageInvalid:
-        stdext::throw_exception(stdext::format("unknown message mode %d", mode));
         break;
     default:
         text = msg->getString();

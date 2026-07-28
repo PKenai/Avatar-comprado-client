@@ -226,24 +226,20 @@ function configureFolds(voc)
         progress.name = spellInfos[voc][x].name
         progress.slotIndex = x
 
-        progress.onClick = function(self) g_game.talk(self.name) end
-		g_mouse.bindPress(progress, function() createMenu(progress) end, MouseRightButton) 
-				
-        if spellInfos[voc][x].var then
-            progress.var = spellInfos[voc][x].var
-            
-            progress.onMouseRelease = function(self, mousePosition, mouseButton)
-                if mouseButton == MouseRightButton then
-                    if self.var then
-                        g_game.talk(self.var)
-                    end
+        progress.onClick = function(self)
+            if self.name == "Water Heal" and G.healTargetName and #G.healTargetName > 0 then
+                local proto = g_game.getProtocolGame()
+                if proto then
+                    proto:sendExtendedOpcode(210, G.healTargetName)
                 end
             end
-        else
-            progress.var = nil
+            g_game.talk(self.name)
         end
+        g_mouse.bindPress(progress, function() createMenu(progress) end, MouseRightButton)
     end
 	tooltipHotkey()
+    -- Re-apply Water Heal target tooltip (tooltipHotkey overwrites it)
+    updateHealTargetTooltip()
     refreshLevel()
 end
 
@@ -269,6 +265,12 @@ function init()
     miniWindow = g_ui.loadUI('folds', modules.game_interface.getRootPanel())
     -- miniWindow:disableResize()
 
+    -- Carrega o nome salvo do target da Water Heal
+    G.healTargetName = g_settings.get('waterHealTarget') or nil
+    if G.healTargetName and #G.healTargetName == 0 then
+        G.healTargetName = nil
+    end
+
     connect(g_game, {onGameStart = doRefleshClient})
     connect(LocalPlayer, {onLevelChange = refreshLevel})
 
@@ -287,14 +289,45 @@ function terminate()
 end
 
 function createMenu(spell)
-   local menu   = g_ui.createWidget('PopupMenu')
-   local hotkey = modules.game_hotkeys
-   menu:addOption(tr('Add Hotkey'), function() hotkey.addSpell(spell)  end)
-   local spellHotkey = hotkey.checkSpell(spell.name)
-   if ( spellHotkey ) then
-     menu:addOption(tr('Remove Hotkey'), function() spell:setTooltip(spell.info) hotkey.removeSpell(spellHotkey)  end)
-   end
-   menu:display()
+    local menu   = g_ui.createWidget('PopupMenu')
+    local hotkey = modules.game_hotkeys
+
+    menu:addOption(tr('Add Hotkey'), function() hotkey.addSpell(spell) end)
+
+    local spellHotkey = hotkey.checkSpell(spell.name)
+    if spellHotkey then
+        menu:addOption(tr('Remove Hotkey'), function()
+            spell:setTooltip(spell.info)
+            hotkey.removeSpell(spellHotkey)
+        end)
+    end
+
+    -- Opcao extra para Water Heal: definir o alvo
+    if spell.name == "Water Heal" then
+        menu:addOption(tr('Set Heal Target'), function()
+            local cur = G.healTargetName or ''
+            displayTextInputBox(
+                'Water Heal - Who to heal?',
+                'Player name' .. (cur ~= '' and ' (current: ' .. cur .. ')' or ''),
+                function(inputText)
+                    local name = inputText:trim()
+                    if name and #name > 0 then
+                        G.healTargetName = name
+                        g_settings.set('waterHealTarget', name)
+                        g_settings.save()
+                    else
+                        G.healTargetName = nil
+                        g_settings.set('waterHealTarget', '')
+                        g_settings.save()
+                    end
+                    updateHealTargetTooltip()
+                end,
+                function() end
+            )
+        end)
+    end
+
+    menu:display()
 end
 
 function tooltipHotkey()
@@ -307,4 +340,18 @@ function tooltipHotkey()
 	  progress:setTooltip(progress.info)
 	end
   end
+end
+
+function updateHealTargetTooltip()
+    for x = 1, 24 do
+        local progress = miniWindow:getChildById("p"..x)
+        if progress and progress.name == "Water Heal" then
+            if G.healTargetName and #G.healTargetName > 0 then
+                progress:setTooltip(progress.info .. ' -> ' .. G.healTargetName)
+            else
+                progress:setTooltip(progress.info)
+            end
+            break
+        end
+    end
 end

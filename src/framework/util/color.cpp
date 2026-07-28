@@ -24,6 +24,7 @@
 
 // NOTE: AABBGGRR order
 const Color Color::alpha      = 0x00000000U;
+const Color Color::transparent = 0x00000000U;
 const Color Color::white      = 0xffffffff;
 const Color Color::black      = 0xff000000;
 const Color Color::red        = 0xff0000ff;

@@ -374,20 +374,20 @@ function addKeyCombo(keyCombo, keySettings, focus)
 end
 
 function resolveHotkeyValue(value)
+  local resolved = value
   if value and #value >= 7 and value:sub(1, 6) == "@slot:" then
     local slotIndex = tonumber(value:sub(7))
     if slotIndex then
-      -- Access spellInfos and infos from the folds module (sandboxed)
       local folds = modules.game_folds
       if folds and folds.spellInfos and folds.infos and folds.infos.vocation then
         local spells = folds.spellInfos[folds.infos.vocation]
         if spells and spells[slotIndex] and spells[slotIndex].name then
-          return spells[slotIndex].name
+          resolved = spells[slotIndex].name
         end
       end
     end
   end
-  return value
+  return resolved
 end
 
 function doKeyCombo(keyCombo)
@@ -398,7 +398,13 @@ function doKeyCombo(keyCombo)
     if not hotKey.value or #hotKey.value == 0 then return end
     local resolvedValue = resolveHotkeyValue(hotKey.value)
     if hotKey.autoSend then
-      modules.game_console.sendMessage(resolvedValue)
+      if resolvedValue == "Water Heal" and G.healTargetName and #G.healTargetName > 0 then
+        local proto = g_game.getProtocolGame()
+        if proto then
+          proto:sendExtendedOpcode(210, G.healTargetName)
+        end
+      end
+      g_game.talk(resolvedValue)
     else
       modules.game_console.setTextEditText(resolvedValue)
     end

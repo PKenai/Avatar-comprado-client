@@ -3104,3 +3104,3193 @@ ERROR: Unable to load texture '/modules/game_inspectcreature/''': unable to open
 [Inspect] Parsed OK - name: Skeleton
 [Inspect] setMonsterInfo called
 [Inspect] Displaying: Skeleton loot: 6
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 07:09:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Fury
+ERROR: unhandled onTalk message mode 44: Earth Track
+ERROR: unhandled onTalk message mode 44: Earth Collapse
+ERROR: unhandled onTalk message mode 44: Earth Growth
+ERROR: unhandled onTalk message mode 44: Earth Leech
+ERROR: unhandled onTalk message mode 44: Earth Leech
+ERROR: unhandled onTalk message mode 44: Earth Control
+ERROR: unhandled onTalk message mode 44: Earth Quake
+ERROR: unhandled onTalk message mode 44: Earth Aura
+ERROR: unhandled onTextMessage message mode 46: Dica: Você pode sair do estado de defesa antes da duração acabar utilizando a dobra Earth Fury, Earth Track ou Earth Cataclysm. É importante informar também que esta dobra não pode ser usada imediatamente após o Earth Leech, haverá uma recarga pequena de 4 segundos.
+ERROR: unhandled onTalk message mode 44: Earth Armor
+ERROR: unhandled onTalk message mode 44: Earth Lavaball
+ERROR: unhandled onTalk message mode 44: Earth Metalwall
+ERROR: unhandled onTalk message mode 44: Earth Control
+ERROR: unhandled onTalk message mode 44: Earth Cataclysm
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Chomp.
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 07:50:17
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTextMessage message mode 46: Spawned Spiritual Skeleton.
+ERROR: unhandled onTextMessage message mode 46: Spawned Spiritual dragon.
+ERROR: unhandled onTextMessage message mode 46: Spawned Spiritual water buffalo.
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Collapse
+ERROR: unhandled onTalk message mode 44: Earth Growth
+ERROR: unhandled onTalk message mode 44: Earth Pull
+ERROR: unhandled onTalk message mode 44: Earth Fury
+ERROR: invalid effect id 0
+at:
+	[C++]: ?parseMagicEffect@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: invalid effect id 0
+at:
+	[C++]: ?parseMagicEffect@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: unhandled onTalk message mode 44: Earth Leech
+ERROR: invalid effect id 0
+at:
+	[C++]: ?parseMagicEffect@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: invalid effect id 0
+at:
+	[C++]: ?parseMagicEffect@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: unhandled onTalk message mode 44: Earth Leech
+ERROR: unhandled onTalk message mode 44: Earth Smash
+ERROR: unhandled onTalk message mode 44: Earth Ingrain
+ERROR: unhandled onTalk message mode 44: Earth Fists
+ERROR: unhandled onTalk message mode 44: Earth Arena
+ERROR: unhandled onTalk message mode 44: Earth Curse
+ERROR: unhandled onTalk message mode 44: Earth Quake
+ERROR: unhandled onTalk message mode 44: Earth Cataclysm
+ERROR: unhandled onTalk message mode 44: Earth Aura
+ERROR: unhandled onTextMessage message mode 46: Dica: Você pode sair do estado de defesa antes da duração acabar utilizando a dobra Earth Fury, Earth Track ou Earth Cataclysm. É importante informar também que esta dobra não pode ser usada imediatamente após o Earth Leech, haverá uma recarga pequena de 4 segundos.
+ERROR: unhandled onTalk message mode 44: Earth Armor
+ERROR: unhandled onTalk message mode 44: Earth Lavaball
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Munch.
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTextMessage message mode 46: Spawned Spiritual black knight.
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Recover
+ERROR: unhandled onTalk message mode 44: Earth Crush
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Rock
+ERROR: unhandled onTalk message mode 44: Earth Punch
+ERROR: unhandled onTalk message mode 44: Munch.
+ERROR: unhandled onTalk message mode 44: Earth Rock
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 08:02:53
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Whip
+ERROR: unhandled onTalk message mode 44: Fire Skyfall
+ERROR: unhandled onTalk message mode 44: Fire Recover
+ERROR: unhandled onTalk message mode 44: Fire Kick
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 08:12:53
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 08:52:09
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 08:59:17
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 09:32:12
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 09:44:16
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:14:19
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:17:04
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: failed to load UI from 'showinfo.otui': 'StaticWindow' is not a defined style
+FATAL ERROR: Unable to load module 'game_showinfo': /mods/game_showinfo/showinfo.lua:8: attempt to index upvalue 'playerNotifyWindow' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/mods/game_showinfo/showinfo.lua:8: in function 'init'
+	/mods/game_showinfo/showinfo.otmod:11:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:87: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:19:20
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:25:45
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:32:43
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+ERROR: Failed to import UI styles from 'dailyhunt.otui': OTML error in '/modules/game_dailyhunt/dailyhunt.otui:52': not a valid style declaration
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+[DailyHunt] === ONLINE START ===
+ERROR: failed to create widget from style 'DailyHuntWindow': 'DailyHuntWindow' is not a defined style
+[DailyHunt] ERROR creating window: nil
+[DailyHunt] === OFFLINE ===
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] unregisterExtendedOpcode OK
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x008c5ae0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/modules/game_playerinfo/playerinfo.lua:38: in function 'terminate'
+	/modules/game_playerinfo/playerinfo.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_playerinfo': LUA ERROR:
+/modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x008c5ae0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/modules/game_playerinfo/playerinfo.lua:38: in function 'terminate'
+	/modules/game_playerinfo/playerinfo.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:34:35
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] ERROR registering opcode: /modules/gamelib/protocolgame.lua:43: Opcode is already taken.
+[DailyHunt] === ONLINE END ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] ERROR registering opcode: /modules/gamelib/protocolgame.lua:43: Opcode is already taken.
+[DailyHunt] === ONLINE END ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = true
+[DailyHunt] toggle: window hidden, button OFF
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = true
+[DailyHunt] toggle: window hidden, button OFF
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] unregisterExtendedOpcode OK
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x008c5ae0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/modules/game_playerinfo/playerinfo.lua:38: in function 'terminate'
+	/modules/game_playerinfo/playerinfo.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_playerinfo': LUA ERROR:
+/modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x008c5ae0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/modules/game_playerinfo/playerinfo.lua:38: in function 'terminate'
+	/modules/game_playerinfo/playerinfo.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:37:38
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] ERROR unregisterExtendedOpcode: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:44:25
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] Opcode 166 registered OK
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 186
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=186 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=0
+[DailyHunt] receiveData: outfit[2] = type=0
+[DailyHunt] receiveData: outfit[3] = type=0
+[DailyHunt] receiveData: outfit[4] = type=0
+[DailyHunt] receiveData: outfit[5] = type=0
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: row 1 outfit set OK
+[DailyHunt] receiveData: row 1 progressBar NOT FOUND!
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: row 2 outfit set OK
+[DailyHunt] receiveData: row 2 progressBar NOT FOUND!
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: row 3 outfit set OK
+[DailyHunt] receiveData: row 3 progressBar NOT FOUND!
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: row 4 outfit set OK
+[DailyHunt] receiveData: row 4 progressBar NOT FOUND!
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: row 5 outfit set OK
+[DailyHunt] receiveData: row 5 progressBar NOT FOUND!
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 186
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=186 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=0
+[DailyHunt] receiveData: outfit[2] = type=0
+[DailyHunt] receiveData: outfit[3] = type=0
+[DailyHunt] receiveData: outfit[4] = type=0
+[DailyHunt] receiveData: outfit[5] = type=0
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: row 1 outfit set OK
+[DailyHunt] receiveData: row 1 progressBar NOT FOUND!
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: row 2 outfit set OK
+[DailyHunt] receiveData: row 2 progressBar NOT FOUND!
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: row 3 outfit set OK
+[DailyHunt] receiveData: row 3 progressBar NOT FOUND!
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: row 4 outfit set OK
+[DailyHunt] receiveData: row 4 progressBar NOT FOUND!
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: row 5 outfit set OK
+[DailyHunt] receiveData: row 5 progressBar NOT FOUND!
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] unregisterExtendedOpcode OK
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 10:51:56
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] Opcode 166 registered OK
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] unregisterExtendedOpcode OK
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 15:49:56
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] Opcode 166 registered OK
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] ERROR registering opcode: /modules/gamelib/protocolgame.lua:43: Opcode is already taken.
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 170
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=170 first 80 chars: day:dy130|monsters:Unknown,Unknown,Unknown,Unknown,Unknown|kills:0,0,0,0,0|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Unknown'
+[DailyHunt] receiveData: monster[2] = 'Unknown'
+[DailyHunt] receiveData: monster[3] = 'Unknown'
+[DailyHunt] receiveData: monster[4] = 'Unknown'
+[DailyHunt] receiveData: monster[5] = 'Unknown'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=0
+[DailyHunt] receiveData: outfit[2] = type=0
+[DailyHunt] receiveData: outfit[3] = type=0
+[DailyHunt] receiveData: outfit[4] = type=0
+[DailyHunt] receiveData: outfit[5] = type=0
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 2 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 3 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 4 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 5 name='Unknown' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 170
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=170 first 80 chars: day:dy130|monsters:Unknown,Unknown,Unknown,Unknown,Unknown|kills:0,0,0,0,0|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Unknown'
+[DailyHunt] receiveData: monster[2] = 'Unknown'
+[DailyHunt] receiveData: monster[3] = 'Unknown'
+[DailyHunt] receiveData: monster[4] = 'Unknown'
+[DailyHunt] receiveData: monster[5] = 'Unknown'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=0
+[DailyHunt] receiveData: outfit[2] = type=0
+[DailyHunt] receiveData: outfit[3] = type=0
+[DailyHunt] receiveData: outfit[4] = type=0
+[DailyHunt] receiveData: outfit[5] = type=0
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 2 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 3 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 4 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 5 name='Unknown' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 15:50:57
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] Opcode 166 registered OK
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 170
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=170 first 80 chars: day:dy130|monsters:Unknown,Unknown,Unknown,Unknown,Unknown|kills:0,0,0,0,0|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Unknown'
+[DailyHunt] receiveData: monster[2] = 'Unknown'
+[DailyHunt] receiveData: monster[3] = 'Unknown'
+[DailyHunt] receiveData: monster[4] = 'Unknown'
+[DailyHunt] receiveData: monster[5] = 'Unknown'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=0
+[DailyHunt] receiveData: outfit[2] = type=0
+[DailyHunt] receiveData: outfit[3] = type=0
+[DailyHunt] receiveData: outfit[4] = type=0
+[DailyHunt] receiveData: outfit[5] = type=0
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 2 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 3 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 4 name='Unknown' count=0
+[DailyHunt] receiveData: creating row 5 name='Unknown' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] unregisterExtendedOpcode OK
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] unregisterExtendedOpcode OK
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 16:38:52
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] Opcode 166 registered OK
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 232
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=232 first 80 chars: day:dy130|monsters:slick water elemental,pirate marauder,midnight panther,rotwor
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'slick water elemental'
+[DailyHunt] receiveData: monster[2] = 'pirate marauder'
+[DailyHunt] receiveData: monster[3] = 'midnight panther'
+[DailyHunt] receiveData: monster[4] = 'rotworm queen'
+[DailyHunt] receiveData: monster[5] = 'blazing fire elemental'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=286
+[DailyHunt] receiveData: outfit[2] = type=0
+[DailyHunt] receiveData: outfit[3] = type=775
+[DailyHunt] receiveData: outfit[4] = type=295
+[DailyHunt] receiveData: outfit[5] = type=0
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='slick water elemental' count=0
+[DailyHunt] receiveData: creating row 2 name='pirate marauder' count=0
+[DailyHunt] receiveData: creating row 3 name='midnight panther' count=0
+[DailyHunt] receiveData: creating row 4 name='rotworm queen' count=0
+[DailyHunt] receiveData: creating row 5 name='blazing fire elemental' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 232
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=232 first 80 chars: day:dy130|monsters:slick water elemental,pirate marauder,midnight panther,rotwor
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'slick water elemental'
+[DailyHunt] receiveData: monster[2] = 'pirate marauder'
+[DailyHunt] receiveData: monster[3] = 'midnight panther'
+[DailyHunt] receiveData: monster[4] = 'rotworm queen'
+[DailyHunt] receiveData: monster[5] = 'blazing fire elemental'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=286
+[DailyHunt] receiveData: outfit[2] = type=0
+[DailyHunt] receiveData: outfit[3] = type=775
+[DailyHunt] receiveData: outfit[4] = type=295
+[DailyHunt] receiveData: outfit[5] = type=0
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='slick water elemental' count=0
+[DailyHunt] receiveData: creating row 2 name='pirate marauder' count=0
+[DailyHunt] receiveData: creating row 3 name='midnight panther' count=0
+[DailyHunt] receiveData: creating row 4 name='rotworm queen' count=0
+[DailyHunt] receiveData: creating row 5 name='blazing fire elemental' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] ERROR registering opcode: /modules/gamelib/protocolgame.lua:43: Opcode is already taken.
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] unregisterExtendedOpcode OK
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 21:03:46
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[DailyHunt] === MODULE INIT START ===
+[DailyHunt] g_ui.importStyle('dailyhunt') OK
+[DailyHunt] connect(g_game) OK
+[DailyHunt] getLocalPlayer() = false, waiting for onGameStart
+[DailyHunt] === MODULE INIT END ===
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] Opcode 166 registered OK
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] ERROR registering opcode: /modules/gamelib/protocolgame.lua:43: Opcode is already taken.
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 234
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=234 first 80 chars: day:dy130|monsters:slick water elemental,pirate marauder,midnight panther,rotwor
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'slick water elemental'
+[DailyHunt] receiveData: monster[2] = 'pirate marauder'
+[DailyHunt] receiveData: monster[3] = 'midnight panther'
+[DailyHunt] receiveData: monster[4] = 'rotworm queen'
+[DailyHunt] receiveData: monster[5] = 'blazing fire elemental'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=286
+[DailyHunt] receiveData: outfit[2] = type=93
+[DailyHunt] receiveData: outfit[3] = type=775
+[DailyHunt] receiveData: outfit[4] = type=295
+[DailyHunt] receiveData: outfit[5] = type=49
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='slick water elemental' count=0
+[DailyHunt] receiveData: creating row 2 name='pirate marauder' count=0
+[DailyHunt] receiveData: creating row 3 name='midnight panther' count=0
+[DailyHunt] receiveData: creating row 4 name='rotworm queen' count=0
+[DailyHunt] receiveData: creating row 5 name='blazing fire elemental' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 234
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=234 first 80 chars: day:dy130|monsters:slick water elemental,pirate marauder,midnight panther,rotwor
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'slick water elemental'
+[DailyHunt] receiveData: monster[2] = 'pirate marauder'
+[DailyHunt] receiveData: monster[3] = 'midnight panther'
+[DailyHunt] receiveData: monster[4] = 'rotworm queen'
+[DailyHunt] receiveData: monster[5] = 'blazing fire elemental'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=286
+[DailyHunt] receiveData: outfit[2] = type=93
+[DailyHunt] receiveData: outfit[3] = type=775
+[DailyHunt] receiveData: outfit[4] = type=295
+[DailyHunt] receiveData: outfit[5] = type=49
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='slick water elemental' count=0
+[DailyHunt] receiveData: creating row 2 name='pirate marauder' count=0
+[DailyHunt] receiveData: creating row 3 name='midnight panther' count=0
+[DailyHunt] receiveData: creating row 4 name='rotworm queen' count=0
+[DailyHunt] receiveData: creating row 5 name='blazing fire elemental' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+[DailyHunt] === ONLINE START ===
+[DailyHunt] Window created OK
+[DailyHunt] Button created OK
+[DailyHunt] ERROR registering opcode: /modules/gamelib/protocolgame.lua:43: Opcode is already taken.
+[DailyHunt] === ONLINE END ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 0
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=0
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 1
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=1
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 1
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=1
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] onEscape called
+[DailyHunt] Window hidden via ESC
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 2
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=2
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 3
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=3
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 4
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=4
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 5
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=5
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 6
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=6
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 7
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=7
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 8
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=8
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] toggle() called
+[DailyHunt] toggle: button:isOn() = false
+[DailyHunt] toggle: window shown, button ON
+[DailyHunt] toggle: requesting data from server...
+[DailyHunt] toggle: sendExtendedOpcode sent
+[DailyHunt] Opcode 166 RECEIVED from server! length: 195
+[DailyHunt] === receiveData called ===
+[DailyHunt] receiveData: buffer length=195 first 80 chars: day:dy130|monsters:Draken Elite,Olaf,Lost Basher,Serpent Spawn,Orc Warlord|kills
+[DailyHunt] receiveData: parsed 5 parts
+[DailyHunt] receiveData: part[1] key='day'
+[DailyHunt] receiveData: part[2] key='monsters'
+[DailyHunt] receiveData: monster[1] = 'Draken Elite'
+[DailyHunt] receiveData: monster[2] = 'Olaf'
+[DailyHunt] receiveData: monster[3] = 'Lost Basher'
+[DailyHunt] receiveData: monster[4] = 'Serpent Spawn'
+[DailyHunt] receiveData: monster[5] = 'Orc Warlord'
+[DailyHunt] receiveData: part[3] key='kills'
+[DailyHunt] receiveData: kills[1] = 0
+[DailyHunt] receiveData: kills[2] = 0
+[DailyHunt] receiveData: kills[3] = 0
+[DailyHunt] receiveData: kills[4] = 0
+[DailyHunt] receiveData: kills[5] = 8
+[DailyHunt] receiveData: part[4] key='killsRequired'
+[DailyHunt] receiveData: killsRequired = 250
+[DailyHunt] receiveData: part[5] key='outfits'
+[DailyHunt] receiveData: outfit[1] = type=362
+[DailyHunt] receiveData: outfit[2] = type=1117
+[DailyHunt] receiveData: outfit[3] = type=573
+[DailyHunt] receiveData: outfit[4] = type=220
+[DailyHunt] receiveData: outfit[5] = type=2
+[DailyHunt] receiveData: monsterList found, destroying children
+[DailyHunt] receiveData: creating row 1 name='Draken Elite' count=0
+[DailyHunt] receiveData: creating row 2 name='Olaf' count=0
+[DailyHunt] receiveData: creating row 3 name='Lost Basher' count=0
+[DailyHunt] receiveData: creating row 4 name='Serpent Spawn' count=0
+[DailyHunt] receiveData: creating row 5 name='Orc Warlord' count=8
+[DailyHunt] receiveData: completed = 0/5
+[DailyHunt] === receiveData DONE ===
+[DailyHunt] === OFFLINE ===
+[DailyHunt] Window destroyed
+[DailyHunt] Button destroyed
+Exiting application..
+[DailyHunt] === MODULE TERMINATE ===
+[DailyHunt] unregisterExtendedOpcode OK
+[DailyHunt] === OFFLINE ===
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 21:14:22
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 21:17:21
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 21:19:47
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: failed to apply style to widget 'monsterList': OTML error in '/modules/game_dailyhunt/dailyhunt.otui:76': failed to cast node value 'transparent' to type 'class Color'
+stack traceback:
+	[C]: at 0x00f65c10
+	[C]: in function 'pcall'
+	/modules/game_dailyhunt/dailyhunt.lua:26: in function </modules/game_dailyhunt/dailyhunt.lua:25>
+at:
+	[C++]: ?applyStyle@UIWidget@@QAEXABV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 21:23:36
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: failed to apply style to widget 'monsterList': OTML error in '/modules/game_dailyhunt/dailyhunt.otui:77': border param must have its width followed by its color
+stack traceback:
+	[C]: at 0x00f65c10
+	[C]: in function 'pcall'
+	/modules/game_dailyhunt/dailyhunt.lua:26: in function </modules/game_dailyhunt/dailyhunt.lua:25>
+at:
+	[C++]: ?applyStyle@UIWidget@@QAEXABV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 22:20:28
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: failed to apply style to widget 'monsterList': OTML error in '/modules/game_dailyhunt/dailyhunt.otui:77': border param must have its width followed by its color
+stack traceback:
+	[C]: at 0x01185c10
+	[C]: in function 'pcall'
+	/modules/game_dailyhunt/dailyhunt.lua:26: in function </modules/game_dailyhunt/dailyhunt.lua:25>
+at:
+	[C++]: ?applyStyle@UIWidget@@QAEXABV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 22:24:14
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 22:27:16
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 26 2026 22:36:45
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 00:03:00
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 08:02:12
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 08:52:35
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 11:14:01
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 11:34:03
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 11:39:03
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+stack traceback:
+	[builtin#142]: at 0x011886e0
+	[C]: in function 'setSize'
+	/modules/game_folds/folds.lua:329: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 11:41:02
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: protected lua call failed: /modules/game_folds/folds.lua:331: attempt to call method 'center' (a nil value)
+stack traceback:
+	[C]: in function 'center'
+	/modules/game_folds/folds.lua:331: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: /modules/game_folds/folds.lua:331: attempt to call method 'center' (a nil value)
+stack traceback:
+	[C]: in function 'center'
+	/modules/game_folds/folds.lua:331: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: /modules/game_folds/folds.lua:331: attempt to call method 'center' (a nil value)
+stack traceback:
+	[C]: in function 'center'
+	/modules/game_folds/folds.lua:331: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+ERROR: protected lua call failed: /modules/game_folds/folds.lua:331: attempt to call method 'center' (a nil value)
+stack traceback:
+	[C]: in function 'center'
+	/modules/game_folds/folds.lua:331: in function 'showHealTargetDialog'
+	/modules/game_folds/folds.lua:292: in function 'createMenu'
+	/modules/game_folds/folds.lua:230: in function 'callback'
+	/modules/corelib/mouse.lua:31: in function </modules/corelib/mouse.lua:29>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 11:42:53
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 11:47:03
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 11:52:38
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 12:20:23
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = nil
+[Folds] Input received: Sirius
+[Folds] G.healTargetName SET TO: Sirius
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 12:53:18
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = nil
+[Folds] Input received: Sirius
+[Folds] G.healTargetName SET TO: Sirius
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 12:53:55
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Input received: Terrinha
+[Folds] G.healTargetName SET TO: Terrinha
+[Folds] onClick called for: Water Heal
+[Folds] G.healTargetName = Terrinha
+[Folds] Sending: Water Heal "Terrinha"
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 12:58:57
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 12:58:57
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:01:47
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = nil
+[Folds] Input received: Sirius
+ERROR: /modules/game_folds/folds.lua:309: attempt to call field 'setString' (a nil value)
+[Folds] Input received: Sirius
+ERROR: protected lua call failed: /modules/game_folds/folds.lua:309: attempt to call field 'setString' (a nil value)
+stack traceback:
+	[C]: in function 'setString'
+	/modules/game_folds/folds.lua:309: in function 'okCallback'
+	/modules/corelib/ui/uiinputbox.lua:16: in function </modules/corelib/ui/uiinputbox.lua:11>
+[Folds] Input received: Sirius
+ERROR: protected lua call failed: /modules/game_folds/folds.lua:309: attempt to call field 'setString' (a nil value)
+stack traceback:
+	[C]: in function 'setString'
+	/modules/game_folds/folds.lua:309: in function 'okCallback'
+	/modules/corelib/ui/uiinputbox.lua:16: in function </modules/corelib/ui/uiinputbox.lua:11>
+[Folds] Input received: Sirius
+ERROR: protected lua call failed: /modules/game_folds/folds.lua:309: attempt to call field 'setString' (a nil value)
+stack traceback:
+	[C]: in function 'setString'
+	/modules/game_folds/folds.lua:309: in function 'okCallback'
+	/modules/corelib/ui/uiinputbox.lua:16: in function </modules/corelib/ui/uiinputbox.lua:11>
+[Folds] Dialog cancelled
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:04:23
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = nil
+[Folds] Input received: Sirius
+[Folds] G.healTargetName SET TO: Sirius
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:04:49
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Input received: Terrinha
+[Folds] G.healTargetName SET TO: Terrinha
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:40:18
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:40:19
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Terrinha
+[Folds] Input received: Sirius
+[Folds] G.healTargetName SET TO: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:43:02
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:43:02
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Input received: Terrinha
+[Folds] G.healTargetName SET TO: Terrinha
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Terrinha" autoSend=true
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Terrinha
+[Folds] Input received: Sirius
+[Folds] G.healTargetName SET TO: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:3 resolved=Water Explosion autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:1 resolved=Water Whip autoSend=true
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:53:26
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Input received: Sirius
+[Folds] G.healTargetName SET TO: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 13:57:31
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Dialog cancelled
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Dialog cancelled
+[Folds] onClick called for: Water Heal
+[Folds] G.healTargetName = Sirius
+[Folds] Sending: Water Heal "Sirius"
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal "Sirius" autoSend=true
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 14:30:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Folds] onClick called for: Water Heal
+[Folds] G.healTargetName = Sirius
+[Folds] Sending: Water Heal
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Input received: Sirius
+[Folds] G.healTargetName SET TO: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 14:34:16
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 14:34:16
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Input received: Sirius
+[Folds] G.healTargetName SET TO: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Sirius
+[Folds] Water Heal right-click detected, showing target dialog
+[Folds] Current G.healTargetName = Sirius
+[Folds] Input received: Terrinha
+[Folds] G.healTargetName SET TO: Terrinha
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Terrinha
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Terrinha
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Terrinha
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Terrinha
+[Hotkeys] doKeyCombo: value=@slot:4 resolved=Water Heal autoSend=true
+[Hotkeys] opcode 210 enviado com target: Terrinha
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 14:41:54
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 14:41:58
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 15:07:46
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 15:07:46
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 15:21:46
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 17:05:17
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'creaturemanager.otui': OTML error in '/modules/game_creaturemanager/creaturemanager.otui:1': not a valid style declaration
+ERROR: Failed to import UI styles from 'creaturestore.otui': OTML error in '/modules/game_creaturemanager/creaturestore.otui:1': not a valid style declaration
+ERROR: protected lua call failed: /modules/game_creaturemanager/creaturemanager.lua:190: attempt to index global 'json' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_creaturemanager/creaturemanager.lua:190: in function 'onExtendedOpcode'
+	/modules/game_creaturemanager/creaturemanager.lua:70: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_creaturemanager/creaturemanager.lua:190: attempt to index global 'json' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_creaturemanager/creaturemanager.lua:190: in function 'onExtendedOpcode'
+	/modules/game_creaturemanager/creaturemanager.lua:70: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 17:23:09
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'creaturemanager.otui': OTML error in '/modules/game_creaturemanager/creaturemanager.otui:36': not a valid style declaration
+ERROR: Failed to import UI styles from 'creaturestore.otui': OTML error in '/modules/game_creaturemanager/creaturestore.otui:47': not a valid style declaration
+ERROR: failed to create widget from style 'creatureManagerWindow': 'creatureManagerWindow' is not a defined style
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 17:35:07
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: protected lua call failed: ...ame_creaturemanager/creaturemanager.otui:187: [@onClick]:2: attempt to call field 'showStore' (a nil value)
+stack traceback:
+	[C]: in function 'showStore'
+	...ame_creaturemanager/creaturemanager.otui:187: [@onClick]:2: in function <...ame_creaturemanager/creaturemanager.otui:187: [@onClick]:1>
+ERROR: protected lua call failed: ...ame_creaturemanager/creaturemanager.otui:187: [@onClick]:2: attempt to call field 'showStore' (a nil value)
+stack traceback:
+	[C]: in function 'showStore'
+	...ame_creaturemanager/creaturemanager.otui:187: [@onClick]:2: in function <...ame_creaturemanager/creaturemanager.otui:187: [@onClick]:1>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 27 2026 17:37:17
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 28 2026 04:22:05
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 28 2026 04:26:20
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 28 2026 04:30:39
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 28 2026 04:36:36
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 28 2026 06:20:59
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'dailyhunt.otui': OTML error in '/modules/game_dailyhunt/dailyhunt.otui:45': not a valid style declaration
+ERROR: failed to create widget from style 'DailyHuntWindow': 'DailyHuntWindow' is not a defined style
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:28: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:28: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 28 2026 06:22:53
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 26 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default

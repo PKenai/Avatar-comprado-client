@@ -114,6 +114,7 @@ public:
     static Color getOutfitColor(int color);
 
     static const Color alpha;
+    static const Color transparent;
     static const Color white;
     static const Color black;
     static const Color red;
@@ -176,6 +177,30 @@ inline std::istream& operator>>(std::istream& in, Color& color)
 
         if(tmp == "alpha") {
             color = Color::alpha;
+        } else if(stdext::starts_with(tmp, "transparent")) {
+            float alpha = 0.0f;
+            size_t parenStart = tmp.find('(');
+            size_t parenEnd = tmp.find(')');
+            if(parenStart != std::string::npos && parenEnd != std::string::npos && parenStart < parenEnd) {
+                std::string alphaStr = tmp.substr(parenStart + 1, parenEnd - parenStart - 1);
+                stdext::trim(alphaStr);
+                if(!alphaStr.empty()) {
+                    try {
+                        bool isPercent = alphaStr.find('%') != std::string::npos;
+                        if(isPercent) {
+                            alphaStr.erase(alphaStr.find('%'));
+                            stdext::trim(alphaStr);
+                            alpha = std::stof(alphaStr) / 100.0f;
+                        } else {
+                            alpha = std::stof(alphaStr);
+                        }
+                        alpha = std::max(0.0f, std::min(1.0f, alpha));
+                    } catch(...) {
+                        alpha = 0.0f;
+                    }
+                }
+            }
+            color = Color(0.0f, 0.0f, 0.0f, alpha);
         } else if(tmp == "black") {
             color = Color::black;
         } else if(tmp == "white") {

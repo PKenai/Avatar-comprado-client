@@ -59,6 +59,7 @@ MessageTypes = {
   [MessageModes.TutorialHint] = MessageSettings.centerWhite,
   [MessageModes.Market] = MessageSettings.centerWhite,
   [MessageModes.BeyondLast] = MessageSettings.centerWhite,
+  [46] = MessageSettings.none,  -- deprecated MessageBlue
   [MessageModes.Report] = MessageSettings.consoleRed,
   [MessageModes.HotkeyUse] = MessageSettings.centerGreen,
 

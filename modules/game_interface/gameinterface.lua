@@ -576,6 +576,22 @@ function createThingMenu(menuPosition, lookThing, useThing, creatureThing)
     menu:addSeparator()
     menu:addOption(tr('Copy Name'), function() g_window.setClipboardText(creatureThing:getName()) end)
 
+    -- Set Healing Target: so aparece para Water Benders (vocacao 2) em outros players
+    if not creatureThing:isLocalPlayer() and creatureThing:isPlayer() then
+      local foldsModule = modules.game_folds
+      if foldsModule and foldsModule.infos and foldsModule.infos.vocation == 2 then
+        local targetName = creatureThing:getName()
+        menu:addOption(tr('Set Healing Target'), function()
+          G.healTargetName = targetName
+          g_settings.set('waterHealTarget', targetName)
+          g_settings.save()
+          if foldsModule.updateHealTargetTooltip then
+            foldsModule.updateHealTargetTooltip()
+          end
+        end)
+      end
+    end
+
     -- Inspect Creature (for non-player creatures)
     if not creatureThing:isLocalPlayer() and not creatureThing:isPlayer() then
       menu:addOption(tr('Inspect Creature'), function()
