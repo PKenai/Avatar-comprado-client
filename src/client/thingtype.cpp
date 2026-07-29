@@ -818,6 +818,24 @@ const TexturePtr& ThingType::getTexture(int animationPhase)
                 }
             }
         }
+
+        bool replaceBlack = (m_category == ThingCategoryCreature) || (m_category == ThingCategoryItem && !isCloth());
+        if (replaceBlack && fullImage) {
+            int numPixels = fullImage->getPixelCount();
+            uint8* pixelData = fullImage->getPixelData();
+            int bpp = fullImage->getBpp();
+            if (bpp == 4 && pixelData) {
+                for (int i = 0; i < numPixels; ++i) {
+                    uint8* p = &pixelData[i * 4];
+                    if (p[3] > 0 && p[0] == 0 && p[1] == 0 && p[2] == 0) {
+                        p[0] = 52; // #343434
+                        p[1] = 52; // #343434
+                        p[2] = 52; // #343434
+                    }
+                }
+            }
+        }
+
         animationPhaseTexture = TexturePtr(new Texture(fullImage, true, false, true));
         m_loaded = true;
     }

@@ -98,6 +98,9 @@ public:
     void clearTitle() { setTitle("", "", Color::white); }
     std::string getTitle() { return m_titleCache.getText(); }
 
+    void setNameHighlight(const Color& baseColor, const Color& highlightColor, float highlightWidth = 2.0f);
+    void clearNameHighlight() { m_useNameHighlight = false; }
+
     uint32 getId() { return m_id; }
     std::string getName() { return m_name; }
     uint8 getHealthPercent() { return m_healthPercent; }
@@ -252,6 +255,13 @@ protected:
     Timer m_outfitColorTimer;
     CachedText m_titleCache;
     Color m_titleColor;
+
+    // Name highlight (shimmer effect)
+    bool m_useNameHighlight{ false };
+    Color m_nameHighlightBaseColor{ Color::white };
+    Color m_nameHighlightColor{ Color::white };
+    float m_nameHighlightWidth{ 2.0f };
+    ticks_t m_nameHighlightStartTime{ 0 };
 
     static std::array<double, Otc::LastSpeedFormula> m_speedFormula;
 

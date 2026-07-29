@@ -282,7 +282,15 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
     }
 
     if (drawFlags & Otc::DrawNames) {
-        m_nameCache.draw(textRect, fillColor);
+        if (m_useNameHighlight) {
+            float speed = 0.005f;
+            float elapsed = static_cast<float>(g_clock.millis() - m_nameHighlightStartTime);
+            int nameLen = static_cast<int>(m_name.length());
+            float pos = std::fmod(elapsed * speed, std::max<float>(1.0f, static_cast<float>(nameLen)));
+            m_nameCache.drawWithHighlight(textRect, m_nameHighlightBaseColor, m_nameHighlightColor, pos, m_nameHighlightWidth);
+        } else {
+            m_nameCache.draw(textRect, fillColor);
+        }
 
         if (m_titleCache.hasText()) {
             Size titleSize = m_titleCache.getTextSize();
@@ -1249,4 +1257,13 @@ void Creature::setTitle(const std::string& title, const std::string& font, const
         m_titleCache.setFont(g_fonts.getFont(font));
     }
     m_titleColor = color;
+}
+
+void Creature::setNameHighlight(const Color& baseColor, const Color& highlightColor, float highlightWidth)
+{
+    m_useNameHighlight = true;
+    m_nameHighlightBaseColor = baseColor;
+    m_nameHighlightColor = highlightColor;
+    m_nameHighlightWidth = highlightWidth;
+    m_nameHighlightStartTime = g_clock.millis();
 }
