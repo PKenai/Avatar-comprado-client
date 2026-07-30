@@ -58,7 +58,6 @@ public:
     void setDrawHealthBars(bool enable) { m_mapView->setDrawHealthBars(enable); }
     void setDrawHealthBarsOnTop(bool enable) { m_mapView->setDrawHealthBarsOnTop(enable); }
     void setDrawLights(bool enable) { m_mapView->setDrawLights(enable); }
-    void setDrawSkyClouds(bool enable) { m_mapView->setDrawSkyClouds(enable); }
     void setDrawManaBar(bool enable) { m_mapView->setDrawManaBar(enable); }
     void setDrawPlayerBars(bool enable) { m_mapView->setDrawPlayerBars(enable); }
     void setAnimated(bool enable) { m_mapView->setAnimated(enable); }
@@ -73,7 +72,6 @@ public:
     bool isDrawingHealthBars() { return m_mapView->isDrawingHealthBars(); }
     bool isDrawingHealthBarsOnTop() { return m_mapView->isDrawingHealthBarsOnTop(); }
     bool isDrawingLights() { return m_mapView->isDrawingLights(); }
-    bool isDrawingSkyClouds() { return m_mapView->isDrawingSkyClouds(); }
     bool isDrawingManaBar() { return m_mapView->isDrawingManaBar(); }
     bool isAnimating() { return m_mapView->isAnimating(); }
     bool isKeepAspectRatioEnabled() { return m_keepAspectRatio; }

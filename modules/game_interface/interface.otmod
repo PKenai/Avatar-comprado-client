@@ -34,6 +34,7 @@ Module
     - game_playermount
     - game_shaders
     - game_skyclouds
+    - game_itemfly
     
   @onLoad: init()
   @onUnload: terminate()

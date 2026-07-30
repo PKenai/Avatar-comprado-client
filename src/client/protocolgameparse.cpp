@@ -32,9 +32,17 @@
 #include "missile.h"
 #include "tile.h"
 #include "luavaluecasts_client.h"
+#include <framework/core/clock.h>
 #include <framework/core/eventdispatcher.h>
 #include <framework/util/extras.h>
 #include <framework/stdext/string.h>
+
+// ─── Smooth Item Pickup: track last item removed from a tile ──────────────
+static struct {
+    uint16 itemId = 0;
+    Position pos;
+    uint32 tick = 0;
+} g_lastRemovedTileItem;
 
 void ProtocolGame::parseMessage(const InputMessagePtr& msg)
 {
@@ -1227,6 +1235,13 @@ void ProtocolGame::parseTileRemoveThing(const InputMessagePtr& msg)
         return;
     }
 
+    // Cache last removed item for smooth pickup animation
+    if (thing->isItem()) {
+        g_lastRemovedTileItem.itemId = thing->getId();
+        g_lastRemovedTileItem.pos = thing->getPosition();
+        g_lastRemovedTileItem.tick = g_clock.millis();
+    }
+
     if (!g_map.removeThing(thing))
         g_logger.traceError("unable to remove thing");
 }
@@ -1303,6 +1318,21 @@ void ProtocolGame::parseContainerAddItem(const InputMessagePtr& msg)
         slot = msg->getU16(); // slot
     }
     ItemPtr item = getItem(msg);
+
+    // Fire pickup event if we recently removed an item from a tile
+    if (item && g_lastRemovedTileItem.tick > 0
+        && g_clock.millis() - g_lastRemovedTileItem.tick < 500) {
+        g_lua.callGlobalField("g_game", "onItemPickup",
+            item->getId(),
+            g_lastRemovedTileItem.pos.x,
+            g_lastRemovedTileItem.pos.y,
+            g_lastRemovedTileItem.pos.z,
+            "container",
+            slot,
+            containerId);
+        g_lastRemovedTileItem.tick = 0;
+    }
+
     g_game.processContainerAddItem(containerId, item, slot);
 }
 
@@ -1340,6 +1370,20 @@ void ProtocolGame::parseAddInventoryItem(const InputMessagePtr& msg)
 {
     int slot = msg->getU8();
     ItemPtr item = getItem(msg);
+
+    // Fire pickup event if we recently removed an item from a tile
+    if (item && g_lastRemovedTileItem.tick > 0
+        && g_clock.millis() - g_lastRemovedTileItem.tick < 500) {
+        g_lua.callGlobalField("g_game", "onItemPickup",
+            item->getId(),
+            g_lastRemovedTileItem.pos.x,
+            g_lastRemovedTileItem.pos.y,
+            g_lastRemovedTileItem.pos.z,
+            "inventory",
+            slot);
+        g_lastRemovedTileItem.tick = 0;
+    }
+
     g_game.processInventoryChange(slot, item);
 }
 

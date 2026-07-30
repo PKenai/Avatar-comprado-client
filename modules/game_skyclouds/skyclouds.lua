@@ -22,8 +22,6 @@ local pollEvent = nil
 -- ═══════════════════════════════════════════════════════════════════════════
 
 function init()
-  g_logger.info("[SkyClouds] *** INIT CALLED *** Module is loading...")
-
   -- Restore user preference
   local saved = g_settings.get(ENABLED_KEY)
   if saved ~= nil then
@@ -31,29 +29,18 @@ function init()
   else
     cloudsEnabled = true
   end
-  -- cloudsEnabled is now controlled by client_options (skyClouds toggle)
-  g_logger.info("[SkyClouds] Loaded setting: enabled=" .. tostring(cloudsEnabled))
-
-  -- Shader creation is async on graphics thread, so we can't check existence here
-  g_logger.info("[SkyClouds] Shader '" .. SHADER_NAME .. "' creation requested (async on graphics thread)")
 
   -- Connect game events
   connect(g_game, { onGameStart = onGameStart, onGameEnd = onGameEnd })
-  g_logger.info("[SkyClouds] Connected to g_game events")
 
   moduleLoaded = true
-  g_logger.info("[SkyClouds] *** INIT COMPLETE *** Module ready!")
 end
 
 function terminate()
-  g_logger.info("[SkyClouds] terminate() called")
-
   stopPolling()
   disconnect(g_game, { onGameStart = onGameStart, onGameEnd = onGameEnd })
   removeShader()
   moduleLoaded = false
-
-  g_logger.info("[SkyClouds] terminate() done")
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
@@ -72,7 +59,6 @@ function startPolling()
 
   -- First tick
   pollEvent = scheduleEvent(tick, 500)
-  g_logger.info("[SkyClouds] Started Z position polling (every " .. POLL_INTERVAL_MS .. "ms)")
 end
 
 function stopPolling()
@@ -101,7 +87,6 @@ function checkPlayerZ()
 
   if aboveGround ~= wasAboveGround then
     wasAboveGround = aboveGround
-    g_logger.info("[SkyClouds] Z changed to " .. pos.z .. " (aboveGround=" .. tostring(aboveGround) .. ")")
     if aboveGround and cloudsEnabled then
       applyShader()
     else
@@ -115,13 +100,11 @@ end
 -- ═══════════════════════════════════════════════════════════════════════════
 
 function onGameStart()
-  g_logger.info("[SkyClouds] onGameStart fired!")
   -- Start periodic Z checking
   addEvent(startPolling)
 end
 
 function onGameEnd()
-  g_logger.info("[SkyClouds] onGameEnd fired!")
   stopPolling()
   wasAboveGround = nil
   removeShader()
@@ -141,18 +124,10 @@ end
 function applyShader()
   local mapPanel = getMapPanel()
   if not mapPanel then
-    g_logger.warning("[SkyClouds] applyShader() — no map panel!")
     return
   end
 
-  local before = mapPanel:getShader()
   mapPanel:setShader(SHADER_NAME)
-
-  if mapPanel:getShader() == SHADER_NAME then
-    g_logger.info("[SkyClouds] Shader applied! '" .. tostring(before) .. "' -> 'sky_clouds'")
-  else
-    g_logger.warning("[SkyClouds] Shader set failed! Current: '" .. tostring(mapPanel:getShader()) .. "'")
-  end
 end
 
 function removeShader()
@@ -163,7 +138,6 @@ function removeShader()
 
   if mapPanel:getShader() == SHADER_NAME then
     mapPanel:setShader("")
-    g_logger.info("[SkyClouds] Shader removed")
   end
 end
 
@@ -172,7 +146,6 @@ end
 -- ═══════════════════════════════════════════════════════════════════════════
 
 function setEnabled(enabled)
-  g_logger.info("[SkyClouds] setEnabled(" .. tostring(enabled) .. ")")
   cloudsEnabled = enabled
   g_settings.set(ENABLED_KEY, enabled)
 
@@ -188,7 +161,6 @@ function isEnabled()
 end
 
 function refresh()
-  g_logger.info("[SkyClouds] refresh()")
   removeShader()
   if cloudsEnabled and wasAboveGround then
     applyShader()
@@ -202,7 +174,6 @@ end
 
 -- For debugging from console: modules.game_skyclouds.forceEnable()
 function forceEnable()
-  g_logger.info("[SkyClouds] forceEnable() — forcing shader ON")
   cloudsEnabled = true
   wasAboveGround = true
   g_settings.set(ENABLED_KEY, true)

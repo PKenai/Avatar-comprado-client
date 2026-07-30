@@ -52,13 +52,25 @@ function createOutfitShaders()
   g_shaders.createOutfitShader(SPIRITUAL_SHADER, "/shaders/outfit_spiritual_vertex", "/shaders/outfit_spiritual_fragment")
 end
 
+local function isSkyCloudsActive()
+  if modules.game_skyclouds and modules.game_skyclouds.shouldApply and modules.game_skyclouds.shouldApply() then
+    return true
+  end
+  return false
+end
+
 local function setMapShader(name)
   local mapPanel = modules.game_interface and modules.game_interface.getMapPanel and modules.game_interface.getMapPanel()
   if not mapPanel then
     return
   end
   if not name or name == "" or name == "off" or name == "none" or name == "map_default" then
-    mapPanel:setShader("")
+    -- When clearing, re-apply sky_clouds if it is active
+    if isSkyCloudsActive() then
+      mapPanel:setShader("sky_clouds")
+    else
+      mapPanel:setShader("")
+    end
   else
     mapPanel:setShader(name)
   end

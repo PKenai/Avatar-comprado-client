@@ -116,6 +116,7 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_sprites", "getSpritesCount", &SpriteManager::getSpritesCount, &g_sprites);
     g_lua.bindSingletonFunction("g_sprites", "setHdMode", &SpriteManager::setHdMode, &g_sprites);
     g_lua.bindSingletonFunction("g_sprites", "isHdMode", &SpriteManager::isHdMode, &g_sprites);
+    g_lua.bindSingletonFunction("g_sprites", "spriteSize", &SpriteManager::spriteSize, &g_sprites);
 
     g_lua.registerSingletonClass("g_map");
     g_lua.bindSingletonFunction("g_map", "isLookPossible", &Map::isLookPossible, &g_map);
@@ -914,7 +915,6 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<UIMap>("setDrawHealthBars", &UIMap::setDrawHealthBars);
     g_lua.bindClassMemberFunction<UIMap>("setDrawHealthBarsOnTop", &UIMap::setDrawHealthBarsOnTop);
     g_lua.bindClassMemberFunction<UIMap>("setDrawLights", &UIMap::setDrawLights);
-    g_lua.bindClassMemberFunction<UIMap>("setDrawSkyClouds", &UIMap::setDrawSkyClouds);
     g_lua.bindClassMemberFunction<UIMap>("setDrawManaBar", &UIMap::setDrawManaBar);
     g_lua.bindClassMemberFunction<UIMap>("setDrawPlayerBars", &UIMap::setDrawPlayerBars);
     g_lua.bindClassMemberFunction<UIMap>("setAnimated", &UIMap::setAnimated);
@@ -930,7 +930,6 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<UIMap>("isDrawingHealthBars", &UIMap::isDrawingHealthBars);
     g_lua.bindClassMemberFunction<UIMap>("isDrawingHealthBarsOnTop", &UIMap::isDrawingHealthBarsOnTop);
     g_lua.bindClassMemberFunction<UIMap>("isDrawingLights", &UIMap::isDrawingLights);
-    g_lua.bindClassMemberFunction<UIMap>("isDrawingSkyClouds", &UIMap::isDrawingSkyClouds);
     g_lua.bindClassMemberFunction<UIMap>("isDrawingManaBar", &UIMap::isDrawingManaBar);
     g_lua.bindClassMemberFunction<UIMap>("isLimitVisibleRangeEnabled", &UIMap::isLimitVisibleRangeEnabled);
     g_lua.bindClassMemberFunction<UIMap>("isAnimating", &UIMap::isAnimating);

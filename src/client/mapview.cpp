@@ -154,11 +154,6 @@ void MapView::drawMapBackground(const Rect& rect, const TilePtr& crosshairTile) 
         }
         drawFloor(z, cameraPosition, crosshairTile);
 
-        if (m_drawSkyClouds && g_game.getFeature(Otc::GameDrawSkyClouds)
-            && cameraPosition.z <= Otc::SEA_FLOOR && z == cameraPosition.z) {
-            drawSkyCloudBodies(cameraPosition);
-        }
-
         if (fading < 0.99)
             g_drawQueue->setOpacity(floorStart, fading);
     }
@@ -184,225 +179,36 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
         }
     }
 
-    if (g_game.getFeature(Otc::GameMapDrawGroundFirst)) {
-        // ground
-        for (auto& tile : tiles) {
-            Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
-            tile->drawGround(tileDrawPos, m_lightView.get());
-        }
+    // Single-pass: render each tile fully (ground → bottom → creatures → top)
+    // before moving to the next tile, preserving correct Z-order.
+    // This prevents items from further tiles extending into closer tiles' area
+    // from being rendered on top of closer tiles' content.
+    for (auto& tile : tiles) {
+        Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
 
-        drawCloudShadows(floor, cameraPosition);
-
-        // bottom, creatures, top
-        for (auto& tile : tiles) {
-            Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
-
-            tile->drawBottom(tileDrawPos, m_lightView.get());
-
-            if (m_crosshair && tile == crosshairTile) {
-                g_drawQueue->addTexturedRect(Rect(tileDrawPos, tileDrawPos + g_sprites.spriteSize() - 1),
-                                             m_crosshair, Rect(0, 0, m_crosshair->getSize()));
+        if (m_lightView) {
+            ItemPtr ground = tile->getGround();
+            if (ground && ground->isGround() && !ground->isTranslucent()) {
+                m_lightView->setFieldBrightness(tileDrawPos, lightFloorStart, 0);
             }
-
-            tile->drawCreatures(tileDrawPos, m_lightView.get());
-            tile->drawTop(tileDrawPos, m_lightView.get());
-        }
-    } else {
-        // ground first so cloud shadows sit on terrain
-        for (auto& tile : tiles) {
-            Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
-
-            if (m_lightView) {
-                ItemPtr ground = tile->getGround();
-                if (ground && ground->isGround() && !ground->isTranslucent()) {
-                    m_lightView->setFieldBrightness(tileDrawPos, lightFloorStart, 0);
-                }
-            }
-
-            tile->drawGround(tileDrawPos, m_lightView.get());
         }
 
-        drawCloudShadows(floor, cameraPosition);
+        tile->drawGround(tileDrawPos, m_lightView.get());
+        tile->drawBottom(tileDrawPos, m_lightView.get());
 
-        for (auto& tile : tiles) {
-            Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
-
-            tile->drawBottom(tileDrawPos, m_lightView.get());
-
-            if (m_crosshair && tile == crosshairTile) {
-                g_drawQueue->addTexturedRect(Rect(tileDrawPos, tileDrawPos + g_sprites.spriteSize() - 1),
-                                             m_crosshair, Rect(0, 0, m_crosshair->getSize()));
-            }
-
-            tile->drawCreatures(tileDrawPos, m_lightView.get());
-            tile->drawTop(tileDrawPos, m_lightView.get());
+        if (m_crosshair && tile == crosshairTile) {
+            g_drawQueue->addTexturedRect(Rect(tileDrawPos, tileDrawPos + g_sprites.spriteSize() - 1),
+                                         m_crosshair, Rect(0, 0, m_crosshair->getSize()));
         }
+
+        tile->drawCreatures(tileDrawPos, m_lightView.get());
+        tile->drawTop(tileDrawPos, m_lightView.get());
     }
 
     for (const MissilePtr& missile : g_map.getFloorMissiles(floor)) {
         missile->draw(transformPositionTo2D(missile->getPosition(), cameraPosition), true, m_lightView.get());
     }
 }
-
-void MapView::ensureSkyClouds(const Position& cameraPosition)
-{
-    if (m_skyCloudsReady && m_skyCloudsAnchor.isValid()
-        && m_skyCloudsAnchor.z == cameraPosition.z
-        && m_skyCloudsAnchor.distance(cameraPosition) < 60) {
-        return;
-    }
-
-    m_skyClouds.clear();
-    m_skyClouds.reserve(10);
-
-    // Deterministic layout so reconnects look similar
-    static const float seeds[][6] = {
-        { -18.f, -8.f, 6.5f, 3.2f, 0.06f, 0.018f },
-        { -6.f,  12.f, 5.0f, 2.6f, 0.05f, 0.022f },
-        {  10.f, -14.f, 7.2f, 3.8f, 0.045f, 0.015f },
-        {  16.f,  4.f, 4.8f, 2.4f, 0.07f, 0.02f },
-        { -22.f,  6.f, 5.6f, 2.9f, 0.04f, 0.025f },
-        {  2.f, -22.f, 6.0f, 3.1f, 0.055f, 0.012f },
-        {  22.f, -6.f, 5.4f, 2.7f, 0.048f, 0.019f },
-        { -12.f, -18.f, 4.4f, 2.2f, 0.062f, 0.016f },
-        {  8.f,  18.f, 6.8f, 3.5f, 0.042f, 0.021f },
-        { -2.f,  -2.f, 5.2f, 2.8f, 0.058f, 0.014f },
-    };
-
-    for (const auto& s : seeds) {
-        SkyCloud cloud;
-        cloud.x = cameraPosition.x + s[0];
-        cloud.y = cameraPosition.y + s[1];
-        cloud.radiusX = s[2];
-        cloud.radiusY = s[3];
-        cloud.vx = s[4];
-        cloud.vy = s[5];
-        cloud.density = 0.55f + (std::fabs(s[0]) + std::fabs(s[1])) * 0.004f;
-        if (cloud.density > 0.9f)
-            cloud.density = 0.9f;
-        m_skyClouds.push_back(cloud);
-    }
-
-    m_skyCloudsReady = true;
-    m_skyCloudsAnchor = cameraPosition;
-    m_skyCloudsLastSeconds = g_clock.seconds();
-}
-
-void MapView::updateSkyClouds(const Position& cameraPosition)
-{
-    ensureSkyClouds(cameraPosition);
-
-    const float now = g_clock.seconds();
-    float dt = now - m_skyCloudsLastSeconds;
-    m_skyCloudsLastSeconds = now;
-    if (dt < 0.f)
-        dt = 0.f;
-    if (dt > 0.1f)
-        dt = 0.1f;
-
-    const float wrap = 36.f;
-    for (SkyCloud& cloud : m_skyClouds) {
-        cloud.x += cloud.vx * dt;
-        cloud.y += cloud.vy * dt;
-
-        float dx = cloud.x - cameraPosition.x;
-        float dy = cloud.y - cameraPosition.y;
-        if (dx > wrap) cloud.x -= wrap * 2.f;
-        else if (dx < -wrap) cloud.x += wrap * 2.f;
-        if (dy > wrap) cloud.y -= wrap * 2.f;
-        else if (dy < -wrap) cloud.y += wrap * 2.f;
-    }
-}
-
-float MapView::sampleCloudShadow(float tileX, float tileY) const
-{
-    float sum = 0.f;
-    for (const SkyCloud& cloud : m_skyClouds) {
-        const float nx = (tileX - cloud.x) / cloud.radiusX;
-        const float ny = (tileY - cloud.y) / cloud.radiusY;
-        const float d2 = nx * nx + ny * ny;
-        if (d2 >= 1.f)
-            continue;
-        float falloff = 1.f - d2;
-        falloff *= falloff;
-        sum += falloff * cloud.density;
-    }
-    return std::min(1.f, sum);
-}
-
-bool MapView::canReceiveCloudShadow(const Position& pos) const
-{
-    // Outdoor top surfaces only: roofs (andar de cima) and open ground below.
-    // Tiles under a full floor above are covered and skip the shadow.
-    if (g_map.isCovered(pos, 0))
-        return false;
-
-    const TilePtr& tile = g_map.getTile(pos);
-    return tile && tile->getGround();
-}
-
-void MapView::drawCloudShadows(short floor, const Position& cameraPosition)
-{
-    if (!m_drawSkyClouds || !g_game.getFeature(Otc::GameDrawSkyClouds))
-        return;
-    if (cameraPosition.z > Otc::SEA_FLOOR || floor > Otc::SEA_FLOOR)
-        return;
-
-    updateSkyClouds(cameraPosition);
-
-    const int sprSize = g_sprites.spriteSize();
-    for (const TilePtr& tile : m_cachedVisibleTiles[floor]) {
-        const Position& pos = tile->getPosition();
-        if (!canReceiveCloudShadow(pos))
-            continue;
-
-        const float intensity = sampleCloudShadow(pos.x + 0.5f, pos.y + 0.5f);
-        if (intensity < 0.04f)
-            continue;
-
-        // Stronger on upper floors (roofs), softer on the ground below.
-        const float floorBoost = (floor < cameraPosition.z) ? 1.15f : 0.9f;
-        const int alpha = std::min(110, static_cast<int>(intensity * floorBoost * 95.f));
-        if (alpha < 4)
-            continue;
-
-        const Point tileDrawPos = transformPositionTo2D(pos, cameraPosition);
-        g_drawQueue->addFilledRect(Rect(tileDrawPos, Size(sprSize, sprSize)), Color(20, 24, 36, alpha));
-    }
-}
-
-void MapView::drawSkyCloudBodies(const Position& cameraPosition)
-{
-    if (!m_drawSkyClouds || !g_game.getFeature(Otc::GameDrawSkyClouds))
-        return;
-    if (cameraPosition.z > Otc::SEA_FLOOR)
-        return;
-
-    updateSkyClouds(cameraPosition);
-
-    const int sprSize = g_sprites.spriteSize();
-    // Draw as if clouds sit one floor above the camera (isometric lift).
-    const int cloudZ = std::max(0, cameraPosition.z - 1);
-    const float dz = static_cast<float>(cameraPosition.z - cloudZ);
-
-    for (const SkyCloud& cloud : m_skyClouds) {
-        const float sx = (m_virtualCenterOffset.x + (cloud.x - cameraPosition.x) - dz) * sprSize;
-        const float sy = (m_virtualCenterOffset.y + (cloud.y - cameraPosition.y) - dz) * sprSize;
-
-        for (int layer = 3; layer >= 1; --layer) {
-            const float t = layer / 3.0f;
-            const int w = std::max(sprSize, static_cast<int>(cloud.radiusX * sprSize * 2.f * t));
-            const int h = std::max(sprSize / 2, static_cast<int>(cloud.radiusY * sprSize * 2.f * t * 0.62f));
-            const int alpha = std::min(120, static_cast<int>(cloud.density * 70.f * (1.15f - t * 0.45f)));
-            if (alpha < 3)
-                continue;
-
-            const Rect rect(Point(static_cast<int>(sx) - w / 2, static_cast<int>(sy) - h / 2), Size(w, h));
-            g_drawQueue->addFilledRect(rect, Color(236, 242, 250, alpha));
-        }
-    }
-}
-
 
 void MapView::drawMapForeground(const Rect& rect)
 {

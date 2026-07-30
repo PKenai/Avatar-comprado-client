@@ -31,16 +31,6 @@
 #include "lightview.h"
 #include <vector>
 
-struct SkyCloud {
-    float x = 0.f;
-    float y = 0.f;
-    float radiusX = 4.f;
-    float radiusY = 2.5f;
-    float vx = 0.08f;
-    float vy = 0.03f;
-    float density = 0.7f;
-};
-
 // @bindclass
 class MapView : public LuaObject
 {
@@ -57,13 +47,6 @@ private:
     void updateGeometry(const Size& visibleDimension, const Size& optimizedSize);
     void updateVisibleTilesCache();
     void requestVisibleTilesCacheUpdate() { m_mustUpdateVisibleTilesCache = true; }
-    void ensureSkyClouds(const Position& cameraPosition);
-    void updateSkyClouds(const Position& cameraPosition);
-    float sampleCloudShadow(float tileX, float tileY) const;
-    void drawCloudShadows(short floor, const Position& cameraPosition);
-    void drawSkyCloudBodies(const Position& cameraPosition);
-    bool canReceiveCloudShadow(const Position& pos) const;
-
 protected:
     void onTileUpdate(const Position& pos);
     void onMapCenterChange(const Position& pos);
@@ -116,9 +99,6 @@ public:
 
     void setDrawLights(bool enable);
     bool isDrawingLights() { return m_drawLight; }
-
-    void setDrawSkyClouds(bool enable) { m_drawSkyClouds = enable; }
-    bool isDrawingSkyClouds() { return m_drawSkyClouds; }
 
     void setDrawManaBar(bool enable) { m_drawManaBar = enable; }
     bool isDrawingManaBar() { return m_drawManaBar; }
@@ -184,15 +164,11 @@ private:
     Otc::DrawFlags m_drawFlags;
     Color m_floorShadow = Color(0.0f, 0.0f, 0.0f, 0.5f);
     bool m_drawLight = false;
-    bool m_drawSkyClouds = true;
     float m_minimumAmbientLight;
     std::unique_ptr<LightView> m_lightView;
     TexturePtr m_lightTexture;
 
-    std::vector<SkyCloud> m_skyClouds;
-    bool m_skyCloudsReady = false;
-    float m_skyCloudsLastSeconds = 0.f;
-    Position m_skyCloudsAnchor;
+
 };
 
 #endif
