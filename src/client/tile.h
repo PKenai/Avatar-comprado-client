@@ -30,6 +30,7 @@
 #include "item.h"
 #include <framework/luaengine/luaobject.h>
 #include <framework/stdext/time.h>
+#include "minimap.h" // for MinimapTile (HD minimap)
 
 enum tileflags_t
 {
@@ -106,6 +107,8 @@ public:
     int getGroundSpeed();
     bool isBlocking() { return m_blocking != 0; }
     uint8 getMinimapColorByte();
+    int getMinimapSpriteId();
+    void getMinimapSpriteIds(MinimapTile& tile);
     int getThingCount() { return m_things.size() + m_effects.size(); }
     bool isPathable();
     bool isWalkable(bool ignoreCreatures = false);

@@ -26,51 +26,69 @@
 #include "declarations.h"
 #include <framework/ui/uiwidget.h>
 
-class UIMinimap : public UIWidget
-{
+class UIMinimap : public UIWidget {
 public:
-    UIMinimap();
+  UIMinimap();
 
-    void drawSelf(Fw::DrawPane drawPane);
+  void drawSelf(Fw::DrawPane drawPane);
 
-    bool zoomIn() { return setZoom(m_zoom+1); }
-    bool zoomOut() { return setZoom(m_zoom-1); }
+  bool zoomIn() { return setZoom(m_zoom + 1); }
+  bool zoomOut() { return setZoom(m_zoom - 1); }
 
-    bool setZoom(int zoom);
-    void setMinZoom(int minZoom) { m_minZoom = minZoom; }
-    void setMaxZoom(int maxZoom) { m_maxZoom = maxZoom; }
-    void setCameraPosition(const Position& pos);
-    bool floorUp();
-    bool floorDown();
+  void setSecondaryView(bool secondary) { m_secondaryView = secondary; }
+  bool isSecondaryView() { return m_secondaryView; }
+  void setSecondaryOffset(float dx, float dy) { m_secondaryOffsetX = dx; m_secondaryOffsetY = dy; }
 
-    Point getTilePoint(const Position& pos);
-    Rect getTileRect(const Position& pos);
-    Position getTilePosition(const Point& mousePos);
+  bool setZoom(int zoom);
+  void setMinZoom(int minZoom) { m_minZoom = minZoom; }
+  void setMaxZoom(int maxZoom) { m_maxZoom = maxZoom; }
+  void setCameraPosition(const Position &pos);
+  bool floorUp();
+  bool floorDown();
 
-    Position getCameraPosition() { return m_cameraPosition; }
-    int getMinZoom() { return m_minZoom; }
-    int getMaxZoom() { return m_maxZoom; }
-    int getZoom() { return m_zoom; }
-    float getScale() { return m_scale; }
+  Point getTilePoint(const Position &pos);
+  Rect getTileRect(const Position &pos);
+  Position getTilePosition(const Point &mousePos);
 
-    void anchorPosition(const UIWidgetPtr& anchoredWidget, Fw::AnchorEdge anchoredEdge, const Position& hookedPosition, Fw::AnchorEdge hookedEdge);
-    void fillPosition(const UIWidgetPtr& anchoredWidget, const Position& hookedPosition);
-    void centerInPosition(const UIWidgetPtr& anchoredWidget, const Position& hookedPosition);
+  Position getCameraPosition() { return m_cameraPosition; }
+  int getMinZoom() { return m_minZoom; }
+  int getMaxZoom() { return m_maxZoom; }
+  int getZoom() { return m_zoom; }
+  float getScale() { return m_scale; }
+
+  void anchorPosition(const UIWidgetPtr &anchoredWidget,
+                      Fw::AnchorEdge anchoredEdge,
+                      const Position &hookedPosition,
+                      Fw::AnchorEdge hookedEdge);
+  void fillPosition(const UIWidgetPtr &anchoredWidget,
+                    const Position &hookedPosition);
+  void centerInPosition(const UIWidgetPtr &anchoredWidget,
+                        const Position &hookedPosition);
 
 protected:
-    virtual void onZoomChange(int zoom, int oldZoom);
-    virtual void onCameraPositionChange(const Position& position, const Position& oldPosition);
-    virtual void onStyleApply(const std::string& styleName, const OTMLNodePtr& styleNode);
+  virtual void onZoomChange(int zoom, int oldZoom);
+  virtual void onCameraPositionChange(const Position &position,
+                                      const Position &oldPosition);
+  PointF calculateSmoothOffset(const Position &targetPos = Position());
+  virtual void onStyleApply(const std::string &styleName,
+                            const OTMLNodePtr &styleNode) override;
 
 private:
-    void update();
+  void update();
 
-    Rect m_mapArea;
-    Position m_cameraPosition;
-    float m_scale;
-    int m_zoom;
-    int m_minZoom;
-    int m_maxZoom;
+  Rect m_mapArea;
+  Position m_cameraPosition;
+  Position m_targetCameraPosition; // For smooth camera
+  float m_visualCameraX;           // Float position for smooth rendering
+  float m_visualCameraY;
+  float m_smoothFactor; // Camera smoothing speed (0.0 = instant, 1.0 = slowest)
+  float m_scale;
+  int m_zoom;
+  int m_minZoom;
+  int m_maxZoom;
+  bool m_secondaryView = false;
+  float m_secondaryOffsetX = 0.0f;
+  float m_secondaryOffsetY = 0.0f;
 };
 
 #endif

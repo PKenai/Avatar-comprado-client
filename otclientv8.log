@@ -9564,3 +9564,378 @@ Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
 == application started at Jul 30 2026 14:10:24
 OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
 ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 14:18:08
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 14:20:15
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 14:21:55
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 14:51:00
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 15:03:28
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 15:04:59
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 15:21:00
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 15:30:26
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 17:12:43
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 17:16:24
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 17:22:57
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 17:36:56
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+FATAL ERROR: Unable to load module 'game_minimap': /modules/game_minimap/minimap.lua:28: attempt to index global 'minimapWidget' (a nil value)
+stack traceback:
+	[C]: in function '__newindex'
+	/modules/game_minimap/minimap.lua:28: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:84: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 17:37:49
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 17:53:42
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 18:02:04
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 18:04:32
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 18:08:25
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 18:38:33
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 18:40:59
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 20:19:02
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 30 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default

@@ -33,6 +33,7 @@
 #include <framework/graphics/fontmanager.h>
 #include <framework/util/extras.h>
 #include <framework/core/adaptiverenderer.h>
+#include "minimap.h" // for getMinimapSpriteIds (HD minimap)
 
 Tile::Tile(const Position& position) :
     m_position(position),
@@ -909,4 +910,69 @@ bool Tile::canShoot(int distance)
     if(distance > 0 && std::max<int>(std::abs<int>(m_position.x - playerPos.x), std::abs<int>(m_position.y - playerPos.y)) > distance)
        return false;
     return g_map.isSightClear(playerPos, m_position);
+}
+
+int Tile::getMinimapSpriteId()
+{
+    for(const ThingPtr& thing : m_things) {
+        if(thing->isGround())
+            return thing->getId();
+        if(thing->isGroundBorder())
+            return thing->getId();
+    }
+    for(const ThingPtr& thing : m_things) {
+        if(thing->isOnBottom())
+            return thing->getId();
+        if(thing->isOnTop())
+            return thing->getId();
+        if(!thing->isCreature() && !thing->isEffect() && !thing->isMissile())
+            return thing->getId();
+    }
+    return 0;
+}
+
+void Tile::getMinimapSpriteIds(MinimapTile& tile)
+{
+    tile.spriteCount = 0;
+    if (m_things.empty()) return;
+
+    // 1. Find Ground/Bottom Item (Layer 0)
+    int groundIndex = -1;
+
+    // Check ground first
+    if (!m_things.empty()) {
+        ThingPtr first = m_things.front();
+        if(first->isGround() || first->isGroundBorder() || first->isOnBottom()) {
+            if (tile.spriteCount < MinimapTile::MAX_SPRITES) {
+                tile.spriteIds[tile.spriteCount++] = first->getId();
+                groundIndex = 0;
+            }
+        }
+    }
+
+    // 2. Find Top Items (Walls, Furniture, Stackable items)
+    std::vector<uint16> candidates;
+    for(size_t i = 0; i < m_things.size(); ++i) {
+        if ((int)i == groundIndex) continue; // Skip already added ground
+
+        ThingPtr thing = m_things[i];
+        if(thing->isCreature() || thing->isEffect() || thing->isMissile() || thing->isSplash()) continue;
+
+        // Add valid item candidates (including multi-tile items)
+        candidates.push_back(thing->getId());
+    }
+
+    // 3. Fill remaining slots with TOP-MOST items
+    int slotsLeft = MinimapTile::MAX_SPRITES - tile.spriteCount;
+    if (slotsLeft > 0 && !candidates.empty()) {
+        int startIdx = 0;
+        if ((int)candidates.size() > slotsLeft) {
+            // Take the last N items (top-most)
+            startIdx = candidates.size() - slotsLeft;
+        }
+
+        for (size_t i = startIdx; i < candidates.size(); ++i) {
+            tile.spriteIds[tile.spriteCount++] = candidates[i];
+        }
+    }
 }
