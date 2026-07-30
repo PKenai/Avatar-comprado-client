@@ -11,24 +11,21 @@ function UIMiniWindow:getClassName()
 end
 
 function UIMiniWindow:open(dontSave)
-  self:setVisible(true)
-
+  if self:isExplicitlyVisible() then return end
+  self:setVisible(true)  -- goes through UIWindow.setVisible → fade-in
   if not dontSave then
     self:setSettings({closed = false})
   end
-
   signalcall(self.onOpen, self)
 end
 
 function UIMiniWindow:close(dontSave)
   if not self:isExplicitlyVisible() then return end
-  self:setVisible(false)
-
   if not dontSave then
     self:setSettings({closed = true})
   end
-
   signalcall(self.onClose, self)
+  self:setVisible(false)  -- goes through UIWindow.setVisible → fade-out
 end
 
 function UIMiniWindow:minimize(dontSave)
@@ -143,6 +140,7 @@ function UIMiniWindow:setup()
 end
 
 function UIMiniWindow:onVisibilityChange(visible)
+  -- Fit layout when visibility changes (original behavior)
   self:fitOnParent()
 end
 

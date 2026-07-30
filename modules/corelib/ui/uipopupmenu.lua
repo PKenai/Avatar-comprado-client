@@ -36,6 +36,17 @@ function UIPopupMenu:display(pos)
   self:grabMouse()
   --self:grabKeyboard()
   currentMenu = self
+
+  -- Fade in
+  self:setOpacity(0)
+  local steps = 4
+  local stepTime = 30
+  for i = 1, steps do
+    scheduleEvent(function()
+      if self:isDestroyed() then return end
+      self:setOpacity(i / steps)
+    end, stepTime * i)
+  end
 end
 
 function UIPopupMenu:onGeometryChange(oldRect, newRect)

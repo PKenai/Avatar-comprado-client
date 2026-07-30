@@ -6,6 +6,42 @@ UIMessageBox = extends(UIWindow, "UIMessageBox")
 -- messagebox cannot be created from otui files
 UIMessageBox.create = nil
 
+local FADE_DURATION_MS = 150
+local FADE_STEPS = 5
+
+local fadeEvents = setmetatable({}, { __mode = "k" })
+
+local function cancelFadeBox(widget)
+  if fadeEvents[widget] then
+    for _, ev in ipairs(fadeEvents[widget]) do
+      removeEvent(ev)
+    end
+    fadeEvents[widget] = nil
+  end
+end
+
+local function animateFadeBox(widget, fromOpacity, toOpacity, callback)
+  cancelFadeBox(widget)
+  local steps = FADE_STEPS
+  local stepTime = FADE_DURATION_MS / steps
+  local events = {}
+  widget:setOpacity(fromOpacity)
+
+  for i = 1, steps do
+    local ev = scheduleEvent(function()
+      if widget:isDestroyed() then return end
+      local progress = i / steps
+      local opacity = fromOpacity + (toOpacity - fromOpacity) * progress
+      widget:setOpacity(opacity)
+      if i == steps and callback then
+        callback()
+      end
+    end, math.floor(stepTime * i))
+    table.insert(events, ev)
+  end
+  fadeEvents[widget] = events
+end
+
 function UIMessageBox.display(title, message, buttons, onEnterCallback, onEscapeCallback)
   local messageBox = UIMessageBox.internalCreate()
   rootWidget:addChild(messageBox)
@@ -47,6 +83,11 @@ function UIMessageBox.display(title, message, buttons, onEnterCallback, onEscape
 
   messageBox:setWidth(math.max(messageLabel:getWidth(), messageBox:getTextSize().width, buttonHolder:getWidth()) + messageBox:getPaddingLeft() + messageBox:getPaddingRight())
   messageBox:setHeight(messageLabel:getHeight() + messageBox:getPaddingTop() + messageBox:getPaddingBottom() + buttonHolder:getHeight() + buttonHolder:getMarginTop())
+
+  -- Fade in
+  messageBox:setOpacity(0)
+  animateFadeBox(messageBox, 0, 1)
+
   return messageBox
 end
 
@@ -86,11 +127,26 @@ end
 function UIMessageBox:ok()
   signalcall(self.onOk, self)
   self.onOk = nil
-  self:destroy()
+  self:fadeOutAndDestroy()
 end
 
 function UIMessageBox:cancel()
   signalcall(self.onCancel, self)
   self.onCancel = nil
-  self:destroy()
+  self:fadeOutAndDestroy()
+end
+
+-- UIWindow.onVisibilityChange would also fade; prevent double-fade
+function UIMessageBox:onVisibilityChange(visible)
+  -- MessageBox manages its own fade via display() / fadeOutAndDestroy()
+  if not visible then
+    signalcall(self.onClose, self)
+  end
+end
+
+function UIMessageBox:fadeOutAndDestroy()
+  animateFadeBox(self, self:getOpacity(), 0, function()
+    if self:isDestroyed() then return end
+    self:destroy()
+  end)
 end

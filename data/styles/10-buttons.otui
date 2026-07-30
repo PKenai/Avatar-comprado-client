@@ -11,14 +11,16 @@ Button < UIButton
 
   $hover !disabled:
     image-clip: 0 23 76 23
+    opacity: 0.85
 
   $pressed:
     image-clip: 0 48 76 23
     text-offset: 1 1
+    opacity: 0.75
 
   $disabled:
     color: #dfdfdf88
-    opacity: 0.8
+    opacity: 0.5
 
 TabButton < UIButton
   size: 25 25
