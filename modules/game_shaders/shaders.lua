@@ -13,6 +13,10 @@ function init()
 
   g_shaders.createShader("map_cloudy", "/shaders/map_cloudy_vertex", "/shaders/map_cloudy_fragment")
   g_shaders.createShader("background_particles", "/shaders/map_default_vertex", "/shaders/background_particles_fragment")
+
+  -- Sky Clouds: procedural animated clouds with per-pixel occlusion
+  g_shaders.createShader("sky_clouds", "/shaders/sky_clouds_vertex", "/shaders/sky_clouds_fragment")
+
   createFadeShaders()
   createOutfitShaders()
 
@@ -101,6 +105,22 @@ function onMapShader(protocol, opcode, buffer)
     applyFade("map_cloudy_fade_out", "exit_fade_done", math.floor(FADE_MS * 0.9))
   elseif buffer == "fade_in" then
     applyFade("map_fade_in", "fade_in_done", math.floor(FADE_MS * 0.9))
+  elseif buffer == "sky_clouds_on" then
+    if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
+      modules.game_skyclouds.setEnabled(true)
+    else
+      g_logger.warning("Sky Clouds module not loaded — ignoring 'sky_clouds_on'.")
+    end
+  elseif buffer == "sky_clouds_off" then
+    if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
+      modules.game_skyclouds.setEnabled(false)
+    else
+      g_logger.warning("Sky Clouds module not loaded — ignoring 'sky_clouds_off'.")
+    end
+  elseif buffer == "sky_clouds_refresh" then
+    if modules.game_skyclouds and modules.game_skyclouds.refresh then
+      modules.game_skyclouds.refresh()
+    end
   else
     clearFadeTimer()
     setMapShader(buffer)

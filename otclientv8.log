@@ -8695,3 +8695,426 @@ stack traceback:
 	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
 	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
 	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:29: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:29: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:29: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:29: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 17:37:13
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:29: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:29: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:29: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:29: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 20:25:53
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:29: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:29: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:29: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:29: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 20:29:13
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:29: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:29: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:29: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:29: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 20:34:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 20:38:53
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+FATAL ERROR: Unable to load module 'game_skyclouds': /modules/game_skyclouds/skyclouds.lua:28: attempt to call field 'hasKey' (a nil value)
+stack traceback:
+	[C]: in function 'hasKey'
+	/modules/game_skyclouds/skyclouds.lua:28: in function 'init'
+	/modules/game_skyclouds/skyclouds.otmod:9:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:84: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 20:42:58
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=false
+[SkyClouds] Shader 'sky_clouds' exists: false
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] forceEnable() — forcing shader ON
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] Z changed to 8 (aboveGround=false)
+[SkyClouds] Shader removed
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 20:45:52
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=false
+[SkyClouds] Shader 'sky_clouds' exists: false
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 20:54:23
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=false
+[SkyClouds] Shader 'sky_clouds' creation requested (async on graphics thread)
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 22:08:27
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=true
+[SkyClouds] Shader 'sky_clouds' creation requested (async on graphics thread)
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 29 2026 22:14:35
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=true
+[SkyClouds] Shader 'sky_clouds' creation requested (async on graphics thread)
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 09:24:26
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=true
+[SkyClouds] Shader 'sky_clouds' creation requested (async on graphics thread)
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] Z changed to 8 (aboveGround=false)
+[SkyClouds] Shader removed
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 09:39:22
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=true
+[SkyClouds] Shader 'sky_clouds' creation requested (async on graphics thread)
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] Z changed to 8 (aboveGround=false)
+[SkyClouds] Shader removed
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 09:48:12
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=true
+[SkyClouds] Shader 'sky_clouds' creation requested (async on graphics thread)
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 09:54:40
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=true
+[SkyClouds] Shader 'sky_clouds' creation requested (async on graphics thread)
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] onGameEnd fired!
+Exiting application..
+[SkyClouds] terminate() called
+[SkyClouds] terminate() done
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Jul 30 2026 10:02:28
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Jul 29 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SkyClouds] *** INIT CALLED *** Module is loading...
+[SkyClouds] Loaded setting: enabled=false
+[SkyClouds] Shader 'sky_clouds' creation requested (async on graphics thread)
+[SkyClouds] Connected to g_game events
+[SkyClouds] *** INIT COMPLETE *** Module ready!
+[SkyClouds] setEnabled(true)
+[SkyClouds] onGameStart fired!
+[SkyClouds] Started Z position polling (every 1000ms)
+[SkyClouds] Z changed to 7 (aboveGround=true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] setEnabled(false)
+[SkyClouds] Shader removed
+[SkyClouds] setEnabled(true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] setEnabled(false)
+[SkyClouds] Shader removed
+[SkyClouds] setEnabled(true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'
+[SkyClouds] setEnabled(false)
+[SkyClouds] Shader removed
+[SkyClouds] setEnabled(true)
+[SkyClouds] Shader applied! '' -> 'sky_clouds'

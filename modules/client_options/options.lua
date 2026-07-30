@@ -24,7 +24,8 @@ local defaultOptions = {
   displayText = true,
   hdMode = true,
   drawShadows = true,
-  floorShadow = true
+  floorShadow = true,
+  skyClouds = true
 }
 
 local optionsWindow
@@ -68,6 +69,13 @@ function init()
   g_app.setDrawShadows(g_settings.getBoolean('drawShadows'))
   if g_settings.getBoolean('floorShadow') then
     g_game.enableFeature(GameDrawFloorShadow)
+  end
+  if g_settings.getBoolean('skyClouds') then
+    g_game.enableFeature(GameDrawSkyClouds)
+  end
+  -- Apply sky clouds setting via Lua module
+  if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
+    modules.game_skyclouds.setEnabled(g_settings.getBoolean('skyClouds'))
   end
   if g_sprites.setHdMode then
     g_sprites.setHdMode(g_settings.getBoolean('hdMode'))
@@ -210,6 +218,18 @@ function setOption(key, value, force)
       g_game.enableFeature(GameDrawFloorShadow)
     else
       g_game.disableFeature(GameDrawFloorShadow)
+    end
+  elseif key == 'skyClouds' then
+    if value then
+      g_game.enableFeature(GameDrawSkyClouds)
+    else
+      g_game.disableFeature(GameDrawSkyClouds)
+    end
+    if gameMapPanel and gameMapPanel.setDrawSkyClouds then
+      gameMapPanel:setDrawSkyClouds(value)
+    end
+    if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
+      modules.game_skyclouds.setEnabled(value)
     end
   end
 

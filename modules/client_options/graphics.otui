@@ -38,6 +38,11 @@ Panel
     !text: tr('Floor Shadow')
     !tooltip: tr('Darken underground floors')
 
+  OptionCheckBox
+    id: skyClouds
+    !text: tr('Sky Clouds')
+    !tooltip: tr('Slow drifting clouds with shadows on roofs and open ground')
+
   Label
     id: backgroundFrameRateLabel
     !text: tr('Game framerate limit: %s', 'max')

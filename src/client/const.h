@@ -498,8 +498,9 @@ namespace Otc
         GameItemCustomAttributes = 126,
         GameAnimatedTextCustomFont = 127,
         GameDrawFloorShadow = 128,
+        GameDrawSkyClouds = 129,
 
-        LastGameFeature = 130
+        LastGameFeature = 131
     };
 
     enum PathFindResult {
