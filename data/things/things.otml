@@ -86,3 +86,5 @@ items:
   13144:
     opacity:0.3
     full-ground:false
+  100:
+    chargeable:true

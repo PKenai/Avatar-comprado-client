@@ -16,6 +16,7 @@ quantityScroll = nil
 nameLabel = nil
 priceLabel = nil
 moneyLabel = nil
+moneyDesc = nil
 weightDesc = nil
 weightLabel = nil
 capacityDesc = nil
@@ -37,6 +38,7 @@ playerMoney = 0
 tradeItems = {}
 playerItems = {}
 selectedItem = nil
+shopCurrencyOverride = nil
 
 cancelNextRelease = nil
 
@@ -66,6 +68,7 @@ function init()
 
   buyTab = npcWindow:getChildById('buyTab')
   sellTab = npcWindow:getChildById('sellTab')
+  moneyDesc = setupPanel:getChildById('moneyDesc')
 
   radioTabs = UIRadioGroup.create()
   radioTabs:addWidget(buyTab)
@@ -87,6 +90,8 @@ function init()
   connect(LocalPlayer, { onFreeCapacityChange = onFreeCapacityChange,
                          onInventoryChange = onInventoryChange } )
 
+  pcall(function() ProtocolGame.registerExtendedOpcode(101, onSetCurrencyOpcode) end)
+
   initialized = true
 end
 
@@ -101,6 +106,8 @@ function terminate()
 
   disconnect(LocalPlayer, { onFreeCapacityChange = onFreeCapacityChange,
                             onInventoryChange = onInventoryChange } )
+
+  pcall(function() ProtocolGame.unregisterExtendedOpcode(101) end)
 end
 
 function show()
@@ -210,6 +217,18 @@ end
 function setCurrency(currency, decimal)
   CURRENCY = currency
   CURRENCY_DECIMAL = decimal
+  local isGold = (currency == 'gold')
+  if moneyDesc then moneyDesc:setVisible(isGold) end
+  if moneyLabel then moneyLabel:setVisible(isGold) end
+end
+
+function onSetCurrencyOpcode(protocol, opcode, buffer)
+  shopCurrencyOverride = (buffer and buffer ~= '') and buffer or nil
+  setCurrency(shopCurrencyOverride or 'gold', false)
+  if tradeItems[BUY] and tradeItems[SELL] then
+    refreshTradeItems()
+    refreshPlayerGoods()
+  end
 end
 
 function setShowWeight(state)
@@ -280,7 +299,8 @@ end
 
 function canTradeItem(item)
   if getCurrentTradeType() == BUY then
-    return (ignoreCapacity:isChecked() or (not ignoreCapacity:isChecked() and playerFreeCapacity >= item.weight)) and playerMoney >= getItemPrice(item, true)
+    local hasMoney = (CURRENCY ~= 'gold') or (playerMoney >= getItemPrice(item, true))
+    return (ignoreCapacity:isChecked() or (not ignoreCapacity:isChecked() and playerFreeCapacity >= item.weight)) and hasMoney
   else
     return getSellQuantity(item.ptr) > 0
   end
@@ -296,7 +316,10 @@ function refreshItem(item)
     if ignoreCapacity:isChecked() then
       capacityMaxCount = 65535
     end
-    local priceMaxCount = math.floor(playerMoney / getItemPrice(item, true))
+    local priceMaxCount = 65535
+    if CURRENCY == 'gold' then
+      priceMaxCount = math.floor(playerMoney / getItemPrice(item, true))
+    end
     local finalCount = math.max(0, math.min(getMaxAmount(), math.min(priceMaxCount, capacityMaxCount)))
     quantityScroll:setMinimum(1)
     quantityScroll:setMaximum(finalCount)
@@ -390,6 +413,9 @@ function refreshPlayerGoods()
 end
 
 function onOpenNpcTrade(items)
+  setCurrency(shopCurrencyOverride or 'gold', false)
+  shopCurrencyOverride = nil
+
   tradeItems[BUY] = {}
   tradeItems[SELL] = {}
 
@@ -423,6 +449,7 @@ function closeNpcTrade()
 end
 
 function onCloseNpcTrade()
+  shopCurrencyOverride = nil
   hide()
 end
 

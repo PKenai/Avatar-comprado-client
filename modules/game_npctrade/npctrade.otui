@@ -123,6 +123,7 @@ MainWindow
       id: price
 
     Label
+      id: moneyDesc
       !text: tr('Your Money') .. ':'
       anchors.left: parent.left
       anchors.top: prev.bottom
