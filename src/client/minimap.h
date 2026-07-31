@@ -111,6 +111,9 @@ public:
                    const Position &mapCenter, float scale,
                    const PointF &offset = PointF(0, 0));
 
+  void setMinimapHD(bool enable);
+  bool isMinimapHD() { return m_minimapHD; }
+
   void updateTile(const Position &pos, const TilePtr &tile);
   const MinimapTile &getTile(const Position &pos);
   std::pair<MinimapBlock_ptr, MinimapTile> threadGetTile(const Position &pos);
@@ -150,6 +153,7 @@ private:
   }
   std::unordered_map<uint, MinimapBlock_ptr> m_tileBlocks[Otc::MAX_Z + 1];
   std::mutex m_lock;
+  bool m_minimapHD = true;
 };
 
 extern Minimap g_minimap;

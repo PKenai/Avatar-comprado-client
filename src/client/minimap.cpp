@@ -128,7 +128,7 @@ bool MinimapBlock::update(int z) {
       bool drewSprite = false;
 
       // 1. Try to draw sprites if available
-      if (tile.spriteCount > 0) {
+      if (g_minimap.isMinimapHD() && tile.spriteCount > 0) {
         // Loop through all sprites on this tile
         for (int i = 0; i < tile.spriteCount; ++i) {
           uint16 spriteId = tile.spriteIds[i];
@@ -267,6 +267,20 @@ void Minimap::init() {}
 void Minimap::terminate() {
   clean();
   clearMinimapSpriteCache();
+}
+
+void Minimap::setMinimapHD(bool enable) {
+  m_minimapHD = enable;
+  // Force all existing blocks to re-render
+  if (!enable) {
+    clearMinimapSpriteCache();
+  }
+  std::lock_guard<std::mutex> lock(m_lock);
+  for (int i = 0; i <= Otc::MAX_Z; ++i) {
+    for (auto &it : m_tileBlocks[i]) {
+      it.second->mustUpdate();
+    }
+  }
 }
 
 void Minimap::clean() {

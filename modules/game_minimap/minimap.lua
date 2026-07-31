@@ -125,6 +125,14 @@ function init()
   minimapWindow:setup()
   minimapWindow:open()
 
+  -- Initialize HD minimap toggle from settings
+  local hdCheck = minimapWindow:recursiveGetChildById('minimapHDCheck')
+  if hdCheck then
+    local hdEnabled = g_settings.get('minimapHD', true)
+    hdCheck:setChecked(hdEnabled)
+    g_minimap.setMinimapHD(hdEnabled)
+  end
+
   connect(g_game, {
     onGameStart = online,
     onGameEnd = offline,
@@ -330,6 +338,12 @@ function toggleFullMap()
   oldPos = minimapWidget:getCameraPosition()
   minimapWidget:setZoom(zoom)
   minimapWidget:setCameraPosition(pos)
+end
+
+function toggleMinimapHD(checkBox)
+  local enabled = checkBox:isChecked()
+  g_minimap.setMinimapHD(enabled)
+  g_settings.set('minimapHD', enabled)
 end
 
 function visibleLocalName(visible)
