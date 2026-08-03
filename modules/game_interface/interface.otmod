@@ -30,7 +30,6 @@ Module
     - game_npctrade
     - game_folds
     - game_tutorial
-    - game_trade
     - game_playermount
     - game_shaders
     - game_skyclouds

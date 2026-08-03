@@ -1,143 +1,216 @@
 MarketRow < Panel
-  height: 48
+  height: 56
+  margin: 0 6 0 6
   background-color: alpha
 
   Item
     id: uiItem
+    size: 36 36
     anchors.top: parent.top
     anchors.left: parent.left
-    margin: 8
+    anchors.bottom: parent.bottom
+    margin: 10 0 0 10
     virtual: true
 
   Label
     id: lblItem
-    anchors.left: prev.right
-    anchors.verticalCenter: prev.verticalCenter
-    margin-left: 15
+    anchors.left: uiItem.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 14
+    font: verdana-11px-monochrome
+    color: #d8d8d8
     text-auto-resize: true
 
   Label
     id: lblPlayer
-    anchors.top: parent.top
     anchors.left: parent.left
-    margin: 18 0 0 205
-    text: Furia Nordestina
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 300
+    font: verdana-11px-monochrome
+    color: #a0a0a0
     text-auto-resize: true
 
   Label
     id: lblQtd
-    anchors.top: parent.top
     anchors.left: parent.left
-    margin: 18 0 0 385
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 470
+    font: verdana-11px-monochrome
+    color: #c8c8c8
     text-auto-resize: true
 
   Label
     id: lblPrice
-    anchors.top: parent.top
     anchors.left: parent.left
-    margin: 18 0 0 430
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 525
+    font: verdana-11px-monochrome
+    color: #ffd700
     text-auto-resize: true
 
   Button
     id: btnAction
-    anchors.top: parent.top
-    anchors.left: parent.left
-    margin: 12 0 0 525
-    !text: tr('Comprar Item')
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 10
+    !text: tr('Comprar')
     text-auto-resize: true
+    font: verdana-11px-monochrome
 
   $!alternate:
-    background-color: #ffffff10
+    background-color: #ffffff08
+
+  $hover:
+    background-color: #ffffff16
 
 
 MainWindow
-  size: 715 510
-  padding-top: 17
+  size: 760 560
+  padding-top: 20
   !text: tr('Market')
   visible: false
 
-  Label
-    anchors.top: next.bottom
-    anchors.left: parent.left
-    anchors.right: btnRefresh.left
-    margin: 20 0 0 8
-    text-wrap: true
-    !text: tr('ATENÇÃO! Ao clicar duas vezes na imagem de um item, você conseguirá ver as informações do mesmo.')
-
   UIButton
     id: btnClose
+    size: 14 14
     anchors.top: parent.top
     anchors.right: parent.right
-    margin-top: 0
-    text: X
-    !tooltip: tr('Close')
+    image-source: /images/ui/miniwindow_buttons
+    image-clip: 28 0 14 14
+    margin-right: -3
     @onClick: self:getParent():hide()
 
-  Button
-    id: btnRefresh
-    size: 26 26
-    anchors.top: prev.bottom
-    anchors.right: parent.right
-    !tooltip: tr('Atualizar Ofertas')
-    margin-top: 15
-    icon: ui/refresh
-    @onClick: numPage = 1 g_game.getProtocolGame():sendExtendedOpcode(mOpcode, "refresh>0")
+    $hover:
+      image-clip: 28 14 14 14
+
+    $pressed:
+      image-clip: 28 28 14 14
 
   Panel
-    id: panel
-    height: 15
-    anchors.top: prev.bottom
+    id: searchPanel
+    anchors.top: parent.top
     anchors.left: parent.left
     anchors.right: parent.right
-    margin: 10 5 0 8
+    height: 34
+    margin: 28 14 0 14
+    background-color: #00000055
 
     Label
-      anchors.top: parent.top
+      id: lblSearch
+      anchors.verticalCenter: parent.verticalCenter
       anchors.left: parent.left
-      text: Item
+      margin-left: 8
+      font: verdana-11px-monochrome
+      color: #9a9a9a
+      !text: tr('Buscar:')
+
+    TextEdit
+      id: edtSearch
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: lblSearch.right
+      anchors.right: btnRefresh.left
+      margin: 0 10 0 10
+      height: 24
+      @onTextChange: Market.onSearchTextChange(self:getText())
+
+    Button
+      id: btnClearSearch
+      size: 24 24
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.right: btnRefresh.left
+      margin-right: 6
+      text: X
+      !tooltip: tr('Limpar busca')
+      @onClick: Market.clearSearch()
+
+    Button
+      id: btnRefresh
+      size: 26 26
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.right: parent.right
+      margin-right: 8
+      icon: ui/refresh
+      !tooltip: tr('Atualizar Ofertas')
+      @onClick: Market.refresh()
+
+  Panel
+    id: filterPanel
+    anchors.top: searchPanel.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 30
+    margin: 6 14 0 14
+    background-color: #00000044
 
     Label
-      anchors.left: prev.right
-      anchors.verticalCenter: prev.verticalCenter
-      margin-left: 38
-      !text: tr('Name')
+      id: lblFilter
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: parent.left
+      margin-left: 8
+      font: verdana-11px-monochrome
+      color: #9a9a9a
+      !text: tr('Filtrar:')
+
+    ComboBox
+      id: cmbFilter
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: lblFilter.right
+      anchors.right: parent.right
+      margin: 0 8 0 8
+      height: 20
+
+  Panel
+    id: headerPanel
+    anchors.top: filterPanel.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 24
+    margin: 8 14 0 14
+    background-color: #00000044
 
     Label
-      anchors.left: prev.right
-      anchors.verticalCenter: prev.verticalCenter
-      margin-left: 100
-      !text: tr('Player')
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 58
+      font: verdana-11px-monochrome
+      color: #7a7a7a
+      !text: tr('Item')
 
     Label
-      anchors.left: prev.right
-      anchors.verticalCenter: prev.verticalCenter
-      margin-left: 139
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 300
+      font: verdana-11px-monochrome
+      color: #7a7a7a
+      !text: tr('Jogador')
+
+    Label
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 470
+      font: verdana-11px-monochrome
+      color: #7a7a7a
       !text: tr('Qtd')
 
     Label
-      anchors.left: prev.right
-      anchors.verticalCenter: prev.verticalCenter
-      margin-left: 30
-      !text: tr('Price')
-
-    Label
-      anchors.left: prev.right
-      anchors.verticalCenter: prev.verticalCenter
-      margin-left: 78
-      !text: tr('Buy')
-
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 525
+      font: verdana-11px-monochrome
+      color: #7a7a7a
+      !text: tr('Preço')
 
   TextList
     id: marketList
-    height: 340
-    anchors.top: panel.bottom
+    anchors.top: headerPanel.bottom
     anchors.left: parent.left
     anchors.right: parent.right
-    parent.bottom: btnAddOffer.top
-    margin: 5 12 0 0
+    anchors.bottom: pagination.top
+    margin: 4 14 0 14
     vertical-scrollbar: scrollItems
-    border: 1 #756866
-    background-color: alpha
+    background-color: #00000022
+    border-width: 1
+    border-color: #2a2a2a
 
   VerticalScrollBar
     id: scrollItems
@@ -145,42 +218,62 @@ MainWindow
     anchors.bottom: marketList.bottom
     anchors.left: marketList.right
     margin-left: 2
-    step: 50
+    step: 56
     pixels-scroll: true
 
-  Button
-    id: btnNext
-    size: 18 18
-    anchors.top: marketList.bottom
+  Panel
+    id: pagination
+    anchors.left: parent.left
     anchors.right: parent.right
-    margin: 6 14 0 0
-    !tooltip: tr('Próxima Página')
-    text: >
-    @onClick: Market.nextAndPrev(1)
+    anchors.bottom: btnAddOffer.top
+    height: 30
+    margin: 6 14 0 14
 
-  Button
-    id: btnPrev
-    size: 18 18
-    anchors.top: prev.top
-    anchors.right: prev.left
-    margin-right: 5
-    !tooltip: tr('Página Anterior')
-    text: <
-    @onClick: Market.nextAndPrev(0)
+    Button
+      id: btnPrev
+      size: 26 26
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: parent.left
+      !tooltip: tr('Página Anterior')
+      text: <
+      @onClick: Market.nextAndPrev(0)
 
-  Label
-    id: lblIndex
-    anchors.top: prev.top
-    anchors.right: prev.left
-    margin: 3 8 0 0
-    text-auto-resize: true
-    text: Page: 0/0
+    Label
+      id: lblIndex
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: btnPrev.right
+      margin-left: 10
+      font: verdana-11px-monochrome
+      color: #c8c8c8
+      text: Página: 1/1
+
+    Button
+      id: btnNext
+      size: 26 26
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.right: parent.right
+      !tooltip: tr('Próxima Página')
+      text: >
+      @onClick: Market.nextAndPrev(1)
 
   Button
     id: btnAddOffer
+    size: 190 30
     anchors.bottom: parent.bottom
     anchors.horizontalCenter: parent.horizontalCenter
-    margin-bottom: 5
+    margin-bottom: 8
     !text: tr('Adicionar Oferta')
-    text-auto-resize: true
+    font: verdana-11px-monochrome
     @onClick: Market.showAddOffer()
+
+  Button
+    id: btnMarketHelp
+    size: 26 26
+    anchors.left: btnAddOffer.right
+    anchors.verticalCenter: btnAddOffer.verticalCenter
+    margin-left: 10
+    icon: /images/topbuttons/marketinterrog
+    !tooltip: tr('Como funciona o Market:\nVocê compra e vende itens com outros jogadores.\nPreço mínimo por oferta: 1.000 gold (sem teto prático de preço).\n\nLimites por personagem:\n- Máximo de 5 ofertas ativas.\n- Máximo de 100 itens por oferta.\n- Itens únicos (não-stackáveis): apenas 1 unidade.\n\nRegras:\n- Apenas equipamentos, armas e itens especiais podem ser vendidos.\n- Só é possível usar dentro de área PZ.\n- O lucro das vendas fica no seu saldo do market.')
+
+    $hover:
+      background-color: #ffffff22

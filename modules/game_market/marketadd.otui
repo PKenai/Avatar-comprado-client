@@ -1,64 +1,93 @@
 MainWindow
-  id: marketAdd
-  size: 223 230
-  text: Adicionar oferta
+  size: 340 300
+  padding-top: 20
+  !text: tr('Adicionar Oferta')
   visible: false
+
+  UIButton
+    id: btnClose
+    size: 14 14
+    anchors.top: parent.top
+    anchors.right: parent.right
+    image-source: /images/ui/miniwindow_buttons
+    image-clip: 28 0 14 14
+    margin-right: -3
+    @onClick: self:getParent():hide()
+
+    $hover:
+      image-clip: 28 14 14 14
+
+    $pressed:
+      image-clip: 28 28 14 14
 
   Label
     id: lblItem
-    text: Nome do item:
     anchors.top: parent.top
     anchors.left: parent.left
+    margin: 34 0 0 20
+    font: verdana-11px-monochrome
+    color: #b8b8b8
+    !text: tr('Nome do item:')
 
   TextEdit
     id: edtItem
-    anchors.top: lblItem.top
-    anchors.right: parent.right
+    anchors.top: lblItem.bottom
     anchors.left: parent.left
-    margin-top: 17
+    anchors.right: parent.right
+    margin: 6 20 0 20
+    height: 26
+    font: verdana-11px-monochrome
 
   Label
     id: lblPrice
-    !text: tr('Total price:')
-    anchors.top: edtItem.top
+    anchors.top: edtItem.bottom
     anchors.left: parent.left
-    margin-top: 30
+    margin: 14 0 0 20
+    font: verdana-11px-monochrome
+    color: #b8b8b8
+    !text: tr('Preço total (gold):')
 
   TextEdit
     id: edtPrice
-    anchors.top: lblPrice.top
-    anchors.right: parent.right
+    anchors.top: lblPrice.bottom
     anchors.left: parent.left
-    margin-top: 17
+    anchors.right: parent.right
+    margin: 6 20 0 20
+    height: 26
+    font: verdana-11px-monochrome
 
   Label
     id: lblCount
-    text: Quantia:
-    anchors.top: edtPrice.top
+    anchors.top: edtPrice.bottom
     anchors.left: parent.left
-    margin-top: 30
+    margin: 14 0 0 20
+    font: verdana-11px-monochrome
+    color: #b8b8b8
+    !text: tr('Quantidade:')
 
   TextEdit
     id: edtCount
-    anchors.top: lblCount.top
-    anchors.right: parent.right
+    anchors.top: lblCount.bottom
     anchors.left: parent.left
-    margin-top: 17
+    anchors.right: parent.right
+    margin: 6 20 0 20
+    height: 26
+    font: verdana-11px-monochrome
 
   Button
     id: buttonCancel
-    text: Cancel
     width: 90
     anchors.bottom: parent.bottom
     anchors.right: parent.right
+    margin: 0 20 12 0
+    !text: tr('Cancelar')
     @onClick: self:getParent():hide()
 
   Button
     id: buttonOk
-    text: Ok
-    width: 109
+    width: 190
     anchors.bottom: parent.bottom
-    anchors.right: prev.left
-    anchors.left: parent.left
-    margin-right: 5
+    anchors.right: buttonCancel.left
+    margin: 0 6 12 0
+    !text: tr('Adicionar')
     @onClick: Market.addOffer()
