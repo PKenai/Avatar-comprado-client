@@ -83,6 +83,7 @@ private:
     FrameCounter m_graphicsFrames;
     FrameCounter m_processingFrames;
     stdext::timer m_windowPollTimer;
+    stdext::timer m_fpsTimer;
     stdext::boolean<true> m_drawShadows;
 };
 

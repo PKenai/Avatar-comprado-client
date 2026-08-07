@@ -13095,3 +13095,46 @@ stack traceback:
 	[C]: in function 'clearFadeTimer'
 	/modules/game_shaders/shaders.lua:33: in function 'terminate'
 	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 01:24:05
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 01:43:29
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..

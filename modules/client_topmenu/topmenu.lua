@@ -4,6 +4,8 @@ local leftButtonsPanel
 local rightButtonsPanel
 local leftGameButtonsPanel
 local rightGameButtonsPanel
+local fpsEvent
+local fpsText = ''
 
 -- private functions
 local function addButton(id, description, icon, callback, panel, toggle, front)
@@ -40,7 +42,6 @@ function init()
   connect(g_game, { onGameStart = online,
                     onGameEnd = offline,
                     onPingBack = updatePing })
-  connect(g_app, { onFps = updateFps })
 
   topMenu = g_ui.displayUI('topmenu')
 
@@ -51,6 +52,11 @@ function init()
   pingLabel = topMenu:getChildById('pingLabel')
   fpsLabel = topMenu:getChildById('fpsLabel')
 
+  -- Update the FPS counter by polling g_app.getFps() once per second.
+  -- (More reliable than the C++ onFps signal in this build.)
+  updateFps()
+  fpsEvent = cycleEvent(function() updateFps() end, 1000)
+
   if g_game.isOnline() then
     online()
   end
@@ -60,7 +66,11 @@ function terminate()
   disconnect(g_game, { onGameStart = online,
                        onGameEnd = offline,
                        onPingBack = updatePing })
-  disconnect(g_app, { onFps = updateFps })
+
+  if fpsEvent then
+    removeEvent(fpsEvent)
+    fpsEvent = nil
+  end
 
   topMenu:destroy()
 end
@@ -69,13 +79,8 @@ function online()
   showGameButtons()
   g_game.enableFeature(GameClientPing)
   addEvent(function()
-    if modules.client_options.getOption('showPing') and (g_game.getFeature(GameClientPing) or g_game.getFeature(GameExtendedClientPing)) then
-    fpsLabel:show()
-      pingLabel:show()
-    else
     fpsLabel:show()
     pingLabel:show()
-    end
   end)
 end
 
@@ -85,8 +90,13 @@ function offline()
 end
 
 function updateFps(fps)
-  text = 'FPS: ' .. fps
-  fpsLabel:setText(text)
+  fps = fps or g_app.getFps()
+  if fps < 0 then fps = 0 end
+  local text = 'FPS: ' .. fps
+  if text ~= fpsText then
+    fpsText = text
+    fpsLabel:setText(text)
+  end
 end
 
 function updatePing(ping)

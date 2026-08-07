@@ -24,6 +24,11 @@ Panel
     tooltip: Ctrl+Shift+F
 
   OptionCheckBox
+    id: vsync
+    !text: tr('Vertical Sync (VSync)')
+    !tooltip: tr('Sync framerate with the monitor to avoid screen tearing')
+
+  OptionCheckBox
     id: hdMode
     !text: tr('HD Mode')
     !tooltip: tr('Upscale sprites with xBRZ (64px). Toggle may reload textures.')

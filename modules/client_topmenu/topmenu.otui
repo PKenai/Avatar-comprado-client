@@ -24,7 +24,7 @@ TopMenuPanel
     anchors.top: parent.top
     anchors.left: leftButtonsPanel.right
     visible: true
-    text: Teste FPS
+    text: FPS: --
 
   TopMenuPingLabel
     id: pingLabel

@@ -1,5 +1,6 @@
 local FADE_MS = 2000
 local fadeTimer = nil
+local clearFadeTimer -- forward declaration (used by terminate() defined below)
 local SPIRITUAL_SHADER = "outfit_spiritual"
 local SPIRITUAL_PREFIX = "Spiritual "
 local appliedSpiritual = {}
@@ -76,7 +77,7 @@ local function setMapShader(name)
   end
 end
 
-local function clearFadeTimer()
+function clearFadeTimer()
   if fadeTimer then
     removeEvent(fadeTimer)
     fadeTimer = nil

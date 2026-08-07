@@ -22,5 +22,5 @@ public:
 
 private:
     std::list<ticks_t> m_framesList;
-    std::atomic_int m_frames;
+    std::atomic_int m_frames = 0;
 };

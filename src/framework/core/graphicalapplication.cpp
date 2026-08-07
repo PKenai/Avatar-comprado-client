@@ -224,7 +224,10 @@ void GraphicalApplication::run()
 #ifdef FREE_VERSION_LIB
         m_maxFps = 150;
 #endif
-        int frameDelay = m_maxFps <= 0 ? 0 : (1000000 / m_maxFps);
+        // When VSync is enabled, let the monitor pace the framerate. Applying
+        // the maxFps frameDelay on top of VSync double-throttles the loop and
+        // causes uneven frame times (visible stutter).
+        int frameDelay = (m_maxFps <= 0 || g_window.hasVerticalSync()) ? 0 : (1000000 / m_maxFps);
         if (lastRender + frameDelay > stdext::micros() && !m_mustRepaint) {
             AutoStat s(STATS_RENDER, "Sleep");
             stdext::millisleep(1);
@@ -340,6 +343,12 @@ void GraphicalApplication::run()
         g_graphs[GRAPH_TOTAL_FRAME_TIME].addValue(stdext::millis() - lastFrame);
         lastFrame = stdext::millis();
         totalFrames += 1;
+
+        // emit FPS event to Lua once per second, keeps the in-game FPS counter updated
+        if (m_fpsTimer.elapsed_millis() >= 1000) {
+            m_fpsTimer.restart();
+            g_lua.callGlobalField("g_app", "onFps", m_graphicsFrames.getFps());
+        }
 
 #ifdef FREE_VERSION_LIB
         if (totalFrames > m_maxFps * 3600 * 1.2 || stdext::millis() > 3600'000) {

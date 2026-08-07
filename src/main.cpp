@@ -29,6 +29,15 @@
 #include <framework/platform/platformwindow.h>
 #include <client/client.h>
 
+#ifdef WIN32
+// Force the discrete GPU on hybrid laptops (NVIDIA Optimus / AMD PowerXpress).
+// Without these exports, Windows may run the client on the integrated GPU.
+extern "C" {
+    __declspec(dllexport) unsigned long NvOptimusEnablement = 0x00000001;
+    __declspec(dllexport) int AmdPowerXpressRequestHighPerformance = 1;
+}
+#endif
+
 int main(int argc, const char* argv[]) {
     std::vector<std::string> args(argv, argv + argc);
 
