@@ -32,6 +32,7 @@
 #include <framework/core/resourcemanager.h>
 #include <framework/core/filestream.h>
 #include <framework/core/binarytree.h>
+#include <framework/core/clock.h>
 #include <framework/xml/tinyxml.h>
 #include <framework/otml/otml.h>
 #include <framework/util/stats.h>
@@ -75,22 +76,13 @@ void ThingTypeManager::terminate()
 }
 
 void ThingTypeManager::check()
-{    
-    // removes unused textures from memory after 60s, 500 checks / s
+{
     m_checkEvent = g_dispatcher.scheduleEvent(std::bind(&ThingTypeManager::check, &g_things), 1000);
 
-    for (size_t i = 0; i < ThingLastCategory; ++i) {
-        size_t limit = std::min<size_t>(m_checkIndex[i] + 100, m_thingTypes[i].size());
-        for (size_t j = m_checkIndex[i]; j < limit; ++j) {
-            if (m_thingTypes[i][j]->isLoaded() && m_thingTypes[i][j]->getLastUsage() + 60 < g_clock.seconds()) {
-                m_thingTypes[i][j]->unload();
-            }
-        }
-        m_checkIndex[i] = limit;
-        if (m_checkIndex[i] >= m_thingTypes[i].size()) {
-            m_checkIndex[i] = 0;
-        }
-    }
+    // NOTE: texture auto-unload after 60s of non-use is intentionally disabled.
+    // On modern GPUs (RTX-class) all sprites fit comfortably in VRAM and keeping
+    // them cached avoids re-upload stalls every time you walk into an area with
+    // things that haven't been drawn for a while (the "micro stutter" while walking).
 }
 
 void ThingTypeManager::unloadTextures()
@@ -502,6 +494,94 @@ const ThingTypeList& ThingTypeManager::getThingTypes(ThingCategory category)
     if(category >= ThingLastCategory)
         stdext::throw_exception(stdext::format("invalid thing type category %d", category));
     return m_thingTypes[category];
+}
+
+void ThingTypeManager::preloadTextures()
+{
+    // Disabled: preloading ALL ~19k thing types with HD/xBRZ textures exceeds
+    // the 2-4GB address space of this 32-bit client (bad_alloc mid-preload,
+    // silent death while the loading bar fills). The loading screen now uses
+    // preloadItemTextures() with only the ids used by the downloaded map.
+    m_preloadFinished = true;
+}
+
+void ThingTypeManager::preloadItemTextures(const std::vector<uint16>& itemIds)
+{
+    if (!m_datLoaded || !g_sprites.isLoaded()) {
+        m_preloadFinished = true;
+        return;
+    }
+
+    m_preloadList.clear();
+    m_preloadIndex = 0;
+    m_preloadSkipped = 0;
+    m_preloadList.reserve(itemIds.size());
+    for (uint16 id : itemIds) {
+        if (id != 0)
+            m_preloadList.emplace_back(id, ThingCategoryItem);
+    }
+    m_preloadTotal = m_preloadList.size();
+    m_preloadDone = 0;
+    m_preloadFinished = m_preloadTotal == 0;
+
+    if (m_preloadFinished)
+        return;
+
+    // Texture creation touches GL state, so it must run on the graphics thread.
+    // scheduleEvent (1ms) instead of addEvent: the batch re-schedules itself,
+    // and addEvent from inside the graphics poll makes the poll loop never see
+    // an empty event list ("ATTENTION the event list is not getting empty").
+    g_graphicsDispatcher.scheduleEvent(std::bind(&ThingTypeManager::preloadTextureBatch, this), 1);
+}
+
+void ThingTypeManager::preloadTextureBatch()
+{
+    // Time-budgeted batch so we never stall a frame for more than a few ms.
+    ticks_t start = stdext::millis();
+    int processed = 0;
+    while (m_preloadIndex < m_preloadList.size() && processed < 512) {
+        const auto& entry = m_preloadList[m_preloadIndex++];
+        m_preloadPhase = entry.second; // report the category currently loading
+        if (entry.first != 0) {
+            // bounds check: rawGetThingType's VALIDATE is a no-op in release
+            if (entry.second >= ThingLastCategory || entry.first >= m_thingTypes[entry.second].size()) {
+                ++m_preloadSkipped;
+            } else {
+                try {
+                    ThingType* type = rawGetThingType(entry.first, entry.second);
+                    if (type && !type->isNull())
+                        type->preloadTexture();
+                } catch (const std::exception& e) {
+                    // A single broken thing type (corrupt sprite, invalid image,
+                    // etc.) must never abort the whole preload - or the client.
+                    // The game never draws these, so just skip and count them.
+                    ++m_preloadSkipped;
+                } catch (...) {
+                    ++m_preloadSkipped;
+                }
+            }
+        }
+        m_preloadDone += 1;
+        ++processed;
+        if (stdext::millis() - start > 5)
+            break;
+    }
+
+    if (m_preloadIndex >= m_preloadList.size()) {
+        size_t skipped = m_preloadSkipped;
+        m_preloadList.clear();
+        m_preloadIndex = 0;
+        m_preloadSkipped = 0;
+        m_preloadPhase = 4; // done
+        m_preloadFinished = true;
+        if (skipped > 0)
+            g_logger.info(stdext::format("Sprite texture preload finished (%zu broken thing types skipped).", skipped));
+        else
+            g_logger.info("Sprite texture preload finished.");
+        return;
+    }
+
+    g_graphicsDispatcher.scheduleEvent(std::bind(&ThingTypeManager::preloadTextureBatch, this), 1);
 }
 
 /* vim: set ts=4 sw=4 et: */

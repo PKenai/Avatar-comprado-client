@@ -69,9 +69,11 @@ namespace Proto {
         // NOTE: add any custom opcodes in this range
         // OTClientV8 64-79
         GameServerNewPing                   = 64,
+        GameServerFullMapHeader             = 65, // Avatar custom: full-map download start (u32 total chunks)
         GameServerChangeMapAwareRange       = 66,
 
         GameServerFeatures                  = 67,
+        GameServerFullMapChunk              = 68, // Avatar custom: one full-map chunk (pos + u16 w/h + tiles)
 
         GameServerNewCancelWalk             = 69,
         GameServerPredictiveCancelWalk      = 70,

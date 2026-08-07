@@ -25,6 +25,10 @@
 
 #include <framework/luaengine/luaobject.h>
 
+// Rate-limited reporting of an uncaught callback exception (shared by
+// Event::execute and ScheduledEvent::execute).
+void reportEventException(const std::string& msg);
+
 // @bindclass
 class Event : public LuaObject
 {

@@ -67,6 +67,13 @@ void Map::notificateTileUpdate(const Position& pos, bool updateMinimap)
     if(!pos.isMapPosition())
         return;
 
+    // While the server streams the whole world after login, millions of far
+    // away tiles are created at once. Notifying map views / minimap for every
+    // single one of them is pure waste (and a huge CPU hit) - the visible
+    // area around the player gets its own updates later anyway.
+    if (g_game.isFullMapDownloading() && !isAwareOfPosition(pos, true))
+        return;
+
     for(const MapViewPtr& mapView : m_mapViews)
         mapView->onTileUpdate(pos);
 

@@ -131,6 +131,12 @@ void ProtocolGame::parseMessage(const InputMessagePtr& msg)
             case Proto::GameServerFullMap:
                 parseMapDescription(msg);
                 break;
+            case Proto::GameServerFullMapHeader:
+                parseFullMapHeader(msg);
+                break;
+            case Proto::GameServerFullMapChunk:
+                parseFullMapChunk(msg);
+                break;
             case Proto::GameServerMapTopRow:
                 parseMapMoveNorth(msg);
                 break;
@@ -592,6 +598,13 @@ void ProtocolGame::parseMessage(const InputMessagePtr& msg)
         }
         packet << "\n\n";
         packet.close();
+    } catch (std::exception& e) {
+        // bad_alloc / any other std exception during parse (e.g. the full map
+        // stream building millions of tiles in a 32-bit process) must not kill
+        // the client - log it and drop the packet instead of std::terminate.
+        g_logger.error(stdext::format("ProtocolGame parse message std exception (%d bytes, %d unread, last opcode is 0x%02x (%d)): %s",
+                                      msg->getMessageSize(), msg->getUnreadSize(), opcode, opcode, e.what()));
+        return;
     }
 }
 
@@ -1077,6 +1090,33 @@ void ProtocolGame::parseDeath(const InputMessagePtr& msg)
         msg->getU8(); // death redemption
 
     g_game.processDeath(deathType, penality);
+}
+
+void ProtocolGame::parseFullMapHeader(const InputMessagePtr& msg)
+{
+    // Server announces how many map chunks it will stream for the full world
+    // download. Drives the loading screen progress after login.
+    uint32_t totalChunks = msg->getU32();
+    g_game.setFullMapDownload(totalChunks);
+}
+
+void ProtocolGame::parseFullMapChunk(const InputMessagePtr& msg)
+{
+    // One chunk of the full-map download: absolute position + area size + tile
+    // data using the same skip encoding as the walking slices. It never touches
+    // the central position/camera, and runs on a single floor with offset 0.
+    Position pos = getPosition(msg);
+    uint16 width = msg->getU16();
+    uint16 height = msg->getU16();
+
+    // sanity guard: never let a bad packet build insane map areas
+    if (width == 0 || height == 0 || width > 2048 || height > 2048)
+        return;
+
+    int skip = 0;
+    setFloorDescription(msg, pos.x, pos.y, pos.z, width, height, 0, skip);
+
+    g_game.addFullMapChunk();
 }
 
 void ProtocolGame::parseMapDescription(const InputMessagePtr& msg)

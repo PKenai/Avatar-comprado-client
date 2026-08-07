@@ -30,6 +30,7 @@
 #include <framework/core/eventdispatcher.h>
 #include <framework/ui/uimanager.h>
 #include <framework/core/application.h>
+#include <set>
 #include "luavaluecasts_client.h"
 #include "protocolgame.h"
 #include "protocolcodes.h"
@@ -72,6 +73,31 @@ void Game::terminate()
     m_protocolGame = nullptr;
 }
 
+void Game::preloadMapItems()
+{
+    // Walk every tile of the downloaded world map and collect the unique item
+    // ids actually used by it. Preloading ONLY these textures (typically a few
+    // thousand, not the ~19k of the full .dat) removes the walking stutter
+    // without exhausting the 2-4GB address space of this 32-bit client.
+    std::set<uint16> itemIds;
+    const TileList tiles = g_map.getTiles();
+    for (const TilePtr& tile : tiles) {
+        if (!tile)
+            continue;
+        for (const ThingPtr& thing : tile->getThings()) {
+            if (thing && thing->isItem()) {
+                uint16 id = thing->getId();
+                if (id != 0)
+                    itemIds.insert(id);
+            }
+        }
+    }
+
+    std::vector<uint16> ids(itemIds.begin(), itemIds.end());
+    g_logger.info(stdext::format("Preloading %zu item textures used by the world map.", ids.size()));
+    g_things.preloadItemTextures(ids);
+}
+
 void Game::resetGameStates()
 {
     m_online = false;
@@ -94,6 +120,8 @@ void Game::resetGameStates()
     m_walkPrediction = 0;
     m_coins = 0;
     m_transferableCoins = 0;
+    m_fullMapTotal = 0;
+    m_fullMapReceived = 0;
     m_newPingIds.clear();
     m_unjustifiedPoints = UnjustifiedPoints();
 

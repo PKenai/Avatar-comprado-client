@@ -67,11 +67,30 @@ void AnimatedTexture::setRepeat(bool repeat)
     m_repeat = repeat;
 }
 
+void AnimatedTexture::setLoops(int loops)
+{
+    if (loops < 0)
+        loops = 0; // negative would instantly hold the last frame; treat as infinite
+    m_loops = loops;
+    m_loopsPlayed = 0;
+    m_currentFrame = 0;
+    m_animTimer.restart();
+}
+
 void AnimatedTexture::update()
 {
-    if (m_animTimer.ticksElapsed() >= m_framesDelay[m_currentFrame]) {
+    // finite loop count already reached -> hold the last frame until setLoops
+    // is called again (restarts the animation)
+    if (m_loops != 0 && m_loopsPlayed >= m_loops) {
+        m_currentFrame = m_frames.size() - 1;
+    } else if (m_animTimer.ticksElapsed() >= m_framesDelay[m_currentFrame]) {
         m_animTimer.restart();
-        m_currentFrame = (m_currentFrame + 1) % m_frames.size();
+        if (m_currentFrame + 1 >= (int)m_frames.size()) {
+            ++m_loopsPlayed;
+            m_currentFrame = (m_loops != 0 && m_loopsPlayed >= m_loops) ? (m_frames.size() - 1) : 0;
+        } else {
+            ++m_currentFrame;
+        }
     }
 
     m_frames[m_currentFrame]->update();

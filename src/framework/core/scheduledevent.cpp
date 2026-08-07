@@ -21,6 +21,7 @@
  */
 
 #include "scheduledevent.h"
+#include <framework/stdext/string.h>
 
 ScheduledEvent::ScheduledEvent(const std::string& function, const std::function<void()>& callback, int delay, int maxCycles, bool botSafe) : Event(function, callback, botSafe)
 {
@@ -33,7 +34,16 @@ ScheduledEvent::ScheduledEvent(const std::string& function, const std::function<
 void ScheduledEvent::execute()
 {
     if(!m_canceled && m_callback && (m_maxCycles == 0 || m_cyclesExecuted < m_maxCycles)) {
-        m_callback();
+        // Same guard as Event::execute: an exception escaping a scheduled
+        // callback (e.g. the texture preload batches) must never std::terminate
+        // the client. Report rate-limited and keep the app alive.
+        try {
+            m_callback();
+        } catch (const std::exception& e) {
+            reportEventException(stdext::format("Uncaught exception in scheduled event '%s': %s", m_function, e.what()));
+        } catch (...) {
+            reportEventException(stdext::format("Uncaught unknown exception in scheduled event '%s'", m_function));
+        }
         m_executed = true;
         // callback may be used in the next cycle
     } else {

@@ -25,6 +25,7 @@
 #include <framework/graphics/image.h>
 #include <framework/graphics/texture.h>
 #include <framework/graphics/texturemanager.h>
+#include <framework/graphics/animatedtexture.h>
 #include <framework/graphics/graphics.h>
 #include <framework/util/crypt.h>
 
@@ -201,6 +202,19 @@ void UIWidget::setQRCode(const std::string& code, int border)
     }
 
     m_imageMustRecache = true;
+}
+
+void UIWidget::setImageAnimationLoops(int loops)
+{
+    if (m_imageTexture && m_imageTexture->isAnimatedTexture())
+        static_cast<AnimatedTexture*>(m_imageTexture.get())->setLoops(loops);
+}
+
+bool UIWidget::isImageAnimationFinished()
+{
+    if (m_imageTexture && m_imageTexture->isAnimatedTexture())
+        return static_cast<AnimatedTexture*>(m_imageTexture.get())->isAnimationFinished();
+    return true; // not animated -> nothing to wait for
 }
 
 void UIWidget::setImageSource(const std::string& source)

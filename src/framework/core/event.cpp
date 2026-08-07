@@ -21,6 +21,9 @@
  */
 
 #include "event.h"
+#include <framework/core/logger.h>
+#include <framework/core/clock.h>
+#include <framework/stdext/string.h>
 
 Event::Event(const std::string& function, const std::function<void()>& callback, bool botSafe) :
     m_function(function),
@@ -37,10 +40,36 @@ Event::~Event()
     //VALIDATE(m_callback == nullptr);
 }
 
+// Shared by Event and ScheduledEvent: reports an uncaught callback exception
+// without flooding the log. Logging itself schedules another event (Logger::log),
+// so logging every exception from a failing callback would loop forever (a
+// 246k-line flood was observed). At most one report per 2 seconds is printed.
+// Atomic: Event::execute runs on both the graphics and the dispatcher thread.
+void reportEventException(const std::string& msg)
+{
+    static std::atomic<uint64_t> lastReport = 0;
+    uint64 now = g_clock.millis();
+    uint64 last = lastReport.load();
+    if (now - last >= 2000 || last == 0) {
+        if (lastReport.compare_exchange_strong(last, now))
+            g_logger.error(msg);
+    }
+}
+
 void Event::execute()
 {
     if(!m_canceled && !m_executed && m_callback) {
-        m_callback();
+        // Guard every dispatcher event so that a single rogue callback (a
+        // broken sprite throwing inside the texture preloader, a bad_alloc,
+        // etc.) can never std::terminate the whole client silently. This is
+        // the last line of defence: the error is logged and the app lives on.
+        try {
+            m_callback();
+        } catch (const std::exception& e) {
+            reportEventException(stdext::format("Uncaught exception in event '%s': %s", m_function, e.what()));
+        } catch (...) {
+            reportEventException(stdext::format("Uncaught unknown exception in event '%s'", m_function));
+        }
         m_executed = true;
     }
 

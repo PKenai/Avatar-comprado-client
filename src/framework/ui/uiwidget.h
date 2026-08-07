@@ -470,6 +470,16 @@ public:
     void setImageRepeated(bool repeated) { m_imageRepeated = repeated; updateImageCache(); }
     void setImageSmooth(bool smooth) { m_imageSmooth = smooth; }
     void setImageAutoResize(bool autoResize) { m_imageAutoResize = autoResize; }
+    // If the current image-source is an animated texture (APNG), sets how many
+    // times it loops (0 = infinite). 1 = play once and hold the last frame.
+    // Restarting via setImageSource or calling this again replays it.
+    void setImageAnimationLoops(int loops);
+
+    // True when the animation has played its finite loop count and is holding
+    // the last frame. Returns true when the image is not animated (nothing to
+    // wait for), false when it is still playing or loops is infinite.
+    bool isImageAnimationFinished();
+
     void setImageBorderTop(int border) { m_imageBorder.top = border; configureBorderImage(); }
     void setImageBorderRight(int border) { m_imageBorder.right = border; configureBorderImage(); }
     void setImageBorderBottom(int border) { m_imageBorder.bottom = border; configureBorderImage(); }

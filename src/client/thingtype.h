@@ -203,6 +203,9 @@ public:
     int getNumPatternY() { return m_numPatternY; }
     int getNumPatternZ() { return m_numPatternZ; }
     int getAnimationPhases() { return m_animationPhases; }
+    // Builds (and uploads) the textures of every animation phase. Used by the
+    // background preloader to avoid on-the-fly texture stalls while walking.
+    void preloadTexture();
     AnimatorPtr getAnimator() { return m_animator; }
     AnimatorPtr getIdleAnimator() { return m_idleAnimator; }
     Point getDisplacement() { return m_displacement; }

@@ -490,6 +490,22 @@ void ThingType::unserializeOtml(const OTMLNodePtr& node)
     }
 }
 
+void ThingType::preloadTexture()
+{
+    if (m_null || m_spritesIndex.empty())
+        return;
+    for (int phase = 0; phase < m_animationPhases; ++phase) {
+        try {
+            getTexture(phase);
+        } catch (...) {
+            // A broken thing type (corrupt sprite / invalid encryption / bad
+            // image) must not kill the client: the game never draws it anyway.
+            // No per-phase log: the caller counts skipped types and reports
+            // the total once at the end.
+        }
+    }
+}
+
 void ThingType::unload()
 {
     m_textures.clear();

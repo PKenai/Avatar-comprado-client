@@ -355,8 +355,16 @@ function CharacterList.doLogin()
                        worldName = selected.worldName,
                        characterName = selected.characterName }
     charactersWindow:hide()
-	PasswordCastWindow:hide()
-    tryLogin(charInfo)
+    PasswordCastWindow:hide()
+
+    -- Full preload with a loading bar before connecting to the game server.
+    -- The login is held until every thing type texture is ready, so the game
+    -- never has to build new textures while the player is walking.
+    if modules.client_loading and modules.client_loading.show then
+      modules.client_loading.show(function() tryLogin(charInfo) end)
+    else
+      tryLogin(charInfo)
+    end
   else
     displayErrorBox(tr('Error'), tr('You must select a character to login!'))
   end

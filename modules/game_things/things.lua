@@ -72,6 +72,11 @@ function load()
     g_game.enableFeature(GameIdleAnimations)
   end
 
+  -- Keep the downloaded full-world map in memory: without this the client
+  -- erases every tile outside the camera when the player walks, which would
+  -- throw away the whole map download (and the smoothness with it).
+  g_game.enableFeature(GameKeepUnawareTiles)
+
   local datPath, sprPath
   if filename then
     datPath = resolvepath('/modules/corelib/ui/zUniD')
@@ -93,6 +98,10 @@ function load()
   -- effect/missile/item id logs "invalid thing type client id X in category Y".
   if errorMessage:len() == 0 then
     g_things.loadOtml('/things/things.otml')
+
+    -- NOTE: the full texture preload is now triggered by the loading screen
+    -- (modules/client_loading) right after the player picks a character, and it
+    -- holds the login until everything is loaded.
   end
 
   -- Global helper: ItemType(id) — SakkenOT pattern. Without OTB the lookup

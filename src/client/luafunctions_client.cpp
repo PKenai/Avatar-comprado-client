@@ -57,6 +57,10 @@ void Client::registerLuaFunctions()
 {
     g_lua.registerSingletonClass("g_things");
     g_lua.bindSingletonFunction("g_things", "loadDat", &ThingTypeManager::loadDat, &g_things);
+    g_lua.bindSingletonFunction("g_things", "preloadTextures", &ThingTypeManager::preloadTextures, &g_things);
+    g_lua.bindSingletonFunction("g_things", "getPreloadProgress", &ThingTypeManager::getPreloadProgress, &g_things);
+    g_lua.bindSingletonFunction("g_things", "getPreloadPhase", &ThingTypeManager::getPreloadPhase, &g_things);
+    g_lua.bindSingletonFunction("g_things", "isPreloadFinished", &ThingTypeManager::isPreloadFinished, &g_things);
 #ifdef WITH_ENCRYPTION
     g_lua.bindSingletonFunction("g_things", "saveDat", &ThingTypeManager::saveDat, &g_things);
     g_lua.bindSingletonFunction("g_things", "dumpTextures", &ThingTypeManager::dumpTextures, &g_things);
@@ -213,6 +217,10 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_game", "cancelLogin", &Game::cancelLogin, &g_game);
     g_lua.bindSingletonFunction("g_game", "forceLogout", &Game::forceLogout, &g_game);
     g_lua.bindSingletonFunction("g_game", "safeLogout", &Game::safeLogout, &g_game);
+    g_lua.bindSingletonFunction("g_game", "getFullMapProgress", &Game::getFullMapProgress, &g_game);
+    g_lua.bindSingletonFunction("g_game", "isFullMapDownloading", &Game::isFullMapDownloading, &g_game);
+    g_lua.bindSingletonFunction("g_game", "isFullMapDownloadDone", &Game::isFullMapDownloadDone, &g_game);
+    g_lua.bindSingletonFunction("g_game", "preloadMapItems", &Game::preloadMapItems, &g_game);
     g_lua.bindSingletonFunction("g_game", "walk", &Game::walk, &g_game);
     g_lua.bindSingletonFunction("g_game", "autoWalk", &Game::autoWalk, &g_game);
     g_lua.bindSingletonFunction("g_game", "turn", &Game::turn, &g_game);

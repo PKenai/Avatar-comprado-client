@@ -37,6 +37,15 @@ public:
 
     virtual bool isAnimatedTexture() { return true; }
 
+    // Number of times the animation loops. 0 = infinite (default, like a gif).
+    // 1 = play once and hold the last frame. N = play N times then hold.
+    void setLoops(int loops);
+    int getLoops() { return m_loops; }
+
+    // True once a finite loop count has played through (animation is holding
+    // the last frame). Always false while loops is 0 (infinite).
+    bool isAnimationFinished() const { return m_loops != 0 && m_loopsPlayed >= m_loops; }
+
 protected:
     virtual bool buildHardwareMipmaps();
 
@@ -47,6 +56,8 @@ private:
     std::vector<TexturePtr> m_frames;
     std::vector<int> m_framesDelay;
     uint m_currentFrame;
+    int m_loops = 0;
+    int m_loopsPlayed = 0;
     Timer m_animTimer;
 };
 

@@ -621,7 +621,10 @@ void Creature::nextWalkUpdate()
         self->m_walkUpdateEvent = nullptr;
         self->nextWalkUpdate();
     }, g_game.getFeature(Otc::GameNewUpdateWalk) ? 
-        std::max(getStepDuration(true) / std::max(g_app.getFps(), 1), 1) : (float)getStepDuration() / g_sprites.spriteSize()
+        // Floor of 4ms: at very high FPS (1000+) a 1ms cadence floods the
+        // dispatcher with thousands of walk events per second for no benefit
+        // (the render only samples the offset once per frame anyway).
+        std::max(getStepDuration(true) / std::max(g_app.getFps(), 1), 4) : (float)getStepDuration() / g_sprites.spriteSize()
     );
 }
 

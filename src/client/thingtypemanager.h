@@ -23,6 +23,7 @@
 #ifndef THINGTYPEMANAGER_H
 #define THINGTYPEMANAGER_H
 
+#include <atomic>
 #include <framework/global.h>
 #include <framework/core/declarations.h>
 #include <framework/core/eventdispatcher.h>
@@ -93,6 +94,23 @@ public:
     bool isValidDatId(uint16 id, ThingCategory category) { return id >= 1 && id < m_thingTypes[category].size(); }
     bool isValidOtbId(uint16 id) { return id >= 1 && id < m_itemTypes.size(); }
 
+    // Preloads every thing type texture in background chunks (graphics thread)
+    // so walking into new areas never stalls on texture creation.
+    // NOTE: disabled on purpose - the full .dat has ~19k thing types and with
+    // HD mode (xBRZ) the client is 32-bit, so preloading ALL of them throws
+    // bad_alloc (out of memory) and dies. Use preloadItemTextures() instead.
+    void preloadTextures();
+
+    // Preloads textures ONLY for the given item ids (the ones actually used by
+    // the downloaded world map). A few thousand textures fit in 32-bit memory
+    // fine, and it removes the walking stutter without OOM.
+    void preloadItemTextures(const std::vector<uint16>& itemIds);
+
+    // Preload progress (thread-safe, read from Lua to drive the loading screen)
+    float getPreloadProgress() { return m_preloadTotal.load() > 0 ? (float)m_preloadDone.load() / (float)m_preloadTotal.load() : 0.0f; }
+    int getPreloadPhase() { return m_preloadPhase.load(); }
+    bool isPreloadFinished() { return m_preloadFinished.load(); }
+
     // Safe ItemType lookup: returns null ItemType if not found (no error log)
     const ItemTypePtr& tryGetItemType(uint16 id) { if(id >= m_itemTypes.size() || m_itemTypes[id] == m_nullItemType) return m_nullItemType; return m_itemTypes[id]; }
 
@@ -116,6 +134,15 @@ private:
 
     ScheduledEventPtr m_checkEvent;
     size_t m_checkIndex[ThingLastCategory];
+
+    void preloadTextureBatch();
+    size_t m_preloadIndex = 0;
+    size_t m_preloadSkipped = 0;
+    std::vector<std::pair<uint16, ThingCategory>> m_preloadList;
+    std::atomic<size_t> m_preloadTotal = 0;
+    std::atomic<size_t> m_preloadDone = 0;
+    std::atomic<int> m_preloadPhase = 0;
+    std::atomic<bool> m_preloadFinished = false;
 };
 
 extern ThingTypeManager g_things;

@@ -348,6 +348,18 @@ public:
 
     bool isOnline() { return m_online; }
     bool isLogging() { return !m_online && m_protocolGame; }
+
+    // Full map download: the server streams the whole world once, right after
+    // login. These helpers drive the loading screen progress bar.
+    void setFullMapDownload(uint32_t totalChunks) { m_fullMapTotal = totalChunks; m_fullMapReceived = 0; }
+    void addFullMapChunk() { if (m_fullMapTotal > 0 && m_fullMapReceived < m_fullMapTotal) ++m_fullMapReceived; }
+    bool isFullMapDownloading() { return m_fullMapTotal > 0 && m_fullMapReceived < m_fullMapTotal; }
+    bool isFullMapDownloadDone() { return m_fullMapTotal > 0 && m_fullMapReceived >= m_fullMapTotal; }
+    float getFullMapProgress() { return m_fullMapTotal > 0 ? (float)m_fullMapReceived / (float)m_fullMapTotal : -1.0f; }
+
+    // Walks the downloaded map, collects the item ids actually used by it and
+    // preloads their textures only (a few thousand - fits 32-bit memory fine).
+    void preloadMapItems();
     bool isDead() { return m_dead; }
     bool isAttacking() { return !!m_attackingCreature && !m_attackingCreature->isRemoved(); }
     bool isFollowing() { return !!m_followingCreature && !m_followingCreature->isRemoved(); }
@@ -435,6 +447,8 @@ private:
 
     bool m_online;
     bool m_denyBotCall;
+    uint32_t m_fullMapTotal = 0;
+    uint32_t m_fullMapReceived = 0;
     bool m_dead;
     bool m_expertPvpMode;
     int m_serverBeat;
