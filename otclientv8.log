@@ -10889,3 +10889,2209 @@ stack traceback:
 	[C]: in function 'clearFadeTimer'
 	/modules/game_shaders/shaders.lua:33: in function 'terminate'
 	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 15:29:15
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 1 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 15:29:54
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 1 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 15:41:19
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 2 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 15:42:57
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 2 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 15:47:27
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 3 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 15:57:22
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 7 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 16:15:44
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 10 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 16:34:13
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 10 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 17:08:28
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 18 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 17:13:54
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 19 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 17:16:07
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 17:51:49
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 17:55:12
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 18:21:28
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 18:37:07
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 18:37:52
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 18:42:36
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 18:53:18
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: failed to create file '/minimap860_z9.otmm.tmp': tried to modify a file the OS needs
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 21:58:31
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'game_firstlogin.otui': OTML error in '/modules/Game_firstlogin/game_firstlogin.otui:1': not a valid style declaration
+ERROR: failed to create widget from style 'FirstLoginOverlay': 'FirstLoginOverlay' is not a defined style
+ERROR: failed to create widget from style 'FirstLoginArrow': 'FirstLoginArrow' is not a defined style
+ERROR: failed to create widget from style 'FirstLoginTooltip': 'FirstLoginTooltip' is not a defined style
+ERROR: failed to create widget from style 'FirstLoginImagesWindow': 'FirstLoginImagesWindow' is not a defined style
+FATAL ERROR: Unable to load module 'game_firstlogin': /modules/Game_firstlogin/game_firstlogin.lua:367: attempt to index upvalue 'overlay' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/Game_firstlogin/game_firstlogin.lua:367: in function 'init'
+	/modules/Game_firstlogin/game_firstlogin.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:84: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 22:00:43
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TPoint<int>'
+stack traceback:
+	[builtin#142]: at 0x00d9beb0
+	[C]: in function 'setPosition'
+	/modules/Game_firstlogin/game_firstlogin.lua:117: in function 'placeArrow'
+	/modules/Game_firstlogin/game_firstlogin.lua:143: in function 'updateHealPointers'
+	/modules/Game_firstlogin/game_firstlogin.lua:190: in function 'enterStep'
+	/modules/Game_firstlogin/game_firstlogin.lua:232: in function </modules/Game_firstlogin/game_firstlogin.lua:217>
+stack traceback:
+	[builtin#142]: at 0x00d9beb0
+	[C]: in function 'setPosition'
+	/modules/Game_firstlogin/game_firstlogin.lua:117: in function 'placeArrow'
+	/modules/Game_firstlogin/game_firstlogin.lua:143: in function 'updateHealPointers'
+	/modules/Game_firstlogin/game_firstlogin.lua:190: in function 'enterStep'
+	/modules/Game_firstlogin/game_firstlogin.lua:232: in function </modules/Game_firstlogin/game_firstlogin.lua:217>
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TPoint<int>'
+stack traceback:
+	[builtin#142]: at 0x00d9beb0
+	[C]: in function 'setPosition'
+	/modules/Game_firstlogin/game_firstlogin.lua:117: in function 'placeArrow'
+	/modules/Game_firstlogin/game_firstlogin.lua:143: in function 'updateHealPointers'
+	/modules/Game_firstlogin/game_firstlogin.lua:198: in function 'enterStep'
+	/modules/Game_firstlogin/game_firstlogin.lua:305: in function 'onNextStep'
+	...ules/Game_firstlogin/game_firstlogin.otui:43: [@onClick]:2: in function <...ules/Game_firstlogin/game_firstlogin.otui:43: [@onClick]:1>
+stack traceback:
+	[builtin#142]: at 0x00d9beb0
+	[C]: in function 'setPosition'
+	/modules/Game_firstlogin/game_firstlogin.lua:117: in function 'placeArrow'
+	/modules/Game_firstlogin/game_firstlogin.lua:143: in function 'updateHealPointers'
+	/modules/Game_firstlogin/game_firstlogin.lua:198: in function 'enterStep'
+	/modules/Game_firstlogin/game_firstlogin.lua:305: in function 'onNextStep'
+	...ules/Game_firstlogin/game_firstlogin.otui:43: [@onClick]:2: in function <...ules/Game_firstlogin/game_firstlogin.otui:43: [@onClick]:1>
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 22:09:05
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 03 2026 22:09:29
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 11:48:04
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: done=false char=Explainer
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa: HEAL_INFO (tooltip + seta visiveis)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 12:31:27
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: done=false char=Explainer
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa: HEAL_INFO (tooltip + seta visiveis)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 13:15:25
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: done=false char=Explainer
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=807 y=347 w=580 h=470 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=1743 y=1113 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=1315 y=1011 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=807 y=347 w=580 h=470 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=1743 y=1113 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=1315 y=1011 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=807 y=347 w=580 h=470 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=1743 y=1113 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=1315 y=1011 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=807 y=347 w=580 h=470 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=1743 y=1113 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=1315 y=1011 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=807 y=347 w=580 h=470 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (aguardando Add Hotkey)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=1743 y=1113 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=1315 y=1011 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=807 y=347 w=580 h=470 parent=root)
+[game_firstlogin] tutorial concluido para Explainer
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 14:09:53
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: done=true char=Explainer
+[game_firstlogin] talkaction !opentuto detectada, abrindo tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.50 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (aguardando Add Hotkey)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] talkaction !opentuto detectada, abrindo tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (aguardando Add Hotkey)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] talkaction !opentuto detectada, abrindo tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (aguardando Add Hotkey)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 14:25:21
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: done=true char=Explainer
+[game_firstlogin] talkaction !opentuto detectada, abrindo tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (aguardando Add Hotkey)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] talkaction !opentuto detectada, abrindo tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.60 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (aguardando Add Hotkey)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] tutorial concluido para Explainer
+[game_firstlogin] talkaction !opentuto detectada, abrindo tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (aguardando Add Hotkey)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] tutorial concluido para Explainer
+ERROR: Unable to load texture '/modules/game_textwindow/alpha': unable to open file '/modules/game_textwindow/alpha.png': not found
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 14:50:39
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: done=true char=Explainer
+[game_firstlogin] talkaction !opentuto detectada, abrindo tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] poll 3 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 3 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 3 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] poll 4 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] talkaction !opentuto detectada, abrindo tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] poll 3 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 3 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 3 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 3 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] tutorial concluido para Explainer
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 14:52:33
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+[game_firstlogin] onGameStart: done=false char=Account Manager
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] aguardando folds: voc=1 mini=true p2=true p2.name=nil
+[game_firstlogin] aguardando folds: voc=1 mini=true p2=true p2.name=nil
+[game_firstlogin] aguardando folds: voc=1 mini=true p2=true p2.name=nil
+[game_firstlogin] aguardando folds: voc=1 mini=true p2=true p2.name=nil
+[game_firstlogin] folds nao configuradas apos 8s, pulando para imagens (voc=1 mini=true p2=true p2.name=nil)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 14:52:58
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: done=false char=Pansa Beifong
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Fire Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] poll 4 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 14:53:09
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: done=false char=Pansa Beifong
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Fire Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 16:12:26
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 0
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 16:12:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 0
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 16:29:06
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 0
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.50 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 16:29:18
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 0
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.50 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 17:14:21
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] resposta do servidor (storage): open
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] push 'open' recebido antes do login completo, iniciando tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.50 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] talkaction !resettuto: storage resetada no servidor
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] talkaction !resettuto: storage resetada no servidor
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 17:14:35
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] resposta do servidor (storage): open
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] push 'open' recebido antes do login completo, iniciando tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] poll 4 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] tutorial concluido para Explainer
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] resposta do servidor (storage): open
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Pansa Beifong)
+[game_firstlogin] push 'open' recebido antes do login completo, iniciando tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Fire Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 04 2026 20:05:31
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Pansa Beifong)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 05 2026 01:45:50
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+[game_firstlogin] resposta do servidor (storage): open
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Account Manager)
+[game_firstlogin] push 'open' recebido antes do login completo, iniciando tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] aguardando folds: voc=1 mini=true p2=true p2.name=nil
+[game_firstlogin] aguardando folds: voc=1 mini=true p2=true p2.name=nil
+[game_firstlogin] aguardando folds: voc=1 mini=true p2=true p2.name=nil
+[game_firstlogin] aguardando folds: voc=1 mini=true p2=true p2.name=nil
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] resposta do servidor (storage): open
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] push 'open' recebido antes do login completo, iniciando tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Fire Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] poll 4 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 13:39:11
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 15:12:08
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 17:58:05
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  1 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+ERROR: ProtocolGame parse message exception (32750 bytes, 0 unread, last opcode is 0x69 (105), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 0 unread, last opcode is 0x69 (105), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 0 unread, last opcode is 0x69 (105), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 0 unread, last opcode is 0x69 (105), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 6 unread, last opcode is 0x69 (105), prev opcode is 0x6c (108)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 1 unread, last opcode is 0x69 (105), prev opcode is 0x69 (105)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 0 unread, last opcode is 0x69 (105), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 0 unread, last opcode is 0x69 (105), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 2 unread, last opcode is 0x69 (105), prev opcode is 0x69 (105)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 0 unread, last opcode is 0x69 (105), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 1 unread, last opcode is 0x69 (105), prev opcode is 0x6c (108)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 2 unread, last opcode is 0x69 (105), prev opcode is 0x69 (105)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: ProtocolGame parse message exception (32750 bytes, 0 unread, last opcode is 0x69 (105), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+ERROR: ProtocolGame parse message exception (32750 bytes, 1 unread, last opcode is 0xb4 (180), prev opcode is 0x83 (131)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 19:23:03
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 20:34:07
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 20:34:57
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] resposta do servidor (storage): open
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Terrinha)
+[game_firstlogin] push 'open' recebido antes do login completo, iniciando tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Earth Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] poll 4 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 20:35:38
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 20:41:42
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Terrinha)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 21:08:39
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Terrinha)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 21:18:15
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Terrinha)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 21:22:01
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v2 carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[containers] open: idx = 0 | itemId = 3497 | name = locker
+[containers] setup: botao encontrado = true
+[containers] setup: itemId = 3497 | isDepot = false
+[containers] open: idx = 0 | itemId = 3502 | name = depot chest
+[containers] setup: botao encontrado = true
+[containers] setup: itemId = 3502 | isDepot = false
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 21:23:17
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v2 carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[containers] open: idx = 0 | itemId = 3497 | name = locker
+[containers] setup: botao encontrado = true
+[containers] setup: itemId = 3497 | isDepot = false
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 21:24:30
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v3 carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[containers] lupinha ativada no container (itemId 3497)
+[containers] lupinha ativada no container (itemId 3502)
+[containers] lupinha ativada no container (itemId 3497)
+ERROR: protected lua call failed: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x0100beb0
+	[C]: in function 'setSize'
+	/modules/game_containers/containers.lua:131: in function 'buildDepotSearchPopup'
+	/modules/game_containers/containers.lua:183: in function 'onDepotSearchButtonClick'
+	/modules/game_containers/containers.lua:208: in function </modules/game_containers/containers.lua:208>
+stack traceback:
+	[builtin#142]: at 0x0100beb0
+	[C]: in function 'setSize'
+	/modules/game_containers/containers.lua:131: in function 'buildDepotSearchPopup'
+	/modules/game_containers/containers.lua:183: in function 'onDepotSearchButtonClick'
+	/modules/game_containers/containers.lua:208: in function </modules/game_containers/containers.lua:208>
+[containers] lupinha ativada no container (itemId 17360)
+[containers] lupinha ativada no container (itemId 3497)
+[containers] lupinha ativada no container (itemId 3502)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 21:34:14
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v3 carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[containers] lupinha ativada no container (itemId 3497)
+[containers] lupinha ativada no container (itemId 3502)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 22:03:01
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v4 (mini box + foco) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[containers] lupinha ativada no container (itemId 3497)
+[containers] lupinha ativada no container (itemId 3502)
+[containers] lupinha ativada no container (itemId 3497)
+[containers] lupinha ativada no container (itemId 17360)
+[containers] lupinha ativada no container (itemId 3497)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 22:06:39
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v5 (fix overlap) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[containers] lupinha ativada no container (itemId 3497)
+[containers] lupinha ativada no container (itemId 3502)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 22:11:22
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v7 (displayUI) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[containers] lupinha ativada no container (itemId 3497)
+[containers] lupinha ativada no container (itemId 3502)
+[containers] lupinha ativada no container (itemId 3497)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 22:56:35
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v8 (realtime search) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 23:00:01
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v8 (realtime search) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 23:03:46
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v8 (realtime search) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 23:04:17
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v8 (realtime search) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 23:26:07
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v9 (polling search) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Terrinha)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Terrinha)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 06 2026 23:34:49
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v9 (polling search) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Terrinha)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameEnd, parando tutorial
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+[game_firstlogin] resposta do servidor (storage): open
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Account Manager)
+[game_firstlogin] push 'open' recebido antes do login completo, iniciando tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=0 y=0 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=0 y=0 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Air Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] resposta do servidor (storage): open
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] push 'open' recebido antes do login completo, iniciando tutorial
+[game_firstlogin] tutorial iniciado, aguardando folds
+[game_firstlogin] startTutorial | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=false opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] folds prontas, dobra de cura: Fire Recover
+[game_firstlogin] etapa HEAL_INFO | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=0.40 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] poll 2 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_MENU (ensina Add Hotkey)
+[game_firstlogin] poll 3 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa: WAIT_ADD (ensina escolher a tecla)
+[game_firstlogin] poll 4 | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=true opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=false opacity=1.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] etapa IMAGES | overlay(vis=true opacity=1.00 x=0 y=0 w=2194 h=1163 parent=root) arrow(vis=false opacity=1.00 x=904 y=909 w=64 h=48 parent=root) tooltip(vis=true opacity=1.00 x=944 y=933 w=420 h=150 parent=root) imgWin(vis=true opacity=0.00 x=797 y=322 w=600 h=520 parent=root)
+[game_firstlogin] tutorial concluido para Barbiezinha milgrau
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:04:05
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'gameinterface.otui': OTML error in '/modules/game_interface/gameinterface.otui:32': not a valid style declaration
+FATAL ERROR: Unable to load module 'game_interface': /modules/corelib/util.lua:56: attempt to index local 'object' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/corelib/util.lua:56: in function 'connect'
+	/modules/game_interface/gameinterface.lua:19: in function 'init'
+	/modules/game_interface/interface.otmod:38:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:84: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:04:10
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'gameinterface.otui': OTML error in '/modules/game_interface/gameinterface.otui:32': not a valid style declaration
+FATAL ERROR: Unable to load module 'game_interface': /modules/corelib/util.lua:56: attempt to index local 'object' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/corelib/util.lua:56: in function 'connect'
+	/modules/game_interface/gameinterface.lua:19: in function 'init'
+	/modules/game_interface/interface.otmod:38:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:84: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:04:15
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'gameinterface.otui': OTML error in '/modules/game_interface/gameinterface.otui:32': not a valid style declaration
+FATAL ERROR: Unable to load module 'game_interface': /modules/corelib/util.lua:56: attempt to index local 'object' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/corelib/util.lua:56: in function 'connect'
+	/modules/game_interface/gameinterface.lua:19: in function 'init'
+	/modules/game_interface/interface.otmod:38:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:84: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:04:23
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'gameinterface.otui': OTML error in '/modules/game_interface/gameinterface.otui:32': not a valid style declaration
+FATAL ERROR: Unable to load module 'game_interface': /modules/corelib/util.lua:56: attempt to index local 'object' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/corelib/util.lua:56: in function 'connect'
+	/modules/game_interface/gameinterface.lua:19: in function 'init'
+	/modules/game_interface/interface.otmod:38:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:84: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:04:48
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+ERROR: Failed to import UI styles from 'gameinterface.otui': OTML error in '/modules/game_interface/gameinterface.otui:32': not a valid style declaration
+FATAL ERROR: Unable to load module 'game_interface': /modules/corelib/util.lua:56: attempt to index local 'object' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/corelib/util.lua:56: in function 'connect'
+	/modules/game_interface/gameinterface.lua:19: in function 'init'
+	/modules/game_interface/interface.otmod:38:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:84: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:11:21
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+ERROR: /modules/game_interface/gameinterface.lua:92: attempt to call field 'getFocusedWidget' (a nil value)
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:35:46
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:44:42
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:47:40
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:48:06
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 00:48:44
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  6 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+Exiting application..
+ERROR: Lua error: /modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_shaders': LUA ERROR:
+/modules/game_shaders/shaders.lua:33: attempt to call global 'clearFadeTimer' (a nil value)
+stack traceback:
+	[C]: in function 'clearFadeTimer'
+	/modules/game_shaders/shaders.lua:33: in function 'terminate'
+	/modules/game_shaders/shaders.otmod:9:[@onUnload]:1: in main chunk

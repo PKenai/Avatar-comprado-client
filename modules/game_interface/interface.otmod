@@ -29,7 +29,7 @@ Module
     - game_modaldialog
     - game_npctrade
     - game_folds
-    - game_tutorial
+    - game_firstlogin
     - game_playermount
     - game_shaders
     - game_skyclouds

@@ -1,0 +1,21 @@
+Panel
+  OptionCheckBox
+    id: spellsoundEnabled
+    !text: tr('Enable spell sounds')
+
+  Label
+    id: spellsoundVolumeLabel
+    !text: tr('Spell sound volume: %d', 100)
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 6
+
+  OptionScrollbar
+    id: spellsoundVolume
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 3
+    minimum: 0
+    maximum: 100

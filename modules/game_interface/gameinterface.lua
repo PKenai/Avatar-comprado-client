@@ -86,6 +86,44 @@ function bindKeys()
   g_keyboard.bindKeyDown('Ctrl+Q', function() tryLogout(false) end, gameRootPanel)
   g_keyboard.bindKeyDown('Ctrl+L', function() tryLogout(false) end, gameRootPanel)
   g_keyboard.bindKeyDown('Ctrl+W', function() g_map.cleanTexts() modules.game_textmessage.clearMessages() end, gameRootPanel)
+
+  -- Space = seleciona o alvo mais proximo (quando chat nao esta focado)
+  g_keyboard.bindKeyDown('Space', function()
+    -- Checa se um TextEdit tem foco (chat/console)
+    local root = g_ui.getRootWidget()
+    if root then
+      local focused = root:getFocusedChild()
+      while focused do
+        local cn = focused:getClassName()
+        if cn == 'TextEdit' or cn == 'PasswordTextEdit' then return end
+        focused = focused:getParent()
+      end
+    end
+    local player = g_game.getLocalPlayer()
+    if not player then return end
+    local pos = player:getPosition()
+    local spectators = g_map.getSpectators(pos, false)
+    if not spectators then return end
+    local nearest = nil
+    local minDist = math.huge
+    for _, creature in ipairs(spectators) do
+      if creature ~= player and not creature:isLocalPlayer() then
+        local cpos = creature:getPosition()
+        if cpos then
+          local dx = cpos.x - pos.x
+          local dy = cpos.y - pos.y
+          local dist = dx * dx + dy * dy
+          if dist < minDist then
+            minDist = dist
+            nearest = creature
+          end
+        end
+      end
+    end
+    if nearest then
+      g_game.attack(nearest)
+    end
+  end, gameRootPanel)
 end
 
 function bindWalkKey(key, dir)
@@ -107,6 +145,7 @@ function terminate()
   hookedMenuOptions = {}
 
   stopSmartWalk()
+  g_keyboard.unbindKeyDown('Space', gameRootPanel)
 
   disconnect(g_game, {
     onGameStart = onGameStart,
@@ -124,6 +163,10 @@ function onGameStart()
   show()
 
   g_game.enableFeature(GameDiagonalAnimatedText)
+
+  -- Features de performance (NewWalking + BiggerMapCache)
+  g_game.enableFeature(GameNewWalking)
+  g_game.enableFeature(GameBiggerMapCache)
 
   -- open tibia has delay in auto walking
   if not g_game.isOfficialTibia() then

@@ -120,7 +120,7 @@ EnterGameWindow
 
   TextEdit
     id: serverHostTextEdit
-    !tooltip: tr('Make sure that your client uses\nthe correct game client version')
+    !tooltip: tr('Make sure that your client uses\\nthe correct game client version')
     anchors.left: parent.left
     anchors.right: serverListButton.left
     anchors.top: serverLabel.bottom
@@ -185,32 +185,44 @@ EnterGameWindow
     anchors.top: prev.bottom
     margin: 2 0 0 8
 
+  -- Botões alinhados com 4px de espaço entre eles:
+  -- Larguras: 90 + 100 + 90 = 280px
+  -- Gaps: 2 × 4 = 8px
+  -- Total: 288px
+  -- Margem esquerda/direita: (480 - 288) / 2 = 96px
+  -- Ok: left=96, width=90 → right=186
+  -- Criar Conta: left=190, width=100 → right=290
+  -- Broadcasts: left=294, width=90 → right=384
+
   EnterGameButton
     id: ent
-    width: 87
+    width: 90
     !text: tr('Ok')
     anchors.left: parent.left
     anchors.bottom: parent.bottom
-    margin: 0 0 40 90
+    margin-left: 56
+    margin-bottom: 20
     @onClick: EnterGame.doLogin()
-
-  EnterGameButton
-    id: cast
-    width: 93
-    !text: tr('Broadcasts')
-    anchors.right: parent.right
-    anchors.bottom: parent.bottom
-    margin: 0 88 40 0
-    @onClick: EnterGame.cast()
 
   EnterGameButton
     id: createAccountBtn
     width: 100
     !text: tr('Criar Conta')
-    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.left: parent.left
     anchors.bottom: parent.bottom
-    margin-bottom: 40
+    margin-left: 150
+    margin-bottom: 20
     @onClick: CreateAccount.show()
+
+  EnterGameButton
+    id: cast
+    width: 90
+    !text: tr('Broadcasts')
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-left: 254
+    margin-bottom: 20
+    @onClick: EnterGame.cast()
 
   Label
     id: serverInfoLabel

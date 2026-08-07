@@ -25,6 +25,11 @@ function init()
   fightBalancedBox = combatControlsWindow:recursiveGetChildById('fightBalancedBox')
   fightDefensiveBox = combatControlsWindow:recursiveGetChildById('fightDefensiveBox')
 
+  -- Tooltips das posturas (descricao de cada modo de combate)
+  fightOffensiveBox:setTooltip("F\250ria\n+15% dano.\n-20% cura recebida.")
+  fightBalancedBox:setTooltip("Fortaleza\n-15% dano recebido.\n-15% dano causado.")
+  fightDefensiveBox:setTooltip("Canaliza\231\227o\n-20% custo de mana.\n-15% dano.")
+
   chaseModeButton = combatControlsWindow:recursiveGetChildById('chaseModeBox')
   safeFightButton = combatControlsWindow:recursiveGetChildById('safeFightBox')
 
