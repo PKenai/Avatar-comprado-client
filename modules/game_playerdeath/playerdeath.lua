@@ -17,6 +17,7 @@ end
 function reset()
   if deathWindow then
     deathWindow:destroy()
+    deathWindow = nil
   end
 end
 
@@ -35,7 +36,7 @@ end
 function openWindow()
   if deathWindow then
     deathWindow:destroy()
-    return
+    deathWindow = nil
   end
   deathWindow = g_ui.createWidget('DeathWindow', rootWidget)
   local okButton = deathWindow:getChildById('buttonOk')

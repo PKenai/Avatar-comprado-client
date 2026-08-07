@@ -57,6 +57,11 @@ MAX_HISTORY = 500
 MAX_LINES = 100
 HELP_CHANNEL = 9
 
+-- Knockout Log: server broadcasts player deaths via extended opcode
+-- buffer format: victim>oldLevel>newLevel>killer1;killer2;...
+KNOCKOUT_OPCODE = 250
+KNOCKOUT_COLOR = '#F55E5E'
+
 consolePanel = nil
 consoleContentPanel = nil
 folds = nil
@@ -71,6 +76,7 @@ currentMessageIndex = 0
 ignoreNpcMessages = false
 defaultTab = nil
 serverTab = nil
+knockoutTab = nil
 violationsChannelId = nil
 violationWindow = nil
 violationReportTab = nil
@@ -132,6 +138,13 @@ function init()
 
   defaultTab = addTab(tr('Default'), true)
   serverTab = addTab(tr('Server Log'), false)
+  knockoutTab = addTab(tr('Knockout Log'), false)
+  local okReg, errReg = pcall(ProtocolGame.registerExtendedOpcode, KNOCKOUT_OPCODE, onKnockoutOpcode)
+  if not okReg then
+    g_logger.error('[KnockoutLog] falha ao registrar opcode ' .. KNOCKOUT_OPCODE .. ': ' .. tostring(errReg))
+  else
+    g_logger.info('[KnockoutLog] aba pronta, opcode ' .. KNOCKOUT_OPCODE .. ' registrado')
+  end
 
   g_keyboard.bindKeyPress('Shift+Up', function() navigateMessageHistory(1) end, consolePanel)
   g_keyboard.bindKeyPress('Shift+Down', function() navigateMessageHistory(-1) end, consolePanel)
@@ -193,6 +206,7 @@ function disableChat()
   
   consoleTextEdit:setVisible(true)
   consoleTextEdit:setText("")
+  consoleTextEdit:setEnabled(consoleTabBar:getCurrentTab() ~= knockoutTab)
   
   consolePanel:show()
   gameInterface.getBottomPanel():show()
@@ -248,6 +262,7 @@ end
 
 function terminate()
   save()
+  pcall(ProtocolGame.unregisterExtendedOpcode, KNOCKOUT_OPCODE)
   disconnect(g_game, {
     onTalk = onTalk,
     onChannelList = onChannelList,
@@ -303,10 +318,18 @@ function load()
 end
 
 function onTabChange(tabBar, tab)
-  if tab == defaultTab or tab == serverTab then
+  if tab == defaultTab or tab == serverTab or tab == knockoutTab then
     consolePanel:getChildById('closeChannelButton'):disable()
   else
     consolePanel:getChildById('closeChannelButton'):enable()
+  end
+
+  -- the Knockout Log is a read-only feed: block typing while it is active
+  if tab == knockoutTab then
+    consoleTextEdit:setEnabled(false)
+    consoleTextEdit:setText('')
+  else
+    consoleTextEdit:setEnabled(true)
   end
 end
 
@@ -338,6 +361,7 @@ function clear()
 
   defaultTab.tabPanel:getChildById('consoleBuffer'):destroyChildren()
   serverTab.tabPanel:getChildById('consoleBuffer'):destroyChildren()
+  knockoutTab.tabPanel:getChildById('consoleBuffer'):destroyChildren()
 
   local npcTab = consoleTabBar:getTab('NPCs')
   if npcTab then
@@ -416,7 +440,7 @@ function removeTab(tab)
     tab = consoleTabBar:getTab(tab)
   end
 
-  if tab == defaultTab or tab == serverTab then
+  if tab == defaultTab or tab == serverTab or tab == knockoutTab then
     return
   end
 
@@ -507,6 +531,60 @@ end
   local tab = getTab(tabName)
   if tab ~= nil then
     addTabText(text, speaktype, tab, creatureName)
+  end
+end
+
+-- Knockout Log: parses the server broadcast and prints it to the fixed tab
+-- buffer format: victim>oldLevel>newLevel>killer1;killer2;...
+-- e.g.: "Fulano has been knocked out from level 100 to level 99 to Fulano matador, ciclano, and Chiquinho"
+function addKnockoutMessage(buffer)
+  if not knockoutTab or not buffer or #buffer == 0 then return end
+
+  -- the server may already send a ready-to-print message (no '>' separators)
+  if not buffer:find('>', 1, true) then
+    addTabText(buffer, { color = KNOCKOUT_COLOR }, knockoutTab)
+    return
+  end
+
+  local parts = buffer:explode('>')
+  local victim = parts[1]
+  local fromLevel = tostring(parts[2] or '')
+  local toLevel = tostring(parts[3] or '')
+
+  if not victim or #victim == 0 then return end
+
+  local killers = {}
+  if parts[4] then
+    for _, name in ipairs(parts[4]:explode(';')) do
+      if name and #name > 0 then
+        table.insert(killers, name)
+      end
+    end
+  end
+
+  local killerText = ''
+  if #killers == 1 then
+    killerText = ' to ' .. killers[1]
+  elseif #killers > 1 then
+    local list = killers[1]
+    for i = 2, #killers - 1 do
+      list = list .. ', ' .. killers[i]
+    end
+    list = list .. ', and ' .. killers[#killers]
+    killerText = ' to ' .. list
+  end
+
+  local text = victim .. ' has been knocked out from level ' .. fromLevel
+    .. ' to level ' .. toLevel .. killerText
+
+  addTabText(text, { color = KNOCKOUT_COLOR }, knockoutTab)
+end
+
+function onKnockoutOpcode(protocol, opcode, buffer)
+  g_logger.info('[KnockoutLog] opcode recebido do servidor: ' .. tostring(buffer))
+  local ok, err = pcall(addKnockoutMessage, buffer)
+  if not ok then
+    g_logger.error('[KnockoutLog] erro ao processar buffer: ' .. tostring(err))
   end
 end
 
@@ -683,7 +761,7 @@ function processChannelTabMenu(tab, mousePos, mouseButton)
   local menu = g_ui.createWidget('PopupMenu')
 
   channelName = tab:getText()
-  if tab ~= defaultTab and tab ~= serverTab then
+  if tab ~= defaultTab and tab ~= serverTab and tab ~= knockoutTab then
     menu:addOption(tr('Close'), function() removeTab(channelName) end)
     --menu:addOption(tr('Show Server Messages'), function() --[[TODO]] end)
     menu:addSeparator()
@@ -770,7 +848,12 @@ function sendMessage(message, tab)
     end
   end
 
-  -- when talking on server log, the message goes to default channel
+  -- the Knockout Log is a read-only feed: players cannot send messages from it
+  if tab == knockoutTab then
+    return true
+  end
+
+  -- when talking on a log tab, the message goes to the default channel
   local name = tab:getText()
   if tab == serverTab or tab == getRuleViolationsTab() then
     tab = defaultTab

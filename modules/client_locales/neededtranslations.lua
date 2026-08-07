@@ -269,6 +269,7 @@ neededTranslations = {
   "Send Message",
   "Server",
   "Server Log",
+  "Knockout Log",
   "Set Outfit",
   "Shielding",
   "Show all items",

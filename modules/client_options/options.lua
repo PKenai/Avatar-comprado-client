@@ -4,6 +4,7 @@ local defaultOptions = {
   showPing = true,
   fullscreen = false,
   classicControl = true,
+  disableLoadingScreen = false,
   smartWalk = false,
   showStatusMessagesInConsole = true,
   showEventMessagesInConsole = true,

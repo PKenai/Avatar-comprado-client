@@ -13,6 +13,11 @@ Panel
     !text: tr('Classic control')
 
   OptionCheckBox
+    id: disableLoadingScreen
+    !text: tr('Disable loading screen')
+    !tooltip: tr('Skip the fullscreen loading screen and enter the game directly')
+
+  OptionCheckBox
     id: displayNames
     !text: tr('Display creature names')
 

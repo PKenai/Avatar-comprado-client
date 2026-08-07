@@ -395,6 +395,14 @@ end
 -- so the map stream starts; the screen stays up until the full world map has
 -- been downloaded and its textures preloaded.
 function show(callback)
+  -- option "disableLoadingScreen": skip the fullscreen loading screen and
+  -- enter the game directly (the world map is streamed normally).
+  if modules.client_options and modules.client_options.getOption
+     and modules.client_options.getOption('disableLoadingScreen') then
+    if callback then callback() end
+    return
+  end
+
   ensureWindow()
   onFinished = callback
   loginStarted = false
