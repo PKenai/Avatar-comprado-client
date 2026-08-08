@@ -2214,3 +2214,453 @@ ERROR: failed to save OTMM minimap: rename: The process cannot access the file b
 [game_firstlogin] onGameEnd, parando tutorial
 Exiting application..
 Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 23:42:12
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 07 2026 23:42:24
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 20 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:21:47
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:21:47
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[KnockoutLog] aba pronta, opcode 250 registrado
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Barbiezinha milgrau)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:24:59
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+[game_firstlogin] onGameEnd, parando tutorial
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+Exiting application..
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:35:04
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:35:04
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[KnockoutLog] aba pronta, opcode 250 registrado
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+FATAL ERROR: Unable to load module 'bomberman_music': dependency '' was not found
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+FATAL ERROR: Unable to load module 'bomberman_music': dependency '' was not found
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:35:41
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:35:41
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[client_loading] modulo carregado
+[SpellSound] 21 sons de magia carregados de /data/sounds
+FATAL ERROR: Unable to load module 'bomberman_button': /modules/bomberman_button/bomberman_button.lua:46: attempt to index global 'UI' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/bomberman_button/bomberman_button.lua:46: in function 'init'
+	...les/bomberman_button/bomberman_button.otmod:10:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:87: in function 'loadModules'
+	/init.lua:101: in main chunk
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+FATAL ERROR: Unable to load module 'bomberman_button': /modules/bomberman_button/bomberman_button.lua:46: attempt to index global 'UI' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/bomberman_button/bomberman_button.lua:46: in function 'init'
+	...les/bomberman_button/bomberman_button.otmod:10:[@onLoad]:1: in main chunk
+	[C]: in function 'autoLoadModules'
+	/init.lua:87: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:38:37
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 00:38:38
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[KnockoutLog] aba pronta, opcode 250 registrado
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+Exiting application..
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:02:05
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:02:05
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[KnockoutLog] aba pronta, opcode 250 registrado
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Explainer)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+ERROR: failed to create widget from style 'BombermanWindow': 'BombermanWindow' is not a defined style
+ERROR: failed to create widget from style 'BombermanWindow': 'BombermanWindow' is not a defined style
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:08:51
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:09:03
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:09:20
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Pansa Beifong)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:10:13
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:10:37
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:11:10
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+== application started at Aug 08 2026 01:11:40
+OTCv8 3.2 rev 0 (dev) made by otclient.net built on Aug  7 2026 for arch x86
+ERROR: Layour mobile doesn't exist, using default
+[client_loading] modulo carregado
+[KnockoutLog] aba pronta, opcode 250 registrado
+[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233
+[game_firstlogin] script carregado (inicio do arquivo)
+[game_firstlogin] modulo iniciado (widgets criados, eventos conectados)
+[SpellSound] 21 sons de magia carregados de /data/sounds
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Sirius)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+[game_firstlogin] onGameStart: solicitando storage do tutorial (char=Terrinha)
+[game_firstlogin] resposta do servidor (storage): 1
+[game_firstlogin] personagem ja fez o tutorial (storage), nada a mostrar
+[game_firstlogin] onGameEnd, parando tutorial
+Exiting application..
