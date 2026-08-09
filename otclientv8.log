@@ -117953,3 +117953,22 @@ ERROR: failed to save OTMM minimap: rename: The process cannot access the file b
 Exiting application..
 Exiting application..
 WARNING: attempt to destroy widget 'widget1537' two times
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+WARNING: attempt to destroy widget 'widget1297' two times
+Exiting application..
+WARNING: attempt to destroy widget 'widget1388' two times
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+Exiting application..
+WARNING: attempt to destroy widget 'widget1355' two times
+GPU NVIDIA GeForce RTX 4060/PCIe/SSE2 (NVIDIA Corporation)
+OpenGL 4.6.0 NVIDIA 591.86
+[Atlas] Texture size is: 4096x4096 (max: 32768x32768)
+Found work dir at 'C:/Users/imfis/Desktop/Avatar-comprado-client/'
+WARNING: attempt to destroy widget 'widget1293' two times
+WARNING: attempt to destroy widget 'widget1406' two times
