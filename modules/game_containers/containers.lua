@@ -56,10 +56,7 @@ local function requestDepotSearch(term)
   local protocol = g_game.getProtocolGame()
   if protocol then
     local msg = "search>" .. tostring(term or "")
-    print("[depot-search] ENVIANDO: " .. msg)
     protocol:sendExtendedOpcode(DEPOT_SEARCH_OPCODE, msg)
-  else
-    print("[depot-search] ERRO: protocol nil!")
   end
 end
 
@@ -76,7 +73,6 @@ local function renderDepotResults(list, total)
   depotSearchResults:destroyChildren()
 
   local term = lastDepotSearchText or ""
-  print("[depot-search] renderDepotResults: term='" .. term .. "' total=" .. tostring(total) .. " list=#" .. tostring(#list))
 
   if term == "" then
     depotSearchResults:setVisible(false)
@@ -294,7 +290,6 @@ end
 -- ============================ containers (original) =========================
 
 function init()
-  print("[containers] init: containers.lua v10 (debug + fixed position) carregado, opcode 233")
   g_ui.importStyle('container')
 
   connect(Container, { onOpen = onContainerOpen,
@@ -305,32 +300,25 @@ function init()
   connect(Game, { onGameEnd = clean() })
 
   ProtocolGame.registerExtendedOpcode(DEPOT_SEARCH_OPCODE, function(protocol, opcode, buffer)
-    print("[depot-search] RECEBIDO opcode=" .. opcode .. " buffer长度=" .. tostring(#buffer))
-    print("[depot-search] buffer preview: " .. string.sub(buffer, 1, 200))
     if type(buffer) ~= "string" or buffer == "" then return end
     local ok, err = pcall(function()
       local action = buffer:explode('>')
-      print("[depot-search] action[1]=" .. tostring(action[1]) .. " action[2]=" .. tostring(action[2]))
       if action[1] == "search" then
         local data = {}
         for i = 3, #action do
           data[#data + 1] = action[i]
         end
         local joined = table.concat(data, ">")
-        print("[depot-search] loadstring input length: " .. #joined)
         local list = {}
-        local fn, cerr = loadstring("return " .. joined)
+        local fn = loadstring("return " .. joined)
         if fn then
           list = fn() or {}
-          print("[depot-search] parsed list: " .. tostring(#list) .. " items")
-        else
-          print("[depot-search] loadstring ERROR: " .. tostring(cerr))
         end
         renderDepotResults(list, tonumber(action[2]) or #list)
       end
     end)
     if not ok then
-      print("[depot-search] parse ERROR: " .. tostring(err))
+      g_logger.error("[depot-search] parse ERROR: " .. tostring(err))
     end
   end)
 

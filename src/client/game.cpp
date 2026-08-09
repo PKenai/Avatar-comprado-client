@@ -141,6 +141,11 @@ void Game::resetGameStates()
         m_newPingEvent = nullptr;
     }
 
+    if (m_walkEvent) {
+        m_walkEvent->cancel();
+        m_walkEvent = nullptr;
+    }
+
     if(m_checkConnectionEvent) {
         m_checkConnectionEvent->cancel();
         m_checkConnectionEvent = nullptr;
@@ -727,28 +732,111 @@ void Game::autoWalk(const std::vector<Otc::Direction>& dirs, Position startPos)
         m_protocolGame->sendAutoWalk(dirs);
 }
 
-void Game::walk(Otc::Direction direction, bool withPreWalk)
+bool Game::walk(Otc::Direction direction, bool dash)
 {
     m_denyBotCall = false;
     if (!canPerformGameAction()) {
         m_denyBotCall = true;
-        return;
+        return false;
     }
     if (g_extras.debugWalking) {
         g_logger.info(stdext::format("[%i] Game::walk", (int)g_clock.millis()));
     }
 
-    g_lua.callGlobalField("g_game", "onWalk", direction, withPreWalk);
+    // must cancel follow before any new walk
+    if (isFollowing()) {
+        cancelFollow();
+    }
+
+    // must cancel auto walking, and wait next try
+    if (m_localPlayer->isAutoWalking() || m_localPlayer->isServerWalking()) {
+        m_protocolGame->sendStop();
+        if (m_localPlayer->isAutoWalking()) {
+            m_localPlayer->stopAutoWalk();
+        }
+        m_denyBotCall = true;
+        return false;
+    }
+
+    if (dash) {
+        if (m_localPlayer->isWalking() && m_dashTimer.ticksElapsed() < std::max<int>(m_localPlayer->getStepDuration(false, direction) - m_ping, 30)) {
+            m_denyBotCall = true;
+            return false;
+        }
+    } else {
+        // check we can walk and add new walk event if false
+        if (!m_localPlayer->canWalk(direction)) {
+            if (m_lastWalkDir != direction) {
+                // must add a new walk event
+                float ticks = m_localPlayer->getStepTicksLeft();
+                if (ticks <= 0) {
+                    ticks = 1;
+                }
+
+                if (m_walkEvent) {
+                    m_walkEvent->cancel();
+                    m_walkEvent = nullptr;
+                }
+                m_walkEvent = g_dispatcher.scheduleEvent([=] { walk(direction, false); }, ticks);
+            }
+            m_denyBotCall = true;
+            return false;
+        }
+    }
+
+    Position toPos = m_localPlayer->getPosition().translatedToDirection(direction);
+    TilePtr toTile = g_map.getTile(toPos);
+    // only do prewalks to walkable tiles (like grounds and not walls)
+    if (toTile && toTile->isWalkable()) {
+        m_localPlayer->preWalk(direction);
+    } else {
+        // check walk to another floor (e.g: when above 3 parcels)
+        // check if can walk to a lower floor
+        auto canChangeFloorDown = [&]() -> bool {
+            Position pos = toPos;
+            if (!pos.down())
+                return false;
+            TilePtr toTile = g_map.getTile(pos);
+            if (toTile && toTile->hasElevation(3))
+                return true;
+            return false;
+        };
+
+        // check if can walk to a higher floor
+        auto canChangeFloorUp = [&]() -> bool {
+            TilePtr fromTile = m_localPlayer->getTile();
+            if (!fromTile || !fromTile->hasElevation(3))
+                return false;
+            Position pos = toPos;
+            if (!pos.up())
+                return false;
+            TilePtr toTile = g_map.getTile(pos);
+            if (!toTile || !toTile->isWalkable())
+                return false;
+            return true;
+        };
+
+        if (canChangeFloorDown() || canChangeFloorUp() || (!toTile || toTile->isEmpty())) {
+            m_localPlayer->lockWalk();
+        } else {
+            m_denyBotCall = true;
+            return false;
+        }
+    }
+
+    m_localPlayer->stopAutoWalk();
+
+    g_lua.callGlobalField("g_game", "onWalk", direction, dash);
 
     if (g_game.getFeature(Otc::GameNewWalking)) {
         Position pos = m_localPlayer->getPrewalkingPosition();
         uint8_t flags = 0;
-        if (withPreWalk) {
+        if (dash) {
             flags |= 0x01;
         }
         m_protocolGame->sendNewWalk(m_walkId, m_walkPrediction, pos, flags, { direction });
         m_denyBotCall = true;
-        return;
+        return true;
     }
 
     switch(direction) {
@@ -779,7 +867,18 @@ void Game::walk(Otc::Direction direction, bool withPreWalk)
     default:
         break;
     }
+    if (dash) {
+        m_dashTimer.restart();
+    }
+
+    m_lastWalkDir = direction;
     m_denyBotCall = true;
+    return true;
+}
+
+bool Game::dashWalk(Otc::Direction direction)
+{
+    return walk(direction, true);
 }
 
 void Game::turn(Otc::Direction direction)

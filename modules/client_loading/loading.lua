@@ -370,7 +370,6 @@ function init()
   -- Window is created lazily on first show() to avoid any style/load-order issues.
   connect(g_game, { onLoginError = hideOnLoginError })
   connect(g_game, { onConnectionError = hideOnLoginError })
-  g_logger.info('[client_loading] modulo carregado')
 end
 
 function terminate()

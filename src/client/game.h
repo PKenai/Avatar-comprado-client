@@ -176,7 +176,8 @@ public:
     void safeLogout();
 
     // walk related
-    void walk(Otc::Direction direction, bool withPreWalk);
+    bool walk(Otc::Direction direction, bool dash);
+    bool dashWalk(Otc::Direction direction);
     void autoWalk(const std::vector<Otc::Direction>& dirs, Position startPos);
     void turn(Otc::Direction direction);
     void stop();
@@ -459,6 +460,7 @@ private:
     uint m_walkPrediction = 0;
     uint m_maxPreWalkingSteps = 2;
     stdext::timer m_pingTimer;
+    Timer m_dashTimer;
     std::map<uint32_t, stdext::timer> m_newPingIds;
     uint m_seq;
     int m_pingDelay;
@@ -478,6 +480,7 @@ private:
     std::bitset<Otc::LastGameFeature> m_features;
     ScheduledEventPtr m_pingEvent;
     ScheduledEventPtr m_newPingEvent;
+    ScheduledEventPtr m_walkEvent;
     ScheduledEventPtr m_checkConnectionEvent;
     bool m_connectionFailWarned;
     int m_protocolVersion;

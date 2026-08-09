@@ -187,10 +187,6 @@ function init()
 
   scanSounds(SOUNDS_DIR)
 
-  local count = 0
-  for _ in pairs(sounds) do count = count + 1 end
-  print('[SpellSound] ' .. count .. ' sons de magia carregados de ' .. SOUNDS_DIR)
-
   -- pré-carrega os sons pequenos para tocar sem delay
   if g_sounds and g_sounds.preload then
     for _, path in pairs(sounds) do

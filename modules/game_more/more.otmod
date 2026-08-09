@@ -1,9 +1,0 @@
-Module
-  name: game_more
-  description: Manage other buttons
-  author: mirto
-  website: none
-  sandboxed: true
-  scripts: [ more ]
-  @onLoad: init()
-  @onUnload: terminate()

@@ -142,8 +142,6 @@ function init()
   local okReg, errReg = pcall(ProtocolGame.registerExtendedOpcode, KNOCKOUT_OPCODE, onKnockoutOpcode)
   if not okReg then
     g_logger.error('[KnockoutLog] falha ao registrar opcode ' .. KNOCKOUT_OPCODE .. ': ' .. tostring(errReg))
-  else
-    g_logger.info('[KnockoutLog] aba pronta, opcode ' .. KNOCKOUT_OPCODE .. ' registrado')
   end
 
   g_keyboard.bindKeyPress('Shift+Up', function() navigateMessageHistory(1) end, consolePanel)
@@ -581,7 +579,6 @@ function addKnockoutMessage(buffer)
 end
 
 function onKnockoutOpcode(protocol, opcode, buffer)
-  g_logger.info('[KnockoutLog] opcode recebido do servidor: ' .. tostring(buffer))
   local ok, err = pcall(addKnockoutMessage, buffer)
   if not ok then
     g_logger.error('[KnockoutLog] erro ao processar buffer: ' .. tostring(err))

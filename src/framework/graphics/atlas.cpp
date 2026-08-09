@@ -11,7 +11,6 @@ void Atlas::init()
 {
     // If you don't care about players with old computers (~5% of players) you can change 4096 to 6144 or8192
     m_size = std::min<size_t>(4096, g_graphics.getMaxTextureSize());
-    g_logger.info(stdext::format("[Atlas] Texture size is: %ix%i (max: %ix%i)", m_size, m_size, g_graphics.getMaxTextureSize(), g_graphics.getMaxTextureSize()));
 
     for(size_t i = 0; i < 2; ++i) {
         m_atlas[i] = g_framebuffers.createFrameBuffer();

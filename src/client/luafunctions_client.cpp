@@ -222,6 +222,7 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_game", "isFullMapDownloadDone", &Game::isFullMapDownloadDone, &g_game);
     g_lua.bindSingletonFunction("g_game", "preloadMapItems", &Game::preloadMapItems, &g_game);
     g_lua.bindSingletonFunction("g_game", "walk", &Game::walk, &g_game);
+    g_lua.bindSingletonFunction("g_game", "dashWalk", &Game::dashWalk, &g_game);
     g_lua.bindSingletonFunction("g_game", "autoWalk", &Game::autoWalk, &g_game);
     g_lua.bindSingletonFunction("g_game", "turn", &Game::turn, &g_game);
     g_lua.bindSingletonFunction("g_game", "stop", &Game::stop, &g_game);

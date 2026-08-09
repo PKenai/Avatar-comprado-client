@@ -193,7 +193,6 @@ bool ResourceManager::setup()
             continue;
 
         if(PHYSFS_exists(INIT_FILENAME.c_str())) {
-            g_logger.info(stdext::format("Found work dir at '%s'", dir));
             return true;
         }
 
@@ -224,13 +223,11 @@ bool ResourceManager::setup()
         if (dir != localDir)
             PHYSFS_unmount(dir.c_str());
 
-        g_logger.info(stdext::format("Found work dir at '%s'", dir));
         if (mountMemoryData(data))
             return true;
     }
 #endif
     if (loadDataFromSelf()) {
-        g_logger.info(stdext::format("Found work dir inside binary"));
         return true;
     }
 

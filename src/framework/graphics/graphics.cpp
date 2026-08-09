@@ -48,8 +48,6 @@ void Graphics::init()
     m_version = std::string((const char*)glGetString(GL_VERSION) ? (const char*)glGetString(GL_VERSION) : "");
     m_extensions = std::string((const char*)glGetString(GL_EXTENSIONS) ? (const char*)glGetString(GL_EXTENSIONS) : "");
 
-    g_logger.info(stdext::format("GPU %s (%s)", m_renderer, m_vendor));
-    g_logger.info(stdext::format("OpenGL %s", m_version));
 
     // init GL extensions
 #ifndef OPENGL_ES

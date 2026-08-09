@@ -5,7 +5,7 @@ local defaultOptions = {
   fullscreen = false,
   classicControl = true,
   disableLoadingScreen = false,
-  smartWalk = false,
+  smartWalk = true,
   showStatusMessagesInConsole = true,
   showEventMessagesInConsole = true,
   showInfoMessagesInConsole = true,
@@ -26,7 +26,9 @@ local defaultOptions = {
   hdMode = true,
   drawShadows = true,
   floorShadow = true,
-  skyClouds = true
+  skyClouds = true,
+  dashWalk = false,
+  turnDelay = 50
 }
 
 local optionsWindow

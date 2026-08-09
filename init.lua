@@ -33,10 +33,6 @@ ALLOW_CUSTOM_SERVERS = true -- if true it shows option ANOTHER on server list
 g_app.setName("OTCv8")
 -- CONFIG END
 
--- print first terminal message
-g_logger.info(os.date("== application started at %b %d %Y %X"))
-g_logger.info(g_app.getName() .. ' ' .. g_app.getVersion() .. ' rev ' .. g_app.getBuildRevision() .. ' (' .. g_app.getBuildCommit() .. ') made by ' .. g_app.getAuthor() .. ' built on ' .. g_app.getBuildDate() .. ' for arch ' .. g_app.getBuildArch())
-
 if not g_resources.directoryExists("/data") then
   g_logger.fatal("Data dir doesn't exist.")
 end
@@ -57,12 +53,13 @@ if g_app.isMobile() then
     layout = "mobile"
   end
 elseif settings:exists('layout') then
-  local saved = settings:getValue('layout')
-  if saved == 'mobile' and not g_resources.directoryExists('/layouts/mobile') then
-    layout = DEFAULT_LAYOUT
-  else
-    layout = saved
-  end
+  layout = settings:getValue('layout')
+end
+-- nunca passa ao core um layout que o client nao tem (evita o spam
+-- "Layour X doesn't exist, using default" a cada startup)
+if type(layout) == 'string' then layout = layout:lower() end
+if type(layout) ~= 'string' or not g_resources.directoryExists('/layouts/' .. layout) then
+  layout = ''
 end
 g_resources.setLayout(layout)
 

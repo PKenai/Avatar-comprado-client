@@ -1,6 +1,6 @@
 -- modules/Game_firstlogin/game_firstlogin.lua
 -- Tutorial interativo exibido apenas no primeiro login de cada personagem.
--- Também pode ser aberto a qualquer momento com a talkaction: !opentuto
+-- Tambï¿½m pode ser aberto a qualquer momento com a talkaction: !opentuto
 
 moduleActive   = false
 tutorialActive = false
@@ -34,41 +34,21 @@ local ARROW_H = 48
 -- preso / com a tela escurecida para sempre).
 local FOLDS_GRACE = 8
 
--- Diagnostico: so logamos o estado do foldsReady uma vez por segundo
--- para nao poluir o log.
-local lastFoldDiag = 0
 
 local TEXTS = {
-  heal      = "Esta é a sua dobra de cura. Ela é essencial para te manter vivo neste mundo.",
-  hotkeyMenu = "Clique com o botão direito na imagem da dobra e selecione 'Add Hotkey'.",
+  heal      = "Esta ï¿½ a sua dobra de cura. Ela ï¿½ essencial para te manter vivo neste mundo.",
+  hotkeyMenu = "Clique com o botï¿½o direito na imagem da dobra e selecione 'Add Hotkey'.",
   addKey    = "Escolha uma tecla do seu teclado para armazenar essa dobra e pressione em ADD.",
 }
 
 local IMAGES = {
-  { text = 'Selecione o seu alvo clicando com o botão direito nele.' },
+  { text = 'Selecione o seu alvo clicando com o botï¿½o direito nele.' },
   { text = 'Use suas dobras para se sair melhor no combate contra criaturas selvagens.' },
-  { text = 'Deposite seus itens no seu baú. Nenhum jogador além de você poderá retirar seus itens.' },
-  { text = 'Explore o mundo utilizando o minimapa. Todas as áreas já descobertas permanecerão visíveis. Pressione CTRL + M ou utilize o menu superior para abri-lo.' },
-  { text = 'Cada dobrador possui seu elemento exibido ao lado do nome. Preste atenção para não se confundir.' },
-  { text = 'Todo o restante das funcionalidades importantes poderá ser encontrado no menu superior do client.' },
+  { text = 'Deposite seus itens no seu baï¿½. Nenhum jogador alï¿½m de vocï¿½ poderï¿½ retirar seus itens.' },
+  { text = 'Explore o mundo utilizando o minimapa. Todas as ï¿½reas jï¿½ descobertas permanecerï¿½o visï¿½veis. Pressione CTRL + M ou utilize o menu superior para abri-lo.' },
+  { text = 'Cada dobrador possui seu elemento exibido ao lado do nome. Preste atenï¿½ï¿½o para nï¿½o se confundir.' },
+  { text = 'Todo o restante das funcionalidades importantes poderï¿½ ser encontrado no menu superior do client.' },
 }
-
-local function log(msg)
-  g_logger.info("[game_firstlogin] " .. msg)
-end
-
--- Diagnostico: estado real dos widgets (para depurar invisibilidade)
-local function logWidgetState(tag)
-  local function state(w)
-    if not w then return "nil" end
-    local pos = w:getPosition()
-    return string.format("vis=%s opacity=%.2f x=%d y=%d w=%d h=%d parent=%s",
-      tostring(w:isVisible()), w:getOpacity(), pos.x, pos.y,
-      w:getWidth(), w:getHeight(), tostring(w:getParent() and w:getParent():getId() or 'none'))
-  end
-  log(tag .. " | overlay(" .. state(overlay) .. ") arrow(" .. state(arrow) ..
-      ") tooltip(" .. state(tooltip) .. ") imgWin(" .. state(imagesWindow) .. ")")
-end
 
 -- Garante que o widget fica 100% opaco (neutraliza qualquer fade preso)
 local function forceVisible(w)
@@ -77,8 +57,6 @@ local function forceVisible(w)
   w:show()
   w:raise()
 end
-
-log("script carregado (inicio do arquivo)")
 
 ------------------------------------------------------------------
 -- Helpers
@@ -89,7 +67,7 @@ log("script carregado (inicio do arquivo)")
 -- (coordenadas em relacao ao rootWidget). O layout por ancora alinha
 -- os filhos usando os retangulos absolutos dos irmaos, e o itemfly
 -- (que funciona) usa getRect() direto em widgets aninhados. Entao
--- NAO somamos os pais — isso dobraria as coordenadas e a seta
+-- NAO somamos os pais ï¿½ isso dobraria as coordenadas e a seta
 -- ficaria fora do lugar.
 local function rootPos(w)
   local p = w:getPosition()
@@ -126,17 +104,13 @@ local function onStorageReply(buffer)
     storageWaitEvent:cancel()
     storageWaitEvent = nil
   end
-  log("resposta do servidor (storage): " .. tostring(buffer))
   if not g_game.isOnline() then
     -- o push "open" pode chegar antes do onGameStart (durante o login)
     if buffer == "open" then pendingOpen = true end
     return
   end
   if buffer == "1" then
-    log("personagem ja fez o tutorial (storage), nada a mostrar")
-  elseif buffer == "open" then
-    log("servidor pediu para abrir o tutorial (primeiro login)")
-    scheduleEvent(startTutorial, 300)
+    -- tutorial ja concluido, nada a mostrar
   else
     scheduleEvent(startTutorial, 300)
   end
@@ -150,7 +124,6 @@ local function requestStorage()
   storageWaitEvent = scheduleEvent(function()
     storageWaitEvent = nil
     if not storageReplied then
-      log("sem resposta do servidor, iniciando tutorial")
       storageReplied = true
       if g_game.isOnline() then startTutorial() end
     end
@@ -287,7 +260,6 @@ local function enterStep(newStep)
     forceVisible(tooltip)
     forceVisible(arrow)
     updateHealPointers()
-    logWidgetState("etapa HEAL_INFO")
 
   elseif newStep == STEP.WAIT_MENU then
     setTooltipText(TEXTS.hotkeyMenu)
@@ -297,7 +269,6 @@ local function enterStep(newStep)
     forceVisible(tooltip)
     forceVisible(arrow)
     updateHealPointers()
-    log("etapa: WAIT_MENU (ensina Add Hotkey)")
 
   elseif newStep == STEP.WAIT_ADD then
     setTooltipText(TEXTS.addKey)
@@ -308,7 +279,6 @@ local function enterStep(newStep)
     forceVisible(arrow)
     local win = getAssignWindow()
     if win then updateWindowPointers() else updateHealPointers() end
-    log("etapa: WAIT_ADD (ensina escolher a tecla)")
 
   elseif newStep == STEP.IMAGES then
     arrow:hide()
@@ -317,7 +287,6 @@ local function enterStep(newStep)
     currentImage = 1
     showImage(currentImage)
     forceVisible(imagesWindow)
-    logWidgetState("etapa IMAGES")
   end
 end
 
@@ -327,46 +296,22 @@ local function pollTick()
     return
   end
   if not g_game.isOnline() then
-    log("poll: perdeu conexao, parando tutorial")
     stopTutorial()
     polling = false
     return
   end
 
   local s = step
-  if s == STEP.HEAL_INFO or s == STEP.WAIT_MENU or s == STEP.WAIT_ADD then
-    if os.time() - lastFoldDiag > 2 then
-      lastFoldDiag = os.time()
-      logWidgetState("poll " .. s)
-    end
-  end
   if s == STEP.WAIT_FOLDS then
     if foldsReady() then
       healName = getHealName()
-      log("folds prontas, dobra de cura: " .. tostring(healName))
       enterStep(STEP.HEAL_INFO)
     else
       local now = os.time()
       if now - (waitFoldsSince or now) > FOLDS_GRACE then
         -- sem dobras a tempo: pula as etapas que dependem da barra e
         -- vai direto para o tutorial de imagens (nunca fica preso)
-        local folds = modules.game_folds
-        local voc = folds and folds.infos and folds.infos.vocation
-        local mini = folds and folds.miniWindow
-        local p = mini and mini:getChildById('p2')
-        log(string.format("folds nao configuradas apos %ds, pulando para imagens (voc=%s mini=%s p2=%s p2.name=%s)",
-          FOLDS_GRACE, tostring(voc), tostring(mini ~= nil), tostring(p ~= nil),
-          tostring(p and p.name or 'nil')))
         enterStep(STEP.IMAGES)
-      elseif now - lastFoldDiag > 1 then
-        lastFoldDiag = now
-        local folds = modules.game_folds
-        local voc = folds and folds.infos and folds.infos.vocation
-        local mini = folds and folds.miniWindow
-        local p = mini and mini:getChildById('p2')
-        log(string.format("aguardando folds: voc=%s mini=%s p2=%s p2.name=%s",
-          tostring(voc), tostring(mini ~= nil), tostring(p ~= nil),
-          tostring(p and p.name or 'nil')))
       end
     end
   elseif s == STEP.HEAL_INFO then
@@ -410,7 +355,6 @@ end
 
 function startTutorial()
   if not g_game.isOnline() then
-    log("startTutorial ignorado: sem conexao")
     return
   end
   stopTutorial()
@@ -418,11 +362,8 @@ function startTutorial()
   currentImage = 1
   step = STEP.WAIT_FOLDS
   waitFoldsSince = os.time()
-  lastFoldDiag = 0
   forceVisible(overlay)
   overlay:setPhantom(true)
-  log("tutorial iniciado, aguardando folds")
-  logWidgetState("startTutorial")
   pcall(function() modules.game_folds.doOpen() end)
   startPolling()
 end
@@ -457,7 +398,6 @@ function onCloseImages()
   -- fechar antes apenas fecha (o tutorial reaparece no proximo login)
   if currentImage >= #IMAGES then
     markDone()
-    log("tutorial concluido para " .. g_game.getCharacterName())
   end
   stopTutorial()
 end
@@ -469,7 +409,6 @@ end
 local function talkFilter(msg)
   if not g_game.isOnline() then return false end
   if msg and msg:lower():match("^%!opentuto%s*$") then
-    log("talkaction !opentuto detectada, abrindo tutorial")
     startTutorial()
     return true -- consome a mensagem, nao envia ao servidor
   end
@@ -477,7 +416,6 @@ local function talkFilter(msg)
     -- Reseta a storage no servidor para o tutorial voltar a aparecer
     -- no proximo login (util para testes).
     resetStorage()
-    log("talkaction !resettuto: storage resetada no servidor")
     return true -- consome a mensagem, nao envia ao servidor
   end
   return false
@@ -488,10 +426,8 @@ end
 ------------------------------------------------------------------
 
 function onGameStart()
-  log("onGameStart: solicitando storage do tutorial (char=" .. tostring(g_game.getCharacterName()) .. ")")
   if pendingOpen then
     pendingOpen = false
-    log("push 'open' recebido antes do login completo, iniciando tutorial")
     scheduleEvent(startTutorial, 300)
   else
     requestStorage()
@@ -499,7 +435,6 @@ function onGameStart()
 end
 
 function onGameEnd()
-  log("onGameEnd, parando tutorial")
   pendingOpen = false
   if storageWaitEvent then
     storageWaitEvent:cancel()
@@ -555,7 +490,6 @@ function init()
   end
 
   moduleActive = true
-  log("modulo iniciado (widgets criados, eventos conectados)")
 end
 
 function terminate()

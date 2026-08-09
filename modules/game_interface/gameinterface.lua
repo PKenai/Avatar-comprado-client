@@ -16,6 +16,7 @@ currentViewMode = 0
 smartWalkDirs = {}
 smartWalkDir = nil
 walkFunction = nil
+lastDirTime = g_clock.millis()
 hookedMenuOptions = {}
 
 function init()
@@ -72,14 +73,14 @@ function bindKeys()
   bindWalkKey('Numpad4', West)
   bindWalkKey('Numpad7', NorthWest)
 
-  g_keyboard.bindKeyPress('Ctrl+Up', function() g_game.turn(North) changeWalkDir(North) end, gameRootPanel)
-  g_keyboard.bindKeyPress('Ctrl+Right', function() g_game.turn(East) changeWalkDir(East) end, gameRootPanel)
-  g_keyboard.bindKeyPress('Ctrl+Down', function() g_game.turn(South) changeWalkDir(South) end, gameRootPanel)
-  g_keyboard.bindKeyPress('Ctrl+Left', function() g_game.turn(West) changeWalkDir(West) end, gameRootPanel)
-  g_keyboard.bindKeyPress('Ctrl+Numpad8', function() g_game.turn(North) changeWalkDir(North) end, gameRootPanel)
-  g_keyboard.bindKeyPress('Ctrl+Numpad6', function() g_game.turn(East) changeWalkDir(East) end, gameRootPanel)
-  g_keyboard.bindKeyPress('Ctrl+Numpad2', function() g_game.turn(South) changeWalkDir(South) end, gameRootPanel)
-  g_keyboard.bindKeyPress('Ctrl+Numpad4', function() g_game.turn(West) changeWalkDir(West) end, gameRootPanel)
+  bindTurnKey('Ctrl+Up', North)
+  bindTurnKey('Ctrl+Right', East)
+  bindTurnKey('Ctrl+Down', South)
+  bindTurnKey('Ctrl+Left', West)
+  bindTurnKey('Ctrl+Numpad8', North)
+  bindTurnKey('Ctrl+Numpad6', East)
+  bindTurnKey('Ctrl+Numpad2', South)
+  bindTurnKey('Ctrl+Numpad4', West)
   g_keyboard.bindKeyPress('Escape', function() g_game.cancelAttackAndFollow() end, gameRootPanel)
   g_keyboard.bindKeyPress('Ctrl+=', function() gameMapPanel:zoomIn() end, gameRootPanel)
   g_keyboard.bindKeyPress('Ctrl+-', function() gameMapPanel:zoomOut() end, gameRootPanel)
@@ -138,6 +139,19 @@ function unbindWalkKey(key)
   g_keyboard.unbindKeyPress(key, gameRootPanel)
 end
 
+function bindTurnKey(key, dir)
+  local function callback(widget, code, repeatTicks)
+    if g_clock.millis() - lastDirTime >= modules.client_options.getOption('turnDelay') then
+      g_game.turn(dir)
+      changeWalkDir(dir)
+
+      lastDirTime = g_clock.millis()
+    end
+  end
+
+  g_keyboard.bindKeyPress(key, callback, gameRootPanel)
+end
+
 function terminate()
   save()
   hide()
@@ -163,10 +177,6 @@ function onGameStart()
   show()
 
   g_game.enableFeature(GameDiagonalAnimatedText)
-
-  -- Features de performance (NewWalking + BiggerMapCache)
-  g_game.enableFeature(GameNewWalking)
-  g_game.enableFeature(GameBiggerMapCache)
 
   -- open tibia has delay in auto walking
   if not g_game.isOfficialTibia() then
