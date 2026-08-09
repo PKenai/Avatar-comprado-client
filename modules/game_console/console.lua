@@ -452,6 +452,10 @@ function removeTab(tab)
     for k, v in pairs(channels) do
       if (k == tab.channelId) then channels[k] = nil end
     end
+    -- fechar a aba do canal de transmissao (0xFFFF) encerra a TV
+    if tab.channelId == 65535 and modules.game_inventory and modules.game_inventory.sendCameraCmd then
+      modules.game_inventory.sendCameraCmd('off')
+    end
     g_game.leaveChannel(tab.channelId)
   elseif tab:getText() == "NPCs" then
     g_game.closeNpcChannel()
@@ -1115,6 +1119,11 @@ function onOpenOwnPrivateChannel(channelId, channelName)
 end
 
 function onCloseChannel(channelId)
+  -- fechar a aba do canal de transmissao (0xFFFF) encerra a TV automaticamente
+  if channelId == 65535 and modules.game_inventory and modules.game_inventory.sendCameraCmd then
+    modules.game_inventory.sendCameraCmd('off')
+  end
+
   local channel = channels[channelId]
   if channel then
     local tab = getTab(channel)

@@ -6,6 +6,8 @@ chaseModeButton = nil
 safeFightButton = nil
 fightModeRadioGroup = nil
 avatarEdit = true
+cameraSlot = nil
+cameraEquipped = false
 
 function doMessageCheck(msg, keyword)
     local a, b = string.find(msg, keyword)
@@ -111,6 +113,11 @@ function init()
   inventoryWindow:disableResize()
   inventoryPanel = inventoryWindow:getChildById('contentsPanel')
 
+  cameraSlot = inventoryPanel:getChildById('cameraSlot')
+  if cameraSlot then
+    cameraSlot.onClick = onCameraSlotClick
+  end
+
 
   refresh()
 
@@ -175,6 +182,32 @@ function onFreeCapacityChange(player, freeCapacity)
   inventoryPanel:getChildById('cap'):setText(tr('Cap') .. ': ' .. math.floor(freeCapacity))
 end
 
+function updateCameraSlot(item)
+  cameraEquipped = item ~= nil
+  if not cameraSlot then return end
+  if item then
+    cameraSlot:setStyle('Item')
+    cameraSlot:setItem(item)
+  else
+    cameraSlot:setStyle('CameraSlot')
+    cameraSlot:setItem(nil)
+  end
+end
+
+-- Clique esquerdo na camera no slot = liga/desliga a TV.
+function onCameraSlotClick(widget, mousePos, button)
+  if not g_game.isOnline() then return end
+  if button == MouseLeftButton and cameraEquipped then
+    sendCameraCmd('toggle')
+  end
+end
+
+function sendCameraCmd(cmd)
+  if modules.game_shop and modules.game_shop.sendCamera then
+    modules.game_shop.sendCamera(cmd)
+  end
+end
+
 function terminate()
   if g_game.isOnline() then
     offline()
@@ -189,6 +222,7 @@ function terminate()
 
   g_keyboard.unbindKeyDown('Ctrl+I')
 
+  cameraSlot = nil
   inventoryWindow:destroy()
   inventoryButton:destroy()
 
@@ -232,6 +266,10 @@ end
 
 -- hooked events
 function onInventoryChange(player, slot, item, oldItem)
+  if slot == 11 then
+    updateCameraSlot(item)
+    return
+  end
   if slot >= InventorySlotPurse then return end
   local itemWidget = inventoryPanel:getChildById('slot' .. slot)
 
@@ -271,6 +309,10 @@ function online()
 end
 
 function offline()
+  -- limpa o slot da camera ao sair do jogo, para nao ficar "fantasma"
+  -- (item do personagem anterior) ao trocar de personagem
+  updateCameraSlot(nil)
+
   local lastCombatControls = g_settings.getNode('LastCombatControls')
   if not lastCombatControls then
     lastCombatControls = {}

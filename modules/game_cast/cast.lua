@@ -39,9 +39,6 @@ end
 
 function toggle()
   local menu = g_ui.createWidget('PopupMenu')
-  menu:addOption(tr("Abrir a TV"), function() castTalk("/cast on") end)
-  menu:addOption(tr("Fechar a TV"), function() castTalk("/cast off") end)
-  menu:addSeparator()
   menu:addOption(tr("Proteger a TV com Senha"), function() castSenha:show() castSenha:raise() castSenha:focus() end)
   menu:addOption(tr("Remover a Senha da TV"), function() castTalk("/cast password off") end)
   menu:addSeparator()
