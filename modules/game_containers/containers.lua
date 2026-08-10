@@ -294,6 +294,7 @@ function init()
 
   connect(Container, { onOpen = onContainerOpen,
                        onClose = onContainerClose,
+                       onSizeChange = onContainerSizeChange,
                        onAddItem = onContainerAddItem,
                        onUpdateItem = onContainerUpdateItem,
                        onRemoveItem = onContainerRemoveItem })
@@ -328,6 +329,7 @@ end
 function terminate()
   disconnect(Container, { onOpen = onContainerOpen,
                           onClose = onContainerClose,
+                          onSizeChange = onContainerSizeChange,
                           onAddItem = onContainerAddItem,
                           onUpdateItem = onContainerUpdateItem,
                           onRemoveItem = onContainerRemoveItem })
@@ -362,9 +364,69 @@ function destroy(container)
 end
 
 function refreshContainerItems(container)
-  for slot=0,container:getCapacity()-1 do
-    local itemWidget = container.itemsPanel:getChildById('item' .. slot)
-    itemWidget:setItem(container:getItem(slot))
+  local panel = container.itemsPanel
+  if not panel then return end
+  local children = panel:getChildren()
+  for slot, itemWidget in ipairs(children) do
+    itemWidget:setItem(container:getItem(slot - 1))
+  end
+end
+
+-- ---------------------------------------------------------------------------
+-- Containers de slots DINAMICOS ("a cada 1 que ocupa, mais 1 surge"):
+--   * Momo Pouch (server id 18435 / clientId 17437)
+--   * Reward mailbox (18358)
+-- O server mantem capacity = itens + 1 (sempre 1 slot vazio no fim). O client
+-- sincroniza a grade com a quantidade real de itens + 1, criando/destruindo
+-- slots conforme itens entram/saem, ate 5000 slots (protocolo agora em U16).
+-- ---------------------------------------------------------------------------
+-- ATENCAO: o server envia o CLIENT id do item (clientId do OTB). O Momo Pouch
+-- tem server id 18435, mas clientId 17437 — as checagens do client usam 17437.
+local DYNAMIC_CONTAINER_IDS = { [17437] = true, [18358] = true }
+
+local function isDynamicSlotsContainer(container)
+  local ok, item = pcall(function() return container and container:getContainerItem() end)
+  if not ok or not item then return false end
+  local ok2, id = pcall(function() return item:getId() end)
+  return ok2 and DYNAMIC_CONTAINER_IDS[id] == true
+end
+
+function syncDynamicContainerSlots(container)
+  if not container.window then return end
+  local panel = container.itemsPanel
+  if not panel then return end
+
+  local needed = math.min(container:getItemsCount() + 1, 5000)
+  local children = panel:getChildren()
+
+  -- cria slots vazios enquanto o loot entra (cresce "infinitamente")
+  while #children < needed do
+    local w = g_ui.createWidget('Item', panel)
+    w:setMargin(0)
+    w:setItem(nil)
+    w.position = container:getSlotPosition(#children)
+    children = panel:getChildren()
+  end
+
+  -- remove slots extras quando itens saem
+  while #children > needed do
+    children[#children]:destroy()
+    children = panel:getChildren()
+  end
+
+  refreshContainerItems(container)
+
+  -- ajusta a altura da janela para caber as linhas atuais
+  local layout = panel:getLayout()
+  local cellSize = layout:getCellSize()
+  local filledLines = math.max(math.ceil(container:getItemsCount() / layout:getNumColumns()), 1)
+  container.window:setContentHeight(filledLines * cellSize.height)
+end
+
+function onContainerSizeChange(container, size)
+  if not container.window then return end
+  if isDynamicSlotsContainer(container) then
+    syncDynamicContainerSlots(container)
   end
 end
 
@@ -412,6 +474,11 @@ function onContainerOpen(container, previousContainer)
   container.window = containerWindow
   container.itemsPanel = containerPanel
 
+  -- containers de slots dinamicos: normaliza a grade para itens + 1 slot vazio
+  if isDynamicSlotsContainer(container) then
+    syncDynamicContainerSlots(container)
+  end
+
   local layout = containerPanel:getLayout()
   local cellSize = layout:getCellSize()
   containerWindow:setContentMinimumHeight(cellSize.height)
@@ -433,16 +500,32 @@ end
 
 function onContainerAddItem(container, slot, item)
   if not container.window then return end
-  refreshContainerItems(container)
+  if isDynamicSlotsContainer(container) then
+    syncDynamicContainerSlots(container)
+  else
+    refreshContainerItems(container)
+  end
 end
 
 function onContainerUpdateItem(container, slot, item, oldItem)
   if not container.window then return end
+  if isDynamicSlotsContainer(container) then
+    syncDynamicContainerSlots(container)
+    return
+  end
   local itemWidget = container.itemsPanel:getChildById('item' .. slot)
-  itemWidget:setItem(item)
+  if itemWidget then
+    itemWidget:setItem(item)
+  else
+    refreshContainerItems(container)
+  end
 end
 
 function onContainerRemoveItem(container, slot, item)
   if not container.window then return end
-  refreshContainerItems(container)
+  if isDynamicSlotsContainer(container) then
+    syncDynamicContainerSlots(container)
+  else
+    refreshContainerItems(container)
+  end
 end

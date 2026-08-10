@@ -19,7 +19,6 @@ local defaultOptions = {
   enableLights = true,
   ambientLight = 25,
   showSelfEmblem = true,
-  autoloot = false,
   displayNames = true,
   displayHealth = true,
   displayText = true,
@@ -189,15 +188,6 @@ function setOption(key, value, force)
     gameMapPanel:setDrawLights(value and options['ambientLight'] < 100)
     graphicsPanel:getChildById('ambientLight'):setEnabled(value)
     graphicsPanel:getChildById('ambientLightLabel'):setEnabled(value)
-  elseif key == 'autoloot' then
-    local protocolGame = g_game.getProtocolGame()
-	if protocolGame then
-		local outStr = "false"
-		if value then
-			outStr = "true"
-		end
-		protocolGame:sendExtendedOpcode(131, outStr)
-	end
   elseif key == 'ambientLight' then
     graphicsPanel:getChildById('ambientLightLabel'):setText(tr('Ambient light: %s%%', value))
     gameMapPanel:setMinimumAmbientLight(value/100)

@@ -507,7 +507,11 @@ function createThingMenu(menuPosition, lookThing, useThing, creatureThing)
 
   if not classic then shortcut = '(Ctrl)' else shortcut = nil end
   if useThing then
-    if useThing:isContainer() then
+    -- Momo Pouch: o server trata como container (slots dinamicos), mesmo que
+    -- o DAT do client nao tenha a flag de container. O client id (17437) e
+    -- diferente do server id (18435): o server envia o clientId do OTB.
+    local isMomoPouch = useThing:isItem() and useThing:getId() == 17437
+    if useThing:isContainer() or isMomoPouch then
       if useThing:getParentContainer() then
         menu:addOption(tr('Open'), function() g_game.open(useThing, useThing:getParentContainer()) end, shortcut)
         menu:addOption(tr('Open in new window'), function() g_game.open(useThing) end)
@@ -662,7 +666,15 @@ function createThingMenu(menuPosition, lookThing, useThing, creatureThing)
       menu:addSeparator()
       for name,opt in pairs(category) do
         if opt and opt.condition(menuPosition, lookThing, useThing, creatureThing) then
-          menu:addOption(name, function() opt.callback(menuPosition, 
+          local label = name
+          if opt.name then
+            if type(opt.name) == "function" then
+              label = opt.name(menuPosition, lookThing, useThing, creatureThing)
+            else
+              label = opt.name
+            end
+          end
+          menu:addOption(label, function() opt.callback(menuPosition, 
             lookThing, useThing, creatureThing) end, opt.shortcut)
         end
       end
@@ -683,6 +695,10 @@ function processMouseAction(menuPosition, mouseButton, autoWalkPos, lookThing, u
       g_game.look(lookThing)
       return true
     elseif useThing and keyboardModifiers == KeyboardCtrlModifier and (mouseButton == MouseLeftButton or mouseButton == MouseRightButton) then
+      -- Momo Pouch: CTRL + botao direito abre a config do pouch ou o menu do item
+      if mouseButton == MouseRightButton and modules.game_momo and modules.game_momo.onCtrlRightClick(menuPosition, lookThing, useThing, creatureThing) then
+        return true
+      end
       if useThing:isContainer() then
         if useThing:getParentContainer() then
           g_game.open(useThing, useThing:getParentContainer())
@@ -741,7 +757,10 @@ function processMouseAction(menuPosition, mouseButton, autoWalkPos, lookThing, u
       g_game.look(lookThing)
       return true
     elseif useThing and keyboardModifiers == KeyboardCtrlModifier and (mouseButton == MouseLeftButton or mouseButton == MouseRightButton) then
-      createThingMenu(menuPosition, lookThing, useThing, creatureThing)
+      -- Momo Pouch: CTRL + botao direito -> config do pouch ou menu do item
+      if not (mouseButton == MouseRightButton and modules.game_momo and modules.game_momo.onCtrlRightClick(menuPosition, lookThing, useThing, creatureThing)) then
+        createThingMenu(menuPosition, lookThing, useThing, creatureThing)
+      end
       return true
     elseif attackCreature and g_keyboard.isAltPressed() and (mouseButton == MouseLeftButton or mouseButton == MouseRightButton) then
       g_game.attack(attackCreature)

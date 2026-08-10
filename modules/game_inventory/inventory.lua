@@ -8,6 +8,8 @@ fightModeRadioGroup = nil
 avatarEdit = true
 cameraSlot = nil
 cameraEquipped = false
+momoSlot = nil
+momoEquipped = false
 
 function doMessageCheck(msg, keyword)
     local a, b = string.find(msg, keyword)
@@ -118,6 +120,8 @@ function init()
     cameraSlot.onClick = onCameraSlotClick
   end
 
+  momoSlot = inventoryPanel:getChildById('momoSlot')
+
 
   refresh()
 
@@ -152,13 +156,22 @@ function init()
   --end--
 
   if g_game.isOnline() then
-    local localPlayer = g_game.getLocalPlayer()
-
     online()
-    onFreeCapacityChange(localPlayer, localPlayer:getFreeCapacity())
+    local localPlayer = g_game.getLocalPlayer()
+    if localPlayer then
+      onFreeCapacityChange(localPlayer, localPlayer:getFreeCapacity())
+    end
   end
 
   inventoryWindow:setup()
+end
+
+function onFreeCapacityChange(player, freeCapacity)
+  if not inventoryPanel then return end
+  local capLabel = inventoryPanel:getChildById('cap')
+  if capLabel then
+    capLabel:setText(tr('Cap') .. ': ' .. math.floor(freeCapacity))
+  end
 end
 
 function refleshNumber(toZero)
@@ -178,10 +191,6 @@ function refleshNumber(toZero)
 
 end
 
-function onFreeCapacityChange(player, freeCapacity)
-  inventoryPanel:getChildById('cap'):setText(tr('Cap') .. ': ' .. math.floor(freeCapacity))
-end
-
 function updateCameraSlot(item)
   cameraEquipped = item ~= nil
   if not cameraSlot then return end
@@ -191,6 +200,18 @@ function updateCameraSlot(item)
   else
     cameraSlot:setStyle('CameraSlot')
     cameraSlot:setItem(nil)
+  end
+end
+
+function updateMomoSlot(item)
+  momoEquipped = item ~= nil
+  if not momoSlot then return end
+  if item then
+    momoSlot:setStyle('Item')
+    momoSlot:setItem(item)
+  else
+    momoSlot:setStyle('MomoSlot')
+    momoSlot:setItem(nil)
   end
 end
 
@@ -223,6 +244,7 @@ function terminate()
   g_keyboard.unbindKeyDown('Ctrl+I')
 
   cameraSlot = nil
+  momoSlot = nil
   inventoryWindow:destroy()
   inventoryButton:destroy()
 
@@ -270,6 +292,10 @@ function onInventoryChange(player, slot, item, oldItem)
     updateCameraSlot(item)
     return
   end
+  if slot == 12 then
+    updateMomoSlot(item)
+    return
+  end
   if slot >= InventorySlotPurse then return end
   local itemWidget = inventoryPanel:getChildById('slot' .. slot)
 
@@ -309,9 +335,10 @@ function online()
 end
 
 function offline()
-  -- limpa o slot da camera ao sair do jogo, para nao ficar "fantasma"
-  -- (item do personagem anterior) ao trocar de personagem
+  -- limpa o slot da camera e do momo pouch ao sair do jogo, para nao ficar
+  -- "fantasma" (item do personagem anterior) ao trocar de personagem
   updateCameraSlot(nil)
+  updateMomoSlot(nil)
 
   local lastCombatControls = g_settings.getNode('LastCombatControls')
   if not lastCombatControls then

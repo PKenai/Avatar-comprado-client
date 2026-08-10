@@ -76,11 +76,16 @@ CameraSlot < InventoryItem
   image-source: /images/game/slots/camera
   &position: {x=65535, y=11, z=0}
 
+MomoSlot < InventoryItem
+  id: momoSlot
+  image-source: /images/game/slots/momopouch
+  &position: {x=65535, y=12, z=0}
+
 MiniWindow
   id: inventoryWindow
   !text: tr('Inventory')
   icon: /images/topbuttons/inventory
-  height: 175
+  height: 190
   @onClose: modules.game_inventory.onMiniWindowClose()
   &save: true
 
@@ -105,6 +110,15 @@ MiniWindow
       anchors.top: prev.bottom
       anchors.horizontalCenter: prev.horizontalCenter
       margin-top: 3
+
+    Label
+      id: cap
+      anchors.top: slot8.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 2
+      text: Cap: 1000
+      width: 100
+      text-align: center
 
     NeckSlot
       anchors.top: slot1.top
@@ -142,6 +156,12 @@ MiniWindow
       anchors.top: slot9.top
       anchors.right: slot9.left
       margin-right: 5
+      margin-top: -3
+
+    MomoSlot
+      anchors.top: cameraSlot.bottom
+      anchors.right: cameraSlot.right
+      margin-top: 3
 
     FightOffensiveBox
       id: fightOffensiveBox 
@@ -168,11 +188,3 @@ MiniWindow
       margin-top: 28
       margin-left: 28
 
-    Label
-      id: cap
-      anchors.bottom: parent.bottom
-      anchors.left: parent.left
-      margin-bottom: 3
-      margin-left: 3
-      text: Cap: 1000
-      width: 100

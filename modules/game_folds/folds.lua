@@ -93,12 +93,6 @@ function doRefleshClient()
     if protocolGame then
         protocolGame:sendExtendedOpcode(2) --manda pro server, mandar todas spells
 		protocolGame:sendExtendedOpcode(40)
-		local outStr = "false"
-		local markedOption = modules.client_options.getOption('autoloot')
-		if markedOption then
-			outStr = "true"
-		end
-		protocolGame:sendExtendedOpcode(131, outStr)
     end
 end
 

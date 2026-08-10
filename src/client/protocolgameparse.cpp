@@ -1316,7 +1316,8 @@ void ProtocolGame::parseOpenContainer(const InputMessagePtr& msg)
     int containerId = msg->getU8();
     ItemPtr containerItem = getItem(msg);
     std::string name = msg->getString();
-    int capacity = msg->getU8();
+    // capacity em U16: o Momo Pouch (slots dinamicos) passa de 255 slots
+    int capacity = msg->getU16();
     bool hasParent = (msg->getU8() != 0);
 
     if (g_game.getFeature(Otc::GameTibia12Protocol) && g_game.getProtocolVersion() >= 1220) {
@@ -1335,7 +1336,7 @@ void ProtocolGame::parseOpenContainer(const InputMessagePtr& msg)
         firstIndex = msg->getU16(); // first index
     }
 
-    int itemCount = msg->getU8();
+    int itemCount = msg->getU16();
 
     std::vector<ItemPtr> items(itemCount);
     for (int i = 0; i < itemCount; i++)
@@ -1383,7 +1384,8 @@ void ProtocolGame::parseContainerUpdateItem(const InputMessagePtr& msg)
     if (g_game.getFeature(Otc::GameContainerPagination)) {
         slot = msg->getU16();
     } else {
-        slot = msg->getU8();
+        // slot em U16: suporta containers com mais de 255 slots (Momo Pouch)
+        slot = msg->getU16();
     }
     ItemPtr item = getItem(msg);
     g_game.processContainerUpdateItem(containerId, slot, item);
@@ -1401,7 +1403,8 @@ void ProtocolGame::parseContainerRemoveItem(const InputMessagePtr& msg)
         if (itemId != 0)
             lastItem = getItem(msg, itemId);
     } else {
-        slot = msg->getU8();
+        // slot em U16: suporta containers com mais de 255 slots (Momo Pouch)
+        slot = msg->getU16();
     }
     g_game.processContainerRemoveItem(containerId, slot, lastItem);
 }
