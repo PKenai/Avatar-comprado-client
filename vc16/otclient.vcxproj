@@ -706,6 +706,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_lib|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\framework\input\controller.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_lib|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\framework\luaengine\lbitlib.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_lib|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -1063,6 +1067,7 @@
     <ClInclude Include="..\src\framework\http\session.h" />
     <ClInclude Include="..\src\framework\http\websocket.h" />
     <ClInclude Include="..\src\framework\input\mouse.h" />
+    <ClInclude Include="..\src\framework\input\controller.h" />
     <ClInclude Include="..\src\framework\luaengine\declarations.h" />
     <ClInclude Include="..\src\framework\luaengine\lbitlib.h" />
     <ClInclude Include="..\src\framework\luaengine\luabinder.h" />

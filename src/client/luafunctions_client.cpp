@@ -933,6 +933,10 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<UIMap>("setMinimumAmbientLight", &UIMap::setMinimumAmbientLight);
     g_lua.bindClassMemberFunction<UIMap>("setLimitVisibleRange", &UIMap::setLimitVisibleRange);
     g_lua.bindClassMemberFunction<UIMap>("setFloorFading", &UIMap::setFloorFading);
+    g_lua.bindClassMemberFunction<UIMap>("setFloorShadowFadeWidth", &UIMap::setFloorShadowFadeWidth);
+    g_lua.bindClassMemberFunction<UIMap>("getFloorShadowFadeWidth", &UIMap::getFloorShadowFadeWidth);
+    g_lua.bindClassMemberFunction<UIMap>("setFloorShadowFadeEasing", &UIMap::setFloorShadowFadeEasing);
+    g_lua.bindClassMemberFunction<UIMap>("getFloorShadowFadeEasing", &UIMap::getFloorShadowFadeEasing);
     g_lua.bindClassMemberFunction<UIMap>("setCrosshair", &UIMap::setCrosshair);
     g_lua.bindClassMemberFunction<UIMap>("setShader", &UIMap::setShader);
     g_lua.bindClassMemberFunction<UIMap>("isMultifloor", &UIMap::isMultifloor);

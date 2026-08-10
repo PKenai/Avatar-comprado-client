@@ -16,6 +16,7 @@
         FW_CAM;
         AB;
         NOMINMAX;
+        TOGGLE_GAMEPAD;
     </PREPROCESSOR_DEFS>
     
     <OTCLIENT_LIBDEPS>
@@ -45,6 +46,7 @@
         vorbisfile.lib;
         ogg.lib;
         libcrypto.lib;
+        SDL2.lib;
     </OTCLIENT_LIBDEPS>
   </PropertyGroup>
   <PropertyGroup>
@@ -72,9 +74,11 @@
       <ObjectFileName>$(IntDir)\obj_r\%(RelativeDir)</ObjectFileName>
       <!-- Required when several CL.exe write the same vc143.pdb (parallel compile / VS) -->
       <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(OTCLIENT_LIBDEPS)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
       <LargeAddressAware>true</LargeAddressAware>

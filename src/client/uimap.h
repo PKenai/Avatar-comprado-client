@@ -65,6 +65,10 @@ public:
     void setMinimumAmbientLight(float intensity) { m_mapView->setMinimumAmbientLight(intensity); }
     void setLimitVisibleRange(bool limitVisibleRange) { m_limitVisibleRange = limitVisibleRange; updateVisibleDimension(); }
     void setFloorFading(int value) { m_mapView->setFloorFading(value); }
+    void setFloorShadowFadeWidth(float width) { m_mapView->setFloorShadowFadeWidth(width); }
+    float getFloorShadowFadeWidth() { return m_mapView->getFloorShadowFadeWidth(); }
+    void setFloorShadowFadeEasing(int easing) { m_mapView->setFloorShadowFadeEasing(easing); }
+    int getFloorShadowFadeEasing() { return m_mapView->getFloorShadowFadeEasing(); }
     void setCrosshair(const std::string& type) { m_mapView->setCrosshair(type); }
     bool isMultifloor() { return m_mapView->isMultifloor(); }
     bool isDrawingTexts() { return m_mapView->isDrawingTexts(); }

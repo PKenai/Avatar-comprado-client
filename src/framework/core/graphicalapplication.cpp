@@ -42,6 +42,10 @@
 #include <framework/util/extras.h>
 #include <framework/util/stats.h>
 
+#ifdef TOGGLE_GAMEPAD
+#include <framework/input/controller.h>
+#endif
+
 #ifdef FW_SOUND
 #include <framework/sound/soundmanager.h>
 #endif
@@ -76,6 +80,10 @@ void GraphicalApplication::init(std::vector<std::string>& args)
     // initialize sound
     g_sounds.init();
 #endif
+
+#ifdef TOGGLE_GAMEPAD
+    g_controller.init();
+#endif
 }
 
 void GraphicalApplication::deinit()
@@ -101,6 +109,10 @@ void GraphicalApplication::terminate()
 #endif
 
     g_mouse.terminate();
+
+#ifdef TOGGLE_GAMEPAD
+    g_controller.terminate();
+#endif
 
     // terminate graphics
     g_graphicsDispatcher.shutdown();
@@ -381,6 +393,9 @@ void GraphicalApplication::run()
 
 void GraphicalApplication::poll() {
     ticks_t start = stdext::millis();
+#ifdef TOGGLE_GAMEPAD
+    g_controller.poll();
+#endif
 #ifdef FW_SOUND
     g_sounds.poll();
 #endif

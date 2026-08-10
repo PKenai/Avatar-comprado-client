@@ -118067,3 +118067,437 @@ Exiting application..
 Exiting application..
 Exiting application..
 Exiting application..
+Exiting application..
+ERROR: failed to apply style to widget 'controllerPanel': OTML error in '/modules/client_options/styles/controller/controller.otui:3': cannot create anchor, there is no parent widget!
+stack traceback:
+	[C]: in function 'loadUI'
+	/modules/client_options/options.lua:107: in function 'init'
+	/modules/client_options/options.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:77: in function 'loadModules'
+	/init.lua:98: in main chunk
+at:
+	[C++]: ?applyStyle@UIWidget@@QAEXABV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class Position'
+stack traceback:
+	[builtin#142]: at 0x00daf600
+	[C]: in function 'getSpectatorsInRangeEx'
+	/modules/game_battle/battle.lua:231: in function 'checkCreatures'
+	/modules/game_battle/battle.lua:221: in function </modules/game_battle/battle.lua:219>
+stack traceback:
+	[builtin#142]: at 0x00daf600
+	[C]: in function 'getSpectatorsInRangeEx'
+	/modules/game_battle/battle.lua:231: in function 'checkCreatures'
+	/modules/game_battle/battle.lua:221: in function </modules/game_battle/battle.lua:219>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class Position'
+stack traceback:
+	[builtin#142]: at 0x00daf600
+	[C]: in function 'getSpectatorsInRangeEx'
+	/modules/game_battle/battle.lua:231: in function 'checkCreatures'
+	/modules/game_battle/battle.lua:221: in function </modules/game_battle/battle.lua:219>
+stack traceback:
+	[builtin#142]: at 0x00daf600
+	[C]: in function 'getSpectatorsInRangeEx'
+	/modules/game_battle/battle.lua:231: in function 'checkCreatures'
+	/modules/game_battle/battle.lua:221: in function </modules/game_battle/battle.lua:219>
+Sistema de controle joystick iniciado
+ERROR: failed to apply style to widget 'controllerPanel': OTML error in '/modules/client_options/styles/controller/controller.otui:3': cannot create anchor, there is no parent widget!
+stack traceback:
+	[C]: in function 'loadUI'
+	/modules/client_options/options.lua:107: in function 'init'
+	/modules/client_options/options.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:77: in function 'loadModules'
+	/init.lua:98: in main chunk
+at:
+	[C++]: ?applyStyle@UIWidget@@QAEXABV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+ERROR: failed to create widget from style 'ControllerBindingSlot': 'label' is not a defined style
+ERROR: lua function callback failed: /modules/game_controller/controller.lua:408: attempt to index local 'slotRow' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_controller/controller.lua:408: in function 'createBindingSlots'
+	/modules/game_controller/controller.lua:569: in function </modules/game_controller/controller.lua:540>
+Exiting application..
+Sistema de controle joystick iniciado
+ERROR: protected lua call failed: /modules/game_controller/controller.lua:385: attempt to index upvalue 'configWindow' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_controller/controller.lua:385: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:498: in function </modules/game_controller/controller.lua:498>
+ERROR: protected lua call failed: /modules/game_controller/controller.lua:385: attempt to index upvalue 'configWindow' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_controller/controller.lua:385: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:498: in function </modules/game_controller/controller.lua:498>
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+ERROR: cannot add anchors to widget 'row_a': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_a': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_a': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:308: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_b': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_b': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_b': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_x': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_x': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_x': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_y': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_y': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_y': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_leftshoulder': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_leftshoulder': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_leftshoulder': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_rightshoulder': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_rightshoulder': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_rightshoulder': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_leftstick': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_leftstick': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_leftstick': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_rightstick': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_rightstick': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_rightstick': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_back': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_back': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_back': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_start': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_start': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_start': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_guide': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_guide': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_guide': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_triggerleft': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_triggerleft': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_triggerleft': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_triggerright': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:303: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_triggerright': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:304: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+ERROR: cannot add anchors to widget 'row_triggerright': the parent doesn't use anchors layout
+stack traceback:
+	[C]: in function 'addAnchor'
+	/modules/game_controller/controller.lua:306: in function 'createConfigRow'
+	/modules/game_controller/controller.lua:376: in function 'populateConfigList'
+	/modules/game_controller/controller.lua:391: in function 'openConfigWindow'
+	/modules/game_controller/controller.lua:505: in function </modules/game_controller/controller.lua:505>
+at:
+	[C++]: ?addAnchor@UIWidget@@QAEXW4AnchorEdge@Fw@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+Sistema de controle joystick iniciado
+Exiting application..
+Exiting application..
+Sistema de controle joystick iniciado
+Sistema de controle joystick iniciado
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+WARNING: Trigger triggerleft pressed, but no key is assigned to it. Assign one in Options -> Controller -> Configure Buttons.
+WARNING: Trigger triggerleft pressed, but no key is assigned to it. Assign one in Options -> Controller -> Configure Buttons.
+Exiting application..

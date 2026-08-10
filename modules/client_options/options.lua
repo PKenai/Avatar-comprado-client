@@ -25,6 +25,8 @@ local defaultOptions = {
   hdMode = true,
   drawShadows = true,
   floorShadow = true,
+  floorShadowFadeWidth = 32,
+  floorShadowFadeEasing = 0,
   skyClouds = true,
   dashWalk = false,
   turnDelay = 50
@@ -38,6 +40,7 @@ local generalPanel
 local consolePanel
 local graphicsPanel
 local soundPanel
+local controllerPanel
 
 local function setupGraphicsEngines()
   local enginesRadioGroup = UIRadioGroup.create()
@@ -100,6 +103,9 @@ function init()
 
   graphicsPanel = g_ui.loadUI('graphics')
   optionsTabBar:addTab(tr('Graphics'), graphicsPanel, '/images/optionstab/graphics')
+
+  controllerPanel = g_ui.loadUI('styles/controller/controller')
+  optionsTabBar:addTab(tr('Controller'), controllerPanel, '/images/optionstab/game')
 
   optionsButton = modules.client_topmenu.addLeftButton('optionsButton', tr('Options'), '/images/topbuttons/options', toggle)
 
@@ -212,6 +218,17 @@ function setOption(key, value, force)
     else
       g_game.disableFeature(GameDrawFloorShadow)
     end
+  elseif key == 'floorShadowFadeWidth' then
+    if gameMapPanel and gameMapPanel.setFloorShadowFadeWidth then
+      gameMapPanel:setFloorShadowFadeWidth(value)
+      graphicsPanel:getChildById('floorShadowFadeWidthLabel'):setText(tr('Floor shadow fade width: %s px', value))
+    end
+  elseif key == 'floorShadowFadeEasing' then
+    if gameMapPanel and gameMapPanel.setFloorShadowFadeEasing then
+      gameMapPanel:setFloorShadowFadeEasing(value)
+      local name = value == 1 and 'Linear' or 'Smoothstep'
+      graphicsPanel:getChildById('floorShadowFadeEasingLabel'):setText(tr('Floor shadow fade easing: %s', name))
+    end
   elseif key == 'skyClouds' then
     if value then
       g_game.enableFeature(GameDrawSkyClouds)
@@ -245,6 +262,10 @@ end
 
 function getOption(key)
   return options[key]
+end
+
+function getPanel()
+  return optionsWindow
 end
 
 function addTab(name, panel, icon)

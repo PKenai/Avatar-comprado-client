@@ -42,12 +42,36 @@
 #include <framework/graphics/texturemanager.h>
 #include <framework/graphics/atlas.h>
 #include <framework/graphics/shadermanager.h>
+#include <framework/graphics/painter.h>
+#include <framework/graphics/coordsbuffer.h>
 
 #include <framework/util/extras.h>
 #include <framework/core/adaptiverenderer.h>
 #include <framework/core/clock.h>
 #include <algorithm>
 #include <cmath>
+#include <limits>
+
+void FloorShadowView::draw()
+{
+    m_texture->update();
+    glBindTexture(GL_TEXTURE_2D, m_texture->getId());
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_mapSize.width(), m_mapSize.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, m_buffer.data());
+
+    // the mask is aligned to the tile grid (2 texels per tile), so texture
+    // coordinates are expressed in sub-tile units of the framebuffer
+    const float subTile = g_sprites.spriteSize() / 2.0f;
+    const Point offset = m_src.topLeft();
+    const Size size = m_src.size();
+    CoordsBuffer coords;
+    coords.addRect(RectF(m_dest.left(), m_dest.top(), m_dest.width(), m_dest.height()),
+                   RectF(offset.x / subTile, offset.y / subTile, size.width() / subTile, size.height() / subTile));
+
+    g_painter->resetColor();
+    g_painter->setColor(m_color);
+    g_painter->drawTextureCoords(coords, m_texture);
+    g_painter->resetColor();
+}
 
 MapView::MapView()
 {
@@ -147,12 +171,27 @@ void MapView::drawMapBackground(const Rect& rect, const TilePtr& crosshairTile) 
         }
 
         size_t floorStart = g_drawQueue->size();
-        if (g_game.getFeature(Otc::GameDrawFloorShadow)) {
-            if (cameraPosition.z >= Otc::UNDERGROUND_FLOOR && cameraPosition.z == z) {
-                g_drawQueue->addFilledRect(srcRect, m_floorShadow);
+        const bool drawFloorShadow = g_game.getFeature(Otc::GameDrawFloorShadow) &&
+                                     cameraPosition.z >= Otc::UNDERGROUND_FLOOR && cameraPosition.z == z;
+        const bool floorShadowFade = drawFloorShadow && m_floorShadowFadeWidth > 0.f;
+        if (floorShadowFade) {
+            if (m_floorShadowMaskDirty) {
+                buildFloorShadowMask(cameraPosition);
+                m_floorShadowMaskDirty = false;
             }
+        } else if (drawFloorShadow) {
+            // no fade configured: keep the original hard full-screen shadow
+            g_drawQueue->addFilledRect(srcRect, m_floorShadow);
         }
         drawFloor(z, cameraPosition, crosshairTile);
+        if (floorShadowFade) {
+            // drawn after the current floor so the shadow bleeds smoothly into
+            // the current floor edges near holes; lower floors are covered by
+            // the mask's full-intensity texels (same as the original behavior)
+            g_drawQueue->add(new FloorShadowView(m_floorShadowMaskTexture,
+                                                 Size(m_drawDimension.width() * 2, m_drawDimension.height() * 2),
+                                                 srcRect, srcRect, m_floorShadow, m_floorShadowMaskBuffer));
+        }
 
         if (fading < 0.99)
             g_drawQueue->setOpacity(floorStart, fading);
@@ -375,6 +414,103 @@ void MapView::updateVisibleTilesCache()
                     tile->calculateCorpseCorrection();
                 }
             }
+        }
+    }
+
+    m_floorShadowMaskDirty = true;
+}
+
+void MapView::buildFloorShadowMask(const Position& cameraPosition)
+{
+    const int spriteSize = g_sprites.spriteSize();
+    const int W = m_drawDimension.width();
+    const int H = m_drawDimension.height();
+    const int W2 = W * 2;
+    const int H2 = H * 2;
+
+    if (!m_floorShadowMaskTexture || m_floorShadowMaskTexture->getSize() != Size(W2, H2)) {
+        m_floorShadowMaskTexture = TexturePtr(new Texture(Size(W2, H2), false, true));
+        m_floorShadowMaskTexture->setCanCache(false);
+    }
+
+    const size_t bufferSize = (size_t)W2 * H2 * 4;
+    if (m_floorShadowMaskBuffer.size() < bufferSize)
+        m_floorShadowMaskBuffer.resize(bufferSize);
+    // default: full shadow intensity everywhere (holes, background, uncovered tiles)
+    std::fill(m_floorShadowMaskBuffer.begin(), m_floorShadowMaskBuffer.end(), 255);
+
+    std::vector<uint8_t> cover(W * H, 0);
+    std::vector<uint8_t> hole(W * H, 0);
+
+    const int currentFloor = cameraPosition.z;
+
+    // tiles of the current floor with an opaque ground cover the lower floors
+    for (const TilePtr& tile : m_cachedVisibleTiles[currentFloor]) {
+        const Point p = transformPositionTo2D(tile->getPosition(), cameraPosition);
+        const int tx = p.x / spriteSize;
+        const int ty = p.y / spriteSize;
+        if (tx < 0 || ty < 0 || tx >= W || ty >= H) continue;
+        const ItemPtr ground = tile->getGround();
+        if (ground && ground->isGround() && !ground->isTranslucent())
+            cover[ty * W + tx] = 1;
+    }
+
+    // any visible lower floor tile on an uncovered texel is a hole: the exact
+    // place where the hard shadow edge used to be
+    for (int f = currentFloor + 1; f <= m_cachedLastVisibleFloor; ++f) {
+        for (const TilePtr& tile : m_cachedVisibleTiles[f]) {
+            const Point p = transformPositionTo2D(tile->getPosition(), cameraPosition);
+            const int tx = p.x / spriteSize;
+            const int ty = p.y / spriteSize;
+            if (tx < 0 || ty < 0 || tx >= W || ty >= H) continue;
+            if (!cover[ty * W + tx])
+                hole[ty * W + tx] = 1;
+        }
+    }
+
+    const float fadePx = std::max(1.f, m_floorShadowFadeWidth);
+    const int radius = (int)std::ceil(fadePx / (float)spriteSize) + 1;
+
+    // the mask has 2x2 texels per tile so the falloff is sampled at sub-tile
+    // resolution and stays smooth after bilinear filtering
+    for (int sy = 0; sy < H2; ++sy) {
+        const int ty = sy / 2;
+        const float cy = sy * 0.5f + 0.25f;
+        const int ty0 = std::max(0, ty - radius);
+        const int ty1 = std::min(H - 1, ty + radius);
+        for (int sx = 0; sx < W2; ++sx) {
+            const int tx = sx / 2;
+            if (!cover[ty * W + tx])
+                continue; // hole / background texels keep full shadow
+
+            const float cx = sx * 0.5f + 0.25f;
+            const int tx0 = std::max(0, tx - radius);
+            const int tx1 = std::min(W - 1, tx + radius);
+            float minDistSq = std::numeric_limits<float>::max();
+            for (int hy = ty0; hy <= ty1; ++hy) {
+                for (int hx = tx0; hx <= tx1; ++hx) {
+                    if (!hole[hy * W + hx]) continue;
+                    // distance from the texel center to the hole tile rectangle
+                    const float dx = std::max(hx - cx, std::max(0.f, cx - (hx + 1)));
+                    const float dy = std::max(hy - cy, std::max(0.f, cy - (hy + 1)));
+                    const float d2 = dx * dx + dy * dy;
+                    if (d2 < minDistSq) minDistSq = d2;
+                }
+            }
+            const size_t idx = (size_t)(sy * W2 + sx) * 4;
+            float alpha = 0.f;
+            if (minDistSq < std::numeric_limits<float>::max()) {
+                const float distPx = std::sqrt(minDistSq) * spriteSize;
+                const float t = stdext::clamp<float>(distPx / fadePx, 0.f, 1.f);
+                if (m_floorShadowFadeEasing == 1)
+                    alpha = 1.f - t; // linear
+                else
+                    alpha = 1.f - t * t * (3.f - 2.f * t); // smoothstep
+            }
+            m_floorShadowMaskBuffer[idx] = 255;
+            m_floorShadowMaskBuffer[idx + 1] = 255;
+            m_floorShadowMaskBuffer[idx + 2] = 255;
+            m_floorShadowMaskBuffer[idx + 3] = (uint8)(stdext::clamp<float>(alpha, 0.f, 1.f) * 255.f);
         }
     }
 }

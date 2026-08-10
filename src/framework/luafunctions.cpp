@@ -55,6 +55,10 @@
 #include <framework/input/mouse.h>
 #endif
 
+#ifdef TOGGLE_GAMEPAD
+#include <framework/input/controller.h>
+#endif
+
 #include <framework/net/server.h>
 #include <framework/net/protocol.h>
 #include <framework/http/http.h>
@@ -389,6 +393,18 @@ void Application::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_mouse", "popCursor", &Mouse::popCursor, &g_mouse);
     g_lua.bindSingletonFunction("g_mouse", "isCursorChanged", &Mouse::isCursorChanged, &g_mouse);
     g_lua.bindSingletonFunction("g_mouse", "isPressed", &Mouse::isPressed, &g_mouse);
+
+#ifdef TOGGLE_GAMEPAD
+    // GameController
+    // Exposes g_controller to Lua so the game_controller module can register
+    // callbacks and query controller state without touching C++ directly.
+    g_lua.registerSingletonClass("g_controller");
+    g_lua.bindSingletonFunction("g_controller", "isConnected", &ControllerManager::isConnected, &g_controller);
+    g_lua.bindSingletonFunction("g_controller", "getControllerName", &ControllerManager::getControllerName, &g_controller);
+    g_lua.bindSingletonFunction("g_controller", "setButtonCallback", &ControllerManager::setButtonCallback, &g_controller);
+    g_lua.bindSingletonFunction("g_controller", "setAxisCallback", &ControllerManager::setAxisCallback, &g_controller);
+    g_lua.bindSingletonFunction("g_controller", "setConnectCallback", &ControllerManager::setConnectCallback, &g_controller);
+#endif
 
     // Graphics
     g_lua.registerSingletonClass("g_graphics");

@@ -32,6 +32,7 @@ Module
     - game_shaders
     - game_skyclouds
     - game_itemfly
+    - game_controller
     
   @onLoad: init()
   @onUnload: terminate()

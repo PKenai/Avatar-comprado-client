@@ -43,6 +43,47 @@ Panel
     !text: tr('Floor Shadow')
     !tooltip: tr('Darken underground floors')
 
+  Label
+    id: floorShadowFadeWidthLabel
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 6
+    @onSetup: |
+      local value = modules.client_options.getOption('floorShadowFadeWidth')
+      self:setText(tr('Floor shadow fade width: %s px', value))
+
+  OptionScrollbar
+    id: floorShadowFadeWidth
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 3
+    minimum: 0
+    maximum: 128
+    !tooltip: tr('Soft gradient on the floor shadow edges (0 disables the fade)')
+
+  Label
+    id: floorShadowFadeEasingLabel
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 6
+    @onSetup: |
+      local value = modules.client_options.getOption('floorShadowFadeEasing')
+      local name = value == 1 and 'Linear' or 'Smoothstep'
+      self:setText(tr('Floor shadow fade easing: %s', name))
+
+  OptionScrollbar
+    id: floorShadowFadeEasing
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 3
+    minimum: 0
+    maximum: 1
+    !tooltip: tr('0 = Smoothstep (soft), 1 = Linear')
+
   OptionCheckBox
     id: skyClouds
     !text: tr('Sky Clouds')
