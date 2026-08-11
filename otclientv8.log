@@ -118501,3 +118501,29 @@ Sistema de controle joystick iniciado
 WARNING: Trigger triggerleft pressed, but no key is assigned to it. Assign one in Options -> Controller -> Configure Buttons.
 WARNING: Trigger triggerleft pressed, but no key is assigned to it. Assign one in Options -> Controller -> Configure Buttons.
 Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+ERROR: ProtocolGame parse message exception (7945 bytes, 7909 unread, last opcode is 0x64 (100), prev opcode is 0x6c (108)): unable to create item with invalid id 17864
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: no thing at pos:496 347 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
+Sistema de controle joystick iniciado
+Exiting application..
