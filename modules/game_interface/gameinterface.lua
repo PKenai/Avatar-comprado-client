@@ -177,6 +177,9 @@ function onGameStart()
   show()
 
   g_game.enableFeature(GameDiagonalAnimatedText)
+  -- Avatar: server manda o effect id dos magic effects com 2 bytes (U16), o
+  -- que permite effects custom acima de 255 (ex.: 183+ do Spiritual Rift)
+  g_game.enableFeature(GameMagicEffectU16)
 
   -- open tibia has delay in auto walking
   if not g_game.isOfficialTibia() then
