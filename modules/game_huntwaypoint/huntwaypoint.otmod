@@ -1,0 +1,10 @@
+Module
+  name: game_huntwaypoint
+  description: Hunt Waypoint - caminho ate a hunt no mapa
+  author: System
+  sandboxed: true
+  scripts: [ huntwaypoint ]
+  autoload: true
+  autoload-priority: 1003
+  @onLoad: init()
+  @onUnload: terminate()
