@@ -33,6 +33,7 @@ Module
     - game_skyclouds
     - game_itemfly
     - game_controller
+    - game_notification
     
   @onLoad: init()
   @onUnload: terminate()
