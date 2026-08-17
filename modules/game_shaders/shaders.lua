@@ -3,6 +3,7 @@ local fadeTimer = nil
 local clearFadeTimer -- forward declaration (used by terminate() defined below)
 local SPIRITUAL_SHADER = "outfit_spiritual"
 local SPIRITUAL_PREFIX = "Spiritual "
+local SPIRITUAL_NAME_COLOR = {r = 0x66, g = 0xCC, b = 0xFF, a = 255} -- light blue, like NPC names
 local appliedSpiritual = {}
 local applyingSpiritual = false
 
@@ -169,6 +170,7 @@ function applySpiritualOutfitShader(creature)
   applyingSpiritual = true
   creature:setOutfit(outfit)
   applyingSpiritual = false
+  creature:setNameColor(SPIRITUAL_NAME_COLOR)
 end
 
 function onCreatureAppearSpiritual(creature)
@@ -178,6 +180,7 @@ end
 function onCreatureDisappearSpiritual(creature)
   if creature then
     appliedSpiritual[creature:getId()] = nil
+    creature:resetNameColor()
   end
 end
 

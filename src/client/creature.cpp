@@ -289,7 +289,7 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
             float pos = std::fmod(elapsed * speed, std::max<float>(1.0f, static_cast<float>(nameLen)));
             m_nameCache.drawWithHighlight(textRect, m_nameHighlightBaseColor, m_nameHighlightColor, pos, m_nameHighlightWidth);
         } else {
-            m_nameCache.draw(textRect, fillColor);
+            m_nameCache.draw(textRect, m_useCustomNameColor ? m_nameColor : fillColor);
         }
 
         if (m_titleCache.hasText()) {

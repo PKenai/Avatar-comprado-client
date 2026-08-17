@@ -108,7 +108,8 @@ function init()
     onRuleViolationCancel = onRuleViolationCancel,
     onRuleViolationLock = onRuleViolationLock,
     onGameStart = online,
-    onGameEnd = offline
+    onGameEnd = offline,
+    onTeleport = onTeleport
   })
 
   -- consolePanel = g_ui.displayUI('console', modules.game_interface.getBottomPanel())
@@ -273,7 +274,8 @@ function terminate()
     onRuleViolationCancel = onRuleViolationCancel,
     onRuleViolationLock = onRuleViolationLock,
     onGameStart = online,
-    onGameEnd = offline
+    onGameEnd = offline,
+    onTeleport = onTeleport
   })
 
   if g_game.isOnline() then clear() end
@@ -293,6 +295,11 @@ function terminate()
 
   if violationWindow then
     violationWindow:destroy()
+  end
+
+  if Stickers.stickersPanel then
+    Stickers.stickersPanel:destroy()
+    Stickers.stickersPanel = nil
   end
   
   consolePanel:destroy()
@@ -1009,6 +1016,18 @@ function applyMessagePrefixies(name, level, message)
 end
 
 function onTalk(name, level, mode, message, channelId, creaturePos)
+
+  local config = Stickers.stickersConfig[message]
+  if config then
+    if creaturePos then
+      local tile = g_map.getTile(creaturePos)
+      if tile and not tile:getWidget() then
+        Stickers.createSticker(tile, config)
+      end
+    end
+    return
+  end
+
   if mode == MessageModes.GamemasterBroadcast then
     modules.game_textmessage.displayBroadcastMessage(name .. ': ' .. message)
     return
@@ -1501,6 +1520,21 @@ function online()
   rootWidget:recursiveGetChildById('foldWindow'):show()
   folds:setVisible(true)
   scheduleEvent(function() ignoredChannels = {} end, 3000)
+
+  if Stickers.stickersPanel then
+    Stickers.stickersPanel:destroy()
+    Stickers.stickersPanel = nil
+  end
+  Stickers.createStickersPanel()
+end
+
+function onTeleport()		-- we use on teleport because tile widgets can break on teleport
+  for _, stickerData in ipairs(Stickers.activeStickers) do
+    if stickerData.widget and stickerData.tile then
+      stickerData.tile:removeWidget(stickerData.widget)
+    end
+  end
+  Stickers.activeStickers = {}
 end
 
 function offline()

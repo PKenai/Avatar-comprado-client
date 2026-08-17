@@ -147,6 +147,12 @@ function modules.game_huntwaypoint.onEscape()
   end
 end
 
+-- declarada ANTES de prevPage/nextPage: como e `local`, se ficar depois as
+-- funcoes nao a enxergam (resolvem pra global nil) e o botao > nao paginava
+local function getPageCount()
+  return math.max(1, math.ceil(#hunts / pageSize))
+end
+
 function modules.game_huntwaypoint.prevPage()
   if page > 1 then
     page = page - 1
@@ -178,10 +184,6 @@ function modules.game_huntwaypoint.onCardClick(cardId)
   if g_game.getProtocolGame() then
     g_game.getProtocolGame():sendExtendedOpcode(opcode, 'path:' .. hunt.name)
   end
-end
-
-local function getPageCount()
-  return math.max(1, math.ceil(#hunts / pageSize))
 end
 
 -- ============ dados do server ============

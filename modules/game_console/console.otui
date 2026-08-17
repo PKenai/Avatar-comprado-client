@@ -187,13 +187,23 @@ Panel
     margin-bottom: 6
     @onClick: sayModeChange()
 
+  Button
+    id: stickerButton
+    icon: /images/stickers/emoji
+    !tooltip: tr('Stickers Panel')
+    size: 20 20
+    anchors.left: sayModeButton.right
+    anchors.bottom: parent.bottom
+    margin-left: 6
+    margin-bottom: 6
+
   TextEdit
     id: consoleTextEdit
     anchors.left: sayModeButton.right
     anchors.right: parent.right
     anchors.bottom: parent.bottom
     margin-right: 6
-    margin-left: 6
+    margin-left: 32
     margin-bottom: 6
     shift-navigation: true
     max-length: 255
