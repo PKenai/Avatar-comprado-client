@@ -2,7 +2,7 @@ dofile("/modules/gamelib/opcodes.lua")
 avatarEdit = true
 
 -- Colocar o [nome do item] = cor 
--- Caso a cor do item nao seja definida aqui, o padr√£o √© ser verde clarinho.
+-- Caso a cor do item nao seja definida aqui, o padr„o È ser verde clarinho.
 
 ItemsColor = {
   ['Fire Stone'] = '#ff0000',
@@ -108,8 +108,8 @@ function displayMessage(mode, text)
   if not g_game.isOnline() then return end
 --print(text)
 --print(mode)
-  --sistema mirto: folds/√°gua usam mode Look com #m#/#w#/#v#/#j#
-  --n√£o bloquear qualquer "#" ‚Äî isso apagava look de items com descri√ß√£o colorida/custom
+  --sistema mirto: folds/·gua usam mode Look com #m#/#w#/#v#/#j#
+  --n„o bloquear qualquer "#" ó isso apagava look de items com descriÁ„o colorida/custom
   if mode == 20 then
     if modules.game_folds.checkIsFoldMsg(text) or modules.game_inventory.checkIsWaterMsg(text) then
       return

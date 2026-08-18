@@ -15,7 +15,7 @@ function init()
   g_keyboard.bindKeyPress('Down', function() moduleList:focusNextChild(KeyboardFocusReason) end, moduleManagerWindow)
 
   moduleManagerButton = modules.client_topmenu.addLeftButton('moduleManagerButton', tr('Module Manager'), '/images/topbuttons/modulemanager', toggle)
-  disable() --Serve para desabilitar o bot√£o de modulos
+  disable() --Serve para desabilitar o bot„o de modulos
 
   -- refresh modules only after all modules are loaded
   addEvent(listModules)

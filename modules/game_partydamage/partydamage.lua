@@ -103,8 +103,8 @@ function reset()
   damageData = {}
   totalPartyDamage = 0
   if partyDamageWindow then
-    local rowsContainer = partyDamageWindow:recursiveGetChildById('rowsContainer')
-    if rowsContainer then
+    local ok, rowsContainer = pcall(function() return partyDamageWindow:recursiveGetChildById('rowsContainer') end)
+    if ok and rowsContainer then
       rowsContainer:destroyChildren()
     end
   end
@@ -148,8 +148,8 @@ function updateUI()
   if not partyDamageWindow then return end
   if not partyDamageButton or not partyDamageButton:isOn() then return end
 
-  local rowsContainer = partyDamageWindow:recursiveGetChildById('rowsContainer')
-  if not rowsContainer then return end
+  local ok, rowsContainer = pcall(function() return partyDamageWindow:recursiveGetChildById('rowsContainer') end)
+  if not ok or not rowsContainer then return end
 
   local sortedData = {}
   for name, damage in pairs(damageData) do
@@ -211,8 +211,8 @@ end
 
 function updateInterpolation()
   if not partyDamageWindow then return end
-  local rowsContainer = partyDamageWindow:recursiveGetChildById('rowsContainer')
-  if not rowsContainer then return end
+  local ok, rowsContainer = pcall(function() return partyDamageWindow:recursiveGetChildById('rowsContainer') end)
+  if not ok or not rowsContainer then return end
 
   for _, row in ipairs(rowsContainer:getChildren()) do
     local pb = row:recursiveGetChildById('progressBar')

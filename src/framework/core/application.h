@@ -76,6 +76,9 @@ public:
 
 protected:
     void registerLuaFunctions();
+#ifdef WITH_ULTRALIGHT
+    void registerLuaFunctionsUltralight();
+#endif
 
     std::string m_charset;
     std::string m_appName;

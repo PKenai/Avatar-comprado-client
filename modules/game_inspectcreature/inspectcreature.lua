@@ -86,7 +86,7 @@ end
 
 local function resolveItemId(itemId)
   -- Try ItemType(id):getClientId() first
-  -- ItemType must be a function â€” registerClass<ItemType>() creates a TABLE, not a function.
+  -- ItemType must be a function — registerClass<ItemType>() creates a TABLE, not a function.
   -- The C++ bindGlobalFunction OR the Lua fallback in things.lua replaces it.
   if type(ItemType) == "function" then
     local ok, itemType = pcall(ItemType, itemId)
@@ -95,7 +95,7 @@ local function resolveItemId(itemId)
       if cid and cid > 0 then return cid end
     end
   end
-  -- Fallback: pass raw ID to setItemId â€” validates against .dat directly
+  -- Fallback: pass raw ID to setItemId — validates against .dat directly
   return itemId
 end
 

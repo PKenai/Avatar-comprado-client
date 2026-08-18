@@ -50,6 +50,14 @@
 #include <framework/sound/soundmanager.h>
 #endif
 
+#ifdef WITH_ULTRALIGHT
+#include <framework/graphics/ultralightmanager.h>
+#endif
+
+#ifdef WITH_ULTRALIGHT
+#include <framework/graphics/ultralightmanager.h>
+#endif
+
 GraphicalApplication g_app;
 
 void GraphicalApplication::init(std::vector<std::string>& args)
@@ -408,6 +416,7 @@ void GraphicalApplication::pollGraphics()
     ticks_t start = stdext::millis();
     g_graphicsDispatcher.poll();
     g_text.poll();
+
     if (m_windowPollTimer.elapsed_millis() > 10) {
         g_window.poll();
         m_windowPollTimer.restart();

@@ -143,7 +143,7 @@ function loadProfileIntoUI()
   local p = getProfile(currentCharacter)
 
   -- pocao selecionada. O id usado em todo o helper e o CLIENT id (CID do
-  -- DAT) â€” e o id que o client recebe do servidor (item:getId()) e o que o
+  -- DAT) — e o id que o client recebe do servidor (item:getId()) e o que o
   -- servidor espera no useInventoryItem (getItemIdByClientId). Perfis antigos
   -- salvaram o id do servidor (7618 etc.); converte aqui.
   hpItemId = SERVER_TO_CLIENT[tonumber(p.hpItemId)] or tonumber(p.hpItemId) or 0
@@ -264,7 +264,7 @@ end
 -- -----------------------------------------------------------------------------
 -- usa a pocao do slot (kind). O id guardado e o CLIENT id (CID do DAT).
 -- 1) Se achar o item REAL numa mochila aberta, usa pela posicao real
---    (g_game.use â€” fluxo onUse de clicar com botao direito -> Usar).
+--    (g_game.use — fluxo onUse de clicar com botao direito -> Usar).
 -- 2) Se nao achar (mochila fechada), usa pelo id via useInventoryItem: o
 --    servidor trata como hotkey e procura a pocao em QUALQUER mochila
 --    (busca profunda, independente de estar aberta ou fechada).
@@ -296,7 +296,7 @@ local function usePotion(kind)
     end
   end
 
-  -- nao achou em mochila aberta: usa pelo id (hotkey do servidor â€” acha em
+  -- nao achou em mochila aberta: usa pelo id (hotkey do servidor — acha em
   -- qualquer mochila, aberta ou fechada)
   g_game.useInventoryItem(itemId)
   return true

@@ -299,7 +299,7 @@ function onManaChange(localPlayer, mana, maxMana)
 end
 
 function onSoulChange(localPlayer, soul)
-  --setSkillValue('soul', soul), tira soul da vis√£o.
+  --setSkillValue('soul', soul), tira soul da vis„o.
 end
 
 function onFreeCapacityChange(localPlayer, freeCapacity)

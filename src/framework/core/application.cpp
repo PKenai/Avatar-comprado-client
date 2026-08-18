@@ -42,6 +42,10 @@
 #include <framework/net/connection.h>
 #include <framework/proxy/proxy.h>
 
+#ifdef WITH_ULTRALIGHT
+#include <framework/graphics/ultralightmanager.h>
+#endif
+
 void exitSignalHandler(int sig)
 {
     static bool signaled = false;
@@ -103,6 +107,10 @@ void Application::init(std::vector<std::string>& args)
     // initialize lua
     g_lua.init();
     registerLuaFunctions();
+#ifdef WITH_ULTRALIGHT
+    // register Ultralight Lua bindings
+    registerLuaFunctionsUltralight();
+#endif
 
     // initalize proxy
     g_proxy.init();
@@ -128,6 +136,11 @@ void Application::deinit()
 
 void Application::terminate()
 {
+#ifdef WITH_ULTRALIGHT
+    // terminate Ultralight manager
+    g_ultralightManager.terminate();
+#endif
+
     // terminate network
     Connection::terminate();
 
@@ -152,6 +165,8 @@ void Application::terminate()
 void Application::poll()
 {
     Connection::poll();
+
+
 
     g_dispatcher.poll();
 

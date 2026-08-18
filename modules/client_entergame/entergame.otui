@@ -185,14 +185,14 @@ EnterGameWindow
     anchors.top: prev.bottom
     margin: 2 0 0 8
 
-  -- Botões alinhados com 4px de espaço entre eles:
+  -- Bot�es alinhados com 4px de espa�o entre eles:
   -- Larguras: 90 + 100 + 90 = 280px
-  -- Gaps: 2 × 4 = 8px
+  -- Gaps: 2 � 4 = 8px
   -- Total: 288px
   -- Margem esquerda/direita: (480 - 288) / 2 = 96px
-  -- Ok: left=96, width=90 → right=186
-  -- Criar Conta: left=190, width=100 → right=290
-  -- Broadcasts: left=294, width=90 → right=384
+  -- Ok: left=96, width=90 -> right=186
+  -- Criar Conta: left=190, width=100 -> right=290
+  -- Broadcasts: left=294, width=90 -> right=384
 
   EnterGameButton
     id: ent

@@ -32,7 +32,7 @@ function cleanup()
   pickups = {}
 end
 
--- ─── Map coordinate to screen position ─────────────────────────────────
+-- --- Map coordinate to screen position ---------------------------------
 
 function tileToScreen(tileX, tileY, tileZ)
   local mapPanel = modules.game_interface.getMapPanel()
@@ -62,7 +62,7 @@ function tileToScreen(tileX, tileY, tileZ)
   return screenX, screenY
 end
 
--- ─── Inventory slot screen position ────────────────────────────────────
+-- --- Inventory slot screen position ------------------------------------
 
 function getInventorySlotScreen(slot)
   -- Try module path first, fall back to raw global (works across sandbox variants)
@@ -79,13 +79,13 @@ function getInventorySlotScreen(slot)
   return rect.x + rect.width / 2, rect.y + rect.height / 2
 end
 
--- ─── Easing function (quadratic ease-out) ──────────────────────────────
+-- --- Easing function (quadratic ease-out) ------------------------------
 
 function easeOutQuad(t)
   return t * (2 - t)
 end
 
--- ─── Animation update ──────────────────────────────────────────────────
+-- --- Animation update --------------------------------------------------
 
 function updateFly(pickup)
   if not pickup.widget then return end
@@ -134,7 +134,7 @@ function updateFly(pickup)
   end, 1000 / 60)  -- ~60fps
 end
 
--- ─── Main event handler ────────────────────────────────────────────────
+-- --- Main event handler ------------------------------------------------
 
 function onItemPickup(itemId, fromX, fromY, fromZ, toType, toSlot, containerId)
 

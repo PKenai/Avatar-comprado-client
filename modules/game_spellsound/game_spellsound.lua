@@ -7,15 +7,15 @@
 --   quando a magia casta de verdade e entra em cooldown.
 --
 --   -> Magia entrou em cooldown -> SOM.
---   -> Magia N√ÉO castou (cooldown ativo, mana, n√≠vel, sem alvo) -> nada.
+--   -> Magia N√O castou (cooldown ativo, mana, nÌvel, sem alvo) -> nada.
 --   -> Clicou mas falhou -> nada.
 --
--- O som N√ÉO toca no clique do bot√£o e N√ÉO usa o eco de fala (mode 44),
+-- O som N√O toca no clique do bot„o e N√O usa o eco de fala (mode 44),
 -- porque este servidor ecoa o nome mesmo quando o cast falha.
 --
 -- As tentativas locais ficam num MAPA (nome -> tempo) para casar o id do
--- cooldown recebido com a magia que acabamos de tentar lan√ßar. Tentativas
--- expiram sozinhas ap√≥s CAST_CONFIRM_MS.
+-- cooldown recebido com a magia que acabamos de tentar lanÁar. Tentativas
+-- expiram sozinhas apÛs CAST_CONFIRM_MS.
 
 local SOUNDS_DIR = '/data/sounds'
 local CAST_CONFIRM_MS = 2500   -- janela p/ o servidor confirmar o cooldown
@@ -31,17 +31,17 @@ local recentCasts = {}   -- nome normalizado -> { name = original, time = ms }
 local lastPlayedName = ''
 local lastPlayedTime = 0
 
--- normaliza um nome para compara√ß√£o (min√∫sculas, sem espa√ßos/pontua√ß√£o/acentos)
+-- normaliza um nome para comparaÁ„o (min˙sculas, sem espaÁos/pontuaÁ„o/acentos)
 local function normalizeName(name)
   if not name then return '' end
   name = name:lower()
-  name = name:gsub('[√†√°√¢√£√§√•]', 'a'):gsub('[√®√©√™√´]', 'e'):gsub('[√¨√≠√Æ√Ø]', 'i')
-  name = name:gsub('[√≤√≥√¥√µ√∂]', 'o'):gsub('[√π√∫√ª√º]', 'u'):gsub('[√ß]', 'c')
+  name = name:gsub('[‡·‚„‰Â]', 'a'):gsub('[ËÈÍÎ]', 'e'):gsub('[ÏÌÓÔ]', 'i')
+  name = name:gsub('[ÚÛÙıˆ]', 'o'):gsub('[˘˙˚¸]', 'u'):gsub('[Á]', 'c')
   name = name:gsub('[^%a%d]', '')
   return name
 end
 
--- varre recursivamente data/sounds atr√°s de arquivos de √°udio (.ogg)
+-- varre recursivamente data/sounds atr·s de arquivos de ·udio (.ogg)
 local function scanSounds(dir)
   if not g_resources.directoryExists(dir) then return end
   local entries = g_resources.listDirectoryFiles(dir, true)
@@ -70,7 +70,7 @@ local function getVolume()
   return math.max(0, math.min(100, v))
 end
 
--- toca o som de uma magia pelo nome (com dedup r√°pido para n√£o tocar 2x)
+-- toca o som de uma magia pelo nome (com dedup r·pido para n„o tocar 2x)
 local function playSpellSound(spellName)
   if not g_sounds or not g_sounds.isAudioEnabled() then return end
   if not isEnabled() then return end
@@ -81,7 +81,7 @@ local function playSpellSound(spellName)
   local volume = getVolume()
   if volume <= 0 then return end
 
-  -- dedup: mesma magia tocada h√° menos de 600ms (evita duplicar)
+  -- dedup: mesma magia tocada h· menos de 600ms (evita duplicar)
   local norm = normalizeName(spellName)
   if norm == lastPlayedName and g_clock.millis() - lastPlayedTime < 600 then return end
 
@@ -99,7 +99,7 @@ local function spellNameById(id)
   return list[id].name
 end
 
--- a magia est√° em cooldown agora? (consulta o estado que as folds mant√™m)
+-- a magia est· em cooldown agora? (consulta o estado que as folds mantÍm)
 local function isSpellOnCooldown(name)
   local folds = modules.game_folds
   if not folds or not folds.spellInfos or not folds.infos then return false end
@@ -127,7 +127,7 @@ local function parseFoldCooldowns(text)
   return result
 end
 
--- remove tentativas que j√° expiraram (mant√©m o mapa pequeno)
+-- remove tentativas que j· expiraram (mantÈm o mapa pequeno)
 local function pruneCasts()
   local t = g_clock.millis()
   for norm, entry in pairs(recentCasts) do
@@ -137,7 +137,7 @@ local function pruneCasts()
   end
 end
 
--- CONFIRMA√á√ÉO DE COOLDOWN: o servidor s√≥ envia #m# com delay > 0 quando a
+-- CONFIRMA«√O DE COOLDOWN: o servidor sÛ envia #m# com delay > 0 quando a
 -- magia CASTA e ENTRA EM COOLDOWN. Casou com uma tentativa recente -> som.
 local function onTextMessage(mode, text)
   if mode ~= FOLD_MSG_MODE then return end
@@ -168,8 +168,8 @@ local function onTextMessage(mode, text)
   end
 end
 
--- intercepta o cast local SEM tocar som: s√≥ registra a tentativa quando a
--- magia tem som E n√£o est√° em cooldown (clicar em cooldown nunca soa).
+-- intercepta o cast local SEM tocar som: sÛ registra a tentativa quando a
+-- magia tem som E n„o est· em cooldown (clicar em cooldown nunca soa).
 local function onLocalTalk(text, ...)
   if type(text) == 'string' then
     local norm = normalizeName(text)
@@ -187,7 +187,7 @@ function init()
 
   scanSounds(SOUNDS_DIR)
 
-  -- pr√©-carrega os sons pequenos para tocar sem delay
+  -- prÈ-carrega os sons pequenos para tocar sem delay
   if g_sounds and g_sounds.preload then
     for _, path in pairs(sounds) do
       pcall(function() g_sounds.preload(path) end)
@@ -202,7 +202,7 @@ function init()
 
   connect(g_game, { onTextMessage = onTextMessage })
 
-  -- painel de op√ß√µes (volume / ativar) dentro da janela de Options
+  -- painel de opÁıes (volume / ativar) dentro da janela de Options
   if modules.client_options and modules.client_options.addTab then
     optionsPanel = g_ui.loadUI('spellsound')
     if optionsPanel then
@@ -230,6 +230,6 @@ function terminate()
   for norm in pairs(recentCasts) do recentCasts[norm] = nil end
 
   disconnect(g_game, { onTextMessage = onTextMessage })
-  -- o painel de op√ß√µes √© mantido vivo para n√£o quebrar a janela de Options
-  -- se o m√≥dulo for recarregado (o tab do client_options o referencia)
+  -- o painel de opÁıes È mantido vivo para n„o quebrar a janela de Options
+  -- se o mÛdulo for recarregado (o tab do client_options o referencia)
 end

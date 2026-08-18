@@ -1,5 +1,5 @@
 -- ============================================================================
--- MOMO POUCH (client) â€” sistema de coleta automatica personalizada
+-- MOMO POUCH (client) — sistema de coleta automatica personalizada
 -- ----------------------------------------------------------------------------
 -- * CTRL + botao direito no Momo Pouch (clientId 17437) -> janela de config (on/off)
 -- * CTRL + botao direito em QUALQUER item -> Add/Remove da lista do pouch
@@ -7,7 +7,7 @@
 -- ============================================================================
 
 -- ATENCAO: o server envia o CLIENT id (clientId do OTB). O Momo Pouch tem
--- server id 18435, mas clientId 17437 â€” as checagens do client usam 17437.
+-- server id 18435, mas clientId 17437 — as checagens do client usam 17437.
 local MOMO_ITEM_ID = 17437
 local MOMO_OPCODE = 212
 local MOMO_MENU_CATEGORY = 'Momo Pouch'

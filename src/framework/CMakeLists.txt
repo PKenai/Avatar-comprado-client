@@ -40,6 +40,10 @@ set(framework_SOURCES ${framework_SOURCES}
     ${CMAKE_CURRENT_LIST_DIR}/util/stats.cpp
     ${CMAKE_CURRENT_LIST_DIR}/util/stats.h
 
+    # ultralight (conditional)
+    # These files are only compiled when WITH_ULTRALIGHT is defined
+    # They are excluded from CMake builds by default for cross-platform compatibility
+
     # stdext
     ${CMAKE_CURRENT_LIST_DIR}/stdext/any.h
     ${CMAKE_CURRENT_LIST_DIR}/stdext/boolean.h

@@ -12,6 +12,6 @@ servers = {
 }
 
 --[[
-  *Cada server novo adicionado, deve ser adicionada a nova porta, sistema � configurado para suportar um n�mero infinito de servidores.
+  *Cada server novo adicionado, deve ser adicionada a nova porta, sistema ? configurado para suportar um n?mero infinito de servidores.
   *A lista obedece a ordem correta, caso a port seja 0, o servidor nega a entrada.
 ]]--

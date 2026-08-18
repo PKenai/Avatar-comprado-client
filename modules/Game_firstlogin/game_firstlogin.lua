@@ -1,6 +1,6 @@
 -- modules/Game_firstlogin/game_firstlogin.lua
 -- Tutorial interativo exibido apenas no primeiro login de cada personagem.
--- Tamb�m pode ser aberto a qualquer momento com a talkaction: !opentuto
+-- Tamb?m pode ser aberto a qualquer momento com a talkaction: !opentuto
 
 moduleActive   = false
 tutorialActive = false
@@ -36,18 +36,18 @@ local FOLDS_GRACE = 8
 
 
 local TEXTS = {
-  heal      = "Esta � a sua dobra de cura. Ela � essencial para te manter vivo neste mundo.",
-  hotkeyMenu = "Clique com o bot�o direito na imagem da dobra e selecione 'Add Hotkey'.",
+  heal      = "Esta ? a sua dobra de cura. Ela ? essencial para te manter vivo neste mundo.",
+  hotkeyMenu = "Clique com o bot?o direito na imagem da dobra e selecione 'Add Hotkey'.",
   addKey    = "Escolha uma tecla do seu teclado para armazenar essa dobra e pressione em ADD.",
 }
 
 local IMAGES = {
-  { text = 'Selecione o seu alvo clicando com o bot�o direito nele.' },
+  { text = 'Selecione o seu alvo clicando com o bot?o direito nele.' },
   { text = 'Use suas dobras para se sair melhor no combate contra criaturas selvagens.' },
-  { text = 'Deposite seus itens no seu ba�. Nenhum jogador al�m de voc� poder� retirar seus itens.' },
-  { text = 'Explore o mundo utilizando o minimapa. Todas as �reas j� descobertas permanecer�o vis�veis. Pressione CTRL + M ou utilize o menu superior para abri-lo.' },
-  { text = 'Cada dobrador possui seu elemento exibido ao lado do nome. Preste aten��o para n�o se confundir.' },
-  { text = 'Todo o restante das funcionalidades importantes poder� ser encontrado no menu superior do client.' },
+  { text = 'Deposite seus itens no seu ba?. Nenhum jogador al?m de voc? poder? retirar seus itens.' },
+  { text = 'Explore o mundo utilizando o minimapa. Todas as ?reas j? descobertas permanecer?o vis?veis. Pressione CTRL + M ou utilize o menu superior para abri-lo.' },
+  { text = 'Cada dobrador possui seu elemento exibido ao lado do nome. Preste aten??o para n?o se confundir.' },
+  { text = 'Todo o restante das funcionalidades importantes poder? ser encontrado no menu superior do client.' },
 }
 
 -- Garante que o widget fica 100% opaco (neutraliza qualquer fade preso)
@@ -67,7 +67,7 @@ end
 -- (coordenadas em relacao ao rootWidget). O layout por ancora alinha
 -- os filhos usando os retangulos absolutos dos irmaos, e o itemfly
 -- (que funciona) usa getRect() direto em widgets aninhados. Entao
--- NAO somamos os pais � isso dobraria as coordenadas e a seta
+-- NAO somamos os pais ? isso dobraria as coordenadas e a seta
 -- ficaria fora do lugar.
 local function rootPos(w)
   local p = w:getPosition()

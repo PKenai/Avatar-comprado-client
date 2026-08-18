@@ -66,7 +66,7 @@ function init()
   lblQuantity = quantityView:getChildById('lblQuantity')
   lblTotalTime = quantityView:getChildById('lblTotalTime')
 
-  subtitle:setText("Selecione a poÃ§Ã£o que deseja sintetizar:")
+  subtitle:setText("Selecione a poção que deseja sintetizar:")
 
   quantityScrollBar.onValueChange = PotionCraft.onQuantityChange
 
@@ -134,7 +134,7 @@ function PotionCraft.onQuantityChange(scrollbar, value)
   if not selectedPotion then return end
   lblQuantity:setText("Quantidade a produzir: " .. value)
   local totalSeconds = value * selectedPotion.timeSec
-  lblTotalTime:setText("Tempo Total de ProduÃ§Ã£o: " .. formatTime(totalSeconds))
+  lblTotalTime:setText("Tempo Total de Produção: " .. formatTime(totalSeconds))
 end
 
 function PotionCraft.confirmCraft()

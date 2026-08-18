@@ -1,17 +1,17 @@
 -- ============================================================================
 --  game_containers - janelas de containers (embutido no client)
---  Inclui a "lupa" de busca no dep√≥sito (opcode 233 <-> servidor):
---    * bot√£o de lupinha na barra do container (so aparece em dep√≥sitos)
+--  Inclui a "lupa" de busca no depÛsito (opcode 233 <-> servidor):
+--    * bot„o de lupinha na barra do container (so aparece em depÛsitos)
 --    * clique -> mini box (campo de texto + Limpar), com foco automatico
 --    * Enter/busca -> drop-down compacto com os itens que batem
 --    * clique num resultado -> server move o item pra mochila (take)
 --    * Esc ou clique na lupinha de novo -> fecha
 -- ============================================================================
 
--- ===================== Depot Search (nativo, sem m√≥dulo extra) =============
+-- ===================== Depot Search (nativo, sem mÛdulo extra) =============
 local DEPOT_SEARCH_OPCODE = 233
 
--- IDs de CLIENT dos containers de dep√≥sito (o server manda o clientId do OTB):
+-- IDs de CLIENT dos containers de depÛsito (o server manda o clientId do OTB):
 -- locker = 3497 (e variantes), depot chest = 3502, reward mailbox = 18358.
 local DEPOT_IDS = { [3497] = true, [3498] = true, [3499] = true, [3500] = true, [3501] = true, [3502] = true, [18358] = true }
 
@@ -381,7 +381,7 @@ end
 -- slots conforme itens entram/saem, ate 5000 slots (protocolo agora em U16).
 -- ---------------------------------------------------------------------------
 -- ATENCAO: o server envia o CLIENT id do item (clientId do OTB). O Momo Pouch
--- tem server id 18435, mas clientId 17437 ‚Äî as checagens do client usam 17437.
+-- tem server id 18435, mas clientId 17437 ó as checagens do client usam 17437.
 local DYNAMIC_CONTAINER_IDS = { [17437] = true, [18358] = true }
 
 local function isDynamicSlotsContainer(container)

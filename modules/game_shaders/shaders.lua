@@ -123,13 +123,13 @@ function onMapShader(protocol, opcode, buffer)
     if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
       modules.game_skyclouds.setEnabled(true)
     else
-      g_logger.warning("Sky Clouds module not loaded â€” ignoring 'sky_clouds_on'.")
+      g_logger.warning("Sky Clouds module not loaded — ignoring 'sky_clouds_on'.")
     end
   elseif buffer == "sky_clouds_off" then
     if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
       modules.game_skyclouds.setEnabled(false)
     else
-      g_logger.warning("Sky Clouds module not loaded â€” ignoring 'sky_clouds_off'.")
+      g_logger.warning("Sky Clouds module not loaded — ignoring 'sky_clouds_off'.")
     end
   elseif buffer == "sky_clouds_refresh" then
     if modules.game_skyclouds and modules.game_skyclouds.refresh then

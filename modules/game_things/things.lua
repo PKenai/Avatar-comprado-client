@@ -1,8 +1,8 @@
 -- =============================================================================
 -- DAT / SPR features
--- Ligue SOMENTE se o seu .dat foi exportado com essas opÃ§Ãµes (Object Builder).
--- Se o DAT for clÃ¡ssico 8.6 SEM essas flags, deixe false â€” senÃ£o o load corrompe.
--- Frame Groups e Improved Animations sÃ£o do formato do .DAT (nÃ£o do .SPR em si).
+-- Ligue SOMENTE se o seu .dat foi exportado com essas opções (Object Builder).
+-- Se o DAT for clássico 8.6 SEM essas flags, deixe false — senão o load corrompe.
+-- Frame Groups e Improved Animations são do formato do .DAT (não do .SPR em si).
 -- =============================================================================
 USE_ENHANCED_ANIMATIONS = true -- Improved Animations (Animator no DAT)
 USE_FRAME_GROUPS = true        -- Frame Groups / Idle Animations (creatures)
@@ -39,7 +39,7 @@ function load()
   -- which broke the login/game handshake against the TFS 0.4 server.
   -- >= 770
   g_game.enableFeature(GameLooktypeU16)
-  -- Raava/Avatar SEMPRE envia statementId (U32) em AddCreatureSpeak â€” obrigatÃ³rio.
+  -- Raava/Avatar SEMPRE envia statementId (U32) em AddCreatureSpeak — obrigatório.
   g_game.enableFeature(GameMessageStatements)
   g_game.enableFeature(GameLoginPacketEncryption)
   -- >= 780
@@ -104,7 +104,7 @@ function load()
     -- holds the login until everything is loaded.
   end
 
-  -- Global helper: ItemType(id) â€” SakkenOT pattern. Without OTB the lookup
+  -- Global helper: ItemType(id) — SakkenOT pattern. Without OTB the lookup
   -- returns null (handled gracefully via isNull()), but the C++ binding
   -- g_lua.bindGlobalFunction("ItemType", ...) stays in the source for future use.
   -- Prevent registerClass<ItemType>() table from shadowing the function.

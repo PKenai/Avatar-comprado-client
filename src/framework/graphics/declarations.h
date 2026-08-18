@@ -29,6 +29,10 @@
 class Texture;
 class TextureManager;
 class Image;
+#ifdef WITH_ULTRALIGHT
+class UIWebView;
+typedef stdext::shared_object_ptr<UIWebView> UIWebViewPtr;
+#endif
 class AnimatedTexture;
 class BitmapFont;
 class CachedText;

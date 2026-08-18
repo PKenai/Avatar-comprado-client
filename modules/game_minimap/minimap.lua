@@ -112,7 +112,7 @@ function init()
   end)
   g_keyboard.bindKeyDown('Ctrl+Shift+M', toggleFullMap)
 
-  -- Hook zoom change → hide cross in tactical mode (zoom >= 3)
+  -- Hook zoom change -> hide cross in tactical mode (zoom >= 3)
   local origOnZoomChange = minimapWidget.onZoomChange
   minimapWidget.onZoomChange = function(self, zoom, oldZoom)
     if origOnZoomChange then origOnZoomChange(self, zoom, oldZoom) end
@@ -281,7 +281,7 @@ function updateCameraPosition()
     posCamera = pos
   end
 
-  -- Tactical mode (zoom >= 3) → hide cross, outfit does the job
+  -- Tactical mode (zoom >= 3) -> hide cross, outfit does the job
   local tactical = minimapWidget:getZoom() >= 3
   local function syncCross(p)
     if tactical then

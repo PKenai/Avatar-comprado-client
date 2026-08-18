@@ -1,7 +1,7 @@
--- ═══════════════════════════════════════════════════════════════
--- Agriculture System (Farm) — Client Module
+-- ---------------------------------------------------------------
+-- Agriculture System (Farm) � Client Module
 -- Protocolo de strings sem json
--- ═══════════════════════════════════════════════════════════════
+-- ---------------------------------------------------------------
 
 local opcode = 135
 
@@ -21,7 +21,7 @@ local allowOpen         = false
 
 modules.game_creaturemanager = {}
 
--- ─── Helpers ──────────────────────────────────────────────────
+-- --- Helpers --------------------------------------------------
 
 local function split(str, sep)
   local t = {}
@@ -65,7 +65,7 @@ local function setItemWidget(widget, id)
   widget:setItemId(cid > 0 and cid or id)
 end
 
--- ─── Parsing ──────────────────────────────────────────────────
+-- --- Parsing --------------------------------------------------
 --
 -- myPlants: id~baseName~customName~stage~maxStage~lastWater~cooldown~stageClientId~harvestName;...
 -- storePlants: baseName~seedClientId~price~harvestName;...
@@ -109,7 +109,7 @@ local function parseStoreList(raw)
   return list
 end
 
--- ─── Init / Terminate ─────────────────────────────────────────
+-- --- Init / Terminate -----------------------------------------
 
 function init()
   g_ui.importStyle('creaturemanager')
@@ -146,7 +146,7 @@ function offline()
   if storeWindow   then storeWindow:destroy()   storeWindow   = nil end
 end
 
--- ─── Show / Hide ──────────────────────────────────────────────
+-- --- Show / Hide ----------------------------------------------
 
 function show()
   if not allowOpen then return end
@@ -213,7 +213,7 @@ function hideAll()
   if storeWindow then storeWindow:hide() end
 end
 
--- ─── Opcode Handler ───────────────────────────────────────────
+-- --- Opcode Handler -------------------------------------------
 
 function onExtendedOpcode(protocol, op, buffer)
   if op ~= opcode then return end
@@ -267,7 +267,7 @@ function onExtendedOpcode(protocol, op, buffer)
   end
 end
 
--- ─── Manager Grid ─────────────────────────────────────────────
+-- --- Manager Grid ---------------------------------------------
 
 function populateManagerGrid()
   if not managerWindow then return end
@@ -386,7 +386,7 @@ function releaseSelected()
   sendToServer("release|" .. selectedMyPlant.id)
 end
 
--- ─── Store Grid ───────────────────────────────────────────────
+-- --- Store Grid -----------------------------------------------
 
 function populateStoreGrid()
   if not storeWindow then return end
@@ -469,7 +469,7 @@ function buySelected()
   sendToServer("buy|" .. selectedStorePlant.baseName)
 end
 
--- Expõe funções públicas para o OTUI
+-- Exp�e fun��es p�blicas para o OTUI
 modules.game_creaturemanager.show                       = show
 modules.game_creaturemanager.hide                       = hide
 modules.game_creaturemanager.showStore                  = showStore

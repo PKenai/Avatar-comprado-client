@@ -12,7 +12,7 @@ end
 
 function UIMiniWindow:open(dontSave)
   if self:isExplicitlyVisible() then return end
-  self:setVisible(true)  -- goes through UIWindow.setVisible → fade-in
+  self:setVisible(true)  -- goes through UIWindow.setVisible -> fade-in
   if not dontSave then
     self:setSettings({closed = false})
   end
@@ -25,7 +25,7 @@ function UIMiniWindow:close(dontSave)
     self:setSettings({closed = true})
   end
   signalcall(self.onClose, self)
-  self:setVisible(false)  -- goes through UIWindow.setVisible → fade-out
+  self:setVisible(false)  -- goes through UIWindow.setVisible -> fade-out
 end
 
 function UIMiniWindow:minimize(dontSave)

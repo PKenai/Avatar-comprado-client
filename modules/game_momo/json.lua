@@ -386,6 +386,73 @@ parse = function(str, idx)
 end
 
 
+-- UTF-8 to CP1252 converter for bitmap font rendering
+local CP1252_MAP = {
+  [0x20AC]=0x80, [0x201A]=0x82, [0x0192]=0x83, [0x201E]=0x84,
+  [0x2026]=0x85, [0x2020]=0x86, [0x2021]=0x87, [0x02C6]=0x88,
+  [0x2030]=0x89, [0x0160]=0x8A, [0x2039]=0x8B, [0x0152]=0x8C,
+  [0x2018]=0x91, [0x2019]=0x92, [0x201C]=0x93, [0x201D]=0x94,
+  [0x2022]=0x95, [0x2013]=0x96, [0x2014]=0x97, [0x02DC]=0x98,
+  [0x2122]=0x99, [0x0161]=0x9A, [0x203A]=0x9B, [0x0153]=0x9C,
+  [0x017D]=0x9E, [0x0178]=0x9F,
+}
+
+local function utf8_to_cp1252(s)
+  local out = {}
+  local i = 1
+  local len = #s
+  while i <= len do
+    local b = s:byte(i)
+    if b < 0x80 then
+      out[#out+1] = string.char(b)
+      i = i + 1
+    elseif b >= 0xC0 and b < 0xE0 then
+      local b2 = s:byte(i+1) or 0
+      local cp = (b - 0xC0) * 64 + (b2 - 0x80)
+      if cp >= 0xA0 then
+        out[#out+1] = string.char(cp)
+      elseif CP1252_MAP[cp] then
+        out[#out+1] = string.char(CP1252_MAP[cp])
+      else
+        out[#out+1] = "?"
+      end
+      i = i + 2
+    elseif b >= 0xE0 and b < 0xF0 then
+      local b2 = s:byte(i+1) or 0
+      local b3 = s:byte(i+2) or 0
+      local cp = (b - 0xE0) * 4096 + (b2 - 0x80) * 64 + (b3 - 0x80)
+      if cp >= 0xA0 and cp <= 0xFF then
+        out[#out+1] = string.char(cp)
+      elseif CP1252_MAP[cp] then
+        out[#out+1] = string.char(CP1252_MAP[cp])
+      else
+        out[#out+1] = "?"
+      end
+      i = i + 3
+    elseif b >= 0xF0 then
+      out[#out+1] = "?"
+      if b < 0xF8 then i = i + 4
+      elseif b < 0xFC then i = i + 5
+      else i = i + 6 end
+    else
+      out[#out+1] = "?"
+      i = i + 1
+    end
+  end
+  return table.concat(out)
+end
+
+local function deep_convert(val)
+  if type(val) == "string" then
+    return utf8_to_cp1252(val)
+  elseif type(val) == "table" then
+    for k, v in pairs(val) do
+      val[k] = deep_convert(v)
+    end
+  end
+  return val
+end
+
 function json.decode(str)
   if type(str) ~= "string" then
     error("expected argument of type string, got " .. type(str))
@@ -395,5 +462,5 @@ function json.decode(str)
   if idx <= #str then
     decode_error(str, idx, "trailing garbage")
   end
-  return res
+  return deep_convert(res)
 end
