@@ -231,17 +231,22 @@ void DrawQueueItemNormalMapped::draw()
     normalMapShader->setSunDirection(lightData.sunDirX, lightData.sunDirY, lightData.sunDirZ);
     normalMapShader->setSunIntensity(lightData.sunIntensity);
 
-    // Bind normal map as second texture (u_Tex1 = texture unit 1)
-    m_normalMap->update();
+    // Bind normal map as second texture (u_Tex1 = texture unit 1).
+    // IMPORTANT: switch to GL_TEXTURE1 BEFORE calling update() so that
+    // Texture::update()'s internal glBindTexture() targets unit 1 instead
+    // of clobbering whatever is on GL_TEXTURE0 (the atlas / sprite texture).
     glActiveTexture(GL_TEXTURE1);
+    m_normalMap->update();
     glBindTexture(GL_TEXTURE_2D, m_normalMap->getId());
     glActiveTexture(GL_TEXTURE0);
 
     // Draw the textured rect with the normal map shader
     g_painter->drawTexturedRect(m_dest, m_texture, m_src);
 
-    // Reset shader
+    // Reset shader and invalidate painter texture cache so the next
+    // drawCache() or drawTexturedRect() rebinds the correct texture.
     g_painter->resetShaderProgram();
+    g_painter->resetTexture();
 }
 
 void DrawQueueItemNormalMapped::draw(const Point& pos)

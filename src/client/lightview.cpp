@@ -76,9 +76,15 @@ void LightView::draw() // render thread
         }
     }
 
+    // Upload the light data on a free texture unit (GL_TEXTURE7) to
+    // avoid clobbering GL_TEXTURE0 where the painter tracks the atlas/
+    // sprite texture.  This prevents the "cached texture ID vs actual
+    // GL binding" mismatch that causes random tile flicker.
+    glActiveTexture(GL_TEXTURE7);
     m_lightTexture->update();
     glBindTexture(GL_TEXTURE_2D, m_lightTexture->getId());
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_mapSize.width(), m_mapSize.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer.data());
+    glActiveTexture(GL_TEXTURE0);
 
     Point offset = m_src.topLeft();
     Size size = m_src.size();
@@ -88,6 +94,7 @@ void LightView::draw() // render thread
                          (float)size.width() / g_sprites.spriteSize(), (float)size.height() / g_sprites.spriteSize()));
 
     g_painter->resetColor();
+    g_painter->resetTexture();
     g_painter->setCompositionMode(Painter::CompositionMode_Multiply);
     g_painter->drawTextureCoords(coords, m_lightTexture);
     g_painter->resetCompositionMode();

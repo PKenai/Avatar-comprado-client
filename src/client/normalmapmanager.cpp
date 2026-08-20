@@ -20,10 +20,12 @@ NormalMapManager::NormalMapManager()
 
 void NormalMapManager::init()
 {
-    // Always enable normal mapping - it works with procedural flat normals
-    // even when no explicit normal map PNGs exist.
-    m_enabled = true;
-    g_logger.info("NormalMapManager: normal mapping system enabled");
+    // Normal mapping is disabled by default.  When enabled it overrides
+    // every sprite draw with a per-pixel lighting shader that bypasses
+    // the atlas cache (cache() returns false) and recalculates lighting
+    // each frame, causing visible tile flicker as point-lights shuffle.
+    m_enabled = false;
+    g_logger.info("NormalMapManager: normal mapping system disabled (flicker fix)");
 }
 
 void NormalMapManager::terminate()

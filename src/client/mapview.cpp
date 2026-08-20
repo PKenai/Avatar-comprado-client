@@ -55,9 +55,15 @@
 
 void FloorShadowView::draw()
 {
+    // Upload the shadow-mask data.  We bind the texture on GL_TEXTURE7
+    // (a free unit) so that the painter's GL_TEXTURE0 tracking is never
+    // touched — avoids the bug where the atlas texture gets overwritten
+    // and the painter skips the rebind on the next drawCache() call.
+    glActiveTexture(GL_TEXTURE7);
     m_texture->update();
     glBindTexture(GL_TEXTURE_2D, m_texture->getId());
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_mapSize.width(), m_mapSize.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, m_buffer.data());
+    glActiveTexture(GL_TEXTURE0);
 
     // the mask is aligned to the tile grid (2 texels per tile), so texture
     // coordinates are expressed in sub-tile units of the framebuffer
@@ -69,6 +75,7 @@ void FloorShadowView::draw()
                    RectF(offset.x / subTile, offset.y / subTile, size.width() / subTile, size.height() / subTile));
 
     g_painter->resetColor();
+    g_painter->resetTexture();
     g_painter->setColor(m_color);
     g_painter->drawTextureCoords(coords, m_texture);
     g_painter->resetColor();
