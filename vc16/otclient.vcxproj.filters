@@ -402,6 +402,9 @@
     <ClCompile Include="..\src\client\lightview.cpp">
       <Filter>Source Files\client</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\client\normalmapmanager.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\client\localplayer.cpp">
       <Filter>Source Files\client</Filter>
     </ClCompile>
@@ -957,6 +960,9 @@
       <Filter>Header Files\client</Filter>
     </ClInclude>
     <ClInclude Include="..\src\client\lightview.h">
+      <Filter>Header Files\client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\client\normalmapmanager.h">
       <Filter>Header Files\client</Filter>
     </ClInclude>
     <ClInclude Include="..\src\client\localplayer.h">

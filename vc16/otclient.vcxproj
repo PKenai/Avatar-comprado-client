@@ -444,6 +444,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_lib|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\client\normalmapmanager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OpenGL|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_lib|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\client\localplayer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='OpenGL|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_lib|Win32'">true</ExcludedFromBuild>
@@ -1060,6 +1065,7 @@
     <ClInclude Include="..\src\client\item.h" />
     <ClInclude Include="..\src\client\itemtype.h" />
     <ClInclude Include="..\src\client\lightview.h" />
+    <ClInclude Include="..\src\client\normalmapmanager.h" />
     <ClInclude Include="..\src\client\localplayer.h" />
     <ClInclude Include="..\src\client\luavaluecasts_client.h" />
     <ClInclude Include="..\src\client\map.h" />

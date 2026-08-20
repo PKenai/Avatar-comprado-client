@@ -80,3 +80,62 @@ Exiting application..
 Sistema de controle joystick iniciado
 [Notification] Os Repolhos Roubados: Nova missao: Recuperar os repolhos roubados!
 ERROR: unable to open file '/sounds/NPCS/Senhor dos repolhos/Inicio_quest.ogg': not found
+Sistema de controle joystick iniciado
+NormalMapManager: no normalmaps/ directory found, normal mapping disabled
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: no normalmaps/ directory found, normal mapping disabled
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: no normalmaps/ directory found, normal mapping disabled
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: no data/normalmaps/ directory found, normal mapping disabled
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: no data/normalmaps/ directory found, normal mapping disabled
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: no data/normalmaps/ directory found, normal mapping disabled
+Sistema de controle joystick iniciado
+NormalMapManager: no data/normalmaps/ directory found, normal mapping disabled
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+Exiting application..
+WARNING: attempt to destroy widget 'widget1763' two times
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: no data/normalmaps/ directory found, normal mapping disabled
+Exiting application..

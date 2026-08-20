@@ -5,11 +5,13 @@
 #include <framework/graphics/graphics.h>
 #include <framework/graphics/framebuffermanager.h>
 #include <framework/graphics/shadermanager.h>
+#include <framework/graphics/shaders/shaders.h>
 #include <framework/graphics/textrender.h>
 #include <framework/graphics/drawcache.h>
 #include <framework/graphics/image.h>
 #include <client/spritemanager.h>
 #include <client/outfit.h>
+#include <client/normalmapmanager.h>
 
 std::shared_ptr<DrawQueue> g_drawQueue;
 
@@ -176,6 +178,84 @@ void DrawQueueItemText::draw()
 void DrawQueueItemTextColored::draw()
 {
     g_text.drawColoredText(m_point, m_hash, m_colors, m_shadow);
+}
+
+void DrawQueueItemNormalMapped::draw()
+{
+    if (!m_texture || !m_normalMap) {
+        // Fallback: draw without normal mapping
+        g_painter->setColor(m_color);
+        g_painter->drawTexturedRect(m_dest, m_texture, m_src);
+        return;
+    }
+
+    // Get the normal mapping shader
+    static PainterShaderProgramPtr normalMapShader;
+    static bool loggedShaderCreated = false;
+    static bool loggedShaderFailed = false;
+    if (!normalMapShader) {
+        normalMapShader = PainterShaderProgram::create("normalMapShader",
+            glslNormalMapVertexShader, glslNormalMapFragmentShader);
+        if (normalMapShader && !loggedShaderCreated) {
+            g_logger.info("NormalMapShader: compiled successfully");
+            loggedShaderCreated = true;
+        }
+    }
+    if (!normalMapShader) {
+        if (!loggedShaderFailed) {
+            g_logger.warning("NormalMapShader: compilation FAILED, falling back to normal draw");
+            loggedShaderFailed = true;
+        }
+        g_painter->setColor(m_color);
+        g_painter->drawTexturedRect(m_dest, m_texture, m_src);
+        return;
+    }
+
+    // Get light data
+    NormalMapLightData& lightData = g_normalMaps.getLightData();
+
+    // Bind normal map shader
+    g_painter->setShaderProgram(normalMapShader.get());
+    g_painter->setColor(m_color);
+
+    // Set light uniforms
+    for (int i = 0; i < MAX_NORMAL_MAP_LIGHTS; ++i) {
+        if (i < lightData.lightCount) {
+            normalMapShader->setLightPos(i, lightData.lights[i].posX, lightData.lights[i].posY,
+                                         lightData.lights[i].radius, lightData.lights[i].intensity);
+        } else {
+            normalMapShader->setLightPos(i, 0, 0, 0, 0);
+        }
+    }
+    normalMapShader->setAmbientLight(lightData.ambientLight);
+    normalMapShader->setSunDirection(lightData.sunDirX, lightData.sunDirY, lightData.sunDirZ);
+    normalMapShader->setSunIntensity(lightData.sunIntensity);
+
+    // Bind normal map as second texture (u_Tex1 = texture unit 1)
+    m_normalMap->update();
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, m_normalMap->getId());
+    glActiveTexture(GL_TEXTURE0);
+
+    // Draw the textured rect with the normal map shader
+    g_painter->drawTexturedRect(m_dest, m_texture, m_src);
+
+    // Reset shader
+    g_painter->resetShaderProgram();
+}
+
+void DrawQueueItemNormalMapped::draw(const Point& pos)
+{
+    if (!m_texture || !m_normalMap) {
+        g_painter->resetColor();
+        g_painter->drawTexturedRect(Rect(pos, m_texture->getSize()), m_texture);
+        return;
+    }
+
+    // Same as draw() but with calculated position
+    Rect dest(pos, m_src.size());
+    m_dest = dest;
+    draw();
 }
 
 void::DrawQueueItemLine::draw()

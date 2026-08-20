@@ -51,6 +51,7 @@
 #include <algorithm>
 #include <cmath>
 #include <limits>
+#include "normalmapmanager.h"
 
 void FloorShadowView::draw()
 {
@@ -156,6 +157,30 @@ void MapView::drawMapBackground(const Rect& rect, const TilePtr& crosshairTile) 
             m_lightTexture = TexturePtr(new Texture(m_drawDimension, false, true));
         m_lightView = std::make_unique<LightView>(m_lightTexture, m_drawDimension, rect, srcRect, ambientLight.color,
                                                   std::max<int>(m_minimumAmbientLight * 255, ambientLight.intensity));
+
+        // Populate normal map light data from the same light sources
+        if (g_normalMaps.isEnabled()) {
+            g_normalMaps.resetLights();
+
+            // Sun comes from upper-left at a horizontal angle
+            // for visible directional shadows on flat-normal sprites
+            g_normalMaps.setSunLight(0.8f, -0.6f, 0.5f, 1.0f);
+
+            // Add the local player's light as a point light (torch effect)
+            auto player = g_game.getLocalPlayer();
+            if (player) {
+                Light playerLight = player->getLight();
+                if (playerLight.intensity > 0) {
+                    Point playerScreenPos = transformPositionTo2D(player->getPrewalkingPosition(), cameraPosition);
+                    Color lightColor = Color::from8bit(playerLight.color);
+                    float radius = playerLight.intensity * g_sprites.spriteSize() * 0.5f;
+                    g_normalMaps.addLight(playerScreenPos.x + g_sprites.spriteSize() / 2,
+                                          playerScreenPos.y + g_sprites.spriteSize() / 2,
+                                          radius, playerLight.intensity / 255.0f,
+                                          lightColor.rF(), lightColor.gF(), lightColor.bF());
+                }
+            }
+        }
     }
 
     for (int z = m_cachedLastVisibleFloor; z >= m_cachedFirstFadingFloor; --z) {

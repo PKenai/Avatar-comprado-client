@@ -53,6 +53,7 @@ class Town;
 class CreatureType;
 class Spawn;
 class TileBlock;
+class NormalMapManager;
 
 typedef stdext::shared_object_ptr<MapView> MapViewPtr;
 typedef stdext::shared_object_ptr<LightView> LightViewPtr;

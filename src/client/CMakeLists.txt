@@ -35,6 +35,8 @@ set(client_SOURCES ${client_SOURCES}
     ${CMAKE_CURRENT_LIST_DIR}/minimap.h
     ${CMAKE_CURRENT_LIST_DIR}/lightview.cpp
     ${CMAKE_CURRENT_LIST_DIR}/lightview.h
+    ${CMAKE_CURRENT_LIST_DIR}/normalmapmanager.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/normalmapmanager.h
     ${CMAKE_CURRENT_LIST_DIR}/missile.cpp
     ${CMAKE_CURRENT_LIST_DIR}/missile.h
     ${CMAKE_CURRENT_LIST_DIR}/outfit.cpp

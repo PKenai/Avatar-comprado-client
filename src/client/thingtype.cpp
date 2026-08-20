@@ -33,6 +33,7 @@
 #include <framework/graphics/shadermanager.h>
 #include <framework/core/filestream.h>
 #include <framework/otml/otml.h>
+#include "normalmapmanager.h"
 
 ThingType::ThingType()
 {
@@ -390,6 +391,7 @@ void ThingType::unserialize(uint16 clientId, ThingCategory category, const FileS
     }
 
     m_textures.resize(m_animationPhases);
+    m_normalTextures.resize(m_animationPhases);
     m_texturesFramesRects.resize(m_animationPhases);
     m_texturesFramesOriginRects.resize(m_animationPhases);
     m_texturesFramesOffsets.resize(m_animationPhases);
@@ -509,11 +511,13 @@ void ThingType::preloadTexture()
 void ThingType::unload()
 {
     m_textures.clear();
+    m_normalTextures.clear();
     m_texturesFramesRects.clear();
     m_texturesFramesOriginRects.clear();
     m_texturesFramesOffsets.clear();
 
     m_textures.resize(m_animationPhases);
+    m_normalTextures.resize(m_animationPhases);
     m_texturesFramesRects.resize(m_animationPhases);
     m_texturesFramesOriginRects.resize(m_animationPhases);
     m_texturesFramesOffsets.resize(m_animationPhases);
@@ -548,6 +552,15 @@ DrawQueueItem* ThingType::draw(const Point& dest, int layer, int xPattern, int y
 
     if (lightView && hasLight())
         lightView->addLight(screenRect.center(), getLight());
+
+    // When normal mapping is enabled, ALL sprites go through the normal map shader.
+    // Sprites without explicit normal map PNGs get a flat default normal (0,0,1).
+    if (g_normalMaps.isEnabled()) {
+        TexturePtr normalMap = getNormalMapTexture(animationPhase);
+        if (normalMap) {
+            return g_drawQueue->addNormalMappedRect(screenRect, texture, textureRect, normalMap, color);
+        }
+    }
 
     return g_drawQueue->addTexturedRect(screenRect, texture, textureRect, color);
 }
@@ -588,7 +601,16 @@ DrawQueueItem* ThingType::draw(const Rect& dest, int layer, int xPattern, int yP
     }
 
     float scale = std::min<float>((float)dest.width() / size.width(), (float)dest.height() / size.height());
-    return g_drawQueue->addTexturedRect(Rect(dest.topLeft() + (textureOffset * scale), textureRect.size() * scale), texture, textureRect, color);
+    Rect screenRect(dest.topLeft() + (textureOffset * scale), textureRect.size() * scale);
+
+    if (g_normalMaps.isEnabled()) {
+        TexturePtr normalMap = getNormalMapTexture(animationPhase);
+        if (normalMap) {
+            return g_drawQueue->addNormalMappedRect(screenRect, texture, textureRect, normalMap, color);
+        }
+    }
+
+    return g_drawQueue->addTexturedRect(screenRect, texture, textureRect, color);
 }
 
 std::shared_ptr<DrawOutfitParams> ThingType::drawOutfit(const Point& dest, int maskLayer, int xPattern, int yPattern, int zPattern, int animationPhase, Color color, LightView* lightView)
@@ -892,6 +914,65 @@ uint ThingType::getTextureIndex(int l, int x, int y, int z) {
     return ((l * m_numPatternZ + z)
                * m_numPatternY + y)
                * m_numPatternX + x;
+}
+
+TexturePtr ThingType::getNormalMapTexture(int animationPhase)
+{
+    if (m_null || m_spritesIndex.empty())
+        return nullptr;
+
+    if (animationPhase < 0 || animationPhase >= m_animationPhases)
+        return nullptr;
+
+    // If we already tried to load it, return what we found
+    TexturePtr& normalTex = m_normalTextures[animationPhase];
+    if (normalTex) {
+        return normalTex;
+    }
+
+    // Get the color texture to know the layout size
+    const TexturePtr& colorTex = getTexture(animationPhase);
+    if (!colorTex) {
+        return nullptr;
+    }
+
+    Size texSize = colorTex->getSize();
+
+    // Try to get a real normal map from the NormalMapManager
+    ImagePtr baseNormalMap = g_normalMaps.getNormalMap(m_id, m_category);
+
+    // Create a normal texture matching the color texture layout
+    ImagePtr normalImage(new Image(texSize, 4));
+    uchar* pixels = normalImage->getPixelData();
+    int totalPixels = texSize.width() * texSize.height();
+
+    if (baseNormalMap) {
+        // Fill with neutral normals first, then blit the real normal map on top
+        for (int i = 0; i < totalPixels; ++i) {
+            pixels[i * 4 + 0] = 128;
+            pixels[i * 4 + 1] = 128;
+            pixels[i * 4 + 2] = 255;
+            pixels[i * 4 + 3] = 255;
+        }
+        Size normalMapSize = baseNormalMap->getSize();
+        for (int y = 0; y < texSize.height(); y += normalMapSize.height()) {
+            for (int x = 0; x < texSize.width(); x += normalMapSize.width()) {
+                normalImage->blit(Point(x, y), baseNormalMap);
+            }
+        }
+    } else {
+        // No normal map PNG exists — fill entire texture with flat normal (0,0,1)
+        for (int i = 0; i < totalPixels; ++i) {
+            pixels[i * 4 + 0] = 128; // R = X (neutral)
+            pixels[i * 4 + 1] = 128; // G = Y (neutral)
+            pixels[i * 4 + 2] = 255; // B = Z (pointing outward)
+            pixels[i * 4 + 3] = 255; // A = fully opaque
+        }
+    }
+
+    normalTex = TexturePtr(new Texture(normalImage));
+    normalTex->setSmooth(true);
+    return normalTex;
 }
 
 int ThingType::getExactSize(int layer, int xPattern, int yPattern, int zPattern, int animationPhase)

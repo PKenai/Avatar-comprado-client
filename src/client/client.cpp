@@ -30,6 +30,7 @@
 #include "spritemanager.h"
 #include "minimap.h"
 #include "healthbars.h"
+#include "normalmapmanager.h"
 #include <framework/core/configmanager.h>
 
 Client g_client;
@@ -45,6 +46,7 @@ void Client::init(std::vector<std::string>& args)
     g_shaders.init();
     g_things.init();
     g_healthBars.init();
+    g_normalMaps.init();
 }
 
 void Client::terminate()
@@ -57,4 +59,5 @@ void Client::terminate()
     g_sprites.terminate();
     g_shaders.terminate();
     g_healthBars.terminate();
+    g_normalMaps.terminate();
 }

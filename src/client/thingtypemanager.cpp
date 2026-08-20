@@ -551,7 +551,7 @@ void ThingTypeManager::preloadTextureBatch()
                     ThingType* type = rawGetThingType(entry.first, entry.second);
                     if (type && !type->isNull())
                         type->preloadTexture();
-                } catch (const std::exception& e) {
+                } catch (const std::exception&) {
                     // A single broken thing type (corrupt sprite, invalid image,
                     // etc.) must never abort the whole preload - or the client.
                     // The game never draws these, so just skip and count them.

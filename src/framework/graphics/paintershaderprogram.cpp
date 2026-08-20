@@ -58,6 +58,28 @@ void PainterShaderProgram::setupUniforms()
     bindUniformLocation(OFFSET_UNIFORM, "u_Offset");
     bindUniformLocation(CENTER_UNIFORM, "u_Center");
 
+    // Normal map lighting uniforms (individual)
+    bindUniformLocation(LIGHT_COUNT_UNIFORM, "u_LightCount");
+    bindUniformLocation(LIGHT_POS0_UNIFORM + 0, "u_LightPos0");
+    bindUniformLocation(LIGHT_POS0_UNIFORM + 1, "u_LightPos1");
+    bindUniformLocation(LIGHT_POS0_UNIFORM + 2, "u_LightPos2");
+    bindUniformLocation(LIGHT_POS0_UNIFORM + 3, "u_LightPos3");
+    bindUniformLocation(LIGHT_POS0_UNIFORM + 4, "u_LightPos4");
+    bindUniformLocation(LIGHT_POS0_UNIFORM + 5, "u_LightPos5");
+    bindUniformLocation(LIGHT_POS0_UNIFORM + 6, "u_LightPos6");
+    bindUniformLocation(LIGHT_POS0_UNIFORM + 7, "u_LightPos7");
+    bindUniformLocation(LIGHT_COL0_UNIFORM + 0, "u_LightCol0");
+    bindUniformLocation(LIGHT_COL0_UNIFORM + 1, "u_LightCol1");
+    bindUniformLocation(LIGHT_COL0_UNIFORM + 2, "u_LightCol2");
+    bindUniformLocation(LIGHT_COL0_UNIFORM + 3, "u_LightCol3");
+    bindUniformLocation(LIGHT_COL0_UNIFORM + 4, "u_LightCol4");
+    bindUniformLocation(LIGHT_COL0_UNIFORM + 5, "u_LightCol5");
+    bindUniformLocation(LIGHT_COL0_UNIFORM + 6, "u_LightCol6");
+    bindUniformLocation(LIGHT_COL0_UNIFORM + 7, "u_LightCol7");
+    bindUniformLocation(AMBIENT_LIGHT_UNIFORM, "u_AmbientLight");
+    bindUniformLocation(SUN_DIRECTION_UNIFORM, "u_SunDirection");
+    bindUniformLocation(SUN_INTENSITY_UNIFORM, "u_SunIntensity");
+
     // VALUES
     setUniformValue(TRANSFORM_MATRIX_UNIFORM, m_transformMatrix);
     setUniformValue(PROJECTION_MATRIX_UNIFORM, m_projectionMatrix);
@@ -235,4 +257,56 @@ void PainterShaderProgram::bindMultiTextures()
 void PainterShaderProgram::clearMultiTextures()
 {
     m_multiTextures.clear();
+}
+
+void PainterShaderProgram::setLightCount(int count)
+{
+    if (m_lightCount == count)
+        return;
+    bind();
+    setUniformValue(LIGHT_COUNT_UNIFORM, count);
+    m_lightCount = count;
+}
+
+void PainterShaderProgram::setLightPos(int index, float x, float y, float radius, float intensity)
+{
+    if (index < 0 || index >= 8) return;
+    bind();
+    setUniformValue(LIGHT_POS0_UNIFORM + index, x, y, radius, intensity);
+}
+
+void PainterShaderProgram::setLightColor(int index, float r, float g, float b)
+{
+    if (index < 0 || index >= 8) return;
+    bind();
+    setUniformValue(LIGHT_COL0_UNIFORM + index, r, g, b);
+}
+
+void PainterShaderProgram::setAmbientLight(float ambient)
+{
+    if (m_ambientLight == ambient)
+        return;
+    bind();
+    setUniformValue(AMBIENT_LIGHT_UNIFORM, ambient);
+    m_ambientLight = ambient;
+}
+
+void PainterShaderProgram::setSunDirection(float x, float y, float z)
+{
+    if (m_sunDirX == x && m_sunDirY == y && m_sunDirZ == z)
+        return;
+    bind();
+    setUniformValue(SUN_DIRECTION_UNIFORM, x, y, z);
+    m_sunDirX = x;
+    m_sunDirY = y;
+    m_sunDirZ = z;
+}
+
+void PainterShaderProgram::setSunIntensity(float intensity)
+{
+    if (m_sunIntensity == intensity)
+        return;
+    bind();
+    setUniformValue(SUN_INTENSITY_UNIFORM, intensity);
+    m_sunIntensity = intensity;
 }

@@ -271,6 +271,7 @@ public:
 
 private:
     const TexturePtr& getTexture(int animationPhase);
+    TexturePtr getNormalMapTexture(int animationPhase);
     Size getBestTextureDimension(int w, int h, int count);
     uint getSpriteIndex(int w, int h, int l, int x, int y, int z, int a);
     uint getTextureIndex(int l, int x, int y, int z);
@@ -296,6 +297,7 @@ private:
 
     std::vector<int> m_spritesIndex;
     std::vector<TexturePtr> m_textures;
+    std::vector<TexturePtr> m_normalTextures;
     std::vector<std::vector<Rect>> m_texturesFramesRects;
     std::vector<std::vector<Rect>> m_texturesFramesOriginRects;
     std::vector<std::vector<Point>> m_texturesFramesOffsets;

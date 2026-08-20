@@ -27,6 +27,8 @@
 #include "thingtype.h"
 #include <framework/graphics/declarations.h>
 #include <framework/graphics/drawqueue.h>
+#include "normalmapmanager.h"
+#include "spritemanager.h"
 #include <set>
 
 struct TileLight {
@@ -45,6 +47,14 @@ public:
 
     inline void addLight(const Point& pos, const Light& light)
     {
+        // Also feed the normal map system
+        if (g_normalMaps.isEnabled() && light.intensity > 0) {
+            Color lc = Color::from8bit(light.color);
+            g_normalMaps.addLight(pos.x, pos.y,
+                                  light.intensity * g_sprites.spriteSize() * 0.3f,
+                                  light.intensity / 255.0f,
+                                  lc.rF(), lc.gF(), lc.bF());
+        }
         return addLight(pos, light.color, light.intensity);
     }
     void addLight(const Point& pos, uint8_t color, uint8_t intensity);

@@ -134,6 +134,20 @@ struct DrawQueueItemTextColored : public DrawQueueItem {
     bool m_shadow = false;
 };
 
+struct DrawQueueItemNormalMapped : public DrawQueueItem {
+    DrawQueueItemNormalMapped(const Rect& dest, const TexturePtr& texture, const Rect& src,
+                              const TexturePtr& normalMap, const Color& color)
+        : DrawQueueItem(texture, color), m_dest(dest), m_src(src), m_normalMap(normalMap) {}
+
+    void draw() override;
+    void draw(const Point& pos) override;
+    bool cache() override { return false; } // Normal mapped items can't be atlas-cached
+
+    Rect m_dest;
+    Rect m_src;
+    TexturePtr m_normalMap;
+};
+
 struct DrawQueueItemLine : public DrawQueueItem {
     DrawQueueItemLine(const std::vector<Point>& points, int width, const Color& color) :
         DrawQueueItem(nullptr, color), m_points(points), m_width(width)
@@ -216,6 +230,14 @@ public:
         m_queue.push_back(item);
         return item;
     }
+    DrawQueueItemNormalMapped* addNormalMappedRect(const Rect& dest, const TexturePtr& texture, const Rect& src,
+                                                      const TexturePtr& normalMap, const Color& color = Color::white)
+    {
+        DrawQueueItemNormalMapped* item(new DrawQueueItemNormalMapped(dest, texture, src, normalMap, color));
+        m_queue.push_back(item);
+        return item;
+    }
+
     void addTextureCoords(CoordsBuffer& coords, const TexturePtr& texture, const Color& color = Color::white)
     {
         m_queue.push_back(new DrawQueueItemTextureCoords(coords, texture, color));

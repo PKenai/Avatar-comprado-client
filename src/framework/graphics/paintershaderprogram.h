@@ -53,7 +53,15 @@ protected:
 
         RESOLUTION_UNIFORM = 13,
         OFFSET_UNIFORM = 14,
-        CENTER_UNIFORM = 15
+        CENTER_UNIFORM = 15,
+
+        // Normal map lighting uniforms (individual for GLSL ES compat)
+        LIGHT_COUNT_UNIFORM = 16,
+        LIGHT_POS0_UNIFORM = 17,  // u_LightPos0..7 (8 locations)
+        LIGHT_COL0_UNIFORM = 25,  // u_LightCol0..7 (8 locations)
+        AMBIENT_LIGHT_UNIFORM = 33,
+        SUN_DIRECTION_UNIFORM = 34, // vec3 (1 location)
+        SUN_INTENSITY_UNIFORM = 35
     };
 
     friend class Painter;
@@ -80,6 +88,14 @@ public:
     void bindMultiTextures();
     void clearMultiTextures();
 
+    // Normal map lighting
+    void setLightCount(int count);
+    void setLightPos(int index, float x, float y, float radius, float intensity);
+    void setLightColor(int index, float r, float g, float b);
+    void setAmbientLight(float ambient);
+    void setSunDirection(float x, float y, float z);
+    void setSunIntensity(float intensity);
+
     void enableColorMatrix()
     {
         m_useColorMatrix = true;
@@ -99,6 +115,12 @@ private:
     float m_time;
     std::vector<TexturePtr> m_multiTextures;
     bool m_useColorMatrix = false;
+
+    // Normal map light state (for change detection)
+    int m_lightCount = -1;
+    float m_ambientLight = -1.0f;
+    float m_sunDirX = 999.0f, m_sunDirY = 999.0f, m_sunDirZ = 999.0f;
+    float m_sunIntensity = -1.0f;
 };
 
 #endif
