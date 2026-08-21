@@ -1,7 +1,7 @@
 QuestListItem < Panel
   height: 64
   id: quest_
-  background-color: #484848
+  background-color: transparent
   padding: 4
   focusable: true
   phantom: false

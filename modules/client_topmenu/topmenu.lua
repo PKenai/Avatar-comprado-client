@@ -7,6 +7,16 @@ local rightGameButtonsPanel
 local fpsEvent
 local fpsText = ''
 
+-- drawer variables
+local idleTimer = nil
+local isHidden = false
+local isAnimating = false
+local IDLE_TIMEOUT = 15000
+local ANIM_DURATION = 300
+local ANIM_STEPS = 20
+local originalMarginTop = 0
+local dropButton = nil
+
 -- private functions
 local function addButton(id, description, icon, callback, panel, toggle, front)
   local class
@@ -37,6 +47,89 @@ local function addButton(id, description, icon, callback, panel, toggle, front)
   return button
 end
 
+-- drawer functions
+local function positionDropButton()
+  if not dropButton or not topMenu then return end
+  local root = g_ui.getRootWidget()
+  local rootWidth = root:getWidth()
+  local btnWidth = dropButton:getWidth()
+  dropButton:setX(math.floor((rootWidth - btnWidth) / 2))
+  dropButton:setY(0)
+end
+
+local function resetIdleTimer()
+  if idleTimer then
+    removeEvent(idleTimer)
+    idleTimer = nil
+  end
+  if not isHidden and not isAnimating then
+    idleTimer = scheduleEvent(function()
+      if isHidden or isAnimating then return end
+      isAnimating = true
+      local height = topMenu:getHeight()
+      if dropButton then
+        positionDropButton()
+        dropButton:show()
+        dropButton:setOpacity(0)
+        g_effects.fadeIn(dropButton, 200)
+      end
+      for i = 1, ANIM_STEPS do
+        scheduleEvent(function()
+          if topMenu and isAnimating then
+            local progress = i / ANIM_STEPS
+            local eased = 1 - (1 - progress) * (1 - progress)
+            local newMargin = -math.floor(height * eased)
+            topMenu:setMarginTop(newMargin)
+            if i == ANIM_STEPS then
+              topMenu:setMarginTop(-height)
+              isHidden = true
+              isAnimating = false
+            end
+          end
+        end, math.floor(i * ANIM_DURATION / ANIM_STEPS))
+      end
+    end, IDLE_TIMEOUT)
+  end
+end
+
+local function slideDown()
+  if isAnimating or not isHidden then return end
+  isAnimating = true
+  if dropButton then
+    g_effects.fadeOut(dropButton, 150)
+    scheduleEvent(function()
+      if dropButton then dropButton:hide() end
+    end, 160)
+  end
+  local startMargin = topMenu:getMarginTop()
+  for i = 1, ANIM_STEPS do
+    scheduleEvent(function()
+      if topMenu and isAnimating then
+        local progress = i / ANIM_STEPS
+        local eased = progress * progress
+        local newMargin = math.floor(startMargin + (originalMarginTop - startMargin) * eased)
+        topMenu:setMarginTop(newMargin)
+        if i == ANIM_STEPS then
+          topMenu:setMarginTop(originalMarginTop)
+          isHidden = false
+          isAnimating = false
+          resetIdleTimer()
+        end
+      end
+    end, math.floor(i * ANIM_DURATION / ANIM_STEPS))
+  end
+end
+
+function onTopMenuMouseMove(self, mousePos, mouseMoved)
+  if not isHidden and not isAnimating then
+    resetIdleTimer()
+  end
+end
+
+function onDropClick()
+  slideDown()
+end
+
 -- public functions
 function init()
   connect(g_game, { onGameStart = online,
@@ -52,8 +145,33 @@ function init()
   pingLabel = topMenu:getChildById('pingLabel')
   fpsLabel = topMenu:getChildById('fpsLabel')
 
-  -- Update the FPS counter by polling g_app.getFps() once per second.
-  -- (More reliable than the C++ onFps signal in this build.)
+  originalMarginTop = topMenu:getMarginTop()
+
+  -- create drop button: parent it to root so it survives topMenu sliding up
+  local root = g_ui.getRootWidget()
+  dropButton = g_ui.createWidget('TopButton', root)
+  if dropButton then
+    dropButton:setId('dropButton')
+    dropButton:setIcon(resolvepath('/data/images/topbuttons/drop.png', 3))
+    dropButton:setTooltip('Mostrar barra superior')
+    dropButton:setOpacity(0.7)
+    dropButton:hide()
+    positionDropButton()
+    dropButton.onMouseRelease = function(widget, mousePos, mouseButton)
+      if widget:containsPoint(mousePos) and mouseButton == MouseLeftButton then
+        onDropClick()
+        return true
+      end
+    end
+    dropButton.onHoverChange = function(widget)
+      if widget:isHovered() then
+        widget:setOpacity(1.0)
+      else
+        widget:setOpacity(0.7)
+      end
+    end
+  end
+
   updateFps()
   fpsEvent = cycleEvent(function() updateFps() end, 1000)
 
@@ -72,6 +190,16 @@ function terminate()
     fpsEvent = nil
   end
 
+  if idleTimer then
+    removeEvent(idleTimer)
+    idleTimer = nil
+  end
+
+  if dropButton then
+    dropButton:destroy()
+    dropButton = nil
+  end
+
   topMenu:destroy()
 end
 
@@ -81,12 +209,31 @@ function online()
   addEvent(function()
     fpsLabel:show()
     pingLabel:show()
+    if isHidden then
+      topMenu:setMarginTop(originalMarginTop)
+      isHidden = false
+      isAnimating = false
+      if dropButton then dropButton:hide() end
+    end
+    resetIdleTimer()
   end)
 end
 
 function offline()
   hideGameButtons()
   pingLabel:hide()
+  if idleTimer then
+    removeEvent(idleTimer)
+    idleTimer = nil
+  end
+  if isHidden then
+    topMenu:setMarginTop(originalMarginTop)
+    isHidden = false
+    isAnimating = false
+  end
+  if dropButton then
+    dropButton:hide()
+  end
 end
 
 function updateFps(fps)
@@ -111,7 +258,7 @@ function updatePing(ping)
     color = 'red'
   end
   text = text .. ping .. ' ms'
-  
+
   pingLabel:setColor(color)
   pingLabel:setText(text)
   pingLabel:setVisible(ping >= 1)

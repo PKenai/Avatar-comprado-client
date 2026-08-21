@@ -4,6 +4,7 @@ TopMenuPanel
   anchors.top: parent.top
   anchors.left: parent.left
   anchors.right: parent.right
+  onMouseMove: onTopMenuMouseMove(self, mousePos, mouseMoved)
 
   TopMenuButtonsPanel
     id: leftButtonsPanel

@@ -734,3 +734,68 @@ Exiting application..
 Sistema de controle joystick iniciado
 NormalMapManager: normal mapping system disabled (flicker fix)
 Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[HuntWaypoint]    caminho ativo:     pica pau da terra    (    24    bolinhas,    10    min)
+Exiting application..
+Exiting application..
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: protected lua call failed: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_console/console.lua:1559: in function 'CheckFolds'
+	/modules/game_textmessage/textmessage.lua:135: in function </modules/game_textmessage/textmessage.lua:107>
+ERROR: protected lua call failed: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_console/console.lua:1559: in function 'CheckFolds'
+	/modules/game_textmessage/textmessage.lua:135: in function </modules/game_textmessage/textmessage.lua:107>
+ERROR: protected lua call failed: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_console/console.lua:1559: in function 'CheckFolds'
+	/modules/game_textmessage/textmessage.lua:135: in function </modules/game_textmessage/textmessage.lua:107>
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+ERROR: failed to create widget from style 'Image': 'Image' is not a defined style
+FATAL ERROR: Unable to load module 'client_topmenu': /modules/client_topmenu/topmenu.lua:144: attempt to index upvalue 'dropButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:144: in function 'init'
+	/modules/client_topmenu/topmenu.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:77: in function 'loadModules'
+	/init.lua:98: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+FATAL ERROR: Unable to load module 'client_topmenu': /modules/client_topmenu/topmenu.lua:152: attempt to call method 'setAnchor' (a nil value)
+stack traceback:
+	[C]: in function 'setAnchor'
+	/modules/client_topmenu/topmenu.lua:152: in function 'init'
+	/modules/client_topmenu/topmenu.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:77: in function 'loadModules'
+	/init.lua:98: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
