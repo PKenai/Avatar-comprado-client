@@ -180,64 +180,9 @@ void Outfit::draw(Point dest, Otc::Direction direction, uint walkAnimationPhase,
         wingsType->draw(wingDest, 0, direction, 0, wingsZPattern, wingAnimationPhase, Color::white, lightView);
     };
 
-    Point auraDest = dest;
-    auto drawAura = [&] {
-        int auraAnimationPhase = 0;
-        auto auraType = g_things.rawGetThingType(m_aura, ThingCategoryCreature);
-        int auraZPattern = m_mount > 0 ? std::min<int>(1, auraType->getNumPatternZ() - 1) : 0;
-        auto auraAnimator = auraType->getAnimator();
-        if (animate) {
-            if (auraType->isAnimateAlways()) {
-                int phases = auraType->getAnimator() ? auraType->getAnimator()->getAnimationPhases() : auraType->getAnimationPhases();
-                int ticksPerFrame = 1000 / phases;
-                auraAnimationPhase = (g_clock.millis() % (ticksPerFrame * phases)) / ticksPerFrame;
-            }
-            else if (auraAnimator) {
-                auraAnimationPhase = auraAnimator->getPhase();
-            }
-            else {
-                auraAnimationPhase = (stdext::millis() / 75) % auraType->getAnimationPhases();
-            }
-        }
-        auraType->draw(auraDest, 0, direction, 0, auraZPattern, auraAnimationPhase, Color::white, lightView);
-    };
+    // Aura is drawn at the end of draw(), after outfit body
+    // (see the bottom of this function)
 
-    Point topAuraDest = dest;
-    auto drawTopAura = [&] {
-        int auraAnimationPhase = 0;
-        auto auraType = g_things.rawGetThingType(m_aura, ThingCategoryCreature);
-        auto auraAnimator = auraType->getAnimator();
-        if (animate) {
-            if (auraType->isAnimateAlways()) {
-                int phases = auraType->getAnimator() ? auraType->getAnimator()->getAnimationPhases() : auraType->getAnimationPhases();
-                int ticksPerFrame = 1000 / phases;
-                auraAnimationPhase = (g_clock.millis() % (ticksPerFrame * phases)) / ticksPerFrame;
-            }
-            else if (auraAnimator) {
-                auraAnimationPhase = auraAnimator->getPhase();
-            }
-            else {
-                auraAnimationPhase = (stdext::millis() / 75) % auraType->getAnimationPhases();
-            }
-        }
-        auraType->draw(topAuraDest, 1, direction, 0, 0, auraAnimationPhase, Color::white, lightView);
-    };
-
-    if (m_aura && g_game.getFeature(Otc::GameBigAurasCenter)) {
-        auto auraType = g_things.rawGetThingType(m_aura, ThingCategoryCreature);
-        int auraHeight = auraType->getHeight();
-        int auraWidth = auraType->getWidth();
-        if (auraHeight > 1 || auraWidth > 1) {
-            Point offset = Point (auraWidth > 1 ? (auraWidth - 1) * 16 : 0, auraHeight > 1 ? (auraHeight - 1) * 16 : 0);
-            topAuraDest += offset * g_sprites.getOffsetFactor();
-            auraDest += offset * g_sprites.getOffsetFactor();
-        }
-    }
-
-    if (m_aura && (!g_game.getFeature(Otc::GameDrawAuraOnTop) or g_game.getFeature(Otc::GameAuraFrontAndBack)) ) {
-        drawAura();
-    }
-  
     drawMount();
 
     if (m_wings && (direction == Otc::South || direction == Otc::East)) {
@@ -348,20 +293,20 @@ void Outfit::draw(Point dest, Otc::Direction direction, uint walkAnimationPhase,
         drawWings();
     }
     
-    if (m_aura && (g_game.getFeature(Otc::GameDrawAuraOnTop) || g_game.getFeature(Otc::GameAuraFrontAndBack))) {
-        if (g_game.getFeature(Otc::GameAuraFrontAndBack)){
-            if (zPattern > 0) {
-                if (direction == Otc::East)
-                    topAuraDest -= Point(12, 6) * g_sprites.getOffsetFactor();
-                else if (direction == Otc::South)
-                    topAuraDest -= Point(1, 12) * g_sprites.getOffsetFactor();
-                else
-                    topAuraDest -= Point(4, 6) * g_sprites.getOffsetFactor();
+    if (m_aura) {
+        auto auraType = g_things.rawGetThingType(m_aura, ThingCategoryCreature);
+        if (auraType) {
+            int auraAnimationPhase = 0;
+            if (animate) {
+                if (auraType->isAnimateAlways()) {
+                    int phases = auraType->getAnimator() ? auraType->getAnimator()->getAnimationPhases() : auraType->getAnimationPhases();
+                    int ticksPerFrame = 1000 / phases;
+                    auraAnimationPhase = (g_clock.millis() % (ticksPerFrame * phases)) / ticksPerFrame;
+                } else {
+                    auraAnimationPhase = (stdext::millis() / 75) % auraType->getAnimationPhases();
+                }
             }
-            drawTopAura();
-        }
-        else {
-            drawAura();
+            auraType->draw(dest + Point(15, 15), 0, Otc::South, 0, 0, auraAnimationPhase, Color::white, lightView);
         }
     }
 }
@@ -551,3 +496,4 @@ void DrawQueueItemOutfitWithShader::draw()
         g_framebuffers.getTemporaryFrameBuffer()->draw(m_dest);
     }
 }
+

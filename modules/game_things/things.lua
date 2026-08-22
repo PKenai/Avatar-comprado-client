@@ -1,8 +1,8 @@
 -- =============================================================================
 -- DAT / SPR features
--- Ligue SOMENTE se o seu .dat foi exportado com essas opções (Object Builder).
--- Se o DAT for clássico 8.6 SEM essas flags, deixe false — senão o load corrompe.
--- Frame Groups e Improved Animations são do formato do .DAT (não do .SPR em si).
+-- Ligue SOMENTE se o seu .dat foi exportado com essas opï¿½ï¿½es (Object Builder).
+-- Se o DAT for clï¿½ssico 8.6 SEM essas flags, deixe false ï¿½ senï¿½o o load corrompe.
+-- Frame Groups e Improved Animations sï¿½o do formato do .DAT (nï¿½o do .SPR em si).
 -- =============================================================================
 USE_ENHANCED_ANIMATIONS = true -- Improved Animations (Animator no DAT)
 USE_FRAME_GROUPS = true        -- Frame Groups / Idle Animations (creatures)
@@ -33,13 +33,15 @@ function load()
   g_game.enableFeature(GameSpritesU32)
   g_game.enableFeature(GameSpritesAlphaChannel)
   g_game.enableFeature(GamePlayerMounts) -- Avatar custom: server sends mount in outfit
+  g_game.enableFeature(GameWingsAndAura)
+  g_game.enableFeature(GameOutfitShaders)
 
   -- Canonical protocol 8.60 feature set (matches the original Avatar client, whose
   -- engine enabled these in C++). The Beta modules only enabled a minimal subset,
   -- which broke the login/game handshake against the TFS 0.4 server.
   -- >= 770
   g_game.enableFeature(GameLooktypeU16)
-  -- Raava/Avatar SEMPRE envia statementId (U32) em AddCreatureSpeak — obrigatório.
+  -- Raava/Avatar SEMPRE envia statementId (U32) em AddCreatureSpeak ï¿½ obrigatï¿½rio.
   g_game.enableFeature(GameMessageStatements)
   g_game.enableFeature(GameLoginPacketEncryption)
   -- >= 780
@@ -104,7 +106,7 @@ function load()
     -- holds the login until everything is loaded.
   end
 
-  -- Global helper: ItemType(id) — SakkenOT pattern. Without OTB the lookup
+  -- Global helper: ItemType(id) ï¿½ SakkenOT pattern. Without OTB the lookup
   -- returns null (handled gracefully via isNull()), but the C++ binding
   -- g_lua.bindGlobalFunction("ItemType", ...) stays in the source for future use.
   -- Prevent registerClass<ItemType>() table from shadowing the function.

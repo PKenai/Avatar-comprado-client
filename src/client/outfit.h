@@ -76,8 +76,8 @@ public:
     int getManaBar() const { return m_manaBar; }
 
 private:
-    ThingCategory m_category;
-    int m_id, m_auxId, m_head, m_body, m_legs, m_feet, m_addons, m_mount = 0, m_wings = 0, m_aura = 0;
+    ThingCategory m_category = ThingCategoryCreature;
+    int m_id = 0, m_auxId = 0, m_head = 0, m_body = 0, m_legs = 0, m_feet = 0, m_addons = 0, m_mount = 0, m_wings = 0, m_aura = 0;
     int m_healthBar = 0, m_manaBar = 0;
     std::string m_shader;
     bool m_center = false;

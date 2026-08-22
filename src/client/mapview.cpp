@@ -380,6 +380,7 @@ void MapView::drawMapForeground(const Rect& rect)
     }
 	
 	drawTileWidget(rect, srcRect);
+
 }
 
 

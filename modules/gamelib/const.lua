@@ -137,6 +137,9 @@ GameKeepUnawareTiles = 72
 GameIngameStore = 73
 GameDrawFloorShadow = 128
 GameDrawSkyClouds = 129
+GameWingsAndAura = 104
+GameOutfitShaders = 106
+GameDrawAuraOnTop = 109
 
 TextColors = {
   red       = '#f55e5e', --'#c83200'
