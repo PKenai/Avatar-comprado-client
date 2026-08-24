@@ -35,6 +35,7 @@ Module
     - game_controller
     - game_notification
     - game_outfit_scales
+    - game_offset
 
   @onLoad: init()
   @onUnload: terminate()

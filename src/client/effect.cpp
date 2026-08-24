@@ -26,6 +26,27 @@
 #include <framework/core/eventdispatcher.h>
 #include <framework/util/extras.h>
 
+void Effect::setEffect(uint16 effectId)
+{
+    if (!g_things.isValidDatId(effectId, ThingCategoryEffect))
+    {
+    }
+ 
+    setId(effectId);
+    m_animationTimer.restart();
+ 
+    int duration = 0;
+    if (g_game.getFeature(Otc::GameEnhancedAnimations))
+    {
+        duration = getThingType()->getAnimator() ? getThingType()->getAnimator()->getTotalDuration() : 1000;
+    }
+    else
+    {
+        duration = EFFECT_TICKS_PER_FRAME;
+        duration *= getAnimationPhases();
+    }
+}
+ 
 void Effect::draw(const Point& dest, int offsetX, int offsetY, bool animate, LightView* lightView)
 {
     if(m_id == 0)
@@ -54,7 +75,9 @@ void Effect::draw(const Point& dest, int offsetX, int offsetY, bool animate, Lig
     if(yPattern < 0)
         yPattern += getNumPatternY();
 
-    rawGetThingType()->draw(dest, 0, xPattern, yPattern, 0, m_animationPhase, Color::white, lightView);
+    Point effectDisplacement = rawGetThingType()->getEffectDisplacement();
+
+    rawGetThingType()->draw(dest + effectDisplacement, 0, xPattern, yPattern, 0, m_animationPhase, Color::white, lightView);
 }
 
 void Effect::onAppear()

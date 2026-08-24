@@ -1,0 +1,7 @@
+items:
+effects:
+creatures:
+  1287:
+    outfit-displacement: opacity: 1.0, North: 58 52, East: 53 48, South: 59 56, West: 56 51
+  1302:
+    outfit-displacement: opacity: 1.0, North: 64 45, East: 0 0, South: 0 0, West: 0 0

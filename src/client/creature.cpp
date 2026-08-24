@@ -87,7 +87,9 @@ void Creature::draw(const Point& dest, bool animate, LightView* lightView)
 
     const int sprSize = g_sprites.spriteSize();
     Point jumpOffset = Point(m_jumpOffset.x, m_jumpOffset.y);
-    Point creatureCenter = dest - jumpOffset + m_walkOffset - getDisplacement() + Point(sprSize / 2, sprSize / 2);
+    Point targetDisplacement = getThingType()->getTargetDisplacementByDirection(m_walking ? m_walkDirection : m_direction);
+    Point outfitDisplacement = getThingType()->getOutfitDisplacementByDirection(m_walking ? m_walkDirection : m_direction);
+    Point creatureCenter = dest - jumpOffset + m_walkOffset - getDisplacement() + Point(sprSize / 2, sprSize / 2) + targetDisplacement;
     drawBottomWidgets(creatureCenter, m_walking ? m_walkDirection : m_direction);
 
     Point animationOffset = animate ? m_walkOffset : Point(0, 0);
@@ -108,8 +110,8 @@ void Creature::draw(const Point& dest, bool animate, LightView* lightView)
         Point shadowOffset = Point(-2, -1);
         size_t shadowDrawQueueStart = g_drawQueue->size();
 
-        // Keep shadow on the ground while jumping
-        Point shadowPos = dest + animationOffset + shadowOffset;
+        // Keep shadow on the ground while jumping, follow outfit+target displacement
+        Point shadowPos = dest - jumpOffset + animationOffset + outfitDisplacement + shadowOffset;
         Outfit shadowOutfit = m_outfit;
         shadowOutfit.setWings(0);
         shadowOutfit.setAura(0);
@@ -124,7 +126,7 @@ void Creature::draw(const Point& dest, bool animate, LightView* lightView)
     }
 
     size_t drawQueueSize = g_drawQueue->size();
-    m_outfit.draw(dest - jumpOffset + animationOffset, m_walking ? m_walkDirection : m_direction, m_walkAnimationPhase, true, lightView);
+    m_outfit.draw(dest - jumpOffset + animationOffset + outfitDisplacement, m_walking ? m_walkDirection : m_direction, m_walkAnimationPhase, true, lightView);
     if (m_marked) {
         g_drawQueue->setMark(drawQueueSize, updatedMarkedColor());
     }
@@ -181,10 +183,42 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
             return;
     }
 
+    Point nameDisplacement = getThingType()->getNameDisplacementByDirection(m_direction);
+
+    int subOutfitId = 0;
+    if (m_outfit.getWings() > 0)
+        subOutfitId = m_outfit.getWings();
+    else if (m_outfit.getMount() > 0)
+        subOutfitId = m_outfit.getMount();
+    else if (m_outfit.getAura() > 0)
+        subOutfitId = m_outfit.getAura();
+
+    if (subOutfitId > 0 && getThingType()->getSubOutfitDisplacements().count(subOutfitId))
+    {
+        const auto &subDisp = getThingType()->getSubOutfitDisplacements().at(subOutfitId);
+        switch (m_direction)
+        {
+        case Otc::North:
+            nameDisplacement = subDisp.name_north;
+            break;
+        case Otc::East:
+            nameDisplacement = subDisp.name_east;
+            break;
+        case Otc::South:
+            nameDisplacement = subDisp.name_south;
+            break;
+        case Otc::West:
+            nameDisplacement = subDisp.name_west;
+            break;
+        default:
+            break;
+        }
+    }
+
     // Common name positioning variables (used by both paths)
     Size nameSize = m_nameCache.getTextSize();
-    Rect textRect = Rect(point.x + m_informationOffset.x - nameSize.width() / 2.0,
-                         point.y + m_informationOffset.y - 17, nameSize);
+    Rect textRect = Rect(point.x + m_informationOffset.x - nameSize.width() / 2.0 + nameDisplacement.x,
+                         point.y + m_informationOffset.y - 17 + nameDisplacement.y, nameSize);
     textRect.bind(parentRect);
 
     uint32 offset = 12;
@@ -317,7 +351,7 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
     } else {
 
     // --- Original bar path (monsters, NPCs, fallback) ---
-    Rect backgroundRect = Rect(point.x + m_informationOffset.x - (13.5), point.y + m_informationOffset.y, 27, 4);
+    Rect backgroundRect = Rect(point.x + m_informationOffset.x - (13.5) + nameDisplacement.x, point.y + m_informationOffset.y + nameDisplacement.y, 27, 4);
     backgroundRect.bind(parentRect);
 
     if (textRect.top() == parentRect.top())

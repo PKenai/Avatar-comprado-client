@@ -329,7 +329,6 @@ void Outfit::drawShadow(Point dest, Otc::Direction direction, uint walkAnimation
 {
     size_t drawStart = g_drawQueue->size();
     Outfit shadowOutfit = *this;
-    shadowOutfit.m_scale = 1.0f;  // shadows should not be scaled separately
     shadowOutfit.draw(dest, direction, walkAnimationPhase, animate, nullptr, false);
     g_drawQueue->setShadow(drawStart);
     const float clampedOpacity = std::max(0.f, std::min(1.f, opacity));

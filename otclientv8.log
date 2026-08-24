@@ -8626,3 +8626,244 @@ NormalMapManager: normal mapping system disabled (flicker fix)
 [OutfitScales] Module loaded. Scales:
 [OutfitScales]   urso feroz = 0.6
 [OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+FATAL ERROR: Unable to load module 'game_offset': C++ call failed: unable to open file '/things/0/Tibia.otml': not found
+stack traceback:
+	[builtin#142]: at 0x7ff75ef39c70
+	[C]: in function 'readFileContents'
+	/modules/game_offset/offset.lua:987: in function 'loadOtmlFile'
+	/modules/game_offset/offset.lua:33: in function 'init'
+	/modules/game_offset/offset.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:77: in function 'loadModules'
+	/init.lua:98: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+FATAL ERROR: Unable to load module 'game_offset': /modules/game_offset/offset.lua:60: attempt to index field 'game_interface' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_offset/offset.lua:60: in function 'init'
+	/modules/game_offset/offset.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:77: in function 'loadModules'
+	/init.lua:98: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+ERROR: protected lua call failed: C++ call failed: unable to open file '/things/860/Tibia.otml': not found
+stack traceback:
+	[builtin#142]: at 0x7ff75ef39c70
+	[C]: in function 'readFileContents'
+	/modules/game_offset/offset.lua:1009: in function 'loadOtmlFile'
+	/modules/game_offset/offset.lua:37: in function </modules/game_offset/offset.lua:33>
+ERROR: protected lua call failed: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x7ff75ed88090
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/mods/game_buffs/buffs.lua:180: in function </mods/game_buffs/buffs.lua:169>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+ERROR: protected lua call failed: C++ call failed: unable to open file '/things/860/Tibia.otml': not found
+stack traceback:
+	[builtin#142]: at 0x7ff75ef39c70
+	[C]: in function 'readFileContents'
+	/modules/game_offset/offset.lua:1009: in function 'loadOtmlFile'
+	/modules/game_offset/offset.lua:37: in function </modules/game_offset/offset.lua:33>
+ERROR: protected lua call failed: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x7ff75ed88090
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/mods/game_buffs/buffs.lua:180: in function </mods/game_buffs/buffs.lua:169>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   Centopeia carapaca de aco = 0.6
+[OutfitScales]   urso feroz = 0.6
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: protected lua call failed: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x7ff6188080a0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/mods/game_buffs/buffs.lua:180: in function </mods/game_buffs/buffs.lua:169>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   Centopeia carapaca de aco = 0.6
+[OutfitScales]   urso feroz = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   Centopeia carapaca de aco = 0.3
+[OutfitScales]   urso feroz = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.3
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.3 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.3 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.3 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.3 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.3 to 'Centopeia carapaca de aco'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Centopeia carapaca de aco'
+[OutfitScales] Applied scale 0.6 to 'Urso feroz'

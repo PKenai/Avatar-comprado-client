@@ -24,6 +24,8 @@
 #include "spritemanager.h"
 #include "game.h"
 #include "lightview.h"
+#include <sstream>
+#include <map>
 
 #include <framework/graphics/graphics.h>
 #include <framework/graphics/texture.h>
@@ -474,20 +476,246 @@ void ThingType::replaceSprites(std::map<uint32_t, ImagePtr>& replacements, std::
     }
 }
 
-void ThingType::unserializeOtml(const OTMLNodePtr& node)
+std::vector<std::string> ThingType::split(const std::string &str, char delimiter)
 {
-    for(const OTMLNodePtr& node2 : node->children()) {
-        if(node2->tag() == "opacity")
-            m_opacity = node2->value<float>();
-        else if(node2->tag() == "notprewalkable")
-            m_attribs.set(ThingAttrNotPreWalkable, node2->value<bool>());
-        else if(node2->tag() == "image")
-            m_customImage = node2->value();
-        else if(node2->tag() == "full-ground") {
-            if(node2->value<bool>())
-                m_attribs.set(ThingAttrFullGround, true);
-            else
-                m_attribs.remove(ThingAttrFullGround);
+    std::vector<std::string> tokens;
+    std::string token;
+    std::istringstream tokenStream(str);
+    while (std::getline(tokenStream, token, delimiter))
+    {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
+
+void ThingType::unserializeOtml(const OTMLNodePtr &node)
+{
+    auto parsePoint = [](const std::string &str) -> Point
+    {
+        auto coords = ThingType::split(str, ' ');
+        if (coords.size() == 2)
+        {
+            return Point(std::stoi(coords[0]), std::stoi(coords[1]));
+        }
+        return Point();
+    };
+
+    auto parseInlineData = [](const std::string &data) -> std::map<std::string, std::string>
+    {
+        std::map<std::string, std::string> result;
+        std::istringstream stream(data);
+        std::string part;
+
+        while (std::getline(stream, part, ','))
+        {
+            auto keyValue = ThingType::split(part, ':');
+            if (keyValue.size() == 2)
+            {
+                std::string key = keyValue[0];
+                std::string value = keyValue[1];
+
+                key.erase(key.find_last_not_of(" \t") + 1);
+                key.erase(0, key.find_first_not_of(" \t"));
+                value.erase(value.find_last_not_of(" \t") + 1);
+                value.erase(0, value.find_first_not_of(" \t"));
+
+                result[key] = value;
+            }
+            else if (keyValue.size() == 1)
+            {
+                result["opacity"] = keyValue[0];
+            }
+        }
+
+        return result;
+    };
+
+    for (const OTMLNodePtr &node2 : node->children())
+    {
+        try
+        {
+            auto rawValue = node2->value<std::string>();
+
+            if (node2->tag() == "item-displacement")
+            {
+                auto attributes = parseInlineData(rawValue);
+                if (attributes.find("opacity") != attributes.end())
+                {
+                    m_opacity = std::stof(attributes["opacity"]);
+                }
+                if (attributes.find("x") != attributes.end())
+                {
+                    m_item_displacement.x = std::stoi(attributes["x"]);
+                }
+                if (attributes.find("y") != attributes.end())
+                {
+                    m_item_displacement.y = std::stoi(attributes["y"]);
+                }
+            }
+            else if (node2->tag() == "effect-displacement")
+            {
+                auto attributes = parseInlineData(rawValue);
+                if (attributes.find("opacity") != attributes.end())
+                {
+                    m_opacity = std::stof(attributes["opacity"]);
+                }
+                if (attributes.find("x") != attributes.end())
+                {
+                    m_effect_displacement.x = std::stoi(attributes["x"]);
+                }
+                if (attributes.find("y") != attributes.end())
+                {
+                    m_effect_displacement.y = std::stoi(attributes["y"]);
+                }
+            }
+            else if (node2->tag() == "target-displacement")
+            {
+                auto attributes = parseInlineData(rawValue);
+                if (attributes.find("North") != attributes.end())
+                {
+                    m_target_displacement_north = parsePoint(attributes["North"]);
+                }
+                if (attributes.find("East") != attributes.end())
+                {
+                    m_target_displacement_east = parsePoint(attributes["East"]);
+                }
+                if (attributes.find("South") != attributes.end())
+                {
+                    m_target_displacement_south = parsePoint(attributes["South"]);
+                }
+                if (attributes.find("West") != attributes.end())
+                {
+                    m_target_displacement_west = parsePoint(attributes["West"]);
+                }
+            }
+            else if (node2->tag() == "outfit-displacement")
+            {
+                auto attributes = parseInlineData(rawValue);
+                if (attributes.find("opacity") != attributes.end())
+                {
+                    m_opacity = std::stof(attributes["opacity"]);
+                }
+                if (attributes.find("North") != attributes.end())
+                {
+                    m_outfit_displacement_north = parsePoint(attributes["North"]);
+                }
+                if (attributes.find("East") != attributes.end())
+                {
+                    m_outfit_displacement_east = parsePoint(attributes["East"]);
+                }
+                if (attributes.find("South") != attributes.end())
+                {
+                    m_outfit_displacement_south = parsePoint(attributes["South"]);
+                }
+                if (attributes.find("West") != attributes.end())
+                {
+                    m_outfit_displacement_west = parsePoint(attributes["West"]);
+                }
+            }
+            else if (node2->tag() == "subOutfitDisplacements")
+            {
+                for (const OTMLNodePtr &subNode : node2->children())
+                {
+                    int subId = std::stoi(subNode->tag());
+                    DisplacementStruct subDisplacement;
+
+                    for (const auto &subChildNode : subNode->children())
+                    {
+                        auto attributes = parseInlineData(subChildNode->value<std::string>());
+
+                        if (subChildNode->tag() == "name-displacement")
+                        {
+                            if (attributes.find("North") != attributes.end())
+                            {
+                                subDisplacement.name_north = parsePoint(attributes["North"]);
+                            }
+                            if (attributes.find("East") != attributes.end())
+                            {
+                                subDisplacement.name_east = parsePoint(attributes["East"]);
+                            }
+                            if (attributes.find("South") != attributes.end())
+                            {
+                                subDisplacement.name_south = parsePoint(attributes["South"]);
+                            }
+                            if (attributes.find("West") != attributes.end())
+                            {
+                                subDisplacement.name_west = parsePoint(attributes["West"]);
+                            }
+                        }
+                        else
+                        {
+                            if (attributes.find("opacity") != attributes.end())
+                            {
+                                subDisplacement.opacity = std::stof(attributes["opacity"]);
+                            }
+                            if (attributes.find("North") != attributes.end())
+                            {
+                                subDisplacement.north = parsePoint(attributes["North"]);
+                            }
+                            if (attributes.find("East") != attributes.end())
+                            {
+                                subDisplacement.east = parsePoint(attributes["East"]);
+                            }
+                            if (attributes.find("South") != attributes.end())
+                            {
+                                subDisplacement.south = parsePoint(attributes["South"]);
+                            }
+                            if (attributes.find("West") != attributes.end())
+                            {
+                                subDisplacement.west = parsePoint(attributes["West"]);
+                            }
+                        }
+                    }
+
+                    m_subOutfitDisplacements[subId] = subDisplacement;
+                }
+            }
+            else if (node2->tag() == "name-displacement")
+            {
+                auto attributes = parseInlineData(rawValue);
+                if (attributes.find("North") != attributes.end())
+                {
+                    m_name_displacement_north = parsePoint(attributes["North"]);
+                }
+                if (attributes.find("East") != attributes.end())
+                {
+                    m_name_displacement_east = parsePoint(attributes["East"]);
+                }
+                if (attributes.find("South") != attributes.end())
+                {
+                    m_name_displacement_south = parsePoint(attributes["South"]);
+                }
+                if (attributes.find("West") != attributes.end())
+                {
+                    m_name_displacement_west = parsePoint(attributes["West"]);
+                }
+            }
+            else if (node2->tag() == "image")
+            {
+                m_customImage = rawValue;
+            }
+            else if (node2->tag() == "full-ground")
+            {
+                if (node2->value<bool>())
+                {
+                    m_attribs.set(ThingAttrFullGround, true);
+                }
+                else
+                {
+                    m_attribs.remove(ThingAttrFullGround);
+                }
+            }
+            else if (node2->tag() == "opacity")
+            {
+                m_opacity = node2->value<float>();
+            }
+            else if (node2->tag() == "notprewalkable")
+            {
+                m_attribs.set(ThingAttrNotPreWalkable, node2->value<bool>());
+            }
+        }
+        catch (const std::exception &)
+        {
         }
     }
 }

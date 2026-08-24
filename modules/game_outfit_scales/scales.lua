@@ -3,6 +3,7 @@
 
 local outfitScales = {
     ["urso feroz"] = 0.6,
+    ["centopeia carapaca de aco"] = 0.6,
 }
 
 function init()

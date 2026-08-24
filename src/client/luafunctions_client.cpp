@@ -42,6 +42,7 @@
 #include "protocolgame.h"
 #include "uiitem.h"
 #include "uicreature.h"
+#include "uieffect.h"
 #include "uigraph.h"
 #include "uimap.h"
 #include "uiminimap.h"
@@ -908,6 +909,13 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<UICreature>("isAnimating", &UICreature::isAnimating);
     g_lua.bindClassMemberFunction<UICreature>("setCenter", &UICreature::setCenter);
     g_lua.bindClassMemberFunction<UICreature>("setOldScaling", &UICreature::setOldScaling);
+
+    g_lua.registerClass<UIEffect, UIWidget>();
+    g_lua.bindClassStaticFunction<UIEffect>("create", []{ return UIEffectPtr(new UIEffect); });
+    g_lua.bindClassMemberFunction<UIEffect>("setEffect", &UIEffect::setEffect);
+    g_lua.bindClassMemberFunction<UIEffect>("getEffect", &UIEffect::getEffect);
+    g_lua.bindClassMemberFunction<UIEffect>("setScale", &UIEffect::setScale);
+    g_lua.bindClassMemberFunction<UIEffect>("getScale", &UIEffect::getScale);
 
     g_lua.registerClass<UIMap, UIWidget>();
     g_lua.bindClassStaticFunction<UIMap>("create", []{ return UIMapPtr(new UIMap); });

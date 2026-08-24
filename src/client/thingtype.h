@@ -33,6 +33,8 @@
 #include <framework/graphics/drawqueue.h>
 #include <framework/luaengine/luaobject.h>
 #include <framework/net/server.h>
+#include <map>
+#include <string>
 
 enum NewDrawType : uint8 {
     NewDrawNormal = 0,
@@ -166,15 +168,29 @@ struct DrawOutfitParams {
     Color color;
 };
 
+struct DisplacementStruct
+{
+    Point north;
+    Point east;
+    Point south;
+    Point west;
+
+    Point name_north;
+    Point name_east;
+    Point name_south;
+    Point name_west;
+
+    float opacity = 1.0f;
+};
+
 class ThingType : public LuaObject
 {
 public:
     ThingType();
 
-    void unserialize(uint16 clientId, ThingCategory category, const FileStreamPtr& fin);
-    void unserializeOtml(const OTMLNodePtr& node);
+    void unserialize(uint16 clientId, ThingCategory category, const FileStreamPtr& fin);    void unserializeOtml(const OTMLNodePtr& node);
     void unload();
-
+    const std::map<int, DisplacementStruct>& getSubOutfitDisplacements() const { return m_subOutfitDisplacements; }
     void serialize(const FileStreamPtr& fin);
     void exportImage(std::string fileName);
     void replaceSprites(std::map<uint32_t, ImagePtr>& replacements, std::string fileName);
@@ -213,6 +229,81 @@ public:
     int getDisplacementY() { return getDisplacement().y; }
     int getElevation() { return m_elevation; }
     const Point& getBones(int direction) { return m_bones[direction]; }
+
+    Point getOutfitDisplacementByDirection(Otc::Direction direction) const
+    {
+        switch (direction)
+        {
+        case Otc::North:
+            return m_outfit_displacement_north;
+        case Otc::NorthEast:
+            return m_outfit_displacement_east;
+        case Otc::NorthWest:
+            return m_outfit_displacement_west;
+        case Otc::East:
+            return m_outfit_displacement_east;
+        case Otc::West:
+            return m_outfit_displacement_west;
+        case Otc::South:
+            return m_outfit_displacement_south;
+        case Otc::SouthEast:
+            return m_outfit_displacement_east;
+        case Otc::SouthWest:
+            return m_outfit_displacement_west;
+        default:
+            return Point(0, 0);
+        }
+    }
+
+    Point getNameDisplacementByDirection(Otc::Direction direction) const
+    {
+        switch (direction)
+        {
+        case Otc::North:
+            return m_name_displacement_north;
+        case Otc::NorthEast:
+            return m_name_displacement_east;
+        case Otc::NorthWest:
+            return m_name_displacement_west;
+        case Otc::East:
+            return m_name_displacement_east;
+        case Otc::West:
+            return m_name_displacement_west;
+        case Otc::South:
+            return m_name_displacement_south;
+        case Otc::SouthEast:
+            return m_name_displacement_east;
+        case Otc::SouthWest:
+            return m_name_displacement_west;
+        default:
+            return Point(0, 0);
+        }
+    }
+
+    Point getTargetDisplacementByDirection(Otc::Direction direction) const
+    {
+        switch (direction)
+        {
+        case Otc::North:
+            return m_target_displacement_north;
+        case Otc::NorthEast:
+            return m_target_displacement_east;
+        case Otc::NorthWest:
+            return m_target_displacement_west;
+        case Otc::East:
+            return m_target_displacement_east;
+        case Otc::West:
+            return m_target_displacement_west;
+        case Otc::South:
+            return m_target_displacement_south;
+        case Otc::SouthEast:
+            return m_target_displacement_east;
+        case Otc::SouthWest:
+            return m_target_displacement_west;
+        default:
+            return Point(0, 0);
+        }
+    }
 
     int getGroundSpeed() { return m_attribs.get<uint16>(ThingAttrGround); }
     int getMaxTextLength() { return m_attribs.has(ThingAttrWritableOnce) ? m_attribs.get<uint16>(ThingAttrWritableOnce) : m_attribs.get<uint16>(ThingAttrWritable); }
@@ -265,6 +356,11 @@ public:
     std::vector<int> getSprites() { return m_spritesIndex; }
 
     // additional
+    Point getOutfitDisplacement() { return m_outfit_displacement; }
+    Point getTargetDisplacement() { return m_target_displacement; }
+    Point getEffectDisplacement() { return m_effect_displacement; }
+    Point getItemDisplacement() const { return m_item_displacement; }
+    Point getNameDisplacement() { return m_name_displacement; }
     float getOpacity() { return m_opacity; }
     bool isNotPreWalkable() { return m_attribs.has(ThingAttrNotPreWalkable); }
     void setPathable(bool var);
@@ -275,6 +371,7 @@ private:
     Size getBestTextureDimension(int w, int h, int count);
     uint getSpriteIndex(int w, int h, int l, int x, int y, int z, int a);
     uint getTextureIndex(int l, int x, int y, int z);
+    static std::vector<std::string> split(const std::string& str, char delimiter);
 
     ThingCategory m_category;
     uint16 m_id;
@@ -292,6 +389,23 @@ private:
     int m_numPatternX, m_numPatternY, m_numPatternZ;
     int m_layers;
     int m_elevation;
+    Point m_outfit_displacement;
+    Point m_target_displacement;
+    Point m_effect_displacement;
+    Point m_item_displacement;
+    Point m_outfit_displacement_north;
+    Point m_outfit_displacement_east;
+    Point m_outfit_displacement_south;
+    Point m_outfit_displacement_west;
+    Point m_name_displacement;
+    Point m_name_displacement_north;
+    Point m_name_displacement_east;
+    Point m_name_displacement_south;
+    Point m_name_displacement_west;
+    Point m_target_displacement_north;
+    Point m_target_displacement_east;
+    Point m_target_displacement_south;
+    Point m_target_displacement_west;
     float m_opacity;
     std::string m_customImage;
 
@@ -304,6 +418,7 @@ private:
 
     bool m_loaded = false;
     time_t m_lastUsage;
+    std::map<int, DisplacementStruct> m_subOutfitDisplacements;
 };
 
 struct DrawQueueItemThingWithShader : public DrawQueueItemTexturedRect {
