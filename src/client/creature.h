@@ -60,6 +60,8 @@ public:
     void setDirection(Otc::Direction direction);
     void setOutfit(const Outfit& outfit);
     void setOutfitColor(const Color& color, int duration);
+    void setOutfitScale(float scale) { m_outfit.setScale(scale); }
+    float getOutfitScale() { return m_outfit.getScale(); }
     void setLight(const Light& light) { m_light = light; }
     void setSpeed(uint16 speed);
     void setBaseSpeed(double baseSpeed);

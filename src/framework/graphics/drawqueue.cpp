@@ -411,6 +411,27 @@ void DrawQueue::correctOutfit(const Rect& dest, int fromPos, bool oldScaling)
     }
 }
 
+void DrawQueue::scaleOutfit(int fromPos, float scale)
+{
+    std::vector<Rect*> rects;
+    for (size_t i = fromPos; i < m_queue.size(); ++i) {
+        if (DrawQueueItemTexturedRect* texture = dynamic_cast<DrawQueueItemTexturedRect*>(m_queue[i]))
+            rects.push_back(&texture->m_dest);
+    }
+    if (rects.empty()) return;
+
+    float cx = 0, cy = 0;
+    for (auto* r : rects) { cx += r->center().x; cy += r->center().y; }
+    cx /= rects.size(); cy /= rects.size();
+
+    for (auto* r : rects) {
+        float dx = r->center().x - cx, dy = r->center().y - cy;
+        *r = Rect(cx + dx * scale - r->width() * scale / 2.0f,
+                  cy + dy * scale - r->height() * scale / 2.0f,
+                  r->width() * scale, r->height() * scale);
+    }
+}
+
 void DrawQueue::draw(DrawType drawType)
 {
     size_t start = 0;

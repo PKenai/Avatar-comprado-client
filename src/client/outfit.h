@@ -56,6 +56,7 @@ public:
     void setHealthBar(uint8 id) { m_healthBar = id; }
     void setManaBar(uint8 id) { m_manaBar = id; }
     void setCenter(bool value) { m_center = value; }
+    void setScale(float scale) { m_scale = scale; }
 
     void resetClothes();
     void resetShader() { m_shader = ""; }
@@ -74,6 +75,7 @@ public:
     std::string getShader() const { return m_shader; }
     int getHealthBar() const { return m_healthBar; }
     int getManaBar() const { return m_manaBar; }
+    float getScale() const { return m_scale; }
 
 private:
     ThingCategory m_category = ThingCategoryCreature;
@@ -81,6 +83,7 @@ private:
     int m_healthBar = 0, m_manaBar = 0;
     std::string m_shader;
     bool m_center = false;
+    float m_scale = 1.0f;
 };
 
 struct DrawQueueItemOutfit : public DrawQueueItemTexturedRect {

@@ -538,6 +538,8 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<Creature>("setOutfit", &Creature::setOutfit);
     g_lua.bindClassMemberFunction<Creature>("getOutfit", &Creature::getOutfit);
     g_lua.bindClassMemberFunction<Creature>("setOutfitColor", &Creature::setOutfitColor);
+    g_lua.bindClassMemberFunction<Creature>("setOutfitScale", &Creature::setOutfitScale);
+    g_lua.bindClassMemberFunction<Creature>("getOutfitScale", &Creature::getOutfitScale);
     g_lua.bindClassMemberFunction<Creature>("getDirection", &Creature::getDirection);
     g_lua.bindClassMemberFunction<Creature>("getWalkDirection", &Creature::getWalkDirection);
     g_lua.bindClassMemberFunction<Creature>("getStepDuration", &Creature::getStepDuration);

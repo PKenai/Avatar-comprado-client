@@ -154,42 +154,171 @@ void Creature::drawOutfit(const Rect& destRect, Otc::Direction direction, const 
     m_outfit.draw(destRect, direction, 0, animate, ui, oldScaling);
 }
 
+// Cached textures for ping-bar (player HP/MP segmented bar above head)
+static TexturePtr s_pingBgTex;
+static TexturePtr s_pingOutlineTex;
+static TexturePtr s_pingLocalTex;
+static TexturePtr s_pingOthersTex;
+static bool s_pingTexLoaded = false;
+
+static void ensurePingTextures()
+{
+    if (s_pingTexLoaded)
+        return;
+    s_pingTexLoaded = true;
+    s_pingBgTex = g_textures.getTexture("/data/images/bars/frame-bg.png");
+    s_pingOutlineTex = g_textures.getTexture("/data/images/bars/frame-outline.png");
+    s_pingLocalTex = g_textures.getTexture("/data/images/bars/ping.png");
+    s_pingOthersTex = g_textures.getTexture("/data/images/bars/ping-others.png");
+    if (s_pingLocalTex) s_pingLocalTex->setSmooth(false);
+    if (s_pingOthersTex) s_pingOthersTex->setSmooth(false);
+}
+
 void Creature::drawInformation(const Point& point, bool useGray, const Rect& parentRect, int drawFlags)
 {
     if (!g_game.getFeature(Otc::GameOldInformationBar) && g_game.getClientVersion() >= 760) {
-        if (m_healthPercent < 1)  // creature is dead, we get rid of its information bar
+        if (m_healthPercent < 1)
             return;
     }
 
-    Color fillColor = Color(96, 96, 96);
+    // Common name positioning variables (used by both paths)
+    Size nameSize = m_nameCache.getTextSize();
+    Rect textRect = Rect(point.x + m_informationOffset.x - nameSize.width() / 2.0,
+                         point.y + m_informationOffset.y - 17, nameSize);
+    textRect.bind(parentRect);
 
-    if (!useGray)
-        fillColor = m_informationColor;
+    uint32 offset = 12;
+    if (isLocalPlayer())
+        offset *= 2;
 
-    // calculate main rects - hp/mana
-    Rect backgroundRect = Rect(point.x + m_informationOffset.x - (13.5), point.y + m_informationOffset.y, 27, 4);
-    backgroundRect.bind(parentRect);
-
-    //debug            
+    // debug text
     if (g_extras.debugWalking) {
         int footDelay = (getStepDuration(true)) / 3;
         int footAnimPhases = getWalkAnimationPhases() - 1;
         m_nameCache.setText(stdext::format("%i %i %i %i %i\n %i %i\n%i %i %i\n%i %i %i %i %i",
             (int)m_stepDuration, (int)getStepDuration(true), getStepDuration(false), (int)m_walkedPixels, (int)m_walkTimer.ticksElapsed(),
-                                           (int)m_walkOffset.x, (int)m_walkOffset.y,
-                                           (int)m_speed, (int)getTile()->getGroundSpeed(), (int)g_game.getWalkId(),
-                                           (int)(g_clock.millis() - m_footLastStep), (int)footDelay, (int)footAnimPhases, (int)m_walkAnimationPhase, (int)stdext::millis()));
+            (int)m_walkOffset.x, (int)m_walkOffset.y,
+            (int)m_speed, (int)getTile()->getGroundSpeed(), (int)g_game.getWalkId(),
+            (int)(g_clock.millis() - m_footLastStep), (int)footDelay, (int)footAnimPhases, (int)m_walkAnimationPhase, (int)stdext::millis()));
+        nameSize = m_nameCache.getTextSize();
+        textRect = Rect(point.x + m_informationOffset.x - nameSize.width() / 2.0,
+                        point.y + m_informationOffset.y - 17, nameSize);
+        textRect.bind(parentRect);
     }
 
-    Size nameSize = m_nameCache.getTextSize();
-    Rect textRect = Rect(point.x + m_informationOffset.x - nameSize.width() / 2.0, point.y + m_informationOffset.y - 12, nameSize);
-    textRect.bind(parentRect);
+    Color fillColor = useGray ? Color(96, 96, 96) : m_informationColor;
 
-    // distance them
-    uint32 offset = 12;
-    if (isLocalPlayer()) {
-        offset *= 2;
-    }
+    // --- Ping-bar path: only for Player (local + other), not Monster/NPC ---
+    const bool usePingBar = isPlayer();
+    Rect barBackgroundRect; // shared: ping frame or original bg, used for icons
+
+    if (usePingBar && (drawFlags & Otc::DrawBars)) {
+        ensurePingTextures();
+
+        const int frameW = 64;
+        const int frameH = 16;
+        // frame rect: centered below name
+        Rect frameRect(point.x + m_informationOffset.x - frameW / 2.0,
+                       textRect.bottom() + 4, frameW, frameH);
+        frameRect.bind(parentRect);
+
+        if (textRect.top() == parentRect.top())
+            frameRect.moveTop(textRect.top() + offset);
+        if (frameRect.bottom() == parentRect.bottom())
+            textRect.moveTop(frameRect.top() - offset);
+
+        barBackgroundRect = frameRect; // for icons
+
+        // 1. frame-bg (extended to cover mana area below)
+        if (s_pingBgTex)
+            g_drawQueue->addTexturedRect(frameRect, s_pingBgTex, Rect(0, 0, frameW, frameH));
+        else
+            g_drawQueue->addFilledRect(frameRect, Color(30, 30, 30));
+
+
+        // 2. HP tiles — 7 pips, each 8px wide, 1px gap
+        const int pipW = 8;
+        const int pipGap = 1;
+        const int pipH = 8;
+
+        const int numPips = 7; // always 7 pips, icon is outside the frame
+
+        const int baseX = frameRect.x() + 1; // +1 to stay inside the 1px frame border
+        const int baseY = frameRect.y() + 4;
+
+        if (m_healthPercent > 0) {
+            const double hpFrac = m_healthPercent / 100.0;
+            const double hpPipFrac = numPips * hpFrac;
+            const int fullPips = static_cast<int>(hpPipFrac);
+            const int partialW = static_cast<int>((hpPipFrac - fullPips) * pipW);
+
+            // Colors from ping.png gradient — pure green/purple, no teal
+            Color pipTop, pipMid, pipBot;
+            if (isLocalPlayer()) {
+                pipTop = Color(0xF3, 0xFC, 0x5F);
+                pipMid = Color(0x64, 0xA6, 0x36);
+                pipBot = Color(0x21, 0x4C, 0x22);
+            } else {
+                pipTop = Color(0x67, 0x5F, 0xFC);
+                pipMid = Color(0x78, 0x36, 0xA5);
+                pipBot = Color(0x4C, 0x21, 0x4B);
+            }
+
+            for (int i = 0; i < numPips; i++) {
+                int x = baseX + i * (pipW + pipGap);
+                int drawW = 0;
+                if (i < fullPips) {
+                    drawW = pipW;
+                } else if (i == fullPips && partialW > 0) {
+                    drawW = partialW;
+                }
+                if (drawW > 0) {
+                    // Vertical gradient: top 3px bright, mid 3px medium, bot 2px dark
+                    g_drawQueue->addFilledRect(Rect(x, baseY, drawW, 3), pipTop);
+                    g_drawQueue->addFilledRect(Rect(x, baseY + 3, drawW, 3), pipMid);
+                    g_drawQueue->addFilledRect(Rect(x, baseY + 6, drawW, 2), pipBot);
+                }
+            }
+        }
+
+        // 3. experience bar — yellow with black bg, directly above the HP pips
+        if (isLocalPlayer() && (drawFlags & Otc::DrawManaBar)) {
+            LocalPlayerPtr player = g_game.getLocalPlayer();
+            if (player) {
+                const int xpPercent = static_cast<int>(player->getLevelPercent());
+                const int xpW = frameW - 2;
+                const int xpH = 2;
+                const int xpX = frameRect.x() + 1;
+                const int xpY = frameRect.y() + 4 - xpH - 1; // 1px above the HP pips
+                // black background (full width)
+                g_drawQueue->addFilledRect(Rect(xpX, xpY, xpW, xpH), Color::black);
+                // yellow fill
+                if (xpPercent > 0) {
+                    const int xpDrawW = std::max(1, static_cast<int>(xpW * (xpPercent / 100.0)));
+                    g_drawQueue->addFilledRect(Rect(xpX, xpY, xpDrawW, 1), Color(0xFF, 0xD7, 0x00));
+                    g_drawQueue->addFilledRect(Rect(xpX, xpY + 1, xpDrawW, 1), Color(0xCC, 0xA8, 0x00));
+                }
+            }
+        }
+
+        // 4. frame-outline (last!)
+        if (s_pingOutlineTex)
+            g_drawQueue->addTexturedRect(frameRect, s_pingOutlineTex, Rect(0, 0, frameW, frameH));
+
+        // progress bar (if active)
+        if (getProgressBarPercent()) {
+            Rect pbBg(frameRect.x(), frameRect.bottom() + 1, frameW, 4);
+            g_drawQueue->addFilledRect(pbBg, Color::black);
+            Rect pbFill = pbBg.expanded(-1);
+            pbFill.setWidth(getProgressBarPercent() / 100.0 * (frameW - 2));
+            g_drawQueue->addFilledRect(pbFill, Color::white);
+        }
+
+    } else {
+
+    // --- Original bar path (monsters, NPCs, fallback) ---
+    Rect backgroundRect = Rect(point.x + m_informationOffset.x - (13.5), point.y + m_informationOffset.y, 27, 4);
+    backgroundRect.bind(parentRect);
 
     if (textRect.top() == parentRect.top())
         backgroundRect.moveTop(textRect.top() + offset);
@@ -213,11 +342,11 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
         backgroundRect.moveLeft(backgroundRect.left() + healthBar->getBarOffset().x);
     }
 
-    // health rect is based on background rect, so no worries
+    barBackgroundRect = backgroundRect; // for icons (after healthBar mods)
+
     Rect healthRect = backgroundRect.expanded(-1);
     healthRect.setWidth((m_healthPercent / 100.0) * 25);
 
-    // draw
     if (g_game.getFeature(Otc::GameBlueNpcNameColor) && isNpc() && m_healthPercent == 100 && !useGray)
         fillColor = Color(0x66, 0xcc, 0xff);
 
@@ -281,6 +410,9 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
         }
     }
 
+    } // end original bar path
+
+    // --- Name drawing (both paths) ---
     if (drawFlags & Otc::DrawNames) {
         if (m_useNameHighlight) {
             float speed = 0.005f;
@@ -310,28 +442,33 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
     if (!(drawFlags & Otc::DrawIcons))
         return;
 
+    // --- Icons ---
+    // barBackgroundRect is the frame (ping) or backgroundRect (original)
     if (m_skull != Otc::SkullNone && m_skullTexture) {
-        Rect skullRect = Rect(backgroundRect.x() + 13.5 + 12, backgroundRect.y() + 5, m_skullTexture->getSize());
+        Rect skullRect = Rect(barBackgroundRect.x() + 13.5 + 12, barBackgroundRect.y() + 5, m_skullTexture->getSize());
         g_drawQueue->addTexturedRect(skullRect, m_skullTexture, Rect(0, 0, m_skullTexture->getSize()));
     }
     if (m_shield != Otc::ShieldNone && m_shieldTexture && m_showShieldTexture) {
-        Rect shieldRect = Rect(backgroundRect.x() + 13.5, backgroundRect.y() + 5, m_shieldTexture->getSize());
+        Rect shieldRect = Rect(barBackgroundRect.x() + 13.5, barBackgroundRect.y() + 5, m_shieldTexture->getSize());
         g_drawQueue->addTexturedRect(shieldRect, m_shieldTexture, Rect(0, 0, m_shieldTexture->getSize()));
     }
     if (m_emblem != Otc::EmblemNone && m_emblemTexture) {
-        Rect emblemRect = Rect(backgroundRect.x() + 13.5 + 12, backgroundRect.y() + 16, m_emblemTexture->getSize());
+        Rect emblemRect = Rect(barBackgroundRect.x() + 13.5 + 12, barBackgroundRect.y() + 16, m_emblemTexture->getSize());
         g_drawQueue->addTexturedRect(emblemRect, m_emblemTexture, Rect(0, 0, m_emblemTexture->getSize()));
     }
     if (m_vocationEmblem != Otc::VocationEmblemNone && m_vocationEmblemTexture) {
-        Rect vocationEmblemRect = Rect(backgroundRect.x() + 34, backgroundRect.y() + 1.5, m_vocationEmblemTexture->getSize());
-        g_drawQueue->addTexturedRect(vocationEmblemRect, m_vocationEmblemTexture, Rect(0, 0, m_vocationEmblemTexture->getSize()));
+        Size vocationSize = m_vocationEmblemTexture->getSize();
+        // Draw OUTSIDE the frame, to the right, vertically centered
+        int vx = barBackgroundRect.right() + 2;
+        int vy = barBackgroundRect.y() + (barBackgroundRect.height() - vocationSize.height()) / 2;
+        g_drawQueue->addTexturedRect(Rect(vx, vy, vocationSize), m_vocationEmblemTexture, Rect(0, 0, vocationSize));
     }
     if (m_type != Proto::CreatureTypeUnknown && m_typeTexture) {
-        Rect typeRect = Rect(backgroundRect.x() + 13.5 + 12 + 12, backgroundRect.y() + 16, m_typeTexture->getSize());
+        Rect typeRect = Rect(barBackgroundRect.x() + 13.5 + 12 + 12, barBackgroundRect.y() + 16, m_typeTexture->getSize());
         g_drawQueue->addTexturedRect(typeRect, m_typeTexture, Rect(0, 0, m_typeTexture->getSize()));
     }
     if (m_icon != Otc::NpcIconNone && m_iconTexture) {
-        Rect iconRect = Rect(backgroundRect.x() + 13.5 + 12, backgroundRect.y() + 5, m_iconTexture->getSize());
+        Rect iconRect = Rect(barBackgroundRect.x() + 13.5 + 12, barBackgroundRect.y() + 5, m_iconTexture->getSize());
         g_drawQueue->addTexturedRect(iconRect, m_iconTexture, Rect(0, 0, m_iconTexture->getSize()));
     }
 }
@@ -340,6 +477,7 @@ bool Creature::isInsideOffset(Point offset)
 {
     // for worse precision:
     // Rect rect(getDrawOffset() - (m_walking ? m_walkOffset : Point(0,0)), Size(Otc::TILE_PIXELS - getDisplacementY(), Otc::TILE_PIXELS - getDisplacementX()));
+
     Rect rect(getDrawOffset() - getDisplacement(), Size(g_sprites.spriteSize(), g_sprites.spriteSize()));
     return rect.contains(offset);
 }
@@ -481,7 +619,7 @@ void Creature::onDisappear()
 
     m_oldPosition = m_position;
 
-    // a pair onDisappear and onAppear events are fired even when creatures walks or turns,
+    // a pair of onDisappear and onAppear events are fired even when creatures walks or turns,
     // so we must filter
     auto self = static_self_cast<Creature>();
     m_disappearEvent = g_dispatcher.addEvent([self] {
@@ -575,8 +713,7 @@ void Creature::updateWalkingTile()
     // determine new walking tile
     TilePtr newWalkingTile;
     Rect virtualCreatureRect(g_sprites.spriteSize() + (m_walkOffset.x - getDisplacementX()),
-        g_sprites.spriteSize() + (m_walkOffset.y - getDisplacementY()),
-        g_sprites.spriteSize(), g_sprites.spriteSize());
+        g_sprites.spriteSize() + (m_walkOffset.y - getDisplacementY()), g_sprites.spriteSize(), g_sprites.spriteSize());
     for (int xi = -1; xi <= 1 && !newWalkingTile; ++xi) {
         for (int yi = -1; yi <= 1 && !newWalkingTile; ++yi) {
             Rect virtualTileRect((xi + 1) * g_sprites.spriteSize(), (yi + 1) * g_sprites.spriteSize(), g_sprites.spriteSize(), g_sprites.spriteSize());
@@ -723,6 +860,7 @@ void Creature::setDirection(Otc::Direction direction)
 void Creature::setOutfit(const Outfit& outfit)
 {
     Outfit oldOutfit = m_outfit;
+    float savedScale = m_outfit.getScale();
     if (outfit.getCategory() != ThingCategoryCreature) {
         if (!g_things.isValidDatId(outfit.getAuxId(), outfit.getCategory()))
             return;
@@ -734,6 +872,7 @@ void Creature::setOutfit(const Outfit& outfit)
         if (outfit.getId() > 0 && !g_things.isValidDatId(outfit.getId(), ThingCategoryCreature))
             return;
         m_outfit = outfit;
+        m_outfit.setScale(savedScale);
     }
     m_walkAnimationPhase = 0; // might happen when player is walking and outfit is changed.
 
@@ -786,7 +925,6 @@ void Creature::setBaseSpeed(double baseSpeed)
     if (m_baseSpeed != baseSpeed) {
         double oldBaseSpeed = m_baseSpeed;
         m_baseSpeed = baseSpeed;
-
         callLuaField("onBaseSpeedChange", baseSpeed, oldBaseSpeed);
     }
 }
@@ -994,7 +1132,7 @@ Point Creature::getDisplacement()
         return Point(0, 0);
 
     if (m_outfit.getMount() != 0) {
-        auto datType = g_things.rawGetThingType(m_outfit.getMount(), ThingCategoryCreature);
+        auto datType = g_things.rawGetThingType(m_outfit.getMount(), m_outfit.getCategory());
         return datType->getDisplacement() * g_sprites.getOffsetFactor();
     }
 
@@ -1009,7 +1147,7 @@ int Creature::getDisplacementX()
         return 0;
 
     if (m_outfit.getMount() != 0) {
-        auto datType = g_things.rawGetThingType(m_outfit.getMount(), ThingCategoryCreature);
+        auto datType = g_things.rawGetThingType(m_outfit.getMount(), m_outfit.getCategory());
         return datType->getDisplacementX() * g_sprites.getOffsetFactor();
     }
 
@@ -1024,7 +1162,7 @@ int Creature::getDisplacementY()
         return 0;
 
     if (m_outfit.getMount() != 0) {
-        auto datType = g_things.rawGetThingType(m_outfit.getMount(), ThingCategoryCreature);
+        auto datType = g_things.rawGetThingType(m_outfit.getMount(), m_outfit.getCategory());
         if (datType) {
             return datType->getDisplacementY() * g_sprites.getOffsetFactor();
         }

@@ -352,6 +352,7 @@ public:
         mapPosition = m_queue.size();
     }
     void correctOutfit(const Rect& dest, int fromPos, bool oldScaling);
+    void scaleOutfit(int fromPos, float scale);
 
     void setShader(const std::string& shader)
     {

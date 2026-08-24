@@ -44,6 +44,8 @@ Outfit::Outfit()
 
 void Outfit::draw(Point dest, Otc::Direction direction, uint walkAnimationPhase, bool animate, LightView* lightView, bool ui)
 {
+    int drawQueueSize = g_drawQueue->size();
+
     // direction correction
     if (m_category != ThingCategoryCreature)
         direction = Otc::North;
@@ -309,6 +311,11 @@ void Outfit::draw(Point dest, Otc::Direction direction, uint walkAnimationPhase,
             auraType->draw(dest + Point(15, 15), 0, Otc::South, 0, 0, auraAnimationPhase, Color::white, lightView);
         }
     }
+
+    // Apply per-outfit scale: scale all draw queue items around their collective center
+    if (m_scale != 1.0f) {
+        g_drawQueue->scaleOutfit(drawQueueSize, m_scale);
+    }
 }
 
 void Outfit::draw(const Rect& dest, Otc::Direction direction, uint animationPhase, bool animate, bool ui, bool oldScaling)
@@ -322,6 +329,7 @@ void Outfit::drawShadow(Point dest, Otc::Direction direction, uint walkAnimation
 {
     size_t drawStart = g_drawQueue->size();
     Outfit shadowOutfit = *this;
+    shadowOutfit.m_scale = 1.0f;  // shadows should not be scaled separately
     shadowOutfit.draw(dest, direction, walkAnimationPhase, animate, nullptr, false);
     g_drawQueue->setShadow(drawStart);
     const float clampedOpacity = std::max(0.f, std::min(1.f, opacity));

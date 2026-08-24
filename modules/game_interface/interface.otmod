@@ -34,6 +34,7 @@ Module
     - game_itemfly
     - game_controller
     - game_notification
-    
+    - game_outfit_scales
+
   @onLoad: init()
   @onUnload: terminate()
