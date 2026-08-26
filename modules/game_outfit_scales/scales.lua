@@ -1,9 +1,10 @@
--- Outfit Scales Module
--- Define creature name -> scale factor mappings below.
-
 local outfitScales = {
     ["urso feroz"] = 0.6,
     ["centopeia carapaca de aco"] = 0.6,
+    ["lobo selvagem"] = 0.8,
+    ["vacaceronte"] = 0.6,
+    ["crocodilo do deserto"] = 0.6,
+    ["caracol gigante"] = 0.6,
 }
 
 function init()
