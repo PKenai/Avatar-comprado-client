@@ -601,6 +601,18 @@ void Client::registerLuaFunctions()
     // progress bar
     g_lua.bindClassMemberFunction<Creature>("setProgressBar", &Creature::setProgressBar);
     g_lua.bindClassMemberFunction<Creature>("getProgressBarPercent", &Creature::getProgressBarPercent);
+
+    // Heal Cut (Grievous Wounds)
+    g_lua.bindClassMemberFunction<Creature>("setHealCut", &Creature::setHealCut);
+    g_lua.bindClassMemberFunction<Creature>("isHealCut", &Creature::isHealCut);
+
+    // Hungry Icon
+    g_lua.bindClassMemberFunction<Creature>("setHungry", &Creature::setHungry);
+    g_lua.bindClassMemberFunction<Creature>("isHungry", &Creature::isHungry);
+
+    // No Mana Icon
+    g_lua.bindClassMemberFunction<Creature>("setNoMana", &Creature::setNoMana);
+    g_lua.bindClassMemberFunction<Creature>("isNoMana", &Creature::isNoMana);
     
 
     g_lua.registerClass<ItemType>();

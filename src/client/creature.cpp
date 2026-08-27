@@ -72,6 +72,12 @@ Creature::Creature() : Thing()
     m_outfitColor = Color::white;
     m_progressBarPercent = 0;
     m_progressBarUpdateEvent = nullptr;
+    m_healCut = false;
+    m_healCutTexture = g_textures.getTexture("/data/images/miniicons/healcut");
+    m_hungry = false;
+    m_hungryTexture = g_textures.getTexture("/data/images/miniicons/hungry");
+    m_noMana = false;
+    m_noManaTexture = g_textures.getTexture("/data/images/miniicons/nomana");
     g_stats.addCreature();
 }
 
@@ -505,6 +511,25 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
         Rect iconRect = Rect(barBackgroundRect.x() + 13.5 + 12, barBackgroundRect.y() + 5, m_iconTexture->getSize());
         g_drawQueue->addTexturedRect(iconRect, m_iconTexture, Rect(0, 0, m_iconTexture->getSize()));
     }
+
+    // Heal Cut icon (Grievous Wounds) - drawn above the name
+    if (m_healCut && m_healCutTexture) {
+        Rect healCutRect(textRect.horizontalCenter() - 5, textRect.top() - 12, 10, 10);
+        g_drawQueue->addTexturedRect(healCutRect, m_healCutTexture, Rect(0, 0, m_healCutTexture->getSize()), Color::white);
+    }    // Hungry icon - drawn above the name
+    if (m_hungry && m_hungryTexture) {
+        int offsetX = m_healCut ? 12 : 0;
+        Rect hungryRect(textRect.horizontalCenter() - 5 + offsetX, textRect.top() - 12, 10, 10);
+        g_drawQueue->addTexturedRect(hungryRect, m_hungryTexture, Rect(0, 0, m_hungryTexture->getSize()), Color::white);
+    }
+
+    // No Mana icon - drawn above the name
+    if (m_noMana && m_noManaTexture) {
+        int offsetX = (m_healCut ? 12 : 0) + (m_hungry ? 12 : 0);
+        Rect noManaRect(textRect.horizontalCenter() - 5 + offsetX, textRect.top() - 12, 10, 10);
+        g_drawQueue->addTexturedRect(noManaRect, m_noManaTexture, Rect(0, 0, m_noManaTexture->getSize()), Color::white);
+    }
+
 }
 
 bool Creature::isInsideOffset(Point offset)
@@ -1044,6 +1069,21 @@ void Creature::setSpeedFormula(double speedA, double speedB, double speedC)
     m_speedFormula[Otc::SpeedFormulaA] = speedA;
     m_speedFormula[Otc::SpeedFormulaB] = speedB;
     m_speedFormula[Otc::SpeedFormulaC] = speedC;
+}
+
+void Creature::setHealCut(bool healCut)
+{
+    m_healCut = healCut;
+}
+
+void Creature::setHungry(bool hungry)
+{
+    m_hungry = hungry;
+}
+
+void Creature::setNoMana(bool noMana)
+{
+    m_noMana = noMana;
 }
 
 bool Creature::hasSpeedFormula()

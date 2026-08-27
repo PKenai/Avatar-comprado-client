@@ -79,6 +79,12 @@ public:
     void setIconTexture(const std::string& filename);
     void setPassable(bool passable) { m_passable = passable; }
     void setSpeedFormula(double speedA, double speedB, double speedC);
+    void setHealCut(bool healCut);
+    bool isHealCut() { return m_healCut; }
+    void setHungry(bool hungry);
+    bool isHungry() { return m_hungry; }
+    void setNoMana(bool noMana);
+    bool isNoMana() { return m_noMana; }
 
     void addTimedSquare(uint8 color);
     void removeTimedSquare() { m_showTimedSquare = false; }
@@ -310,6 +316,18 @@ protected:
     uint8 m_progressBarPercent;
     ScheduledEventPtr m_progressBarUpdateEvent;
     Timer m_progressBarTimer;
+
+    // Heal Cut (Grievous Wounds)
+    bool m_healCut = false;
+    TexturePtr m_healCutTexture;
+
+    // Hungry Icon
+    bool m_hungry = false;
+    TexturePtr m_hungryTexture;
+
+    // No Mana Icon
+    bool m_noMana = false;
+    TexturePtr m_noManaTexture;
 };
 
 // @bindclass

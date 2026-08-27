@@ -9312,3 +9312,291 @@ stack traceback:
 	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
 [OutfitScales] Applied scale 0.8 to 'Lobo selvagem'
 [OutfitScales] Applied scale 0.8 to 'Lobo selvagem'
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:217: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:217: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+[OutfitScales] Applied scale 0.6 to 'Vacaceronte'
+Exiting application..
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[HEALCUT] Module initialized. Opcodes 108/109/110 registered.
+[HEALCUT] onNoMana opcode=110 buffer=268439378,0
+ERROR: protected lua call failed: /modules/game_healcut/game_healcut.lua:35: attempt to call a nil value
+stack traceback:
+	[C]: at 0x7ff7b2ef86f0
+	/modules/game_healcut/game_healcut.lua:35: in function 'handleIcon'
+	/modules/game_healcut/game_healcut.lua:52: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[HEALCUT] Module initialized. Opcodes 108/109/110 registered.
+[HEALCUT] onNoMana opcode=110 buffer=268439382,1
+Exiting application..
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[HEALCUT] Module initialized. Opcodes 108/109/110 registered.
+[HEALCUT] onHungry opcode=109 buffer=268439384,0
+[HEALCUT] onNoMana opcode=110 buffer=268439384,0
+[HEALCUT] onHungry opcode=109 buffer=268439385,1
+[HEALCUT] onNoMana opcode=110 buffer=268439385,1
