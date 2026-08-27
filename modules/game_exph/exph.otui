@@ -39,7 +39,7 @@ MiniWindow
   !text: tr('XP Statistics')
   color: #8F8F8F
   height: 70
-  icon: /images/topbuttons/analyzers
+  icon: /images/topbuttons/EXP
   @onClose: modules.game_exph.onMiniWindowClose()
   &save: true
 
