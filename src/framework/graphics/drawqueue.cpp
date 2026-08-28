@@ -97,6 +97,25 @@ void DrawQueueItemTexturedRect::draw()
         g_painter->resetShaderProgram();
         return;
     }
+
+    if (m_flipDirection != 0) {
+        Size fboSize(m_dest.width(), m_dest.height());
+        g_framebuffers.getTemporaryFrameBuffer()->resize(fboSize);
+        g_framebuffers.getTemporaryFrameBuffer()->setSmooth(true);
+        g_framebuffers.getTemporaryFrameBuffer()->bind();
+        g_painter->clear(Color::alpha);
+
+        // Draw item texture filling the FBO (same as normal path but into FBO)
+        g_painter->setColor(m_color);
+        g_painter->drawTexturedRect(Rect(0, 0, fboSize), m_texture, m_src);
+
+        g_framebuffers.getTemporaryFrameBuffer()->release();
+
+        // Draw FBO with flip
+        g_framebuffers.getTemporaryFrameBuffer()->draw(m_dest, m_flipDirection);
+        return;
+    }
+
     g_painter->setColor(m_color);
     g_painter->drawTexturedRect(m_dest, m_texture, m_src);
 }

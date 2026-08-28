@@ -1,4 +1,5 @@
 local waterNumber = 0
+local monkMirrorItem = nil
 fightOffensiveBox = nil
 fightBalancedBox = nil
 fightDefensiveBox = nil
@@ -287,6 +288,53 @@ function onMiniWindowClose()
 end
 
 -- hooked events
+-- Monk Mirror: espelha o item da mao esquerda no slot da mao direita
+-- Funciona para TODAS as classes do Avatar automaticamente.
+local function isMonkMirrorEnabled()
+  local player = g_game.getLocalPlayer()
+  if not player then
+    return false
+  end
+  return true
+end
+
+local function updateMonkMirrorItem(leftItem)
+  local ui = inventoryPanel
+  if not ui then return end
+
+  local rightSlot = ui:getChildById('slot' .. InventorySlotRight)
+  if not rightSlot then return end
+
+  if not isMonkMirrorEnabled() then
+    if monkMirrorItem then
+      monkMirrorItem = nil
+    end
+    return
+  end
+
+  -- Right slot is mirror-only: ignore any real item the server placed there.
+  -- Always mirror the left hand item regardless of what's in the real right slot.
+
+  if leftItem then
+    monkMirrorItem = leftItem
+    rightSlot:setStyle('Item')
+    rightSlot:setItem(leftItem)
+    rightSlot:setOpacity(0.5)
+    rightSlot:setDraggable(false)
+    rightSlot:setEnabled(false)
+    rightSlot:setFlipDirection(FlipDirection.Horizontal)
+    rightSlot.itemid = leftItem:getId()
+  else
+    monkMirrorItem = nil
+    rightSlot:setStyle(InventorySlotStyles[InventorySlotRight])
+    rightSlot:setItem(nil)
+    rightSlot:setOpacity(1.0)
+    rightSlot:setDraggable(true)
+    rightSlot:setEnabled(true)
+    rightSlot:setFlipDirection(FlipDirection.None)
+  end
+end
+
 function onInventoryChange(player, slot, item, oldItem)
   if slot == 11 then
     updateCameraSlot(item)
@@ -297,6 +345,12 @@ function onInventoryChange(player, slot, item, oldItem)
     return
   end
   if slot >= InventorySlotPurse then return end
+
+  -- BLOCKED: right slot is mirror-only. Server cannot place real items here.
+  if slot == InventorySlotRight then
+    return
+  end
+
   local itemWidget = inventoryPanel:getChildById('slot' .. slot)
 
   if item then
@@ -309,6 +363,11 @@ function onInventoryChange(player, slot, item, oldItem)
     end
     itemWidget:setStyle(InventorySlotStyles[slot])
     itemWidget:setItem(nil)
+  end
+
+  -- Update monk mirror when left hand changes
+  if slot == InventorySlotLeft then
+    updateMonkMirrorItem(item)
   end
 
 end
@@ -329,6 +388,14 @@ function online()
         g_game.setSafeFight(lastCombatControls[char].safeFight)
       end
     end
+
+    -- Initialize monk mirror on game start (todas as classes)
+    if isMonkMirrorEnabled() then
+      local leftItem = player:getInventoryItem(InventorySlotLeft)
+      if leftItem then
+        updateMonkMirrorItem(leftItem)
+      end
+    end
   end
 
   update()
@@ -339,6 +406,7 @@ function offline()
   -- "fantasma" (item do personagem anterior) ao trocar de personagem
   updateCameraSlot(nil)
   updateMomoSlot(nil)
+  monkMirrorItem = nil
 
   local lastCombatControls = g_settings.getNode('LastCombatControls')
   if not lastCombatControls then

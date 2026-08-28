@@ -80,6 +80,12 @@ public:
         m_vertexArray->addUpsideDownQuad(dest);
         m_textureCoordArray->addQuad(src);
     }
+    void addHorizontallyFlippedQuad(const Rect& dest, const Rect& src) {
+        if (m_locked)
+            unlock();
+        m_vertexArray->addQuad(dest);
+        m_textureCoordArray->addFlippedTextureCoords(src);
+    }
 
     void addBoudingRect(const Rect& dest, int innerLineWidth);
     void addRepeatedRects(const Rect& dest, const Rect& src);

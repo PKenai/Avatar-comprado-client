@@ -597,6 +597,19 @@ void Painter::drawUpsideDownTexturedRect(const Rect& dest, const TexturePtr& tex
     drawCoords(m_coordsBuffer, TriangleStrip);
 }
 
+void Painter::drawHorizontallyFlippedTexturedRect(const Rect& dest, const TexturePtr& texture, const Rect& src)
+{
+    if (dest.isEmpty() || src.isEmpty() || texture->isEmpty())
+        return;
+
+    setDrawProgram(m_shaderProgram ? m_shaderProgram : m_drawTexturedProgram.get());
+    setTexture(texture);
+
+    m_coordsBuffer.clear();
+    m_coordsBuffer.addHorizontallyFlippedQuad(dest, src);
+    drawCoords(m_coordsBuffer, TriangleStrip);
+}
+
 void Painter::drawRepeatedTexturedRect(const Rect& dest, const TexturePtr& texture, const Rect& src)
 {
     if (dest.isEmpty() || src.isEmpty() || texture->isEmpty())

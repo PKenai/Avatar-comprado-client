@@ -140,6 +140,7 @@ public:
     inline void drawTexturedRect(const Rect& dest, const TexturePtr& texture) { drawTexturedRect(dest, texture, Rect(Point(0, 0), texture->getSize())); }
     void drawColorOnTexturedRect(const Rect& dest, const TexturePtr& texture, const Rect& src);
     void drawUpsideDownTexturedRect(const Rect& dest, const TexturePtr& texture, const Rect& src);
+    void drawHorizontallyFlippedTexturedRect(const Rect& dest, const TexturePtr& texture, const Rect& src);
     void drawRepeatedTexturedRect(const Rect& dest, const TexturePtr& texture, const Rect& src);
     void drawFilledRect(const Rect& dest);
 

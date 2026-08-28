@@ -52,8 +52,16 @@ void UIItem::drawSelf(Fw::DrawPane drawPane)
         if(exactSize == 0)
             return;
 
-        m_item->setColor(m_color);
-        m_item->draw(drawRect);
+        if(m_flipDirection != 0) {
+            // Flip using draw queue condition: records items, then applies transform at flush time
+            size_t queueStart = g_drawQueue->size();
+            m_item->setColor(m_color);
+            m_item->draw(drawRect);
+            g_drawQueue->setFlip(queueStart, m_flipDirection);
+        } else {
+            m_item->setColor(m_color);
+            m_item->draw(drawRect);
+        }
 
         if(m_font && m_showCount && (m_item->isStackable() || m_item->isChargeable()) && m_item->getCountOrSubType() > 1) {
             g_drawQueue->addText(m_font, m_countText, Rect(m_rect.topLeft(), m_rect.bottomRight() - Point(3, 0)), Fw::AlignBottomRight, Color(231, 231, 231));
@@ -140,6 +148,8 @@ void UIItem::onStyleApply(const std::string& styleName, const OTMLNodePtr& style
             m_showId = node->value<bool>();
         else if(node->tag() == "shader")
             setItemShader(node->value());
+        else if(node->tag() == "flip-direction")
+            setFlipDirection(node->value<uint8_t>());
     }
 }
 

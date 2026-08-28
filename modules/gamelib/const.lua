@@ -137,6 +137,8 @@ GameKeepUnawareTiles = 72
 GameIngameStore = 73
 GameDrawFloorShadow = 128
 GameDrawSkyClouds = 129
+GameMultiSpr = 130
+GameVocationMonk = 131
 GameWingsAndAura = 104
 GameOutfitShaders = 106
 GameDrawAuraOnTop = 109
@@ -283,6 +285,12 @@ Blessings = {
   FireOfSuns = 8,
   WisdomOfSolitude = 16,
   SparkOfPhoenix = 32
+}
+
+FlipDirection = {
+  None = 0,
+  Horizontal = 1,
+  Vertical = 2,
 }
 
 -- @}

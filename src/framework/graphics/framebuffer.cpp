@@ -151,6 +151,18 @@ void FrameBuffer::draw(const Rect& dest)
     g_painter->drawTexturedRect(dest, m_texture, Rect(0, 0, getSize()));
 }
 
+void FrameBuffer::draw(const Rect& dest, uint8_t flipDirection)
+{
+    Rect src(0, 0, getSize());
+    if(flipDirection == 1) { // horizontal flip
+        g_painter->drawHorizontallyFlippedTexturedRect(dest, m_texture, src);
+    } else if(flipDirection == 2) { // vertical flip
+        g_painter->drawUpsideDownTexturedRect(dest, m_texture, src);
+    } else {
+        g_painter->drawTexturedRect(dest, m_texture, src);
+    }
+}
+
 std::vector<uint32_t> FrameBuffer::readPixels()
 {
     internalBind();

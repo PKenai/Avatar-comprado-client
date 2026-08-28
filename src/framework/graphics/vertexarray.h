@@ -104,6 +104,33 @@ public:
         addVertex(right, top);
     }
 
+    inline void addHorizontallyFlippedQuad(const Rect& rect) {
+        // Same vertex positions as addQuad (used for both vertex and texture arrays)
+        // When used for texture coords, this swaps left/right to achieve horizontal flip
+        float top = rect.top();
+        float right = rect.right()+1;
+        float bottom = rect.bottom()+1;
+        float left = rect.left();
+
+        addVertex(left, top);
+        addVertex(right, top);
+        addVertex(left, bottom);
+        addVertex(right, bottom);
+    }
+
+    inline void addFlippedTextureCoords(const Rect& rect) {
+        // Texture coords with horizontal flip: swap left and right
+        float top = rect.top();
+        float bottom = rect.bottom()+1;
+        float left = rect.left();
+        float right = rect.right()+1;
+
+        addVertex(right, top);
+        addVertex(left, top);
+        addVertex(right, bottom);
+        addVertex(left, bottom);
+    }
+
     void clear() { m_buffer.reset(); }
     float *vertices() const { return m_buffer.data(); }
     int vertexCount() const { return m_buffer.size() / 2; }

@@ -43,6 +43,7 @@ struct DrawQueueItemTexturedRect : public DrawQueueItem {
 
     bool m_noCache = false;   // skip atlas cache (needed for rotated/shadow draws)
     bool m_isShadow = false;  // draw as black silhouette via color shader
+    uint8_t m_flipDirection = 0; // 0=none, 1=horizontal, 2=vertical
 
     Rect m_dest;
     Rect m_src;
@@ -328,6 +329,17 @@ public:
     {
         if (start == m_queue.size() || angle == 0) return;
         m_conditions.push_back(new DrawQueueConditionRotation(start, m_queue.size(), center, angle));
+    }
+
+    void setFlip(size_t start, uint8_t flipDirection)
+    {
+        for (size_t i = start; i < m_queue.size(); ++i) {
+            DrawQueueItemTexturedRect* texture = dynamic_cast<DrawQueueItemTexturedRect*>(m_queue[i]);
+            if (texture) {
+                texture->m_noCache = true;
+                texture->m_flipDirection = flipDirection;
+            }
+        }
     }
 
     void setMark(size_t start, const Color& color)

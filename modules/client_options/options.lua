@@ -78,6 +78,7 @@ function init()
   if g_settings.getBoolean('skyClouds') then
     g_game.enableFeature(GameDrawSkyClouds)
   end
+  g_game.enableFeature(GameVocationMonk)
   -- Apply sky clouds setting via Lua module
   if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
     modules.game_skyclouds.setEnabled(g_settings.getBoolean('skyClouds'))

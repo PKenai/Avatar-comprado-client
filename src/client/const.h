@@ -500,7 +500,10 @@ namespace Otc
         GameDrawFloorShadow = 128,
         GameDrawSkyClouds = 129,
 
-        LastGameFeature = 131
+        GameMultiSpr = 130,
+        GameVocationMonk = 131,
+
+        LastGameFeature = 132
     };
 
     enum PathFindResult {

@@ -22,6 +22,12 @@ end
 function UIItem:onDrop(widget, mousePos)
   if not self:canAcceptDrop(widget, mousePos) then return false end
 
+  -- BLOCKED: right hand slot is mirror-only, never accept drops
+  local id = self:getId()
+  if id == 'slot5' then
+    return false
+  end
+
   local item = widget.currentDragThing
   if not item:isItem() then return false end
 
