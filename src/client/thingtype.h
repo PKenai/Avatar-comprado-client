@@ -422,8 +422,8 @@ private:
 };
 
 struct DrawQueueItemThingWithShader : public DrawQueueItemTexturedRect {
-    DrawQueueItemThingWithShader(const Rect& rect, const TexturePtr& texture, const Rect& src, const Point& offset, const Point& center, int32_t colors, const std::string& shader) :
-        DrawQueueItemTexturedRect(rect, texture, src, Color::white), m_offset(offset), m_center(center), m_colors(colors), m_shader(shader)
+    DrawQueueItemThingWithShader(const Rect& rect, const TexturePtr& texture, const Rect& src, const Point& offset, const Point& center, int32_t colors, const std::string& shader, const Color& color = Color::white) :
+        DrawQueueItemTexturedRect(rect, texture, src, color), m_offset(offset), m_center(center), m_colors(colors), m_shader(shader)
     {};
 
     void draw() override;

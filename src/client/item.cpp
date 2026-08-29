@@ -47,7 +47,8 @@ Item::Item() :
     m_async(true),
     m_quickLootFlags(0),
     m_phase(0),
-    m_lastPhase(0)
+    m_lastPhase(0),
+    m_tier(0)
 {
 }
 
@@ -71,6 +72,15 @@ std::string Item::getName()
     return g_things.findItemTypeByClientId(m_clientId)->getName();
 }
 
+std::string Item::getShader()
+{
+    if (!m_shader.empty())
+        return m_shader;
+    if (m_tier >= 1 && m_tier <= 10)
+        return "item_tier_" + std::to_string(m_tier);
+    return std::string();
+}
+
 void Item::draw(const Point& dest, bool animate, LightView* lightView)
 {
     if (m_clientId == 0)
@@ -87,8 +97,10 @@ void Item::draw(const Point& dest, bool animate, LightView* lightView)
     if (m_color != Color::alpha)
         color = m_color;
     size_t drawQueueSize = g_drawQueue->size();
-    if (!m_shader.empty()) {
-        rawGetThingType()->drawWithShader(dest, 0, xPattern, yPattern, zPattern, animationPhase, m_shader, color, lightView);
+
+    std::string activeShader = getShader();
+    if (!activeShader.empty()) {
+        rawGetThingType()->drawWithShader(dest, 0, xPattern, yPattern, zPattern, animationPhase, activeShader, color, lightView);
     }
     else {
         rawGetThingType()->draw(dest, 0, xPattern, yPattern, zPattern, animationPhase, color, lightView);
@@ -114,8 +126,9 @@ void Item::draw(const Rect& dest, bool animate)
     if (m_color != Color::alpha)
         color = m_color;
 
-    if (!m_shader.empty()) {
-        rawGetThingType()->drawWithShader(dest, 0, xPattern, yPattern, zPattern, animationPhase, m_shader, color);
+    std::string activeShader = getShader();
+    if (!activeShader.empty()) {
+        rawGetThingType()->drawWithShader(dest, 0, xPattern, yPattern, zPattern, animationPhase, activeShader, color);
     }
     else {
         rawGetThingType()->draw(dest, 0, xPattern, yPattern, zPattern, animationPhase, color);

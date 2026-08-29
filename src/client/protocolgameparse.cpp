@@ -3705,7 +3705,10 @@ ItemPtr ProtocolGame::getItem(const InputMessagePtr& msg, int id, bool hasDescri
     else if (item->isFluidContainer() || item->isSplash()) {
         item->setCountOrSubType(msg->getU8());
     }
-    else if (item->rawGetThingType()->isContainer() && (g_game.getFeature(Otc::GameTibia12Protocol) || g_game.getFeature(Otc::GameQuickLootFlags))) {
+    else {
+        item->setTier(msg->getU8());
+    }
+    if (item->rawGetThingType()->isContainer() && (g_game.getFeature(Otc::GameTibia12Protocol) || g_game.getFeature(Otc::GameQuickLootFlags))) {
         // not sure about this part
         uint8_t hasQuickLootFlags = msg->getU8();
         if (hasQuickLootFlags > 0) {

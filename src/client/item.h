@@ -94,6 +94,7 @@ public:
     void setTooltip(const std::string& str) { m_tooltip = str; }
     void setQuickLootFlags(uint32 flags) { m_quickLootFlags = flags; }
     void setShader(const std::string& str) { m_shader = str; }
+    void setTier(uint8 tier) { m_tier = tier; }
 
     int getCountOrSubType() { return m_countOrSubType; }
     int getSubType();
@@ -105,7 +106,8 @@ public:
     bool isValid();
     std::string getTooltip() { return m_tooltip; }
     uint32 getQuickLootFlags() { return m_quickLootFlags; }
-    std::string getShader() { return m_shader; }
+    std::string getShader();
+    uint8 getTier() { return m_tier; }
 
     void unserializeItem(const BinaryTreePtr& in);
     void serializeItem(const OutputBinaryTreePtr& out);
@@ -138,7 +140,6 @@ public:
     bool isTeleport() { return m_attribs.has(ATTR_TELE_DEST); }
     bool isMoveable();
     bool isGround();
-
     ItemPtr clone();
     ItemPtr asItem() { return static_self_cast<Item>(); }
     bool isItem() { return true; }
@@ -174,6 +175,7 @@ private:
     bool m_async;
     std::string m_tooltip;
     std::string m_shader;
+    uint8 m_tier;
 
     uint32 m_quickLootFlags;
     uint8 m_phase;

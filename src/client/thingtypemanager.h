@@ -24,6 +24,7 @@
 #define THINGTYPEMANAGER_H
 
 #include <atomic>
+#include <unordered_map>
 #include <framework/global.h>
 #include <framework/core/declarations.h>
 #include <framework/core/eventdispatcher.h>
@@ -114,7 +115,24 @@ public:
     // Safe ItemType lookup: returns null ItemType if not found (no error log)
     const ItemTypePtr& tryGetItemType(uint16 id) { if(id >= m_itemTypes.size() || m_itemTypes[id] == m_nullItemType) return m_nullItemType; return m_itemTypes[id]; }
 
+    void setItemShader(uint16 clientId, const std::string& shader) {
+        if (shader.empty())
+            m_itemShaders.erase(clientId);
+        else
+            m_itemShaders[clientId] = shader;
+    }
+    std::string getItemShader(uint16 clientId) {
+        auto it = m_itemShaders.find(clientId);
+        if (it != m_itemShaders.end())
+            return it->second;
+        return std::string();
+    }
+    void clearItemShaders() {
+        m_itemShaders.clear();
+    }
+
 private:
+    std::unordered_map<uint16, std::string> m_itemShaders;
     ThingTypeList m_thingTypes[ThingLastCategory];
     ItemTypeList m_reverseItemTypes;
     ItemTypeList m_itemTypes;

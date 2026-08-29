@@ -318,8 +318,8 @@ local function updateMonkMirrorItem(leftItem)
   if leftItem then
     monkMirrorItem = leftItem
     rightSlot:setStyle('Item')
-    rightSlot:setItem(leftItem)
-    rightSlot:setOpacity(0.5)
+    rightSlot:setItem(leftItem:clone())
+    rightSlot:setOpacity(0.4)
     rightSlot:setDraggable(false)
     rightSlot:setEnabled(false)
     rightSlot:setFlipDirection(FlipDirection.Horizontal)

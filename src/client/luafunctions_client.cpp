@@ -86,6 +86,9 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_things", "getMarketCategories", &ThingTypeManager::getMarketCategories, &g_things);
     g_lua.bindSingletonFunction("g_things", "unloadTextures", &ThingTypeManager::unloadTextures, &g_things);
     g_lua.bindSingletonFunction("g_things", "tryGetItemType", &ThingTypeManager::tryGetItemType, &g_things);
+    g_lua.bindSingletonFunction("g_things", "setItemShader", &ThingTypeManager::setItemShader, &g_things);
+    g_lua.bindSingletonFunction("g_things", "getItemShader", &ThingTypeManager::getItemShader, &g_things);
+    g_lua.bindSingletonFunction("g_things", "clearItemShaders", &ThingTypeManager::clearItemShaders, &g_things);
     
     g_lua.registerSingletonClass("g_houses");
     g_lua.bindSingletonFunction("g_houses", "clear",          &HouseManager::clear,          &g_houses);
@@ -730,6 +733,8 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<Item>("setQuickLootFlags", &Item::setQuickLootFlags);
     g_lua.bindClassMemberFunction<Item>("setShader", &Item::setShader);
     g_lua.bindClassMemberFunction<Item>("getShader", &Item::getShader);
+    g_lua.bindClassMemberFunction<Item>("setTier", &Item::setTier);
+    g_lua.bindClassMemberFunction<Item>("getTier", &Item::getTier);
     g_lua.bindClassMemberFunction<Item>("setCustomAttribute", &Item::setCustomAttribute);
     g_lua.bindClassMemberFunction<Item>("getCustomAttribute", &Item::getCustomAttribute);
 

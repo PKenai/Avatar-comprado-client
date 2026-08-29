@@ -930,7 +930,7 @@ void ThingType::drawWithShader(const Point& dest, int layer, int xPattern, int y
     if (lightView && hasLight())
         lightView->addLight(screenRect.center(), getLight());
 
-    DrawQueueItemTexturedRect* thing = new DrawQueueItemThingWithShader(screenRect, texture, textureRect, textureOffset, screenRect.center(), 0, shader);
+    DrawQueueItemTexturedRect* thing = new DrawQueueItemThingWithShader(screenRect, texture, textureRect, textureOffset, screenRect.center(), 0, shader, color);
     g_drawQueue->add(thing);
 
     //return g_drawQueue->addTexturedRect(screenRect, texture, textureRect, color);
@@ -974,7 +974,7 @@ void ThingType::drawWithShader(const Rect& dest, int layer, int xPattern, int yP
     float scale = std::min<float>((float)dest.width() / size.width(), (float)dest.height() / size.height());
 
     Rect screenRect = Rect(dest.topLeft() + (textureOffset * scale), textureRect.size() * scale);
-    DrawQueueItemTexturedRect* thing = new DrawQueueItemThingWithShader(screenRect, texture, textureRect, textureOffset, screenRect.center(), 0, shader);
+    DrawQueueItemTexturedRect* thing = new DrawQueueItemThingWithShader(screenRect, texture, textureRect, textureOffset, screenRect.center(), 0, shader, color);
     g_drawQueue->add(thing);
 
     //return g_drawQueue->addTexturedRect(Rect(dest.topLeft() + (textureOffset * scale), textureRect.size() * scale), texture, textureRect, color);
@@ -1227,15 +1227,19 @@ void DrawQueueItemThingWithShader::draw()
     if (!m_texture) return;
     PainterShaderProgramPtr shader = g_shaders.getShader(m_shader);
     if (!shader) return DrawQueueItemTexturedRect::draw();
-    bool useFramebuffer = m_dest.size() != m_src.size();
+    bool useFramebuffer = m_dest.size() != m_src.size() || m_flipDirection != 0;
 
     if (useFramebuffer) {
         g_framebuffers.getTemporaryFrameBuffer()->resize(m_src.size());
+        g_framebuffers.getTemporaryFrameBuffer()->setSmooth(true);
         g_framebuffers.getTemporaryFrameBuffer()->bind();
         g_painter->clear(Color::alpha);
     }
 
     g_painter->setShaderProgram(shader);
+    // When using FBO, render with full alpha so opacity isn't baked into the texture.
+    // Opacity will be applied when compositing FBO back to screen.
+    g_painter->setColor(useFramebuffer ? Color::white : m_color);
     g_painter->setOffset(m_offset);
     shader->setCenter(m_center);
     shader->bindMultiTextures();
@@ -1246,10 +1250,15 @@ void DrawQueueItemThingWithShader::draw()
         g_painter->drawTexturedRect(m_dest, m_texture, m_src);
     }
     g_painter->resetShaderProgram();
+    g_painter->resetColor();
 
     if (useFramebuffer) {
         g_framebuffers.getTemporaryFrameBuffer()->release();
+        // Apply widget opacity when compositing FBO to screen
+        Color blendColor = Color::white;
+        blendColor.setAlpha(m_color.a());
+        g_painter->setColor(blendColor);
+        g_framebuffers.getTemporaryFrameBuffer()->draw(m_dest, m_flipDirection);
         g_painter->resetColor();
-        g_framebuffers.getTemporaryFrameBuffer()->draw(m_dest);
     }
-}
+}

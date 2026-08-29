@@ -10594,3 +10594,1708 @@ stack traceback:
 	/modules/game_crafting/crafting.lua:121: in function 'callback'
 	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
 [OutfitScales] Applied scale 0.8 to 'Lobo selvagem'
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[Tier Display] Modulo com imagem carregado!
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[Tier Display] Modulo com imagem carregado!
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_inventory/inventory.lua:200: in function 'updateCameraSlot'
+	/modules/game_inventory/inventory.lua:340: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_inventory/inventory.lua:212: in function 'updateMomoSlot'
+	/modules/game_inventory/inventory.lua:344: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_containers/containers.lua:463: in function </modules/game_containers/containers.lua:433>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_containers/containers.lua:463: in function </modules/game_containers/containers.lua:433>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_containers/containers.lua:463: in function </modules/game_containers/containers.lua:433>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: attempt to call method 'getClientId' (a nil value)
+stack traceback:
+	[C]: in function 'getClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:163: in function 'setItem'
+	/modules/game_containers/containers.lua:463: in function </modules/game_containers/containers.lua:433>
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[Tier Display] Modulo com imagem carregado!
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:26: attempt to call method 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:26: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:146: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:26: attempt to call method 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:26: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:146: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:26: attempt to call method 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:26: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:139: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[Tier Display] Modulo com imagem carregado!
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+=============================================
+[Tier Display] Iniciando modulo v3...
+=============================================
+[Tier Display] Opcode 111 registrado.
+[Tier Display] AVISO: Imagem tiers-strip.png nao encontrada. Usando fallback de texto.
+[Tier Display] Hook UIItem:setItem instalado!
+[Tier Display] game_inventory encontrado, hookando atualizacoes...
+[Tier Display] Modulo v3 carregado com sucesso!
+=============================================
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: attempt to call field 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:195: in function 'findUIItemsByClientId'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:251: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: attempt to call method 'setFontSize' (a nil value)
+stack traceback:
+	[C]: in function 'setFontSize'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:175: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:303: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:529: in function </modules/game_containers/containers.lua:524>
+Exiting application..
+[Tier Display] Descarregando modulo...
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[Tier Display] Iniciando modulo v4...
+[Tier Display] Opcode 111 registrado.
+[Tier Display] Hook UIItem:setItem instalado!
+[Tier Display] Modulo v4 carregado!
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:91: attempt to call method 'getUIWidget' (a nil value)
+stack traceback:
+	[C]: in function 'getUIWidget'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:91: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:65: attempt to call method 'setOutlined' (a nil value)
+stack traceback:
+	[C]: in function 'setOutlined'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:65: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:151: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_tierdisplay/game_tierdisplay_opcode.lua:65: attempt to call method 'setOutlined' (a nil value)
+stack traceback:
+	[C]: in function 'setOutlined'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:65: in function 'drawTierOverlay'
+	/modules/game_tierdisplay/game_tierdisplay_opcode.lua:151: in function 'setItem'
+	/modules/game_containers/containers.lua:371: in function 'refreshContainerItems'
+	/modules/game_containers/containers.lua:506: in function </modules/game_containers/containers.lua:501>
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[Tier Display] Iniciando modulo v6 (IMAGEM)...
+[Tier Display] Hook UIItem:setItem instalado!
+[Tier Display] Modulo v6 carregado!
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[Tier Display] Iniciando modulo v7 (DEBUG)...
+[Tier Display] Hook UIItem:setItem instalado!
+[Tier Display] Modulo v7 carregado!
+[Tier Display] OPCODE RECEBIDO: set,18144,5
+[Tier Display] SET clientId=18144 tier=5
+[Tier Display] refresh: 1611 widgets, 65 UIItems, procurando clientId=18144
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[Tier Display] Iniciando modulo v7 (DEBUG)...
+[Tier Display] Hook UIItem:setItem instalado!
+[Tier Display] Modulo v7 carregado!
+[Tier Display] OPCODE RECEBIDO: set,18144,9
+[Tier Display] SET clientId=18144 tier=9
+[Tier Display] refresh: 1577 widgets, 44 UIItems, procurando clientId=18144
+[Tier Display] setItem HOOK: clientId=18144 tier=9
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=9
+[Tier Display] drawTierOverlay: OK! tier=9 clipX=96
+[Tier Display] setItem HOOK: clientId=18144 tier=9
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=9
+[Tier Display] drawTierOverlay: OK! tier=9 clipX=96
+[Tier Display] setItem HOOK: clientId=18144 tier=9
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=9
+[Tier Display] drawTierOverlay: OK! tier=9 clipX=96
+[Tier Display] setItem HOOK: clientId=18144 tier=9
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=9
+[Tier Display] drawTierOverlay: OK! tier=9 clipX=96
+[Tier Display] setItem HOOK: clientId=18144 tier=9
+[Tier Display] setItem HOOK: clientId=18144 tier=9
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=9
+[Tier Display] drawTierOverlay: OK! tier=9 clipX=96
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=9
+[Tier Display] drawTierOverlay: OK! tier=9 clipX=96
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[Tier Display] Iniciando modulo v7 (DEBUG)...
+[Tier Display] Hook UIItem:setItem instalado!
+[Tier Display] Modulo v7 carregado!
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[Tier Display] Iniciando modulo v7 (DEBUG)...
+[Tier Display] Hook UIItem:setItem instalado!
+[Tier Display] Modulo v7 carregado!
+[Tier Display] OPCODE RECEBIDO: set,18144,5
+[Tier Display] SET clientId=18144 tier=5
+[Tier Display] refresh: 1577 widgets, 44 UIItems, procurando clientId=18144
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[Tier Display] Iniciando modulo v7 (DEBUG)...
+[Tier Display] Hook UIItem:setItem instalado!
+[Tier Display] Modulo v7 carregado!
+[Tier Display] OPCODE RECEBIDO: set,18144,5
+[Tier Display] SET clientId=18144 tier=5
+[Tier Display] refresh: 1610 widgets, 65 UIItems, procurando clientId=18144
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] OPCODE RECEBIDO: set,18138,7
+[Tier Display] SET clientId=18138 tier=7
+[Tier Display] refresh: 1617 widgets, 65 UIItems, procurando clientId=18138
+[Tier Display] setItem HOOK: clientId=18138 tier=7
+[Tier Display] setItem HOOK: clientId=18144 tier=5
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=7
+[Tier Display] drawTierOverlay: OK! tier=7 clipX=72
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=5
+[Tier Display] drawTierOverlay: OK! tier=5 clipX=48
+[Tier Display] setItem HOOK: clientId=18138 tier=7
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=7
+[Tier Display] drawTierOverlay: OK! tier=7 clipX=72
+[Tier Display] setItem HOOK: clientId=18138 tier=7
+[Tier Display] setItem HOOK: clientId=18138 tier=7
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=7
+[Tier Display] drawTierOverlay: OK! tier=7 clipX=72
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=7
+[Tier Display] drawTierOverlay: OK! tier=7 clipX=72
+[Tier Display] setItem HOOK: clientId=18138 tier=7
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=7
+[Tier Display] drawTierOverlay: OK! tier=7 clipX=72
+[Tier Display] setItem HOOK: clientId=18138 tier=7
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=7
+[Tier Display] drawTierOverlay: OK! tier=7 clipX=72
+[Tier Display] setItem HOOK: clientId=18138 tier=7
+[Tier Display] setItem HOOK: clientId=18138 tier=7
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=7
+[Tier Display] drawTierOverlay: OK! tier=7 clipX=72
+[Tier Display] drawTierOverlay: criando widget 34x34 tier=7
+[Tier Display] drawTierOverlay: OK! tier=7 clipX=72
+Exiting application..
+[Tier Display] Modulo descarregado.
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+FATAL ERROR: Critical lua error!
+C++ call failed:
+unknown|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff7a198ba90
+	[C]: at 0x7ff7a17da070
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+ERROR: failed to compile shader: outfit_celestial_radiance
+0(1) : error C0000: syntax error, unexpected '-', expecting "::" at token "-"
+ERROR: failed to compile shader: outfit_ice
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+ERROR: failed to compile shader: outfit_monsterrarity_death
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+ERROR: failed to compile shader: outfit_starsRainbowNebula
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+0(1) : warning C7502: OpenGL does not allow type suffix 'F' on constant literals in versions below 120
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: failed to compile shader: outfit_celestial_radiance
+0(1) : error C0000: syntax error, unexpected '-', expecting "::" at token "-"
+ERROR: failed to compile shader: outfit_ice
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+ERROR: failed to compile shader: outfit_monsterrarity_death
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+ERROR: failed to compile shader: outfit_starsRainbowNebula
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+0(1) : warning C7502: OpenGL does not allow type suffix 'F' on constant literals in versions below 120
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: failed to compile shader: outfit_celestial_radiance
+0(1) : error C0000: syntax error, unexpected '-', expecting "::" at token "-"
+ERROR: failed to compile shader: outfit_ice
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+ERROR: failed to compile shader: outfit_monsterrarity_death
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+ERROR: failed to compile shader: outfit_starsRainbowNebula
+0(1) : error C0000: syntax error, unexpected $undefined, expecting "::" at token "<undefined>"
+0(1) : warning C7502: OpenGL does not allow type suffix 'F' on constant literals in versions below 120
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:278: attempt to call global 'applyTierToUIItem' (a nil value)
+stack traceback:
+	[C]: in function 'applyTierToUIItem'
+	/modules/game_shaders/shaders.lua:278: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:278: attempt to call global 'applyTierToUIItem' (a nil value)
+stack traceback:
+	[C]: in function 'applyTierToUIItem'
+	/modules/game_shaders/shaders.lua:278: in function 'setItem'
+	/modules/game_inventory/inventory.lua:358: in function </modules/game_inventory/inventory.lua:338>
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:278: attempt to call global 'applyTierToUIItem' (a nil value)
+stack traceback:
+	[C]: in function 'applyTierToUIItem'
+	/modules/game_shaders/shaders.lua:278: in function 'setItem'
+	/modules/game_containers/containers.lua:469: in function </modules/game_containers/containers.lua:433>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff638c9c080
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff6a16bc0b0
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff6a16bc0b0
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+ERROR: failed to compile shader: item_tier_7
+0(56) : error C1105: cannot call a non-function
+0(57) : error C1105: cannot call a non-function
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: failed to compile shader: item_tier_7
+0(62) : error C1105: cannot call a non-function
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: Render error: 1282 in PainterShaderProgram::link (item_tier_7) (C:\Users\imfis\Desktop\Avatar-comprado-client\src\framework\graphics\paintershaderprogram.cpp:120)
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+ERROR: Render error: 1282 in PainterShaderProgram::link (item_tier_7) (C:\Users\imfis\Desktop\Avatar-comprado-client\src\framework\graphics\paintershaderprogram.cpp:120)
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+Sistema de controle joystick iniciado
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+ERROR: unable to load image '/images/clienticon.png': unable to open file '/images/clienticon.png': not found
+ERROR: unable to load icon file /images/clienticon
+at:
+	[C++]: ??R<lambda_1>@?1??setIcon@WIN32Window@@UEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z@QEBA@XZ
+ERROR: protected lua call failed: /modules/game_shaders/shaders.lua:182: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+	[C]: at 0x7ff701c5c110
+	[C]: in function 'pairs'
+	/modules/game_shaders/shaders.lua:182: in function </modules/game_shaders/shaders.lua:175>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_crafting': LUA ERROR:
+/modules/game_crafting/crafting.lua:71: attempt to call global 'destroyOverlay' (a nil value)
+stack traceback:
+	[C]: in function 'destroyOverlay'
+	/modules/game_crafting/crafting.lua:71: in function 'terminate'
+	/modules/game_crafting/crafting.otmod:10:[@onUnload]:1: in main chunk

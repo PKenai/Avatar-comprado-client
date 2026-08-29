@@ -21,9 +21,12 @@ function init()
 
   createFadeShaders()
   createOutfitShaders()
+  createTierShaders()
 
   ProtocolGame.registerExtendedOpcode(ExtendedIds.MapShader, onMapShader)
+  ProtocolGame.registerExtendedOpcode(111, onTierOpcode)
   connect(g_game, { onGameEnd = onGameEndClearShader })
+  hookUIItemForTier()
   connect(Creature, {
     onAppear = onCreatureAppearSpiritual,
     onDisappear = onCreatureDisappearSpiritual,
@@ -34,7 +37,9 @@ end
 function terminate()
   clearFadeTimer()
   ProtocolGame.unregisterExtendedOpcode(ExtendedIds.MapShader)
+  ProtocolGame.unregisterExtendedOpcode(111)
   disconnect(g_game, { onGameEnd = onGameEndClearShader })
+  unhookUIItemForTier()
   disconnect(Creature, {
     onAppear = onCreatureAppearSpiritual,
     onDisappear = onCreatureDisappearSpiritual,
@@ -50,10 +55,35 @@ function createFadeShaders()
   g_shaders.createShader("map_cloudy_fade_out", "/shaders/map_cloudy_vertex", "/shaders/map_cloudy_fade_out_fragment")
 end
 
+dofile 'outfit_shaders'
+
 function createOutfitShaders()
-  g_shaders.createOutfitShader(SPIRITUAL_SHADER, "/shaders/outfit_spiritual_vertex", "/shaders/outfit_spiritual_fragment")
+  if OUTFIT_SHADERS then
+    for _, s in ipairs(OUTFIT_SHADERS) do
+      g_shaders.createOutfitShader(s.name, s.vert, s.frag)
+    end
+  else
+    g_shaders.createOutfitShader(SPIRITUAL_SHADER, "/shaders/outfit_spiritual_vertex", "/shaders/outfit_spiritual_fragment")
+  end
 end
 
+-- Tier outline shaders: registered globally so Item::draw() can use them per-instance
+function createTierShaders()
+  for i = 1, 10 do
+    g_shaders.createShader("item_tier_" .. i, "/shaders/item_tier_vertex", "/shaders/item_tier_" .. i)
+  end
+end
+
+function onTierOpcode(protocol, opcode, buffer)
+  -- Opcode 111 compatibility handler if any legacy script sends it
+end
+
+function hookUIItemForTier()
+  -- No longer needed: tier rendering is handled per-instance in Item::draw() in C++
+end
+
+function unhookUIItemForTier()
+end
 local function isSkyCloudsActive()
   if modules.game_skyclouds and modules.game_skyclouds.shouldApply and modules.game_skyclouds.shouldApply() then
     return true
@@ -123,13 +153,13 @@ function onMapShader(protocol, opcode, buffer)
     if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
       modules.game_skyclouds.setEnabled(true)
     else
-      g_logger.warning("Sky Clouds module not loaded — ignoring 'sky_clouds_on'.")
+      g_logger.warning("Sky Clouds module not loaded ï¿½ ignoring 'sky_clouds_on'.")
     end
   elseif buffer == "sky_clouds_off" then
     if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
       modules.game_skyclouds.setEnabled(false)
     else
-      g_logger.warning("Sky Clouds module not loaded — ignoring 'sky_clouds_off'.")
+      g_logger.warning("Sky Clouds module not loaded ï¿½ ignoring 'sky_clouds_off'.")
     end
   elseif buffer == "sky_clouds_refresh" then
     if modules.game_skyclouds and modules.game_skyclouds.refresh then
@@ -141,10 +171,15 @@ function onMapShader(protocol, opcode, buffer)
   end
 end
 
+
 function onGameEndClearShader()
   clearFadeTimer()
   setMapShader("")
   appliedSpiritual = {}
+  -- Clear all tier shaders from the global registry on disconnect/logout
+  g_things.clearItemShaders()
+  -- Also clear local tier table
+  for k in pairs(g_itemTiers) do g_itemTiers[k] = nil end
 end
 
 local function isSpiritualName(name)
