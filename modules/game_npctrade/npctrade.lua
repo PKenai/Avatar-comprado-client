@@ -33,6 +33,29 @@ ignoreEquipped = nil
 showAllItems = nil
 sellAllButton = nil
 
+local SPECIAL_ITEM_TOOLTIPS = {
+  ['capa de viajante'] = "Capa de viajante\nArmadura: 8\n------------------------\n* +100 Vida\n* +50 Mana\n* +10 Velocidade",
+  ['capa reforcada'] = "Capa Reforcada\nArmadura: 12\n------------------------\n* +180 Vida\n* +40 Mana\n* Absorve 1% de todo dano",
+  ['capa resistente'] = "Capa Resistente\nArmadura: 7\n------------------------\n* +2% Dano de Dobra\n* +80 Vida\n* +200 Mana\n* +15 Velocidade",
+  ['capa aprimorada'] = "Capa Aprimorada\nArmadura: 10\n------------------------\n* +3% Chance de Critico\n* +180 Vida\n* +120 Mana\n* +35 Velocidade",
+  ['capa nobre'] = "Capa Nobre\nArmadura: 15\n------------------------\n* +400 Vida\n* +100 Mana\n* Absorve 2% de todo dano",
+  ['capa de protecao'] = "Capa de Protecao\nArmadura: 10\n------------------------\n* +4% Dano de Dobra\n* +200 Vida\n* +450 Mana\n* Regenera 3 Mana a cada 2s",
+  ['capa majestosa'] = "Capa Majestosa\nArmadura: 13\n------------------------\n* +8% Chance de Critico\n* +3% Dano de Dobra\n* +350 Vida\n* +200 Mana\n* +50 Velocidade",
+  ['capa gloriosa'] = "Capa Gloriosa\nArmadura: 11\n------------------------\n* +7% Dano de Dobra\n* +4% Chance de Critico\n* +250 Vida\n* +700 Mana\n* +25 Velocidade",
+  ['capa soberana'] = "Capa Soberana\nArmadura: 20\n------------------------\n* +800 Vida\n* +150 Mana\n* Absorve 4% de todo dano\n* +15 Velocidade",
+}
+
+function getItemCustomTooltip(item)
+  if not item then return nil end
+  local name = item.name and item.name:lower() or ''
+  for key, tt in pairs(SPECIAL_ITEM_TOOLTIPS) do
+    if name == key or name:find(key, 1, true) then
+      return tt
+    end
+  end
+  return nil
+end
+
 playerFreeCapacity = 0
 playerMoney = 0
 tradeItems = {}
@@ -245,6 +268,7 @@ end
 
 function clearSelectedItem()
   nameLabel:clearText()
+  nameLabel:removeTooltip()
   weightLabel:clearText()
   priceLabel:clearText()
   tradeButton:disable()
@@ -311,6 +335,13 @@ function refreshItem(item)
   weightLabel:setText(string.format('%.2f', item.weight) .. ' ' .. WEIGHT_UNIT)
   priceLabel:setText(formatCurrency(getItemPrice(item)))
 
+  local tooltip = getItemCustomTooltip(item)
+  if tooltip then
+    nameLabel:setTooltip(tooltip)
+  else
+    nameLabel:removeTooltip()
+  end
+
   if getCurrentTradeType() == BUY then
     local capacityMaxCount = math.floor(playerFreeCapacity / item.weight)
     if ignoreCapacity:isChecked() then
@@ -362,9 +393,17 @@ function refreshTradeItems()
     text = text .. '\n' .. price
     itemBox:setText(text)
 
+    local tooltip = getItemCustomTooltip(item)
+    if tooltip then
+      itemBox:setTooltip(tooltip)
+    end
+
     local itemWidget = itemBox:getChildById('item')
     itemWidget:setItem(item.ptr)
     itemWidget.onMouseRelease = itemPopup
+    if tooltip then
+      itemWidget:setTooltip(tooltip)
+    end
 
     radioItems:addWidget(itemBox)
   end

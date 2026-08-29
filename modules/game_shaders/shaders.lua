@@ -179,7 +179,11 @@ function onGameEndClearShader()
   -- Clear all tier shaders from the global registry on disconnect/logout
   g_things.clearItemShaders()
   -- Also clear local tier table
-  for k in pairs(g_itemTiers) do g_itemTiers[k] = nil end
+  if type(g_itemTiers) == "table" then
+    for k in pairs(g_itemTiers) do g_itemTiers[k] = nil end
+  else
+    g_itemTiers = {}
+  end
 end
 
 local function isSpiritualName(name)
