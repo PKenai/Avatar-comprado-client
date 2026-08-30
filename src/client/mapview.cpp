@@ -239,6 +239,17 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
     auto& tiles = m_cachedVisibleTiles[floor];
     size_t lightFloorStart = m_lightView ? m_lightView->size() : 0;
 
+    // Determine if we should apply floor transparency for this floor.
+    // Only floors above (lower z value than) the player are candidates.
+    const bool applyTransparency = m_floorTransparencyEnabled &&
+                                   floor < cameraPosition.z;
+
+    // Pre-compute player draw position for transparency.
+    Point playerDrawPos;
+    if (applyTransparency) {
+        playerDrawPos = transformPositionTo2D(cameraPosition, cameraPosition);
+    }
+
     // light
     if (m_lightView) {
         for (auto& tile : tiles) {
@@ -254,6 +265,10 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
     // before moving to the next tile, preserving correct Z-order.
     // This prevents items from further tiles extending into closer tiles' area
     // from being rendered on top of closer tiles' content.
+    const float spriteSize = (float)g_sprites.spriteSize();
+    // Fade radius: m_floorTransparencyRadius (2 SQMs) + 1 SQM for full gradual fade out
+    const float fadeRadius = m_floorTransparencyRadius + 1.0f;
+
     for (auto& tile : tiles) {
         Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
 
@@ -263,6 +278,22 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
                 m_lightView->setFieldBrightness(tileDrawPos, lightFloorStart, 0);
             }
         }
+
+        // Calculate smooth progressive transparency fade from one SQM to the next
+        float tileOpacity = 1.0f;
+        if (applyTransparency) {
+            float dx = (float)(tileDrawPos.x - playerDrawPos.x);
+            float dy = (float)(tileDrawPos.y - playerDrawPos.y);
+            float distTiles = std::sqrt(dx * dx + dy * dy) / spriteSize;
+
+            if (distTiles < fadeRadius) {
+                // Progressive linear fade: dist 0 -> 0.30, dist 1 -> 0.53, dist 2 -> 0.77, dist 3 -> 1.00
+                float t = distTiles / fadeRadius;
+                tileOpacity = m_floorTransparency + (1.0f - m_floorTransparency) * stdext::clamp<float>(t, 0.0f, 1.0f);
+            }
+        }
+
+        size_t tileDrawStart = g_drawQueue->size();
 
         tile->drawGround(tileDrawPos, m_lightView.get());
         tile->drawBottom(tileDrawPos, m_lightView.get());
@@ -274,6 +305,11 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
 
         tile->drawCreatures(tileDrawPos, m_lightView.get());
         tile->drawTop(tileDrawPos, m_lightView.get());
+
+        // Apply smooth fade transparency to all draw calls for this tile
+        if (tileOpacity < 0.999f) {
+            g_drawQueue->setOpacity(tileDrawStart, tileOpacity);
+        }
     }
 
     for (const MissilePtr& missile : g_map.getFloorMissiles(floor)) {

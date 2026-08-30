@@ -89,7 +89,7 @@ ImagePtr NormalMapManager::loadNormalMap(uint16 clientId, ThingCategory category
     try {
         ImagePtr image = Image::load(path);
         if (image) {
-            g_logger.trace(stdext::format("NormalMapManager: loaded normal map for %s %d", categoryStr, clientId));
+            g_logger.debug(stdext::format("NormalMapManager: loaded normal map for %s %d", categoryStr, clientId));
             return image;
         }
     } catch (...) {

@@ -7,7 +7,7 @@ import os
 from PIL import Image, ImageOps
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = os.path.join(ROOT, 'data', 'images', 'clienticon.png')
+SRC = os.path.join(ROOT, 'data', 'images', 'icon.png')
 OUT = os.path.join(ROOT, 'src', 'otcicon.ico')
 
 img = Image.open(SRC)

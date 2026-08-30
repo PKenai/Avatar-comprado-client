@@ -154,7 +154,29 @@ TilePtr UIMap::getTile(const Point& mousePos)
     if(!tilePos.isValid())
         return nullptr;
 
-    // we must check every floor, from top to bottom to check for a clickable tile
+    // Determine the player's current floor to prefer same-floor interaction.
+    int playerFloor = -1;
+    auto player = g_game.getLocalPlayer();
+    if (player && player->getPosition().isValid())
+        playerFloor = player->getPosition().z;
+
+    // First pass: look for a clickable tile on the player's own floor.
+    // If one is found, return it immediately — this blocks upper-floor tiles
+    // (which are semi-transparent) from stealing clicks when the player's floor
+    // already has something interactable (items, creatures, etc.).
+    if (m_mapView->isFloorTransparencyEnabled() && playerFloor >= 0) {
+        Position playerFloorPos = tilePos;
+        playerFloorPos.coveredUp(tilePos.z - playerFloor);
+        if (playerFloorPos.z == playerFloor) {
+            TilePtr tile = g_map.getTile(playerFloorPos);
+            if (tile && tile->isClickable())
+                return tile;
+        }
+    }
+
+    // Fallback: nothing clickable on the player's floor, so search all floors
+    // normally from top to bottom. Upper floors are allowed here because the
+    // player might want to push a creature or item on a higher floor.
     TilePtr tile;
     tilePos.coveredUp(tilePos.z - m_mapView->getCachedFirstVisibleFloor());
     for(int i = m_mapView->getCachedFirstVisibleFloor(); i <= m_mapView->getCachedLastVisibleFloor(); i++) {

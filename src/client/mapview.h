@@ -140,6 +140,14 @@ public:
     void setFloorShadowFadeEasing(int easing) { m_floorShadowFadeEasing = easing; }
     int getFloorShadowFadeEasing() { return m_floorShadowFadeEasing; }
 
+    // floor transparency (upper floors near player become semi-transparent)
+    void setFloorTransparencyEnabled(bool enable) { m_floorTransparencyEnabled = enable; }
+    bool isFloorTransparencyEnabled() { return m_floorTransparencyEnabled; }
+    void setFloorTransparency(float opacity) { m_floorTransparency = stdext::clamp<float>(opacity, 0.f, 1.f); }
+    float getFloorTransparency() { return m_floorTransparency; }
+    void setFloorTransparencyRadius(float radius) { m_floorTransparencyRadius = std::max(0.5f, radius); }
+    float getFloorTransparencyRadius() { return m_floorTransparencyRadius; }
+
     //void setShader(const PainterShaderProgramPtr& shader, float fadein, float fadeout);
     //PainterShaderProgramPtr getShader() { return m_shader; }
 
@@ -188,6 +196,11 @@ private:
     int m_floorShadowFadeEasing = 0; // 0 = smoothstep, 1 = linear
     TexturePtr m_floorShadowMaskTexture;
     std::vector<uint8_t> m_floorShadowMaskBuffer;
+
+    // floor transparency settings
+    bool m_floorTransparencyEnabled = true;
+    float m_floorTransparency = 0.30f; // opacity of upper-floor tiles near player (0=invisible, 1=opaque)
+    float m_floorTransparencyRadius = 2.0f; // radius in SQMs around player box
 
     stdext::timer m_fadingFloorTimers[Otc::MAX_Z + 1];
 

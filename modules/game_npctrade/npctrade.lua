@@ -43,6 +43,8 @@ local SPECIAL_ITEM_TOOLTIPS = {
   ['capa majestosa'] = "Capa Majestosa\nArmadura: 13\n------------------------\n* +8% Chance de Critico\n* +3% Dano de Dobra\n* +350 Vida\n* +200 Mana\n* +50 Velocidade",
   ['capa gloriosa'] = "Capa Gloriosa\nArmadura: 11\n------------------------\n* +7% Dano de Dobra\n* +4% Chance de Critico\n* +250 Vida\n* +700 Mana\n* +25 Velocidade",
   ['capa soberana'] = "Capa Soberana\nArmadura: 20\n------------------------\n* +800 Vida\n* +150 Mana\n* Absorve 4% de todo dano\n* +15 Velocidade",
+  ['capa das nacoes'] = "Capa das Nações\nArmadura: 18\n------------------------\n* +5% Dano de Dobra\n* +5% Chance de Critico\n* +500 Vida\n* +400 Mana\n* Absorve 3% de todo dano\n* Regenera 3 Mana a cada 2s\n* +30 Velocidade",
+  ['capa das nações'] = "Capa das Nações\nArmadura: 18\n------------------------\n* +5% Dano de Dobra\n* +5% Chance de Critico\n* +500 Vida\n* +400 Mana\n* Absorve 3% de todo dano\n* Regenera 3 Mana a cada 2s\n* +30 Velocidade",
 }
 
 function getItemCustomTooltip(item)

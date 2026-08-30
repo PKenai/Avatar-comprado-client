@@ -43,6 +43,11 @@ Panel
     !text: tr('Floor Shadow')
     !tooltip: tr('Darken underground floors')
 
+  OptionCheckBox
+    id: highFloorTransparency
+    !text: tr('High Floor Transparency')
+    !tooltip: tr('Make upper floors semi-transparent when covering the player')
+
   Label
     id: floorShadowFadeWidthLabel
     anchors.left: parent.left

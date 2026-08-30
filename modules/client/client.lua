@@ -62,7 +62,11 @@ function init()
   end
 
   g_window.setTitle('Tibia Avatar')
-  g_window.setIcon('/images/clienticon')
+  if g_resources.fileExists('/images/icon.png') then
+    g_window.setIcon('/images/icon')
+  else
+    g_window.setIcon('/images/clienticon')
+  end
 
   -- poll resize events
   g_window.poll()

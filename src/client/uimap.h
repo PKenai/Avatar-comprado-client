@@ -69,6 +69,13 @@ public:
     float getFloorShadowFadeWidth() { return m_mapView->getFloorShadowFadeWidth(); }
     void setFloorShadowFadeEasing(int easing) { m_mapView->setFloorShadowFadeEasing(easing); }
     int getFloorShadowFadeEasing() { return m_mapView->getFloorShadowFadeEasing(); }
+    // floor transparency — upper floors near player become semi-transparent
+    void setFloorTransparencyEnabled(bool enable) { m_mapView->setFloorTransparencyEnabled(enable); }
+    bool isFloorTransparencyEnabled() { return m_mapView->isFloorTransparencyEnabled(); }
+    void setFloorTransparency(float opacity) { m_mapView->setFloorTransparency(opacity); }
+    float getFloorTransparency() { return m_mapView->getFloorTransparency(); }
+    void setFloorTransparencyRadius(float radius) { m_mapView->setFloorTransparencyRadius(radius); }
+    float getFloorTransparencyRadius() { return m_mapView->getFloorTransparencyRadius(); }
     void setCrosshair(const std::string& type) { m_mapView->setCrosshair(type); }
     bool isMultifloor() { return m_mapView->isMultifloor(); }
     bool isDrawingTexts() { return m_mapView->isDrawingTexts(); }

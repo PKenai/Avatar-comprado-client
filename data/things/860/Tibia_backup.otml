@@ -1,3 +1,4 @@
+effects:
 items:
 creatures:
   1215:
@@ -14,4 +15,3 @@ creatures:
     outfit-displacement: opacity: 1.0, South: 61 54, West: 58 57, North: 61 62, East: 58 35
   1325:
     outfit-displacement: opacity: 1.0, South: 54 58, West: 60 51, North: 45 60, East: 57 52
-effects:

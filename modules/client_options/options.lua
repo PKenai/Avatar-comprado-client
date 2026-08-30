@@ -27,6 +27,7 @@ local defaultOptions = {
   floorShadow = true,
   floorShadowFadeWidth = 32,
   floorShadowFadeEasing = 0,
+  highFloorTransparency = true,
   skyClouds = true,
   dashWalk = false,
   turnDelay = 50
@@ -229,6 +230,10 @@ function setOption(key, value, force)
       gameMapPanel:setFloorShadowFadeEasing(value)
       local name = value == 1 and 'Linear' or 'Smoothstep'
       graphicsPanel:getChildById('floorShadowFadeEasingLabel'):setText(tr('Floor shadow fade easing: %s', name))
+    end
+  elseif key == 'highFloorTransparency' then
+    if gameMapPanel and gameMapPanel.setFloorTransparencyEnabled then
+      gameMapPanel:setFloorTransparencyEnabled(value)
     end
   elseif key == 'skyClouds' then
     if value then
