@@ -92,6 +92,11 @@ void GraphicalApplication::init(std::vector<std::string>& args)
 #ifdef TOGGLE_GAMEPAD
     g_controller.init();
 #endif
+
+#ifdef WITH_ULTRALIGHT
+    // initialize Ultralight HTML rendering engine
+    g_ultralightManager.init();
+#endif
 }
 
 void GraphicalApplication::deinit()
@@ -356,6 +361,14 @@ void GraphicalApplication::run()
 
         g_graphs[GRAPH_GPU_CALLS].addValue(g_painter->calls());
         g_graphs[GRAPH_GPU_DRAWS].addValue(g_painter->draws());
+
+#ifdef WITH_ULTRALIGHT
+        {
+            AutoStat s(STATS_RENDER, "UltralightUpdate");
+            g_ultralightManager.update();
+            g_ultralightManager.render();
+        }
+#endif
 
         AutoStat s(STATS_RENDER, "SwapBuffers");
         g_window.swapBuffers();

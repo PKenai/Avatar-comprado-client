@@ -8,9 +8,31 @@ WebviewModule.updateEvent = nil
 
 function onModuleLoad()
     g_logger.info("[Webview] Module loaded")
+    -- Check if Ultralight and UIWebView are available
+    if not g_ultralight then
+        g_logger.info("[Webview] g_ultralight not available - overlay disabled")
+        return
+    end
+    if not UIWebView then
+        g_logger.info("[Webview] UIWebView class not registered - overlay disabled")
+        return
+    end
+    -- Load overlay module safely
+    local success, err = pcall(function()
+        dofile('/modules/game_webview/overlay.lua')
+    end)
+    if success and OverlayModule then
+        OverlayModule.init()
+        g_keyboard.bindKeyDown('Ctrl+Shift+H', function() OverlayModule.toggle() end)
+        g_logger.info("[Webview] Overlay loaded - Ctrl+Shift+H to toggle")
+    else
+        g_logger.info("[Webview] Overlay load error: " .. tostring(err))
+    end
 end
 
 function onModuleUnload()
+    g_keyboard.unbindKeyDown('Ctrl+Shift+H')
+    OverlayModule.terminate()
     WebviewModule.destroy()
     g_logger.info("[Webview] Module unloaded")
 end

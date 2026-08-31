@@ -9,7 +9,7 @@ TopButton < UIButton
     image-source: /images/ui/button_top_blink
 
   $hover !disabled:
-    image-color: #ffffff99
+    image-color: #ffffffbb
     image-clip: 26 0 26 26
 
   $pressed:
@@ -36,19 +36,21 @@ TopToggleButton < UIButton
 TopMenuButtonsPanel < Panel
   layout:
     type: horizontalBox
-    spacing: 6
+    spacing: 2
     fit-children: true
 
 TopMenuPanel < Panel
   height: 36
   image-repeated: true
   focusable: false
+  background-color: #0f1423DD
 
 TopMenuFrameCounterLabel < Label
   font: verdana-11px-rounded
-  color: white
+  color: #34d399
   margin-top: 4
   margin-left: 5
 
 TopMenuPingLabel < Label
   font: verdana-11px-rounded
+  color: #fbbf24

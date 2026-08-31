@@ -75,7 +75,7 @@ end
 function resetSkillColor(id)
   local skill = skillsWindow:recursiveGetChildById(id)
   local widget = skill:getChildById('value')
-  widget:setColor('#bbbbbb')
+  widget:setColor('#8892a4')
 end
 
 function setSkillBase(id, value, baseValue)
@@ -86,13 +86,13 @@ function setSkillBase(id, value, baseValue)
   local widget = skill:getChildById('value')
 
   if value > baseValue then
-    widget:setColor('#008b00') -- green
+    widget:setColor('#34d399') -- green
     skill:setTooltip(baseValue .. ' +' .. (value - baseValue))
   elseif value < baseValue then
-    widget:setColor('#b22222') -- red
+    widget:setColor('#f87171') -- red
     skill:setTooltip(baseValue .. ' ' .. (value - baseValue))
   else
-    widget:setColor('#bbbbbb') -- default
+    widget:setColor('#8892a4') -- default
     skill:removeTooltip()
   end
 end
@@ -299,7 +299,7 @@ function onManaChange(localPlayer, mana, maxMana)
 end
 
 function onSoulChange(localPlayer, soul)
-  --setSkillValue('soul', soul), tira soul da visão.
+  --setSkillValue('soul', soul), tira soul da visï¿½o.
 end
 
 function onFreeCapacityChange(localPlayer, freeCapacity)

@@ -1,5 +1,5 @@
 SpellProgress < UIProgressRect
-  background: #585858AA
+  background: #0f142390
   percent: 100
   focusable: false
   font: verdana-11px-rounded
@@ -8,6 +8,7 @@ SpellProgress < UIProgressRect
   anchors.top: parent.top
   size: 32 32
   text-align: center
+  color: #e8ecf1
 
 Folds < UIButton
   size: 32 32
@@ -27,6 +28,7 @@ folds
   dragable: true
   image-source: bg
   image-auto-resize: true
+  image-color: #0f1423CC
 
   Folds
     id: m1

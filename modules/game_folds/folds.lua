@@ -113,7 +113,7 @@ function refreshCDs(CDs)
 
             if progress then
                 cancelEventFold(a)
-                progress:setColor("gray")
+                progress:setColor("#8892a4")
 
                 if delay == 0 then
                     progress:setPercent(100)
@@ -155,7 +155,7 @@ function checkBuys()
 
         if not infos.buy[x] then
             progress:setText("NPC")
-            progress:setColor("gray")
+            progress:setColor("#8892a4")
             progress:setPercent(0)
         else
             if progress:getText() == "NPC" and infos.spells[x] == 0 then
@@ -163,9 +163,8 @@ function checkBuys()
                     progress:setText()
                     progress:setPercent(100)
                 else
-                    progress:setText("L"..current.level)
-                    progress:setColor("pink") 
-                end
+                    progress:setText("L"..current.level)            progress:setColor("#a855f7")
+        end
             end
         end
     end
@@ -184,7 +183,7 @@ function refreshLevel()
             end
         else
             progress:setText("L"..spellInfos[infos.vocation][x].level)
-            progress:setColor("pink")
+            progress:setColor("#a855f7")
             progress:setPercent(0)
         end
     end

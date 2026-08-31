@@ -40,7 +40,6 @@ public:
     bool onKeyText(const std::string& keyText) override;
     void onGeometryChange(const Rect& oldRect, const Rect& newRect) override;
 
-    // Safe to call from any thread — only does CPU pixel copy
     void pendingTextureUpdate();
 
 protected:
@@ -54,15 +53,14 @@ private:
     bool m_needsTextureUpdate = false;
     bool m_created = false;
     bool m_transparent = false;
+    bool m_jsEnabled = true;
     int m_viewWidth = 0;
     int m_viewHeight = 0;
     std::string m_jsCallbackName;
 
-    // Thread-safe pixel buffer for passing data from CPU to GL thread
     std::mutex m_pixelMutex;
     std::vector<unsigned char> m_pendingPixels;
     bool m_hasPendingPixels = false;
-    bool m_textureScheduled = false;
     int m_pendingWidth = 0;
     int m_pendingHeight = 0;
 };

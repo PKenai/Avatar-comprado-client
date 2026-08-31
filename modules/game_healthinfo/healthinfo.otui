@@ -1,37 +1,41 @@
 HealthBar < ProgressBar
   id: healthBar
   size: 189 21
-  background-color: #f00200
+  background-color: #1a2235
   anchors.top: parent.top
   anchors.left: parent.left
   margin-top: 22
   margin-left: 115
   image-source: progress
-  color: white
+  image-color: #ef4444
+  color: #e8ecf1
 
 ManaBar < ProgressBar
   id: manaBar
   size: 177 8
-  background-color:#da1bd7
+  background-color: #1a2235
   anchors.top: healthBar.bottom
   anchors.left: parent.left
   margin-left: 120
   margin-top: 2
   image-source: progressm
-  
+  image-color: #8b5cf6
+  color: #e8ecf1
+
 ExperienceBar < ProgressBar
   id: experienceBar
   size: 161 6
-  background-color: #f5c905
+  background-color: #1a2235
   anchors.top: manaBar.bottom
   anchors.left: parent.left
   margin-left: 120
   margin-top: 6
+  image-color: #f59e0b
 
 SoulLabel < GameLabel
   id: soulLabel
   text-align: right
-  color: white
+  color: #8892a4
   font: verdana-11px-rounded
   anchors.bottom: parent.bottom
   anchors.right: parent.right
@@ -47,7 +51,7 @@ SoulLabel < GameLabel
 
 CapLabel < GameLabel
   id: capLabel
-  color: white
+  color: #8892a4
   font: verdana-11px-rounded
   anchors.bottom: parent.bottom
   anchors.left: parent.left

@@ -11,6 +11,7 @@
 #include <framework/graphics/painter.h>
 #include <framework/platform/platformwindow.h>
 #include <Ultralight/Bitmap.h>
+#include <Ultralight/Platform/Surface.h>
 #include <mutex>
 
 static std::string toStr(const ultralight::String& str) {
@@ -40,67 +41,120 @@ static uint32_t mapModifiers(int modifiers) {
 UIWebView::UIWebView() = default;
 UIWebView::~UIWebView() { m_view = nullptr; m_texture = nullptr; }
 
+class UIWebViewLoadListener : public ultralight::LoadListener {
+public:
+    void OnDOMReady(ultralight::View* caller, uint64_t frame_id, bool is_main_frame, const ultralight::String& url) override {
+        g_logger.info("[UIWebView] OnDOMReady event received!");
+    }
+    void OnFinishLoading(ultralight::View* caller, uint64_t frame_id, bool is_main_frame, const ultralight::String& url) override {
+        g_logger.info("[UIWebView] OnFinishLoading event received!");
+    }
+    void OnFailLoading(ultralight::View* caller, uint64_t frame_id, bool is_main_frame, const ultralight::String& url, const ultralight::String& description, const ultralight::String& error_domain, int error_code) override {
+        g_logger.error("[UIWebView] OnFailLoading: " + std::string(description.utf8().data()));
+    }
+};
+static UIWebViewLoadListener g_webViewLoadListener;
+
 void UIWebView::create(int width, int height) {
     if (m_created) return;
+    g_logger.info("[UIWebView] create(" + std::to_string(width) + "x" + std::to_string(height) + ")");
 
-    auto& mgr = UltralightManager::instance();
-    if (!mgr.isInitialized()) mgr.init();
-    if (!mgr.isInitialized()) { g_logger.error("UIWebView: Ultralight not available!"); return; }
+    try {
+        auto& mgr = UltralightManager::instance();
+        if (!mgr.isInitialized()) {
+            mgr.init();
+        }
+        if (!mgr.isInitialized()) {
+            g_logger.error("[UIWebView] Ultralight not initialized");
+            return;
+        }
 
-    auto renderer = mgr.getRenderer();
-    if (!renderer) { g_logger.error("UIWebView: No renderer!"); return; }
+        auto renderer = mgr.getRenderer();
+        if (!renderer) {
+            g_logger.error("[UIWebView] No renderer");
+            return;
+        }
 
-    ultralight::ViewConfig config;
-    config.initial_device_scale = 1.0;
-    config.is_transparent = m_transparent;
-    config.enable_images = true;
-    config.enable_javascript = true;
-    config.enable_compositor = false;
-    config.is_accelerated = false;
+        ultralight::ViewConfig config;
+        config.initial_device_scale = 1.0;
+        config.is_transparent = false;
+        config.enable_images = true;
+        config.enable_javascript = true;
+        config.is_accelerated = false;
+        config.initial_focus = false;
 
-    m_view = renderer->CreateView(width, height, config, nullptr);
-    if (!m_view) { g_logger.error("UIWebView: Failed to create view!"); return; }
+        int alignedWidth = std::max(16, (width / 16) * 16);
+        int alignedHeight = std::max(16, (height / 16) * 16);
+        g_logger.info("[UIWebView] CreateView with aligned size: " + std::to_string(alignedWidth) + "x" + std::to_string(alignedHeight));
 
-    m_viewWidth = width;
-    m_viewHeight = height;
-    m_created = true;
+        m_view = renderer->CreateView(alignedWidth, alignedHeight, config, renderer->default_session());
+        if (!m_view) {
+            g_logger.error("[UIWebView] CreateView returned null");
+            return;
+        }
+        m_view->set_load_listener(&g_webViewLoadListener);
+        g_logger.info("[UIWebView] CreateView OK");
 
-    std::vector<unsigned char> white(width * height * 4, 255);
-    ImagePtr img(new Image(Size(width, height), 4, white.data()));
-    m_texture = TexturePtr(new Texture(img));
+        m_viewWidth = alignedWidth;
+        m_viewHeight = alignedHeight;
+        m_created = true;
+        m_needsTextureUpdate = true;
+        g_logger.info("[UIWebView] Created OK");
 
-    g_logger.info("UIWebView: Created view");
+    } catch (const std::exception& e) {
+        g_logger.error("[UIWebView] Exception in create: " + std::string(e.what()));
+    } catch (...) {
+        g_logger.error("[UIWebView] Unknown exception in create");
+    }
 }
 
 void UIWebView::loadHTML(const std::string& html, const std::string& baseUrl) {
-    if (!m_view) return;
-    m_view->LoadHTML(ultralight::String(html.c_str(), html.size()),
-                     ultralight::String(baseUrl.c_str(), baseUrl.size()));
-    m_needsTextureUpdate = true;
+    if (!m_view) { g_logger.error("[UIWebView] loadHTML: m_view is null"); return; }
+    try {
+        g_logger.info("[UIWebView] loadHTML: size=" + std::to_string(html.size()));
+        ultralight::String ulHtml(html.c_str(), html.size());
+        std::string base = baseUrl.empty() ? "http://localhost/" : baseUrl;
+        ultralight::String ulBase(base.c_str(), base.size());
+        m_view->LoadHTML(ulHtml, ulBase);
+        g_logger.info("[UIWebView] loadHTML: OK");
+        m_needsTextureUpdate = true;
+    } catch (const std::exception& e) {
+        g_logger.error("[UIWebView] loadHTML exception: " + std::string(e.what()));
+    } catch (...) {
+        g_logger.error("[UIWebView] loadHTML unknown exception");
+    }
 }
 
 void UIWebView::loadURL(const std::string& url) {
-    if (m_view) m_view->LoadURL(ultralight::String(url.c_str(), url.size()));
+    if (!m_view) return;
+    try {
+        m_view->LoadURL(ultralight::String(url.c_str(), url.size()));
+    } catch (...) {}
 }
 
 std::string UIWebView::executeScript(const std::string& script) {
-    if (!m_view) return "";
-    ultralight::String exception;
-    return toStr(m_view->EvaluateScript(ultralight::String(script.c_str(), script.size()), &exception));
+    if (!m_view || m_view->is_loading()) return "";
+    try {
+        ultralight::String exception;
+        auto result = m_view->EvaluateScript(ultralight::String(script.c_str(), script.size()), &exception);
+        return toStr(result);
+    } catch (...) { return ""; }
 }
 
 void UIWebView::reload() { if (m_view) m_view->Reload(); }
 
 void UIWebView::resizeView(int width, int height) {
     if (!m_view || width <= 0 || height <= 0) return;
-    m_view->Resize(width, height);
-    m_viewWidth = width;
-    m_viewHeight = height;
-    m_needsTextureUpdate = true;
+    try {
+        m_view->Resize(width, height);
+        m_viewWidth = width;
+        m_viewHeight = height;
+        m_needsTextureUpdate = true;
+    } catch (...) {}
 }
 
 void UIWebView::setTransparent(bool t) { m_transparent = t; }
-void UIWebView::setJavaScriptEnabled(bool) {}
+void UIWebView::setJavaScriptEnabled(bool e) { m_jsEnabled = e; }
 std::string UIWebView::getURL() { return m_view ? toStr(m_view->url()) : ""; }
 std::string UIWebView::getTitle() { return m_view ? toStr(m_view->title()) : ""; }
 bool UIWebView::isLoading() { return m_view ? m_view->is_loading() : false; }
@@ -109,39 +163,47 @@ void UIWebView::setOnURLChange(const std::string& cb) { m_jsCallbackName = cb; }
 // ── CPU pixel copy ───────────────────────────────────────────────────────────
 
 void UIWebView::copyPixelsFromSurface() {
-    if (!m_view || !m_needsTextureUpdate) return;
-    auto* surface = m_view->surface();
-    if (!surface || surface->dirty_bounds().IsEmpty()) return;
+    if (!m_view) return;
+    try {
+        auto* surface = m_view->surface();
+        if (!surface) return;
+        if (surface->dirty_bounds().IsEmpty()) return;
 
-    auto* bs = static_cast<ultralight::BitmapSurface*>(surface);
-    auto bmp = bs->bitmap();
-    if (!bmp) return;
+        uint32_t w = surface->width();
+        uint32_t h = surface->height();
+        uint32_t stride = surface->row_bytes();
+        if (w == 0 || h == 0 || stride < w * 4) return;
 
-    uint32_t bmpW = bmp->width(), bmpH = bmp->height();
-    if (bmpW == 0 || bmpH == 0) return;
+        const unsigned char* raw = static_cast<const unsigned char*>(surface->LockPixels());
+        if (!raw) return;
 
-    const void* raw = bmp->LockPixels();
-    if (!raw) return;
+        {
+            std::lock_guard<std::mutex> lock(m_pixelMutex);
+            m_pendingPixels.resize(w * h * 4);
+            m_pendingWidth = (int)w;
+            m_pendingHeight = (int)h;
 
-    std::lock_guard<std::mutex> lock(m_pixelMutex);
-    m_pendingPixels.resize(bmpW * bmpH * 4);
-    m_pendingWidth = bmpW;
-    m_pendingHeight = bmpH;
-    const unsigned char* src = static_cast<const unsigned char*>(raw);
-    for (uint32_t i = 0; i < bmpW * bmpH; i++) {
-        m_pendingPixels[i*4+0] = src[i*4+2];
-        m_pendingPixels[i*4+1] = src[i*4+1];
-        m_pendingPixels[i*4+2] = src[i*4+0];
-        m_pendingPixels[i*4+3] = src[i*4+3];
-    }
-    m_hasPendingPixels = true;
-    bmp->UnlockPixels();
-    surface->ClearDirtyBounds();
-    m_needsTextureUpdate = false;
+            for (uint32_t y = 0; y < h; ++y) {
+                const unsigned char* srcRow = raw + (y * stride);
+                unsigned char* dstRow = m_pendingPixels.data() + (y * w * 4);
+                for (uint32_t x = 0; x < w; ++x) {
+                    dstRow[x * 4 + 0] = srcRow[x * 4 + 2]; // R (from BGRA)
+                    dstRow[x * 4 + 1] = srcRow[x * 4 + 1]; // G
+                    dstRow[x * 4 + 2] = srcRow[x * 4 + 0]; // B
+                    dstRow[x * 4 + 3] = srcRow[x * 4 + 3]; // A
+                }
+            }
+            m_hasPendingPixels = true;
+        }
+
+        surface->UnlockPixels();
+        surface->ClearDirtyBounds();
+        m_needsTextureUpdate = false;
+    } catch (...) {}
 }
 
 void UIWebView::pendingTextureUpdate() {
-    if (!m_view || !m_needsTextureUpdate) return;
+    if (!m_view) return;
     copyPixelsFromSurface();
 }
 
@@ -150,10 +212,24 @@ void UIWebView::pendingTextureUpdate() {
 void UIWebView::drawSelf(Fw::DrawPane drawPane) {
     if (drawPane != Fw::ForegroundPane) return;
     UIWidget::drawSelf(drawPane);
-    if (!m_created || !m_texture || m_texture->isEmpty()) return;
+    if (!m_created) return;
 
-    // NO texture updates at all — just draw the initial white texture
-    // This proves the widget renders without GL errors
+    {
+        std::lock_guard<std::mutex> lock(m_pixelMutex);
+        if (m_hasPendingPixels && m_pendingWidth > 0 && m_pendingHeight > 0) {
+            try {
+                ImagePtr img(new Image(Size(m_pendingWidth, m_pendingHeight), 4, m_pendingPixels.data()));
+                if (m_texture && m_texture->getWidth() == m_pendingWidth && m_texture->getHeight() == m_pendingHeight) {
+                    m_texture->replace(img);
+                } else {
+                    m_texture = TexturePtr(new Texture(img));
+                }
+            } catch (...) {}
+            m_hasPendingPixels = false;
+        }
+    }
+
+    if (!m_texture || m_texture->isEmpty()) return;
 
     Rect screenCoords = getPaddingRect();
     Rect srcRect(0, 0, m_viewWidth, m_viewHeight);
@@ -167,7 +243,8 @@ bool UIWebView::onMousePress(const Point& mousePos, Fw::MouseButton button) {
     Rect r = getPaddingRect();
     ultralight::MouseEvent evt;
     evt.type = ultralight::MouseEvent::kType_MouseDown;
-    evt.x = mousePos.x - r.left(); evt.y = mousePos.y - r.top();
+    evt.x = mousePos.x - r.left();
+    evt.y = mousePos.y - r.top();
     evt.button = mapMouseButton(button);
     m_view->FireMouseEvent(evt);
     focus();
@@ -179,24 +256,26 @@ bool UIWebView::onMouseRelease(const Point& mousePos, Fw::MouseButton button) {
     Rect r = getPaddingRect();
     ultralight::MouseEvent evt;
     evt.type = ultralight::MouseEvent::kType_MouseUp;
-    evt.x = mousePos.x - r.left(); evt.y = mousePos.y - r.top();
+    evt.x = mousePos.x - r.left();
+    evt.y = mousePos.y - r.top();
     evt.button = mapMouseButton(button);
     m_view->FireMouseEvent(evt);
     return true;
 }
 
-bool UIWebView::onMouseMove(const Point& mousePos, const Point& mouseMoved) {
+bool UIWebView::onMouseMove(const Point& mousePos, const Point& /*mouseMoved*/) {
     if (!m_view) return false;
     Rect r = getPaddingRect();
     ultralight::MouseEvent evt;
     evt.type = ultralight::MouseEvent::kType_MouseMoved;
-    evt.x = mousePos.x - r.left(); evt.y = mousePos.y - r.top();
+    evt.x = mousePos.x - r.left();
+    evt.y = mousePos.y - r.top();
     evt.button = ultralight::MouseEvent::kButton_None;
     m_view->FireMouseEvent(evt);
     return true;
 }
 
-bool UIWebView::onMouseWheel(const Point& mousePos, Fw::MouseWheelDirection direction) {
+bool UIWebView::onMouseWheel(const Point& /*mousePos*/, Fw::MouseWheelDirection direction) {
     if (!m_view) return false;
     ultralight::ScrollEvent evt;
     evt.type = ultralight::ScrollEvent::kType_ScrollByPixel;

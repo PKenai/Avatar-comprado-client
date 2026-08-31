@@ -1,17 +1,17 @@
 -- ============================================================================
 --  game_containers - janelas de containers (embutido no client)
---  Inclui a "lupa" de busca no depósito (opcode 233 <-> servidor):
---    * botão de lupinha na barra do container (so aparece em depósitos)
+--  Inclui a "lupa" de busca no depï¿½sito (opcode 233 <-> servidor):
+--    * botï¿½o de lupinha na barra do container (so aparece em depï¿½sitos)
 --    * clique -> mini box (campo de texto + Limpar), com foco automatico
 --    * Enter/busca -> drop-down compacto com os itens que batem
 --    * clique num resultado -> server move o item pra mochila (take)
 --    * Esc ou clique na lupinha de novo -> fecha
 -- ============================================================================
 
--- ===================== Depot Search (nativo, sem módulo extra) =============
+-- ===================== Depot Search (nativo, sem mï¿½dulo extra) =============
 local DEPOT_SEARCH_OPCODE = 233
 
--- IDs de CLIENT dos containers de depósito (o server manda o clientId do OTB):
+-- IDs de CLIENT dos containers de depï¿½sito (o server manda o clientId do OTB):
 -- locker = 3497 (e variantes), depot chest = 3502, reward mailbox = 18358.
 local DEPOT_IDS = { [3497] = true, [3498] = true, [3499] = true, [3500] = true, [3501] = true, [3502] = true, [18358] = true }
 
@@ -113,7 +113,7 @@ local function renderDepotResults(list, total)
     lbl:setPosition({ x = 4, y = 1 })
     lbl:setSize({ width = 246, height = 14 })
     lbl:setFont('verdana-11px-monochrome')
-    lbl:setColor('#909090')
+    lbl:setColor('#4b5563')
     lbl:setText('Nenhum item encontrado')
   else
     local totalN = tonumber(total) or #rows
@@ -125,7 +125,7 @@ local function renderDepotResults(list, total)
       lbl:setPosition({ x = 4, y = 1 })
       lbl:setSize({ width = 246, height = 14 })
       lbl:setFont('verdana-11px-monochrome')
-      lbl:setColor('#b0b0b0')
+      lbl:setColor('#8892a4')
       lbl:setText(string.format('+%d mais - refine a busca', totalN - shown))
     end
   end
@@ -381,7 +381,7 @@ end
 -- slots conforme itens entram/saem, ate 5000 slots (protocolo agora em U16).
 -- ---------------------------------------------------------------------------
 -- ATENCAO: o server envia o CLIENT id do item (clientId do OTB). O Momo Pouch
--- tem server id 18435, mas clientId 17437 — as checagens do client usam 17437.
+-- tem server id 18435, mas clientId 17437 ï¿½ as checagens do client usam 17437.
 local DYNAMIC_CONTAINER_IDS = { [17437] = true, [18358] = true }
 
 local function isDynamicSlotsContainer(container)

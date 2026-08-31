@@ -262,7 +262,7 @@ function resetSkillColor(id)
     if skill then
         local widget = skill:getChildById("value")
         if widget then
-            widget:setColor("#bbbbbb")
+            widget:setColor("#8892a4")
         end
     end
 end

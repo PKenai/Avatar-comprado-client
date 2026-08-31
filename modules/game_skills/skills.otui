@@ -10,6 +10,7 @@ SkillNameLabel < GameLabel
   anchors.left: parent.left
   anchors.top: parent.top
   anchors.bottom: parent.bottom
+  color: #8892a4
 
 SkillValueLabel < GameLabel
   id: value
@@ -19,16 +20,18 @@ SkillValueLabel < GameLabel
   anchors.top: parent.top
   anchors.bottom: parent.bottom
   anchors.left: prev.left
+  color: #e8ecf1
 
 SkillPercentPanel < ProgressBar
   id: percent
-  background-color: green
+  background-color: #1a2235
   height: 5
   margin-top: 15
   anchors.left: parent.left
   anchors.right: parent.right
   anchors.top: parent.top
   phantom: false
+  image-color: #34d399
 
 MiniWindow
   id: skillWindow

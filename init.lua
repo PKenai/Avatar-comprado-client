@@ -95,4 +95,7 @@ if type(Services.updater) == 'string' and Services.updater:len() > 4
   g_modules.ensureModuleLoaded("updater")
   return Updater.init(loadModules)
 end
+
 loadModules()
+
+

@@ -8,6 +8,8 @@ local CRAFTING_OPCODE = 106
 
 local craftingWindow = nil
 local isCraftingOpen = false
+local overlay = nil
+local destroyOverlay  -- forward-declare: usada em terminate() antes da definicao
 
 -- Profissoes (apenas nomes para exibicao - dados reais vem do server)
 local skillIdToUI = {
@@ -251,8 +253,6 @@ end
 -- ABRIR/FECHAR
 -- ============================================================
 
-local overlay = nil
-
 local function createOverlay()
   if overlay then return end
   local root = modules.game_interface and modules.game_interface.getRootPanel()
@@ -265,7 +265,7 @@ local function createOverlay()
   overlay.onMouseRelease = function() end
 end
 
-local function destroyOverlay()
+destroyOverlay = function()
   if overlay then
     overlay:destroy()
     overlay = nil

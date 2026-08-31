@@ -1,29 +1,32 @@
 ButtonChat < UICheckBox
   size: 20 20
-  image-color: #dfdfdf
+  image-color: #8892a4
   image-clip: 0 0 20 40
   image-border: 0
 
   $hover !on:
     image-clip: 0 40 40 20
-    color: #dfdfdf
+    color: #e8ecf1
+    image-color: #e8ecf1
 
   $disabled:
     image-clip: 0 0 20 20
+    image-color: #4b556388
 
   $on:
     image-clip: 0 40 20 20
-    color: #dfdfdf
+    color: #638cff
+    image-color: #638cff
 
 ConsoleLabel < UITextEdit
   font: verdana-11px-antialised
   height: 14
-  color: yellow
+  color: #fbbf24
   margin-left: 2
   text-wrap: true
   text-auto-resize: true
-  selection-color: #111416
-  selection-background-color: #999999
+  selection-color: #638cff40
+  selection-background-color: #638cff
   change-cursor-image: false
   cursor-visible: false
   editable: false
@@ -31,11 +34,11 @@ ConsoleLabel < UITextEdit
 ConsolePhantomLabel < UILabel
   font: verdana-11px-antialised
   height: 14
-  color: yellow
+  color: #fbbf24
   text-wrap: true
   text-auto-resize: true
-  selection-color: #111416
-  selection-background-color: #999999
+  selection-color: #638cff40
+  selection-background-color: #638cff
 
 ConsoleTabBar < MoveableTabBar
   height: 28
@@ -52,8 +55,8 @@ ConsoleTabBarPanel < MoveableTabBarPanel
       type: verticalBox
       align-bottom: true
     border-width: 1
-    border-color: #202327
-    background: #00000066
+    border-color: #ffffff0a
+    background: #0a0e1799
     inverted-scroll: true
     padding: 1
 
@@ -186,6 +189,7 @@ Panel
     margin-left: 6
     margin-bottom: 6
     @onClick: sayModeChange()
+    icon-color: #8892a4
 
   Button
     id: stickerButton
@@ -196,6 +200,7 @@ Panel
     anchors.bottom: parent.bottom
     margin-left: 6
     margin-bottom: 6
+    icon-color: #8892a4
 
   TextEdit
     id: consoleTextEdit
@@ -207,3 +212,5 @@ Panel
     margin-bottom: 6
     shift-navigation: true
     max-length: 255
+    image-color: #111827
+    color: #e8ecf1

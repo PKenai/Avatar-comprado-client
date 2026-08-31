@@ -14,9 +14,10 @@ SpellIcon < UIWidget
     margin-left: 1
 
 SpellProgressRect < UIProgressRect
-  background: #585858AA
+  background: #0f142390
   percent: 100
   focusable: false
+  color: #e8ecf1
 
 GroupCooldownParticles < UIParticles
   effect: groupcooldown-effect

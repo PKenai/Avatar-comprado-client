@@ -1,10 +1,11 @@
 ProgressBar < UIProgressBar
   height: 16
-  background-color: red
+  background-color: #1a2235
   image-source: /images/ui/progressbar
   image-border: 1
   font: verdana-11px-rounded
   text-offset: 0 2
+  color: #e8ecf1
 
   $!on:
     visible: false
@@ -14,15 +15,16 @@ ProgressBar < UIProgressBar
 
 LifeProgressBar < UIProgressBar
   height: 16
-  background-color: green
-  border: 1 black
+  background-color: #1a2235
+  border: 1 #ffffff0a
   font: verdana-11px-rounded
   text-offset: 0 2
   margin: 2
+  color: #e8ecf1
 
 ProgressRect < UIProgressRect
   anchors.fill: parent
   phantom: true
-  color: white
-  background-color: #00000088
+  color: #e8ecf1
+  background-color: #0f142390
   font: verdana-11px-rounded

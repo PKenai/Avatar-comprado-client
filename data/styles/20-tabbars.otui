@@ -4,30 +4,31 @@ MoveableTabBarPanel < Panel
 MoveableTabBarButton < UIButton
   size: 72 50
   image-source: /images/ui/tabbutton_square
-  image-color: #dfdfdf
+  image-color: #2a3450
   image-clip: 0 0 50 24
   image-border: 10
   image-border-bottom: 5
-  icon-color: #dfdfdf
-  color: #dfdfdf
+  icon-color: #8892a4
+  color: #8892a4
   anchors.top: parent.top
   anchors.left: parent.left
   padding: 5
 
   $hover !checked:
     image-clip: 0 24 50 24
-    color: #dfdfdf
+    image-color: #334060
+    color: #e8ecf1
 
   $disabled:
-    image-color: #dfdfdf88
-    icon-color: #dfdfdf
+    image-color: #1a223588
+    icon-color: #4b556388
 
   $checked:
     image-clip: 0 48 50 24
-    color: #dfdfdf
+    color: #638cff
 
   $on !checked:
-    color: #F55E5E
+    color: #638cff
 
 TabBar < UITabBar
   size: 80 21
@@ -38,12 +39,12 @@ TabBarPanel < Panel
 TabBarButton < UIButton
   size: 22 23
   image-source: /images/ui/tabbutton_square
-  image-color: #dfdfdf
+  image-color: #2a3450
   image-clip: 0 0 22 23
   image-border: 3
   image-border-bottom: 0
-  icon-color: #dfdfdf
-  color: #dfdfdf
+  icon-color: #8892a4
+  color: #8892a4
   anchors.top: parent.top
   padding: 5
 
@@ -56,28 +57,29 @@ TabBarButton < UIButton
 
   $hover !checked:
     image-clip: 0 23 22 23
-    color: #dfdfdf
+    image-color: #334060
+    color: #e8ecf1
 
   $disabled:
-    image-color: #dfdfdf88
-    icon-color: #dfdfdf
+    image-color: #1a223588
+    icon-color: #4b556388
 
   $checked:
     image-clip: 0 46 22 23
-    color: #dfdfdf
+    color: #638cff
 
   $on !checked:
-    color: #F55E5E
+    color: #638cff
 
 
 TabBarButtonChat < UIButton
   size: 20 20
-  image-color: #dfdfdf
+  image-color: #2a3450
   image-clip: 0 0 20 20
   image-border: 3
   image-border-bottom: 0
-  icon-color: #dfdfdf
-  color: #dfdfdf
+  icon-color: #8892a4
+  color: #8892a4
   anchors.top: parent.top
   padding: 5
 
@@ -90,18 +92,19 @@ TabBarButtonChat < UIButton
 
   $hover !checked:
     image-clip: 0 23 22 23
-    color: #dfdfdf
+    image-color: #334060
+    color: #e8ecf1
 
   $disabled:
-    image-color: #dfdfdf88
-    icon-color: #dfdfdf
+    image-color: #1a223588
+    icon-color: #4b556388
 
   $checked:
     image-clip: 0 46 22 23
-    color: #dfdfdf
+    color: #638cff
 
   $on !checked:
-    color: #F55E5E
+    color: #638cff
 
 TabBarRounded < TabBar
 TabBarRoundedPanel < TabBarPanel
@@ -129,25 +132,25 @@ TabBarVertical < UITabBar
 TabBarVerticalPanel < Panel
 TabBarVerticalButton < UIButton
   size: 48 48
-  color: #aaaaaa
+  color: #8892a4
   anchors.left: parent.left
   anchors.right: parent.right
   text-align: bottom
   icon-align: top
   icon-offset-y: 2
-  icon-color: #888888
+  icon-color: #4b5563
   $first:
     anchors.top: parent.top
   $!first:
     anchors.top: prev.bottom
     margin-top: 10
   $hover !checked:
-    color: white
-    icon-color: #dfdfdf
+    color: #e8ecf1
+    icon-color: #8892a4
   $disabled:
-    icon-color: #333333
+    icon-color: #1a2235
   $checked:
-    icon-color: #ffffff
-    color: #80c7f8
+    icon-color: #638cff
+    color: #638cff
   $on !checked:
-    color: #F55E5E
+    color: #638cff

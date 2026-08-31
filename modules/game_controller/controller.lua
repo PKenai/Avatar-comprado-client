@@ -1,7 +1,7 @@
 --[[
   game_controller/controller.lua
   -----------------------------------------------------------------------------
-  Módulo de suporte a gamepad com mapeamento de teclas de teclado.
+  Mï¿½dulo de suporte a gamepad com mapeamento de teclas de teclado.
 --]]
 
 -- -----------------------------------------------------------------------------
@@ -20,7 +20,7 @@ local BUTTONS = {
     { id = "back",          label = "Back / Select Button" },
     { id = "start",         label = "Start Button"         },
     { id = "guide",         label = "Home / Guide Button"  },
-    -- Direcionais hardcoded para movimento (não aparecem na UI)
+    -- Direcionais hardcoded para movimento (nï¿½o aparecem na UI)
     { id = "dpup",          label = "D-Pad Up",    hidden = true },
     { id = "dpdown",        label = "D-Pad Down",  hidden = true },
     { id = "dpleft",        label = "D-Pad Left",  hidden = true },
@@ -35,7 +35,7 @@ local AXES = {
 local AXIS_WALK_THRESHOLD = 0.5
 
 -- -----------------------------------------------------------------------------
--- Estado do módulo
+-- Estado do mï¿½dulo
 -- -----------------------------------------------------------------------------
 
 local controllerPanel  = nil
@@ -44,13 +44,13 @@ local enableCheckbox   = nil
 local configureButton  = nil
 local configWindow     = nil
 local configList       = nil
-local slotButtons      = {}   -- [buttonId] = widget Button de atribuição
+local slotButtons      = {}   -- [buttonId] = widget Button de atribuiï¿½ï¿½o
 
 local bindings  = {}   -- { ["a"] = "F1", ["b"] = "Escape", ... }
-local axisState = {}   -- estado atual dos eixos analógicos
-local enabled   = true -- se o gamepad está ativo
+local axisState = {}   -- estado atual dos eixos analï¿½gicos
+local enabled   = true -- se o gamepad estï¿½ ativo
 
--- Estado de Movimentação
+-- Estado de Movimentaï¿½ï¿½o
 local moveEvent    = nil
 local moveDir      = nil
 local moveIsTurn   = false
@@ -58,7 +58,7 @@ local dpadState    = { up = false, down = false, left = false, right = false }
 local connectCallback = nil
 
 -- -----------------------------------------------------------------------------
--- Persistência
+-- Persistï¿½ncia
 -- -----------------------------------------------------------------------------
 
 function saveBindings()
@@ -78,7 +78,7 @@ function loadBindings()
 end
 
 -- -----------------------------------------------------------------------------
--- Lógica de Movimento Throttled (Evita Packet Spam)
+-- Lï¿½gica de Movimento Throttled (Evita Packet Spam)
 -- -----------------------------------------------------------------------------
 
 local function stopMoving()
@@ -91,11 +91,11 @@ local function stopMoving()
 end
 
 -- Intervalo do loop de movimento.
--- Walk: o g_game.walk já faz fila/retry interno e NÃO envia pacote enquanto o
--- passo não terminou (canWalk=false), então podemos sondar rápido (50ms) para
--- pegar a janela em que o passo termina sem pausa visível (sem stutter).
--- Turn: g_game.turn SEMPRE envia pacote, então mantemos um intervalo maior
--- para não floodar o servidor.
+-- Walk: o g_game.walk jï¿½ faz fila/retry interno e Nï¿½O envia pacote enquanto o
+-- passo nï¿½o terminou (canWalk=false), entï¿½o podemos sondar rï¿½pido (50ms) para
+-- pegar a janela em que o passo termina sem pausa visï¿½vel (sem stutter).
+-- Turn: g_game.turn SEMPRE envia pacote, entï¿½o mantemos um intervalo maior
+-- para nï¿½o floodar o servidor.
 local MOVE_INTERVAL_WALK = 50
 local MOVE_INTERVAL_TURN = 150
 
@@ -207,7 +207,7 @@ function updateStatusLabel()
         statusLabel:setColor("#a0a0a0ff")
     end
 
-    -- Polling fallback: Se não tiver o callback C++ (recompile), checamos a cada 1 segundo
+    -- Polling fallback: Se nï¿½o tiver o callback C++ (recompile), checamos a cada 1 segundo
     if g_controller and not g_controller.setConnectCallback then
         statusEvent = scheduleEvent(updateStatusLabel, 1000)
     end
@@ -233,10 +233,10 @@ local function triggerHotkey(keyCombo)
     if not keyCombo or #keyCombo == 0 then return end
 
     -- Simula o pressionamento da tecla como se fosse digitada de verdade:
-    -- varre a árvore de widgets e dispara TODOS os binds de teclado
+    -- varre a ï¿½rvore de widgets e dispara TODOS os binds de teclado
     -- (KeyDown/KeyPress) registrados no g_keyboard para esse combo. Isso cobre
     -- hotkeys do Hotkey Manager (registradas como binds reais no rootWidget),
-    -- andar/turn, Escape, Space (mirar no alvo mais próximo), etc.
+    -- andar/turn, Escape, Space (mirar no alvo mais prï¿½ximo), etc.
     local widgets = { rootWidget }
     local all = rootWidget:recursiveGetChildren()
     for i = 1, #all do
@@ -267,8 +267,8 @@ end
 -- -----------------------------------------------------------------------------
 
 local function startKeyCapture(buttonId)
-    -- Cria a janela no rootWidget (mesmo padrão do hotkeys_manager) para
-    -- garantir que ela fique por cima e não seja recortada pela janela de opções.
+    -- Cria a janela no rootWidget (mesmo padrï¿½o do hotkeys_manager) para
+    -- garantir que ela fique por cima e nï¿½o seja recortada pela janela de opï¿½ï¿½es.
     local assignWindow = g_ui.createWidget('HotkeyAssignWindow', g_ui.getRootWidget())
     assignWindow:grabKeyboard()
     assignWindow:raise()
@@ -304,13 +304,13 @@ local function startKeyCapture(buttonId)
 end
 
 -- -----------------------------------------------------------------------------
--- Janela de Configuração (botão a botão)
+-- Janela de Configuraï¿½ï¿½o (botï¿½o a botï¿½o)
 -- -----------------------------------------------------------------------------
 
 local function createConfigRow(item)
     -- configList usa layout verticalBox: as linhas empilham automaticamente
-    -- e expandem a largura; por isso nenhuma âncora é usada aqui.
-    -- IMPORTANTE: os hooks de âncora dos filhos devem ser STRINGS ('parent'),
+    -- e expandem a largura; por isso nenhuma ï¿½ncora ï¿½ usada aqui.
+    -- IMPORTANTE: os hooks de ï¿½ncora dos filhos devem ser STRINGS ('parent'),
     -- pois o binding C++ converte userdata de widget em string vazia.
     local row = g_ui.createWidget('UIWidget', configList)
     row:setId('row_' .. item.id)
@@ -323,7 +323,7 @@ local function createConfigRow(item)
     nameLabel:setId('name')
     nameLabel:setText(item.label)
     nameLabel:setFont('verdana-11px-monochrome')
-    nameLabel:setColor('#dfdfdf')
+    nameLabel:setColor('#8892a4')
     nameLabel:setWidth(200)
     nameLabel:setTextAlign(AlignLeftCenter)
     nameLabel:addAnchor(AnchorLeft, 'parent', AnchorLeft)
@@ -341,7 +341,7 @@ local function createConfigRow(item)
         startKeyCapture(item.id)
     end
 
-    -- Clique secundário (Context Menu)
+    -- Clique secundï¿½rio (Context Menu)
     assignBtn.onMouseRelease = function(self, mousePos, mouseBtn)
         if mouseBtn == MouseRightButton then
             local menu = g_ui.createWidget('PopupMenu')
@@ -407,7 +407,7 @@ end
 -- Eventos do Controle
 
 -- Normaliza o nome do gatilho: o SDL pode reportar como "triggerleft"/
--- "triggerright" (eixo) ou "lefttrigger"/"righttrigger" (mapping/botão).
+-- "triggerright" (eixo) ou "lefttrigger"/"righttrigger" (mapping/botï¿½o).
 local function normalizeTriggerName(name)
     if name == "triggerleft" or name == "lefttrigger" then return "triggerleft"
     elseif name == "triggerright" or name == "righttrigger" then return "triggerright" end
@@ -417,7 +417,7 @@ end
 local function onControllerButton(button, pressed)
     if not enabled then return end
 
-    -- Gatilhos podem chegar como eventos de BOTÃO em alguns controles/mappings
+    -- Gatilhos podem chegar como eventos de BOTï¿½O em alguns controles/mappings
     -- (ex.: controles com gatilho digital). Trata igual ao eixo.
     local triggerName = normalizeTriggerName(button)
     if triggerName then
@@ -431,7 +431,7 @@ local function onControllerButton(button, pressed)
         return
     end
 
-    -- Movimentação D-Pad (Hardcoded)
+    -- Movimentaï¿½ï¿½o D-Pad (Hardcoded)
     local isDpad = false
     if button == "dpup" then dpadState.up = pressed; isDpad = true
     elseif button == "dpdown" then dpadState.down = pressed; isDpad = true
@@ -444,7 +444,7 @@ local function onControllerButton(button, pressed)
         return
     end
 
-    -- Outros botões
+    -- Outros botï¿½es
     if not pressed then return end
 
     local keyCombo = bindings[button]
@@ -455,7 +455,7 @@ end
 local function onControllerAxis(axis, value)
     if not enabled then return end
 
-    -- Para gatilhos (L2/R2), tratamos como botões se passarem de um threshold
+    -- Para gatilhos (L2/R2), tratamos como botï¿½es se passarem de um threshold
     local triggerName = normalizeTriggerName(axis)
     if triggerName then
         local threshold = 0.4
