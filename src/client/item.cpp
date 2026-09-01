@@ -78,6 +78,9 @@ std::string Item::getShader()
         return m_shader;
     if (m_tier >= 1 && m_tier <= 10)
         return "item_tier_" + std::to_string(m_tier);
+    std::string globalShader = g_things.getItemShader(m_clientId);
+    if (!globalShader.empty())
+        return globalShader;
     return std::string();
 }
 

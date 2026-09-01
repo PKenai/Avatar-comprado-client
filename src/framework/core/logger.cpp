@@ -60,7 +60,8 @@ void Logger::log(Fw::LogLevel level, const std::string& message)
 
     if(m_outFile.good()) {
         m_outFile << outmsg << std::endl;
-        m_outFile.flush();
+        if(level >= Fw::LogError)
+            m_outFile.flush();
     }
 #endif
 

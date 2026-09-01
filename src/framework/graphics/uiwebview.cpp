@@ -39,7 +39,13 @@ static uint32_t mapModifiers(int modifiers) {
 // ── UIWebView ────────────────────────────────────────────────────────────────
 
 UIWebView::UIWebView() = default;
-UIWebView::~UIWebView() { m_view = nullptr; m_texture = nullptr; }
+UIWebView::~UIWebView() {
+    if (m_created) {
+        UltralightManager::instance().decActiveViews();
+    }
+    m_view = nullptr;
+    m_texture = nullptr;
+}
 
 class UIWebViewLoadListener : public ultralight::LoadListener {
 public:
@@ -99,6 +105,7 @@ void UIWebView::create(int width, int height) {
         m_viewHeight = alignedHeight;
         m_created = true;
         m_needsTextureUpdate = true;
+        mgr.incActiveViews();
         g_logger.info("[UIWebView] Created OK");
 
     } catch (const std::exception& e) {

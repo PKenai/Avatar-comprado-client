@@ -463,7 +463,14 @@ function onContainerOpen(container, previousContainer)
   containerItemWidget:setItem(container:getContainerItem())
 
   containerPanel:destroyChildren()
-  for slot=0,container:getCapacity()-1 do
+  local capacity = container:getCapacity()
+  local layout = containerPanel:getLayout()
+  local cols = layout and layout:getNumColumns() or 4
+  -- Only create widgets for items that exist + 1 empty row as buffer.
+  -- Full capacity slots will be lazy-created when the container is scrolled.
+  local itemCount = container:getItemsCount()
+  local slotsToCreate = math.min(capacity, itemCount + cols)
+  for slot=0,slotsToCreate-1 do
     local itemWidget = g_ui.createWidget('Item', containerPanel)
     itemWidget:setId('item' .. slot)
     itemWidget:setItem(container:getItem(slot))

@@ -1,4 +1,4 @@
--- ============================================================================
+ï»¿-- ============================================================================
 --  Market - Client module (game_market)
 --  Opcode 230  <->  server data/lib/market_lib.lua
 -- ============================================================================
@@ -54,9 +54,9 @@ local filterOptions = {
   { 'Escudos',    'shield' },
   { 'Capacetes',  'helmet' },
   { 'Armaduras',  'armor'  },
-  { 'Calças',     'legs'   },
+  { 'Calï¿½as',     'legs'   },
   { 'Botas',      'boots'  },
-  { 'Anéis',      'ring'   },
+  { 'Anï¿½is',      'ring'   },
   { 'Amuletos',   'amulet' },
   { 'Variados',   'misc'   }
 }
@@ -88,6 +88,11 @@ function Market.init()
     local ok, err = pcall(function()
       local action = buffer:explode('>')
       if action[1] == "create" then
+        if not marketWindow:isVisible() then
+          marketWindow:show()
+          marketWindow:raise()
+          marketWindow:focus()
+        end
         Market.updateControlsPagination(action[2])
         -- payload: create>COUNT>{lua table} - rejoin everything after count
         local data = {}
@@ -113,7 +118,9 @@ function Market.init()
 
   marketButton    = modules.client_topmenu.addRightGameButton('marketButton', tr('Market'), '/images/topbuttons/shop', Market.toggle, true)
   marketWindow    = g_ui.displayUI('market')
+  marketWindow:hide()
   marketWindowAdd = g_ui.displayUI('marketadd')
+  marketWindowAdd:hide()
 
   -- NOTE: getChildById in this client only finds DIRECT children.
   -- The pagination/search widgets are nested inside panels, so use the
@@ -296,5 +303,5 @@ function Market.updateControlsPagination(value)
   local totalPages = math.max(1, math.ceil(total / 15))
   btnPrev:setEnabled(numPage ~= 1)
   btnNext:setEnabled(numPage < totalPages)
-  lblIndex:setText('Página: ' .. numPage .. '/' .. totalPages)
+  lblIndex:setText('Pï¿½gina: ' .. numPage .. '/' .. totalPages)
 end

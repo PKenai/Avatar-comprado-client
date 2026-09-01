@@ -75,7 +75,22 @@ function createTierShaders()
 end
 
 function onTierOpcode(protocol, opcode, buffer)
-  -- Opcode 111 compatibility handler if any legacy script sends it
+  if not buffer or buffer == "" then return end
+  local parts = string.split(buffer, ",")
+  local action = parts[1]
+  if action == "set" then
+    local clientId = tonumber(parts[2])
+    local tier = tonumber(parts[3]) or 0
+    if clientId and clientId > 0 then
+      if tier > 0 and tier <= 10 then
+        g_things.setItemShader(clientId, "item_tier_" .. tier)
+      else
+        g_things.setItemShader(clientId, "")
+      end
+    end
+  elseif action == "clear" then
+    g_things.clearItemShaders()
+  end
 end
 
 function hookUIItemForTier()

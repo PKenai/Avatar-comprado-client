@@ -1852,3 +1852,2421 @@ NormalMapManager: normal mapping system disabled (flicker fix)
 [OutfitScales]   centopeia carapaca de aco = 0.6
 [OutfitScales] Applied scale 0.8 to 'Lobo selvagem'
 Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+Exiting application..
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+ERROR: protected lua call failed: C++ call failed: Unable to login into a world while already online or logging.
+stack traceback:
+	[builtin#142]: at 0x7ff6652cf070
+	[C]: in function 'loginWorld'
+	/modules/client_entergame/characterlist.lua:34: in function 'tryLogin'
+	/modules/client_entergame/characterlist.lua:364: in function 'callback'
+	/modules/client_loading/loading.lua:401: in function 'show'
+	/modules/client_entergame/characterlist.lua:364: in function 'doLogin'
+	...ules/client_entergame/characterlist.otui:124: [@onClick]:2: in function <...ules/client_entergame/characterlist.otui:124: [@onClick]:1>
+ERROR: font 'verdana-9px-rounded' not found
+ERROR: font 'verdana-7px-rounded' not found
+ERROR: font 'verdana-14px-rounded' not found
+ERROR: font 'verdana-9px-rounded' not found
+ERROR: font 'verdana-7px-rounded' not found
+ERROR: font 'verdana-14px-rounded' not found
+ERROR: font 'verdana-9px-rounded' not found
+ERROR: font 'verdana-7px-rounded' not found
+ERROR: font 'verdana-14px-rounded' not found
+ERROR: font 'verdana-9px-rounded' not found
+ERROR: font 'verdana-7px-rounded' not found
+ERROR: font 'verdana-14px-rounded' not found
+ERROR: font 'verdana-9px-rounded' not found
+ERROR: font 'verdana-7px-rounded' not found
+ERROR: font 'verdana-14px-rounded' not found
+ERROR: font 'verdana-9px-rounded' not found
+ERROR: font 'verdana-7px-rounded' not found
+ERROR: font 'verdana-14px-rounded' not found
+ERROR: font 'verdana-9px-rounded' not found
+ERROR: font 'verdana-7px-rounded' not found
+ERROR: font 'verdana-14px-rounded' not found
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+ERROR: Failed to import UI styles from 'game_dailyreward.otui': OTML error in '/modules/game_dailyreward/game_dailyreward.otui:1': not a valid style declaration
+Exiting application..
+ERROR: failed to create widget from style 'DailyRewardWindow': 'DailyRewardWindow' is not a defined style
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+ERROR: protected lua call failed: /modules/game_dailyreward/game_dailyreward.lua:119: attempt to call global 'ItemType' (a table value)
+stack traceback:
+	[C]: in function 'ItemType'
+	/modules/game_dailyreward/game_dailyreward.lua:119: in function 'updateDayBox'
+	/modules/game_dailyreward/game_dailyreward.lua:200: in function 'receiveData'
+	/modules/game_dailyreward/game_dailyreward.lua:46: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_dailyreward/game_dailyreward.lua:119: attempt to call global 'ItemType' (a table value)
+stack traceback:
+	[C]: in function 'ItemType'
+	/modules/game_dailyreward/game_dailyreward.lua:119: in function 'updateDayBox'
+	/modules/game_dailyreward/game_dailyreward.lua:200: in function 'receiveData'
+	/modules/game_dailyreward/game_dailyreward.lua:46: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+Exiting application..
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales] Applied scale 0.8 to 'Lobo selvagem'
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales] Applied scale 0.8 to 'Lobo selvagem'
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+Exiting application..
+Sistema de controle joystick iniciado
+Ultralight: === STARTING INIT ===
+Ultralight: base directory is C:/Users/imfis/Desktop/Avatar-comprado-client/
+Ultralight: config set (resource_path_prefix: resources/)
+Ultralight: font loader set OK
+Ultralight: file system set OK with base C:/Users/imfis/Desktop/Avatar-comprado-client/
+[Ultralight Core] Initializing Ultralight v1.4.0 (WebKit 615.1.18.100.1) with the following configuration
+    cache_path: 
+    resource_path_prefix: resources/
+    face_winding: CounterClockwise
+    font_hinting: Normal
+    font_gamma: 1.8
+    force_repaint: disabled
+    animation_timer_delay: 16.7 ms
+    scroll_timer_delay: 16.7 ms
+    recycle_delay: 4.0 s
+    memory_cache_size: 64.00 MB
+    page_cache_size: 0 pages
+    override_ram_size: disabled
+    min_large_heap_size: 32.00 MB
+    min_small_heap_size: 1.00 MB
+    num_renderer_threads: 0
+    max_update_time: 5.0 ms
+    bitmap_alignment: 16
+    effect_quality: Medium
+
+[Ultralight Core] Creating Session with the following configuration:
+    id: 2
+    is_persistent: 1
+    name: default
+    is_default: 1
+    disk_path: default (you can adjust this location in Config::cache_path)
+Ultralight: renderer created OK
+Ultralight: testing 100x100 view creation...
+[Ultralight Core] Creating View with the following configuration:
+    width: 100
+    height: 100
+    device scale: 1
+    session id: 2
+    is_accelerated: 0
+Ultralight: 100x100 test view created OK!
+Ultralight: initial Update() OK
+Ultralight: === INIT COMPLETE ===
+NormalMapManager: normal mapping system disabled (flicker fix)
+[OutfitScales] Module loaded. Scales:
+[OutfitScales]   caracol gigante = 0.6
+[OutfitScales]   urso feroz = 0.6
+[OutfitScales]   centopeia carapaca de aco = 0.6
+[OutfitScales]   lobo selvagem = 0.8
+[OutfitScales]   vacaceronte = 0.6
+[OutfitScales]   crocodilo do deserto = 0.6

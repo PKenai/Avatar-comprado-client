@@ -121,14 +121,14 @@ void UltralightManager::terminate() {
 }
 
 void UltralightManager::update() {
-    if (!m_initialized || !m_renderer) return;
+    if (!m_initialized || !m_renderer || m_activeViews <= 0) return;
     try {
         m_renderer->Update();
     } catch (...) {}
 }
 
 void UltralightManager::render() {
-    if (!m_initialized || !m_renderer) return;
+    if (!m_initialized || !m_renderer || m_activeViews <= 0) return;
     try {
         m_renderer->RefreshDisplay(0);
         m_renderer->Render();

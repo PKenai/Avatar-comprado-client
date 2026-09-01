@@ -30,9 +30,8 @@ function OverlayModule.terminate()
 end
 
 function OverlayModule.onGameStart()
-    scheduleEvent(function()
-        OverlayModule.show()
-    end, 500)
+    -- Overlay is on-demand (Ctrl+Shift+H) to avoid burning frame resources on login
+    OverlayModule.hide()
 end
 
 function OverlayModule.onGameEnd()

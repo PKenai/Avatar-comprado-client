@@ -20,6 +20,10 @@ public:
     void update();
     void render();
 
+    void incActiveViews() { ++m_activeViews; }
+    void decActiveViews() { if (m_activeViews > 0) --m_activeViews; }
+    bool hasActiveViews() const { return m_activeViews > 0; }
+
     bool isInitialized() { return m_initialized; }
 
     static UltralightManager& instance();
@@ -27,6 +31,7 @@ public:
 private:
     ultralight::RefPtr<ultralight::Renderer> m_renderer;
     bool m_initialized = false;
+    int m_activeViews = 0;
 };
 
 extern UltralightManager g_ultralightManager;

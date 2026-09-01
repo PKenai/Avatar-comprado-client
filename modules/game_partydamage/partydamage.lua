@@ -28,17 +28,31 @@ function init()
   -- Ctrl+D opens/closes the meter (same key shown in the button tooltip)
   g_keyboard.bindKeyDown('Ctrl+D', toggle)
 
-  interpolationEvent = cycleEvent(updateInterpolation, 50)
-
   partyDamageWindow:setup()
   partyDamageWindow:setContentMinimumHeight(44)
   partyDamageWindow:setContentMaximumHeight(303)
 
   -- Sync the button with the window state restored from settings
   partyDamageButton:setOn(partyDamageWindow:isExplicitlyVisible())
+  if partyDamageWindow:isExplicitlyVisible() then
+    startInterpolation()
+  end
 
   if g_game.isOnline() then
     onGameStart()
+  end
+end
+
+function startInterpolation()
+  if not interpolationEvent then
+    interpolationEvent = cycleEvent(updateInterpolation, 50)
+  end
+end
+
+function stopInterpolation()
+  if interpolationEvent then
+    removeEvent(interpolationEvent)
+    interpolationEvent = nil
   end
 end
 
@@ -56,10 +70,7 @@ function terminate()
 
   g_keyboard.unbindKeyDown('Ctrl+D')
 
-  if interpolationEvent then
-    removeEvent(interpolationEvent)
-    interpolationEvent = nil
-  end
+  stopInterpolation()
 
   if partyDamageWindow then
     partyDamageWindow:destroy()
@@ -79,9 +90,11 @@ function toggle()
   if partyDamageButton:isOn() then
     partyDamageButton:setOn(false)
     partyDamageWindow:close()
+    stopInterpolation()
   else
     partyDamageButton:setOn(true)
     partyDamageWindow:open()
+    startInterpolation()
     updateUI()
   end
 end
@@ -90,6 +103,7 @@ function onMiniWindowClose()
   if partyDamageButton then
     partyDamageButton:setOn(false)
   end
+  stopInterpolation()
 end
 
 function onGameStart()

@@ -27,17 +27,31 @@ function init()
   -- Ctrl+Shift+D opens/closes the meter
   g_keyboard.bindKeyDown('Ctrl+Shift+D', toggle)
 
-  interpolationEvent = cycleEvent(updateInterpolation, 50)
-
   magicMeterWindow:setup()
   magicMeterWindow:setContentMinimumHeight(44)
   magicMeterWindow:setContentMaximumHeight(303)
 
   -- Sync the button with the window state restored from settings
   magicMeterButton:setOn(magicMeterWindow:isExplicitlyVisible())
+  if magicMeterWindow:isExplicitlyVisible() then
+    startInterpolation()
+  end
 
   if g_game.isOnline() then
     onGameStart()
+  end
+end
+
+function startInterpolation()
+  if not interpolationEvent then
+    interpolationEvent = cycleEvent(updateInterpolation, 50)
+  end
+end
+
+function stopInterpolation()
+  if interpolationEvent then
+    removeEvent(interpolationEvent)
+    interpolationEvent = nil
   end
 end
 
@@ -51,10 +65,7 @@ function terminate()
 
   g_keyboard.unbindKeyDown('Ctrl+Shift+D')
 
-  if interpolationEvent then
-    removeEvent(interpolationEvent)
-    interpolationEvent = nil
-  end
+  stopInterpolation()
 
   if magicMeterWindow then
     magicMeterWindow:destroy()
@@ -73,9 +84,11 @@ function toggle()
   if magicMeterButton:isOn() then
     magicMeterButton:setOn(false)
     magicMeterWindow:close()
+    stopInterpolation()
   else
     magicMeterButton:setOn(true)
     magicMeterWindow:open()
+    startInterpolation()
     sendRequest()
     updateUI()
   end
@@ -85,6 +98,7 @@ function onMiniWindowClose()
   if magicMeterButton then
     magicMeterButton:setOn(false)
   end
+  stopInterpolation()
 end
 
 function onGameStart()

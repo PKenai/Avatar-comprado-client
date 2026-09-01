@@ -363,7 +363,7 @@ void GraphicalApplication::run()
         g_graphs[GRAPH_GPU_DRAWS].addValue(g_painter->draws());
 
 #ifdef WITH_ULTRALIGHT
-        {
+        if (g_ultralightManager.hasActiveViews()) {
             AutoStat s(STATS_RENDER, "UltralightUpdate");
             g_ultralightManager.update();
             g_ultralightManager.render();

@@ -39,11 +39,8 @@ function terminate()
 end
 
 function online()
-  local okW, errW = pcall(function() return g_ui.createWidget('AchievementsWindow', rootWidget) end)
-  if okW and errW then
-    window = errW
-    window:hide()
-  end
+  -- Do NOT create the window here — defer until toggle() is called.
+  -- This prevents the achievements window from flashing open on login.
 
   local okB, errB = pcall(function()
     return modules.client_topmenu.addRightGameToggleButton(
@@ -90,8 +87,24 @@ function modules.game_achievements.onEscape()
   end
 end
 
+function ensureWindow()
+  if window then
+    return
+  end
+  local okW, errW = pcall(function() return g_ui.createWidget('AchievementsWindow', rootWidget) end)
+  if okW and errW then
+    window = errW
+    window:hide()
+  end
+end
+
 function toggle()
-  if not g_game.getLocalPlayer() or not window or not button then
+  if not g_game.getLocalPlayer() or not button then
+    return
+  end
+
+  ensureWindow()
+  if not window then
     return
   end
 

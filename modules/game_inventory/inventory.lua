@@ -372,25 +372,6 @@ function onInventoryChange(player, slot, item, oldItem)
 
 end
 
-local inventoryRefreshCycleEvent = nil
-
-local function startInventoryRefreshCycle()
-  if not inventoryRefreshCycleEvent then
-    inventoryRefreshCycleEvent = cycleEvent(function()
-      if g_game.isOnline() then
-        refresh()
-      end
-    end, 500)
-  end
-end
-
-local function stopInventoryRefreshCycle()
-  if inventoryRefreshCycleEvent then
-    removeEvent(inventoryRefreshCycleEvent)
-    inventoryRefreshCycleEvent = nil
-  end
-end
-
 function online()
   local player = g_game.getLocalPlayer()
   if player then
@@ -416,12 +397,10 @@ function online()
   end
 
   update()
-  startInventoryRefreshCycle()
+  refresh()
 end
 
 function offline()
-  stopInventoryRefreshCycle()
-
   -- limpa o slot da camera e do momo pouch ao sair do jogo, para nao ficar
   -- "fantasma" (item do personagem anterior) ao trocar de personagem
   updateCameraSlot(nil)
