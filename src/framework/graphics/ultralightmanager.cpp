@@ -28,7 +28,7 @@ public:
         } else if (log_level == ultralight::LogLevel::Warning) {
             g_logger.warning("[Ultralight Core] " + msg);
         } else {
-            g_logger.info("[Ultralight Core] " + msg);
+            // Info-level Ultralight logs suppressed
         }
     }
 };
@@ -36,8 +36,6 @@ static UltralightLogHandler g_ultralightLogger;
 
 void UltralightManager::init() {
     if (m_initialized) return;
-
-    g_logger.info("Ultralight: === STARTING INIT ===");
 
     try {
         char exePath[MAX_PATH] = {0};
@@ -48,7 +46,6 @@ void UltralightManager::init() {
             currentDir = currentDir.substr(0, lastSlash + 1);
         }
         std::replace(currentDir.begin(), currentDir.end(), '\\', '/');
-        g_logger.info("Ultralight: base directory is " + currentDir);
 
         ultralight::Platform& platform = ultralight::Platform::instance();
         platform.set_logger(&g_ultralightLogger);
@@ -57,12 +54,10 @@ void UltralightManager::init() {
         config.resource_path_prefix = "resources/";
         config.force_repaint = false;
         platform.set_config(config);
-        g_logger.info("Ultralight: config set (resource_path_prefix: resources/)");
 
         ultralight::FontLoader* fl = ultralight::GetPlatformFontLoader();
         if (fl) {
             platform.set_font_loader(fl);
-            g_logger.info("Ultralight: font loader set OK");
         } else {
             g_logger.error("Ultralight: GetPlatformFontLoader() returned null");
         }
@@ -70,7 +65,6 @@ void UltralightManager::init() {
         ultralight::FileSystem* fs = ultralight::GetPlatformFileSystem(ultralight::String(currentDir.c_str()));
         if (fs) {
             platform.set_file_system(fs);
-            g_logger.info("Ultralight: file system set OK with base " + currentDir);
         } else {
             g_logger.error("Ultralight: GetPlatformFileSystem() returned null");
         }
@@ -80,10 +74,7 @@ void UltralightManager::init() {
             g_logger.error("Ultralight: Renderer::Create() returned null");
             return;
         }
-        g_logger.info("Ultralight: renderer created OK");
-
         // Warm up test View
-        g_logger.info("Ultralight: testing 100x100 view creation...");
         ultralight::ViewConfig testCfg;
         testCfg.initial_device_scale = 1.0;
         testCfg.is_transparent = false;
@@ -93,17 +84,13 @@ void UltralightManager::init() {
 
         auto testView = m_renderer->CreateView(100, 100, testCfg, nullptr);
         if (testView) {
-            g_logger.info("Ultralight: 100x100 test view created OK!");
             testView = nullptr;
         } else {
             g_logger.error("Ultralight: 100x100 test view returned null");
         }
 
         m_renderer->Update();
-        g_logger.info("Ultralight: initial Update() OK");
-
         m_initialized = true;
-        g_logger.info("Ultralight: === INIT COMPLETE ===");
     } catch (const std::exception& e) {
         g_logger.error("Ultralight: exception during init: " + std::string(e.what()));
     } catch (...) {
@@ -116,7 +103,6 @@ void UltralightManager::terminate() {
     try {
         m_renderer = nullptr;
         m_initialized = false;
-        g_logger.info("Ultralight: terminated");
     } catch (...) {}
 }
 

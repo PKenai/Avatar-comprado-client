@@ -8,8 +8,6 @@ local outfitScales = {
 }
 
 function init()
-    print("[OutfitScales] Module loaded. Scales:")
-    for k, v in pairs(outfitScales) do print("[OutfitScales]   " .. k .. " = " .. v) end
     connect(Creature, {
         onAppear = onCreatureAppearScale,
     })
@@ -31,11 +29,9 @@ function onCreatureAppearScale(creature)
         local scale = outfitScales[name:lower()]
         if scale then
             creature:setOutfitScale(scale)
-            print("[OutfitScales] Applied scale " .. scale .. " to '" .. name .. "'")
         end
     end)
     if not ok then
-        print("[OutfitScales] ERROR: " .. tostring(err))
     end
 end
 

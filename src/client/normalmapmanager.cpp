@@ -25,7 +25,6 @@ void NormalMapManager::init()
     // the atlas cache (cache() returns false) and recalculates lighting
     // each frame, causing visible tile flicker as point-lights shuffle.
     m_enabled = false;
-    g_logger.info("NormalMapManager: normal mapping system disabled (flicker fix)");
 }
 
 void NormalMapManager::terminate()

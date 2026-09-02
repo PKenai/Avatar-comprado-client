@@ -766,19 +766,16 @@ bool Game::walk(Otc::Direction direction, bool dash)
     } else {
         // check we can walk and add new walk event if false
         if (!m_localPlayer->canWalk(direction)) {
-            if (m_lastWalkDir != direction) {
-                // must add a new walk event
-                float ticks = m_localPlayer->getStepTicksLeft();
-                if (ticks <= 0) {
-                    ticks = 1;
-                }
-
-                if (m_walkEvent) {
-                    m_walkEvent->cancel();
-                    m_walkEvent = nullptr;
-                }
-                m_walkEvent = g_dispatcher.scheduleEvent([=] { walk(direction, false); }, ticks);
+            int ticks = m_localPlayer->getStepTicksLeft();
+            if (ticks <= 0) {
+                ticks = 1;
             }
+
+            if (m_walkEvent) {
+                m_walkEvent->cancel();
+                m_walkEvent = nullptr;
+            }
+            m_walkEvent = g_dispatcher.scheduleEvent([=] { walk(direction, false); }, ticks);
             m_denyBotCall = true;
             return false;
         }

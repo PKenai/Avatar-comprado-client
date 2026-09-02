@@ -22,7 +22,6 @@ void ControllerManager::init() {
   SDL_GameControllerEventState(SDL_ENABLE);
   SDL_JoystickEventState(SDL_ENABLE);
 
-  g_logger.info("Sistema de controle joystick iniciado");
 
   tryOpenFirstController();
 }

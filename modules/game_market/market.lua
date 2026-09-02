@@ -116,7 +116,7 @@ function Market.init()
     end
   end)
 
-  marketButton    = modules.client_topmenu.addRightGameButton('marketButton', tr('Market'), '/images/topbuttons/shop', Market.toggle, true)
+  -- marketButton    = modules.client_topmenu.addRightGameButton('marketButton', tr('Market'), '/images/topbuttons/shop', Market.toggle, true)
   marketWindow    = g_ui.displayUI('market')
   marketWindow:hide()
   marketWindowAdd = g_ui.displayUI('marketadd')
