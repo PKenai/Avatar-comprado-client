@@ -466,11 +466,8 @@ function onContainerOpen(container, previousContainer)
   local capacity = container:getCapacity()
   local layout = containerPanel:getLayout()
   local cols = layout and layout:getNumColumns() or 4
-  -- Only create widgets for items that exist + 1 empty row as buffer.
-  -- Full capacity slots will be lazy-created when the container is scrolled.
-  local itemCount = container:getItemsCount()
-  local slotsToCreate = math.min(capacity, itemCount + cols)
-  for slot=0,slotsToCreate-1 do
+  -- Create all capacity slots so every slot is always visible.
+  for slot=0,capacity-1 do
     local itemWidget = g_ui.createWidget('Item', containerPanel)
     itemWidget:setId('item' .. slot)
     itemWidget:setItem(container:getItem(slot))
@@ -492,8 +489,8 @@ function onContainerOpen(container, previousContainer)
   containerWindow:setContentMaximumHeight(cellSize.height*layout:getNumLines())
 
   if not previousContainer then
-    local filledLines = math.max(math.ceil(container:getItemsCount() / layout:getNumColumns()), 1)
-    containerWindow:setContentHeight(filledLines*cellSize.height)
+    local totalLines = math.ceil(capacity / layout:getNumColumns())
+    containerWindow:setContentHeight(totalLines*cellSize.height)
   end
 
   setupDepotSearchButton(container, containerWindow)
