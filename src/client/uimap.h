@@ -76,6 +76,8 @@ public:
     float getFloorTransparency() { return m_mapView->getFloorTransparency(); }
     void setFloorTransparencyRadius(float radius) { m_mapView->setFloorTransparencyRadius(radius); }
     float getFloorTransparencyRadius() { return m_mapView->getFloorTransparencyRadius(); }
+    void setFloorTransparencyThreshold(float threshold) { m_mapView->setFloorTransparencyThreshold(threshold); }
+    float getFloorTransparencyThreshold() { return m_mapView->getFloorTransparencyThreshold(); }
     void setCrosshair(const std::string& type) { m_mapView->setCrosshair(type); }
     bool isMultifloor() { return m_mapView->isMultifloor(); }
     bool isDrawingTexts() { return m_mapView->isDrawingTexts(); }

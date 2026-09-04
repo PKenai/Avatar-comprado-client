@@ -17,5 +17,5 @@ creatures:
     outfit-displacement: opacity: 1.0, East: 0 19, South: 7 0, West: 0 17, North: 7 0
   1347:
     outfit-displacement: East: 0 0, South: 0 0, West: 0 0, North: 0 0
-effects:
 items:
+effects:

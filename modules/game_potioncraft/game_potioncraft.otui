@@ -122,6 +122,7 @@ MainWindow
       anchors.top: headerCard.bottom
       anchors.left: parent.left
       margin-top: 25
+      width: 300
       font: verdana-11px-rounded
       color: #ffffff
 

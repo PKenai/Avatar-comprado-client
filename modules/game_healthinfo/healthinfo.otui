@@ -6,18 +6,16 @@ HealthBar < ProgressBar
   anchors.left: parent.left
   margin-top: 22
   margin-left: 115
-  image-source: progress
   color: white
 
 ManaBar < ProgressBar
   id: manaBar
-  size: 177 8
+  size: 177 10
   background-color:#da1bd7
   anchors.top: healthBar.bottom
   anchors.left: parent.left
   margin-left: 120
-  margin-top: 2
-  image-source: progressm
+  margin-top: 4
   
 ExperienceBar < ProgressBar
   id: experienceBar
@@ -26,7 +24,7 @@ ExperienceBar < ProgressBar
   anchors.top: manaBar.bottom
   anchors.left: parent.left
   margin-left: 120
-  margin-top: 6
+  margin-top: 2
 
 SoulLabel < GameLabel
   id: soulLabel
@@ -78,16 +76,6 @@ info
   size: 350 144
   border-opacity: 0.0
   &save: true
-  image-source: background2
-
-  UIWidget
-    id: uiAvatar
-    size: 70 70
-    anchors.top: parent.top
-    anchors.left: parent.left
-    image-source: 
-    margin-top: 41
-    margin-left: 37
 
   MiniWindowContents
     HealthBar
@@ -105,21 +93,6 @@ info
       anchors.bottom: parent.bottom
       anchors.left: parent.left
       anchors.right: parent.right
-
-
-  UIWidget
-    id:bar2
-    anchors.top: parent.top
-    anchors.right: parent.right
-    anchors.bottom: parent.bottom
-    anchors.left: parent.left
-    size: 206 61
-    margin-top: 33
-    margin-right: 31
-    margin-bottom: 50
-    margin-left: 113
-    image-source: shape5
-    opacity: 10.0
 
   UIWidget
     id:healthLabel
@@ -148,4 +121,20 @@ info
     margin-left: 113
     opacity: 10.0
 
+  UIWidget
+    id: backgroundOverlay
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    image-source: background2
+    phantom: true
 
+  UIWidget
+    id: uiAvatar
+    size: 70 70
+    anchors.top: parent.top
+    anchors.left: parent.left
+    image-source: 
+    margin-top: 41
+    margin-left: 37

@@ -240,13 +240,16 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
     size_t lightFloorStart = m_lightView ? m_lightView->size() : 0;
 
     // Determine if we should apply floor transparency for this floor.
-    // Only floors above (lower z value than) the player are candidates.
-    const bool applyTransparency = m_floorTransparencyEnabled &&
-                                   floor < cameraPosition.z;
+    // Floors above (lower z) get distance-based fade; same-floor tiles with
+    // items whose sprites overlap the player get a flat semi-transparency.
+    const bool applyUpperTransparency = m_floorTransparencyEnabled &&
+                                        floor < cameraPosition.z;
+    const bool applyOccluderTransparency = m_floorTransparencyEnabled &&
+                                            floor == cameraPosition.z;
 
     // Pre-compute player draw position for transparency.
     Point playerDrawPos;
-    if (applyTransparency) {
+    if (applyUpperTransparency || applyOccluderTransparency) {
         playerDrawPos = transformPositionTo2D(cameraPosition, cameraPosition);
     }
 
@@ -281,7 +284,7 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
 
         // Calculate smooth progressive transparency fade from one SQM to the next
         float tileOpacity = 1.0f;
-        if (applyTransparency) {
+        if (applyUpperTransparency) {
             float dx = (float)(tileDrawPos.x - playerDrawPos.x);
             float dy = (float)(tileDrawPos.y - playerDrawPos.y);
             float distTiles = std::sqrt(dx * dx + dy * dy) / spriteSize;
@@ -293,9 +296,66 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
             }
         }
 
+        // Same-floor occluder transparency: items on the player's floor whose
+        // multi-tile sprites visually overlap the player's screen position
+        // (e.g. a tree canopy one tile south covering the player).
+        bool occluderApplied = false;
+        if (applyOccluderTransparency && tileOpacity >= 0.999f) {
+            const Position& tilePos = tile->getPosition();
+            const int tdx = tilePos.x - cameraPosition.x;
+            const int tdy = tilePos.y - cameraPosition.y;
+
+            // Quick range check — skip tiles too far away to possibly overlap
+            if (tdx >= -1 && tdx <= 5 && tdy >= -1 && tdy <= 5) {
+                for (const ThingPtr& thing : tile->getThings()) {
+                    if (thing->isGround() || thing->isGroundBorder() || thing->isCreature())
+                        continue;
+
+                    const int w = thing->getWidth();
+                    const int h = thing->getHeight();
+
+                    // Exclude same tile (drawn before creatures, can't visually occlude)
+                    if (tdx == 0 && tdy == 0)
+                        continue;
+
+                    // Basic bounding-box overlap check
+                    if (tdx < 0 || tdx > w - 1 || tdy < 0 || tdy > h - 1)
+                        continue;
+
+                    // --- Pixel-level overlap calculation ---
+                    // Item sprite on screen (relative to player tile origin):
+                    //   X: [(tdx - w + 1) * s .. (tdx + 1) * s]
+                    //   Y: [(tdy - h + 1) * s .. (tdy + 1) * s]
+                    // Player sprite on screen: [0 .. s] x [0 .. s]
+                    const float s = spriteSize;
+                    const float oL = std::max(0.0f, (float)(tdx - w + 1) * s);
+                    const float oR = std::min(s, (float)(tdx + 1) * s);
+                    const float oT = std::max(0.0f, (float)(tdy - h + 1) * s);
+                    const float oB = std::min(s, (float)(tdy + 1) * s);
+                    const float overlapW = std::max(0.0f, oR - oL);
+                    const float overlapH = std::max(0.0f, oB - oT);
+                    const float overlapPct = (overlapW * overlapH) / (s * s);
+
+                    // Only trigger when the item's sprite covers at least
+                    // the minimum percentage of the player's sprite area
+                    if (overlapPct >= m_floorTransparencyThreshold) {
+                        tileOpacity = m_floorTransparency;
+                        occluderApplied = true;
+                        break;
+                    }
+                }
+            }
+        }
+
         size_t tileDrawStart = g_drawQueue->size();
 
         tile->drawGround(tileDrawPos, m_lightView.get());
+
+        // For same-floor occluder transparency we must keep the ground fully
+        // opaque so the floor beneath stays visible; only items on top get
+        // the semi-transparent treatment.  Track where the ground ends.
+        size_t tileNonGroundStart = g_drawQueue->size();
+
         tile->drawBottom(tileDrawPos, m_lightView.get());
 
         if (m_crosshair && tile == crosshairTile) {
@@ -308,7 +368,9 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
 
         // Apply smooth fade transparency to all draw calls for this tile
         if (tileOpacity < 0.999f) {
-            g_drawQueue->setOpacity(tileDrawStart, tileOpacity);
+            // Upper-floor fade applies to the whole tile (ground included);
+            // same-floor occluder fade skips the ground so it stays opaque.
+            g_drawQueue->setOpacity(occluderApplied ? tileNonGroundStart : tileDrawStart, tileOpacity);
         }
     }
 

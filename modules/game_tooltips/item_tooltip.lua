@@ -1,6 +1,7 @@
 local CODE_TOOLTIPS = 105
 
 local tooltipWindow = nil
+local shaderBg = nil
 local itemSprite = nil
 local itemWeightLabel = nil
 local labels = nil
@@ -17,6 +18,20 @@ local tooltipWidth = 0
 local tooltipWidthBase = BASE_WIDTH
 local tooltipHeight = BASE_HEIGHT
 local longestString = 0
+local currentTier = 0
+
+local TIER_COLORS = {
+  {0x9E, 0x9E, 0x9E}, -- 1 grey
+  {0x4C, 0xAF, 0x50}, -- 2 green
+  {0x21, 0x96, 0xF3}, -- 3 blue
+  {0x9C, 0x27, 0xB0}, -- 4 purple
+  {0xFF, 0x98, 0x00}, -- 5 orange
+  {0xF4, 0x43, 0x36}, -- 6 red
+  {0xFF, 0xD7, 0x00}, -- 7 gold
+  {0x00, 0xD9, 0xF2}, -- 8 cyan
+  {0xF2, 0x33, 0xA6}, -- 9 magenta
+  {0xFF, 0xFF, 0xFF}, -- 10 rainbow (white base)
+}
 
 local cachedItems = {}
 
@@ -56,6 +71,7 @@ function terminate()
     protocolGame = nil
     showingVirtual = nil
     hoveredLinked = nil
+    currentTier = 0
 
     itemWeightLabel = nil
     itemSprite = nil
@@ -99,6 +115,12 @@ function newTooltip(data)
   local _reqLvl = data.reqLvl or 0
   local _isStackable = data.stackable
 
+  local _itemTier = data.tier or 0
+  if _itemTier == 0 and _itemName then
+    local tierStr = _itemName:match('%[Tier (%d+)%]') or _itemName:match('Tier (%d+)')
+    if tierStr then _itemTier = tonumber(tierStr) or 0 end
+  end
+
   cachedItems[_itemUId] = {
     last = os.time(),
     name = _itemName,
@@ -107,7 +129,8 @@ function newTooltip(data)
     weight = _weight,
     reqLvl = _reqLvl,
     stackable = _isStackable,
-    itemId = _itemId
+    itemId = _itemId,
+    tier = _itemTier
   }
 
   if hoveredLinked and _itemUId == hoveredLinked.uid then
@@ -119,7 +142,7 @@ function newTooltip(data)
     return
   end
 
-  if hoveredItem and _itemId == hoveredItem:getId() then
+  if hoveredItem then
     hoveredItem.uid = _itemUId
     hoveredItem.name = _itemName
     showTooltip(_itemUId)
@@ -133,7 +156,10 @@ function resetData()
   protocolGame = nil
   showingVirtual = nil
   hoveredLinked = nil
-  tooltipWindow:hide()
+  currentTier = 0
+  if tooltipWindow then
+    tooltipWindow:hide()
+  end
 end
 
 function onHoverChange(widget, hovered)
@@ -162,8 +188,10 @@ function onHoverChange(widget, hovered)
   local item = widget:getItem()
   if item and widget.getItemTooltip then
     if hovered then
+      hoveredItem = item
       buildItemTooltip(widget:getItemTooltip())
     else
+      hoveredItem = nil
       tooltipWindow:hide()
     end
     return
@@ -178,16 +206,36 @@ function onHoverChange(widget, hovered)
 
   if hovered then
     hoveredItem = item
+
+    -- Render immediate local tooltip so tier shader is active instantly (0ms delay)
+    local localTier = 0
+    if item.getTier then
+      localTier = item:getTier() or 0
+    end
+    local localName = ""
+    if item.getName then
+      localName = item:getName() or ""
+    end
+    local localData = {
+      id = item:getId(),
+      count = item:getCount(),
+      name = localName,
+      lookText = (item.getTooltip and item:getTooltip()) or "",
+      tier = localTier,
+      weight = 0
+    }
+    buildItemTooltip(localData)
+
     if protocolGame then
       local pos = item:getPosition()
       if pos and pos.x and pos.x < 65000 then
-        print('[TOOLTIPS] Sending hover request pos=' .. pos.x .. ',' .. pos.y .. ',' .. pos.z)
         protocolGame:sendExtendedOpcode(CODE_TOOLTIPS, json.encode({pos.x, pos.y, pos.z, item:getStackPos()}))
+      elseif pos and pos.x == 65535 and pos.y >= 64 then
+        protocolGame:sendExtendedOpcode(CODE_TOOLTIPS, json.encode({pos.x, pos.y, pos.z, 0}))
       else
         local widgetId = widget:getId()
         local slotNum = tonumber(string.match(widgetId or "", 'slot(%d+)'))
         if slotNum then
-          print('[TOOLTIPS] Sending inventory slot request slot=' .. slotNum)
           protocolGame:sendExtendedOpcode(CODE_TOOLTIPS, json.encode({-1, slotNum}))
         end
       end
@@ -228,6 +276,40 @@ function buildItemTooltip(item)
   itemWeightLabel:setText(formatWeight(weight))
   itemSprite:setItemId(id)
   itemSprite:setItemCount(count)
+
+  -- Detect tier from item attributes, methods, or name
+  currentTier = 0
+  if item.tier and type(item.tier) == "number" and item.tier > 0 then
+    currentTier = item.tier
+  elseif item.getTier and type(item.getTier) == "function" then
+    local t = item:getTier()
+    if t and t > 0 then currentTier = t end
+  end
+
+  if currentTier == 0 and hoveredItem and hoveredItem.getTier then
+    local t = hoveredItem:getTier()
+    if t and t > 0 then currentTier = t end
+  end
+
+  if currentTier == 0 and item.name then
+    local tierStr = item.name:match('%[Tier (%d+)%]') or item.name:match('Tier (%d+)')
+    if tierStr then
+      currentTier = tonumber(tierStr) or 0
+    end
+  end
+
+  if currentTier == 0 and item.lookText then
+    local tierStr = item.lookText:match('Tier:?%s*(%d+)')
+    if tierStr then
+      currentTier = tonumber(tierStr) or 0
+    end
+  end
+
+  if currentTier > 0 and currentTier <= 10 then
+    itemSprite:setItemShader('item_tier_' .. currentTier)
+  else
+    itemSprite:setItemShader('')
+  end
 
   -- Title case the name
   name = name:gsub("(%a)(%a+)", function(a, b)
@@ -322,6 +404,24 @@ function showItemTooltip()
   tooltipHeight = math.max(tooltipHeight, 40)
   tooltipWindow:setWidth(tooltipWidth)
   tooltipWindow:setHeight(tooltipHeight)
+
+  tooltipWindow:setImageColor("#ffffff")
+
+  -- Apply tier shader directly to the tooltip window body
+  if currentTier > 0 and currentTier <= 10 then
+    tooltipWindow:setImageShader("tooltip_tier_" .. currentTier)
+    g_logger.error("[TOOLTIP-ACTIVE] Applied tooltip_tier_" .. currentTier .. " to tooltipWindow (tier=" .. currentTier .. ")")
+  else
+    tooltipWindow:setImageShader("")
+  end
+
+  -- Border handling: shader draws the smooth rounded antialiased border when tier > 0
+  if currentTier > 0 and currentTier <= 10 then
+    tooltipWindow:setBorderWidth(0)
+  else
+    tooltipWindow:setBorderWidth(1)
+    tooltipWindow:setBorderColor('#ffffff15')
+  end
 
   local windowSize = g_window.getSize()
   if mousePos.x > windowSize.width / 2 then

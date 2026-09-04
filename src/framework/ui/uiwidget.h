@@ -485,7 +485,7 @@ public:
     void setImageBorderBottom(int border) { m_imageBorder.bottom = border; configureBorderImage(); }
     void setImageBorderLeft(int border) { m_imageBorder.left = border; configureBorderImage(); }
     void setImageBorder(int border) { m_imageBorder.set(border); configureBorderImage(); }
-    void setImageShader(const std::string& str) { m_shader = str; }
+    void setImageShader(const std::string& str) { m_shader = str; updateImageCache(); }
 
     Rect getImageClip() { return m_imageClipRect; }
     int getImageOffsetX() { return m_imageRect.x(); }

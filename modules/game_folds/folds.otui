@@ -28,7 +28,7 @@ folds
   dragable: true
   image-source: bg
   image-auto-resize: true
-  image-color: #0f1423CC
+  image-shader: spellbar_bg
 
   Folds
     id: m1

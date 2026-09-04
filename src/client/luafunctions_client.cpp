@@ -974,6 +974,8 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<UIMap>("getFloorTransparency", &UIMap::getFloorTransparency);
     g_lua.bindClassMemberFunction<UIMap>("setFloorTransparencyRadius", &UIMap::setFloorTransparencyRadius);
     g_lua.bindClassMemberFunction<UIMap>("getFloorTransparencyRadius", &UIMap::getFloorTransparencyRadius);
+    g_lua.bindClassMemberFunction<UIMap>("setFloorTransparencyThreshold", &UIMap::setFloorTransparencyThreshold);
+    g_lua.bindClassMemberFunction<UIMap>("getFloorTransparencyThreshold", &UIMap::getFloorTransparencyThreshold);
     g_lua.bindClassMemberFunction<UIMap>("setCrosshair", &UIMap::setCrosshair);
     g_lua.bindClassMemberFunction<UIMap>("setShader", &UIMap::setShader);
     g_lua.bindClassMemberFunction<UIMap>("isMultifloor", &UIMap::isMultifloor);

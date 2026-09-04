@@ -46,7 +46,7 @@ Panel
   OptionCheckBox
     id: highFloorTransparency
     !text: tr('High Floor Transparency')
-    !tooltip: tr('Make upper floors semi-transparent when covering the player')
+    !tooltip: tr('Make upper floors and occluding same-floor items semi-transparent')
 
   Label
     id: floorShadowFadeWidthLabel

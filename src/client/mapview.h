@@ -147,6 +147,8 @@ public:
     float getFloorTransparency() { return m_floorTransparency; }
     void setFloorTransparencyRadius(float radius) { m_floorTransparencyRadius = std::max(0.5f, radius); }
     float getFloorTransparencyRadius() { return m_floorTransparencyRadius; }
+    void setFloorTransparencyThreshold(float threshold) { m_floorTransparencyThreshold = stdext::clamp<float>(threshold, 0.0f, 1.0f); }
+    float getFloorTransparencyThreshold() { return m_floorTransparencyThreshold; }
 
     //void setShader(const PainterShaderProgramPtr& shader, float fadein, float fadeout);
     //PainterShaderProgramPtr getShader() { return m_shader; }
@@ -201,6 +203,7 @@ private:
     bool m_floorTransparencyEnabled = true;
     float m_floorTransparency = 0.30f; // opacity of upper-floor tiles near player (0=invisible, 1=opaque)
     float m_floorTransparencyRadius = 2.0f; // radius in SQMs around player box
+    float m_floorTransparencyThreshold = 0.30f; // min overlap % of player sprite for same-floor occluders (0..1)
 
     stdext::timer m_fadingFloorTimers[Otc::MAX_Z + 1];
 

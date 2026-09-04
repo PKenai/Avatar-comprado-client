@@ -306,3 +306,2503 @@ stack traceback:
 	[C]: in function '__index'
 	/modules/game_market/market.lua:150: in function 'terminate'
 	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=3
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=2
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z2.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z5.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap860.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z0.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z1.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z3.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z4.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z6.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z7.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z8.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z9.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z10.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z11.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z12.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z13.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z14.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap_z15.otmm"
+ERROR: failed to save OTMM minimap: rename: The process cannot access the file because it is being used by another process.: "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm.tmp", "C:\Users\imfis\AppData\Roaming\OTClientV8\otclientv8\/minimap.otmm"
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=2
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=10
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=2
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=3
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=3
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=2
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=1
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=10
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=8
+[TOOLTIPS] Sending inventory slot request slot=7
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=2
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=4
+[TOOLTIPS] Sending inventory slot request slot=6
+[TOOLTIPS] Sending inventory slot request slot=8
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_1 to tooltipWindow (tier=1)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_9 to tooltipWindow (tier=9)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_2 to tooltipWindow (tier=2)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_3 to tooltipWindow (tier=3)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_6 to tooltipWindow (tier=6)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_4 to tooltipWindow (tier=4)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_7 to tooltipWindow (tier=7)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_8 to tooltipWindow (tier=8)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_5 to tooltipWindow (tier=5)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+ERROR: [TOOLTIP-ACTIVE] Applied tooltip_tier_10 to tooltipWindow (tier=10)
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: protected lua call failed: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x7ff73da5c6f0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/mods/game_buffs/buffs.lua:180: in function </mods/game_buffs/buffs.lua:169>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: protected lua call failed: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x7ff73da5c6f0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/mods/game_buffs/buffs.lua:180: in function </mods/game_buffs/buffs.lua:169>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: protected lua call failed: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x7ff73da5c6f0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/mods/game_buffs/buffs.lua:180: in function </mods/game_buffs/buffs.lua:169>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+	[C]: in function 'reloadModules'
+	/modules/client/client.lua:3: in function </modules/client/client.lua:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function </modules/corelib/util.lua:299>
+ERROR: /modules/game_console/console.lua:1559: attempt to index global 'folds' (a nil value)
+ERROR: protected lua call failed: /modules/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: at 0x7ff73da5c6f0
+	[C]: in function 'error'
+	/modules/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/mods/game_buffs/buffs.lua:180: in function </mods/game_buffs/buffs.lua:169>
+	[C]: in function 'cancelLogin'
+	/modules/game_interface/gameinterface.lua:258: in function 'forceExit'
+	/modules/game_interface/gameinterface.lua:268: in function </modules/game_interface/gameinterface.lua:268>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:235: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:235: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+ERROR: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:235: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:235: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:233: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:233: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:233: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:233: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+ERROR: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:233: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:233: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: C++ call failed: LUA ERROR: attempt to cast a 'string' lua value to 'class TSize<int>'
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:233: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+stack traceback:
+	[builtin#142]: at 0x7ff73dc0e3c0
+	[C]: in function 'setSize'
+	/modules/client_entergame/characterlist.lua:233: in function 'create'
+	/modules/client_entergame/entergame.lua:63: in function </modules/client_entergame/entergame.lua:37>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:301: in function 'signalcall'
+	/modules/gamelib/protocollogin.lua:161: in function 'parseCharacterList'
+	/modules/gamelib/protocollogin.lua:119: in function </modules/gamelib/protocollogin.lua:109>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:238: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:238: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:65: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+ERROR: Lua error: /modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_market': LUA ERROR:
+/modules/game_market/market.lua:150: attempt to index upvalue 'marketButton' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_market/market.lua:150: in function 'terminate'
+	/modules/game_market/market.otmod:10:[@onUnload]:1: in main chunk

@@ -87,6 +87,21 @@ function checkIsFoldMsg(msg)
     return false
 end
 
+function updateSpellbarShader(voc)
+    local v = voc or infos.vocation
+    if not v or v <= 0 then
+        local lp = g_game.getLocalPlayer()
+        if lp then
+            v = lp:getVocation()
+        end
+    end
+    v = v or 1
+    local elem = ((v - 1) % 4) + 1
+    if miniWindow then
+        miniWindow:setImageShader("spellbar_bg_" .. elem)
+    end
+end
+
 function doRefleshClient()
     local protocolGame = g_game.getProtocolGame()
 
@@ -94,6 +109,7 @@ function doRefleshClient()
         protocolGame:sendExtendedOpcode(2) --manda pro server, mandar todas spells
 		protocolGame:sendExtendedOpcode(40)
     end
+    updateSpellbarShader()
 end
 
 
@@ -205,6 +221,7 @@ end
 
 function configureFolds(voc)
     infos.buy = {}
+    updateSpellbarShader(voc)
     modules.game_healthinfo.setImageAvatar(voc)
     for x = 1, #spellInfos[voc] do
         cancelEventFold(x)
@@ -256,6 +273,7 @@ end
 
 function init()
     miniWindow = g_ui.loadUI('folds', modules.game_interface.getRootPanel())
+    updateSpellbarShader()
     -- miniWindow:disableResize()
 
     -- Carrega o nome salvo do target da Water Heal

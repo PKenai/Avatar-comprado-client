@@ -22,6 +22,16 @@ function init()
   createFadeShaders()
   createOutfitShaders()
   createTierShaders()
+  createTooltipTierShaders()
+  g_shaders.createShader("spellbar_bg", "/shaders/map_default_vertex", "/shaders/spellbar_bg")
+  for i = 1, 4 do
+    g_shaders.createShader("spellbar_bg_" .. i, "/shaders/map_default_vertex", "/shaders/spellbar_bg_" .. i)
+  end
+
+  g_shaders.createShader("healthbar_bg", "/shaders/map_default_vertex", "/shaders/healthbar_bg")
+  for i = 1, 4 do
+    g_shaders.createShader("healthbar_bg_" .. i, "/shaders/map_default_vertex", "/shaders/healthbar_bg_" .. i)
+  end
 
   ProtocolGame.registerExtendedOpcode(ExtendedIds.MapShader, onMapShader)
   ProtocolGame.registerExtendedOpcode(111, onTierOpcode)
@@ -71,6 +81,13 @@ end
 function createTierShaders()
   for i = 1, 10 do
     g_shaders.createShader("item_tier_" .. i, "/shaders/item_tier_vertex", "/shaders/item_tier_" .. i)
+  end
+end
+
+-- Tooltip panel shaders: glowing surface effect for tooltip windows per tier
+function createTooltipTierShaders()
+  for i = 1, 10 do
+    g_shaders.createShader("tooltip_tier_" .. i, "/shaders/map_default_vertex", "/shaders/tooltip_tier_" .. i)
   end
 end
 

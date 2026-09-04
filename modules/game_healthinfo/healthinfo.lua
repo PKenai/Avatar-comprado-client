@@ -30,6 +30,24 @@ experienceTooltip = 'You have %d%% to advance to level %d.'
 avatarEdit = true
 uiAvatar = nil
 imgAvatar = { "fire", "water", "air", "earth" }
+currentHealthVocation = 0
+
+function updateHealthbarShader(voc)
+  local v = voc or currentHealthVocation
+  if not v or v <= 0 then
+    local lp = g_game.getLocalPlayer()
+    if lp then
+      v = lp:getVocation()
+    end
+  end
+  v = v or 1
+  currentHealthVocation = v
+  local elem = ((v - 1) % 4) + 1
+  local overlay = healthInfoWindow and healthInfoWindow:recursiveGetChildById('backgroundOverlay')
+  if overlay then
+    overlay:setImageShader('healthbar_bg_' .. elem)
+  end
+end
 
 function init()
   connect(LocalPlayer, { onHealthChange = onHealthChange,
@@ -70,7 +88,7 @@ function init()
     onManaChange(localPlayer, localPlayer:getMana(), localPlayer:getMaxMana())
     onLevelChange(localPlayer, localPlayer:getLevel(), localPlayer:getLevelPercent())
     onStatesChange(localPlayer, localPlayer:getStates(), 0)
-	
+    updateHealthbarShader()
   end
 
   -- healthInfoWindow:setup()
@@ -137,6 +155,9 @@ end
 
 function offline()
   healthInfoWindow:recursiveGetChildById('conditionPanel'):destroyChildren()
+  local overlay = healthInfoWindow:recursiveGetChildById('backgroundOverlay')
+  if overlay then overlay:setImageShader('') end
+  currentHealthVocation = 0
 end
 
 -- hooked events
@@ -209,10 +230,11 @@ function setExperienceTooltip(tooltip)
 
   local localPlayer = g_game.getLocalPlayer()
   if localPlayer then
-    experienceBar:setTooltip(tr(experienceTooltip, localPlayer:getLevelPercent(), localPlayer:getLevel()+1))
+    experienceLabel:setTooltip(tr(experienceTooltip, localPlayer:getLevelPercent(), localPlayer:getLevel()+1))
   end
 end
 
 function setImageAvatar(vocation)
   uiAvatar:setImageSource('img/'..imgAvatar[vocation])
+  updateHealthbarShader(vocation)
 end

@@ -16,7 +16,11 @@ TooltipEmpty < UIWidget
   anchors.left: parent.left
   anchors.right: parent.right
 
-FlatPanel
+UIWidget
+  phantom: true
+  image-source: /images/tooltip_bg.png
+  image-color: #ffffff
+
   Label
     id: itemWeightLabel
     font: verdana-11px-rounded
@@ -25,7 +29,7 @@ FlatPanel
     text-auto-resize: true
     margin-top: 5
     margin-left: 5
-    
+
   UIItem
     id: itemSprite
     font: verdana-11px-rounded
