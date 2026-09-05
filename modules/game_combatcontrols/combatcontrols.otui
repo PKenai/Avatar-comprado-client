@@ -3,9 +3,6 @@ CombatBox < UICheckBox
   image-clip: 0 0 20 20
   margin: 2 4
 
-  $hover:
-    opacity: 0.8
-
   $checked:
     image-clip: 0 20 20 20
 

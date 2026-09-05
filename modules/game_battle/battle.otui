@@ -1,9 +1,10 @@
 BattleIcon < UICheckBox
   size: 20 20
+  image-color: white
   image-rect: 0 0 20 20
 
   $hover !disabled:
-    color: #e8ecf1
+    color: #cccccc
 
   $!checked:
     image-clip: 0 0 20 20
@@ -18,7 +19,7 @@ BattleIcon < UICheckBox
     image-clip: 0 60 20 20
 
   $disabled:
-    opacity: 0.5
+    image-color: #ffffff88
 
 BattlePlayers < BattleIcon
   image-source: /images/game/battle/battle_players

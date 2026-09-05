@@ -113,7 +113,7 @@ local function renderDepotResults(list, total)
     lbl:setPosition({ x = 4, y = 1 })
     lbl:setSize({ width = 246, height = 14 })
     lbl:setFont('verdana-11px-monochrome')
-    lbl:setColor('#4b5563')
+    lbl:setColor('#909090')
     lbl:setText('Nenhum item encontrado')
   else
     local totalN = tonumber(total) or #rows
@@ -125,7 +125,7 @@ local function renderDepotResults(list, total)
       lbl:setPosition({ x = 4, y = 1 })
       lbl:setSize({ width = 246, height = 14 })
       lbl:setFont('verdana-11px-monochrome')
-      lbl:setColor('#8892a4')
+      lbl:setColor('#b0b0b0')
       lbl:setText(string.format('+%d mais - refine a busca', totalN - shown))
     end
   end

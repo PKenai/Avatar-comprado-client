@@ -91,7 +91,6 @@ function onExtendedOpcode(protocol, code, buffer)
   )
 
   if not json_status then
-    g_logger.error("Tooltips JSON error: " .. json_data)
     return
   end
 

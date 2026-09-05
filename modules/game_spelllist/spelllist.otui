@@ -1,6 +1,6 @@
 SpellListLabel < Label
   font: verdana-11px-monochrome
-  background-color: #111827
+  background-color: alpha
   text-offset: 42 3
   focusable: true
   height: 36
@@ -10,8 +10,8 @@ SpellListLabel < Label
   image-source: /images/game/spells/defaultspells
 
   $focus:
-    background-color: #1a2235
-    color: #e8ecf1
+    background-color: #ffffff22
+    color: #ffffff
 
 SpellInfoLabel < Label
   width: 70
@@ -19,14 +19,12 @@ SpellInfoLabel < Label
   text-align: right
   margin-left: 10
   margin-top: 5
-  color: #8892a4
 
 SpellInfoValueLabel < Label
   text-align: left
   width: 190
   margin-left: 10
   margin-top: 5
-  color: #e8ecf1
 
 FilterButton < Button
   width: 64
@@ -34,9 +32,9 @@ FilterButton < Button
   anchors.top: spellList.bottom
   @onClick: toggleFilter(self)
   margin: 5 0 0 6
-  color: #8892a4
+  color: #630000
   $on:
-    color: #638cff
+    color: green
 
 MainWindow
   id: spelllistWindow

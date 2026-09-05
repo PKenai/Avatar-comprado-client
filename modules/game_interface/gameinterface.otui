@@ -1,30 +1,25 @@
 ButtonChat < UICheckBox
   size: 20 20
-  image-color: #8892a4
+  image-color: #dfdfdf
   image-clip: 0 0 20 40
   image-border: 0
 
-  $hover:
-    image-color: #e8ecf1
-
   $on:
     image-clip: 0 40 20 20
-    color: #638cff
-    image-color: #638cff
+    color: #dfdfdf
 
 GameSidePanel < UIMiniWindowContainer
   image-source: /images/ui/panel_side
   image-border: 4
-  image-color: #0f1423DD
   padding: 4
   width: 198
   layout:
     type: verticalBox
+    //spacing: 1
 
 GameBottomPanel < Panel
   image-source: /images/ui/panel_bottom
   image-border: 4
-  image-color: #0f1423DD
 
 GameMapPanel < UIGameMap
   padding: 4

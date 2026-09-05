@@ -195,6 +195,7 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_minimap", "saveOtmm", &Minimap::saveOtmm, &g_minimap);
     g_lua.bindSingletonFunction("g_minimap", "setMinimapHD", &Minimap::setMinimapHD, &g_minimap);
     g_lua.bindSingletonFunction("g_minimap", "isMinimapHD", &Minimap::isMinimapHD, &g_minimap);
+    g_lua.bindSingletonFunction("g_minimap", "isTileExplored", &Minimap::isTileExplored, &g_minimap);
 
     g_lua.registerSingletonClass("g_creatures");
     g_lua.bindSingletonFunction("g_creatures", "getCreatures", &CreatureManager::getCreatures, &g_creatures);
@@ -1027,6 +1028,10 @@ void Client::registerLuaFunctions()
     g_lua.bindClassStaticFunction<UIProgressRect>("create", [] { return UIProgressRectPtr(new UIProgressRect); });
     g_lua.bindClassMemberFunction<UIProgressRect>("setPercent", &UIProgressRect::setPercent);
     g_lua.bindClassMemberFunction<UIProgressRect>("getPercent", &UIProgressRect::getPercent);
+    g_lua.bindClassMemberFunction<UIProgressRect>("setRing", &UIProgressRect::setRing);
+    g_lua.bindClassMemberFunction<UIProgressRect>("setRingThickness", &UIProgressRect::setRingThickness);
+    g_lua.bindClassMemberFunction<UIProgressRect>("setAutoCountdown", &UIProgressRect::setAutoCountdown);
+    g_lua.bindClassMemberFunction<UIProgressRect>("clearAutoCountdown", &UIProgressRect::clearAutoCountdown);
 
     g_lua.registerClass<UIGraph, UIWidget>();
     g_lua.bindClassStaticFunction<UIGraph>("create", [] { return UIGraphPtr(new UIGraph); });

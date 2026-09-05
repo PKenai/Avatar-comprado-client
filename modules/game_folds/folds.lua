@@ -9,6 +9,14 @@ infos = {
     buy = {}
 }
 
+-- Cores da barra de cooldown da spellbar (formato #rrggbbaa)
+CD_SWEEP_COLOR = "#ff2b4d"   -- neon vermelho/rosa (opaco) que "descompleta" a borda
+CD_TEXT_COLOR = "#ffffff"     -- numero de segundos por cima da borda
+DEFAULT_SWEEP_COLOR = "#585858AA" -- cor padrao do fundo (igual ao estilo)
+
+-- guarda o timer ativo (100ms) de cada slot em cooldown
+cdTimer = {}
+
 function string.explode(str, sep, limit)
     local i, pos, tmp, t = 0, 1, "", {}
     
@@ -113,6 +121,100 @@ function doRefleshClient()
 end
 
 
+-- (desativado: o indicador final e o anel tipo relogio em game_folds; o
+-- contorno retangular ficaria poluindo o icone de 32px)
+function setCooldownOutline(slot, cooling)
+end
+
+-- Escurece o icone da spell enquanto estiver em cooldown (some ao liberar)
+function setIconDimmed(slot, dim)
+    if not miniWindow or miniWindow:isDestroyed() then
+        return
+    end
+    local icon = miniWindow:getChildById("m"..slot)
+    if icon then
+        icon:setOpacity(dim and 0.45 or 1)
+    end
+end
+
+-- Flash branco bem rapido ("pa pum") quando a spell libera o cooldown
+function flashReadyIcon(slot)
+    if not miniWindow or miniWindow:isDestroyed() then
+        return
+    end
+    local overlay = miniWindow:getChildById("p"..slot)
+    if not overlay or overlay:isDestroyed() then
+        return
+    end
+    local ok, flash = pcall(function()
+        return g_ui.createWidget("CooldownFlash", overlay)
+    end)
+    if not ok or not flash then
+        return
+    end
+    pcall(function() flash:fill("parent") end)
+    flash:setOpacity(1)
+    scheduleEvent(function()
+        if not flash:isDestroyed() then
+            flash:setOpacity(0.5)
+        end
+    end, 60)
+    scheduleEvent(function()
+        if not flash:isDestroyed() then
+            flash:setOpacity(0.15)
+        end
+    end, 120)
+    scheduleEvent(function()
+        if not flash:isDestroyed() then
+            flash:destroy()
+        end
+    end, 190)
+end
+
+-- Anel tipo relogio suave: atualiza a cada 100ms o percent (100 -> 0) e o
+-- numero de segundos restantes, sem depender de ticks por segundo do server.
+function startCdSweep(a, delay, progress)
+    local startMs = g_clock.millis()
+    local totalMs = delay * 1000
+
+    -- drenagem nativa fluida: o anel anda sozinho a cada frame pelo relogio
+    -- (setAutoCountdown); o Lua aqui so cuida do texto e do flash final
+    pcall(function()
+        progress:setAutoCountdown(totalMs)
+    end)
+
+    local function tick()
+        if not progress or progress:isDestroyed() or not cdTimer[a] then
+            cdTimer[a] = nil
+            return
+        end
+        local remainMs = totalMs - (g_clock.millis() - startMs)
+        if remainMs <= 0 then
+            cdTimer[a] = nil
+            pcall(function() progress:clearAutoCountdown() end)
+            progress:setText()
+            progress:setColor("gray")
+            progress:setBackgroundColor(DEFAULT_SWEEP_COLOR)
+            progress:setPercent(0)
+            infos.spells[a] = 0
+            setCooldownOutline(a, false)
+            setIconDimmed(a, false)
+            flashReadyIcon(a)
+            return
+        end
+        -- 100 = anel cheio, encolhendo ate 0 (libera)
+        progress:setPercent(remainMs / totalMs * 100)
+        local secs = math.max(1, math.ceil(remainMs / 1000))
+        if secs ~= infos.spells[a] then
+            infos.spells[a] = secs
+            progress:setText(secs)
+        end
+        cdTimer[a] = scheduleEvent(tick, 100)
+    end
+
+    cdTimer[a] = scheduleEvent(tick, 100)
+end
+
 function refreshCDs(CDs)
     local level = g_game.getLocalPlayer():getLevel()
 
@@ -125,36 +227,36 @@ function refreshCDs(CDs)
 
         if level >= currentLevel then
             local delay = infos.spells[a]
-            local progress = miniWindow:getChildById("p"..a)
-
-            if progress then
+            local progress = miniWindow:getChildById("p"..a)            if progress then
                 cancelEventFold(a)
-                progress:setColor("#8892a4")
+                progress:setColor("gray")
 
                 if delay == 0 then
-                    progress:setPercent(100)
-                    progress:setText()
-                
-                elseif delay > 0 then
+                    setCooldownOutline(a, false)
+                    progress:setColor("gray")
+                    progress:setBackgroundColor(DEFAULT_SWEEP_COLOR)
                     progress:setPercent(0)
-                    progress:setText(delay)
-
-                    for y = 1, delay do
-                        local event = scheduleEvent(function()
-                            if y < delay then
-                                progress:setText(delay-y)
-                                infos.spells[a] = delay-y
-                            else
-                                progress:setText()
-                                progress:setPercent(100)
-                                infos.spells[a] = 0    
-                            end
-                        end, 1000*y)
-
-                        table.insert(infos.currentEvents[a], event)
+                    progress:setText()
+                    local wasCooling = infos.spells[a] and infos.spells[a] > 0
+                    infos.spells[a] = 0
+                    setIconDimmed(a, false)
+                    if wasCooling then
+                        flashReadyIcon(a)
                     end
 
+                elseif delay > 0 then
+                    -- anel tipo relogio: contorno neon no quadrado que vai se
+                    -- descompletando (suave, 100ms) ate zerar e liberar a spell
+                    setCooldownOutline(a, true)
+                    setIconDimmed(a, true)
+                    progress:setColor(CD_TEXT_COLOR)
+                    progress:setBackgroundColor(CD_SWEEP_COLOR)
+                    progress:setPercent(100)
+                    progress:setText(delay)
+                    startCdSweep(a, delay, progress)
+
                 elseif delay < 0 then
+                    setCooldownOutline(a, true)
                     progress:setPercent(0)
                 end
             end
@@ -170,17 +272,20 @@ function checkBuys()
         local progress = miniWindow:getChildById("p"..x)
 
         if not infos.buy[x] then
+            setCooldownOutline(x, false)
             progress:setText("NPC")
-            progress:setColor("#8892a4")
+            progress:setColor("gray")
             progress:setPercent(0)
         else
             if progress:getText() == "NPC" and infos.spells[x] == 0 then
                 if playerLevel >= current.level then
                     progress:setText()
-                    progress:setPercent(100)
+                    progress:setBackgroundColor(DEFAULT_SWEEP_COLOR)
+                    progress:setPercent(0)
                 else
-                    progress:setText("L"..current.level)            progress:setColor("#a855f7")
-        end
+                    progress:setText("L"..current.level)
+                    progress:setColor("pink") 
+                end
             end
         end
     end
@@ -194,12 +299,15 @@ function refreshLevel()
 
         if level >= spellInfos[infos.vocation][x].level then
             if infos.spells[x] == 0 then
+                setCooldownOutline(x, false)
                 progress:setText()
-                progress:setPercent(100)
+                progress:setBackgroundColor(DEFAULT_SWEEP_COLOR)
+                progress:setPercent(0)
             end
         else
+            setCooldownOutline(x, false)
             progress:setText("L"..spellInfos[infos.vocation][x].level)
-            progress:setColor("#a855f7")
+            progress:setColor("pink")
             progress:setPercent(0)
         end
     end
@@ -208,6 +316,17 @@ function refreshLevel()
 end
 
 function cancelEventFold(id)
+    if cdTimer[id] then
+        pcall(function() cdTimer[id]:cancel() end)
+        cdTimer[id] = nil
+    end
+    -- para a drenagem nativa do anel tambem (se existir)
+    if miniWindow and not miniWindow:isDestroyed() then
+        local pp = miniWindow:getChildById("p"..id)
+        if pp then
+            pcall(function() pp:clearAutoCountdown() end)
+        end
+    end
     if infos.currentEvents[id] then
         if #infos.currentEvents[id] > 0 then
             for x = 1, #infos.currentEvents[id] do
@@ -229,6 +348,8 @@ function configureFolds(voc)
         local current = miniWindow:getChildById("m"..x)
         local progress = miniWindow:getChildById("p"..x)
         local levelFold = spellInfos[voc][x].level
+        setCooldownOutline(x, false)
+        setIconDimmed(x, false)
 		
 		progress.info = spellInfos[voc][x].name..", lv. "..levelFold
         current:setImageSource(images[voc]..x)		

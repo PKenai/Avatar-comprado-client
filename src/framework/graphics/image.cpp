@@ -23,6 +23,7 @@
 
 #include "image.h"
 
+#include <algorithm>
 #include <framework/core/resourcemanager.h>
 #include <framework/core/filestream.h>
 #include <framework/graphics/apngloader.h>
@@ -94,13 +95,29 @@ void Image::blit(const Point& dest, const ImagePtr& other)
 {
     VALIDATE(m_bpp == 4);
 
-    if (!other)
+    if (!other || other->getBpp() != 4)
         return;
 
     int width = other->getWidth(), height = other->getHeight();
     uint8* otherPixels = other->getPixelData();
-    for (int y = 0, p = 0; y < height; ++y) {
-        int pos = ((dest.y + y) * m_size.width() + dest.x) * 4;
+
+    // Clip the source rect against the destination image bounds so a
+    // negative/overflowing destination can never write out of bounds
+    // (this was causing heap corruption crashes in the HD minimap, which
+    // blits multi-tile sprites near the block edges).
+    int srcX = 0, srcY = 0;
+    int dstX = dest.x, dstY = dest.y;
+    if (dstX < 0) { srcX = -dstX; width += dstX; dstX = 0; }
+    if (dstY < 0) { srcY = -dstY; height += dstY; dstY = 0; }
+    width  = std::min(width,  m_size.width()  - dstX);
+    height = std::min(height, m_size.height() - dstY);
+    if (width <= 0 || height <= 0)
+        return;
+
+    const int otherWidth = other->getWidth();
+    for (int y = 0; y < height; ++y) {
+        int pos = ((dstY + y) * m_size.width() + dstX) * 4;
+        int p = ((srcY + y) * otherWidth + srcX) * 4;
         for (int x = 0; x < width; ++x) {
             if (otherPixels[p + 3] != 0) {
                 *(uint32_t*)&m_pixels[pos] = *(uint32_t*)&otherPixels[p];

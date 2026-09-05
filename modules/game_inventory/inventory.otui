@@ -3,9 +3,6 @@ CombatBox < UICheckBox
   image-clip: 0 0 28 28
   anchors.top: parent.top
 
-  $hover:
-    opacity: 0.8
-
   $checked:
     image-clip: 0 28 28 28
 

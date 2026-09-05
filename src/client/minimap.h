@@ -116,6 +116,8 @@ public:
 
   void updateTile(const Position &pos, const TilePtr &tile);
   const MinimapTile &getTile(const Position &pos);
+  // true se o tile ja foi visto/desbloqueado no minimapa (tem flag WasSeen)
+  bool isTileExplored(const Position &pos);
   std::pair<MinimapBlock_ptr, MinimapTile> threadGetTile(const Position &pos);
 
   bool loadImage(const std::string &fileName, const Position &topLeft,

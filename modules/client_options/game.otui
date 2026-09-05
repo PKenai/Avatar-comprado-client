@@ -25,6 +25,11 @@ Panel
     id: displayText
     !text: tr('Display text messages')
 
+  OptionCheckBox
+    id: markNpcsMinimap
+    !text: tr('Mark NPCs in minimap')
+    !tooltip: tr('Shows an icon for every NPC on your minimap (only on areas you have explored)')
+
   Button
     id: changeLocale
     !text: tr('Change language')

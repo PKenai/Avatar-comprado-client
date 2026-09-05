@@ -454,6 +454,9 @@ function refreshPlayerGoods()
 end
 
 function onOpenNpcTrade(items)
+  if g_things and g_things.clearItemShaders then
+    g_things.clearItemShaders()
+  end
   setCurrency(shopCurrencyOverride or 'gold', false)
   shopCurrencyOverride = nil
 
@@ -461,10 +464,20 @@ function onOpenNpcTrade(items)
   tradeItems[SELL] = {}
 
   for key,item in pairs(items) do
+    local itemName = item[2] or ""
+    local itemTier = 0
+    local tierStr = itemName:match('%[Tier (%d+)%]') or itemName:match('Tier (%d+)')
+    if tierStr then
+      itemTier = tonumber(tierStr) or 0
+    end
+
     if item[4] > 0 then
       local newItem = {}
       newItem.ptr = item[1]
-      newItem.name = item[2]
+      if newItem.ptr and newItem.ptr.setTier then
+        newItem.ptr:setTier(itemTier)
+      end
+      newItem.name = itemName
       newItem.weight = item[3] / 100
       newItem.price = item[4]
       table.insert(tradeItems[BUY], newItem)
@@ -473,7 +486,10 @@ function onOpenNpcTrade(items)
     if item[5] > 0 then
       local newItem = {}
       newItem.ptr = item[1]
-      newItem.name = item[2]
+      if newItem.ptr and newItem.ptr.setTier then
+        newItem.ptr:setTier(itemTier)
+      end
+      newItem.name = itemName
       newItem.weight = item[3] / 100
       newItem.price = item[5]
       table.insert(tradeItems[SELL], newItem)

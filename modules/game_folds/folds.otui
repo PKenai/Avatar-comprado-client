@@ -1,6 +1,8 @@
 SpellProgress < UIProgressRect
-  background: #0f142390
-  percent: 100
+  background: #585858AA
+  percent: 0
+  ring: true
+  ring-thickness: 3
   focusable: false
   font: verdana-11px-rounded
   image-source: /images/folds/moldura
@@ -8,12 +10,16 @@ SpellProgress < UIProgressRect
   anchors.top: parent.top
   size: 32 32
   text-align: center
-  color: #e8ecf1
 
 Folds < UIButton
   size: 32 32
   anchors.top: parent.top
   anchors.left: parent.left
+  focusable: false
+
+CooldownFlash < UIWidget
+  background-color: #ffffff
+  phantom: true
   focusable: false
 
 folds

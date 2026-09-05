@@ -23,6 +23,7 @@
 #include "minimap.h"
 #include "game.h"
 #include "spritemanager.h"
+#include <framework/util/rect.h>
 #include "thingtype.h"
 #include "thingtypemanager.h"
 #include "tile.h"
@@ -130,7 +131,11 @@ bool MinimapBlock::update(int z) {
       // 1. Try to draw sprites if available
       if (g_minimap.isMinimapHD() && tile.spriteCount > 0) {
         // Loop through all sprites on this tile
-        for (int i = 0; i < tile.spriteCount; ++i) {
+        // (spriteCount is clamped defensively: updateTile runs on the game
+        // thread while update() runs on the draw thread, so a torn read could
+        // otherwise walk past the 4-element spriteIds array)
+        for (int i = 0; i < tile.spriteCount && i < MinimapTile::MAX_SPRITES;
+             ++i) {
           uint16 spriteId = tile.spriteIds[i];
           if (spriteId == 0)
             continue;
@@ -185,12 +190,30 @@ bool MinimapBlock::update(int z) {
                 // Scale
                 int finalW = thingW * scale;
                 int finalH = thingH * scale;
+
+                // Guard: never allocate a huge buffer for absurd sprite sizes.
+                const int maxDim = 2048;
+                if (finalW > maxDim || finalH > maxDim)
+                  continue;
+
+                // Guard: never copy more pixels than the source image actually
+                // holds (custom sprites can be smaller than the logical tile
+                // size; an overread here corrupts the heap).
+                const int srcW = compositedImg->getWidth();
+                const int srcH = compositedImg->getHeight();
+                const int copyW = std::min(finalW, srcW);
+                const int copyH = std::min(finalH, srcH);
+
                 scaledImg = ImagePtr(new Image(Size(finalW, finalH)));
                 uint8_t *srcPixels = compositedImg->getPixelData();
                 uint8_t *dstPixels = scaledImg->getPixelData();
 
-                // Optimized: scale=baseSpriteSize, ratio is always 1:1 -> simple memcpy
-                memcpy(dstPixels, srcPixels, finalW * finalH * 4);
+                // Optimized: scale=baseSpriteSize, ratio is always 1:1 ->
+                // simple row copy, bounded to the source image size.
+                for (int row = 0; row < copyH; ++row) {
+                  memcpy(dstPixels + row * finalW * 4,
+                         srcPixels + row * srcW * 4, copyW * 4);
+                }
 
                 // Store in vector cache
                 std::lock_guard<std::mutex> lock(s_minimapCacheMutex);
@@ -295,9 +318,7 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
     return;
 
   Rect mapRect = calcMapRect(screenRect, mapCenter, scale);
-  g_drawQueue->addFilledRect(screenRect, color);
-
-  if (MMBLOCK_SIZE * scale <= 1 || !mapCenter.isMapPosition()) {
+  g_drawQueue->addFilledRect(screenRect, color);  if (MMBLOCK_SIZE * scale <= 1 || !mapCenter.isMapPosition()) {
     return;
   }
 
@@ -323,15 +344,20 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
   // Render from bottom to top (highest Z first, then lower Z on top)
   std::vector<int> floorsToRender;
 
-  // Only show last 4 floors (current + 3 below) to limit draw calls
-  const int groundFloor = std::min(7, mapCenter.z + 3);
-  if (mapCenter.z < groundFloor) {
-    for (int z = groundFloor; z >= mapCenter.z; --z) {
+  // Only show last 4 floors (current + 3 below) to limit draw calls.
+  // Clamp the z range so we never ask to render floors below 0 (which can
+  // produce garbage block lookups / draw math when the camera floor is bad).
+  int currentFloorClamped = std::max<int>(0, mapCenter.z);
+  const int groundFloor = std::min(7, currentFloorClamped + 3);
+  if (currentFloorClamped < groundFloor) {
+    for (int z = groundFloor; z >= currentFloorClamped; --z) {
       floorsToRender.push_back(z);
     }
   } else {
-    floorsToRender.push_back(mapCenter.z);
+    floorsToRender.push_back(currentFloorClamped);
   }
+
+  // Already validated above (spread positivity).
 
   for (int floorIdx = 0; floorIdx < (int)floorsToRender.size(); ++floorIdx) {
     int currentZ = floorsToRender[floorIdx];
@@ -342,24 +368,23 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
     const int paddingTiles = 2;
     const float paddingPixels = paddingTiles * scale;
 
-    // Use integer y for block coordinates, float ys for screen position
+    // Clamp block coordinates to the valid map area so we never touch
+    // blocks outside [0,65535) at extreme zoom or bad camera positions.
     float ys = start.y;
     for (int y = blockOff.y; ys < screenRect.bottom();
          y += MMBLOCK_SIZE, ys += MMBLOCK_SIZE * scale) {
-      if (y < 0 || y >= 65536)
-        continue;
+      int yClamped = std::clamp(y, 0, 65535 - MMBLOCK_SIZE);
 
       float xs = start.x;
       for (int x = blockOff.x; xs < screenRect.right();
            x += MMBLOCK_SIZE, xs += MMBLOCK_SIZE * scale) {
-        if (x < 0 || x >= 65536)
-          continue;
+        int xClamped = std::clamp(x, 0, 65535 - MMBLOCK_SIZE);
 
-        Position blockPos(x, y, currentZ);
+        Position blockPos(xClamped, yClamped, currentZ);
         if (!hasBlock(blockPos))
           continue;
 
-        MinimapBlock &block = getBlock(Position(x, y, currentZ));
+        MinimapBlock &block = getBlock(blockPos);
 
         // Only update if we haven't hit the per-frame limit
         if (blocksUpdatedThisFrame < maxBlockUpdatesPerFrame) {
@@ -369,7 +394,7 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
         }
 
         const TexturePtr &tex = block.getTexture();
-        if (tex) {
+        if (tex && !tex->isEmpty()) {
           // Adjust for padding (20 tiles on Top and Left for large item
           // support) Draw rect must be larger and shifted Top-Left Use floor
           // for position, ceil for size to prevent gaps
@@ -379,14 +404,33 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
           // Apply relative Z-offset centered on the current camera floor
           // This creates the diagonal perspective stack while keeping the
           // active floor centered under the crosshair
-          int zOffset = (currentZ - mapCenter.z) * scale;
+          // Clamp offset so extreme zoom doesn't turn it into huge pixel offsets.
+          int zOffset = std::clamp((int)((currentZ - mapCenter.z) * scale), -2048, 2048);
           destX += zOffset;
           destY += zOffset;
 
+          // Guard: avoid huge destination rects at high zoom that can crash
+          // the GPU draw path.
+          // Also skip blocks that would land completely off the widget at this
+          // scale (e.g. extreme zoom where a block maps to huge pixels far
+          // outside the minimap area).
           int destW = (int)std::ceil(MMBLOCK_SIZE * scale + paddingPixels);
           int destH = (int)std::ceil(MMBLOCK_SIZE * scale + paddingPixels);
+          if (destW > 4096 || destH > 4096)
+            continue;
 
+          // Skip blocks whose draw rect does not intersect the visible area.
+          // This also avoids crashes when the camera is positioned such that
+          // the minimap draw math lands outside valid coordinates.
           Rect dest(destX, destY, destW, destH);
+          if (!screenRect.intersects(dest)) {
+            // Draw at least a blank placeholder rect to avoid a missing block
+            // that can be misinterpreted as a hole and cause UI stress, but
+            // do not attempt to upload/render a texture for it.
+            g_drawQueue->addFilledRect(dest, Color::alpha);
+            continue;
+          }
+
           Rect src(0, 0, tex->getSize().width(), tex->getSize().height());
 
           // Apply floor dimming (brightness reduction)
@@ -404,9 +448,7 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
             // Ensure alpha remains full so we don't see floors underneath or
             // background
             floorColor.setAlpha(1.0f);
-          }
-
-          g_drawQueue->addTexturedRect(dest, tex, src, floorColor);
+          }            g_drawQueue->addTexturedRect(dest, tex, src, floorColor);
         }
       }
     }
@@ -415,13 +457,15 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
   // Draw creature indicators (Party, Guild, PK, etc)
   // Only for current floor (mapCenter.z)
   // Scan creatures for indicators with reduced range for performance
-  if (mapCenter.z >= 0 && mapCenter.z <= Otc::MAX_Z) {
+  // Never allow a negative z here; a bad camera floor (e.g. near a hole)
+  // can otherwise trigger out-of-bounds tile lookups during spectator scan.
+  int safeZ = std::max<int>(0, mapCenter.z);
+  if (safeZ <= Otc::MAX_Z) {
     // Limit scan to visible area + small border
     int rangeX = std::min(12, mapRect.width() / 2 + 3);
     int rangeY = std::min(12, mapRect.height() / 2 + 3);
-
     const std::vector<CreaturePtr> &creatures =
-        g_map.getSpectatorsInRange(mapCenter, false, rangeX, rangeY);
+        g_map.getSpectatorsInRange(Position(mapCenter.x, mapCenter.y, safeZ), false, rangeX, rangeY);
     int creatureDrawCount = 0;
     const int MAX_CREATURE_DRAWS = 50; // Limit to prevent FPS drops
     for (const auto &creature : creatures) {
@@ -430,7 +474,7 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
         continue;
 
       Point tilePoint = getTilePoint(creature->getPosition(), screenRect,
-                                     mapCenter, scale, offsetArg);
+                                     Position(mapCenter.x, mapCenter.y, safeZ), scale, offsetArg);
       if (tilePoint.x == -1)
         continue;
 
@@ -641,6 +685,15 @@ const MinimapTile &Minimap::getTile(const Position &pos) {
     return block.getTile(pos.x - offsetPos.x, pos.y - offsetPos.y);
   }
   return nulltile;
+}
+
+bool Minimap::isTileExplored(const Position &pos) {
+  if (pos.z > Otc::MAX_Z || !hasBlock(pos))
+    return false;
+  MinimapBlock &block = getBlock(pos);
+  Point offsetPos = getBlockOffset(Point(pos.x, pos.y));
+  return block.getTile(pos.x - offsetPos.x, pos.y - offsetPos.y)
+      .hasFlag(MinimapTileWasSeen);
 }
 
 std::pair<MinimapBlock_ptr, MinimapTile>

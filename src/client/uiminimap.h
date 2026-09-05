@@ -32,8 +32,8 @@ public:
 
   void drawSelf(Fw::DrawPane drawPane);
 
-  bool zoomIn() { return setZoom(m_zoom + 1); }
-  bool zoomOut() { return setZoom(m_zoom - 1); }
+  bool zoomIn() { return m_zoom < m_maxZoom ? setZoom(m_zoom + 1) : false; }
+  bool zoomOut() { return m_zoom > m_minZoom ? setZoom(m_zoom - 1) : false; }
 
   void setSecondaryView(bool secondary) { m_secondaryView = secondary; }
   bool isSecondaryView() { return m_secondaryView; }

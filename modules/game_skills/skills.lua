@@ -75,7 +75,7 @@ end
 function resetSkillColor(id)
   local skill = skillsWindow:recursiveGetChildById(id)
   local widget = skill:getChildById('value')
-  widget:setColor('#8892a4')
+  widget:setColor('#bbbbbb')
 end
 
 function setSkillBase(id, value, baseValue)
@@ -86,13 +86,13 @@ function setSkillBase(id, value, baseValue)
   local widget = skill:getChildById('value')
 
   if value > baseValue then
-    widget:setColor('#34d399') -- green
+    widget:setColor('#008b00') -- green
     skill:setTooltip(baseValue .. ' +' .. (value - baseValue))
   elseif value < baseValue then
-    widget:setColor('#f87171') -- red
+    widget:setColor('#b22222') -- red
     skill:setTooltip(baseValue .. ' ' .. (value - baseValue))
   else
-    widget:setColor('#8892a4') -- default
+    widget:setColor('#bbbbbb') -- default
     skill:removeTooltip()
   end
 end

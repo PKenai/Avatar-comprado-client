@@ -6,7 +6,7 @@ MagicMeterRow < UIWidget
     id: nameLabel
     font: verdana-11px-monochrome
     text-auto-resize: true
-    color: #8892a4
+    color: white
     anchors.left: parent.left
     anchors.top: parent.top
     anchors.bottom: parent.bottom
@@ -16,14 +16,14 @@ MagicMeterRow < UIWidget
     font: verdana-11px-monochrome
     text-align: topright
     text-auto-resize: true
-    color: #e8ecf1
+    color: white
     anchors.right: parent.right
     anchors.top: parent.top
     anchors.bottom: parent.bottom
 
   UIProgressBar
     id: progressBar
-    background-color: #1a2235
+    background-color: #ffffffaa
     percent: 0
     height: 5
     margin-top: 16

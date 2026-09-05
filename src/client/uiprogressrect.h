@@ -26,6 +26,7 @@
 #include "declarations.h"
 #include <framework/ui/uiwidget.h>
 #include "item.h"
+#include <algorithm>
 
 class UIProgressRect : public UIWidget
 {
@@ -36,10 +37,27 @@ public:
     void setPercent(float percent);
     float getPercent() { return m_percent; }
 
+    // Modo "relogio quadrado": desenha apenas uma linha de contorno ao longo
+    // da borda retangular da skill (meio vazio), percorrendo o perimetro no
+    // sentido horario conforme o percent (100 = borda inteira ate 0 = vazio).
+    void setRing(bool ring) { m_ring = ring; }
+    void setRingThickness(int thickness) { m_ringThickness = std::max(1, thickness); }
+
+    // Cooldown nativo FLUIDO: o anel drena sozinho por tempo, avaliado a cada
+    // frame no draw (nao depende dos updates de 100ms do Lua). Passar o tempo
+    // total em ms; zera/limpa sozinho ao terminar.
+    void setAutoCountdown(int totalMs);
+    void clearAutoCountdown() { m_autoTotalMs = 0; }
+
 protected:
     void onStyleApply(const std::string& styleName, const OTMLNodePtr& styleNode);
+    void drawBorderSweep(const Rect& drawRect, float percent);
 
     float m_percent;
+    ticks_t m_autoStartMs = 0;
+    ticks_t m_autoTotalMs = 0;
+    bool m_ring = false;
+    int m_ringThickness = 3;
 };
 
 #endif

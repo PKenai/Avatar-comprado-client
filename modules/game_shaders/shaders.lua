@@ -37,6 +37,7 @@ function init()
   ProtocolGame.registerExtendedOpcode(111, onTierOpcode)
   connect(g_game, { onGameEnd = onGameEndClearShader })
   hookUIItemForTier()
+  g_things.clearItemShaders()
   connect(Creature, {
     onAppear = onCreatureAppearSpiritual,
     onDisappear = onCreatureDisappearSpiritual,
@@ -92,22 +93,10 @@ function createTooltipTierShaders()
 end
 
 function onTierOpcode(protocol, opcode, buffer)
-  if not buffer or buffer == "" then return end
-  local parts = string.split(buffer, ",")
-  local action = parts[1]
-  if action == "set" then
-    local clientId = tonumber(parts[2])
-    local tier = tonumber(parts[3]) or 0
-    if clientId and clientId > 0 then
-      if tier > 0 and tier <= 10 then
-        g_things.setItemShader(clientId, "item_tier_" .. tier)
-      else
-        g_things.setItemShader(clientId, "")
-      end
-    end
-  elseif action == "clear" then
-    g_things.clearItemShaders()
-  end
+  -- Tier shaders are handled per-item instance (Item:getTier() / m_tier).
+  -- Calling g_things.setItemShader(clientId, ...) applies the shader to ALL items of that ID globally,
+  -- which causes items without tier (such as in NPC shops) to incorrectly show the tier shader.
+  g_things.clearItemShaders()
 end
 
 function hookUIItemForTier()

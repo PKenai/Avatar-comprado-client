@@ -122,12 +122,18 @@ bool UIMinimap::setZoom(int zoom) {
   if (zoom < m_minZoom || zoom > m_maxZoom)
     return false;
 
+  // Guard: prevent scale from underflowing to infinity at extreme zoom
+  // (was causing GPU crash in drawTexturedRect when scale >> 1).
+  int absZoom = std::abs(zoom);
+  if (absZoom > 12)
+    return false;
+
   int oldZoom = m_zoom;
   m_zoom = zoom;
   if (m_zoom < 0)
-    m_scale = 1.0f / (1 << std::abs(zoom));
+    m_scale = 1.0f / (1 << absZoom);
   else if (m_zoom > 0)
-    m_scale = 1.0f * (1 << std::abs(zoom));
+    m_scale = 1.0f * (1 << absZoom);
   else
     m_scale = 1;
   m_layout->update();
@@ -147,16 +153,16 @@ bool UIMinimap::floorUp() {
   Position pos = getCameraPosition();
   if (!pos.up())
     return false;
-  setCameraPosition(pos);
-  return true;
+  // Guard: don't allow risky floor transitions directly from the minimap.
+  // Floor changes should be driven by server messages only.
+  return false;
 }
 
 bool UIMinimap::floorDown() {
   Position pos = getCameraPosition();
   if (!pos.down())
     return false;
-  setCameraPosition(pos);
-  return true;
+  return false;
 }
 
 Point UIMinimap::getTilePoint(const Position &pos) {

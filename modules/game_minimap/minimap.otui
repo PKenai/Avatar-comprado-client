@@ -22,13 +22,12 @@ MiniWindow
     anchors.right: minimapHDCheck.left
     margin-right: 3
     size: 14 14
-    color: #8892a4
 
   CheckBox
     id: minimapHDCheck
     !text: tr('HDMAP')
     font: verdana-11px-rounded
-    color: #8892a4
+    color: white
     anchors.top: minimizeButton.top
     anchors.right: minimizeButton.left
     margin-right: 3
@@ -38,4 +37,3 @@ MiniWindow
     Minimap
       id: minimap
       anchors.fill: parent
-      background-color: #0a0e17
