@@ -374,6 +374,12 @@ function onBaseMagicLevelChange(localPlayer, baseMagicLevel)
 end
 
 function onSkillChange(localPlayer, id, level, percent)
+  -- Skills removidas do painel (club/sword/axe/distance) nao tem widget:
+  -- ignora os pacotes delas em vez de quebrar na hora do refresh.
+  if not skillsWindow:recursiveGetChildById('skillId' .. id) then
+    return
+  end
+
   setSkillValue('skillId' .. id, level)
   setSkillPercent('skillId' .. id, percent, tr('You have %s percent to go', 100 - percent))
 
@@ -381,5 +387,9 @@ function onSkillChange(localPlayer, id, level, percent)
 end
 
 function onBaseSkillChange(localPlayer, id, baseLevel)
+  if not skillsWindow:recursiveGetChildById('skillId' .. id) then
+    return
+  end
+
   setSkillBase('skillId'..id, localPlayer:getSkillLevel(id), baseLevel)
 end
