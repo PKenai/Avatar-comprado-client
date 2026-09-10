@@ -29,7 +29,7 @@
 
 AnimatedText::AnimatedText()
 {
-    m_cachedText.setFont(g_fonts.getFont("verdana-11px-rounded"));
+    m_cachedText.setFont(g_fonts.getFont("baby-12"));
     m_cachedText.setAlign(Fw::AlignLeft);
 }
 

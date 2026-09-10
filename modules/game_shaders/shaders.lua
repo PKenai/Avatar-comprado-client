@@ -33,6 +33,8 @@ function init()
     g_shaders.createShader("healthbar_bg_" .. i, "/shaders/map_default_vertex", "/shaders/healthbar_bg_" .. i)
   end
 
+  g_shaders.createShader("talent_border_glow", "/shaders/map_default_vertex", "/shaders/talent_border_glow")
+
   ProtocolGame.registerExtendedOpcode(ExtendedIds.MapShader, onMapShader)
   ProtocolGame.registerExtendedOpcode(111, onTierOpcode)
   connect(g_game, { onGameEnd = onGameEndClearShader })

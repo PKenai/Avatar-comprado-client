@@ -1,9 +1,10 @@
 effects:
+items:
 creatures:
   1215:
-    outfit-displacement: North: 0 0, East: 0 0, South: 0 0, West: 0 0
+    outfit-displacement: West: 0 0, North: 0 0, East: 0 0, South: 0 0
   1279:
-    outfit-displacement: North: 64 56, East: 32 43, South: 52 29, West: 62 45
+    outfit-displacement: West: 62 45, North: 64 56, East: 32 43, South: 52 29
   1287:
     outfit-displacement: opacity: 1.0, North: 58 52, East: 53 48, South: 59 56, West: 56 51
   1302:
@@ -17,5 +18,4 @@ creatures:
   1345:
     outfit-displacement: opacity: 1.0, North: 7 0, East: 0 19, South: 7 0, West: 0 17
   1347:
-    outfit-displacement: North: 0 0, East: 0 0, South: 0 0, West: 0 0
-items:
+    outfit-displacement: West: 0 0, North: 0 0, East: 0 0, South: 0 0

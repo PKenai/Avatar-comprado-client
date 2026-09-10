@@ -26,10 +26,9 @@ local creatureAgeCounter = 1
 
 function init()  
   g_ui.importStyle('battlebutton')
-  battleButton = modules.client_topmenu.addRightGameToggleButton('battleButton', tr('Battle (Ctrl+B)'), '/images/topbuttons/battle', toggle)
+  battleButton = modules.client_topmenu.addRightGameToggleButton('battleButton', tr('Battle'), '/images/topbuttons/battle', toggle)
   battleButton:setOn(true)
   battleWindow = g_ui.loadUI('battle', modules.game_interface.getRightPanel())
-  g_keyboard.bindKeyDown('Ctrl+B', toggle)
 
   -- this disables scrollbar auto hiding
   local scrollbar = battleWindow:getChildById('miniwindowScrollBar')
@@ -92,7 +91,6 @@ function terminate()
     return
   end
   
-  g_keyboard.unbindKeyDown('Ctrl+B')
   battleButtonsByCreaturesList = {}
   battleButton:destroy()
   battleWindow:destroy()
