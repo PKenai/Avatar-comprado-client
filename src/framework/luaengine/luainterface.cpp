@@ -821,15 +821,23 @@ void LuaInterface::collectGarbage()
 
 void LuaInterface::loadBuffer(const std::string& buffer, const std::string& source)
 {
+    // Scripts sao carregados como texto; se o arquivo foi salvo em UTF-8 os
+    // acentos viram mojibake na tela (e podem ate quebrar o parser). Bytecode
+    // compilado comeca com o magic \x1bLua e nao pode ser tocado.
+    std::string script = buffer;
+    const bool isByteCode = script.size() >= 4 && script[0] == '\x1b' && script.compare(1, 3, "Lua") == 0;
+    if(!isByteCode)
+        stdext::ensure_latin1(script);
+
 #ifdef FREE_VERSION
-    for (auto& c : buffer) {
+    for (auto& c : script) {
         if ((uint8_t)c < 8) {
             throw LuaException("Compiled lua files are not allowed in free version", 0);
         }
     }
 #endif
     // loads lua buffer
-    int ret = luaL_loadbuffer(L, buffer.c_str(), buffer.length(), source.c_str());
+    int ret = luaL_loadbuffer(L, script.c_str(), script.length(), source.c_str());
     if(ret != 0)
         throw LuaException(popString(), 0);
 }

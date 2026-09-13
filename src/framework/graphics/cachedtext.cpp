@@ -96,9 +96,14 @@ void CachedText::setColoredText(const std::vector<std::string>& texts)
     for (size_t i = 0, p = 0; i < texts.size() - 1; i += 2) {
         Color c(Color::white);
         stdext::cast<Color>(texts[i + 1], c);
-        m_text += texts[i];
-        for (auto& c : texts[i]) {
-            if ((uint8)c >= 32)
+
+        // normaliza antes de contar os bytes, senao os offsets de cor ficariam
+        // deslocados em relacao ao texto desenhado
+        std::string fragment = texts[i];
+        stdext::ensure_latin1(fragment);
+        m_text += fragment;
+        for (auto& ch : fragment) {
+            if ((uint8)ch >= 32)
                 p += 1;
         }
         m_textColors.push_back(std::make_pair(p, c));

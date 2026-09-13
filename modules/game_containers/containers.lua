@@ -310,10 +310,10 @@ function init()
           data[#data + 1] = action[i]
         end
         local joined = table.concat(data, ">")
-        local list = {}
-        local fn = loadstring("return " .. joined)
-        if fn then
-          list = fn() or {}
+        -- payload do servidor: nunca rodar com o ambiente global (corelib/util.lua)
+        local list = safeLuaDeserialize(joined)
+        if type(list) ~= 'table' then
+          list = {}
         end
         renderDepotResults(list, tonumber(action[2]) or #list)
       end

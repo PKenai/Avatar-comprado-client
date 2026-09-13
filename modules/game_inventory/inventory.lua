@@ -96,6 +96,7 @@ InventorySlotStyles = {
 inventoryWindow = nil
 inventoryPanel = nil
 inventoryButton = nil
+inventorySideButton = nil
 
 
 
@@ -107,9 +108,9 @@ function init()
 
   connect(g_game, { onGameStart = refresh })
 
-  g_keyboard.bindKeyDown('Ctrl+I', toggle)
+  -- Ctrl+I removido (batia com o Inspect Creature). O botao continua abrindo.
 
-  inventoryButton = modules.client_topmenu.addRightGameToggleButton('inventoryButton', tr('Inventory') .. ' (Ctrl+I)', '/images/topbuttons/inventory', toggle)
+  inventoryButton = modules.client_topmenu.addRightGameToggleButton('inventoryButton', tr('Inventory'), '/images/topbuttons/inventory', toggle)
   inventoryButton:setOn(true)
 
   inventoryWindow = g_ui.loadUI('inventory', modules.game_interface.getRightPanel())
@@ -122,6 +123,25 @@ function init()
   end
 
   momoSlot = inventoryPanel:getChildById('momoSlot')
+
+  -- Botao lateral esquerdo (imagem custom) que abre/fecha a mochila equipada.
+  -- O estilo fica em inventory_button.otui deste mesmo modulo.
+  -- O pai e' o gameRootPanel para a ancora 'consolePanel.top' funcionar
+  -- (ancoras so enxergam irmaos, ou seja, filhos do mesmo pai).
+  local okSideStyle = pcall(function() g_ui.importStyle('inventory_button') end)
+  if okSideStyle then
+    -- pai = gameRootPanel, para poder ancorar no topo do chat (consolePanel)
+    local sideParent = rootWidget
+    local okPanel, rootPanel = pcall(function() return modules.game_interface.getRootPanel() end)
+    if okPanel and rootPanel then
+      sideParent = rootPanel
+    end
+    local okCreate, sideButton = pcall(function() return g_ui.createWidget('InventorySideButton', sideParent) end)
+    if okCreate and sideButton then
+      inventorySideButton = sideButton
+      inventorySideButton:hide()
+    end
+  end
 
 
   refresh()
@@ -242,12 +262,14 @@ function terminate()
 
   disconnect(g_game, { onGameStart = refresh })
 
-  g_keyboard.unbindKeyDown('Ctrl+I')
-
   cameraSlot = nil
   momoSlot = nil
   inventoryWindow:destroy()
   inventoryButton:destroy()
+  if inventorySideButton then
+    inventorySideButton:destroy()
+    inventorySideButton = nil
+  end
 
   fightModeRadioGroup:destroy()
 
@@ -281,6 +303,29 @@ function toggle()
     inventoryWindow:open()
     inventoryButton:setOn(true)
   end
+end
+
+-- Abre a mochila (backpack) equipada no slot das costas. Se ela ja estiver
+-- aberta, fecha. Usado pelo botao lateral esquerdo.
+function toggleBackpack()
+  if not g_game.isOnline() then return end
+
+  local player = g_game.getLocalPlayer()
+  if not player then return end
+
+  local backpack = player:getInventoryItem(InventorySlotBack)
+  if not backpack then return end
+  if not backpack:isContainer() then return end
+
+  for _, container in pairs(g_game.getContainers()) do
+    local containerItem = container and container:getContainerItem()
+    if containerItem and containerItem:getId() == backpack:getId() then
+      g_game.close(container)
+      return
+    end
+  end
+
+  g_game.open(backpack)
 end
 
 function onMiniWindowClose()
@@ -373,6 +418,10 @@ function onInventoryChange(player, slot, item, oldItem)
 end
 
 function online()
+  if inventorySideButton then
+    inventorySideButton:show()
+    inventorySideButton:raise()
+  end
   local player = g_game.getLocalPlayer()
   if player then
     local char = g_game.getCharacterName()
@@ -401,6 +450,9 @@ function online()
 end
 
 function offline()
+  if inventorySideButton then
+    inventorySideButton:hide()
+  end
   -- limpa o slot da camera e do momo pouch ao sair do jogo, para nao ficar
   -- "fantasma" (item do personagem anterior) ao trocar de personagem
   updateCameraSlot(nil)

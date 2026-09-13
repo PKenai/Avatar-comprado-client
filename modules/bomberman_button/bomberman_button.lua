@@ -51,6 +51,10 @@ local function onExtendedOpcode(protocol, opcode, buffer)
 end
 
 function init()
+  -- registerExtendedOpcode e fatal quando o opcode ja esta tomado (um reload de
+  -- module pode rodar o init sem passar pelo terminate anterior). Desregistrar
+  -- antes deixa a operacao idempotente.
+  pcall(function() ProtocolGame.unregisterExtendedOpcode(OPCODE_SHOW) end)
   ProtocolGame.registerExtendedOpcode(OPCODE_SHOW, onExtendedOpcode)
 end
 

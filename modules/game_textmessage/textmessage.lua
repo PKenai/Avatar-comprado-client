@@ -2,7 +2,7 @@ dofile("/modules/gamelib/opcodes.lua")
 avatarEdit = true
 
 -- Colocar o [nome do item] = cor 
--- Caso a cor do item nao seja definida aqui, o padrão é ser verde clarinho.
+-- Caso a cor do item nao seja definida aqui, o padrï¿½o ï¿½ ser verde clarinho.
 
 ItemsColor = {
   ['Fire Stone'] = '#ff0000',
@@ -59,6 +59,8 @@ MessageTypes = {
   [MessageModes.TutorialHint] = MessageSettings.centerWhite,
   [MessageModes.Market] = MessageSettings.centerWhite,
   [MessageModes.BeyondLast] = MessageSettings.centerWhite,
+  [MessageModes.Mana] = MessageSettings.centerWhite,
+  [MessageModes.GameHighlight] = MessageSettings.centerWhite,
   [46] = MessageSettings.none,  -- deprecated MessageBlue
   [MessageModes.Report] = MessageSettings.consoleRed,
   [MessageModes.HotkeyUse] = MessageSettings.centerGreen,
@@ -108,8 +110,8 @@ function displayMessage(mode, text)
   if not g_game.isOnline() then return end
 --print(text)
 --print(mode)
-  --sistema mirto: folds/água usam mode Look com #m#/#w#/#v#/#j#
-  --não bloquear qualquer "#" — isso apagava look de items com descrição colorida/custom
+  --sistema mirto: folds/ï¿½gua usam mode Look com #m#/#w#/#v#/#j#
+  --nï¿½o bloquear qualquer "#" ï¿½ isso apagava look de items com descriï¿½ï¿½o colorida/custom
   if mode == 20 then
     if modules.game_folds.checkIsFoldMsg(text) or modules.game_inventory.checkIsWaterMsg(text) then
       return

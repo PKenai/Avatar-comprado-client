@@ -70,6 +70,8 @@ public:
     void drawBottom(const Point& dest, LightView* lightView = nullptr);
     void drawCreatures(const Point& dest, LightView* lightView = nullptr);
     void drawTop(const Point& dest, LightView* lightView = nullptr);
+    // magic effects are drawn in their own pass, on top of the whole floor
+    void drawEffects(const Point& dest, LightView* lightView = nullptr);
     void drawTexts(Point dest);
     void drawWidget(Point dest);
 

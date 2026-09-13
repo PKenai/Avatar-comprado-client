@@ -1,4 +1,4 @@
-﻿-- ============================================================================
+-- ============================================================================
 --  Market - Client module (game_market)
 --  Opcode 230  <->  server data/lib/market_lib.lua
 -- ============================================================================
@@ -99,14 +99,12 @@ function Market.init()
         for i = 3, #action do
           data[#data + 1] = action[i]
         end
-        local list = {}
-        local fn, cerr = loadstring("return " .. table.concat(data, ">"))
-        if fn then
-          list = fn() or {}
-        else
-          print("[market] loadstring error: " .. tostring(cerr))
+        -- payload do servidor: nunca rodar com o ambiente global (corelib/util.lua)
+        local list, cerr = safeLuaDeserialize(table.concat(data, ">"))
+        if cerr then
+          print("[market] payload error: " .. tostring(cerr))
         end
-        Market.createList(list)
+        Market.createList(list or {})
       elseif action[1] == "details" then
         displayInfoBox('Market', action[2] or "")
       end
@@ -147,9 +145,12 @@ function Market.terminate()
     onGameEnd   = Market.offline
   })
   pcall(function() ProtocolGame.unregisterExtendedOpcode(mOpcode) end)
-  marketButton:destroy()
-  marketWindow:destroy()
-  marketWindowAdd:destroy()
+  -- o botao da topbar foi substituido pelo botao de Shop: marketButton nunca e
+  -- criado (a linha antiga esta comentada acima), entao indexar direto aqui
+  -- abortava o terminate() inteiro a cada unload/saida (market.lua:150).
+  if marketButton then marketButton:destroy() end
+  if marketWindow then marketWindow:destroy() marketWindow = nil end
+  if marketWindowAdd then marketWindowAdd:destroy() marketWindowAdd = nil end
 end
 
 function Market.online()

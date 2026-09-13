@@ -1,8 +1,13 @@
 local outfitScales = {
+    ["fierce bear"] = 0.6,
+    ["steel shell centipede"] = 0.6,
+    ["wild wolf"] = 0.8,
+    ["vacaceronte"] = 0.6,
+    ["desert crocodile"] = 0.6,
+    ["giant snail"] = 0.6,
     ["urso feroz"] = 0.6,
     ["centopeia carapaca de aco"] = 0.6,
     ["lobo selvagem"] = 0.8,
-    ["vacaceronte"] = 0.6,
     ["crocodilo do deserto"] = 0.6,
     ["caracol gigante"] = 0.6,
 }

@@ -7,15 +7,15 @@
 --   quando a magia casta de verdade e entra em cooldown.
 --
 --   -> Magia entrou em cooldown -> SOM.
---   -> Magia N√O castou (cooldown ativo, mana, nÌvel, sem alvo) -> nada.
+--   -> Magia NùO castou (cooldown ativo, mana, nùvel, sem alvo) -> nada.
 --   -> Clicou mas falhou -> nada.
 --
--- O som N√O toca no clique do bot„o e N√O usa o eco de fala (mode 44),
+-- O som NùO toca no clique do botùo e NùO usa o eco de fala (mode 44),
 -- porque este servidor ecoa o nome mesmo quando o cast falha.
 --
 -- As tentativas locais ficam num MAPA (nome -> tempo) para casar o id do
--- cooldown recebido com a magia que acabamos de tentar lanÁar. Tentativas
--- expiram sozinhas apÛs CAST_CONFIRM_MS.
+-- cooldown recebido com a magia que acabamos de tentar lanùar. Tentativas
+-- expiram sozinhas apùs CAST_CONFIRM_MS.
 
 local SOUNDS_DIR = '/data/sounds'
 local CAST_CONFIRM_MS = 2500   -- janela p/ o servidor confirmar o cooldown
@@ -31,17 +31,17 @@ local recentCasts = {}   -- nome normalizado -> { name = original, time = ms }
 local lastPlayedName = ''
 local lastPlayedTime = 0
 
--- normaliza um nome para comparaÁ„o (min˙sculas, sem espaÁos/pontuaÁ„o/acentos)
+-- normaliza um nome para comparaùùo (minùsculas, sem espaùos/pontuaùùo/acentos)
 local function normalizeName(name)
   if not name then return '' end
   name = name:lower()
-  name = name:gsub('[‡·‚„‰Â]', 'a'):gsub('[ËÈÍÎ]', 'e'):gsub('[ÏÌÓÔ]', 'i')
-  name = name:gsub('[ÚÛÙıˆ]', 'o'):gsub('[˘˙˚¸]', 'u'):gsub('[Á]', 'c')
+  name = name:gsub('[ùùùùùù]', 'a'):gsub('[ùùùù]', 'e'):gsub('[ùùùù]', 'i')
+  name = name:gsub('[ùùùùù]', 'o'):gsub('[ùùùù]', 'u'):gsub('[ù]', 'c')
   name = name:gsub('[^%a%d]', '')
   return name
 end
 
--- varre recursivamente data/sounds atr·s de arquivos de ·udio (.ogg)
+-- varre recursivamente data/sounds atrùs de arquivos de ùudio (.ogg)
 local function scanSounds(dir)
   if not g_resources.directoryExists(dir) then return end
   local entries = g_resources.listDirectoryFiles(dir, true)
@@ -70,7 +70,7 @@ local function getVolume()
   return math.max(0, math.min(100, v))
 end
 
--- toca o som de uma magia pelo nome (com dedup r·pido para n„o tocar 2x)
+-- toca o som de uma magia pelo nome (com dedup rùpido para nùo tocar 2x)
 local function playSpellSound(spellName)
   if not g_sounds or not g_sounds.isAudioEnabled() then return end
   if not isEnabled() then return end
@@ -81,7 +81,7 @@ local function playSpellSound(spellName)
   local volume = getVolume()
   if volume <= 0 then return end
 
-  -- dedup: mesma magia tocada h· menos de 600ms (evita duplicar)
+  -- dedup: mesma magia tocada hù menos de 600ms (evita duplicar)
   local norm = normalizeName(spellName)
   if norm == lastPlayedName and g_clock.millis() - lastPlayedTime < 600 then return end
 
@@ -99,7 +99,7 @@ local function spellNameById(id)
   return list[id].name
 end
 
--- a magia est· em cooldown agora? (consulta o estado que as folds mantÍm)
+-- a magia estù em cooldown agora? (consulta o estado que as folds mantùm)
 local function isSpellOnCooldown(name)
   local folds = modules.game_folds
   if not folds or not folds.spellInfos or not folds.infos then return false end
@@ -127,7 +127,7 @@ local function parseFoldCooldowns(text)
   return result
 end
 
--- remove tentativas que j· expiraram (mantÈm o mapa pequeno)
+-- remove tentativas que jù expiraram (mantùm o mapa pequeno)
 local function pruneCasts()
   local t = g_clock.millis()
   for norm, entry in pairs(recentCasts) do
@@ -137,7 +137,7 @@ local function pruneCasts()
   end
 end
 
--- CONFIRMA«√O DE COOLDOWN: o servidor sÛ envia #m# com delay > 0 quando a
+-- CONFIRMAùùO DE COOLDOWN: o servidor sù envia #m# com delay > 0 quando a
 -- magia CASTA e ENTRA EM COOLDOWN. Casou com uma tentativa recente -> som.
 local function onTextMessage(mode, text)
   if mode ~= FOLD_MSG_MODE then return end
@@ -168,8 +168,8 @@ local function onTextMessage(mode, text)
   end
 end
 
--- intercepta o cast local SEM tocar som: sÛ registra a tentativa quando a
--- magia tem som E n„o est· em cooldown (clicar em cooldown nunca soa).
+-- intercepta o cast local SEM tocar som: sù registra a tentativa quando a
+-- magia tem som E nùo estù em cooldown (clicar em cooldown nunca soa).
 local function onLocalTalk(text, ...)
   if type(text) == 'string' then
     local norm = normalizeName(text)
@@ -187,7 +187,7 @@ function init()
 
   scanSounds(SOUNDS_DIR)
 
-  -- prÈ-carrega os sons pequenos para tocar sem delay
+  -- prù-carrega os sons pequenos para tocar sem delay
   if g_sounds and g_sounds.preload then
     for _, path in pairs(sounds) do
       pcall(function() g_sounds.preload(path) end)
@@ -202,21 +202,34 @@ function init()
 
   connect(g_game, { onTextMessage = onTextMessage })
 
-  -- painel de opÁıes (volume / ativar) dentro da janela de Options
+  -- painel de opcoes (volume / ativar) dentro da janela de Options
   if modules.client_options and modules.client_options.addTab then
     optionsPanel = g_ui.loadUI('spellsound')
     if optionsPanel then
-      optionsVolumeLabel = optionsPanel:getChildById('spellsoundVolumeLabel')
-      optionsVolumeBar = optionsPanel:getChildById('spellsoundVolume')
+      local volumeBg = optionsPanel:getChildById('spellsoundVolumeBG')
+      optionsVolumeLabel = volumeBg and volumeBg:getChildById('spellsoundVolumeLabelBG')
+      optionsVolumeBar = volumeBg and volumeBg:getChildById('spellsoundVolume')
       local enabledBox = optionsPanel:getChildById('spellsoundEnabled')
-      enabledBox:setChecked(isEnabled())
-      optionsVolumeBar:setValue(getVolume())
-      optionsVolumeLabel:setText(tr('Spell sound volume: %d', getVolume()))
-      optionsVolumeBar.onValueChange = function(self, value)
-        modules.client_options.setOption('spellsoundVolume', value)
-        optionsVolumeLabel:setText(tr('Spell sound volume: %d', value))
+      if enabledBox then
+        enabledBox:setChecked(isEnabled())
       end
-      modules.client_options.addTab(tr('Spell Sounds'), optionsPanel, '/images/optionstab/audio')
+      if optionsVolumeBar then
+        optionsVolumeBar:setValue(getVolume())
+        optionsVolumeBar.onValueChange = function(self, value)
+          g_settings.set('spellsoundVolume', value)
+          if optionsVolumeLabel then
+            optionsVolumeLabel:setText(tr('%d', value))
+          end
+          local active = self:getChildById('activeScroll')
+          if active then
+            active:setWidth(math.max(0, math.min(200, math.floor((value * 200) / 100))))
+          end
+        end
+      end
+      if optionsVolumeLabel then
+        optionsVolumeLabel:setText(tr('%d', getVolume()))
+      end
+      modules.client_options.addTab(tr('Spell Sounds'), optionsPanel, '/modules/client_options/settings/iconpanel')
     end
   end
 end
@@ -230,6 +243,6 @@ function terminate()
   for norm in pairs(recentCasts) do recentCasts[norm] = nil end
 
   disconnect(g_game, { onTextMessage = onTextMessage })
-  -- o painel de opÁıes È mantido vivo para n„o quebrar a janela de Options
-  -- se o mÛdulo for recarregado (o tab do client_options o referencia)
+  -- o painel de opùùes ù mantido vivo para nùo quebrar a janela de Options
+  -- se o mùdulo for recarregado (o tab do client_options o referencia)
 end

@@ -77,7 +77,14 @@ void Effect::draw(const Point& dest, int offsetX, int offsetY, bool animate, Lig
 
     Point effectDisplacement = rawGetThingType()->getEffectDisplacement();
 
-    rawGetThingType()->draw(dest + effectDisplacement, 0, xPattern, yPattern, 0, m_animationPhase, Color::white, lightView);
+    if(m_sourceCategory < 0)
+        m_sourceCategory = g_game.classifyEffectSource(m_sourceId, m_position);
+
+    float opacity = g_game.getEffectOpacity(m_sourceCategory);
+    if(opacity <= 0.01f)
+        return;
+
+    rawGetThingType()->draw(dest + effectDisplacement, 0, xPattern, yPattern, 0, m_animationPhase, Color(1.0f, 1.0f, 1.0f, opacity), lightView);
 }
 
 void Effect::onAppear()

@@ -164,6 +164,32 @@ bool is_valid_utf8(const std::string& src)
     return true;
 }
 
+void ensure_latin1(std::string& text)
+{
+    if(text.empty())
+        return;
+
+    // BOM UTF-8: alem de virar lixo na tela, ele quebra o parser de Lua
+    // (byte 0xEF no inicio do chunk) e o de OTML
+    if(text.size() >= 3 && (uchar)text[0] == 0xEF && (uchar)text[1] == 0xBB && (uchar)text[2] == 0xBF)
+        text.erase(0, 3);
+
+    bool hasHighByte = false;
+    for(size_t i = 0; i < text.size(); ++i) {
+        uchar c = text[i];
+        if(c >= 0x80)
+            hasHighByte = true;
+        else if(c < 0x20 && c != '\t' && c != '\n' && c != '\r')
+            return; // conteudo binario (bytecode Lua, buffer comprimido): nao mexer
+    }
+
+    // ASCII puro, ou texto que ja esta em Latin-1 (nesse caso o UTF-8 e invalido)
+    if(!hasHighByte || !is_valid_utf8(text))
+        return;
+
+    text = utf8_to_latin1(text);
+}
+
 std::string utf8_to_latin1(const std::string& src)
 {
     std::string out;

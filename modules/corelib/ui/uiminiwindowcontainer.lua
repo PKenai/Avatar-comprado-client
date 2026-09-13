@@ -17,6 +17,10 @@ end
 -- TODO: try to resize another widget?
 -- TODO: try to find another panel?
 function UIMiniWindowContainer:fitAll(noRemoveChild)
+  if self.fitAllDisabled then
+    return
+  end
+
   if not self:isVisible() then
     return
   end
@@ -88,23 +92,6 @@ end
 
 function UIMiniWindowContainer:onDrop(widget, mousePos)
   if widget:getClassName() == 'UIMiniWindow' then
-    local oldParent = widget:getParent()
-    if oldParent == self then
-      return true
-    end
-
-    if oldParent then
-      oldParent:removeChild(widget)
-    end
-
-    if widget.movedWidget then
-      local index = self:getChildIndex(widget.movedWidget)
-      self:insertChild(index + widget.movedIndex, widget)
-    else
-      self:addChild(widget)
-    end
-
-    self:fitAll(widget)
     return true
   end
 end

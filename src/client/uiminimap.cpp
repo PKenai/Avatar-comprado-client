@@ -32,6 +32,8 @@
 #include "tile.h"
 
 #include "uimapanchorlayout.h"
+#include <framework/graphics/shadermanager.h>
+#include <cmath>
 #include <framework/graphics/painter.h>
 #include <framework/graphics/drawqueue.h>
 
@@ -45,6 +47,62 @@ UIMinimap::UIMinimap() {
   m_visualCameraY = 0.0f;
   m_layout =
       UIMapAnchorLayoutPtr(new UIMapAnchorLayout(static_self_cast<UIWidget>()));
+}
+
+void UIMinimap::setLensStrength(float strength) {
+  m_lensStrength = std::max(0.0f, std::min(1.0f, strength));
+}
+
+// The lens shader magnifies the center of the widget and squeezes the borders,
+// so anything that is still measured in the unmodified widget space (mouse
+// clicks) has to be pulled back towards the center before being converted to a
+// map position: the shader shows, at the point p, the pixel that is at
+// center + (p - center) * factor. This is the exact same curve, and the strength
+// must match LENS_STRENGTH in data/shaders/map_lens_fragment.frag.
+Point UIMinimap::lensAdjustPoint(const Point &point) {
+  const Rect rect = getPaddingRect();
+  if (m_lensStrength <= 0.0f || rect.isEmpty())
+    return point;
+
+  const Point center = rect.center();
+  const float halfW = std::max(1.0f, rect.width() / 2.0f);
+  const float halfH = std::max(1.0f, rect.height() / 2.0f);
+  const float dx = (float)(point.x - center.x);
+  const float dy = (float)(point.y - center.y);
+  const float radius = std::sqrt(dx * dx + dy * dy);
+  if (radius <= 0.0001f)
+    return point;
+
+  // Single divisor (the corner radius), same as the shader: using the distance
+  // to the border here would make the correction depend on the axis.
+  const float maxRadius =
+      std::max(std::sqrt(halfW * halfW + halfH * halfH), 1.0f);
+  const float t = std::min(1.0f, radius / maxRadius);
+  const float factor = 1.0f - m_lensStrength * (1.0f - t);
+
+  return Point(center.x + (int)std::lround(dx * factor),
+               center.y + (int)std::lround(dy * factor));
+}
+
+void UIMinimap::draw(const Rect &visibleRect, Fw::DrawPane drawPane) {
+  // Sem shader (nome errado ou falha de compilacao) desenha do jeito normal: o
+  // caminho do framebuffer nao desenha nada sem shader, e o mapa sumiria.
+  if (m_shader.empty() || drawPane != Fw::ForegroundPane ||
+      !g_shaders.getShader(m_shader)) {
+    UIWidget::draw(visibleRect, drawPane);
+    return;
+  }
+
+  // Everything this widget draws (map, cross, marks) goes to its own queue,
+  // which is later replayed into an offscreen buffer and warped by the shader.
+  std::shared_ptr<DrawQueue> queue = std::make_shared<DrawQueue>();
+  std::shared_ptr<DrawQueue> previousQueue = g_drawQueue;
+  g_drawQueue = queue;
+  UIWidget::draw(visibleRect, drawPane);
+  g_drawQueue = previousQueue;
+
+  g_drawQueue->add(
+      new DrawQueueItemFramebufferWithShader(queue, getPaddingRect(), m_shader));
 }
 
 void UIMinimap::drawSelf(Fw::DrawPane drawPane) {
@@ -176,7 +234,7 @@ Rect UIMinimap::getTileRect(const Position &pos) {
 }
 
 Position UIMinimap::getTilePosition(const Point &mousePos) {
-  return g_minimap.getTilePosition(mousePos, getPaddingRect(),
+  return g_minimap.getTilePosition(lensAdjustPoint(mousePos), getPaddingRect(),
                                    getCameraPosition(), m_scale,
                                    calculateSmoothOffset());
 }

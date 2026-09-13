@@ -37,6 +37,8 @@
 #include <framework/graphics/image.h>
 #include <framework/graphics/texture.h>
 #include <mutex>
+#include <chrono>
+#include <thread>
 #include <unordered_map>
 #include <vector>
 #include <zlib.h>
@@ -970,7 +972,32 @@ void Minimap::saveOtmmFile(const std::string &fileName, int targetZ) {
     // Minimal valid OTMM is signature(4)+start(2)+version(2)+flags(4) (12
     // bytes) + desc + data start + eof(5)
     if (std::filesystem::file_size(tmpFilePath) > 16) {
-      std::filesystem::rename(tmpFilePath, filePath);
+      // Duas instancias do client dividem a mesma pasta de configuracao
+      // (%APPDATA%\OTClientVN\otclientv8) e portanto o mesmo minimap: se a
+      // outra instancia estiver com o arquivo aberto no instante do rename, o
+      // Windows devolve ERROR_SHARING_VIOLATION, o mapa explorado daquela
+      // sessao era perdido e o log enchia de "failed to save OTMM minimap".
+      // Tenta algumas vezes e, como ultimo recurso, copia por cima.
+      std::error_code renameEc;
+      for (int attempt = 0; attempt < 8; ++attempt) {
+        std::filesystem::rename(tmpFilePath, filePath, renameEc);
+        if (!renameEc)
+          break;
+        std::this_thread::sleep_for(
+            std::chrono::milliseconds(50 * (attempt + 1)));
+      }
+
+      if (renameEc) {
+        std::error_code copyEc;
+        std::filesystem::copy_file(
+            tmpFilePath, filePath,
+            std::filesystem::copy_options::overwrite_existing, copyEc);
+        if (copyEc)
+          g_logger.error(stdext::format("failed to save OTMM minimap: %s",
+                                        copyEc.message()));
+        else
+          std::filesystem::remove(tmpFilePath, copyEc);
+      }
     }
 #endif
   } catch (stdext::exception &e) {

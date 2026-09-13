@@ -56,7 +56,14 @@ void DrawQueueItemImageWithShader::draw()
 {
     if (!m_texture) return;
     PainterShaderProgramPtr shader = g_shaders.getShader(m_shader);
-    if (!shader) return;
+    if (!shader) {
+        // Shader ausente (nome errado, falha de compilacao): desenha a imagem
+        // normal com o image-color. Antes esse caminho nao desenhava nada, o
+        // que deixava invisivel qualquer widget com image-shader quebrado.
+        g_painter->setColor(m_color);
+        g_painter->drawTextureCoords(m_coordsBuffer, m_texture);
+        return;
+    }
 
     g_painter->setShaderProgram(shader);
     shader->bindMultiTextures();
@@ -69,7 +76,11 @@ void DrawQueueItemImageWithShader::draw(const Point& pos)
 {
     if (!m_texture) return;
     PainterShaderProgramPtr shader = g_shaders.getShader(m_shader);
-    if (!shader) return;
+    if (!shader) {
+        g_painter->setColor(m_color);
+        g_painter->drawTexturedRect(Rect(pos, m_texture->getSize()), m_texture);
+        return;
+    }
 
     g_painter->setShaderProgram(shader);
     shader->bindMultiTextures();
@@ -138,6 +149,49 @@ void DrawQueueItemTexturedRect::draw(const Point& pos)
     g_painter->drawTexturedRect(Rect(pos, m_texture->getSize()), m_texture);
 }
 
+
+void DrawQueueItemFramebufferWithShader::draw()
+{
+    if (!m_queue || m_dest.isEmpty())
+        return;
+
+    const Size screenSize = g_painter->getResolution();
+    if (!screenSize.isValid())
+        return;
+
+    FrameBufferPtr framebuffer = g_framebuffers.getDrawQueueTemporaryFrameBuffer();
+    if (!framebuffer)
+        return;
+
+    framebuffer->resize(screenSize);
+    framebuffer->setSmooth(true);
+    framebuffer->bind();
+    g_painter->clear(Color::alpha);
+    m_queue->draw(DRAW_ALL);
+    framebuffer->release();
+
+    PainterShaderProgramPtr shader;
+    if (!m_shader.empty()) {
+        shader = g_shaders.getShader(m_shader);
+        if (shader) {
+            // Framebuffers are stored upside down, so the shader reads its
+            // fragments with the y axis measured from the bottom: the center
+            // has to be given in that same space or the effect would be
+            // mirrored vertically on widgets that are not screen centered.
+            shader->setCenter(Point(m_dest.center().x, screenSize.height() - m_dest.center().y));
+            shader->setOffset(Point(m_dest.width() / 2, m_dest.height() / 2));
+            g_painter->setShaderProgram(shader);
+        }
+    }
+
+    g_painter->resetColor();
+    g_painter->drawTexturedRect(m_dest, framebuffer->getTexture(), Rect(m_dest.topLeft(), m_dest.size()));
+
+    if (shader) {
+        g_painter->resetShaderProgram();
+        g_painter->resetTexture();
+    }
+}
 
 bool DrawQueueItemFilledRect::cache()
 {

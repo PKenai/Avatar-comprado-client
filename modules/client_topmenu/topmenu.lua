@@ -7,17 +7,110 @@ local rightGameButtonsPanel
 local fpsEvent
 local fpsText = ''
 
--- drawer variables
-local idleTimer = nil
-local isHidden = false
-local isAnimating = false
-local IDLE_TIMEOUT = 15000
-local ANIM_DURATION = 300
-local ANIM_STEPS = 20
-local originalMarginTop = 0
-local dropButton = nil
+-- compact menu (right corner)
+local menuRoot = nil
+local menuCorner = nil
+local menuPanel = nil
+local menuList = nil
+local menuEntries = {}
+local menuAnimEvent = nil
+local menuOpen = false
+local menuRestY = 0
+-- botao do Shop no centro-norte da tela
+local shopCorner = nil
+local MENU_ANIM_DURATION = 240
+local MENU_ANIM_STEPS = 18
+local MENU_REST_GAP = 6
 
 -- private functions
+local function stopMenuAnim()
+  if menuAnimEvent then
+    removeEvent(menuAnimEvent)
+    menuAnimEvent = nil
+  end
+end
+
+-- A barra superior foi substituida pelo menu compacto do canto direito.
+-- Os botoes continuam existindo (modulos seguem usando addLeftButton & cia),
+-- mas ficam escondidos e passam a ser listados dentro da gaveta do canto.
+local function hideTopbarPanels()
+  local panels = { leftButtonsPanel, rightButtonsPanel, leftGameButtonsPanel, rightGameButtonsPanel }
+  for _, panel in pairs(panels) do
+    if panel then
+      panel:hide()
+    end
+  end
+  if fpsLabel then fpsLabel:hide() end
+  if pingLabel then pingLabel:hide() end
+end
+
+local function menuEntryLabel(entry)
+  return entry.description or entry.id
+end
+
+local function rebuildMenuList()
+  if not menuList then return end
+  menuList:destroyChildren()
+
+  -- somente os botoes que os modulos deixaram visiveis entram na gaveta
+  -- isExplicitlyVisible(): o botao vive dentro de um painel oculto, entao
+  -- isVisible() seria sempre falso por causa do estado herdado do pai.
+  local entries = {}
+  for _, entry in ipairs(menuEntries) do
+    local button = entry.button
+    if button and not button:isDestroyed() and button:isExplicitlyVisible() then
+      table.insert(entries, entry)
+    end
+  end
+
+  -- ordem alfabetica pelo nome exibido
+  table.sort(entries, function(a, b)
+    return string.lower(menuEntryLabel(a)) < string.lower(menuEntryLabel(b))
+  end)
+
+  for _, entry in ipairs(entries) do
+    local button = entry.button
+    local item = g_ui.createWidget('GameMenuListButton', menuList)
+    item:setId('menu_' .. entry.id)
+    item:setText(menuEntryLabel(entry))
+    item:setOn(button.isOn and button:isOn() or false)
+    item.onClick = function()
+      if entry.callback then
+        entry.callback()
+      end
+      scheduleEvent(function()
+        if item and not item:isDestroyed() and button and not button:isDestroyed() then
+          item:setOn(button.isOn and button:isOn() or false)
+        end
+      end, 50)
+    end
+  end
+end
+
+local function registerMenuEntry(id, description, icon, callback, button, front)
+  for _, entry in ipairs(menuEntries) do
+    if entry.id == id then
+      entry.description = description
+      entry.icon = resolvepath(icon, 3)
+      entry.callback = callback
+      entry.button = button
+      return
+    end
+  end
+  local entry = {
+    id = id,
+    description = description,
+    icon = resolvepath(icon, 3),
+    callback = callback,
+    button = button
+  }
+  if front then
+    table.insert(menuEntries, 1, entry)
+  else
+    table.insert(menuEntries, entry)
+  end
+end
+
 local function addButton(id, description, icon, callback, panel, toggle, front)
   local class
   if toggle then
@@ -44,90 +137,112 @@ local function addButton(id, description, icon, callback, panel, toggle, front)
       return true
     end
   end
+
+  -- toda a barra superior vive agora na gaveta do menu compacto
+  registerMenuEntry(id, description, icon, callback, button, front)
+  hideTopbarPanels()
+
   return button
 end
 
--- drawer functions
-local function positionDropButton()
-  if not dropButton or not topMenu then return end
-  local root = g_ui.getRootWidget()
-  local rootWidth = root:getWidth()
-  local btnWidth = dropButton:getWidth()
-  dropButton:setX(math.floor((rootWidth - btnWidth) / 2))
-  dropButton:setY(0)
+-- drawer geometry: o painel fica logo acima do botao de canto
+local function updateMenuRestY()
+  if not menuPanel or not menuCorner then return end
+  local cornerTop = menuCorner:getY()
+  -- se o layout ainda nao rodou, calcula pelo tamanho da tela
+  if cornerTop <= 0 and menuRoot then
+    cornerTop = menuRoot:getHeight() - menuCorner:getHeight()
+  end
+  menuRestY = cornerTop - menuPanel:getHeight() - MENU_REST_GAP
 end
 
-local function resetIdleTimer()
-  if idleTimer then
-    removeEvent(idleTimer)
-    idleTimer = nil
-  end
-  if not isHidden and not isAnimating then
-    idleTimer = scheduleEvent(function()
-      if isHidden or isAnimating then return end
-      isAnimating = true
-      local height = topMenu:getHeight()
-      if dropButton then
-        positionDropButton()
-        dropButton:show()
-        dropButton:setOpacity(0)
-        g_effects.fadeIn(dropButton, 200)
+local function menuHiddenY()
+  if not menuRoot then return 0 end
+  return menuRoot:getHeight()
+end
+
+-- drawer animation (ease-out sobre o eixo Y)
+local function animateMenuPanel(targetY, onFinish)
+  if not menuPanel then return end
+  stopMenuAnim()
+
+  local startY = menuPanel:getY()
+  local stepDelay = math.max(1, math.floor(MENU_ANIM_DURATION / MENU_ANIM_STEPS))
+  local step = 0
+
+  local function tick()
+    if not menuPanel or menuPanel:isDestroyed() then
+      menuAnimEvent = nil
+      return
+    end
+    step = step + 1
+    local progress = step / MENU_ANIM_STEPS
+    local eased = 1 - (1 - progress) * (1 - progress) -- ease-out
+    menuPanel:setY(math.floor(startY + (targetY - startY) * eased + 0.5))
+    if step >= MENU_ANIM_STEPS then
+      menuPanel:setY(targetY)
+      menuAnimEvent = nil
+      if onFinish then
+        onFinish()
       end
-      for i = 1, ANIM_STEPS do
-        scheduleEvent(function()
-          if topMenu and isAnimating then
-            local progress = i / ANIM_STEPS
-            local eased = 1 - (1 - progress) * (1 - progress)
-            local newMargin = -math.floor(height * eased)
-            topMenu:setMarginTop(newMargin)
-            if i == ANIM_STEPS then
-              topMenu:setMarginTop(-height)
-              isHidden = true
-              isAnimating = false
-            end
-          end
-        end, math.floor(i * ANIM_DURATION / ANIM_STEPS))
-      end
-    end, IDLE_TIMEOUT)
+    else
+      menuAnimEvent = scheduleEvent(tick, stepDelay)
+    end
+  end
+
+  menuAnimEvent = scheduleEvent(tick, stepDelay)
+end
+
+function hideGameMenu()
+  if not menuPanel then return end
+  if not menuOpen and not menuPanel:isVisible() then return end
+
+  menuOpen = false
+  -- desce como uma gaveta e so entao se esconde
+  animateMenuPanel(menuHiddenY(), function()
+    if menuPanel and not menuOpen then
+      menuPanel:hide()
+      menuPanel:setY(menuRestY)
+    end
+  end)
+end
+
+function showGameMenu()
+  if not menuPanel then return end
+  rebuildMenuList()
+  stopMenuAnim()
+  menuOpen = true
+  updateMenuRestY()
+  -- comeca abaixo da tela e sobe como uma gaveta
+  menuPanel:setY(menuHiddenY())
+  menuPanel:show()
+  menuPanel:raise()
+  if menuCorner then
+    menuCorner:raise()
+  end
+  animateMenuPanel(menuRestY)
+end
+
+function toggleGameMenu()
+  if menuOpen then
+    hideGameMenu()
+  else
+    showGameMenu()
   end
 end
 
-local function slideDown()
-  if isAnimating or not isHidden then return end
-  isAnimating = true
-  if dropButton then
-    g_effects.fadeOut(dropButton, 150)
-    scheduleEvent(function()
-      if dropButton then dropButton:hide() end
-    end, 160)
-  end
-  local startMargin = topMenu:getMarginTop()
-  for i = 1, ANIM_STEPS do
-    scheduleEvent(function()
-      if topMenu and isAnimating then
-        local progress = i / ANIM_STEPS
-        local eased = progress * progress
-        local newMargin = math.floor(startMargin + (originalMarginTop - startMargin) * eased)
-        topMenu:setMarginTop(newMargin)
-        if i == ANIM_STEPS then
-          topMenu:setMarginTop(originalMarginTop)
-          isHidden = false
-          isAnimating = false
-          resetIdleTimer()
-        end
-      end
-    end, math.floor(i * ANIM_DURATION / ANIM_STEPS))
+-- o botao do centro-norte abre o Shop (mod/game_shop)
+function toggleShop()
+  if modules.game_shop and modules.game_shop.toggle then
+    modules.game_shop.toggle()
   end
 end
 
-function onTopMenuMouseMove(self, mousePos, mouseMoved)
-  if not isHidden and not isAnimating then
-    resetIdleTimer()
-  end
-end
-
-function onDropClick()
-  slideDown()
+-- ESC fecha a gaveta (e so entao consome a tecla, para nao atrapalhar o resto)
+local function onMenuEscape()
+  if not menuOpen then return false end
+  hideGameMenu()
+  return true
 end
 
 -- public functions
@@ -135,6 +250,8 @@ function init()
   connect(g_game, { onGameStart = online,
                     onGameEnd = offline,
                     onPingBack = updatePing })
+
+  g_keyboard.bindKeyDown('Escape', onMenuEscape)
 
   topMenu = g_ui.displayUI('topmenu')
 
@@ -145,29 +262,43 @@ function init()
   pingLabel = topMenu:getChildById('pingLabel')
   fpsLabel = topMenu:getChildById('fpsLabel')
 
-  originalMarginTop = topMenu:getMarginTop()
+  hideTopbarPanels()
 
-  -- create drop button: parent it to root so it survives topMenu sliding up
-  local root = g_ui.getRootWidget()
-  dropButton = g_ui.createWidget('TopButton', root)
-  if dropButton then
-    dropButton:setId('dropButton')
-    dropButton:setIcon(resolvepath('/data/images/topbuttons/drop.png', 3))
-    dropButton:setTooltip('Mostrar barra superior')
-    dropButton:setOpacity(0.7)
-    dropButton:hide()
-    positionDropButton()
-    dropButton.onMouseRelease = function(widget, mousePos, mouseButton)
-      if widget:containsPoint(mousePos) and mouseButton == MouseLeftButton then
-        onDropClick()
-        return true
+  menuRoot = g_ui.displayUI('game_menu')
+  if menuRoot then
+    menuCorner = menuRoot:getChildById('gameMenuCorner')
+    menuPanel = menuRoot:getChildById('gameMenuPanel')
+    if menuPanel then
+      menuList = menuPanel:getChildById('gameMenuList')
+      updateMenuRestY()
+      menuPanel:setY(menuRestY)
+      menuPanel:hide()
+    end
+    -- reposiciona a gaveta se a resolucao/janela mudar
+    menuRoot.onGeometryChange = function()
+      updateMenuRestY()
+      if menuPanel and not menuOpen then
+        menuPanel:setY(menuRestY)
       end
     end
-    dropButton.onHoverChange = function(widget)
-      if widget:isHovered() then
-        widget:setOpacity(1.0)
+    menuRoot:raise()
+    if menuCorner then
+      -- Assim como o botao de Options, o menu do canto so aparece in-game:
+      -- na tela de login ele nao deve existir.
+      if g_game.isOnline() then
+        menuCorner:show()
       else
-        widget:setOpacity(0.7)
+        menuCorner:hide()
+      end
+    end
+
+    -- o botao do Shop segue a mesma regra: in-game apenas
+    shopCorner = menuRoot:getChildById('gameMenuShop')
+    if shopCorner then
+      if g_game.isOnline() then
+        shopCorner:show()
+      else
+        shopCorner:hide()
       end
     end
   end
@@ -185,54 +316,52 @@ function terminate()
                        onGameEnd = offline,
                        onPingBack = updatePing })
 
+  g_keyboard.unbindKeyDown('Escape', onMenuEscape)
+
   if fpsEvent then
     removeEvent(fpsEvent)
     fpsEvent = nil
   end
 
-  if idleTimer then
-    removeEvent(idleTimer)
-    idleTimer = nil
-  end
+  stopMenuAnim()
 
-  if dropButton then
-    dropButton:destroy()
-    dropButton = nil
+  if menuRoot then
+    menuRoot:destroy()
+    menuRoot = nil
+    menuCorner = nil
+    shopCorner = nil
+    menuPanel = nil
+    menuList = nil
   end
+  menuEntries = {}
+  menuOpen = false
 
   topMenu:destroy()
 end
 
 function online()
-  showGameButtons()
+  hideTopbarPanels()
   g_game.enableFeature(GameClientPing)
   addEvent(function()
-    fpsLabel:show()
-    pingLabel:show()
-    if isHidden then
-      topMenu:setMarginTop(originalMarginTop)
-      isHidden = false
-      isAnimating = false
-      if dropButton then dropButton:hide() end
+    if menuRoot then
+      menuRoot:raise()
     end
-    resetIdleTimer()
+    if menuCorner then
+      menuCorner:show()
+    end
+    if shopCorner then
+      shopCorner:show()
+    end
   end)
 end
 
 function offline()
-  hideGameButtons()
-  pingLabel:hide()
-  if idleTimer then
-    removeEvent(idleTimer)
-    idleTimer = nil
+  hideGameMenu()
+  if menuCorner then
+    menuCorner:hide()
   end
-  if isHidden then
-    topMenu:setMarginTop(originalMarginTop)
-    isHidden = false
-    isAnimating = false
-  end
-  if dropButton then
-    dropButton:hide()
+  if shopCorner then
+    shopCorner:hide()
   end
 end
 
@@ -242,7 +371,7 @@ function updateFps(fps)
   local text = 'FPS: ' .. fps
   if text ~= fpsText then
     fpsText = text
-    fpsLabel:setText(text)
+    if fpsLabel then fpsLabel:setText(text) end
   end
 end
 
@@ -259,17 +388,19 @@ function updatePing(ping)
   end
   text = text .. ping .. ' ms'
 
-  pingLabel:setColor(color)
-  pingLabel:setText(text)
-  pingLabel:setVisible(ping >= 1)
+  if pingLabel then
+    pingLabel:setColor(color)
+    pingLabel:setText(text)
+  end
 end
 
 function setPingVisible(enable)
-  pingLabel:setVisible(enable)
+  -- a barra superior nao existe mais; o indicador fica sempre oculto
+  if pingLabel then pingLabel:setVisible(false) end
 end
 
 function setFpsVisible(enable)
-  fpsLabel:setVisible(enable)
+  if fpsLabel then fpsLabel:setVisible(false) end
 end
 
 function addLeftButton(id, description, icon, callback, front)
@@ -305,13 +436,26 @@ function addRightGameToggleButton(id, description, icon, callback, front)
 end
 
 function showGameButtons()
-  leftGameButtonsPanel:show()
-  rightGameButtonsPanel:show()
+  hideTopbarPanels()
+  if menuRoot then
+    menuRoot:raise()
+  end
+  if menuCorner then
+    menuCorner:show()
+  end
+  if shopCorner then
+    shopCorner:show()
+  end
 end
 
 function hideGameButtons()
-  leftGameButtonsPanel:hide()
-  rightGameButtonsPanel:hide()
+  hideGameMenu()
+  if menuCorner then
+    menuCorner:hide()
+  end
+  if shopCorner then
+    shopCorner:hide()
+  end
 end
 
 function getButton(id)

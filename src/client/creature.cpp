@@ -233,10 +233,10 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
 
     // debug text
     if (g_extras.debugWalking) {
-        int footDelay = (getStepDuration(true)) / 3;
+        int footDelay = getStepDuration() / 3;
         int footAnimPhases = getWalkAnimationPhases() - 1;
         m_nameCache.setText(stdext::format("%i %i %i %i %i\n %i %i\n%i %i %i\n%i %i %i %i %i",
-            (int)m_stepDuration, (int)getStepDuration(true), getStepDuration(false), (int)m_walkedPixels, (int)m_walkTimer.ticksElapsed(),
+            (int)m_stepDuration, (int)getStepDuration(), (int)getStepDuration(true), (int)m_walkedPixels, (int)m_walkTimer.ticksElapsed(),
             (int)m_walkOffset.x, (int)m_walkOffset.y,
             (int)m_speed, (int)getTile()->getGroundSpeed(), (int)g_game.getWalkId(),
             (int)(g_clock.millis() - m_footLastStep), (int)footDelay, (int)footAnimPhases, (int)m_walkAnimationPhase, (int)stdext::millis()));
@@ -716,9 +716,9 @@ void Creature::updateWalkAnimation(uint8 totalPixelsWalked)
 
     int footAnimPhases = getWalkAnimationPhases() - 1;
     // TODO, should be /2 for <= 810
-    uint16 footDelay = getStepDuration(true);
+    uint16 footDelay = getStepDuration();
     if (footAnimPhases > 0) {
-        footDelay = ((getStepDuration(true) + 20) / (g_game.getFeature(Otc::GameFasterAnimations) ? footAnimPhases * 2 : footAnimPhases));
+        footDelay = ((getStepDuration() + 20) / (g_game.getFeature(Otc::GameFasterAnimations) ? footAnimPhases * 2 : footAnimPhases));
     }
     if (!g_game.getFeature(Otc::GameFasterAnimations))
         footDelay += 10;
@@ -820,13 +820,13 @@ void Creature::nextWalkUpdate()
         // Floor of 4ms: at very high FPS (1000+) a 1ms cadence floods the
         // dispatcher with thousands of walk events per second for no benefit
         // (the render only samples the offset once per frame anyway).
-        std::max(getStepDuration(true) / std::max(g_app.getFps(), 1), 4) : (float)getStepDuration() / g_sprites.spriteSize()
+        std::max(getStepDuration() / std::max(g_app.getFps(), 1), 4) : (float)getStepDuration() / g_sprites.spriteSize()
     );
 }
 
 void Creature::updateWalk()
 {
-    float walkTicksPerPixel = (float)getStepDuration(true) / (float)g_sprites.spriteSize();
+    float walkTicksPerPixel = (float)getStepDuration() / (float)g_sprites.spriteSize();
     uint8 totalPixelsWalked = std::min<uint8>(m_walkTimer.ticksElapsed() / walkTicksPerPixel, g_sprites.spriteSize());
     uint8 totalPixelsWalkedInNextFrame = std::min<uint8>((m_walkTimer.ticksElapsed() + (g_game.getFeature(Otc::GameNewUpdateWalk) ? std::max(1000.f / g_app.getFps(), 1.0f) : 15)) / walkTicksPerPixel, g_sprites.spriteSize());
 
@@ -1177,6 +1177,8 @@ uint16 Creature::getStepDuration(bool ignoreDiagonal, Otc::Direction dir)
     if (g_game.getClientVersion() >= 900 && !g_game.getFeature(Otc::GameNewWalking))
         interval = std::ceil((float)interval / (float)g_game.getServerBeat()) * g_game.getServerBeat();
 
+    // Diagonal extra cost, in sync with Creature::getStepDuration(Direction) and
+    // lastStepCost on the server (sources/creature.cpp)
     float factor = 1.5f;
 
     interval = std::max<int>(interval, g_game.getServerBeat());

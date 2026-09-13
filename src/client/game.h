@@ -333,6 +333,20 @@ public:
     void setFeature(Otc::GameFeature feature, bool enabled) { m_features.set(feature, enabled); }
     bool getFeature(Otc::GameFeature feature) { return m_features.test(feature); }
 
+    // Opacidade dos magic effects (0..1), separada por quem causou o efeito.
+    enum EffectSource {
+        EffectSourceSelf = 0,
+        EffectSourceOthers = 1,
+        EffectSourceMonsters = 2,
+        EffectSourceCount = 3
+    };
+
+    void setEffectOpacity(int source, float opacity);
+    float getEffectOpacity(int source);
+    // Categoria a partir de quem causou o efeito (0 = sem informacao; nesse caso
+    // usa quem ocupa o tile 'pos' como aproximacao).
+    int classifyEffectSource(uint32 sourceId, const Position& pos);
+
     void setProtocolVersion(int version);
     int getProtocolVersion() { return m_protocolVersion; }
     void setCustomProtocolVersion(int version) { m_customProtocolVersion = version; }
@@ -451,6 +465,7 @@ private:
     uint32_t m_fullMapTotal = 0;
     uint32_t m_fullMapReceived = 0;
     bool m_dead;
+    float m_effectOpacity[EffectSourceCount] = {1.0f, 1.0f, 1.0f};
     bool m_expertPvpMode;
     int m_serverBeat;
     ticks_t m_ping;

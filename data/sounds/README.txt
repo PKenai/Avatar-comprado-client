@@ -46,7 +46,7 @@ FORMATO
 LISTA DE MAGIAS (nomes exatos usados pelo jogo)
 -----------------------------------------------
 Fogo:  Fire Whip, Fire Recover, Fire Kick, Fire Skyfall, Fire Jump,
-       Fire Impulse, Fire Bolt, Fire Res, Fire Star, Fire Cannon,
+       Fire Impulse, Fire Bolt, Fire Cinder, Fire Star, Fire Cannon,
        Fire Wrath, Fire Focus, Fire Lightning, Fire Bomb, Fire Clock,
        Fire Thunderbolt, Fire Meteor, Fire Striker, Fire Overload,
        Fire Explosion, Fire Voltage, Fire Thunderstorm, Fire Discharge,

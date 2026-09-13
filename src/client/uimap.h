@@ -79,6 +79,11 @@ public:
     void setFloorTransparencyThreshold(float threshold) { m_mapView->setFloorTransparencyThreshold(threshold); }
     float getFloorTransparencyThreshold() { return m_mapView->getFloorTransparencyThreshold(); }
     void setCrosshair(const std::string& type) { m_mapView->setCrosshair(type); }
+    // rolagem suave da camera (lerp) — ver MapView::getSmoothedWalkOffset
+    void setWalkSmoothingTime(float ms) { m_mapView->setWalkSmoothingTime(ms); }
+    float getWalkSmoothingTime() { return m_mapView->getWalkSmoothingTime(); }
+    void setWalkSmoothingMaxLag(float px) { m_mapView->setWalkSmoothingMaxLag(px); }
+    float getWalkSmoothingMaxLag() { return m_mapView->getWalkSmoothingMaxLag(); }
     bool isMultifloor() { return m_mapView->isMultifloor(); }
     bool isDrawingTexts() { return m_mapView->isDrawingTexts(); }
     bool isDrawingNames() { return m_mapView->isDrawingNames(); }

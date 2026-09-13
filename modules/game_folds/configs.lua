@@ -9,9 +9,9 @@ images = {
 
 spellInfos = {
     {
-        {name = "Fire Whip", level = 1}, {name = "Fire Recover", level = 5, var = "Fire URecover"}, {name = "Fire Kick", level = 8},
+        {name = "Fire Wave", level = 1}, {name = "Fire Recover", level = 5, var = "Fire URecover"}, {name = "Fire Kick", level = 8},
         {name = "Fire Skyfall", level = 12}, {name = "Fire Jump", level = 16}, {name = "Fire Impulse", level = 20},
-        {name = "Fire Bolt", level = 25}, {name = "Fire Res", level = 30}, {name = "Fire Star", level = 36},
+        {name = "Fire Bolt", level = 25}, {name = "Fire Cinder", level = 30}, {name = "Fire Star", level = 36},
         {name = "Fire Cannon", level = 42}, {name = "Fire Wrath", level = 46}, {name = "Fire Focus", level = 50},
         {name = "Fire Lightning", level = 55}, {name = "Fire Bomb", level = 60}, {name = "Fire Clock", level = 65}, {name = "Fire Thunderbolt", level = 70},
         {name = "Fire Meteor", level = 80}, {name = "Fire Striker", level = 90}, {name = "Fire Overload", level = 100}, {name = "Fire Explosion", level = 110}, 

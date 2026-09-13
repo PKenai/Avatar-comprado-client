@@ -13,7 +13,15 @@ local mapPanel = modules.game_interface.getMapPanel()
 local topMenu  = modules.client_topmenu.getTopMenu()
 
 function ScreenLoot.init()
-	ProtocolGame.registerExtendedOpcode(OpcodeLoot, function(protocol, opcode, buffer) ScreenLoot.show(loadstring("return "..buffer)()) end)
+	-- payload do servidor: nunca rodar com o ambiente global (corelib/util.lua)
+	ProtocolGame.registerExtendedOpcode(OpcodeLoot, function(protocol, opcode, buffer)
+		local value, err = safeLuaDeserialize(buffer)
+		if err then
+			g_logger.error('[loot] invalid payload: ' .. tostring(err))
+			return
+		end
+		ScreenLoot.show(value)
+	end)
 end
 
 function ScreenLoot.terminate()

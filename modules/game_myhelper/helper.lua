@@ -11,6 +11,7 @@
 
 helperWindow = nil
 helperButton = nil
+helperSideButton = nil
 updateEvent = nil
 
 -- widgets (buscados no init)
@@ -143,7 +144,7 @@ function loadProfileIntoUI()
   local p = getProfile(currentCharacter)
 
   -- pocao selecionada. O id usado em todo o helper e o CLIENT id (CID do
-  -- DAT) — e o id que o client recebe do servidor (item:getId()) e o que o
+  -- DAT) - e o id que o client recebe do servidor (item:getId()) e o que o
   -- servidor espera no useInventoryItem (getItemIdByClientId). Perfis antigos
   -- salvaram o id do servidor (7618 etc.); converte aqui.
   hpItemId = SERVER_TO_CLIENT[tonumber(p.hpItemId)] or tonumber(p.hpItemId) or 0
@@ -264,7 +265,7 @@ end
 -- -----------------------------------------------------------------------------
 -- usa a pocao do slot (kind). O id guardado e o CLIENT id (CID do DAT).
 -- 1) Se achar o item REAL numa mochila aberta, usa pela posicao real
---    (g_game.use — fluxo onUse de clicar com botao direito -> Usar).
+--    (g_game.use - fluxo onUse de clicar com botao direito -> Usar).
 -- 2) Se nao achar (mochila fechada), usa pelo id via useInventoryItem: o
 --    servidor trata como hotkey e procura a pocao em QUALQUER mochila
 --    (busca profunda, independente de estar aberta ou fechada).
@@ -296,7 +297,7 @@ local function usePotion(kind)
     end
   end
 
-  -- nao achou em mochila aberta: usa pelo id (hotkey do servidor — acha em
+  -- nao achou em mochila aberta: usa pelo id (hotkey do servidor - acha em
   -- qualquer mochila, aberta ou fechada)
   g_game.useInventoryItem(itemId)
   return true
@@ -515,6 +516,10 @@ function onGameStart()
   loadProfileIntoUI()
   applyElement()
   updateStatus()
+  if helperSideButton then
+    helperSideButton:show()
+    helperSideButton:raise()
+  end
 end
 
 function onGameEnd()
@@ -526,6 +531,7 @@ function onGameEnd()
   currentCharacter = ''
   if healSpellName then healSpellName:setText('') end
   if profileLabel then profileLabel:setText(tr('Perfil')) end
+  if helperSideButton then helperSideButton:hide() end
 end
 
 -- -----------------------------------------------------------------------------
@@ -870,6 +876,42 @@ function assignHandlers()
   end
 end
 
+-- Botao lateral esquerdo (imagem custom), que fica acima dos botoes da mochila
+-- e do mapa. Criado em addEvent porque o game_myhelper carrega antes do
+-- game_map_overlay/game_inventory (autoload-priority) e a ancora precisa que
+-- eles ja' existam.
+local function createSideButton()
+  if helperSideButton then return end
+  if not modules.game_interface then return end
+
+  local rootPanel = modules.game_interface.getRootPanel()
+  if not rootPanel then return end
+
+  pcall(function() g_ui.importStyle('helper_button') end)
+
+  local ok, button = pcall(function() return g_ui.createWidget('HelperSideButton', rootPanel) end)
+  if not ok or not button then return end
+
+  helperSideButton = button
+
+  if rootPanel:getChildById('mapSideButton') then
+    helperSideButton:addAnchor(AnchorBottom, 'mapSideButton', AnchorTop)
+  elseif rootPanel:getChildById('inventorySideButton') then
+    helperSideButton:addAnchor(AnchorBottom, 'inventorySideButton', AnchorTop)
+  else
+    helperSideButton:addAnchor(AnchorBottom, 'consolePanel', AnchorTop)
+  end
+  helperSideButton:addAnchor(AnchorLeft, 'parent', AnchorLeft)
+  helperSideButton:setMarginBottom(6)
+  helperSideButton:setMarginLeft(0)
+  helperSideButton:hide()
+
+  if g_game.isOnline() then
+    helperSideButton:show()
+    helperSideButton:raise()
+  end
+end
+
 function init()
   -- remove o mirar pela tecla Espaco (pedido: auto target assume o papel)
   if gameRootPanel then
@@ -935,6 +977,10 @@ function init()
     perror('[game_myhelper] falha ao criar o botao do topo')
   end
 
+  -- botao lateral por ultimo e adiado: os botoes da mochila/mapa sao criados
+  -- por outros modulos que ainda vao carregar
+  addEvent(function() createSideButton() end)
+
   applyElement()
   updateStatus()
   helperWindow:close(true)
@@ -946,6 +992,7 @@ function terminate()
   saveProfileFromUI()
 
   if helperButton then helperButton:destroy() end
+  if helperSideButton then helperSideButton:destroy() end
   if helperWindow then helperWindow:destroy() end
   if potionListWindow then potionListWindow:destroy() end
 
@@ -957,4 +1004,5 @@ function terminate()
 
   helperWindow = nil
   helperButton = nil
+  helperSideButton = nil
 end

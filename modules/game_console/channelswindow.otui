@@ -1,6 +1,6 @@
 ChannelListLabel < Label
   font: verdana-11px-monochrome
-  background-color: #363636
+  background-color: alpha
   text-offset: 2 0
   focusable: true
 
@@ -11,7 +11,7 @@ ChannelListLabel < Label
 MainWindow
   id: channelsWindow
   !text: tr('Channels')
-  size: 250 205
+  size: 250 238
   @onEscape: self:destroy()
 
   TextList

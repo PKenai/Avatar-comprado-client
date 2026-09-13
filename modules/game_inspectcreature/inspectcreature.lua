@@ -86,7 +86,7 @@ end
 
 local function resolveItemId(itemId)
   -- Try ItemType(id):getClientId() first
-  -- ItemType must be a function — registerClass<ItemType>() creates a TABLE, not a function.
+  -- ItemType must be a function ï¿½ registerClass<ItemType>() creates a TABLE, not a function.
   -- The C++ bindGlobalFunction OR the Lua fallback in things.lua replaces it.
   if type(ItemType) == "function" then
     local ok, itemType = pcall(ItemType, itemId)
@@ -95,7 +95,7 @@ local function resolveItemId(itemId)
       if cid and cid > 0 then return cid end
     end
   end
-  -- Fallback: pass raw ID to setItemId — validates against .dat directly
+  -- Fallback: pass raw ID to setItemId ï¿½ validates against .dat directly
   return itemId
 end
 
@@ -203,15 +203,13 @@ local function receiveMonsterData(buffer)
   if not buffer or buffer == "" then
     return
   end
-  local func, err = loadstring("return " .. buffer)
-  if not func then
+  -- payload do servidor: nunca rodar com o ambiente global (corelib/util.lua)
+  local monster, err = safeLuaDeserialize(buffer)
+  if err then
+    g_logger.error("[inspectcreature] invalid payload: " .. tostring(err))
     return
   end
-  local ok, monster = pcall(func)
-  if not ok then
-    return
-  end
-  if not monster or type(monster) ~= "table" then
+  if type(monster) ~= "table" then
     return
   end
   if monster.name or (monster.loot and #monster.loot > 0) then
@@ -251,13 +249,12 @@ function init()
     detailDescription = itemDetailWindow:getChildById('detailDescription')
   end
 
-  g_keyboard.bindKeyPress('Ctrl+I', toggle)
+  -- Ctrl+I removido (batia com o Inventory). O icone/lupa continua abrindo.
 end
 
 function terminate()
   disconnect(g_game, { onGameEnd = onGameEnd })
   pcall(ProtocolGame.unregisterExtendedOpcode, InspectOpcode)
-  g_keyboard.unbindKeyPress('Ctrl+I')
   if inspectWindow then inspectWindow:destroy(); inspectWindow = nil end
   if itemDetailWindow then itemDetailWindow:destroy(); itemDetailWindow = nil end
   uiCreature = nil; lblMonsterName = nil; lblMonsterInfo = nil; listLoot = nil

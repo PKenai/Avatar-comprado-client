@@ -1759,6 +1759,55 @@ void Game::setClientVersion(int version)
     g_lua.callGlobalField("g_game", "onClientVersionChange", version);
 }
 
+void Game::setEffectOpacity(int source, float opacity)
+{
+    if(source < 0 || source >= EffectSourceCount)
+        return;
+
+    m_effectOpacity[source] = std::max(0.0f, std::min(1.0f, opacity));
+}
+
+float Game::getEffectOpacity(int source)
+{
+    if(source < 0 || source >= EffectSourceCount)
+        return 1.0f;
+
+    return m_effectOpacity[source];
+}
+
+int Game::classifyEffectSource(uint32 sourceId, const Position& pos)
+{
+    if(sourceId != 0) {
+        if(m_localPlayer && m_localPlayer->getId() == sourceId)
+            return EffectSourceSelf;
+
+        CreaturePtr creature = g_map.getCreatureById(sourceId);
+        if(creature && creature->isMonster())
+            return EffectSourceMonsters;
+
+        return EffectSourceOthers;
+    }
+
+    // Sem o id de quem causou (feature GameMagicEffectSource desligada ou efeito
+    // do proprio motor): usa quem ocupa o tile do efeito. Cobre bem os efeitos
+    // que saem em cima do personagem, como os self buffs.
+    if(m_localPlayer && m_localPlayer->getPosition() == pos)
+        return EffectSourceSelf;
+
+    const TilePtr& tile = g_map.getTile(pos);
+    if(tile) {
+        CreaturePtr creature = tile->getTopCreature();
+        if(creature) {
+            if(creature->isMonster())
+                return EffectSourceMonsters;
+            if(creature->isPlayer())
+                return EffectSourceOthers;
+        }
+    }
+
+    return EffectSourceOthers;
+}
+
 void Game::setAttackingCreature(const CreaturePtr& creature)
 {
     if(creature != m_attackingCreature) {

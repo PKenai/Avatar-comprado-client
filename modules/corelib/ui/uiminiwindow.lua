@@ -10,6 +10,36 @@ function UIMiniWindow:getClassName()
   return 'UIMiniWindow'
 end
 
+function UIMiniWindow:resetToDefault()
+  local parent = nil
+  if self.defaultParentId and self.defaultParentId ~= '' then
+    parent = rootWidget:recursiveGetChildById(self.defaultParentId)
+  end
+  if not parent and modules.game_interface then
+    parent = modules.game_interface.getRightPanel()
+  end
+  if not parent then return end
+
+  local currentParent = self:getParent()
+  if currentParent then
+    currentParent:removeChild(self)
+  end
+
+  self:breakAnchors()
+  self.movingReference = nil
+  self.free = nil
+  self.miniIndex = nil
+  parent:addChild(self)
+
+  if self.defaultHeight and self.defaultHeight > 0 then
+    self:setHeight(self.defaultHeight)
+  end
+  if self:isOn() then
+    self:maximize(true)
+  end
+  self:open(true)
+end
+
 function UIMiniWindow:open(dontSave)
   if self:isExplicitlyVisible() then return end
   self:setVisible(true)  -- goes through UIWindow.setVisible -> fade-in
@@ -65,6 +95,15 @@ function UIMiniWindow:maximize(dontSave)
 end
 
 function UIMiniWindow:setup()
+  if not self.defaultParentId then
+    local defaultParent = self:getParent()
+    if defaultParent then
+      self.defaultParentId = defaultParent:getId()
+      self.defaultIndex = defaultParent:getChildIndex(self)
+      self.defaultHeight = self:getHeight()
+    end
+  end
+
   self:getChildById('closeButton').onClick =
     function()
       self:close()
@@ -97,12 +136,12 @@ function UIMiniWindow:setup()
       if selfSettings.parentId then
         local parent = rootWidget:recursiveGetChildById(selfSettings.parentId)
         if parent then
-          if parent:getClassName() == 'UIMiniWindowContainer' and selfSettings.index and parent:isOn() then
-            self.miniIndex = selfSettings.index
-            parent:scheduleInsert(self, selfSettings.index)
-          elseif selfSettings.position then
+          if selfSettings.position then
             self:setParent(parent, true)
             self:setPosition(topoint(selfSettings.position))
+          elseif parent:getClassName() == 'UIMiniWindowContainer' and selfSettings.index and parent:isOn() then
+            self.miniIndex = selfSettings.index
+            parent:scheduleInsert(self, selfSettings.index)
           end
         end
       end
@@ -163,58 +202,7 @@ function UIMiniWindow:onDragEnter(mousePos)
 end
 
 function UIMiniWindow:onDragLeave(droppedWidget, mousePos)
-  if self.movedWidget then
-    self.setMovedChildMargin(self.movedOldMargin or 0)
-    self.movedWidget = nil
-    self.setMovedChildMargin = nil
-    self.movedOldMargin = nil
-    self.movedIndex = nil
-  end
-
   self:saveParent(self:getParent())
-end
-
-function UIMiniWindow:onDragMove(mousePos, mouseMoved)
-  local oldMousePosY = mousePos.y - mouseMoved.y
-  local children = rootWidget:recursiveGetChildrenByMarginPos(mousePos)
-  local overAnyWidget = false
-  for i=1,#children do
-    local child = children[i]
-    if child:getParent():getClassName() == 'UIMiniWindowContainer' then
-      overAnyWidget = true
-
-      local childCenterY = child:getY() + child:getHeight() / 2
-      if child == self.movedWidget and mousePos.y < childCenterY and oldMousePosY < childCenterY then
-        break
-      end
-
-      if self.movedWidget then
-        self.setMovedChildMargin(self.movedOldMargin or 0)
-        self.setMovedChildMargin = nil
-      end
-
-      if mousePos.y < childCenterY then
-        self.movedOldMargin = child:getMarginTop()
-        self.setMovedChildMargin = function(v) child:setMarginTop(v) end
-        self.movedIndex = 0
-      else
-        self.movedOldMargin = child:getMarginBottom()
-        self.setMovedChildMargin = function(v) child:setMarginBottom(v) end
-        self.movedIndex = 1
-      end
-
-      self.movedWidget = child
-      self.setMovedChildMargin(self:getHeight())
-      break
-    end
-  end
-
-  if not overAnyWidget and self.movedWidget then
-    self.setMovedChildMargin(self.movedOldMargin or 0)
-    self.movedWidget = nil
-  end
-
-  return UIWindow.onDragMove(self, mousePos, mouseMoved)
 end
 
 function UIMiniWindow:onMousePress()
@@ -309,6 +297,7 @@ function UIMiniWindow:saveParentPosition(parentId, position)
   selfSettings.parentId = parentId
   selfSettings.position = pointtostring(position)
   self:setSettings(selfSettings)
+  self:eraseSettings({index = true})
 end
 
 function UIMiniWindow:saveParentIndex(parentId, index)

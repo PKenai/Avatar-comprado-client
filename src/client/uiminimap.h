@@ -31,6 +31,17 @@ public:
   UIMinimap();
 
   void drawSelf(Fw::DrawPane drawPane);
+  void draw(const Rect &visibleRect, Fw::DrawPane drawPane) override;
+
+  // When a shader is set the whole widget (map, cross and marks) is rendered
+  // into an offscreen buffer and then drawn back through it, so the shader sees
+  // the map as one single image instead of a pile of separate tiles.
+  void setShader(const std::string &shader) { m_shader = shader; }
+  std::string getShader() { return m_shader; }
+  // Strength of the lens effect applied by the shader, needed to keep mouse
+  // clicks aligned with what is drawn on screen.
+  void setLensStrength(float strength);
+  float getLensStrength() { return m_lensStrength; }
 
   bool zoomIn() { return m_zoom < m_maxZoom ? setZoom(m_zoom + 1) : false; }
   bool zoomOut() { return m_zoom > m_minZoom ? setZoom(m_zoom - 1) : false; }
@@ -75,6 +86,7 @@ protected:
 
 private:
   void update();
+  Point lensAdjustPoint(const Point &point);
 
   Rect m_mapArea;
   Position m_cameraPosition;
@@ -89,6 +101,8 @@ private:
   bool m_secondaryView = false;
   float m_secondaryOffsetX = 0.0f;
   float m_secondaryOffsetY = 0.0f;
+  std::string m_shader;
+  float m_lensStrength = 0.0f;
 };
 
 #endif

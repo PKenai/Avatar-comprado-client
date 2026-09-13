@@ -136,8 +136,11 @@ HousePtr HouseManager::getHouseByName(std::string name)
 void HouseManager::load(const std::string& fileName)
 {
     try {
+        std::string data = g_resources.readFileContents(fileName);
+        stdext::ensure_latin1(data);
+
         TiXmlDocument doc;
-        doc.Parse(g_resources.readFileContents(fileName).c_str());
+        doc.Parse(data.c_str());
         if(doc.Error())
             stdext::throw_exception(stdext::format("failed to load '%s': %s (House XML)", fileName, doc.ErrorDesc()));
 

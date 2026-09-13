@@ -181,8 +181,13 @@ void CreatureManager::clearSpawns()
 
 void CreatureManager::loadMonsters(const std::string& file)
 {
+    // nomes de monstros/NPCs podem ter acento: normaliza para Latin-1 antes
+    // de parsear (ver stdext::ensure_latin1)
+    std::string data = g_resources.readFileContents(file);
+    stdext::ensure_latin1(data);
+
     TiXmlDocument doc;
-    doc.Parse(g_resources.readFileContents(file).c_str());
+    doc.Parse(data.c_str());
     if(doc.Error())
         stdext::throw_exception(stdext::format("cannot open monsters file '%s': '%s'", file, doc.ErrorDesc()));
 
@@ -234,8 +239,11 @@ void CreatureManager::loadSpawns(const std::string& fileName)
     }
 
     try {
+        std::string data = g_resources.readFileContents(fileName);
+        stdext::ensure_latin1(data);
+
         TiXmlDocument doc;
-        doc.Parse(g_resources.readFileContents(fileName).c_str());
+        doc.Parse(data.c_str());
         if(doc.Error())
             stdext::throw_exception(stdext::format("cannot load spawns xml file '%s: '%s'", fileName, doc.ErrorDesc()));
 
@@ -285,8 +293,12 @@ void CreatureManager::saveSpawns(const std::string& fileName)
 
 void CreatureManager::loadCreatureBuffer(const std::string& buffer)
 {
+    // ponto unico de entrada dos XMLs de criatura (monstros e NPCs)
+    std::string data = buffer;
+    stdext::ensure_latin1(data);
+
     TiXmlDocument doc;
-    doc.Parse(buffer.c_str());
+    doc.Parse(data.c_str());
     if(doc.Error())
         stdext::throw_exception(stdext::format("cannot load creature buffer: %s", doc.ErrorDesc()));
 

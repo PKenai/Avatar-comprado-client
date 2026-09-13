@@ -98,14 +98,16 @@ function startAutoSave()
     if dirty then
       dirty = false
       pcall(function()
-        if offsetWindow and not offsetWindow:isHidden() and currentDirection then
+        if offsetWindow and not offsetWindow:isHidden() then
           local id = tonumber(offsetWindow:getChildById('idInput'):getText())
           if id and id > 0 then
             -- Read current values from text fields
             local ox = tonumber(offsetWindow:recursiveGetChildById('offsetX'):getText()) or 0
             local oy = tonumber(offsetWindow:recursiveGetChildById('offsetY'):getText()) or 0
-            offsets[currentDirection].offsetX = ox
-            offsets[currentDirection].offsetY = oy
+            if currentDirection then
+              offsets[currentDirection].offsetX = ox
+              offsets[currentDirection].offsetY = oy
+            end
 
             -- Update otmlData from offsets (same logic as saveOffset)
             local displacement = {
@@ -135,6 +137,21 @@ function startAutoSave()
                   otmlData.creatures[id]["target-displacement"][direction] = string.format("%d %d", coords[1], coords[2])
                 end
               end
+            elseif selectedOption == 'Item' or selectedOption == 'Effect' then
+              -- Item e Effect usam um unico deslocamento (x, y) + opacidade.
+              -- Sem este ramo o auto-save (setas / digitacao) nao gravava nada
+              -- para esses dois modos: so o botao Apply salvava.
+              local category = (selectedOption == 'Item') and 'items' or 'effects'
+              local displacementKey = (selectedOption == 'Item') and 'item-displacement' or 'effect-displacement'
+              local opacityPanel = offsetWindow:getChildById('OpacityPanel')
+              local opacityField = opacityPanel and opacityPanel:getChildById('opacityInput')
+              local opacity = tonumber(opacityField and opacityField:getText() or '') or 1.0
+
+              otmlData[category][id] = otmlData[category][id] or {}
+              otmlData[category][id][displacementKey] = otmlData[category][id][displacementKey] or {}
+              otmlData[category][id][displacementKey].x = ox
+              otmlData[category][id][displacementKey].y = oy
+              otmlData[category][id][displacementKey].opacity = opacity
             end
 
             saveOtmlFile()
@@ -293,7 +310,11 @@ function setupComboBox()
 
     if effectWidget:isVisible() then
       effectWidget:hide()
-      effectWidget:setEffect(nil)
+      -- setEffect so existe no binding de UIWidget de alguns builds: sem o guard
+      -- a chamada lancava erro e abortava o reset inteiro.
+      if effectWidget.setEffect then
+        effectWidget:setEffect(nil)
+      end
     end
 
     if option == 'Outfit' then
@@ -508,15 +529,25 @@ end
 
 
 function updatePreviewOffset()
-  if not outfitWidget or not outfitWidget:isVisible() then return end
   local offsetXField = offsetWindow:recursiveGetChildById('offsetX')
   local offsetYField = offsetWindow:recursiveGetChildById('offsetY')
   if not offsetXField or not offsetYField then return end
   local ox = tonumber(offsetXField:getText()) or 0
   local oy = tonumber(offsetYField:getText()) or 0
   -- margin-right positive pushes LEFT, margin-bottom positive pushes UP, so invert
-  outfitWidget:setMarginRight(10 - ox)
-  outfitWidget:setMarginBottom(1 + oy)
+  -- (mesma convencao para outfit, item e effect; as margens base vem do .otui)
+  if outfitWidget and outfitWidget:isVisible() then
+    outfitWidget:setMarginRight(10 - ox)
+    outfitWidget:setMarginBottom(1 + oy)
+  end
+  if itemWidget and itemWidget:isVisible() then
+    itemWidget:setMarginRight(35 - ox)
+    itemWidget:setMarginBottom(30 + oy)
+  end
+  if effectWidget and effectWidget:isVisible() then
+    effectWidget:setMarginRight(-ox)
+    effectWidget:setMarginBottom(oy)
+  end
 end
 
 function OffsetManager.onUp()
@@ -562,6 +593,17 @@ function setupNumericFields()
       field.onTextChange = function()
         validateNumericInput(field)
         updatePreviewOffset()
+        markDirty()
+      end
+    end
+  end
+
+  -- a opacidade tambem precisa marcar dirty para o auto-save de item/effect
+  for _, panelId in ipairs({'OpacityPanel', 'OpacityOutfit'}) do
+    local opacityPanel = offsetWindow:getChildById(panelId)
+    local opacityField = opacityPanel and opacityPanel:getChildById('opacityInput')
+    if opacityField then
+      opacityField.onTextChange = function()
         markDirty()
       end
     end
@@ -642,7 +684,14 @@ function OffsetManager.loadAndShowEffect(effectId)
     return
   end
 
-  effect:setEffect(effectId)
+  -- O binding Lua de Effect expoe apenas setId() (setEffect nao existe em Lua),
+  -- entao a chamada antiga lancava erro e abortava o view/apply inteiro.
+  effect:setId(effectId)
+  if effect:getId() ~= effectId then
+    -- id invalido como effect: nao ha o que pre-visualizar
+    effectWidget:hide()
+    return
+  end
 
   effectWidget:show()
   outfitWidget:hide()
@@ -815,6 +864,10 @@ function OffsetManager.viewOffset()
       offsetYField:setText('0')
       opacityFieldPanel:setText('1.0')
     end
+    -- o toggleDirection('down') no fim de viewOffset usa offsets["down"]; sem isto
+    -- os campos voltavam para 0 0 ao visualizar um item ja salvo
+    offsets["down"].offsetX = tonumber(offsetXField:getText()) or 0
+    offsets["down"].offsetY = tonumber(offsetYField:getText()) or 0
     OffsetManager.loadAndShowItem(id)
 
   elseif selectedOption == 'Effect' then
@@ -828,6 +881,8 @@ function OffsetManager.viewOffset()
       offsetYField:setText('0')
       opacityFieldPanel:setText('1.0')
     end
+    offsets["down"].offsetX = tonumber(offsetXField:getText()) or 0
+    offsets["down"].offsetY = tonumber(offsetYField:getText()) or 0
     OffsetManager.loadAndShowEffect(id)
   end
 

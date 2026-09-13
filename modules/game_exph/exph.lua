@@ -16,7 +16,7 @@ function init()
     exphButton = modules.client_topmenu.addRightGameToggleButton("exphButton", tr("Experience Stats"), "/images/topbuttons/EXP", toggle)
 
     exphButton:setOn(exphWindow:isVisible())
-    g_keyboard.bindKeyDown("Ctrl+H", toggle)
+    -- Ctrl+H removido (batia com a ajuda do chat). O botao continua abrindo.
     exphWindow:setup()
     startFreshExpHWindow()
 end
@@ -237,8 +237,6 @@ function terminate()
     })
 
     ProtocolGame.unregisterExtendedOpcode(16)
-
-    g_keyboard.unbindKeyDown("Ctrl+H")
 
     if exphWindow then
         exphWindow:destroy()

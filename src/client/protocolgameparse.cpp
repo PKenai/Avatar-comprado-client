@@ -209,6 +209,9 @@ void ProtocolGame::parseMessage(const InputMessagePtr& msg)
             case Proto::GameServerGraphicalEffect:
                 parseMagicEffect(msg);
                 break;
+            case Proto::GameServerMagicEffectWithSource:
+                parseMagicEffect(msg, true);
+                break;
             case Proto::GameServerTextEffect:
                 parseAnimatedText(msg);
                 break;
@@ -1543,7 +1546,7 @@ void ProtocolGame::parseWorldLight(const InputMessagePtr& msg)
     g_map.setLight(light);
 }
 
-void ProtocolGame::parseMagicEffect(const InputMessagePtr& msg)
+void ProtocolGame::parseMagicEffect(const InputMessagePtr& msg, bool withSource)
 {
     Position pos = getPosition(msg);
     if (g_game.getFeature(Otc::GameTibia12Protocol) && g_game.getProtocolVersion() >= 1203) {
@@ -1600,6 +1603,10 @@ void ProtocolGame::parseMagicEffect(const InputMessagePtr& msg)
     else
         effectId = msg->getU8();
 
+    uint32 sourceId = 0;
+    if (withSource)
+        sourceId = msg->getU32();
+
     if (!g_things.isValidDatId(effectId, ThingCategoryEffect)) {
         /* invalid effect id - silently ignored */;
         return;
@@ -1607,6 +1614,7 @@ void ProtocolGame::parseMagicEffect(const InputMessagePtr& msg)
 
     EffectPtr effect = EffectPtr(new Effect());
     effect->setId(effectId);
+    effect->setSourceId(sourceId);
     g_map.addThing(effect, pos);
 }
 

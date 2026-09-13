@@ -99,6 +99,17 @@ public:
     void setCameraPosition(const Position& pos);
     Position getCameraPosition();
 
+    // Rolagem suave: em vez de colar no alvo (tile + walkOffset) a cada frame, a
+    // camera filtra a *velocidade* do alvo e integra. Em movimento constante ela
+    // acompanha o alvo sem atraso nenhum - por isso virar de direcao nao trava -
+    // mas cada variacao brusca (um SQM de uma vez) vira um deslize.
+    // time == 0 desliga. maxLag e' a distancia em que a camera desiste de deslizar
+    // e cola no alvo (teleporte, troca de andar, mapa novo).
+    void setWalkSmoothingTime(float ms) { m_walkSmoothTime = std::max(0.0f, ms); }
+    float getWalkSmoothingTime() { return m_walkSmoothTime; }
+    void setWalkSmoothingMaxLag(float px) { m_walkSmoothMaxLag = std::max(0.0f, px); }
+    float getWalkSmoothingMaxLag() { return m_walkSmoothMaxLag; }
+
     void setMinimumAmbientLight(float intensity) { m_minimumAmbientLight = intensity; }
     float getMinimumAmbientLight() { return m_minimumAmbientLight; }
 
@@ -161,6 +172,7 @@ public:
 
 private:
     Rect calcFramebufferSource(const Size& destSize, bool inNextFrame = false);
+    Point getSmoothedWalkOffset(const Point& walkOffset);
     int calcFirstVisibleFloor(bool forFading = false);
     int calcLastVisibleFloor();
     Point transformPositionTo2D(const Position& position, const Position& relativePosition);
@@ -182,6 +194,20 @@ private:
     Point m_moveOffset;
     Position m_customCameraPosition;
     Position m_lastCameraPosition;
+
+    // estado da rolagem suave (ver getSmoothedWalkOffset)
+    float m_walkSmoothTime = 100.0f;  // ms: constante de tempo do filtro (0 = desligado)
+    float m_walkSmoothMaxLag = 16.0f; // px: a partir daqui cola no alvo em vez de deslizar
+    float m_walkSmoothX = 0.0f;
+    float m_walkSmoothY = 0.0f;
+    float m_walkSmoothTargetX = 0.0f; // alvo do frame anterior (base do calculo da velocidade)
+    float m_walkSmoothTargetY = 0.0f;
+    float m_walkSmoothVelX = 0.0f;    // px/ms: velocidade filtrada do alvo
+    float m_walkSmoothVelY = 0.0f;
+    bool m_walkSmoothValid = false;
+
+    uint32_t m_walkSmoothTick = 0;
+    Point m_walkSmoothOffset;
     stdext::boolean<true> m_mustUpdateVisibleTilesCache;
     stdext::boolean<true> m_multifloor;
     stdext::boolean<true> m_animated;

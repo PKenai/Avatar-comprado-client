@@ -26,6 +26,7 @@
 #include "declarations.h"
 #include "coordsbuffer.h"
 #include "drawqueue.h"
+#include <framework/stdext/string.h>
 
 class CachedText
 {
@@ -37,7 +38,17 @@ public:
 
     void wrapText(int maxWidth);
     void setFont(const BitmapFontPtr& font) { m_font = font; update(); }
-    void setText(const std::string& text) { m_textColors.clear();  m_text = text; update(); }
+    // texto desenhado no mapa (nome/fala de criatura, dano flutuante, texto de
+    // tile) nao passa por widget nenhum: as fontes sao indexadas por byte, entao
+    // normaliza para Latin-1 aqui tambem (ver stdext::ensure_latin1)
+    void setText(const std::string& text)
+    {
+        std::string latin1Text = text;
+        stdext::ensure_latin1(latin1Text);
+        m_textColors.clear();
+        m_text = latin1Text;
+        update();
+    }
     void setColoredText(const std::vector<std::string>& texts);
     void setAlign(Fw::AlignmentFlag align) { m_align = align; update(); }
 

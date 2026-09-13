@@ -143,6 +143,12 @@ GameWingsAndAura = 104
 GameOutfitShaders = 106
 GameDrawAuraOnTop = 109
 
+-- OTCv8-dev: desenha o chao de todos os tiles antes de itens/criaturas.
+-- Necessario para outfits grandes (asas/auras) nao serem cortados pelo chao do
+-- tile da frente, e mantem paredes/itens "bottom" na camada de objetos.
+GameMapDrawGroundFirst = 116
+GameMapIgnoreCorpseCorrection = 117
+
 TextColors = {
   red       = '#f55e5e', --'#c83200'
   orange    = '#f36500', --'#c87832'
@@ -201,17 +207,20 @@ MessageModes = {
   TutorialHint            = 38,
   Thankyou                = 39,
   Market                  = 40,
-  BeyondLast              = 41,
-  MonsterYell             = 42,
-  MonsterSay              = 43,
-  Red                     = 44,
-  Blue                    = 45,
-  RVRChannel              = 46,
-  RVRAnswer               = 47,
-  RVRContinue             = 48,
-  -- C++ Otc::MessageSystemFromStartBlock (used by older protocol maps / NPC)
+  Mana                    = 41,
+  BeyondLast              = 42,
+  MonsterYell             = 43,
+  MonsterSay              = 44,
+  Red                     = 45,
+  Blue                    = 46,
+  RVRChannel              = 47,
+  RVRAnswer               = 48,
+  RVRContinue             = 49,
+  GameHighlight           = 50,
+  -- C++ Otc::MessageNpcFromStartBlock (older code here calls it SystemFromStartBlock)
+  NpcFromStartBlock       = 51,
   SystemFromStartBlock    = 51,
-  Last                    = 49,
+  Last                    = 52,
   Invalid                 = 255,
 }
 

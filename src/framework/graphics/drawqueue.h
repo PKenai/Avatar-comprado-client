@@ -86,6 +86,27 @@ struct DrawQueueItemImageWithShader : public DrawQueueItemTextureCoords {
     std::string m_shader;
 };
 
+// Renders a whole sub-queue into an offscreen framebuffer and then draws that
+// framebuffer back on screen through a shader. The sub-queue is built while the
+// draw lists are being filled (same thread/order as if it were enqueued
+// directly), so no extra synchronization is needed.
+// The shader receives the destination rect as u_Center (center, in screen
+// pixels) and u_Offset (half size, in screen pixels), which lets it map the
+// fragment back to a position inside the widget. u_Resolution holds the screen
+// size the framebuffer was rendered at.
+struct DrawQueueItemFramebufferWithShader : public DrawQueueItem {
+    DrawQueueItemFramebufferWithShader(const std::shared_ptr<DrawQueue>& queue, const Rect& dest, const std::string& shader) :
+        DrawQueueItem(nullptr), m_queue(queue), m_dest(dest), m_shader(shader) {}
+    virtual ~DrawQueueItemFramebufferWithShader() = default;
+
+    virtual void draw();
+    virtual bool cache() { return false; }
+
+    std::shared_ptr<DrawQueue> m_queue;
+    Rect m_dest;
+    std::string m_shader;
+};
+
 struct DrawQueueItemFilledRect : public DrawQueueItem {
     DrawQueueItemFilledRect(const Rect& rect, const Color& color) :
         DrawQueueItem(nullptr, color), m_dest(rect) {};

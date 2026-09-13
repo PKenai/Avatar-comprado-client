@@ -59,7 +59,7 @@ function terminate()
     onGameEnd = offline
   })
 
-  g_keyboard.unbindKeyDown('Ctrl+S')
+  g_keyboard.unbindKeyDown('Ctrl+Z')
   skillsWindow:destroy()
   skillsButton:destroy()
 end

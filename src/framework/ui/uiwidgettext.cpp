@@ -113,6 +113,11 @@ void UIWidget::onFontChange(const std::string& font)
 
 void UIWidget::setText(std::string text, bool dontFireLuaCall)
 {
+    // texto exibido: pode vir de Lua, do server ou do clipboard, sempre em
+    // algum encoding. As fontes sao indexadas por byte, entao tudo que chega
+    // aqui precisa estar em Latin-1
+    stdext::ensure_latin1(text);
+
     if(m_textOnlyUpperCase)
         stdext::toupper(text);
 
@@ -140,9 +145,14 @@ void UIWidget::setColoredText(const std::vector<std::string>& texts, bool dontFi
     for(size_t i = 0, p = 0; i < texts.size() - 1; i += 2) {
         Color c(Color::white);
         stdext::cast<Color>(texts[i + 1], c);
-        text += texts[i];
-        for (auto& c : texts[i]) {
-            if ((uint8)c >= 32)
+
+        // normaliza antes de contar os bytes, senao os offsets de cor sairiam
+        // deslocados em relacao ao texto que sera realmente desenhado
+        std::string fragment = texts[i];
+        stdext::ensure_latin1(fragment);
+        text += fragment;
+        for (auto& ch : fragment) {
+            if ((uint8)ch >= 32)
                 p += 1;
         }
         m_textColors.push_back(std::make_pair(p, c));

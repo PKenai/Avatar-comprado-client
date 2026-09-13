@@ -306,8 +306,12 @@ void ThingTypeManager::loadXml(const std::string& file)
         if(!isOtbLoaded())
             stdext::throw_exception("OTB must be loaded before XML");
 
+        // nomes e descricoes de itens podem ter acento
+        std::string data = g_resources.readFileContents(file);
+        stdext::ensure_latin1(data);
+
         TiXmlDocument doc;
-        doc.Parse(g_resources.readFileContents(file).c_str());
+        doc.Parse(data.c_str());
         if(doc.Error())
             stdext::throw_exception(stdext::format("failed to parse '%s': '%s'", file, doc.ErrorDesc()));
 

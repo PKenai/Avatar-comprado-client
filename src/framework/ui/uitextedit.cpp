@@ -398,6 +398,10 @@ void UITextEdit::setTextVirtualOffset(const Point& offset)
 
 void UITextEdit::appendText(std::string text)
 {
+    // normaliza ANTES de inserir: o cursor e as validacoes contam bytes, entao
+    // converter depois do insert deixaria o cursor fora de posicao
+    stdext::ensure_latin1(text);
+
     if(hasSelection())
         del();
 

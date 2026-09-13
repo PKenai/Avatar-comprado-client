@@ -21,6 +21,7 @@
  */
 
 #include <framework/core/eventdispatcher.h>
+#include <framework/stdext/string.h>
 #include "androidwindow.h"
 
 AndroidWindow g_androidWindow;
@@ -542,6 +543,11 @@ void AndroidWindow::updateSize()
 
 void AndroidWindow::handleTextInput(std::string text)
 {
+    // o teclado virtual do Android manda o texto em UTF-8, mas o client inteiro
+    // (fontes, textedit, protocolo 8.60) trabalha em Latin-1. Sem isso os
+    // acentos chegam como dois bytes e saem na tela como 'vocC'e'
+    stdext::ensure_latin1(text);
+
     if (!m_onInputEvent) return;
     g_dispatcher.addEventEx("AndroidWindow::handleTextInput", [&, text] {
         if (!m_onInputEvent) return;
@@ -562,8 +568,14 @@ void AndroidWindow::showTextEditor(const std::string& title, const std::string& 
 
         jint nResult = g_androidState->activity->vm->AttachCurrentThread(&env, &javaVMAttachArgs);
         if (nResult != JNI_ERR) {
+            // o texto aqui esta em Latin-1, mas o JNI/Java espera UTF-8 (mesmo
+            // motivo do ensure_latin1 no handleTextInput, so que na volta)
+            std::string utf8Title = stdext::latin1_to_utf8(title);
+            std::string utf8Description = stdext::latin1_to_utf8(description);
+            std::string utf8Text = stdext::latin1_to_utf8(text);
+
             jmethodID MethodShowKeyboard = env->GetMethodID(env->GetObjectClass(g_androidState->activity->clazz), "showTextEdit", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V");
-            env->CallVoidMethod(g_androidState->activity->clazz, MethodShowKeyboard, env->NewStringUTF(title.c_str()), env->NewStringUTF(description.c_str()), env->NewStringUTF(text.c_str()), flags);
+            env->CallVoidMethod(g_androidState->activity->clazz, MethodShowKeyboard, env->NewStringUTF(utf8Title.c_str()), env->NewStringUTF(utf8Description.c_str()), env->NewStringUTF(utf8Text.c_str()), flags);
             g_androidState->activity->vm->DetachCurrentThread();
         }
     });

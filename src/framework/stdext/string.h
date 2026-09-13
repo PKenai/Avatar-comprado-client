@@ -58,6 +58,15 @@ bool is_valid_utf8(const std::string& src);
 std::string utf8_to_latin1(const std::string& src);
 std::string latin1_to_utf8(const std::string& src);
 
+// O client trabalha com Latin-1 (CP1252) de ponta a ponta: as fontes sao
+// indexadas por byte, o protocolo 8.60 manda bytes crus e os dados do server
+// sao Latin-1. Texto salvo em UTF-8 (editores modernos, teclado do Android)
+// chega como bytes multibyte e aparece como mojibake ('vocC'a' -> 'vocCÃª').
+// Esta funcao deixa o texto em Latin-1: converte quando realmente e UTF-8 e
+// nao faz nada quando ja e Latin-1/ASCII ou quando e conteudo binario.
+// Tambem remove o BOM UTF-8 do inicio, que quebra os parsers de Lua e OTML.
+void ensure_latin1(std::string& text);
+
 #ifdef WIN32
 std::wstring utf8_to_utf16(const std::string& src);
 std::string utf16_to_utf8(const std::wstring& src);

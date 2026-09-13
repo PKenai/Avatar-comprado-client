@@ -33,6 +33,7 @@
 #include "game.h"
 #include "spritemanager.h"
 
+#include <framework/core/clock.h>
 #include <framework/graphics/graphics.h>
 #include <framework/graphics/image.h>
 #include <framework/graphics/framebuffermanager.h>
@@ -264,13 +265,20 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
         }
     }
 
-    // Single-pass: render each tile fully (ground → bottom → creatures → top)
-    // before moving to the next tile, preserving correct Z-order.
-    // This prevents items from further tiles extending into closer tiles' area
-    // from being rendered on top of closer tiles' content.
+    // Ground first: every tile lays down its ground before any bottom item,
+    // creature or top thing is drawn.  With the previous single-pass version
+    // (ground → bottom → creatures → top, tile by tile) the ground of a tile
+    // drawn later — the south/east neighbour — covered the lower part of
+    // sprites that overflow their own tile, so walking creatures and effects
+    // looked like they were being cut by the floor.
+    // Items/creatures keep being drawn tile by tile in the passes below, which
+    // preserves the wall/render ordering fixed previously.
     const float spriteSize = (float)g_sprites.spriteSize();
     // Fade radius: m_floorTransparencyRadius (2 SQMs) + 1 SQM for full gradual fade out
     const float fadeRadius = m_floorTransparencyRadius + 1.0f;
+
+    std::vector<float> tileOpacities;
+    tileOpacities.reserve(tiles.size());
 
     for (auto& tile : tiles) {
         Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
@@ -347,13 +355,26 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
             }
         }
 
-        size_t tileDrawStart = g_drawQueue->size();
+        tileOpacities.push_back(tileOpacity);
+
+        size_t tileGroundStart = g_drawQueue->size();
 
         tile->drawGround(tileDrawPos, m_lightView.get());
 
-        // For same-floor occluder transparency we must keep the ground fully
-        // opaque so the floor beneath stays visible; only items on top get
-        // the semi-transparent treatment.  Track where the ground ends.
+        // Upper-floor fade applies to the ground as well; the same-floor
+        // occluder fade must keep the ground fully opaque so the floor beneath
+        // stays visible — only the things drawn on top of it get the fade.
+        if (tileOpacity < 0.999f && !occluderApplied)
+            g_drawQueue->setOpacity(tileGroundStart, tileOpacity);
+    }
+
+    // Second pass: bottom items, creatures and top things, tile by tile.
+    // The ground of every tile is already on screen, so nothing here can be
+    // cut by the floor of the next tile.
+    size_t tileIndex = 0;
+    for (auto& tile : tiles) {
+        Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
+
         size_t tileNonGroundStart = g_drawQueue->size();
 
         tile->drawBottom(tileDrawPos, m_lightView.get());
@@ -366,12 +387,25 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
         tile->drawCreatures(tileDrawPos, m_lightView.get());
         tile->drawTop(tileDrawPos, m_lightView.get());
 
-        // Apply smooth fade transparency to all draw calls for this tile
-        if (tileOpacity < 0.999f) {
-            // Upper-floor fade applies to the whole tile (ground included);
-            // same-floor occluder fade skips the ground so it stays opaque.
-            g_drawQueue->setOpacity(occluderApplied ? tileNonGroundStart : tileDrawStart, tileOpacity);
-        }
+        // Apply smooth fade transparency to all draw calls of this tile
+        const float tileOpacity = tileOpacities[tileIndex++];
+        if (tileOpacity < 0.999f)
+            g_drawQueue->setOpacity(tileNonGroundStart, tileOpacity);
+    }
+
+    // Third pass: magic effects, drawn above everything else of this floor
+    // (ground, items and creatures included).
+    tileIndex = 0;
+    for (auto& tile : tiles) {
+        Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
+
+        size_t effectsStart = g_drawQueue->size();
+
+        tile->drawEffects(tileDrawPos, m_lightView.get());
+
+        const float tileOpacity = tileOpacities[tileIndex++];
+        if (tileOpacity < 0.999f)
+            g_drawQueue->setOpacity(effectsStart, tileOpacity);
     }
 
     for (const MissilePtr& missile : g_map.getFloorMissiles(floor)) {
@@ -706,6 +740,7 @@ void MapView::followCreature(const CreaturePtr& creature)
 {
     m_follow = true;
     m_followingCreature = creature;
+    m_walkSmoothValid = false; // camera nova: reancora em vez de deslizar
     requestVisibleTilesCacheUpdate();
 }
 
@@ -713,6 +748,7 @@ void MapView::setCameraPosition(const Position& pos)
 {
     m_follow = false;
     m_customCameraPosition = pos;
+    m_walkSmoothValid = false;
     requestVisibleTilesCacheUpdate();
 }
 
@@ -785,12 +821,105 @@ void MapView::move(int x, int y)
         requestVisibleTilesCacheUpdate();
 }
 
+// O alvo da camera e' o tile atual mais o walkOffset: os dois juntos formam uma
+// posicao continua em pixels. Aqui a gente filtra a velocidade desse alvo e
+// integra, devolvendo so' a parte de dentro do tile, que e' o que o blit do
+// framebuffer consome. Com isso a rolagem fica continua mesmo quando o passo
+// chega espacado, sem perder o alinhamento no repouso (parado, o valor converge
+// exatamente para o walkOffset original) e sem atraso acumulado enquanto anda.
+Point MapView::getSmoothedWalkOffset(const Point& walkOffset)
+{
+    if (m_walkSmoothTime <= 0.0f || !isFollowingCreature())
+        return walkOffset;
+
+    const Position cameraPosition = getCameraPosition();
+    if (!cameraPosition.isValid())
+        return walkOffset;
+
+    const float tileSize = (float)g_sprites.spriteSize();
+    const float tileX = cameraPosition.x * tileSize;
+    const float tileY = cameraPosition.y * tileSize;
+    const float targetX = tileX + walkOffset.x;
+    const float targetY = tileY + walkOffset.y;
+
+    const uint32_t now = g_clock.millis();
+    if (!m_walkSmoothValid) {
+        m_walkSmoothX = targetX;
+        m_walkSmoothY = targetY;
+        m_walkSmoothTargetX = targetX;
+        m_walkSmoothTargetY = targetY;
+        m_walkSmoothVelX = 0.0f;
+        m_walkSmoothVelY = 0.0f;
+        m_walkSmoothValid = true;
+        m_walkSmoothTick = now;
+        m_walkSmoothOffset = walkOffset;
+        return m_walkSmoothOffset;
+    }
+
+    // Fundo, frente e hit test do mouse desenham no mesmo frame: todos tem que
+    // receber o mesmo offset, senao as camadas desalinham entre si.
+    if (now == m_walkSmoothTick)
+        return m_walkSmoothOffset;
+
+    float dt = (float)(now - m_walkSmoothTick);
+    m_walkSmoothTick = now;
+    if (dt <= 0.0f)
+        dt = 1.0f;
+    else if (dt > 250.0f)
+        dt = 250.0f; // pausa longa (alt-tab, loading) nao pode virar deslize enorme
+
+    const float dx = targetX - m_walkSmoothX;
+    const float dy = targetY - m_walkSmoothY;
+    const float snapDistance = std::max(tileSize * 3.0f, m_walkSmoothMaxLag * 4.0f);
+
+    if (std::fabs(dx) > snapDistance || std::fabs(dy) > snapDistance) {
+        // teleporte, troca de andar ou mapa novo: cola direto no alvo
+        m_walkSmoothX = targetX;
+        m_walkSmoothY = targetY;
+        m_walkSmoothTargetX = targetX;
+        m_walkSmoothTargetY = targetY;
+        m_walkSmoothVelX = 0.0f;
+        m_walkSmoothVelY = 0.0f;
+    } else {
+        // O que o filtro suaviza e' a *velocidade* do alvo, nao a posicao. Em
+        // movimento constante a velocidade filtrada e' a propria velocidade, entao
+        // a camera acompanha o alvo sem atraso nenhum - e virar de direcao nao
+        // precisa desfazer atraso acumulado, que era a travadinha ao trocar de
+        // direcao (pior na diagonal, onde o atraso dos dois eixos somava e batia
+        // no limite de maxLag). Ja as variacoes bruscas - um SQM de uma vez, ou a
+        // inversao ao virar - saem espalhadas no tempo em vez de surgir de uma
+        // vez so', que e' o deslize que tira o pulo de SQM em SQM.
+        const float rawVelX = (targetX - m_walkSmoothTargetX) / dt;
+        const float rawVelY = (targetY - m_walkSmoothTargetY) / dt;
+        m_walkSmoothTargetX = targetX;
+        m_walkSmoothTargetY = targetY;
+
+        const float alpha = 1.0f - std::exp(-dt / m_walkSmoothTime);
+        m_walkSmoothVelX += (rawVelX - m_walkSmoothVelX) * alpha;
+        m_walkSmoothVelY += (rawVelY - m_walkSmoothVelY) * alpha;
+
+        m_walkSmoothX += m_walkSmoothVelX * dt;
+        m_walkSmoothY += m_walkSmoothVelY * dt;
+
+        // Rede de seguranca bem mais lenta que o deslize: o filtro de velocidade
+        // preserva o deslocamento, mas se um passo for interrompido no meio
+        // sobraria um resto - aqui ele converge sem encurtar a suavizacao.
+        const float driftAlpha = 1.0f - std::exp(-dt / (m_walkSmoothTime * 4.0f));
+        m_walkSmoothX += (targetX - m_walkSmoothX) * driftAlpha;
+        m_walkSmoothY += (targetY - m_walkSmoothY) * driftAlpha;
+    }
+
+    m_walkSmoothOffset = Point((int)std::lround(m_walkSmoothX - tileX),
+                               (int)std::lround(m_walkSmoothY - tileY));
+    return m_walkSmoothOffset;
+}
+
 Rect MapView::calcFramebufferSource(const Size& destSize, bool inNextFrame)
 {
     float scaleFactor = g_sprites.spriteSize()/(float)g_sprites.spriteSize();
     Point drawOffset = ((m_drawDimension - m_visibleDimension - Size(1,1)).toPoint()/2) * g_sprites.spriteSize();
     if(isFollowingCreature())
-        drawOffset += m_followingCreature->getWalkOffset(inNextFrame) * scaleFactor;
+        drawOffset += getSmoothedWalkOffset(m_followingCreature->getWalkOffset(inNextFrame)) * scaleFactor;
 
     Size srcSize = destSize;
     Size srcVisible = m_visibleDimension * g_sprites.spriteSize();

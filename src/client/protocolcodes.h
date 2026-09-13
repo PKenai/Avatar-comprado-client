@@ -78,6 +78,7 @@ namespace Proto {
         GameServerNewCancelWalk             = 69,
         GameServerPredictiveCancelWalk      = 70,
         GameServerWalkId                    = 71,
+        GameServerMagicEffectWithSource     = 72, // Avatar custom: magic effect + quem o causou (u32)
 
         GameServerFloorDescription          = 75,
 

@@ -166,6 +166,12 @@ function onMiniWindowClose()
 end
 
 function onHealthChange(localPlayer, health, maxHealth)
+  -- os eventos do LocalPlayer podem chegar com valor nil (login/logout/dead):
+  -- concatenar nil abortava o handler e a barra parava de atualizar.
+  if not health or not maxHealth then
+    return
+  end
+
   healthBar:setText(health .. ' / ' .. maxHealth)
   healthBar:setFont('verdana-11px-rounded')
   healthLabel:setTooltip(tr(healthTooltip, health, maxHealth))

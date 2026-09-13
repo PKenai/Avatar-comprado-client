@@ -340,6 +340,58 @@ function getOppositeAnchor(anchor)
   return anchor
 end
 
+-- Deserializacao segura de tabelas que chegam pela rede.
+--
+-- O servidor manda strings no formato "return {tabela lua}" (market, depot
+-- search, screen loot, monster loot, inspect) e o client antigo fazia
+-- loadstring(...) direto: isso entregava o ambiente global inteiro para o
+-- pacote, entao qualquer pacote (servidor comprometido, ou man-in-the-middle,
+-- ja que o protocolo 8.60 vai em texto puro) podia rodar io/os/g_* no client.
+--
+-- Aqui o chunk roda num ambiente proprio que contem APENAS a lista abaixo; sem
+-- metatable, entao qualquer global fora dela e nil e o acesso morre com o erro
+-- normal de Lua ("attempt to index a nil value"), capturado pelo pcall.
+-- Os payloads legitimos sao so literais gerados por table.tostring/%q no
+-- servidor, entao nada disso e realmente necessario - a lista existe para nao
+-- quebrar payload nenhum que use string/table/math.
+local DESERIALIZE_ENV_NAMES = { 'type', 'tostring', 'tonumber', 'pairs', 'ipairs',
+                                'next', 'select', 'unpack', 'string', 'table',
+                                'math', 'assert', 'error' }
+local deserializeEnv
+
+function safeLuaDeserialize(text)
+  if type(text) ~= 'string' or #text == 0 then
+    return nil
+  end
+
+  local func, err = loadstring('return ' .. text, '=payload')
+  if not func then
+    return nil, err
+  end
+
+  if not deserializeEnv then
+    local env = {}
+    for _, name in ipairs(DESERIALIZE_ENV_NAMES) do
+      env[name] = _G[name]
+    end
+    deserializeEnv = env
+  end
+
+  setfenv(func, deserializeEnv)
+
+  local ok, value = pcall(func)
+  if not ok then
+    return nil, value
+  end
+
+  -- todos os pontos que usam isso esperam uma tabela (lista de ofertas, de
+  -- resultados, de loot...): qualquer outra coisa e descartada.
+  if type(value) ~= 'table' then
+    return nil, 'payload is not a table'
+  end
+  return value
+end
+
 function makesingleton(obj)
   local singleton = {}
   if obj.getClassName then

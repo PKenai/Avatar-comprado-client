@@ -36,6 +36,13 @@ function load()
   g_game.enableFeature(GameWingsAndAura)
   g_game.enableFeature(GameOutfitShaders)
 
+  -- Render (obrigatorio com asas/auras grandes): o chao e desenhado antes de
+  -- itens e criaturas, senao o chao do tile da frente corta a parte de baixo dos
+  -- outfits grandes. Com a flag ligada, paredes e itens "on bottom" voltam para
+  -- a camada de objetos (desenhados junto das criaturas, tile a tile), que e o
+  -- que mantem criaturas atras de uma parede escondidas por ela.
+  g_game.enableFeature(GameMapDrawGroundFirst)
+
   -- Canonical protocol 8.60 feature set (matches the original Avatar client, whose
   -- engine enabled these in C++). The Beta modules only enabled a minimal subset,
   -- which broke the login/game handshake against the TFS 0.4 server.

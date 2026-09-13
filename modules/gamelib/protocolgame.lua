@@ -47,12 +47,12 @@ function ProtocolGame.registerExtendedOpcode(opcode, callback)
 end
 
 function ProtocolGame.unregisterExtendedOpcode(opcode)
-  if opcode < 0 or opcode > 255 then
-    error('Invalid opcode. Range: 0-255')
-  end
-
-  if not extendedCallbacks[opcode] then
-    error('Opcode is not registered.')
+  -- idempotente de proposito: os modules terminam em ordem arbitraria (reload de
+  -- scripts, unload de module, logout, saida do client) e um 'Opcode is not
+  -- registered.' aqui abortava o terminate() inteiro, deixando janela, timer e
+  -- bind de teclado para tras.
+  if type(opcode) ~= 'number' or opcode < 0 or opcode > 255 then
+    return
   end
 
   extendedCallbacks[opcode] = nil

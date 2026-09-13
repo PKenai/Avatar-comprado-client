@@ -42,6 +42,12 @@ public:
     void setId(uint32 id) override;
     uint32 getId() override { return m_id; }
 
+    // Quem causou o efeito (id da criatura; 0 = sem informacao). A categoria
+    // (self / others / monsters) e' resolvida no primeiro draw, quando o criador
+    // ja' esta' no mapa.
+    void setSourceId(uint32 sourceId) { m_sourceId = sourceId; m_sourceCategory = -1; }
+    uint32 getSourceId() { return m_sourceId; }
+
     EffectPtr asEffect() { return static_self_cast<Effect>(); }
     bool isEffect() override { return true; }
 
@@ -53,6 +59,8 @@ protected:
 
 private:
     uint16 m_id;
+    uint32 m_sourceId = 0;
+    int m_sourceCategory = -1;
     Timer m_animationTimer;
     int m_animationPhase = 0;
 };

@@ -4,7 +4,8 @@ Module
   author: System
   sandboxed: true
   scripts: [ huntwaypoint ]
-  autoload: true
+  // Desativado temporariamente (a pedido). Para voltar, troque para true.
+  autoload: false
   autoload-priority: 1003
   @onLoad: init()
   @onUnload: terminate()

@@ -73,7 +73,7 @@ void Tile::drawBottom(const Point& dest, LightView* lightView)
     if (g_game.getFeature(Otc::GameMapDrawGroundFirst)) {
         bool afterBottom = false;
         for (const ThingPtr& thing : m_things) {
-            if (thing->isOnBottom())
+            if (thing->isOnBottom() || thing->isGround() && thing->blockProjectile())
                 afterBottom = true;
             if (!thing->isGround() && !thing->isGroundBorder() && !thing->isOnBottom())
                 break;
@@ -182,19 +182,27 @@ void Tile::drawTop(const Point& dest, LightView* lightView)
         creature->draw(dest - m_drawElevation * g_sprites.getOffsetFactor(), true, lightView);
     }
 
-    // effects
-    limit = std::min<int>((int)m_effects.size() - 1, g_adaptiveRenderer.effetsLimit());
-    for (int i = limit; i >= 0; --i) {
-        if (m_effects[i]->isHidden())
-            continue;
-        m_effects[i]->draw(dest - m_drawElevation * g_sprites.getOffsetFactor(), m_position.x - g_map.getCentralPosition().x, m_position.y - g_map.getCentralPosition().y, true, lightView);
-    }
-
     // top
     for (const ThingPtr& thing : m_things) {
         if (!thing->isOnTop() || thing->isHidden())
             continue;
         thing->draw(dest, true, lightView);
+    }
+}
+
+// Magic effects have their own pass (MapView::drawFloor), so they end up on top
+// of the whole floor instead of being buried by the ground/items of the tiles
+// drawn after this one.
+void Tile::drawEffects(const Point& dest, LightView* lightView)
+{
+    if (m_fill != Color::alpha)
+        return;
+
+    int limit = std::min<int>((int)m_effects.size() - 1, g_adaptiveRenderer.effetsLimit());
+    for (int i = limit; i >= 0; --i) {
+        if (m_effects[i]->isHidden())
+            continue;
+        m_effects[i]->draw(dest - m_drawElevation * g_sprites.getOffsetFactor(), m_position.x - g_map.getCentralPosition().x, m_position.y - g_map.getCentralPosition().y, true, lightView);
     }
 }
 

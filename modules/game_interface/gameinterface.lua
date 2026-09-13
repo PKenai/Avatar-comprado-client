@@ -86,7 +86,8 @@ function bindKeys()
   g_keyboard.bindKeyPress('Ctrl+-', function() gameMapPanel:zoomOut() end, gameRootPanel)
   g_keyboard.bindKeyDown('Ctrl+Q', function() tryLogout(false) end, gameRootPanel)
   g_keyboard.bindKeyDown('Ctrl+L', function() tryLogout(false) end, gameRootPanel)
-  g_keyboard.bindKeyDown('Ctrl+W', function() g_map.cleanTexts() modules.game_textmessage.clearMessages() end, gameRootPanel)
+  -- Ctrl+W removido: limpar os textos da tela nao vale um atalho global que
+  -- colide com o WASD (quem precisar, o botao esta' no menu do topo).
 
   -- Space = seleciona o alvo mais proximo (quando chat nao esta focado)
   g_keyboard.bindKeyDown('Space', function()

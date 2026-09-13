@@ -343,6 +343,8 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_game", "enableFeature", &Game::enableFeature, &g_game);
     g_lua.bindSingletonFunction("g_game", "disableFeature", &Game::disableFeature, &g_game);
     g_lua.bindSingletonFunction("g_game", "resetFeatures", &Game::resetFeatures, &g_game);
+    g_lua.bindSingletonFunction("g_game", "setEffectOpacity", &Game::setEffectOpacity, &g_game);
+    g_lua.bindSingletonFunction("g_game", "getEffectOpacity", &Game::getEffectOpacity, &g_game);
     g_lua.bindSingletonFunction("g_game", "isGM", &Game::isGM, &g_game);
     g_lua.bindSingletonFunction("g_game", "answerModalDialog", &Game::answerModalDialog, &g_game);
     g_lua.bindSingletonFunction("g_game", "browseField", &Game::browseField, &g_game);
@@ -941,6 +943,10 @@ void Client::registerLuaFunctions()
     g_lua.bindClassStaticFunction<UIMap>("create", []{ return UIMapPtr(new UIMap); });
     g_lua.bindClassMemberFunction<UIMap>("drawSelf", &UIMap::drawSelf);
     g_lua.bindClassMemberFunction<UIMap>("movePixels", &UIMap::movePixels);
+    g_lua.bindClassMemberFunction<UIMap>("setWalkSmoothingTime", &UIMap::setWalkSmoothingTime);
+    g_lua.bindClassMemberFunction<UIMap>("getWalkSmoothingTime", &UIMap::getWalkSmoothingTime);
+    g_lua.bindClassMemberFunction<UIMap>("setWalkSmoothingMaxLag", &UIMap::setWalkSmoothingMaxLag);
+    g_lua.bindClassMemberFunction<UIMap>("getWalkSmoothingMaxLag", &UIMap::getWalkSmoothingMaxLag);
     g_lua.bindClassMemberFunction<UIMap>("setZoom", &UIMap::setZoom);
     g_lua.bindClassMemberFunction<UIMap>("zoomIn", &UIMap::zoomIn);
     g_lua.bindClassMemberFunction<UIMap>("zoomOut", &UIMap::zoomOut);
@@ -1020,6 +1026,10 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<UIMinimap>("getMaxZoom", &UIMinimap::getMaxZoom);
     g_lua.bindClassMemberFunction<UIMinimap>("getZoom", &UIMinimap::getZoom);
     g_lua.bindClassMemberFunction<UIMinimap>("getScale", &UIMinimap::getScale);
+    g_lua.bindClassMemberFunction<UIMinimap>("setShader", &UIMinimap::setShader);
+    g_lua.bindClassMemberFunction<UIMinimap>("getShader", &UIMinimap::getShader);
+    g_lua.bindClassMemberFunction<UIMinimap>("setLensStrength", &UIMinimap::setLensStrength);
+    g_lua.bindClassMemberFunction<UIMinimap>("getLensStrength", &UIMinimap::getLensStrength);
     g_lua.bindClassMemberFunction<UIMinimap>("anchorPosition", &UIMinimap::anchorPosition);
     g_lua.bindClassMemberFunction<UIMinimap>("fillPosition", &UIMinimap::fillPosition);
     g_lua.bindClassMemberFunction<UIMinimap>("centerInPosition", &UIMinimap::centerInPosition);

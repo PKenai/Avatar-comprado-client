@@ -131,12 +131,28 @@ function init()
   commandTextEdit = terminalWindow:getChildById('commandTextEdit')
   g_keyboard.bindKeyPress('Up', function() navigateCommand(1) end, commandTextEdit)
   g_keyboard.bindKeyPress('Down', function() navigateCommand(-1) end, commandTextEdit)
+  -- copy/paste are bound to the terminal window instead of commandTextEdit:
+  -- show() focuses the window itself, so a binding on the text edit never fired
   g_keyboard.bindKeyPress('Ctrl+C',
     function()
       if commandTextEdit:hasSelection() or not terminalSelectText:hasSelection() then return false end
       g_window.setClipboardText(terminalSelectText:getSelection())
-    return true
-    end, commandTextEdit)
+      return true
+    end, terminalWindow)
+  g_keyboard.bindKeyPress('Ctrl+A',
+    function()
+      if commandTextEdit:isFocused() then return false end
+      terminalSelectText:selectAll()
+      return true
+    end, terminalWindow)
+  g_keyboard.bindKeyPress('Ctrl+V',
+    function()
+      -- when the command line is focused the text edit pastes it natively
+      if commandTextEdit:isFocused() then return false end
+      commandTextEdit:paste(g_window.getClipboardText())
+      commandTextEdit:focus()
+      return true
+    end, terminalWindow)
   g_keyboard.bindKeyDown('Tab', completeCommand, commandTextEdit)
   g_keyboard.bindKeyDown('Enter', doCommand, commandTextEdit)
   g_keyboard.bindKeyDown('Escape', hide, terminalWindow)

@@ -11,10 +11,15 @@ function init()
   connect(g_game, { onGameEnd = onGameEnd })
   
   ProtocolGame.registerExtendedOpcode(Opcode, function(protocol, opcode, buffer)
-    local monster = loadstring('return '..buffer)()   
-	if ( not table.empty(monster) ) then
-	  setMonsterInfo(monster)	  
-	end
+    -- payload do servidor: nunca rodar com o ambiente global (corelib/util.lua)
+    local monster, err = safeLuaDeserialize(buffer)
+    if err then
+      g_logger.error('[monsterloot] invalid payload: ' .. tostring(err))
+      return
+    end
+    if type(monster) == 'table' and not table.empty(monster) then
+      setMonsterInfo(monster)
+    end
   end)
   
   window = g_ui.displayUI('monsterloot')
@@ -22,7 +27,7 @@ function init()
   listLoot = window:getChildById('listLoot')
   uiCreature = window:getChildById('uiCreature')
 
-  g_keyboard.bindKeyPress('Ctrl+W', toggle)
+  -- Ctrl+W removido (colidia com o WASD/limpar textos). O botao continua abrindo.
 end
 
 function terminate()
@@ -30,7 +35,7 @@ function terminate()
   ProtocolGame.unregisterExtendedOpcode(Opcode)
   window:destroy()
   
-  g_keyboard.unbindKeyPress('Ctrl+W')
+
 end
 
 function onGameEnd()

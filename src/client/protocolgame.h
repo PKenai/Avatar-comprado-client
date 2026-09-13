@@ -200,7 +200,7 @@ private:
     void parsePlayerGoods(const InputMessagePtr& msg);
     void parseCloseNpcTrade(const InputMessagePtr&);
     void parseWorldLight(const InputMessagePtr& msg);
-    void parseMagicEffect(const InputMessagePtr& msg);
+    void parseMagicEffect(const InputMessagePtr& msg, bool withSource = false);
     void parseAnimatedText(const InputMessagePtr& msg);
     void parseDistanceMissile(const InputMessagePtr& msg);
     void parseCreatureMark(const InputMessagePtr& msg);

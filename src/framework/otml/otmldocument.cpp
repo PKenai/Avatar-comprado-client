@@ -25,6 +25,7 @@
 #include "otmlemitter.h"
 
 #include <framework/core/resourcemanager.h>
+#include <framework/stdext/string.h>
 
 OTMLDocumentPtr OTMLDocument::create()
 {
@@ -35,9 +36,20 @@ OTMLDocumentPtr OTMLDocument::create()
 
 OTMLDocumentPtr OTMLDocument::parse(const std::string& fileName)
 {
-    std::stringstream fin;
     std::string source = g_resources.resolvePath(fileName);
-    g_resources.readFileStream(source, fin);
+
+    // .otui/.otml sao texto: normaliza para Latin-1 (ver stdext::ensure_latin1)
+    // antes de parsear, senao acentos de arquivos em UTF-8 saem como mojibake
+    std::string data = g_resources.readFileContents(source);
+    stdext::ensure_latin1(data);
+
+    std::stringstream fin;
+    if(data.empty())
+        fin.clear(std::ios::eofbit);
+    else {
+        fin.write(&data[0], data.length());
+        fin.seekg(0, std::ios::beg);
+    }
     return parse(fin, source);
 }
 

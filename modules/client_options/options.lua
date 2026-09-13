@@ -18,6 +18,9 @@ local defaultOptions = {
   painterEngine = 0,
   enableLights = true,
   ambientLight = 25,
+  effectOpacitySelf = 100,
+  effectOpacityOthers = 100,
+  effectOpacityMonsters = 100,
   showSelfEmblem = true,
   displayNames = true,
   displayHealth = true,
@@ -30,11 +33,16 @@ local defaultOptions = {
   highFloorTransparency = true,
   skyClouds = true,
   dashWalk = false,
-  turnDelay = 50
+  turnDelay = 50,
+  walkSmoothing = true
 }
 
+-- Tempo (ms) do lerp de camera enquanto a opcao 'walkSmoothing' esta ligada.
+-- Em 0 o mapa volta a pular de SQM em SQM, exatamente como era antes.
+local WALK_SMOOTHING_TIME = 100
+
 local optionsWindow
-local optionsButton
+local optionsCornerMenu
 local optionsTabBar
 local options = {}
 local generalPanel
@@ -43,10 +51,30 @@ local graphicsPanel
 local soundPanel
 local controllerPanel
 
+local function setScrollActive(panel, bgId, scrollId, value, maxVal)
+  local bg = panel and panel:getChildById(bgId)
+  if not bg then return end
+  local scroll = bg:getChildById(scrollId)
+  if scroll then
+    local active = scroll:getChildById('activeScroll')
+    if active then
+      local w = math.floor((value * 200) / math.max(maxVal, 1))
+      active:setWidth(math.max(0, math.min(200, w)))
+    end
+  end
+end
+
 local function setupGraphicsEngines()
   local enginesRadioGroup = UIRadioGroup.create()
   local ogl1 = graphicsPanel:getChildById('opengl1')
   local dx9 = graphicsPanel:getChildById('directx9')
+  -- Engine buttons may be nested in a wrapper panel
+  if not ogl1 then
+    ogl1 = graphicsPanel:recursiveGetChildById('opengl1')
+  end
+  if not dx9 then
+    dx9 = graphicsPanel:recursiveGetChildById('directx9')
+  end
   enginesRadioGroup:addWidget(ogl1)
   enginesRadioGroup:addWidget(dx9)
 
@@ -61,12 +89,30 @@ local function setupGraphicsEngines()
   end
 
   if g_graphics.canCacheBackbuffer and not g_graphics.canCacheBackbuffer() then
-    graphicsPanel:getChildById('foregroundFrameRate'):disable()
-    graphicsPanel:getChildById('foregroundFrameRateLabel'):disable()
+    local fgBg = graphicsPanel:getChildById('foregroundFrameRateBG')
+    if fgBg then
+      local scroll = fgBg:getChildById('foregroundFrameRate')
+      local label = fgBg:getChildById('foregroundFrameRateLabelBG')
+      if scroll then scroll:disable() end
+      if label then label:disable() end
+    else
+      local scroll = graphicsPanel:recursiveGetChildById('foregroundFrameRate')
+      local label = graphicsPanel:recursiveGetChildById('foregroundFrameRateLabelBG')
+        or graphicsPanel:recursiveGetChildById('foregroundFrameRateLabel')
+      if scroll then scroll:disable() end
+      if label then label:disable() end
+    end
   end
 end
 
 function init()
+  -- Garante o shader de brilho das opcoes ativas (mesmo do talent tree)
+  if g_shaders and g_shaders.createShader then
+    pcall(function()
+      g_shaders.createShader("talent_border_glow", "/shaders/map_default_vertex", "/shaders/talent_border_glow")
+    end)
+  end
+
   for k,v in pairs(defaultOptions) do
     g_settings.setDefault(k, v)
     options[k] = v
@@ -97,28 +143,62 @@ function init()
   g_keyboard.bindKeyDown('Ctrl+Shift+F', function() toggleOption('fullscreen') end)
   g_keyboard.bindKeyDown('Ctrl+N', toggleDisplays)
 
+  local tabIcon = '/modules/client_options/settings/iconpanel'
+
   generalPanel = g_ui.loadUI('game')
-  optionsTabBar:addTab(tr('Game'), generalPanel, '/images/optionstab/game')
+  optionsTabBar:addTab(tr('Game'), generalPanel, tabIcon)
 
   consolePanel = g_ui.loadUI('console')
-  optionsTabBar:addTab(tr('Console'), consolePanel, '/images/optionstab/console')
+  optionsTabBar:addTab(tr('Console'), consolePanel, tabIcon)
 
   graphicsPanel = g_ui.loadUI('graphics')
-  optionsTabBar:addTab(tr('Graphics'), graphicsPanel, '/images/optionstab/graphics')
+  optionsTabBar:addTab(tr('Graphics'), graphicsPanel, tabIcon)
 
   controllerPanel = g_ui.loadUI('styles/controller/controller')
-  optionsTabBar:addTab(tr('Controller'), controllerPanel, '/images/optionstab/game')
+  optionsTabBar:addTab(tr('Controller'), controllerPanel, tabIcon)
 
-  optionsButton = modules.client_topmenu.addLeftButton('optionsButton', tr('Options'), '/images/topbuttons/options', toggle)
+  optionsCornerMenu = g_ui.displayUI('corner_menu')
+  if optionsCornerMenu then
+    optionsCornerMenu:hide()
+    if g_game.isOnline() then
+      onGameStart()
+    end
+  end
+
+  connect(g_game, {
+    onGameStart = onGameStart,
+    onGameEnd = onGameEnd
+  })
 
   addEvent(function() setup() end)
 end
 
 function terminate()
+  disconnect(g_game, {
+    onGameStart = onGameStart,
+    onGameEnd = onGameEnd
+  })
   g_keyboard.unbindKeyDown('Ctrl+Shift+F')
   g_keyboard.unbindKeyDown('Ctrl+N')
   optionsWindow:destroy()
-  optionsButton:destroy()
+  if optionsCornerMenu then
+    optionsCornerMenu:destroy()
+    optionsCornerMenu = nil
+  end
+end
+
+function onGameStart()
+  if optionsCornerMenu then
+    optionsCornerMenu:show()
+    optionsCornerMenu:raise()
+  end
+end
+
+function onGameEnd()
+  if optionsCornerMenu then
+    optionsCornerMenu:hide()
+  end
+  hide()
 end
 
 function setup()
@@ -150,6 +230,9 @@ end
 
 function hide()
   optionsWindow:hide()
+  if optionsCornerMenu then
+    optionsCornerMenu:raise()
+  end
 end
 
 function toggleDisplays()
@@ -185,21 +268,73 @@ function setOption(key, value, force)
   elseif key == 'backgroundFrameRate' then
     local text, v = value, value
     if value <= 0 or value >= 201 then text = 'max' v = 0 end
-    graphicsPanel:getChildById('backgroundFrameRateLabel'):setText(tr('Game framerate limit: %s', text))
+    local bg = graphicsPanel:getChildById('backgroundFrameRateBG')
+    if bg then
+      local label = bg:getChildById('backgroundFrameRateLabelBG')
+      if label then label:setText(tr('%s', text)) end
+    else
+      local label = graphicsPanel:recursiveGetChildById('backgroundFrameRateLabel')
+      if label then label:setText(tr('Game framerate limit: %s', text)) end
+    end
+    setScrollActive(graphicsPanel, 'backgroundFrameRateBG', 'backgroundFrameRate', value, 201)
     if g_app.setBackgroundPaneMaxFps then g_app.setBackgroundPaneMaxFps(v) else g_app.setMaxFps(v) end
   elseif key == 'foregroundFrameRate' then
     local text, v = value, value
     if value <= 0 or value >= 61 then  text = 'max' v = 0 end
-    graphicsPanel:getChildById('foregroundFrameRateLabel'):setText(tr('Interface framerate limit: %s', text))
+    local bg = graphicsPanel:getChildById('foregroundFrameRateBG')
+    if bg then
+      local label = bg:getChildById('foregroundFrameRateLabelBG')
+      if label then label:setText(tr('%s', text)) end
+    else
+      local label = graphicsPanel:recursiveGetChildById('foregroundFrameRateLabel')
+      if label then label:setText(tr('Interface framerate limit: %s', text)) end
+    end
+    setScrollActive(graphicsPanel, 'foregroundFrameRateBG', 'foregroundFrameRate', value, 61)
     if g_app.setForegroundPaneMaxFps then g_app.setForegroundPaneMaxFps(v) end
   elseif key == 'enableLights' then
     gameMapPanel:setDrawLights(value and options['ambientLight'] < 100)
-    graphicsPanel:getChildById('ambientLight'):setEnabled(value)
-    graphicsPanel:getChildById('ambientLightLabel'):setEnabled(value)
+    local ambientBg = graphicsPanel:getChildById('ambientLightBG')
+    if ambientBg then
+      local scroll = ambientBg:getChildById('ambientLight')
+      local label = ambientBg:getChildById('ambientLightLabelBG')
+      if scroll then scroll:setEnabled(value) end
+      if label then label:setEnabled(value) end
+    else
+      local scroll = graphicsPanel:recursiveGetChildById('ambientLight')
+      local label = graphicsPanel:recursiveGetChildById('ambientLightLabelBG')
+        or graphicsPanel:recursiveGetChildById('ambientLightLabel')
+      if scroll then scroll:setEnabled(value) end
+      if label then label:setEnabled(value) end
+    end
   elseif key == 'ambientLight' then
-    graphicsPanel:getChildById('ambientLightLabel'):setText(tr('Ambient light: %s%%', value))
+    local bg = graphicsPanel:getChildById('ambientLightBG')
+    if bg then
+      local label = bg:getChildById('ambientLightLabelBG')
+      if label then label:setText(tr('%s%%', value)) end
+    else
+      local label = graphicsPanel:recursiveGetChildById('ambientLightLabel')
+      if label then label:setText(tr('Ambient light: %s%%', value)) end
+    end
+    setScrollActive(graphicsPanel, 'ambientLightBG', 'ambientLight', value, 100)
     gameMapPanel:setMinimumAmbientLight(value/100)
     gameMapPanel:setDrawLights(options['enableLights'] and value < 100)
+  elseif key == 'effectOpacitySelf' or key == 'effectOpacityOthers' or key == 'effectOpacityMonsters' then
+    local source = 1
+    if key == 'effectOpacitySelf' then
+      source = 0
+    elseif key == 'effectOpacityMonsters' then
+      source = 2
+    end
+    if g_game.setEffectOpacity then g_game.setEffectOpacity(source, value / 100) end
+    local bg = generalPanel:getChildById(key .. 'BG')
+    if bg then
+      local label = bg:getChildById(key .. 'LabelBG')
+      if label then label:setText(tr('%s%%', value)) end
+    else
+      local label = generalPanel:recursiveGetChildById(key .. 'LabelBG')
+      if label then label:setText(tr('%s%%', value)) end
+    end
+    setScrollActive(generalPanel, key .. 'BG', key, value, 100)
   elseif key == 'painterEngine' then
     if g_graphics.selectPainterEngine then g_graphics.selectPainterEngine(value) end
   elseif key == 'displayNames' then
@@ -208,6 +343,10 @@ function setOption(key, value, force)
     gameMapPanel:setDrawHealthBars(value)
   elseif key == 'displayText' then
     gameMapPanel:setDrawTexts(value)
+  elseif key == 'walkSmoothing' then
+    if gameMapPanel and gameMapPanel.setWalkSmoothingTime then
+      gameMapPanel:setWalkSmoothingTime(value and WALK_SMOOTHING_TIME or 0)
+    end
   elseif key == 'hdMode' then
     if g_sprites.setHdMode then
       g_sprites.setHdMode(value)
@@ -223,13 +362,29 @@ function setOption(key, value, force)
   elseif key == 'floorShadowFadeWidth' then
     if gameMapPanel and gameMapPanel.setFloorShadowFadeWidth then
       gameMapPanel:setFloorShadowFadeWidth(value)
-      graphicsPanel:getChildById('floorShadowFadeWidthLabel'):setText(tr('Floor shadow fade width: %s px', value))
+      local bg = graphicsPanel:getChildById('floorShadowFadeWidthBG')
+      if bg then
+        local label = bg:getChildById('floorShadowFadeWidthLabelBG')
+        if label then label:setText(tr('%s px', value)) end
+      else
+        local label = graphicsPanel:recursiveGetChildById('floorShadowFadeWidthLabel')
+        if label then label:setText(tr('Floor shadow fade width: %s px', value)) end
+      end
+      setScrollActive(graphicsPanel, 'floorShadowFadeWidthBG', 'floorShadowFadeWidth', value, 128)
     end
   elseif key == 'floorShadowFadeEasing' then
     if gameMapPanel and gameMapPanel.setFloorShadowFadeEasing then
       gameMapPanel:setFloorShadowFadeEasing(value)
       local name = value == 1 and 'Linear' or 'Smoothstep'
-      graphicsPanel:getChildById('floorShadowFadeEasingLabel'):setText(tr('Floor shadow fade easing: %s', name))
+      local bg = graphicsPanel:getChildById('floorShadowFadeEasingBG')
+      if bg then
+        local label = bg:getChildById('floorShadowFadeEasingLabelBG')
+        if label then label:setText(tr('%s', name)) end
+      else
+        local label = graphicsPanel:recursiveGetChildById('floorShadowFadeEasingLabel')
+        if label then label:setText(tr('Floor shadow fade easing: %s', name)) end
+      end
+      setScrollActive(graphicsPanel, 'floorShadowFadeEasingBG', 'floorShadowFadeEasing', value, 1)
     end
   elseif key == 'highFloorTransparency' then
     if gameMapPanel and gameMapPanel.setFloorTransparencyEnabled then
@@ -272,6 +427,50 @@ end
 
 function getPanel()
   return optionsWindow
+end
+
+function resetWindowLayout()
+  local miniWindows = {}
+  local containers = {}
+
+  local function collect(widget)
+    local children = widget:getChildren()
+    for i = 1, #children do
+      local child = children[i]
+      local className = child:getClassName()
+      if className == 'UIMiniWindow' then
+        miniWindows[#miniWindows + 1] = child
+      elseif className == 'UIMiniWindowContainer' then
+        containers[#containers + 1] = child
+      end
+      collect(child)
+    end
+  end
+  collect(rootWidget)
+
+  table.sort(miniWindows, function(a, b)
+    local aIndex, bIndex = a.defaultIndex, b.defaultIndex
+    if aIndex and bIndex and aIndex ~= bIndex then return aIndex < bIndex end
+    if aIndex and not bIndex then return true end
+    if bIndex and not aIndex then return false end
+    return a:getId() < b:getId()
+  end)
+
+  g_settings.setNode('MiniWindows', {})
+
+  for i = 1, #containers do
+    containers[i].fitAllDisabled = true
+  end
+
+  for i = 1, #miniWindows do
+    miniWindows[i]:resetToDefault()
+  end
+
+  for i = 1, #containers do
+    containers[i].fitAllDisabled = nil
+  end
+
+  g_settings.save()
 end
 
 function addTab(name, panel, icon)
