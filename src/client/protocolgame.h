@@ -102,6 +102,8 @@ public:
     void sendRefreshContainer(int containerId);
     void sendRequestOutfit();
     void sendChangeOutfit(const Outfit& outfit);
+    void sendRequestPet();
+    void sendChangePet(uint16_t clientId);
     void sendOutfitExtensionStatus(int mount = -1, int wings = -1, int aura = -1, int shader = -1, int healthBar = -1, int manaBar = -1);
     void sendApplyImbuement(uint8_t slot, uint32_t imbuementId, bool protectionCharm);
     void sendClearImbuement(uint8_t slot);
@@ -249,6 +251,7 @@ private:
     void parseFloorChangeUp(const InputMessagePtr& msg);
     void parseFloorChangeDown(const InputMessagePtr& msg);
     void parseOpenOutfitWindow(const InputMessagePtr& msg);
+    void parseChoosePet(const InputMessagePtr& msg);
     void parseVipAdd(const InputMessagePtr& msg);
     void parseVipState(const InputMessagePtr& msg);
     void parseVipLogout(const InputMessagePtr& msg);

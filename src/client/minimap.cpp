@@ -472,7 +472,8 @@ void Minimap::draw(const Rect &screenRect, const Position &mapCenter,
     const int MAX_CREATURE_DRAWS = 50; // Limit to prevent FPS drops
     for (const auto &creature : creatures) {
       if (creatureDrawCount >= MAX_CREATURE_DRAWS) break;
-      if (!creature->canBeSeen() || creature->isLocalPlayer())
+      // Avatar custom: pet fantasma nao existe para o minimap.
+      if (!creature->canBeSeen() || creature->isLocalPlayer() || creature->isPet())
         continue;
 
       Point tilePoint = getTilePoint(creature->getPosition(), screenRect,

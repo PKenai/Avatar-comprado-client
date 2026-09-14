@@ -109,7 +109,8 @@ function bindKeys()
     local nearest = nil
     local minDist = math.huge
     for _, creature in ipairs(spectators) do
-      if creature ~= player and not creature:isLocalPlayer() then
+      -- Avatar custom: pet fantasma nunca e alvo (nem do hotkey de mais proximo).
+      if creature ~= player and not creature:isLocalPlayer() and not creature:isPet() then
         local cpos = creature:getPosition()
         if cpos then
           local dx = cpos.x - pos.x
@@ -557,6 +558,10 @@ function createThingMenu(menuPosition, lookThing, useThing, creatureThing)
 
     if creatureThing:isLocalPlayer() then
       menu:addOption(tr('Set Outfit'), function() g_game.requestOutfit() end)
+      -- Avatar custom: escolher o pet (criatura fantasma). Mesmo menu de contexto
+      -- do Set Outfit (botao direito em voce mesmo; no controle classico o menu
+      -- abre com Ctrl + botao direito).
+      menu:addOption(tr('Pet'), function() g_game.requestPet() end)
 
       if creatureThing:isPartyMember() then
         if creatureThing:isPartyLeader() then
@@ -689,6 +694,14 @@ function createThingMenu(menuPosition, lookThing, useThing, creatureThing)
 end
 
 function processMouseAction(menuPosition, mouseButton, autoWalkPos, lookThing, useThing, creatureThing, attackCreature)
+  -- Avatar custom: o pet fantasma e apenas render visual. Ele nunca participa de
+  -- nenhuma acao do mouse (nem look, nem use, nem ataque, nem follow). Filtro
+  -- defensivo: mesmo que o pet chegue aqui, vira nil.
+  if creatureThing and creatureThing:isCreature() and creatureThing:isPet() then creatureThing = nil end
+  if attackCreature and attackCreature:isCreature() and attackCreature:isPet() then attackCreature = nil end
+  if lookThing and lookThing:isCreature() and lookThing:isPet() then lookThing = nil end
+  if useThing and useThing:isCreature() and useThing:isPet() then useThing = nil end
+
   local keyboardModifiers = g_keyboard.getModifiers()
 
   if not modules.client_options.getOption('classicControl') then

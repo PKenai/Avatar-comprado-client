@@ -79,6 +79,7 @@ namespace Proto {
         GameServerPredictiveCancelWalk      = 70,
         GameServerWalkId                    = 71,
         GameServerMagicEffectWithSource     = 72, // Avatar custom: magic effect + quem o causou (u32)
+        GameServerChoosePet                 = 73, // Avatar custom: janela de escolha do pet (lista + atual)
 
         GameServerFloorDescription          = 75,
 
@@ -310,6 +311,8 @@ namespace Proto {
         ClientRequestOutfit                 = 210,
         ClientChangeOutfit                  = 211,
         ClientMount                         = 212, // 870
+        ClientRequestPet                    = 216, // Avatar custom: pede a janela de pet
+        ClientChangePet                     = 217, // Avatar custom: escolhe o pet (u16 clientid, 0 = nenhum)
         ApplyImbuemente                     = 213,
         ClearingImbuement                   = 214,
         CloseImbuingWindow                  = 215,

@@ -184,6 +184,10 @@ static void ensurePingTextures()
 
 void Creature::drawInformation(const Point& point, bool useGray, const Rect& parentRect, int drawFlags)
 {
+    // Pet fantasma: sem nome, sem life bar, sem emblema.
+    if (m_isPet)
+        return;
+
     if (!g_game.getFeature(Otc::GameOldInformationBar) && g_game.getClientVersion() >= 760) {
         if (m_healthPercent < 1)
             return;
@@ -1396,6 +1400,9 @@ void Creature::clearDirectionalWidgets()
 
 void Creature::drawTopWidgets(const Point& dest, const Otc::Direction direction)
 {
+    if (m_isPet)
+        return;
+
     if (direction == Otc::North || direction == Otc::West) {
         for (auto& widget : m_directionalWidgets) {
             Rect dest_rect = widget->getRect();
@@ -1414,6 +1421,9 @@ void Creature::drawTopWidgets(const Point& dest, const Otc::Direction direction)
 
 void Creature::drawBottomWidgets(const Point& dest, const Otc::Direction direction)
 {
+    if (m_isPet)
+        return;
+
     for (auto& widget : m_bottomWidgets) {
         Rect dest_rect = widget->getRect();
         dest_rect = Rect(dest - Point(dest_rect.width() / 2, dest_rect.height() / 2), dest_rect.width(), dest_rect.height());

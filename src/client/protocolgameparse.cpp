@@ -164,6 +164,9 @@ void ProtocolGame::parseMessage(const InputMessagePtr& msg)
             case Proto::GameServerMoveCreature:
                 parseCreatureMove(msg);
                 break;
+            case Proto::GameServerChoosePet:
+                parseChoosePet(msg);
+                break;
             case Proto::GameServerOpenContainer:
                 parseOpenContainer(msg);
                 break;
@@ -2634,6 +2637,23 @@ void ProtocolGame::parseOpenOutfitWindow(const InputMessagePtr& msg)
     g_game.processOpenOutfitWindow(currentOutfit, outfitList, mountList, wingList, auraList, shaderList, healthBarList, manaBarList);
 }
 
+// Avatar custom: janela de escolha do pet (criatura fantasma que segue o dono).
+// Pacote: u16 clientid do pet atual (0 = nenhum), u8 count, [u16 clientid, string nome]...
+void ProtocolGame::parseChoosePet(const InputMessagePtr& msg)
+{
+    int currentPet = msg->getU16();
+
+    std::vector<std::tuple<int, std::string> > petList;
+    int petCount = msg->getU8();
+    for (int i = 0; i < petCount; ++i) {
+        int petClientId = msg->getU16();
+        std::string petName = msg->getString();
+        petList.push_back(std::make_tuple(petClientId, petName));
+    }
+
+    g_game.processChoosePet(currentPet, petList);
+}
+
 void ProtocolGame::parseVipAdd(const InputMessagePtr& msg)
 {
     uint id, iconId = 0, status;
@@ -3638,7 +3658,12 @@ CreaturePtr ProtocolGame::getCreature(const InputMessagePtr& msg, int type)
         if (g_game.getProtocolVersion() >= 854 || g_game.getFeature(Otc::GameCreatureWalkthrough))
             unpass = msg->getU8();
 
+        // Avatar custom: byte extra no fim dos dados da criatura. 1 = pet fantasma
+        // (puramente visual: sem nome, sem vida, fora da battle list e sem clique).
+        bool isPet = msg->getU8() != 0;
+
         if (creature) {
+            creature->setPet(isPet);
             creature->setHealthPercent(healthPercent);
             if (g_game.getFeature(Otc::GameCreaturesMana)) {
                 creature->setManaPercent(manaPercent);

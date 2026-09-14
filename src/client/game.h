@@ -143,6 +143,9 @@ protected:
                                  const std::vector<std::tuple<int, std::string>>& healthBarList,
                                  const std::vector<std::tuple<int, std::string>>& manaBarList);
 
+    // Avatar custom: pet (criatura fantasma)
+    void processChoosePet(int currentPet, const std::vector<std::tuple<int, std::string>>& petList);
+
     // npc trade
     void processOpenNpcTrade(const std::vector<std::tuple<ItemPtr, std::string, int, int64_t, int64_t> >& items);
     void processPlayerGoods(uint64_t money, const std::vector<std::tuple<ItemPtr, int> >& goods);
@@ -290,6 +293,9 @@ public:
     void equipItem(const ItemPtr& item);
     void equipItemId(int itemId, int subType);
     void mount(bool mount);
+    // Avatar custom: pet
+    void requestPet();
+    void changePet(uint16_t clientId);
     void setOutfitExtensions(int mount, int wings, int aura, int shader, int healthBar, int manaBar);
 
     // 910 only

@@ -270,6 +270,9 @@ void Client::registerLuaFunctions()
     g_lua.bindSingletonFunction("g_game", "partyShareExperience", &Game::partyShareExperience, &g_game);
     g_lua.bindSingletonFunction("g_game", "requestOutfit", &Game::requestOutfit, &g_game);
     g_lua.bindSingletonFunction("g_game", "changeOutfit", &Game::changeOutfit, &g_game);
+    // Avatar custom: pet (criatura fantasma)
+    g_lua.bindSingletonFunction("g_game", "requestPet", &Game::requestPet, &g_game);
+    g_lua.bindSingletonFunction("g_game", "changePet", &Game::changePet, &g_game);
     g_lua.bindSingletonFunction("g_game", "addVip", &Game::addVip, &g_game);
     g_lua.bindSingletonFunction("g_game", "removeVip", &Game::removeVip, &g_game);
     g_lua.bindSingletonFunction("g_game", "editVip", &Game::editVip, &g_game);
@@ -564,6 +567,7 @@ void Client::registerLuaFunctions()
     g_lua.bindClassMemberFunction<Creature>("hideStaticSquare", &Creature::hideStaticSquare);
     g_lua.bindClassMemberFunction<Creature>("isWalking", &Creature::isWalking);
     g_lua.bindClassMemberFunction<Creature>("isInvisible", &Creature::isInvisible);
+    g_lua.bindClassMemberFunction<Creature>("isPet", &Creature::isPet);
     g_lua.bindClassMemberFunction<Creature>("isDead", &Creature::isDead);
     g_lua.bindClassMemberFunction<Creature>("isRemoved", &Creature::isRemoved);
     g_lua.bindClassMemberFunction<Creature>("canBeSeen", &Creature::canBeSeen);

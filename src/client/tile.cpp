@@ -26,6 +26,7 @@
 #include "map.h"
 #include "game.h"
 #include "localplayer.h"
+#include "creature.h"
 #include "effect.h"
 #include "protocolgame.h"
 #include "lightview.h"
@@ -33,6 +34,37 @@
 #include <framework/graphics/fontmanager.h>
 #include <framework/util/extras.h>
 #include <framework/core/adaptiverenderer.h>
+
+// Avatar custom: pet fantasma - criatura que existe so para ser desenhada.
+// Ela nao participa de NENHUMA interacao do mouse (nem look, nem use, nem ataque,
+// nem follow), nao entra na battle list e nao pode ser alvo de nada.
+// Ver Creature::isPet() e Creature::setPet().
+static inline bool isPetThing(const ThingPtr& thing)
+{
+    return thing && thing->isCreature() && thing->static_self_cast<Creature>()->isPet();
+}
+
+// Primeiro/ultimo thing que existe de verdade na tile (ignora pets). E o fallback
+// dos lugares onde o codigo original devolvia m_things[0] / m_things.back().
+static ThingPtr firstRealThing(const std::vector<ThingPtr>& things)
+{
+    for(const ThingPtr& thing : things) {
+        if(!isPetThing(thing))
+            return thing;
+    }
+
+    return nullptr;
+}
+
+static ThingPtr lastRealThing(const std::vector<ThingPtr>& things)
+{
+    for(auto it = things.rbegin(); it != things.rend(); ++it) {
+        if(!isPetThing(*it))
+            return *it;
+    }
+
+    return nullptr;
+}
 #include "minimap.h" // for getMinimapSpriteIds (HD minimap)
 
 Tile::Tile(const Position& position) :
@@ -428,10 +460,14 @@ ThingPtr Tile::getTopThing()
 {
     if(isEmpty())
         return nullptr;
-    for(const ThingPtr& thing : m_things)
+    for(const ThingPtr& thing : m_things) {
+        if(isPetThing(thing))
+            continue;
+
         if(!thing->isGround() && !thing->isGroundBorder() && !thing->isOnBottom() && !thing->isOnTop() && !thing->isCreature())
             return thing;
-    return m_things[m_things.size() - 1];
+    }
+    return lastRealThing(m_things);
 }
 
 std::vector<ItemPtr> Tile::getItems()
@@ -499,11 +535,14 @@ ThingPtr Tile::getTopLookThing()
 
     for(uint i = 0; i < m_things.size(); ++i) {
         ThingPtr thing = m_things[i];
+        if(isPetThing(thing))
+            continue;
+
         if(!thing->isIgnoreLook() && (!thing->isGround() && !thing->isGroundBorder() && !thing->isOnBottom() && !thing->isOnTop()))
             return thing;
     }
 
-    return m_things[0];
+    return firstRealThing(m_things);
 }
 
 ThingPtr Tile::getTopLookThingEx(Point offset)
@@ -517,11 +556,14 @@ ThingPtr Tile::getTopLookThingEx(Point offset)
 
     for (uint i = 0; i < m_things.size(); ++i) {
         ThingPtr thing = m_things[i];
+        if (isPetThing(thing))
+            continue;
+
         if (!thing->isIgnoreLook() && (!thing->isGround() && !thing->isGroundBorder() && !thing->isOnBottom() && !thing->isOnTop() && !thing->isCreature()))
             return thing;
     }
 
-    return m_things[0];
+    return firstRealThing(m_things);
 }
 
 ThingPtr Tile::getTopUseThing()
@@ -531,17 +573,23 @@ ThingPtr Tile::getTopUseThing()
 
     for(uint i = 0; i < m_things.size(); ++i) {
         ThingPtr thing = m_things[i];
+        if(isPetThing(thing))
+            continue;
+
         if (thing->isForceUse() || (!thing->isGround() && !thing->isGroundBorder() && !thing->isOnBottom() && !thing->isOnTop() && !thing->isCreature() && !thing->isSplash()))
             return thing;
     }
 
     for (uint i = m_things.size() - 1; i > 0; --i) {
         ThingPtr thing = m_things[i];
+        if (isPetThing(thing))
+            continue;
+
         if (!thing->isSplash() && !thing->isCreature())
             return thing;
     }
 
-    return m_things[0];
+    return firstRealThing(m_things);
 }
 
 CreaturePtr Tile::getTopCreature()
@@ -549,13 +597,25 @@ CreaturePtr Tile::getTopCreature()
     CreaturePtr creature;
     for(uint i = 0; i < m_things.size(); ++i) {
         ThingPtr thing = m_things[i];
+        // Avatar custom: pet fantasma nunca e clicavel (nem look, nem use, nem attack).
+        if(thing->isCreature() && thing->static_self_cast<Creature>()->isPet())
+            continue;
+
         if(thing->isLocalPlayer()) // return local player if there is no other creature
             creature = thing->static_self_cast<Creature>();
         else if(thing->isCreature() && !thing->isLocalPlayer())
             return thing->static_self_cast<Creature>();
     }
-    if(!creature && !m_walkingCreatures.empty())
-        creature = m_walkingCreatures.back();
+    if(!creature && !m_walkingCreatures.empty()) {
+        // Avatar custom: o pet esta sempre "andando", entao ele aparecia aqui e
+        // voltava a ser clicavel mesmo fora de m_things. Ignora pets.
+        for(auto it = m_walkingCreatures.rbegin(); it != m_walkingCreatures.rend(); ++it) {
+            if(!(*it)->isPet()) {
+                creature = *it;
+                break;
+            }
+        }
+    }
 
     // check for walking creatures in tiles around
     if(!creature) {
@@ -568,6 +628,9 @@ CreaturePtr Tile::getTopCreature()
                 const TilePtr& tile = g_map.getTile(pos);
                 if(tile) {
                     for(const CreaturePtr& c : tile->getCreatures()) {
+                        if(c->isPet())
+                            continue;
+
                         if(c->isWalking() && c->getLastStepFromPosition() == m_position && c->getStepProgress() < 0.75f) {
                             creature = c;
                         }
@@ -591,6 +654,10 @@ CreaturePtr Tile::getTopCreatureEx(Point offset)
         const TilePtr& tile = g_map.getTile(pos);
         if (!tile) continue;
         for (const CreaturePtr& c : tile->getCreatures()) {
+            // Avatar custom: pet fantasma nao participa do picking do mouse.
+            if (c->isPet())
+                continue;
+
             if (c->isLocalPlayer()) {
                 localPlayer = c;
                 localPlayerOffset = Point(offset.x - xy[0] * g_sprites.spriteSize(), offset.y - xy[1] * g_sprites.spriteSize());
@@ -622,11 +689,11 @@ ThingPtr Tile::getTopMoveThing()
     }
 
     for(const ThingPtr& thing : m_things) {
-        if(thing->isCreature())
+        if(thing->isCreature() && !isPetThing(thing))
             return thing;
     }
 
-    return m_things[0];
+    return firstRealThing(m_things);
 }
 
 ThingPtr Tile::getTopMultiUseThing()
@@ -645,6 +712,9 @@ ThingPtr Tile::getTopMultiUseThing()
 
     for (uint i = 0; i < m_things.size(); ++i) {
         ThingPtr thing = m_things[i];
+        if (isPetThing(thing))
+            continue;
+
         if (!thing->isGround() && !thing->isGroundBorder() && !thing->isOnBottom() && !thing->isOnTop()) {
             if (i > 0 && thing->isSplash())
                 return m_things[i - 1];
@@ -652,7 +722,7 @@ ThingPtr Tile::getTopMultiUseThing()
         }
     }
 
-    return m_things.back();
+    return lastRealThing(m_things);
 }
 
 ThingPtr Tile::getTopMultiUseThingEx(Point offset)
@@ -684,7 +754,7 @@ ThingPtr Tile::getTopMultiUseThingEx(Point offset)
             return thing;
     }
 
-    return m_things[0];
+    return firstRealThing(m_things);
 }
 
 bool Tile::isWalkable(bool ignoreCreatures)
@@ -699,7 +769,8 @@ bool Tile::isWalkable(bool ignoreCreatures)
         if(!ignoreCreatures) {
             if(thing->isCreature()) {
                 CreaturePtr creature = thing->static_self_cast<Creature>();
-                if(!creature->isPassable() && creature->canBeSeen() && !creature->isLocalPlayer())
+                // Avatar custom: pet fantasma nao bloqueia nada no client.
+                if(!creature->isPassable() && creature->canBeSeen() && !creature->isLocalPlayer() && !creature->isPet())
                     return false;
             }
         }

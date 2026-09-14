@@ -78,6 +78,9 @@ public:
     void setTypeTexture(const std::string& filename);
     void setIconTexture(const std::string& filename);
     void setPassable(bool passable) { m_passable = passable; }
+    // Avatar custom: pet fantasma (criatura puramente visual que segue o dono).
+    // Nunca desenha nome/vida, nunca aparece na battle list e nunca e clicavel.
+    void setPet(bool pet) { m_isPet = pet; }
     void setSpeedFormula(double speedA, double speedB, double speedC);
     void setHealCut(bool healCut);
     bool isHealCut() { return m_healCut; }
@@ -129,6 +132,7 @@ public:
     uint8 getType() { return m_type; }
     uint8 getIcon() { return m_icon; }
     bool isPassable() { return m_passable; }
+    bool isPet() { return m_isPet; }
     Point getDrawOffset();
     uint16 getStepDuration(bool ignoreDiagonal = false, Otc::Direction dir = Otc::InvalidDirection);
     Point getWalkOffset(bool inNextFrame = false) { return inNextFrame ? m_walkOffsetInNextFrame : m_walkOffset; }
@@ -251,6 +255,7 @@ protected:
     stdext::boolean<true> m_showShieldTexture;
     stdext::boolean<false> m_shieldBlink;
     stdext::boolean<false> m_passable;
+    bool m_isPet = false;
     Color m_timedSquareColor;
     Color m_staticSquareColor;
     Color m_nameColor;

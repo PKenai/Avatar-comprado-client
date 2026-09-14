@@ -292,6 +292,12 @@ function doCreatureFitFilters(creature)
     return false
   end
 
+  -- Avatar custom: pet fantasma (criatura puramente visual) nunca entra na
+  -- battle list.
+  if creature:isPet() then
+    return false
+  end
+
   local pos = creature:getPosition()
   if not pos then return false end
 

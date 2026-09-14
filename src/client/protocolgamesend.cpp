@@ -810,6 +810,22 @@ void ProtocolGame::sendRequestOutfit()
     send(msg);
 }
 
+// Avatar custom: janela de escolha de pet (criatura fantasma)
+void ProtocolGame::sendRequestPet()
+{
+    OutputMessagePtr msg(new OutputMessage);
+    msg->addU8(Proto::ClientRequestPet);
+    send(msg);
+}
+
+void ProtocolGame::sendChangePet(uint16_t clientId)
+{
+    OutputMessagePtr msg(new OutputMessage);
+    msg->addU8(Proto::ClientChangePet);
+    msg->addU16(clientId);
+    send(msg);
+}
+
 void ProtocolGame::sendChangeOutfit(const Outfit& outfit)
 {
     OutputMessagePtr msg(new OutputMessage);

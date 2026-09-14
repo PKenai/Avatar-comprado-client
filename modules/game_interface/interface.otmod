@@ -10,6 +10,7 @@ Module
     - game_hotkeys
     - game_console
     - game_outfit
+    - game_pet
     - game_healthinfo
     - game_skills
     - game_inventory

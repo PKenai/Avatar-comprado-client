@@ -32914,3 +32914,33 @@ Exiting application..
 Exiting application..
 [NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
 [NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: protected lua call failed: /modules/game_healthinfo/healthinfo.lua:244: attempt to concatenate a nil value
+stack traceback:
+	[C]: in function '__concat'
+	/modules/game_healthinfo/healthinfo.lua:244: in function 'setImageAvatar'
+	/modules/game_healthinfo/healthinfo.lua:65: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+WARNING: attempt to destroy widget 'widget1761' two times
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+WARNING: attempt to destroy widget 'widget1972' two times
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+WARNING: attempt to destroy widget 'widget3486' two times
+WARNING: attempt to destroy widget 'widget6032' two times
+WARNING: attempt to destroy widget 'widget6290' two times
+WARNING: attempt to destroy widget 'widget6558' two times
+WARNING: attempt to destroy widget 'widget6798' two times
+WARNING: attempt to destroy widget 'widget8821' two times

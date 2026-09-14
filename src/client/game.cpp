@@ -528,6 +528,37 @@ void Game::processOpenOutfitWindow(const Outfit& currentOutfit, const std::vecto
     g_lua.callGlobalField("g_game", "onOpenOutfitWindow", virtualOutfitCreature, outfitList, virtualMountCreature, mountList, wingList, auraList, shaderList, healthBarList, manaBarList);
 }
 
+// Avatar custom: janela de escolha do pet. Cria uma criatura virtual local so
+// para o preview (ela nao existe no mapa nem no servidor).
+void Game::processChoosePet(int currentPet, const std::vector<std::tuple<int, std::string>>& petList)
+{
+    CreaturePtr previewCreature = CreaturePtr(new Creature);
+    previewCreature->setDirection(Otc::South);
+
+    Outfit petOutfit;
+    petOutfit.setCategory(ThingCategoryCreature);
+    petOutfit.setId(currentPet > 0 ? currentPet : (petList.empty() ? 0 : std::get<0>(petList.front())));
+    previewCreature->setOutfit(petOutfit);
+
+    g_lua.callGlobalField("g_game", "onOpenPetWindow", currentPet, petList, previewCreature);
+}
+
+void Game::requestPet()
+{
+    if (!canPerformGameAction())
+        return;
+
+    m_protocolGame->sendRequestPet();
+}
+
+void Game::changePet(uint16_t clientId)
+{
+    if (!canPerformGameAction())
+        return;
+
+    m_protocolGame->sendChangePet(clientId);
+}
+
 void Game::processOpenNpcTrade(const std::vector<std::tuple<ItemPtr, std::string, int, int64_t, int64_t> >& items)
 {
     g_lua.callGlobalField("g_game", "onOpenNpcTrade", items);
@@ -934,6 +965,10 @@ void Game::look(const ThingPtr& thing, bool isBattleList)
     if(!canPerformGameAction() || !thing)
         return;
 
+    // Avatar custom: pet fantasma nao pode ser "olhado".
+    if(thing->isCreature() && thing->static_self_cast<Creature>()->isPet())
+        return;
+
     if(thing->isCreature() && isBattleList && m_protocolVersion >= 961)
         m_protocolGame->sendLookCreature(thing->getId());
     else
@@ -1107,6 +1142,11 @@ void Game::attack(CreaturePtr creature, bool cancel)
     if(!canPerformGameAction() || creature == m_localPlayer)
         return;
 
+    // Avatar custom: o pet fantasma e so render. Ele nunca vira alvo, venha o
+    // pedido de onde vier (clique, battle list, hotkey de alvo mais proximo).
+    if(creature && creature->isPet())
+        return;
+
     // cancel when attacking again
     if(creature && creature == m_attackingCreature)
         creature = nullptr;
@@ -1131,6 +1171,12 @@ void Game::follow(CreaturePtr creature)
 {
     m_denyBotCall = false;
     if (!canPerformGameAction() || creature == m_localPlayer) {
+        m_denyBotCall = true;
+        return;
+    }
+
+    // Avatar custom: pet fantasma nao pode ser seguido.
+    if (creature && creature->isPet()) {
         m_denyBotCall = true;
         return;
     }
