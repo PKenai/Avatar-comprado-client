@@ -38,6 +38,9 @@ public:
     bool setupWriteDir(const std::string& product, const std::string& app);
     bool setup();
 
+    // @dontbind
+    std::string getPrefDir(const std::string& product, const std::string& app);
+
     std::string getCompactName();
     bool loadDataFromSelf(bool unmountIfMounted = false);
 

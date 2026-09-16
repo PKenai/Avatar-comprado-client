@@ -34,7 +34,9 @@ local defaultOptions = {
   skyClouds = true,
   dashWalk = false,
   turnDelay = 50,
-  walkSmoothing = true
+  walkSmoothing = true,
+  -- FUN: Toph Mode (aba que so' aparece para dobrador de terra)
+  tophMode = false
 }
 
 -- Tempo (ms) do lerp de camera enquanto a opcao 'walkSmoothing' esta ligada.
@@ -48,8 +50,16 @@ local options = {}
 local generalPanel
 local consolePanel
 local graphicsPanel
+local effectsPanel
 local soundPanel
 local controllerPanel
+-- aba FUN (Toph Mode)
+local funPanel
+local funTabAdded = false
+local funTabIcon
+local funListenerRegistered = false
+-- forward declarations: a aba FUN tambem e' usada por onGameEnd (definido acima)
+local tophAvailable, syncTophCheckbox, disableTophMode
 
 local function setScrollActive(panel, bgId, scrollId, value, maxVal)
   local bg = panel and panel:getChildById(bgId)
@@ -154,8 +164,17 @@ function init()
   graphicsPanel = g_ui.loadUI('graphics')
   optionsTabBar:addTab(tr('Graphics'), graphicsPanel, tabIcon)
 
+  effectsPanel = g_ui.loadUI('effects')
+  optionsTabBar:addTab(tr('Effects'), effectsPanel, tabIcon)
+
   controllerPanel = g_ui.loadUI('styles/controller/controller')
   optionsTabBar:addTab(tr('Controller'), controllerPanel, tabIcon)
+
+  -- FUN: aba exclusiva de dobrador de terra (Toph Mode). Ela e' adicionada
+  -- por refreshFunTab() so' quando o personagem pode usar o modo.
+  funTabIcon = tabIcon
+  refreshFunTab()
+  addEvent(function() refreshFunTab() end)
 
   optionsCornerMenu = g_ui.displayUI('corner_menu')
   if optionsCornerMenu then
@@ -192,13 +211,87 @@ function onGameStart()
     optionsCornerMenu:show()
     optionsCornerMenu:raise()
   end
+  -- o elemento/classe do personagem chega logo depois do login (#v#):
+  -- confere agora e de novo um pouco depois
+  refreshFunTab()
+  addEvent(function() refreshFunTab() end)
+  scheduleEvent(refreshFunTab, 1000)
+  scheduleEvent(refreshFunTab, 3000)
 end
 
 function onGameEnd()
   if optionsCornerMenu then
     optionsCornerMenu:hide()
   end
+  -- trocar de personagem desliga o Toph Mode
+  disableTophMode()
+  refreshFunTab()
   hide()
+end
+
+-- ===========================================================================
+--  ABA "FUN" -- Toph Mode (somente dobrador de terra)
+-- ===========================================================================
+local FUN_TAB_NAME = 'FUN'
+
+local function tophModule()
+  return modules.game_tophmode
+end
+
+tophAvailable = function()
+  local mod = tophModule()
+  if mod and mod.isEarthBender then
+    local ok, avail = pcall(mod.isEarthBender)
+    return ok and avail == true
+  end
+  return false
+end
+
+syncTophCheckbox = function()
+  if not funPanel then return end
+  local widget = funPanel:recursiveGetChildById('tophMode')
+  if widget then
+    widget:setChecked(options['tophMode'] and true or false)
+  end
+end
+
+disableTophMode = function()
+  local mod = tophModule()
+  if mod and mod.setEnabled then
+    pcall(mod.setEnabled, false)
+  end
+  if options['tophMode'] ~= false then
+    options['tophMode'] = false
+    g_settings.set('tophMode', false)
+    syncTophCheckbox()
+  end
+end
+
+function refreshFunTab()
+  -- registra o aviso de disponibilidade assim que o modulo existir
+  local mod = tophModule()
+  if mod and mod.setAvailabilityListener and not funListenerRegistered then
+    funListenerRegistered = true
+    pcall(mod.setAvailabilityListener, function() refreshFunTab() end)
+  end
+
+  local available = tophAvailable()
+
+  if available and not funTabAdded then
+    -- o painel e' recriado a cada vez: removeTab() destroi o painel da aba
+    funPanel = g_ui.loadUI('fun')
+    optionsTabBar:addTab(tr(FUN_TAB_NAME), funPanel, funTabIcon)
+    funTabAdded = true
+    syncTophCheckbox()
+  elseif not available and funTabAdded then
+    local tab = optionsTabBar:getTab(tr(FUN_TAB_NAME))
+    if tab then
+      optionsTabBar:removeTab(tab)
+    end
+    funTabAdded = false
+    funPanel = nil
+    disableTophMode()
+  end
 end
 
 function setup()
@@ -326,15 +419,15 @@ function setOption(key, value, force)
       source = 2
     end
     if g_game.setEffectOpacity then g_game.setEffectOpacity(source, value / 100) end
-    local bg = generalPanel:getChildById(key .. 'BG')
+    local bg = effectsPanel:getChildById(key .. 'BG')
     if bg then
       local label = bg:getChildById(key .. 'LabelBG')
       if label then label:setText(tr('%s%%', value)) end
     else
-      local label = generalPanel:recursiveGetChildById(key .. 'LabelBG')
+      local label = effectsPanel:recursiveGetChildById(key .. 'LabelBG')
       if label then label:setText(tr('%s%%', value)) end
     end
-    setScrollActive(generalPanel, key .. 'BG', key, value, 100)
+    setScrollActive(effectsPanel, key .. 'BG', key, value, 100)
   elseif key == 'painterEngine' then
     if g_graphics.selectPainterEngine then g_graphics.selectPainterEngine(value) end
   elseif key == 'displayNames' then
@@ -401,6 +494,20 @@ function setOption(key, value, force)
     end
     if modules.game_skyclouds and modules.game_skyclouds.setEnabled then
       modules.game_skyclouds.setEnabled(value)
+    end
+  elseif key == 'tophMode' then
+    -- recusa ligar se o personagem nao for dobrador de terra (a aba fica
+    -- escondida nesse caso, isto e' so' uma trava extra)
+    if value and not tophAvailable() then
+      syncTophCheckbox()
+      return
+    end
+    local mod = tophModule()
+    if mod and mod.setEnabled then
+      local ok, err = pcall(mod.setEnabled, value)
+      if not ok then
+        g_logger.warning('Toph Mode: ' .. tostring(err))
+      end
     end
   end
 

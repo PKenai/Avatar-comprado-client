@@ -774,7 +774,10 @@ DrawQueueItem* ThingType::draw(const Point& dest, int layer, int xPattern, int y
 
     Rect screenRect(dest + (textureOffset - m_displacement * g_sprites.getOffsetFactor() - (m_size.toPoint() - Point(1, 1)) * g_sprites.spriteSize()), textureRect.size());
 
-    bool useOpacity = m_opacity < 1.0f;
+    // Effects: a opacidade vem SO' do slider das Options (self/others/monsters),
+    // aplicado em Effect::draw. O opacity do things.otml e' ignorado nesta
+    // categoria para nao sobrescrever o alpha que o slider mandou.
+    bool useOpacity = m_opacity < 1.0f && m_category != ThingCategoryEffect;
     if (useOpacity)
         color.setAlpha(m_opacity);
 
@@ -812,7 +815,10 @@ DrawQueueItem* ThingType::draw(const Rect& dest, int layer, int xPattern, int yP
     Point textureOffset = m_texturesFramesOffsets[animationPhase][frameIndex];
     Rect textureRect = m_texturesFramesRects[animationPhase][frameIndex];
 
-    bool useOpacity = m_opacity < 1.0f;
+    // Effects: a opacidade vem SO' do slider das Options (self/others/monsters),
+    // aplicado em Effect::draw. O opacity do things.otml e' ignorado nesta
+    // categoria para nao sobrescrever o alpha que o slider mandou.
+    bool useOpacity = m_opacity < 1.0f && m_category != ThingCategoryEffect;
     if (useOpacity)
         color.setAlpha(m_opacity);
 
@@ -867,7 +873,10 @@ std::shared_ptr<DrawOutfitParams> ThingType::drawOutfit(const Point& dest, int m
         return nullptr;
     Rect screenRect(dest + (textureOffset - m_displacement * g_sprites.getOffsetFactor() - (m_size.toPoint() - Point(1, 1)) * g_sprites.spriteSize()), textureRect.size());
 
-    bool useOpacity = m_opacity < 1.0f;
+    // Effects: a opacidade vem SO' do slider das Options (self/others/monsters),
+    // aplicado em Effect::draw. O opacity do things.otml e' ignorado nesta
+    // categoria para nao sobrescrever o alpha que o slider mandou.
+    bool useOpacity = m_opacity < 1.0f && m_category != ThingCategoryEffect;
     if (useOpacity)
         color.setAlpha(m_opacity);
 
@@ -923,7 +932,10 @@ void ThingType::drawWithShader(const Point& dest, int layer, int xPattern, int y
 
     Rect screenRect(dest + (textureOffset - m_displacement * g_sprites.getOffsetFactor() - (m_size.toPoint() - Point(1, 1)) * g_sprites.spriteSize()), textureRect.size());
 
-    bool useOpacity = m_opacity < 1.0f;
+    // Effects: a opacidade vem SO' do slider das Options (self/others/monsters),
+    // aplicado em Effect::draw. O opacity do things.otml e' ignorado nesta
+    // categoria para nao sobrescrever o alpha que o slider mandou.
+    bool useOpacity = m_opacity < 1.0f && m_category != ThingCategoryEffect;
     if (useOpacity)
         color.setAlpha(m_opacity);
 
@@ -955,7 +967,10 @@ void ThingType::drawWithShader(const Rect& dest, int layer, int xPattern, int yP
     Point textureOffset = m_texturesFramesOffsets[animationPhase][frameIndex];
     Rect textureRect = m_texturesFramesRects[animationPhase][frameIndex];
 
-    bool useOpacity = m_opacity < 1.0f;
+    // Effects: a opacidade vem SO' do slider das Options (self/others/monsters),
+    // aplicado em Effect::draw. O opacity do things.otml e' ignorado nesta
+    // categoria para nao sobrescrever o alpha que o slider mandou.
+    bool useOpacity = m_opacity < 1.0f && m_category != ThingCategoryEffect;
     if (useOpacity)
         color.setAlpha(m_opacity);
 

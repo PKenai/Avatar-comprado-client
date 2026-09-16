@@ -54,6 +54,18 @@
 #include <limits>
 #include "normalmapmanager.h"
 
+// ---------------------------------------------------------------------------
+// Luz do ambiente
+//
+// O client NAO tem valor proprio: a luz do mundo vem do server, que a define
+// no config.lua (worldLightLevel / worldLightColor). Com worldLightLevel > 0 o
+// server congela a luz nesse nivel e o mundo fica sempre naquela penumbra.
+//
+// Itens no chao nao iluminam mais (Item::draw) e a luz de tile foi desligada
+// (Tile::drawBottom): as unicas fontes de luz sao magias (Effect::draw) e
+// criaturas.
+// ---------------------------------------------------------------------------
+
 void FloorShadowView::draw()
 {
     // Upload the shadow-mask data.  We bind the texture on GL_TEXTURE7
@@ -158,13 +170,53 @@ void MapView::drawMapBackground(const Rect& rect, const TilePtr& crosshairTile) 
     g_drawQueue->setFrameBuffer(rect, m_optimizedSize, srcRect);
 
     if (m_drawLight) {
-        Light ambientLight;
-        if (cameraPosition.z <= Otc::SEA_FLOOR)
-            ambientLight = g_map.getLight();
+        // A luz do mundo vem do server (config.lua -> worldLightLevel) e vale
+        // para TODOS os andares: sem guarda de SEA_FLOOR, senao o subsolo ficaria
+        // quase preto agora que itens nao iluminam mais.
+        Light ambientLight = g_map.getLight();
+
+        // Smooth lerp transitions for world light changes
+        m_targetLightColor = Color::from8bit(ambientLight.color);
+        m_targetLightIntensity = std::max<float>(m_minimumAmbientLight * 255, (float)ambientLight.intensity);
+
+        static ticks_t lastFrameMs = 0;
+        ticks_t nowMs = g_clock.millis();
+        float dt = (lastFrameMs > 0) ? (float)(nowMs - lastFrameMs) / 1000.f : 0.016f;
+        lastFrameMs = nowMs;
+        dt = stdext::clamp(dt, 0.001f, 0.1f);
+
+        float lerpSpeed = 1.0f - std::exp(-3.0f * dt); // smooth exponential lerp
+        m_smoothLightColor = m_smoothLightColor + (m_targetLightColor - m_smoothLightColor) * lerpSpeed;
+        m_smoothLightIntensity = m_smoothLightIntensity + (m_targetLightIntensity - m_smoothLightIntensity) * lerpSpeed;
+
+        uint8_t smoothColor8 = Color::to8bit(m_smoothLightColor);
+        uint8_t smoothIntensity = (uint8_t)stdext::clamp(m_smoothLightIntensity, 0.f, 255.f);
+
+        // Build blocking map for light occlusion (walls block light).
+        // Uses the very same transform as the tiles themselves so the map
+        // aligns 1:1 with the light texture (1 texel = 1 tile).
+        const int mapTilesW = m_drawDimension.width();
+        const int mapTilesH = m_drawDimension.height();
+        const int spriteSize = g_sprites.spriteSize();
+        std::vector<bool> blockingMap((size_t)mapTilesW * mapTilesH, false);
+        for (auto& tile : m_cachedVisibleTiles[cameraPosition.z]) {
+            Point p = transformPositionTo2D(tile->getPosition(), cameraPosition);
+            const int tx = p.x / spriteSize;
+            const int ty = p.y / spriteSize;
+            if (tx >= 0 && tx < mapTilesW && ty >= 0 && ty < mapTilesH) {
+                if (tile->isBlocking())
+                    blockingMap[(size_t)ty * mapTilesW + tx] = true;
+            }
+        }
+
         if (!m_lightTexture || m_lightTexture->getSize() != m_drawDimension)
             m_lightTexture = TexturePtr(new Texture(m_drawDimension, false, true));
-        m_lightView = std::make_unique<LightView>(m_lightTexture, m_drawDimension, rect, srcRect, ambientLight.color,
-                                                  std::max<int>(m_minimumAmbientLight * 255, ambientLight.intensity));
+        m_lightView = std::make_unique<LightView>(m_lightTexture, m_drawDimension, rect, srcRect, smoothColor8, smoothIntensity, blockingMap);
+        // Seed the breathing phase with the camera offset (in pixels) so that
+        // screen position + seed == world position. Keeps each light's pulse
+        // perfectly stable while the player walks.
+        m_lightView->setLightSeed(Point(cameraPosition.x * g_sprites.spriteSize(),
+                                        cameraPosition.y * g_sprites.spriteSize()));
 
         // Populate normal map light data from the same light sources
         if (g_normalMaps.isEnabled()) {
@@ -238,7 +290,11 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
         return;
 
     auto& tiles = m_cachedVisibleTiles[floor];
-    size_t lightFloorStart = m_lightView ? m_lightView->size() : 0;
+
+    // Avatar custom: apenas o andar da camera contribui com luz. Assim a luz
+    // dos andares de baixo/cima nao interfere na iluminacao do andar atual.
+    LightView* lightView = (floor == cameraPosition.z) ? m_lightView.get() : nullptr;
+    size_t lightFloorStart = lightView ? lightView->size() : 0;
 
     // Determine if we should apply floor transparency for this floor.
     // Floors above (lower z) get distance-based fade; same-floor tiles with
@@ -255,12 +311,12 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
     }
 
     // light
-    if (m_lightView) {
+    if (lightView) {
         for (auto& tile : tiles) {
             Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
             ItemPtr ground = tile->getGround();
             if (ground && ground->isGround() && !ground->isTranslucent()) {
-                m_lightView->setFieldBrightness(tileDrawPos, lightFloorStart, 0);
+                lightView->setFieldBrightness(tileDrawPos, lightFloorStart, 0);
             }
         }
     }
@@ -283,10 +339,10 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
     for (auto& tile : tiles) {
         Point tileDrawPos = transformPositionTo2D(tile->getPosition(), cameraPosition);
 
-        if (m_lightView) {
+        if (lightView) {
             ItemPtr ground = tile->getGround();
             if (ground && ground->isGround() && !ground->isTranslucent()) {
-                m_lightView->setFieldBrightness(tileDrawPos, lightFloorStart, 0);
+                lightView->setFieldBrightness(tileDrawPos, lightFloorStart, 0);
             }
         }
 
@@ -359,7 +415,7 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
 
         size_t tileGroundStart = g_drawQueue->size();
 
-        tile->drawGround(tileDrawPos, m_lightView.get());
+        tile->drawGround(tileDrawPos, lightView);
 
         // Upper-floor fade applies to the ground as well; the same-floor
         // occluder fade must keep the ground fully opaque so the floor beneath
@@ -377,15 +433,15 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
 
         size_t tileNonGroundStart = g_drawQueue->size();
 
-        tile->drawBottom(tileDrawPos, m_lightView.get());
+        tile->drawBottom(tileDrawPos, lightView);
 
         if (m_crosshair && tile == crosshairTile) {
             g_drawQueue->addTexturedRect(Rect(tileDrawPos, tileDrawPos + g_sprites.spriteSize() - 1),
                                          m_crosshair, Rect(0, 0, m_crosshair->getSize()));
         }
 
-        tile->drawCreatures(tileDrawPos, m_lightView.get());
-        tile->drawTop(tileDrawPos, m_lightView.get());
+        tile->drawCreatures(tileDrawPos, lightView);
+        tile->drawTop(tileDrawPos, lightView);
 
         // Apply smooth fade transparency to all draw calls of this tile
         const float tileOpacity = tileOpacities[tileIndex++];
@@ -401,7 +457,7 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
 
         size_t effectsStart = g_drawQueue->size();
 
-        tile->drawEffects(tileDrawPos, m_lightView.get());
+        tile->drawEffects(tileDrawPos, lightView);
 
         const float tileOpacity = tileOpacities[tileIndex++];
         if (tileOpacity < 0.999f)
@@ -409,7 +465,7 @@ void MapView::drawFloor(short floor, const Position& cameraPosition, const TileP
     }
 
     for (const MissilePtr& missile : g_map.getFloorMissiles(floor)) {
-        missile->draw(transformPositionTo2D(missile->getPosition(), cameraPosition), true, m_lightView.get());
+        missile->draw(transformPositionTo2D(missile->getPosition(), cameraPosition), true, lightView);
     }
 }
 

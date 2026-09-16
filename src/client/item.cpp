@@ -103,10 +103,12 @@ void Item::draw(const Point& dest, bool animate, LightView* lightView)
 
     std::string activeShader = getShader();
     if (!activeShader.empty()) {
-        rawGetThingType()->drawWithShader(dest, 0, xPattern, yPattern, zPattern, animationPhase, activeShader, color, lightView);
+        // Itens no chao NAO iluminam mais: passamos nullptr no lugar do lightView
+        // (o mundo tem penumbra fixa e so' magias/criaturas emitem luz - mapview.cpp).
+        rawGetThingType()->drawWithShader(dest, 0, xPattern, yPattern, zPattern, animationPhase, activeShader, color, nullptr);
     }
     else {
-        rawGetThingType()->draw(dest, 0, xPattern, yPattern, zPattern, animationPhase, color, lightView);
+        rawGetThingType()->draw(dest, 0, xPattern, yPattern, zPattern, animationPhase, color, nullptr);
     }
     if (m_marked) {
         g_drawQueue->setMark(drawQueueSize, updatedMarkedColor());

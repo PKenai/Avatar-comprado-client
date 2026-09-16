@@ -243,6 +243,12 @@ private:
     std::unique_ptr<LightView> m_lightView;
     TexturePtr m_lightTexture;
 
+    // Smooth light transitions (lerp)
+    Color m_smoothLightColor;
+    float m_smoothLightIntensity = 255.f;
+    Color m_targetLightColor;
+    float m_targetLightIntensity = 255.f;
+
 
 };
 

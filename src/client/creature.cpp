@@ -143,14 +143,17 @@ void Creature::draw(const Point& dest, bool animate, LightView* lightView)
     if (m_light.intensity != light.intensity || m_light.color != light.color)
         light = m_light;
 
-    // local player always have a minimum light in complete darkness
-    if (isLocalPlayer()) {
-        light.intensity = std::max<uint8>(light.intensity, 2);
-        if (light.color == 0 || light.color > 215)
-            light.color = 215;
-    }
-    
-    if(lightView)
+    // O personagem NAO emite luz por si so.
+    //
+    // O client forcava um brilho minimo (intensidade 2) no player local para ele
+    // nunca ficar invisivel no breu. Com a penumbra fixa do mundo isso perdeu o
+    // sentido e virava um halo em volta do personagem, entao saiu.
+    //
+    // O player continua iluminando quando algo externo manda luz pra ele
+    // (item na mao / outfit com light / flag de GM com luz total) - o que nao
+    // acontece mais e' a luz "de graca".
+    // Se quiser o brilho minimo de volta: light.intensity = std::max<uint8>(light.intensity, 2);
+    if(lightView && light.intensity > 0)
         lightView->addLight(creatureCenter, light);
 }
 
@@ -488,12 +491,24 @@ void Creature::drawInformation(const Point& point, bool useGray, const Rect& par
 
     // --- Icons ---
     // barBackgroundRect is the frame (ping) or backgroundRect (original)
-    if (m_skull != Otc::SkullNone && m_skullTexture) {
-        Rect skullRect = Rect(barBackgroundRect.x() + 13.5 + 12, barBackgroundRect.y() + 5, m_skullTexture->getSize());
+    // Skull and party shield hang OUTSIDE the bar, stacked to its LEFT and
+    // vertically centered. barBackgroundRect is invalid when the bar was not
+    // drawn (health bars disabled), so the icons are skipped instead of
+    // piling up at the viewport origin.
+    if (barBackgroundRect.isValid() && m_skull != Otc::SkullNone && m_skullTexture) {
+        Size skullSize = m_skullTexture->getSize();
+        int skullX = barBackgroundRect.x() - skullSize.width() - 1;
+        int skullY = barBackgroundRect.y() + (barBackgroundRect.height() - skullSize.height()) / 2;
+        Rect skullRect = Rect(skullX, skullY, skullSize);
         g_drawQueue->addTexturedRect(skullRect, m_skullTexture, Rect(0, 0, m_skullTexture->getSize()));
     }
-    if (m_shield != Otc::ShieldNone && m_shieldTexture && m_showShieldTexture) {
-        Rect shieldRect = Rect(barBackgroundRect.x() + 13.5, barBackgroundRect.y() + 5, m_shieldTexture->getSize());
+    if (barBackgroundRect.isValid() && m_shield != Otc::ShieldNone && m_shieldTexture && m_showShieldTexture) {
+        // The shield sits left of the skull; the skull is drawn next to the bar.
+        Size shieldSize = m_shieldTexture->getSize();
+        const int reservedForSkull = (m_skull != Otc::SkullNone && m_skullTexture) ? m_skullTexture->getSize().width() : 0;
+        int shieldX = barBackgroundRect.x() - 1 - shieldSize.width() - reservedForSkull;
+        int shieldY = barBackgroundRect.y() + (barBackgroundRect.height() - shieldSize.height()) / 2;
+        Rect shieldRect = Rect(shieldX, shieldY, shieldSize);
         g_drawQueue->addTexturedRect(shieldRect, m_shieldTexture, Rect(0, 0, m_shieldTexture->getSize()));
     }
     if (m_emblem != Otc::EmblemNone && m_emblemTexture) {

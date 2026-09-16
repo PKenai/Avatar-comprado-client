@@ -31,6 +31,7 @@
 #include <framework/http/http.h>
 #include <queue>
 #include <regex>
+#include <cstdlib>
 
 #if not(defined(ANDROID) || defined(FREE_VERSION))
 #include <boost/process/v1.hpp>
@@ -68,6 +69,26 @@ void ResourceManager::terminate()
     PHYSFS_deinit();
 }
 
+// Pasta de configuracao do cliente no perfil do usuario.
+// No Windows e' uma unica pasta: %APPDATA%\<product> (hoje %APPDATA%\AvatarEclipse).
+// O PHYSFS_getPrefDir criaria duas pastas aninhadas (%APPDATA%\<product>\<app>),
+// que era de onde vinha o "OTClientV8\otclientv8". Se por algum motivo o
+// APPDATA nao existir, cai no comportamento antigo do PHYSFS.
+std::string ResourceManager::getPrefDir(const std::string& product, const std::string& app) {
+#ifdef ANDROID
+    return g_androidState->activity->internalDataPath;
+#else
+#ifdef WIN32
+    if (const char* appData = std::getenv("APPDATA")) {
+        if (*appData)
+            return std::string(appData) + "\\" + product;
+    }
+#endif
+    const char* prefDir = PHYSFS_getPrefDir(product.c_str(), app.c_str());
+    return prefDir ? prefDir : "";
+#endif
+}
+
 bool ResourceManager::launchCorrect(const std::string& product, const std::string& app) { // curently works only on windows
 #if not(defined(ANDROID) || defined(FREE_VERSION))
     auto init_path = m_binaryPath.parent_path();
@@ -75,15 +96,17 @@ bool ResourceManager::launchCorrect(const std::string& product, const std::strin
     if (std::filesystem::exists(init_path)) // debug version
         return false;
 
-    const char* localDir = PHYSFS_getPrefDir(product.c_str(), app.c_str());
-    if (!localDir)
+    std::string prefDir = getPrefDir(product, app);
+    if (prefDir.empty())
         return false;
 
     auto fileName2 = m_binaryPath.stem().string();
     fileName2 = stdext::split(fileName2, "-")[0];
     stdext::tolower(fileName2);
 
-    std::filesystem::path path(std::filesystem::u8path(localDir));
+    std::filesystem::path path(std::filesystem::u8path(prefDir));
+    if (!std::filesystem::exists(path)) // ainda nao ha pasta de configuracao
+        return false;
     std::error_code ec;
     auto lastWrite = std::filesystem::last_write_time(m_binaryPath, ec);
     std::filesystem::path binary = m_binaryPath;
@@ -145,7 +168,18 @@ bool ResourceManager::setupWriteDir(const std::string& product, const std::strin
 #ifdef ANDROID
     const char* localDir = g_androidState->activity->internalDataPath;
 #else
-    const char* localDir = PHYSFS_getPrefDir(product.c_str(), app.c_str());
+    // Uma pasta so' (%APPDATA%\AvatarEclipse). O PHYSFS exige que ela exista
+    // antes do setWriteDir, entao e' criada aqui.
+    std::string prefDir = getPrefDir(product, app);
+    if (prefDir.empty()) {
+        g_logger.fatal(stdext::format("Unable to get local dir, error: %s", PHYSFS_getErrorByCode(PHYSFS_getLastErrorCode())));
+        return false;
+    }
+
+    std::error_code createEc;
+    std::filesystem::create_directories(std::filesystem::u8path(prefDir), createEc);
+
+    const char* localDir = prefDir.c_str();
 #endif
 
     if (!localDir) {

@@ -39,8 +39,8 @@ struct TileLight {
 class LightView : public DrawQueueItem
 {
 public:
-    LightView(TexturePtr& lightTexture, const Size& mapSize, const Rect& dest, const Rect& src, uint8_t color, uint8_t intensity) :
-        DrawQueueItem(nullptr), m_lightTexture(lightTexture), m_mapSize(mapSize), m_dest(dest), m_src(src) {
+    LightView(TexturePtr& lightTexture, const Size& mapSize, const Rect& dest, const Rect& src, uint8_t color, uint8_t intensity, const std::vector<bool>& blockingMap) :
+        DrawQueueItem(nullptr), m_lightTexture(lightTexture), m_mapSize(mapSize), m_dest(dest), m_src(src), m_blockingMap(blockingMap), m_lightSeed(0, 0) {
         m_globalLight = Color::from8bit(color) * ((float)intensity / 255.f);
         m_tiles.resize(m_mapSize.area(), TileLight{ 0, 0 });
     }
@@ -58,18 +58,26 @@ public:
         return addLight(pos, light.color, light.intensity);
     }
     void addLight(const Point& pos, uint8_t color, uint8_t intensity);
+    // Camera offset in pixels, added to every light's screen position before
+    // hashing its breathing phase, so the pulse is tied to the light's world
+    // position instead of its (moving) screen position.
+    void setLightSeed(const Point& seed) { m_lightSeed = seed; }
     void setFieldBrightness(const Point& pos, size_t start, uint8_t color);
     size_t size() { return m_lights.size(); }
 
     void draw() override;
 
 private:
+    bool isBlocked(float x0, float y0, float x1, float y1, int spriteSize) const;
+
     TexturePtr m_lightTexture;
     Size m_mapSize;
     Rect m_dest, m_src;
     Color m_globalLight;
     std::vector<Light> m_lights;
     std::vector<TileLight> m_tiles;
+    std::vector<bool> m_blockingMap;
+    Point m_lightSeed;
 };
 
 #endif

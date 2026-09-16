@@ -41,6 +41,24 @@ function createWindow()
   addEvent(function() addEvent(function() localesWindow:raise() localesWindow:focus() end) end)
 end
 
+-- A tela de conta aparece pelo startup do modulo "client", ligado ao evento
+-- g_app.onRun (modules/client/client.lua). Este reload recria os modulos, mas o
+-- evento nao dispara de novo e o modulo "client" e' reloadable: false, ou seja,
+-- o startup dele tambem nao roda outra vez. O init do client_entergame so' abre
+-- a janela quando g_app.isRunning(), caminho que nao cobre este reload. Sem
+-- reabrir aqui, na primeira execucao o jogador escolhia o idioma e ficava sem
+-- tela de conta - so' voltava fechando e abrindo o client.
+local function reopenLoginWindow()
+  if g_game.isOnline() then return end
+  if not EnterGame or not EnterGame.firstShow then return end
+
+  local root = g_ui.getRootWidget()
+  local login = root and root:getChildById('enterGame')
+  if not login or login:isDestroyed() then return end
+
+  EnterGame.firstShow()
+end
+
 function selectFirstLocale(name)
   if localesWindow then
     localesWindow:destroy()
@@ -48,6 +66,7 @@ function selectFirstLocale(name)
   end
   if setLocale(name) then
     g_modules.reloadModules()
+    reopenLoginWindow()
   end
 end
 

@@ -183,6 +183,9 @@ function onGameStart()
   -- que permite effects custom acima de 255 (ex.: 183+ do Spiritual Rift)
   g_game.enableFeature(GameMagicEffectU16)
 
+  -- Avatar: stack de ate 1000 itens (moedas, Runas, etc)
+  g_game.enableFeature(GameCountU16)
+
   -- open tibia has delay in auto walking
   if not g_game.isOfficialTibia() then
     g_game.enableFeature(GameForceFirstAutoWalkStep)

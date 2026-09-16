@@ -51,7 +51,9 @@ int main(int argc, const char* argv[]) {
     g_logger.setLogFile(compactName + ".log");
 
     // setup application name and version
-    g_app.setName("OTClientV8");
+    // nome do produto: e' ele que define a pasta no perfil do usuario
+    // (%APPDATA%\AvatarEclipse), veja ResourceManager::getPrefDir
+    g_app.setName("AvatarEclipse");
     g_app.setCompactName(compactName);
     g_app.setVersion("3.2");
 

@@ -141,6 +141,7 @@ GameMultiSpr = 130
 GameVocationMonk = 131
 GameWingsAndAura = 104
 GameOutfitShaders = 106
+GameCountU16 = 108
 GameDrawAuraOnTop = 109
 
 -- OTCv8-dev: desenha o chao de todos os tiles antes de itens/criaturas.

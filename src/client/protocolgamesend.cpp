@@ -351,10 +351,7 @@ void ProtocolGame::sendEquipItem(int itemId, int countOrSubType)
     OutputMessagePtr msg(new OutputMessage);
     msg->addU8(Proto::ClientEquipItem);
     msg->addU16(itemId);
-    if (g_game.getFeature(Otc::GameCountU16))
-        msg->addU16(countOrSubType);
-    else
-        msg->addU8(countOrSubType);
+    msg->addU16(countOrSubType);
     send(msg);
 }
 
@@ -366,10 +363,8 @@ void ProtocolGame::sendMove(const Position& fromPos, int thingId, int stackpos, 
     msg->addU16(thingId);
     msg->addU8(stackpos);
     addPosition(msg, toPos);
-    if(g_game.getFeature(Otc::GameCountU16))
-        msg->addU16(count);
-    else
-        msg->addU8(count);
+    // Avatar: o servidor sempre le o count como u16 (ProtocolGame::parseThrow).
+    msg->addU16(count);
     send(msg);
 }
 
@@ -378,10 +373,7 @@ void ProtocolGame::sendInspectNpcTrade(int itemId, int count)
     OutputMessagePtr msg(new OutputMessage);
     msg->addU8(Proto::ClientInspectNpcTrade);
     msg->addU16(itemId);
-    if (g_game.getFeature(Otc::GameCountU16))
-        msg->addU16(count);
-    else
-        msg->addU8(count);
+    msg->addU16(count);
     send(msg);
 }
 

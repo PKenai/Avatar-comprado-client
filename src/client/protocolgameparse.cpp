@@ -1465,9 +1465,12 @@ void ProtocolGame::parseOpenNpcTrade(const InputMessagePtr& msg)
 
     for (int i = 0; i < listCount; ++i) {
         uint16 itemId = msg->getU16();
-        uint8 count = msg->getU8();
-
         ItemPtr item = Item::create(itemId);
+
+        // Avatar: largura FIXA de 2 bytes, igual ao ProtocolGame::AddShopItem do
+        // servidor e ao getItem() do mapa. Ver o comentario em getItem().
+        uint16 count = msg->getU16();
+
         item->setCountOrSubType(count);
 
         std::string name = msg->getString();
@@ -2870,7 +2873,7 @@ void ProtocolGame::parseItemInfo(const InputMessagePtr& msg)
     for (int i = 0; i < size; ++i) {
         ItemPtr item(new Item);
         item->setId(msg->getU16());
-        item->setCountOrSubType(g_game.getFeature(Otc::GameCountU16) ? msg->getU16() : msg->getU8());
+        item->setCountOrSubType(msg->getU16());
 
         std::string desc = msg->getString();
         list.push_back(std::make_tuple(item, desc));
@@ -3730,16 +3733,19 @@ ItemPtr ProtocolGame::getItem(const InputMessagePtr& msg, int id, bool hasDescri
         msg->getU8(); // mark
     }
 
-    // Avatar / TFS 0.4 putItem only sends an extra byte for stackable and fluid/splash.
-    // Reading charges here desyncs the whole map (invalid thing id 0 on opcode 0x64).
-    if (item->isStackable() || (item->isChargeable() && g_game.getProtocolVersion() > 860)) {
-        item->setCountOrSubType(g_game.getFeature(Otc::GameCountU16) ? msg->getU16() : msg->getU8());
-    }
-    else if (item->isFluidContainer() || item->isSplash()) {
-        item->setCountOrSubType(msg->getU8());
+    // Avatar: o campo que vem depois do id tem largura FIXA de 2 bytes (u16) para
+    // TODOS os itens. O servidor escreve sempre 2 bytes (NetworkMessage::putItem e
+    // ProtocolGame::AddShopItem) e aqui sempre se leem 2 bytes.
+    //
+    // Nao pode depender de stackable/fluid/splash: o items.otb do servidor e o .dat
+    // deste cliente divergem em alguns ids (ex.: 268) e 1 byte de diferenca
+    // desalinhava o stream inteiro do mapa -> "invalid thing id (0)" no opcode 0x64.
+    const uint16_t itemField = msg->getU16();
+    if (item->isStackable() || item->isFluidContainer() || item->isSplash()) {
+        item->setCountOrSubType(itemField);
     }
     else {
-        item->setTier(msg->getU8());
+        item->setTier(itemField);
     }
     if (item->rawGetThingType()->isContainer() && (g_game.getFeature(Otc::GameTibia12Protocol) || g_game.getFeature(Otc::GameQuickLootFlags))) {
         // not sure about this part

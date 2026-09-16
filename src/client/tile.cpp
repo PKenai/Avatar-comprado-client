@@ -148,9 +148,11 @@ void Tile::drawBottom(const Point& dest, LightView* lightView)
         }
     }
 
-    if (lightView && hasTranslucentLight()) {
-        lightView->addLight(dest + Point(16, 16), 215, 1);
-    }
+    // Luz de tile (TILESTATE_TRANSLUECENT_LIGHT) desligada: o mundo tem
+    // penumbra fixa e so' magias e criaturas emitem luz (ver mapview.cpp).
+    // Para voltar a acender esses tiles, era:
+    //     if (lightView && hasTranslucentLight())
+    //         lightView->addLight(dest + Point(16, 16), 215, 1);
 }
 
 void Tile::drawCreatures(const Point& dest, LightView* lightView)

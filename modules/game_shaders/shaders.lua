@@ -7,6 +7,22 @@ local SPIRITUAL_NAME_COLOR = {r = 0x66, g = 0xCC, b = 0xFF, a = 255} -- light bl
 local appliedSpiritual = {}
 local applyingSpiritual = false
 
+--[[
+  Shaders aplicados pelo PREFIXO do nome da criatura.
+  O servidor so' precisa dar o nome certo: o client cuida do visual.
+    "Spiritual X" -> outfit espiritual (soul/ghost)
+    "ALPHA X"     -> outline VERMELHO PULSANTE (bosses do sistema ALPHA)
+  O shader outfit_outlinered recebe u_Time do PaintShaderProgram e usa
+  alpha = 0.4 + abs(0.4 - mod(u_Time, 0.8)), ou seja, pulsa sozinho.
+  Guardamos a regra tambem para impedir que jogadores "falsifiquem" o nome:
+  apenas monstros (isMonster) recebem o efeito.
+]]--
+local PREFIX_SHADERS = {
+  { prefix = SPIRITUAL_PREFIX, shader = SPIRITUAL_SHADER, color = SPIRITUAL_NAME_COLOR },
+  { prefix = "ALPHA ", shader = "outfit_outlinered", color = {r = 0xFF, g = 0x3B, b = 0x3B, a = 255} },
+}
+local appliedPrefix = {}
+
 function init()
   g_shaders.createShader("map_default", "/shaders/map_default_vertex", "/shaders/map_default_fragment")
 
@@ -59,6 +75,7 @@ function terminate()
     onOutfitChange = onCreatureOutfitSpiritual
   })
   appliedSpiritual = {}
+  appliedPrefix = {}
 end
 
 function createFadeShaders()
@@ -199,6 +216,7 @@ function onGameEndClearShader()
   clearFadeTimer()
   setMapShader("")
   appliedSpiritual = {}
+  appliedPrefix = {}
   -- Clear all tier shaders from the global registry on disconnect/logout
   g_things.clearItemShaders()
   -- Also clear local tier table
@@ -209,39 +227,70 @@ function onGameEndClearShader()
   end
 end
 
+-- Procura a regra de prefixo que combina com o nome (case-insensitive)
+local function prefixRuleFor(name)
+  if type(name) ~= "string" or name == "" then
+    return nil
+  end
+  for _, rule in ipairs(PREFIX_SHADERS) do
+    if name:sub(1, #rule.prefix) == rule.prefix then
+      return rule
+    end
+  end
+  local upper = name:upper()
+  for _, rule in ipairs(PREFIX_SHADERS) do
+    if upper:sub(1, #rule.prefix) == rule.prefix:upper() then
+      return rule
+    end
+  end
+  return nil
+end
+
 local function isSpiritualName(name)
   return name and name:sub(1, #SPIRITUAL_PREFIX) == SPIRITUAL_PREFIX
 end
 
-function applySpiritualOutfitShader(creature)
+function applyPrefixOutfitShader(creature)
   if applyingSpiritual or not creature or creature:isLocalPlayer() then
     return
   end
-  if not isSpiritualName(creature:getName()) then
+  -- somente monstros: impede que um jogador "clone" o visual do boss
+  if not creature:isMonster() then
+    return
+  end
+
+  local rule = prefixRuleFor(creature:getName())
+  if not rule then
     return
   end
 
   local id = creature:getId()
-  if appliedSpiritual[id] then
+  if appliedPrefix[id] == rule.prefix then
     return
   end
 
   local outfit = creature:getOutfit()
-  outfit.shader = SPIRITUAL_SHADER
-  appliedSpiritual[id] = true
+  outfit.shader = rule.shader
+  appliedPrefix[id] = rule.prefix
   applyingSpiritual = true
   creature:setOutfit(outfit)
   applyingSpiritual = false
-  creature:setNameColor(SPIRITUAL_NAME_COLOR)
+  creature:setNameColor(rule.color)
+end
+
+-- mantido para compatibilidade (outros modulos/scripts podem chamar)
+function applySpiritualOutfitShader(creature)
+  applyPrefixOutfitShader(creature)
 end
 
 function onCreatureAppearSpiritual(creature)
-  applySpiritualOutfitShader(creature)
+  applyPrefixOutfitShader(creature)
 end
 
 function onCreatureDisappearSpiritual(creature)
   if creature then
     appliedSpiritual[creature:getId()] = nil
+    appliedPrefix[creature:getId()] = nil
     creature:resetNameColor()
   end
 end
@@ -252,5 +301,6 @@ function onCreatureOutfitSpiritual(creature, outfit, oldOutfit)
   end
   -- External outfit update from server clears shader; mark dirty and re-apply.
   appliedSpiritual[creature:getId()] = nil
-  applySpiritualOutfitShader(creature)
+  appliedPrefix[creature:getId()] = nil
+  applyPrefixOutfitShader(creature)
 end

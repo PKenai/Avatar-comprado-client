@@ -23,6 +23,8 @@
 #include "effect.h"
 #include "map.h"
 #include "game.h"
+#include "lightview.h"
+#include "spritemanager.h"
 #include <framework/core/eventdispatcher.h>
 #include <framework/util/extras.h>
 
@@ -85,6 +87,31 @@ void Effect::draw(const Point& dest, int offsetX, int offsetY, bool animate, Lig
         return;
 
     rawGetThingType()->draw(dest + effectDisplacement, 0, xPattern, yPattern, 0, m_animationPhase, Color(1.0f, 1.0f, 1.0f, opacity), lightView);
+
+    // ------------------------------------------------------------------
+    // Magias iluminam
+    //
+    // O mundo tem penumbra fixa (mapview.cpp) e itens no chao nao iluminam
+    // mais (item.cpp). Para uma magia continuar acendendo o ambiente, todo
+    // effect entra no lightmap: usa a luz do .dat quando ela existe e, quando
+    // nao existe, cai nesta luz padrao.
+    //
+    // SPELL_LIGHT_INTENSITY = raio em tiles (o raio efetivo e' intensity * 1.1).
+    // Para uma magia nao iluminar, basta zerar aqui.
+    // ------------------------------------------------------------------
+    if (lightView) {
+        static const uint8_t SPELL_LIGHT_INTENSITY = 4;
+        static const uint8_t SPELL_LIGHT_COLOR = 215;
+
+        Light light = rawGetThingType()->getLight();
+        if (!rawGetThingType()->hasLight()) {
+            light.color = SPELL_LIGHT_COLOR;
+            light.intensity = SPELL_LIGHT_INTENSITY;
+        }
+
+        if (light.intensity > 0)
+            lightView->addLight(dest + effectDisplacement + Point(g_sprites.spriteSize() / 2, g_sprites.spriteSize() / 2), light);
+    }
 }
 
 void Effect::onAppear()

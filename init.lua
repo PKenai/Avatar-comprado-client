@@ -1,5 +1,8 @@
 -- CONFIG
-APP_NAME = "otclientv8"  -- important, change it, it's name for config dir and files in appdata
+APP_NAME = "otclientv8"  -- nome "compacto": entra no nome do log e na semente da
+                         -- criptografia dos dados salvos. Nao define mais a pasta
+                         -- no AppData - isso vem do nome do produto em src/main.cpp
+                         -- (%APPDATA%\AvatarEclipse).
 APP_VERSION = 1341       -- client version for updater and login to identify outdated client
 DEFAULT_LAYOUT = "retro" -- on android it's forced to "mobile", check code bellow
 
@@ -30,7 +33,7 @@ Servers = {
 --USE_NEW_ENERGAME = true -- uses entergamev2 based on websockets instead of entergame
 ALLOW_CUSTOM_SERVERS = true -- if true it shows option ANOTHER on server list
 
-g_app.setName("OTCv8")
+g_app.setName("AvatarEclipse") -- a pasta de configuracao ja' foi decidida no C++
 -- CONFIG END
 
 if not g_resources.directoryExists("/data") then
