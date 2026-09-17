@@ -19,6 +19,12 @@ walkFunction = nil
 lastDirTime = g_clock.millis()
 hookedMenuOptions = {}
 
+-- Modo "escolha um item" (crosshair): o proximo clique esquerdo no mapa/inventario
+-- chama pickCallback(widget, mousePosition). Enquanto ativo o mouse fica preso no
+-- mouseGrabberWidget, entao o clique nao anda nem usa nada no jogo.
+local pickCallback = nil
+local pickCursorName = nil
+
 function init()
   g_ui.importStyle('styles/countwindow')
 
@@ -195,8 +201,44 @@ function onGameStart()
 end
 
 function onGameEnd()
+  cancelItemPick()
   setupViewMode(2)
   hide()
+end
+
+-- Inicia o modo crosshair. `callback` recebe (widget, mousePosition); widget e'
+-- nil quando o jogador cancela (botao direito / clique fora). Devolve false se
+-- outra coisa ja estiver com o mouse preso.
+function startItemPick(callback, cursorName)
+  if type(callback) ~= "function" then return false end
+  if g_ui.isMouseGrabbed() then return false end
+
+  pickCallback = callback
+  pickCursorName = cursorName or 'target'
+  mouseGrabberWidget:grabMouse()
+  g_mouse.pushCursor(pickCursorName)
+  return true
+end
+
+function isItemPicking()
+  return pickCallback ~= nil
+end
+
+function cancelItemPick()
+  if not pickCallback then return false end
+
+  local callback = pickCallback
+  pickCallback = nil
+  if pickCursorName then
+    g_mouse.popCursor(pickCursorName)
+    pickCursorName = nil
+  end
+  if g_ui.isMouseGrabbed() then
+    mouseGrabberWidget:ungrabMouse()
+  end
+
+  callback(nil, nil)
+  return true
 end
 
 function show()
@@ -397,6 +439,26 @@ function updateStretchShrink()
 end
 
 function onMouseGrabberRelease(self, mousePosition, mouseButton)
+  -- Modo crosshair (market e outros): entrega o widget clicado e solta o mouse.
+  if pickCallback then
+    local callback = pickCallback
+    pickCallback = nil
+    if pickCursorName then
+      g_mouse.popCursor(pickCursorName)
+      pickCursorName = nil
+    end
+    self:ungrabMouse()
+
+    if mouseButton == MouseRightButton then
+      callback(nil, mousePosition)
+      return true
+    end
+
+    local clickedWidget = gameRootPanel:recursiveGetChildByPos(mousePosition, false)
+    callback(clickedWidget, mousePosition)
+    return true
+  end
+
   if selectedThing == nil then return false end
   if mouseButton == MouseLeftButton then
     local clickedWidget = gameRootPanel:recursiveGetChildByPos(mousePosition, false)

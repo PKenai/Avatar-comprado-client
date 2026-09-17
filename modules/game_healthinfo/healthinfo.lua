@@ -87,7 +87,7 @@ function init()
     onHealthChange(localPlayer, localPlayer:getHealth(), localPlayer:getMaxHealth())
     onManaChange(localPlayer, localPlayer:getMana(), localPlayer:getMaxMana())
     onLevelChange(localPlayer, localPlayer:getLevel(), localPlayer:getLevelPercent())
-    onStatesChange(localPlayer, localPlayer:getStates(), 0)
+    syncConditionIcons(localPlayer:getStates())
     updateHealthbarShader()
   end
 
@@ -96,7 +96,10 @@ end
 
 function online()
   if g_game.isOnline() then
-         
+    local localPlayer = g_game.getLocalPlayer()
+    if localPlayer then
+      syncConditionIcons(localPlayer:getStates())
+    end
   end
 end
 
@@ -133,20 +136,45 @@ function toggle()
   end
 end
 
-function toggleIcon(bitChanged)
+-- A barra de estados e' ESPELHO do bitfield que o servidor manda.
+-- O codigo antigo alternava (toggle) o icone a cada bit que mudava: qualquer
+-- dessincronia entre o painel e o servidor (reload de modulo, bit que nao
+-- muda entre duas sessoes, dois updates no mesmo pacote) deixava um icone
+-- fantasma "You are poisoned / paralysed" que nao correspondia a nenhuma
+-- condicao real e so' saia quando aquele bit mudasse de novo.
+function syncConditionIcons(states)
+  if not healthInfoWindow then return end
   local content = healthInfoWindow:recursiveGetChildById('conditionPanel')
+  if not content then return end
 
-  local icon = content:getChildById(Icons[bitChanged].id)
-  if icon then
-    icon:destroy()
-  else
-    icon = loadIcon(bitChanged)
-    icon:setParent(content)
+  states = tonumber(states) or 0
+  content:destroyChildren()
+
+  local bit = 1
+  for _ = 1, 32 do
+    if bit > states then break end
+    if bit32.band(states, bit) ~= 0 then
+      local icon = loadIcon(bit, content)
+      if icon then
+        icon:setParent(content)
+      end
+    end
+    bit = bit * 2
   end
 end
 
-function loadIcon(bitChanged)
-  local icon = g_ui.createWidget('ConditionWidget', content)
+function toggleIcon(bitChanged)
+  -- mantido por compatibilidade: sincroniza com o estado atual do servidor
+  local localPlayer = g_game.getLocalPlayer()
+  syncConditionIcons(localPlayer and localPlayer:getStates() or 0)
+end
+
+function loadIcon(bitChanged, parent)
+  if not Icons[bitChanged] then
+    return nil
+  end
+
+  local icon = g_ui.createWidget('ConditionWidget', parent)
   icon:setId(Icons[bitChanged].id)
   icon:setImageSource(Icons[bitChanged].path)
   icon:setTooltip(Icons[bitChanged].tooltip)
@@ -193,17 +221,8 @@ function onLevelChange(localPlayer, value, percent)
 end
 
 function onStatesChange(localPlayer, now, old)
-  if now == old then return end
-
-  local bitsChanged = bit32.bxor(now, old)
-  for i = 1, 32 do
-    local pow = math.pow(2, i-1)
-    if pow > bitsChanged then break end
-    local bitChanged = bit32.band(bitsChanged, pow)
-    if bitChanged ~= 0 then
-      toggleIcon(bitChanged)
-    end
-  end
+  -- Sempre re-renderiza a partir do estado atual (nao do que mudou).
+  syncConditionIcons(now)
 end
 
 -- personalization functions

@@ -32,6 +32,12 @@ function init()
   g_shaders.createShader("map_cloudy", "/shaders/map_cloudy_vertex", "/shaders/map_cloudy_fragment")
   g_shaders.createShader("background_particles", "/shaders/map_default_vertex", "/shaders/background_particles_fragment")
 
+  -- Brilho bem suave nas bordas da arte do login (logo.png, a imagem da janela
+  -- enterGame). O shader desenha a propria arte e soma luz nas bordas dela, por
+  -- isso e' aplicado direto na janela: veja image-shader em
+  -- client_entergame/entergame.otui (EnterGameWindow).
+  g_shaders.createShader("entergame_glow", "/shaders/map_default_vertex", "/shaders/entergame_glow_fragment")
+
   -- Sky Clouds: procedural animated clouds with per-pixel occlusion
   g_shaders.createShader("sky_clouds", "/shaders/sky_clouds_vertex", "/shaders/sky_clouds_fragment")
 

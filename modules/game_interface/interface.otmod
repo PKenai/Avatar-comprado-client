@@ -29,7 +29,8 @@ Module
     - game_npctrade
     - game_folds
     - game_firstlogin
-    - game_playermount
+    // montaria desativada (o servidor recusa montar: creaturescripts/scripts/onMount.lua)
+    // - game_playermount
     - game_shaders
     - game_skyclouds
     - game_itemfly

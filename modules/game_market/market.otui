@@ -21,6 +21,16 @@ MarketRow < Panel
     color: #d8d8d8
     text-auto-resize: true
 
+  // TIER do item, logo depois do nome (o texto vem do servidor: market_lib.lua)
+  Label
+    id: lblTier
+    anchors.left: lblItem.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 6
+    font: verdana-11px-monochrome
+    color: #ffd700
+    text-auto-resize: true
+
   Label
     id: lblPlayer
     anchors.left: parent.left
@@ -159,9 +169,36 @@ MainWindow
       margin: 0 8 0 8
       height: 20
 
+  // Filtro de TIER, logo abaixo do "Filtrar" (categoria)
+  Panel
+    id: tierPanel
+    anchors.top: filterPanel.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 30
+    margin: 6 14 0 14
+    background-color: #00000044
+
+    Label
+      id: lblTierFilter
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: parent.left
+      margin-left: 8
+      font: verdana-11px-monochrome
+      color: #9a9a9a
+      !text: tr('Tier:')
+
+    ComboBox
+      id: cmbTier
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.left: lblTierFilter.right
+      anchors.right: parent.right
+      margin: 0 8 0 8
+      height: 20
+
   Panel
     id: headerPanel
-    anchors.top: filterPanel.bottom
+    anchors.top: tierPanel.bottom
     anchors.left: parent.left
     anchors.right: parent.right
     height: 24
@@ -198,7 +235,7 @@ MainWindow
       margin-left: 525
       font: verdana-11px-monochrome
       color: #7a7a7a
-      !text: tr('Preço')
+      !text: tr('Preï¿½o')
 
   TextList
     id: marketList
@@ -234,7 +271,7 @@ MainWindow
       size: 26 26
       anchors.verticalCenter: parent.verticalCenter
       anchors.left: parent.left
-      !tooltip: tr('Página Anterior')
+      !tooltip: tr('Pï¿½gina Anterior')
       text: <
       @onClick: Market.nextAndPrev(0)
 
@@ -245,14 +282,14 @@ MainWindow
       margin-left: 10
       font: verdana-11px-monochrome
       color: #c8c8c8
-      text: Página: 1/1
+      text: Pï¿½gina: 1/1
 
     Button
       id: btnNext
       size: 26 26
       anchors.verticalCenter: parent.verticalCenter
       anchors.right: parent.right
-      !tooltip: tr('Próxima Página')
+      !tooltip: tr('Prï¿½xima Pï¿½gina')
       text: >
       @onClick: Market.nextAndPrev(1)
 
@@ -264,6 +301,7 @@ MainWindow
     margin-bottom: 8
     !text: tr('Adicionar Oferta')
     font: verdana-11px-monochrome
+    !tooltip: tr('Abre a mira (crosshair): clique no item que voce quer vender - da mochila ou do deposito. Botao direito cancela.')
     @onClick: Market.showAddOffer()
 
   Button
@@ -273,7 +311,7 @@ MainWindow
     anchors.verticalCenter: btnAddOffer.verticalCenter
     margin-left: 10
     icon: /images/topbuttons/marketinterrog
-    !tooltip: tr('Como funciona o Market:\nVocê compra e vende itens com outros jogadores.\nPreço mínimo por oferta: 1.000 gold (sem teto prático de preço).\n\nLimites por personagem:\n- Máximo de 5 ofertas ativas.\n- Máximo de 100 itens por oferta.\n- Itens únicos (não-stackáveis): apenas 1 unidade.\n\nRegras:\n- Apenas equipamentos, armas e itens especiais podem ser vendidos.\n- Só é possível usar dentro de área PZ.\n- O lucro das vendas fica no seu saldo do market.')
+    !tooltip: tr('Como funciona o Market:\nVocï¿½ compra e vende itens com outros jogadores.\nPreï¿½o mï¿½nimo por oferta: 1.000 gold (sem teto prï¿½tico de preï¿½o).\n\nComo vender:\n1. Clique em "Adicionar Oferta".\n2. Com a mira, clique no item (da mochila ou do depï¿½sito).\n3. Confira o item na janela, escolha o preï¿½o e a quantidade.\n4. Clique em "Adicionar".\n\nLimites por personagem:\n- Mï¿½ximo de 5 ofertas ativas.\n- Mï¿½ximo de 100 itens por oferta.\n- Itens ï¿½nicos (nï¿½o-stackï¿½veis): apenas 1 unidade.\n\nRegras:\n- Apenas equipamentos, armas e itens especiais podem ser vendidos.\n- Sï¿½ ï¿½ possï¿½vel usar dentro de ï¿½rea PZ.\n- O lucro das vendas fica no seu saldo do market.')
 
     $hover:
       background-color: #ffffff22

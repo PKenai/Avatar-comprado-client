@@ -729,8 +729,20 @@ int LuaInterface::luaCollectObject(lua_State* L)
 {
     // plain C __gc for LuaObject userdata (same work as luaObjectCollectEvent,
     // but a plain lua_CFunction, mirroring luaCollectCppFunction).
+    //
+    // __gc can be reached without one of our userdata on the stack (a value
+    // that merely carries the class metatable, or a userdata already
+    // finalized). lua_touserdata() hands back a null for those and the reset
+    // below dereferences it, which is an access violation - VALIDATE can not
+    // catch it because global.h compiles it out on release builds. Same guard
+    // luaObjectEqualEvent already uses.
+    if (!lua_isuserdata(L, 1))
+        return 0;
+
     auto objPtr = static_cast<LuaObjectPtr*>(g_lua.popUserdata());
-    VALIDATE(objPtr);
+    if (!objPtr)
+        return 0;
+
     objPtr->reset();
     g_lua.m_totalObjRefs--;
     return 0;

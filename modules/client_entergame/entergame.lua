@@ -47,8 +47,8 @@ local function onCharacterList(protocol, characters, account, otui)
 
     ServerList.setServerAccount(G.host, account)
     ServerList.setServerPassword(G.host, password)
-
-    g_settings.set('autologin', enterGame:getChildById('autoLoginBox'):isChecked())
+    -- (o antigo checkbox "Entrar automaticamente" foi removido da tela, por isso
+    --  nao guardamos mais o 'autologin' nas settings)
   else
     -- reset server list account/password
     ServerList.setServerAccount(G.host, '')
@@ -104,7 +104,6 @@ function EnterGame.init()
   local password = g_settings.get('password')
   local host = g_settings.get('host')
   local port = g_settings.get('port')
-  local autologin = g_settings.getBoolean('autologin')
   local clientVersion = g_settings.getInteger('client-version')
   if clientVersion == 0 then clientVersion = 860 end
 
@@ -117,7 +116,6 @@ function EnterGame.init()
 
   enterGame:getChildById('serverHostTextEdit'):setText(host)
   enterGame:getChildById('serverPortTextEdit'):setText(port)
-  enterGame:getChildById('autoLoginBox'):setChecked(autologin)
 
   clientBox = enterGame:getChildById('clientComboBox')
   for _, proto in pairs(g_game.getSupportedClients()) do
@@ -127,19 +125,18 @@ function EnterGame.init()
 
   enterGame:hide()
 
-  if g_app.isRunning() and not g_game.isOnline() then
-    enterGame:show()
-  end
+  -- A tela de login tem DOIS caminhos de abertura: o startup do modulo "client"
+  -- (evento g_app.onRun, em modules/client/client.lua) e este aqui. O onRun so'
+  -- dispara uma vez por processo, entao num reload de modulos (Ctrl+Shift+Z,
+  -- troca de idioma) aquele caminho nao roda de novo e o jogador ficava sem
+  -- tela de login - so' voltava fechando e abrindo o client.
+  EnterGame.showIfNeeded()
 
-  serverBox = enterGame:getChildById('serverCombo')
-  enterGame:getChildById('serverLabel'):setText(labelText)
-
-
-  for x = 1, #servers do
-      serverBox:addOption(servers[x].txt)
-  end
-
-
+  -- Rede de seguranca: se ainda nao deu pra mostrar agora (o app pode nao estar
+  -- rodando durante o load inicial), tenta de novo daqui a pouco. showIfNeeded
+  -- nao mostra nada quando o jogador esta online, na lista de personagens ou na
+  -- tela de carregamento.
+  scheduleEvent(function() EnterGame.showIfNeeded() end, 1000)
 
   g_keyboard.bindKeyDown("CTRL+SHIFT+T", setTestServer)
 end
@@ -160,17 +157,6 @@ end
 
 function EnterGame.firstShow()
   EnterGame.show()
-
-  local account = g_crypt.decrypt(g_settings.get('account'))
-  local password = g_crypt.decrypt(g_settings.get('password'))
-  local host = g_settings.get('host')
-  local autologin = g_settings.getBoolean('autologin')
-  if #host > 0 and #password > 0 and #account > 0 and autologin then
-    addEvent(function()
-      if not g_settings.getBoolean('autologin') then return end
-      EnterGame.doLogin()
-    end)
-  end
 end
 
 function EnterGame.terminate()
@@ -208,21 +194,48 @@ function EnterGame.show()
   enterGame:focus()
 end
 
+-- Mostra a tela de login quando ela e' devida: client rodando, fora do jogo e
+-- sem outra janela de entrada na frente (lista de personagens ou tela de
+-- carregamento). Idempotente: chamar varias vezes nao muda nada.
+function EnterGame.showIfNeeded()
+  if not enterGame or not g_app.isRunning() then
+    return false
+  end
+  if g_game.isOnline() or g_game.isLogging() then
+    return false
+  end
+  if loadBox then
+    return false
+  end
+  if CharacterList and CharacterList.isVisible and CharacterList.isVisible() then
+    return false
+  end
+  if modules.client_loading and modules.client_loading.isVisible and modules.client_loading.isVisible() then
+    return false
+  end
+  if enterGame:isVisible() then
+    return true
+  end
+
+  EnterGame.show()
+  return true
+end
+
 function EnterGame.hide()
   enterGame:hide()
 end
 
--- returns the host/port for the currently selected world (used by login and by
--- the account-creation window).
+-- Host/porta do mundo unico do client (config.lua). Usado pelo login e pela
+-- janela de criacao de conta. Antes isso vinha do combo de mundos; agora nao ha'
+-- escolha, entao lemos a unica entrada da lista 'servers'.
 function EnterGame.getHostPort()
+  local world = servers and servers[1]
   local host = enterGame:getChildById('serverHostTextEdit'):getText()
   if host == nil or #host == 0 then host = "127.0.0.1" end
   local port
-  for x = 1, #servers do
-    if serverBox:getText() == servers[x].txt then
-      if servers[x].port > 0 then port = servers[x].port end
-      if servers[x].host then host = servers[x].host end
-    end
+  if world then
+    if world.port and world.port > 0 then port = world.port end
+    if world.host then host = world.host end
   end
   return host, port
 end
@@ -260,21 +273,18 @@ function EnterGame.doLogin()
   G.password = enterGame:getChildById('accountPasswordTextEdit'):getText()
   G.host = enterGame:getChildById('serverHostTextEdit'):getText()
 
-  for x = 1, #servers do
-      if serverBox:getText() == servers[x].txt then
-          if servers[x].port > 0 then
-              G.port = servers[x].port
-              -- a world may pin its own host (e.g. Local -> 127.0.0.1);
-              -- otherwise keep the host typed/saved in the host field
-              if servers[x].host then G.host = servers[x].host end
-          else
-              local errorBox = displayErrorBox(tr('Login Error'), tr('Select a valid server in list to join.'))
-              EnterGame.hide()
-              connect(errorBox, { onOk = EnterGame.show })
-              return
-          end
-      end
+  -- mundo unico (config.lua): sem combo, a porta vem da unica entrada da lista
+  local world = servers and servers[1]
+  if not world or not world.port or world.port <= 0 then
+      local errorBox = displayErrorBox(tr('Login Error'), tr('Select a valid server in list to join.'))
+      EnterGame.hide()
+      connect(errorBox, { onOk = EnterGame.show })
+      return
   end
+  G.port = world.port
+  -- o mundo pode fixar o proprio host (ex.: Local -> 127.0.0.1); sem isso vale
+  -- o host digitado/salvo no campo
+  if world.host then G.host = world.host end
 
 
   local clientVersion = tonumber(clientBox:getText())
@@ -321,21 +331,18 @@ function EnterGame.cast()
   G.password = ''
   G.host = enterGame:getChildById('serverHostTextEdit'):getText()
 
-  for x = 1, #servers do
-      if serverBox:getText() == servers[x].txt then
-          if servers[x].port > 0 then
-              G.port = servers[x].port
-              -- a world may pin its own host (e.g. Local -> 127.0.0.1);
-              -- otherwise keep the host typed/saved in the host field
-              if servers[x].host then G.host = servers[x].host end
-          else
-              local errorBox = displayErrorBox(tr('Login Error'), tr('Select a valid server in list to join.'))
-              EnterGame.hide()
-              connect(errorBox, { onOk = EnterGame.show })
-              return
-          end
-      end
+  -- mundo unico (config.lua): sem combo, a porta vem da unica entrada da lista
+  local world = servers and servers[1]
+  if not world or not world.port or world.port <= 0 then
+      local errorBox = displayErrorBox(tr('Login Error'), tr('Select a valid server in list to join.'))
+      EnterGame.hide()
+      connect(errorBox, { onOk = EnterGame.show })
+      return
   end
+  G.port = world.port
+  -- o mundo pode fixar o proprio host (ex.: Local -> 127.0.0.1); sem isso vale
+  -- o host digitado/salvo no campo
+  if world.host then G.host = world.host end
 
 
   local clientVersion = tonumber(clientBox:getText())
@@ -429,8 +436,13 @@ function EnterGame.setUniqueServer(host, port, protocol, windowWidth, windowHeig
   serverListButton:setHeight(0)
   serverListButton:setWidth(0)
 
+  -- O checkbox fica logo abaixo das linhas escondidas acima (que tem altura 0),
+  -- entao a margem aqui e' um ajuste fino da posicao dele: 13 = 18 px mais
+  -- baixo do que estava (-5), dividindo com a fileira de botoes o espaco que
+  -- sobrou das linhas removidas da tela (ver o comentario da fileira no
+  -- entergame.otui).
   local rememberPasswordBox = enterGame:getChildById('rememberPasswordBox')
-  rememberPasswordBox:setMarginTop(-5)
+  rememberPasswordBox:setMarginTop(13)
 
   if not windowWidth then windowWidth = 380 end
   enterGame:setWidth(windowWidth)

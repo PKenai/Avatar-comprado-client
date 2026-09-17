@@ -280797,3 +280797,72 @@ Exiting application..
 Exiting application..
 [NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
 Minimap couldn't be loaded, file missing?
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Todos módulos e scripts foram recarregados.
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Exiting application..
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/client_styles/styles.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff75a615d60
+	[C]: in function 'importFont'
+	/modules/client_styles/styles.lua:13: in function 'init'
+	/modules/client_styles/styles.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:102: in main chunk
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Minimap couldn't be loaded, file missing?
+ERROR: lua function callback failed: C++ call failed: Unable to login into a world while already online or logging.
+stack traceback:
+	[builtin#142]: at 0x7ff635ef6860
+	[C]: in function 'loginWorld'
+	/modules/client_entergame/characterlist.lua:34: in function 'tryLogin'
+	/modules/client_entergame/characterlist.lua:25: in function </modules/client_entergame/characterlist.lua:25>
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)

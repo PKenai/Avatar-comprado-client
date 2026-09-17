@@ -33,8 +33,12 @@ function init()
   chaseModeButton = combatControlsWindow:recursiveGetChildById('chaseModeBox')
   safeFightButton = combatControlsWindow:recursiveGetChildById('safeFightBox')
 
+  -- MONTARIA DESATIVADA: o servidor recusa montar (creaturescripts/scripts/
+  -- onMount.lua retorna false) e o modulo game_playermount saiu do
+  -- interface.otmod. O botao fica escondido pra nao existir botao morto.
   mountButton = combatControlsWindow:recursiveGetChildById('mountButton')
   mountButton.onClick = onMountButtonClick
+  mountButton:setVisible(false)
 
   pvpModesPanel = combatControlsWindow:recursiveGetChildById('pvpModesPanel')
 
@@ -153,12 +157,9 @@ function online()
       end
     end
 
-    if g_game.getFeature(GamePlayerMounts) then
-      mountButton:setVisible(true)
-      mountButton:setChecked(player:isMounted())
-    else
-      mountButton:setVisible(false)
-    end
+    -- Montaria desativada: sempre escondido (ver init()).
+    mountButton:setVisible(false)
+    mountButton:setChecked(false)
 
     if g_game.getFeature(GamePVPMode) then
       pvpModesPanel:setVisible(true)
@@ -259,10 +260,9 @@ function onMiniWindowClose()
 end
 
 function onMountButtonClick(self, mousePos)
-  local player = g_game.getLocalPlayer()
-  if player then
-    player:toggleMount()
-  end
+  -- MONTARIA DESATIVADA: o servidor nao aceita mais montar, entao o botao nao
+  -- manda nada (fica escondido, isto e' so' cinto de seguranca).
+  return
 end
 
 function onOutfitChange(localPlayer, outfit, oldOutfit)

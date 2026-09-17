@@ -337,6 +337,14 @@ function CharacterList.showAgain()
     if ( characterList:getFocusedChild().worldName:find('LOCKED') ) then
 	  PasswordCastWindow:show()
     end	
+    return
+  end
+
+  -- Sem lista de personagens (ex.: logo depois de um reload de modulos, onde o
+  -- client voltou pro estado inicial) a saida e' a tela de login. Antes disso o
+  -- jogador ficava preso sem nenhuma janela e so' resolvia reiniciando o client.
+  if EnterGame and EnterGame.showIfNeeded then
+    EnterGame.showIfNeeded()
   end
 end
 

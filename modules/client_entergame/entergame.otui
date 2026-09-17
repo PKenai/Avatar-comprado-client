@@ -20,16 +20,27 @@ PassCastWindow < Window
     anchors.right: parent.right
     margin-top: 5
 
+// Tamanho 380x480: e' o que o EnterGame.setUniqueServer() aplica em tempo de
+// execucao (setWidth(380) / setHeight(480)), chamado pelo mod ava_protocol.
+// Deixando o mesmo valor aqui a tela nao muda de forma quando esse caminho
+// nao roda. A arte (logo.png, 1063x1480) e' esticada para preencher a janela.
+//
+// image-shader: entergame_glow (registrado em modules/game_shaders/shaders.lua)
+// deixa um brilho bem suave nas bordas da arte. O shader desenha a propria
+// imagem e so' soma luz na faixa das bordas, entao o miolo da janela fica
+// identico. Se o shader nao carregar, o motor cai no desenho normal da imagem.
 EnterGameWindow < UIWindow
-  size: 480 380
+  size: 380 480
   image-source: logo
+  image-shader: entergame_glow
   anchors.centerIn: parent
 
 EnterGameButton < Button
-  width: 64
+  width: 67
+  height: 17
 
 ServerListButton < UIButton
-  size: 17 17
+  size: 13 13
   image-source: /images/topbuttons/minimap
   image-color: #ffffffff
 
@@ -42,6 +53,22 @@ ServerListButton < UIButton
   $disabled:
     image-color: #ffffff55
 
+// ============================================================================
+// LOGIN - geometria encaixada no painel da arte, 25% menor que antes
+//
+// Com a arte esticada na janela de 380x480, o miolo escuro do painel (onde o
+// formulario deve ficar) cai em x 74..305 / y 268..415; de y 415 a ~430 o
+// painel afunila, mas ainda cabe a fileira de botoes.
+//
+// Antes -> agora (largura x altura):
+//   campos de texto . 278x20 -> 208x15
+//   combo do world ... 278x20 -> 208x15  (depois saiu de vez: 1 mundo so')
+//   checkbox ......... 16x16  -> 12x12
+//   botoes ........... 90/100/90 x 23 -> 67/75/67 x 17
+//   espacos entre blocos: 10 -> 6, 8 -> 2, 15 -> 3, 30 -> 3
+// A fonte continua a mesma (verdana-11px-antialised, altura de linha 14): e'
+// fonte bitmap, nao da' para escalar 25% so' pelo otui.
+// ============================================================================
 EnterGameWindow
   id: enterGame
   @onEnter: EnterGame.doLogin()
@@ -61,21 +88,27 @@ EnterGameWindow
     anchors.left: parent.left
     anchors.top: parent.top
     text-auto-resize: true
-    margin: 230 0 3 50
+    margin: 268 0 0 85
 
+  // Fundo dos campos 50% transparente (80 em hex = 128/255): a arte da janela
+  // aparece por baixo do campo, so' o texto digitado fica solido.
   PasswordTextEdit
     id: accountNameTextEdit
     anchors.left: ml.left
     anchors.right: parent.right
     anchors.top: prev.bottom
-    margin: 3 50 0 2
+    margin: 2 87 0 0
+    height: 15
+    padding: 0
+    text-offset: 0 1
+    image-color: #ffffff80
 
   MenuLabel
     id: mp
     !text: tr('Password')
     anchors.left: prev.left
     anchors.top: prev.bottom
-    margin-top: 10
+    margin-top: 6
     text-auto-resize: true
 
   PasswordTextEdit
@@ -83,30 +116,23 @@ EnterGameWindow
     anchors.left: mp.left
     anchors.right: parent.right
     anchors.top: prev.bottom
-    margin: 3 50 0 0
+    margin: 2 87 0 0
+    height: 15
+    padding: 0
+    text-offset: 0 1
+    image-color: #ffffff80
 
-  MenuLabel
-    id: world
-    !text: tr('World')
-    anchors.left: prev.left
-    anchors.top: prev.bottom
-    margin-top: 10
-    text-auto-resize: true
-
-  ComboBox
-    id: serverCombo
-    image-border: 3
-    anchors.left: prev.left
-    anchors.right: parent.right
-    anchors.top: prev.bottom
-    margin: 3 50 0 0
+  // O label "World" e o combo de escolha de mundo sairam daqui: o client tem um
+  // mundo unico, definido em modules/client_entergame/config.lua (a lista
+  // 'servers', que agora tem so' uma entrada) e aplicado em EnterGame.doLogin /
+  // EnterGame.getHostPort. Todo mundo entra no mesmo lugar.
 
   MenuLabel
     id: serverLabel
     !text: tr('Server')
     anchors.left: prev.left
     anchors.top: prev.bottom
-    margin-top: 8
+    margin-top: 2
     text-auto-resize: true
     visible: false
 
@@ -115,36 +141,40 @@ EnterGameWindow
     !tooltip: tr('Server list')
     anchors.right: parent.right
     anchors.top: serverLabel.bottom
-    margin-top: 3
+    margin-top: 1
+    margin-right: 85
     @onClick: ServerList.show()
 
   TextEdit
     id: serverHostTextEdit
     !tooltip: tr('Make sure that your client uses\\nthe correct game client version')
-    anchors.left: parent.left
+    anchors.left: ml.left
     anchors.right: serverListButton.left
     anchors.top: serverLabel.bottom
-    margin-top: 2
-    margin-right: 4
+    margin: 2 4 0 0
+    height: 15
+    padding: 0
+    text-offset: 0 1
 
   MenuLabel
     id: clientLabel
     !text: tr('Client Version')
-    anchors.left: parent.left
+    anchors.left: ml.left
     anchors.top: serverHostTextEdit.bottom
     text-auto-resize: true
     margin-right: 10
-    margin-top: 8
+    margin-top: 2
     visible: false
 
   ComboBox
     id: clientComboBox
-    anchors.left: parent.left
+    anchors.left: ml.left
     anchors.right: parent.horizontalCenter
     anchors.top: clientLabel.bottom
     margin-top: 2
     margin-right: 3
     width: 90
+    height: 15
     visible: false
 
   MenuLabel
@@ -152,7 +182,7 @@ EnterGameWindow
     !text: tr('Port')
     anchors.left: serverPortTextEdit.left
     anchors.top: serverHostTextEdit.bottom
-    margin-top: 8
+    margin-top: 2
     text-auto-resize: true
     visible: false
 
@@ -163,6 +193,10 @@ EnterGameWindow
     anchors.left: parent.horizontalCenter
     anchors.top: clientComboBox.top
     margin-left: 3
+    margin-right: 87
+    height: 15
+    padding: 0
+    text-offset: 0 1
     visible: false
 
   CheckBox
@@ -172,56 +206,47 @@ EnterGameWindow
     anchors.left: ml.left
     anchors.right: parent.right
     anchors.top: prev.bottom
-    margin: 30 0 0 8
-    @onCheckChange: self:getParent():getChildById('autoLoginBox'):setEnabled(self:isChecked())
+    margin: 3 87 0 0
+    height: 12
+    text-offset: 14 0
 
-  CheckBox
-    id: autoLoginBox
-    enabled: false
-    !text: tr('Auto login')
-    !tooltip: tr('Open charlist automatically when starting client')
-    anchors.left: ml.left
-    anchors.right: parent.right
-    anchors.top: prev.bottom
-    margin: 2 0 0 8
-
-  -- Botões alinhados com 4px de espaço entre eles:
-  -- Larguras: 90 + 100 + 90 = 280px
-  -- Gaps: 2 × 4 = 8px
-  -- Total: 288px
-  -- Margem esquerda/direita: (480 - 288) / 2 = 96px
-  -- Ok: left=96, width=90 -> right=186
-  -- Criar Conta: left=190, width=100 -> right=290
-  -- Broadcasts: left=294, width=90 -> right=384
+  // Fileira de botoes: 67 + 3 + 75 + 3 + 67 = 215 px, centrada no painel
+  // (74..305), logo comeca em 82. Ficam ancoradas no checkbox "Lembrar senha"
+  // para acompanhar o formulario em vez de flutuar no fundo da janela.
+  // O espaco que sobrou das duas linhas que sairam daqui (o checkbox "Entrar
+  // automaticamente" e a linha do "World") foi dividido: o checkbox "Lembrar
+  // senha" desceu 18 (veja rememberPasswordBox:setMarginTop em
+  // EnterGame.setUniqueServer) e esta fileira subiu 18.
+  // Como a fileira esta ancorada no bottom do checkbox, os 18 que ele desceu
+  // contam duas vezes aqui: 59 - 18 (checkbox) - 18 (a propria fileira) = 23.
+  // Resultado: vao de 23 px entre os dois, ~como no desenho original. Para
+  // deixar a fileira de volta na altura antiga (y 411..428), use 59.
 
   EnterGameButton
     id: ent
-    width: 90
+    width: 67
     !text: tr('Ok')
     anchors.left: parent.left
-    anchors.bottom: parent.bottom
-    margin-left: 56
-    margin-bottom: 20
+    anchors.top: rememberPasswordBox.bottom
+    margin: 23 0 0 82
     @onClick: EnterGame.doLogin()
 
   EnterGameButton
     id: createAccountBtn
-    width: 100
+    width: 75
     !text: tr('Criar Conta')
     anchors.left: parent.left
-    anchors.bottom: parent.bottom
-    margin-left: 150
-    margin-bottom: 20
+    anchors.top: rememberPasswordBox.bottom
+    margin: 23 0 0 152
     @onClick: CreateAccount.show()
 
   EnterGameButton
     id: cast
-    width: 90
+    width: 67
     !text: tr('Broadcasts')
     anchors.left: parent.left
-    anchors.bottom: parent.bottom
-    margin-left: 254
-    margin-bottom: 20
+    anchors.top: rememberPasswordBox.bottom
+    margin: 23 0 0 230
     @onClick: EnterGame.cast()
 
   Label
