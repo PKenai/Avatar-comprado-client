@@ -19,7 +19,7 @@ spellInfos = {
     },
 
     {
-        {name = "Water Whip", level = 1}, {name = "Water Recover", level = 5, var = "Water URecover"}, {name = "Water Explosion", level = 8},
+        {name = "Water Wave", level = 1}, {name = "Water Recover", level = 5, var = "Water URecover"}, {name = "Water Explosion", level = 8},
         {name = "Water Heal", level = 12, var = "Water SHeal"}, {name = "Water Jump", level = 16}, {name = "Water IceSpikes", level = 20},
         {name = "Water Res", level = 25}, {name = "Water Shards", level = 30}, {name = "Water Surf", level = 36},
         {name = "Water Cannon", level = 42}, {name = "Water Regen", level = 46, var = "Water SRegen"}, {name = "Water BloodControl", level = 50},

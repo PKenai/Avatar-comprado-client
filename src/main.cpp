@@ -27,7 +27,12 @@
 #include <framework/http/http.h>
 #include <framework/platform/crashhandler.h>
 #include <framework/platform/platformwindow.h>
+#include <framework/platform/platform.h>
+#include <framework/util/launcher_token.h>
 #include <client/client.h>
+#include <client/game.h>
+#include <client/spritemanager.h>
+#include <physfs.h>
 
 #ifdef WIN32
 // Force the discrete GPU on hybrid laptops (NVIDIA Optimus / AMD PowerXpress).
@@ -40,6 +45,16 @@ extern "C" {
 
 int main(int argc, const char* argv[]) {
     std::vector<std::string> args(argv, argv + argc);
+
+    // ----------------------------------------------------------------
+    // LAUNCHER TOKEN VALIDATION
+    // Em release (NDEBUG), o client so abre se vier do launcher oficial.
+    // Em debug, a validacao e ignorada para facilitar o desenvolvimento.
+    // ----------------------------------------------------------------
+    if (!validateLauncherTokenFromArgs(args)) {
+        return 1; // fecha silenciosamente sem mensagem
+    }
+    // ----------------------------------------------------------------
 
 #ifdef CRASH_HANDLER
     installCrashHandler();
@@ -67,7 +82,74 @@ int main(int argc, const char* argv[]) {
 #endif
         return 0;
     }
+
+    auto sprIt = std::find(args.begin(), args.end(), "--encrypt-sprites");
+    if (sprIt != args.end()) {
+        std::string sprIn  = "modules/corelib/ui/zUniD.spr";
+        std::string sprOut = "modules/corelib/ui/zUniD_encrypted.spr";
+        int idx = std::distance(args.begin(), sprIt);
+        if (idx + 1 < (int)args.size() && args[idx + 1].substr(0, 2) != "--") {
+            sprIn = args[idx + 1];
+        }
+        if (idx + 2 < (int)args.size() && args[idx + 2].substr(0, 2) != "--") {
+            sprOut = args[idx + 2];
+        }
+
+        // Remove leading slashes para usar como caminho relativo ao currentDir
+        while (!sprIn.empty()  && (sprIn[0]  == '/' || sprIn[0]  == '\\')) sprIn  = sprIn.substr(1);
+        while (!sprOut.empty() && (sprOut[0] == '/' || sprOut[0] == '\\')) sprOut = sprOut.substr(1);
+        stdext::replace_all(sprIn,  "\\", "/");
+        stdext::replace_all(sprOut, "\\", "/");
+
+        // Converte para caminho absoluto no sistema de arquivos (bypassa PhysFS)
+        std::string curDir = g_platform.getCurrentDir(); // termina com "/"
+        std::string absIn  = curDir + sprIn;
+        std::string absOut = curDir + sprOut;
+
+        // Remonta o PhysFS apontando para o currentDir corretamente
+        // Desmonta tudo que foi montado pelo g_resources.init e remonta do zero
+        char** mounted = PHYSFS_getSearchPath();
+        for (char** i = mounted; *i != nullptr; i++)
+            PHYSFS_unmount(*i);
+        PHYSFS_freeList(mounted);
+        PHYSFS_mount(curDir.c_str(), NULL, 1);
+        PHYSFS_setWriteDir(curDir.c_str());
+
+        std::cerr << "[encrypt-sprites] CurDir : " << curDir  << std::endl;
+        std::cerr << "[encrypt-sprites] Input  : " << sprIn   << std::endl;
+        std::cerr << "[encrypt-sprites] Output : " << sprOut  << std::endl;
+
+        g_game.enableFeature(Otc::GameSpritesU32);
+        g_game.enableFeature(Otc::GameSpritesAlphaChannel);
+
+        // Verifica se o arquivo existe via sistema de arquivos nativo
+        if (!std::filesystem::exists(absIn)) {
+            std::cerr << "File not found: " << absIn << std::endl;
+#ifdef WIN32
+            MessageBoxA(NULL, ("Arquivo nao encontrado:\n" + absIn).c_str(), "Erro", MB_ICONERROR);
 #endif
+            return 1;
+        }
+
+        std::cout << "Loading sprites from: " << sprIn << std::endl;
+        if (!g_sprites.loadSpr("/" + sprIn)) {
+            std::cerr << "Failed to load sprites from: " << sprIn << std::endl;
+#ifdef WIN32
+            MessageBoxA(NULL, ("Failed to load sprites from:\n" + sprIn + "\nVerifique se o arquivo existe.").c_str(), "Error", MB_ICONERROR);
+#endif
+            return 1;
+        }
+
+        std::cout << "Loaded " << g_sprites.getSpritesCount() << " sprites.\nStarting encryption & shuffle..." << std::endl;
+        g_sprites.encryptSprites("/" + sprOut);
+
+#ifdef WIN32
+        MessageBoxA(NULL, ("Sprites encrypted & shuffled!\nOutput: " + absOut).c_str(), "Avatar Sprites Protected", 0);
+#endif
+        return 0;
+    }
+#endif
+
 
     if (g_resources.launchCorrect(g_app.getName(), g_app.getCompactName())) {
         return 0; // started other executable

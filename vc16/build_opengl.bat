@@ -7,7 +7,7 @@ if not exist %MSBUILD% (
 )
 
 echo Building otclient OpenGL...
-%MSBUILD% "%~dp0otclient.sln" /t:Build /p:Configuration=OpenGL /p:Platform=Win32 /m /v:minimal /nologo
+%MSBUILD% "%~dp0otclient.sln" /t:Build /p:Configuration=OpenGL /p:Platform=x64 /m /v:minimal /nologo
 if errorlevel 1 (
   echo BUILD FAILED
   exit /b 1

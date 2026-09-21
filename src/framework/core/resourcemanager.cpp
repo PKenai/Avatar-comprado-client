@@ -444,7 +444,7 @@ std::string ResourceManager::readFileContents(const std::string& fileName, bool 
             }
         }
         if(!ignore)
-            g_logger.fatal(stdext::format("unable to decrypt file: %s", fullPath));
+            g_logger.fatal(stdext::format("Corrupted asset: %s", fullPath));
     }
 
     return buffer;
@@ -1030,7 +1030,7 @@ void ResourceManager::encrypt(const std::string& seed) {
             continue;
         std::string buffer(std::istreambuf_iterator<char>(in_file), {});
         in_file.close();
-        if (buffer.size() >= 4 && buffer.substr(0, 4).compare("ENC3") == 0)
+        if (buffer.size() >= 4 && (buffer.substr(0, 4).compare("AV03") == 0 || buffer.substr(0, 4).compare("ENC3") == 0))
             continue; // already encrypted
 
         if (!encryptForAndroid && it.extension().string() == luaExtension && it.filename().string() != INIT_FILENAME) {
@@ -1065,7 +1065,9 @@ bool ResourceManager::decryptBuffer(std::string& buffer) {
     if (buffer.size() < 5)
         return true;
 
-    if (buffer.substr(0, 4).compare("ENC3") != 0) {
+    bool isAV03 = (buffer.substr(0, 4).compare("AV03") == 0);
+    bool isENC3 = (buffer.substr(0, 4).compare("ENC3") == 0);
+    if (!isAV03 && !isENC3) {
         return false;
     }
 
@@ -1102,7 +1104,7 @@ bool ResourceManager::decryptBuffer(std::string& buffer) {
 
 #ifdef WITH_ENCRYPTION
 bool ResourceManager::encryptBuffer(std::string& buffer, uint32_t seed) {
-    if (buffer.size() >= 4 && buffer.substr(0, 4).compare("ENC3") == 0)
+    if (buffer.size() >= 4 && (buffer.substr(0, 4).compare("AV03") == 0 || buffer.substr(0, 4).compare("ENC3") == 0))
         return false; // already encrypted
 
     // not random beacause it would require to update to new files each time
@@ -1111,9 +1113,9 @@ bool ResourceManager::encryptBuffer(std::string& buffer, uint32_t seed) {
     key += stdext::adler32((const uint8_t*)&buffer[0], buffer.size() / 2);
 
     std::string new_buffer(24 + buffer.size() * 2, '0');
-    new_buffer[0] = 'E';
-    new_buffer[1] = 'N';
-    new_buffer[2] = 'C';
+    new_buffer[0] = 'A';
+    new_buffer[1] = 'V';
+    new_buffer[2] = '0';
     new_buffer[3] = '3';
 
     unsigned long dstLen = new_buffer.size() - 24;

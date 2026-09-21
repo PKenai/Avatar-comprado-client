@@ -57,8 +57,10 @@ ELEMENT_SPELL = {
 -- vocacao do servidor -> elemento (1/5=fire, 2/6=water, 3/7=air, 4/8=earth)
 VOCATION_TO_ELEMENT = { [1] = 1, [2] = 2, [3] = 3, [4] = 4, [5] = 1, [6] = 2, [7] = 3, [8] = 4 }
 
-local CYCLE_MS = 400      -- loop do helper
-local ACTION_CD = 2000    -- cooldown entre acoes (ms)
+local CYCLE_MS = 150      -- loop do helper (150ms = ~6.7 checks/s)
+local CYCLE_URGENT_MS = 80 -- quando HP < 20%, ciclo mais rapido (80ms = ~12.5 checks/s)
+local URGENT_HP_THRESHOLD = 20 -- % de HP para entrar no modo urgente
+local ACTION_CD = 1000    -- cooldown entre acoes (ms) - pocoes tem cooldown proprio no server
 local MIN_MANA_PCT = 10   -- so casta magia se tiver pelo menos 10% de mana
 
 local lastHealTime = 0
@@ -346,7 +348,19 @@ local function autoTarget()
 end
 
 local function cycle()
-  updateEvent = scheduleEvent(cycle, CYCLE_MS)
+  -- modo urgente: quando HP esta muito baixo, roda mais rapido
+  local playerTmp = g_game.getLocalPlayer()
+  local nextDelay = CYCLE_MS
+  if playerTmp and not g_game.isDead() then
+    local mhp = playerTmp:getMaxHealth()
+    if mhp and mhp > 0 then
+      local hpPctQuick = (playerTmp:getHealth() / mhp) * 100
+      if hpPctQuick > 0 and hpPctQuick <= URGENT_HP_THRESHOLD then
+        nextDelay = CYCLE_URGENT_MS
+      end
+    end
+  end
+  updateEvent = scheduleEvent(cycle, nextDelay)
 
   -- mantem o elemento atualizado mesmo com o helper ligado
   local el = detectElement()

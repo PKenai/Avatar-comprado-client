@@ -37,9 +37,9 @@ MainWindow
 
   UIWidget
     id: professionIcon
-    image-source: /images/topbuttons/skills
-    image-size: 80 80
-    size: 80 80
+    image-source: /images/buffs/anvil_forge
+    image-size: 38 38
+    size: 38 38
     anchors.top: parent.top
     anchors.right: parent.right
     margin-right: 5

@@ -37,11 +37,12 @@ MainWindow
 
   UIWidget
     id: professionIcon
-    image-source: /images/topbuttons/drop
-    image-size: 80 80
-    size: 80 80
+    image-source: /images/buffs/Fish buffs
+    image-size: 38 38
+    size: 38 38
     anchors.top: parent.top
     anchors.right: parent.right
+    margin-top: 4
     margin-right: 5
 
   Button

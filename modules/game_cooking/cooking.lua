@@ -112,6 +112,12 @@ function onGameStart()
       onPositionChange = onPlayerPositionChange,
     })
   end
+
+  -- Pede o nivel de Cooking pro server (skillbar + painel de Skills).
+  local protocol = g_game.getProtocolGame()
+  if protocol then
+    protocol:sendExtendedOpcode(COOKING_OPCODE, json.encode({ action = "skill" }))
+  end
 end
 
 function onGameEnd()
@@ -160,6 +166,9 @@ function onExtendedOpcode(protocol, code, buffer)
   if action == "open" then
     -- Server envia as receitas para exibir
     displayCookingWindow(json_data.skill, json_data.recipes)
+  elseif action == "skill" then
+    -- Level/XP de Cooking (skillbar + painel de Skills)
+    updateCookingSkill(json_data.skill)
   elseif action == "minigame" then
     -- Server cobrou os ingredientes e mandou abrir a mexida da panela
     hide()
@@ -186,26 +195,78 @@ local function resolveClientId(clientId)
   return clientId or 0
 end
 
+-- Receita que da' pra cozinhar AGORA: destravada e com TODOS os ingredientes
+-- na mochila (contagem que o server mandou no "open").
+local function isCookable(recipe)
+  if not recipe or recipe.locked then return false end
+  for _, ingredient in ipairs(recipe.ingredients or {}) do
+    local need = tonumber(ingredient.count) or 1
+    local have = tonumber(ingredient.playerCount) or 0
+    if have < need then return false end
+  end
+  return true
+end
+
 function displayCookingWindow(skill, recipes)
   cookingWindow:setText("Cooking")
 
-  local skillBar = cookingWindow:getChildById("skillBar")
-  if skillBar then skillBar:hide() end
-  local skillLabel = cookingWindow:getChildById("skillLabel")
-  if skillLabel then skillLabel:hide() end
+  updateCookingSkill(skill)
 
   local recipeList = cookingWindow:recursiveGetChildById("recipeList")
   recipeList:destroyChildren()
 
+  local firstCookable = nil
   for i, recipe in ipairs(recipes) do
     local widget = g_ui.createWidget('Recipe', recipeList)
-    widget:setText("T" .. recipe.tier .. " " .. recipe.name)
+    local label = "T" .. recipe.tier .. " " .. recipe.name
+    if recipe.locked then
+      label = label .. "   [Cooking " .. (recipe.requiredSkill or 0) .. "]"
+    end
+    widget:setText(label)
     widget.recipe = recipe
     widget.globalId = recipe.globalId
+    if recipe.locked then
+      widget:setColor('#8a8a8a')
+    end
+    if not firstCookable and isCookable(recipe) then
+      firstCookable = widget
+    end
   end
 
-  recipeList:focusChild(recipeList:getFirstChild())
+  -- Foca a primeira receita QUE DA' PRA FAZER, nao a primeira da lista: era
+  -- isso que deixava o botao "Cook" cinza mesmo com o peixe na mochila.
+  local target = firstCookable or recipeList:getFirstChild()
+  if target then
+    recipeList:focusChild(target)
+  end
   show()
+end
+
+-- ============================================================
+-- SKILL DE COOKING (skillbar da janela + linha no painel de Skills)
+-- O server manda level/percentage no "open" e em todo "skill".
+-- ============================================================
+function updateCookingSkill(skill)
+  skill = skill or {}
+  local level = tonumber(skill.level) or 0
+  local percent = tonumber(skill.percentage) or 0
+
+  local skillBar = cookingWindow:getChildById("skillBar")
+  if skillBar then
+    skillBar:show()
+    skillBar:setPercent(percent)
+  end
+
+  local skillLabel = cookingWindow:getChildById("skillLabel")
+  if skillLabel then
+    skillLabel:show()
+    skillLabel:setText("Cooking " .. level)
+  end
+
+  -- Mesma skill no painel de Skills (linha "Cooking").
+  if modules.game_skills and modules.game_skills.setCooking then
+    modules.game_skills.setCooking(level, percent)
+  end
 end
 
 -- ============================================================
@@ -239,17 +300,23 @@ function onRecipeSelected(w, child)
   label:setText(recipe.name)
   label:setWidth(label:getTextSize().width)
 
-  local maxAmount = 1
-  for _, ingredient in ipairs(recipe.ingredients) do
-    local canMake = math.floor(ingredient.playerCount / ingredient.count)
-    if canMake < maxAmount or maxAmount == 1 then
-      maxAmount = canMake
-    end
-  end
-  if maxAmount < 1 then maxAmount = 1 end
+  local canCook = isCookable(recipe)
 
-  cookingWindow:recursiveGetChildById("craftButton"):setEnabled(maxAmount > 0)
-  cookingWindow:recursiveGetChildById("craftAllButton"):setEnabled(maxAmount > 0)
+  local craftButton = cookingWindow:recursiveGetChildById("craftButton")
+  local craftAllButton = cookingWindow:recursiveGetChildById("craftAllButton")
+  craftButton:setEnabled(canCook)
+  craftAllButton:setEnabled(canCook)
+
+  -- Receita travada: o botao diz o nivel que falta (antes ele so' ficava
+  -- cinza, sem explicar nada).
+  if recipe.locked then
+    local need = "Cooking " .. (recipe.requiredSkill or 0)
+    craftButton:setText(need)
+    craftAllButton:setText(need)
+  else
+    craftButton:setText(tr('Cook'))
+    craftAllButton:setText(tr('Cook All'))
+  end
 end
 
 -- ============================================================
@@ -267,6 +334,9 @@ function sendCraftRequest(all)
       action = "craft",
       recipeId = focusedChild.globalId,
       amount = 1,
+      -- Cook All: o servidor emenda a proxima receita enquanto sobrar peixe.
+      -- (a chave nao pode ser "repeat": e' palavra reservada do Lua.)
+      repeatAll = all and true or false,
     }))
   end
 end

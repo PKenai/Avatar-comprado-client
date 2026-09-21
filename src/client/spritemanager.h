@@ -60,6 +60,9 @@ public:
     void setHdMode(bool enabled);
     bool isHdMode() { return m_hdMode; }
 
+    static uint32_t shuffleSpriteId(uint32_t id, uint32_t count, bool encrypt);
+    static uint64_t getSpriteCryptoKey(uint32_t signature, uint32_t id);
+
 private:
     bool loadCasualSpr(std::string file);
     bool loadCwmSpr(std::string file);
@@ -69,6 +72,8 @@ private:
     bool m_loaded = false;
     bool m_isHdMod = false;
     bool m_hdMode = true;
+    bool m_isShuffled = false;
+    bool m_isAvsp = false;
     uint32 m_signature;
     int m_spritesCount;
     int m_spritesOffset;

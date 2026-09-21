@@ -45,6 +45,7 @@ function init()
   createOutfitShaders()
   createTierShaders()
   createTooltipTierShaders()
+  createTastyItemShader()
   g_shaders.createShader("spellbar_bg", "/shaders/map_default_vertex", "/shaders/spellbar_bg")
   for i = 1, 4 do
     g_shaders.createShader("spellbar_bg_" .. i, "/shaders/map_default_vertex", "/shaders/spellbar_bg_" .. i)
@@ -57,11 +58,16 @@ function init()
 
   g_shaders.createShader("talent_border_glow", "/shaders/map_default_vertex", "/shaders/talent_border_glow")
 
+  -- Botao "Buy Coins" da loja nova (mods/game_store/store.otui): mesmo brilho
+  -- dourado com varredura (sheen) usado na borda dos talentos.
+  g_shaders.createShader("store_buy_glow", "/shaders/map_default_vertex", "/shaders/talent_border_glow")
+
   ProtocolGame.registerExtendedOpcode(ExtendedIds.MapShader, onMapShader)
   ProtocolGame.registerExtendedOpcode(111, onTierOpcode)
   connect(g_game, { onGameEnd = onGameEndClearShader })
   hookUIItemForTier()
   g_things.clearItemShaders()
+  applyTastyItemShaders()
   connect(Creature, {
     onAppear = onCreatureAppearSpiritual,
     onDisappear = onCreatureDisappearSpiritual,
@@ -117,11 +123,32 @@ function createTooltipTierShaders()
   end
 end
 
+-- ============================================================================
+-- Peixe assado: shader dourado de "gostoso".
+-- So' vale pros client ids dos ASSADOS (18419..18436) - o peixe cru fica
+-- normal, porque cru e assado usam sprites/ids diferentes.
+-- ============================================================================
+local TASTY_ITEM_CLIENT_IDS = {}
+for id = 18419, 18436 do
+  TASTY_ITEM_CLIENT_IDS[#TASTY_ITEM_CLIENT_IDS + 1] = id
+end
+
+function createTastyItemShader()
+  g_shaders.createShader("item_tasty", "/shaders/map_default_vertex", "/shaders/item_tasty")
+end
+
+function applyTastyItemShaders()
+  for _, id in ipairs(TASTY_ITEM_CLIENT_IDS) do
+    g_things.setItemShader(id, "item_tasty")
+  end
+end
+
 function onTierOpcode(protocol, opcode, buffer)
   -- Tier shaders are handled per-item instance (Item:getTier() / m_tier).
   -- Calling g_things.setItemShader(clientId, ...) applies the shader to ALL items of that ID globally,
   -- which causes items without tier (such as in NPC shops) to incorrectly show the tier shader.
   g_things.clearItemShaders()
+  applyTastyItemShaders()
 end
 
 function hookUIItemForTier()
@@ -225,6 +252,8 @@ function onGameEndClearShader()
   appliedPrefix = {}
   -- Clear all tier shaders from the global registry on disconnect/logout
   g_things.clearItemShaders()
+  -- ...e repoe o brilho dos peixes assados (eles nao tem tier).
+  applyTastyItemShaders()
   -- Also clear local tier table
   if type(g_itemTiers) == "table" then
     for k in pairs(g_itemTiers) do g_itemTiers[k] = nil end

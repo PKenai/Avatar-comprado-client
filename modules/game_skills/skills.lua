@@ -248,6 +248,23 @@ function checkExpSpeed()
   end
 end
 
+-- Cooking: skill custom (storage no server, chega pelo opcode 107 do
+-- game_cooking). O painel padrao so' recebe as 7 skills do protocolo,
+-- entao a linha de Cooking e' alimentada por aqui.
+function setCooking(level, percent)
+  if not skillsWindow then return end
+  local skill = skillsWindow:recursiveGetChildById('cooking')
+  if not skill then return end
+  local value = skill:getChildById('value')
+  if value then value:setText(level or 0) end
+  local bar = skill:getChildById('percent')
+  if bar then
+    bar:setPercent(math.floor(percent or 0))
+    bar:setTooltip(tr('Cooking') .. ': ' .. (level or 0))
+  end
+  skill:show()
+end
+
 function onMiniWindowClose()
   skillsButton:setOn(false)
 end

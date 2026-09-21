@@ -231,8 +231,15 @@ function toggleGameMenu()
   end
 end
 
--- o botao do centro-norte abre o Shop (mod/game_shop)
+-- O botao do centro-norte (topo da tela, arte top_button_shop) abre a LOJA
+-- NOVA (mod/game_store). Se ela nao estiver carregada, cai na loja antiga
+-- (mod/game_shop) para nao deixar o botao morto.
 function toggleShop()
+  if modules.game_store and modules.game_store.toggle then
+    modules.game_store.toggle()
+    return
+  end
+
   if modules.game_shop and modules.game_shop.toggle then
     modules.game_shop.toggle()
   end

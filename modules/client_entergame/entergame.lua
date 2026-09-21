@@ -11,6 +11,14 @@ local clientBox
 local protocolLogin
 local motdEnabled = true
 
+-- Links das redes sociais da tela de login (os icones SocialIconButton em
+-- entergame.otui). Ficam aqui, e nao no .otui, para manter o desenho da tela
+-- separado do que cada icone faz.
+local socialLinks = {
+  discord = 'https://discord.gg/Rm7Rntxrt',
+  instagram = 'https://www.instagram.com/avatar.eclipse/'
+}
+
 -- private functions
 local function onError(protocol, message, errorCode)
   if loadBox then
@@ -384,6 +392,19 @@ function EnterGame.cast()
   end
 end
 
+-- Abre o link da rede social no navegador padrao do sistema. Nome sem link
+-- nao faz nada, e o g_platform e' checado porque um clique tardio (depois de
+-- um reload de modulos) pode chegar com o framework ja' desmontando.
+function EnterGame.openSocial(name)
+  local url = socialLinks[name]
+  if not url then
+    return
+  end
+  if g_platform and g_platform.openUrl then
+    g_platform.openUrl(url)
+  end
+end
+
 function EnterGame.displayMotd()
   if not motdWindow then
     motdWindow = displayInfoBox(tr('Message of the day'), G.motdMessage)
@@ -437,12 +458,12 @@ function EnterGame.setUniqueServer(host, port, protocol, windowWidth, windowHeig
   serverListButton:setWidth(0)
 
   -- O checkbox fica logo abaixo das linhas escondidas acima (que tem altura 0),
-  -- entao a margem aqui e' um ajuste fino da posicao dele: 13 = 18 px mais
-  -- baixo do que estava (-5), dividindo com a fileira de botoes o espaco que
-  -- sobrou das linhas removidas da tela (ver o comentario da fileira no
-  -- entergame.otui).
+  -- entao a margem aqui e' um ajuste fino da posicao dele: 8 deixa o checkbox
+  -- em y 344..355, 5 px mais alto do que estava (13 -> 349..360). A fileira de
+  -- botoes esta ancorada no bottom dele, entao sobe junto - ver o comentario da
+  -- fileira no entergame.otui para a conta completa das posicoes.
   local rememberPasswordBox = enterGame:getChildById('rememberPasswordBox')
-  rememberPasswordBox:setMarginTop(13)
+  rememberPasswordBox:setMarginTop(8)
 
   if not windowWidth then windowWidth = 380 end
   enterGame:setWidth(windowWidth)

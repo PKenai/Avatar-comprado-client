@@ -280866,3 +280866,286 @@ Exiting application..
 [NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
 Exiting application..
 [NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Startup options:  --token Ch/hdOiYyvO8mPiHo+V7XZSYxPTilrg8dZMtm/yddZueYEAMk7LunQ==
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Exiting application..
+Startup options:  --version
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: protected lua call failed: C++ call failed: Unable to login into a world while already online or logging.
+stack traceback:
+	[builtin#142]: at 0x7ff637d98b70
+	[C]: in function 'loginWorld'
+	/modules/client_entergame/characterlist.lua:34: in function 'tryLogin'
+	/modules/client_entergame/characterlist.lua:372: in function 'callback'
+	/modules/client_loading/loading.lua:401: in function 'show'
+	/modules/client_entergame/characterlist.lua:372: in function 'doLogin'
+	...ules/client_entergame/characterlist.otui:124: [@onClick]:2: in function <...ules/client_entergame/characterlist.otui:124: [@onClick]:1>
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: failed to save OTMM minimap: The system cannot find the file specified.
+Exiting application..
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: failed to save OTMM minimap: The system cannot find the file specified.
+Exiting application..
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: protected lua call failed: /modules/game_pix/game_pix.lua:107: attempt to call global 'comma_value' (a nil value)
+stack traceback:
+	[C]: in function 'comma_value'
+	/modules/game_pix/game_pix.lua:107: in function 'showQrWindow'
+	/modules/game_pix/game_pix.lua:154: in function 'onPixStage'
+	/modules/game_pix/game_pix.lua:191: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_pix/game_pix.lua:107: attempt to call global 'comma_value' (a nil value)
+stack traceback:
+	[C]: in function 'comma_value'
+	/modules/game_pix/game_pix.lua:107: in function 'showQrWindow'
+	/modules/game_pix/game_pix.lua:154: in function 'onPixStage'
+	/modules/game_pix/game_pix.lua:191: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: failed to apply style to widget 'nationCard': OTML error in '/modules/statue_donation/statue_donation.otui:13': border param must have its width followed by its color
+stack traceback:
+	[C]: in function 'createWidget'
+	/modules/statue_donation/statue_donation.lua:69: in function 'makeNationCard'
+	/modules/statue_donation/statue_donation.lua:114: in function 'buildCards'
+	/modules/statue_donation/statue_donation.lua:308: in function 'applyState'
+	/modules/statue_donation/statue_donation.lua:292: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+at:
+	[C++]: ?applyStyle@UIWidget@@QEAAXAEBV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+ERROR: failed to apply style to widget 'nationCard': OTML error in '/modules/statue_donation/statue_donation.otui:13': border param must have its width followed by its color
+stack traceback:
+	[C]: in function 'createWidget'
+	/modules/statue_donation/statue_donation.lua:69: in function 'makeNationCard'
+	/modules/statue_donation/statue_donation.lua:114: in function 'buildCards'
+	/modules/statue_donation/statue_donation.lua:308: in function 'applyState'
+	/modules/statue_donation/statue_donation.lua:292: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+at:
+	[C++]: ?applyStyle@UIWidget@@QEAAXAEBV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+ERROR: failed to apply style to widget 'nationCard': OTML error in '/modules/statue_donation/statue_donation.otui:13': border param must have its width followed by its color
+stack traceback:
+	[C]: in function 'createWidget'
+	/modules/statue_donation/statue_donation.lua:69: in function 'makeNationCard'
+	/modules/statue_donation/statue_donation.lua:114: in function 'buildCards'
+	/modules/statue_donation/statue_donation.lua:308: in function 'applyState'
+	/modules/statue_donation/statue_donation.lua:292: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+at:
+	[C++]: ?applyStyle@UIWidget@@QEAAXAEBV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+ERROR: failed to apply style to widget 'nationCard': OTML error in '/modules/statue_donation/statue_donation.otui:13': border param must have its width followed by its color
+stack traceback:
+	[C]: in function 'createWidget'
+	/modules/statue_donation/statue_donation.lua:69: in function 'makeNationCard'
+	/modules/statue_donation/statue_donation.lua:114: in function 'buildCards'
+	/modules/statue_donation/statue_donation.lua:308: in function 'applyState'
+	/modules/statue_donation/statue_donation.lua:292: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+at:
+	[C++]: ?applyStyle@UIWidget@@QEAAXAEBV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+ERROR: failed to apply style to widget 'globalCard': OTML error in '/modules/statue_donation/statue_donation.otui:77': border param must have its width followed by its color
+stack traceback:
+	[C]: in function 'createWidget'
+	/modules/statue_donation/statue_donation.lua:89: in function 'makeGlobalCard'
+	/modules/statue_donation/statue_donation.lua:117: in function 'buildCards'
+	/modules/statue_donation/statue_donation.lua:308: in function 'applyState'
+	/modules/statue_donation/statue_donation.lua:292: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+at:
+	[C++]: ?applyStyle@UIWidget@@QEAAXAEBV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+ERROR: failed to apply style to widget 'globalCard': OTML error in '/modules/statue_donation/statue_donation.otui:77': border param must have its width followed by its color
+stack traceback:
+	[C]: in function 'createWidget'
+	/modules/statue_donation/statue_donation.lua:89: in function 'makeGlobalCard'
+	/modules/statue_donation/statue_donation.lua:117: in function 'buildCards'
+	/modules/statue_donation/statue_donation.lua:308: in function 'applyState'
+	/modules/statue_donation/statue_donation.lua:292: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+at:
+	[C++]: ?applyStyle@UIWidget@@QEAAXAEBV?$shared_object_ptr@VOTMLNode@@@stdext@@@Z
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: protected lua call failed: /modules/game_highscore/highscore.lua:157: attempt to call global 'comma_value' (a nil value)
+stack traceback:
+	[C]: in function 'comma_value'
+	/modules/game_highscore/highscore.lua:157: in function 'createHighscores'
+	/modules/game_highscore/highscore.lua:130: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: /modules/game_highscore/highscore.lua:157: attempt to call global 'comma_value' (a nil value)
+stack traceback:
+	[C]: in function 'comma_value'
+	/modules/game_highscore/highscore.lua:157: in function 'createHighscores'
+	/modules/game_highscore/highscore.lua:205: in function </modules/game_highscore/highscore.lua:203>
+ERROR: protected lua call failed: /modules/game_highscore/highscore.lua:157: attempt to call global 'comma_value' (a nil value)
+stack traceback:
+	[C]: in function 'comma_value'
+	/modules/game_highscore/highscore.lua:157: in function 'createHighscores'
+	/modules/game_highscore/highscore.lua:205: in function </modules/game_highscore/highscore.lua:203>
+ERROR: protected lua call failed: /modules/game_highscore/highscore.lua:157: attempt to call global 'comma_value' (a nil value)
+stack traceback:
+	[C]: in function 'comma_value'
+	/modules/game_highscore/highscore.lua:157: in function 'createHighscores'
+	/modules/game_highscore/highscore.lua:130: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: protected lua call failed: /modules/game_pix/game_pix.lua:247: bad argument #2 to 'tr' (value expected)
+stack traceback:
+	[C]: at 0x7ff6db0250f0
+	[C]: in function 'tr'
+	/modules/game_pix/game_pix.lua:247: in function 'sendDonate'
+	/modules/game_pix/game_pix.otui:110: [@onClick]:2: in function </modules/game_pix/game_pix.otui:110: [@onClick]:1>
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+ERROR: protected lua call failed: /modules/game_pix/game_pix.lua:107: attempt to call global 'comma_value' (a nil value)
+stack traceback:
+	[C]: in function 'comma_value'
+	/modules/game_pix/game_pix.lua:107: in function 'showQrWindow'
+	/modules/game_pix/game_pix.lua:158: in function 'onPixStage'
+	/modules/game_pix/game_pix.lua:195: in function 'callback'
+	/modules/gamelib/protocolgame.lua:17: in function </modules/gamelib/protocolgame.lua:14>
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+ERROR: child 'qrCodeEdit' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'qrCodeEdit' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'qrCodeEdit' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'qrCodeEdit' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'qrCodeEdit' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'qrCodeEdit' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'qrCodeEdit' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+ERROR: child 'copyLabel' of parent widget 'QrWindow' is recursively anchored to itself, please fix this
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+WARNING: [Pix HTTP] Fetching URL: https://smitten-macaw-aluminum.ngrok-free.dev/pix_mercadopago.php?txid=PIX2178995622267&json=1&ngrok-skip-browser-warning=1
+WARNING: [Pix HTTP] Started operationId=1
+WARNING: [Pix HTTP] Result for https://smitten-macaw-aluminum.ngrok-free.dev/pix_mercadopago.php?txid=PIX2178995622267&json=1&ngrok-skip-browser-warning=1: err='', len=260
+WARNING: [Pix HTTP] JSON decode error. Raw data: You are about to visit smitten-macaw-aluminum.ngrok-free.dev, served by 2804:14d:90ad:4307:913e:94ac:949a:ca4a. This website is served for free through ngrok.com. You should only visit this website if
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+WARNING: [Pix HTTP] Fetching URL: https://smitten-macaw-aluminum.ngrok-free.dev/pix_mercadopago.php?txid=PIX2178995640258&json=1&ngrok-skip-browser-warning=1
+WARNING: [Pix HTTP] Started operationId=1
+WARNING: [Pix HTTP] Result for https://smitten-macaw-aluminum.ngrok-free.dev/pix_mercadopago.php?txid=PIX2178995640258&json=1&ngrok-skip-browser-warning=1: err='', len=4144
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/client_styles/styles.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff6db1d8b70
+	[C]: in function 'importFont'
+	/modules/client_styles/styles.lua:13: in function 'init'
+	/modules/client_styles/styles.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:102: in main chunk
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+[NpcMap] carregado com 111 NPCs (filtro: area explorada) (ligado)
+Exiting application..
+Exiting application..
+Exiting application..

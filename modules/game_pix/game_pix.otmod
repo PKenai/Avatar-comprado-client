@@ -1,0 +1,12 @@
+Module
+  name: game_pix
+  description: Pix (doacao / Buy Coins) - opcode 120
+  author: icaro e bonbike & designer whiskey (portado para o Avatar)
+  website: https://discord.gg/RkSwWzPJHD
+  autoload: true
+  autoload-priority: 1000
+  scripts: [ game_pix ]
+  sandboxed: true
+  dependencies: [ game_interface, client_topmenu ]
+  @onLoad: init()
+  @onUnload: terminate()

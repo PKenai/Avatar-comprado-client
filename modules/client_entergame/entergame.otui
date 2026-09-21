@@ -53,6 +53,36 @@ ServerListButton < UIButton
   $disabled:
     image-color: #ffffff55
 
+// Icones das redes sociais da tela de login (discord/instagram). Sao so' as
+// logos, sem fundo de botao: UIButton transparente de 45x45, com a imagem
+// entrando pelo "icon-source" (mesmo recurso que o TopButton do topo e os
+// botoes do console usam).
+//
+// A logo e' desenhada no centro e 1:1. Textura de UI usa filtro nearest, sem
+// mipmap, entao o PNG tem que estar no tamanho final (45x45, nao precisa ser
+// potencia de 2 - button.png, por exemplo, e' 76x96) - encolher em tempo de
+// desenho serrilha. Mudar este size exige regerar os dois PNG em
+// data/images/social no mesmo tamanho.
+//
+// Sem fundo, o unico retorno visual de clique vem do icon-color: hover e
+// pressed escurecem a logo, do mesmo jeito que o AddButton escurece o
+// image-color dele.
+//
+// O clique chama EnterGame.openSocial (entergame.lua), que abre o link no
+// navegador do sistema com g_platform.openUrl.
+SocialIconButton < UIButton
+  size: 45 45
+  icon-color: #ffffffff
+
+  $hover !disabled:
+    icon-color: #ffffffbb
+
+  $pressed:
+    icon-color: #ffffff88
+
+  $disabled:
+    icon-color: #ffffff66
+
 // ============================================================================
 // LOGIN - geometria encaixada no painel da arte, 25% menor que antes
 //
@@ -213,14 +243,20 @@ EnterGameWindow
   // Fileira de botoes: 67 + 3 + 75 + 3 + 67 = 215 px, centrada no painel
   // (74..305), logo comeca em 82. Ficam ancoradas no checkbox "Lembrar senha"
   // para acompanhar o formulario em vez de flutuar no fundo da janela.
-  // O espaco que sobrou das duas linhas que sairam daqui (o checkbox "Entrar
-  // automaticamente" e a linha do "World") foi dividido: o checkbox "Lembrar
-  // senha" desceu 18 (veja rememberPasswordBox:setMarginTop em
-  // EnterGame.setUniqueServer) e esta fileira subiu 18.
-  // Como a fileira esta ancorada no bottom do checkbox, os 18 que ele desceu
-  // contam duas vezes aqui: 59 - 18 (checkbox) - 18 (a propria fileira) = 23.
-  // Resultado: vao de 23 px entre os dois, ~como no desenho original. Para
-  // deixar a fileira de volta na altura antiga (y 411..428), use 59.
+  //
+  // Posicoes com a tela em 380x480, ja' com o setMarginTop(8) que o
+  // EnterGame.setUniqueServer aplica no checkbox e com as linhas escondidas
+  // (World/Client/Port) em altura 0 - e' a conta das ancoras, onde uma linha
+  // de altura 0 ocupa ate' y-1:
+  //   checkbox ... 344..355
+  //   fileira .... 373..389  (18 px abaixo do checkbox)
+  //   icones ..... 393..437  (45x45, ancorados no bottom da fileira + 4)
+  // O checkbox subiu 5 px e a fileira 10 px em relacao ao desenho anterior
+  // (checkbox 349..360, fileira 383..399), abrindo espaco para os icones de
+  // 45 px, que precisam terminar antes da arte voltar a ter desenho em y ~448.
+  // Como a fileira esta ancorada no bottom do checkbox, quando o checkbox sobe
+  // a fileira sobe junto: por isso a margem aqui e' 18 (23 - 10 + 5).
+  // Para devolver a fileira a altura antiga (y 392..409), use 28.
 
   EnterGameButton
     id: ent
@@ -228,7 +264,7 @@ EnterGameWindow
     !text: tr('Ok')
     anchors.left: parent.left
     anchors.top: rememberPasswordBox.bottom
-    margin: 23 0 0 82
+    margin: 18 0 0 82
     @onClick: EnterGame.doLogin()
 
   EnterGameButton
@@ -237,7 +273,7 @@ EnterGameWindow
     !text: tr('Criar Conta')
     anchors.left: parent.left
     anchors.top: rememberPasswordBox.bottom
-    margin: 23 0 0 152
+    margin: 18 0 0 152
     @onClick: CreateAccount.show()
 
   EnterGameButton
@@ -246,8 +282,36 @@ EnterGameWindow
     !text: tr('Broadcasts')
     anchors.left: parent.left
     anchors.top: rememberPasswordBox.bottom
-    margin: 23 0 0 230
+    margin: 18 0 0 230
     @onClick: EnterGame.cast()
+
+  // Icones das redes sociais: 45x45, centrados na janela e ancorados no bottom
+  // da fileira - assim acompanham os botoes se eles mudarem de lugar. Com a
+  // tela em 380x480 a fileira termina em y 389, entao os icones caem em
+  // y 393..437, ainda dentro do preto do miolo da arte: o afunilamento que
+  // fecha o painel so' comeca em y ~448.
+  // O vao entre os dois e' de 30 px porque o penduricalho do centro da arte
+  // comeca em y ~436 e, ate' y 447, ocupa x 176..199 - com esse vao ele passa
+  // no espaco entre as duas logos em vez de aparecer por tras delas.
+  // Cada um anda 60 px a partir do centro da janela (45 de largura + 15 de
+  // folga): 130..174 e 205..249.
+  SocialIconButton
+    id: discordButton
+    !tooltip: tr('Entrar no Discord')
+    icon-source: /images/social/discord_icon
+    anchors.left: parent.horizontalCenter
+    anchors.top: ent.bottom
+    margin: 4 0 0 -60
+    @onClick: EnterGame.openSocial('discord')
+
+  SocialIconButton
+    id: instagramButton
+    !tooltip: tr('Seguir no Instagram')
+    icon-source: /images/social/instagram_icon
+    anchors.left: parent.horizontalCenter
+    anchors.top: ent.bottom
+    margin: 4 0 0 15
+    @onClick: EnterGame.openSocial('instagram')
 
   Label
     id: serverInfoLabel

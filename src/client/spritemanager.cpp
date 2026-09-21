@@ -37,6 +37,61 @@ SpriteManager::SpriteManager()
 {
     m_spritesCount = 0;
     m_signature = 0;
+    m_isShuffled = false;
+    m_isAvsp = false;
+}
+
+uint32_t SpriteManager::shuffleSpriteId(uint32_t id, uint32_t count, bool encrypt)
+{
+    if (count <= 1 || id == 0 || id > count)
+        return id;
+
+    // Zero-based index
+    uint32_t x = id - 1;
+
+    // Compute halfBits such that 2^(2*halfBits) >= count
+    uint32_t domain = 1;
+    uint32_t halfBits = 1;
+    while (domain < count) {
+        domain <<= 2;
+        halfBits++;
+    }
+    uint32_t halfMask = (1u << halfBits) - 1;
+
+    // Cycle-walking Feistel permutation (exact 1-to-1 bijection on [0, count-1])
+    do {
+        uint32_t L = x >> halfBits;
+        uint32_t R = x & halfMask;
+
+        if (encrypt) {
+            for (int round = 0; round < 4; ++round) {
+                uint32_t roundKey = (0x9E3779B9u * (round + 1)) ^ 0x6A09E667u;
+                uint32_t F = ((R * 0x85EBCA6Bu) ^ (R >> 13) ^ roundKey) & halfMask;
+                uint32_t newL = R;
+                uint32_t newR = L ^ F;
+                L = newL;
+                R = newR;
+            }
+        } else {
+            for (int round = 3; round >= 0; --round) {
+                uint32_t roundKey = (0x9E3779B9u * (round + 1)) ^ 0x6A09E667u;
+                uint32_t F = ((L * 0x85EBCA6Bu) ^ (L >> 13) ^ roundKey) & halfMask;
+                uint32_t prevR = L;
+                uint32_t prevL = R ^ F;
+                L = prevL;
+                R = prevR;
+            }
+        }
+        x = (L << halfBits) | R;
+    } while (x >= count);
+
+    return x + 1;
+}
+
+uint64_t SpriteManager::getSpriteCryptoKey(uint32_t signature, uint32_t id)
+{
+    // Custom 64-bit secret salt and multiplier for Avatar Eclipse
+    return ((uint64_t)signature ^ 0xA5F37C29B4E1D08Bull) + ((uint64_t)id * 0x517CC1B727220A95ull);
 }
 
 void SpriteManager::terminate()
@@ -49,6 +104,8 @@ bool SpriteManager::loadSpr(std::string file)
     m_spritesCount = 0;
     m_signature = 0;
     m_loaded = false;
+    m_isShuffled = false;
+    m_isAvsp = false;
     m_sprites.clear();
 
     auto cwmFile = g_resources.guessFilePath(file, "cwm");
@@ -208,17 +265,27 @@ void SpriteManager::encryptSprites(std::string fileName)
         stdext::throw_exception("failed to save, spr is not loaded");
 
     try {
-        FileStreamPtr fin = g_resources.createFile(fileName);
+        std::string writeName = fileName;
+        while (!writeName.empty() && (writeName[0] == '/' || writeName[0] == '\\')) {
+            writeName = writeName.substr(1);
+        }
+        FileStreamPtr fin = g_resources.createFile(writeName);
         if (!fin)
-            stdext::throw_exception(stdext::format("failed to open file '%s' for write", fileName));
+            stdext::throw_exception(stdext::format("failed to open file '%s' for write", writeName));
 
-        const char otcv8Signature[] = "OTV8";
-        fin->addU32(*((uint32_t*)otcv8Signature));
+        // Use custom Avatar Eclipse protected sprite signature ("AVSP")
+        const char avspSignature[] = "AVSP";
+        fin->addU32(*((uint32_t*)avspSignature));
         fin->addU32(m_signature);
         fin->addU32(m_spritesCount);
 
+        std::cout << "\nStarting sprite encryption & shuffle (" << m_spritesCount << " sprites)...\n";
+
         for (int i = 1; i <= m_spritesCount; i++) {
-            ImagePtr sprite = getSpriteImage(i);
+            // Write sprite whose mapped index is slot i
+            // Slot i in shuffled file holds original sprite: origId = shuffleSpriteId(i, m_spritesCount, false)
+            uint32_t origId = shuffleSpriteId((uint32_t)i, (uint32_t)m_spritesCount, false);
+            ImagePtr sprite = getSpriteImage((int)origId);
             if (!sprite) {
                 fin->addU16(0);
                 continue;
@@ -229,18 +296,17 @@ void SpriteManager::encryptSprites(std::string fileName)
             int bufferPos = 0;
 
             bool hasAlpha = false;
-            for (int i = 3; i < pixelCount; i += 4) {
-                if (pixels[i] != 0x00 && pixels[i] != 0xFF) {
+            for (int p = 3; p < pixelCount; p += 4) {
+                if (pixels[p] != 0x00 && pixels[p] != 0xFF) {
                     hasAlpha = true;
                     break;
                 }
             }
 
             buffer[bufferPos++] = (hasAlpha ? 1 : 0);
-            int skipedPixels = 0;
-            for (int i = 0; i < pixelCount; ) {
+            for (int p = 0; p < pixelCount; ) {
                 int transparent = 0, colored = 0;
-                for (int j = i; j < pixelCount; j += 4) {
+                for (int j = p; j < pixelCount; j += 4) {
                     if (pixels[j + 3] == 0x00) {
                         if (colored != 0) break;
                         transparent += 1;
@@ -254,26 +320,32 @@ void SpriteManager::encryptSprites(std::string fileName)
                 *(uint16_t*)(buffer.data() + bufferPos) = colored;
                 bufferPos += 2;
 
-                i += transparent * 4;
+                p += transparent * 4;
 
                 for (int c = 0; c < colored; ++c) {
-                    buffer[bufferPos++] = pixels[i];
-                    buffer[bufferPos++] = pixels[i + 1];
-                    buffer[bufferPos++] = pixels[i + 2];
+                    buffer[bufferPos++] = pixels[p];
+                    buffer[bufferPos++] = pixels[p + 1];
+                    buffer[bufferPos++] = pixels[p + 2];
                     if (hasAlpha) {
-                        buffer[bufferPos++] = pixels[i + 3];
+                        buffer[bufferPos++] = pixels[p + 3];
                     }
-                    i += 4;
+                    p += 4;
                 }
             }
 
-            g_crypt.bencrypt(buffer.data(), bufferPos, (uint64_t)m_signature + i);
+            uint64_t key = getSpriteCryptoKey(m_signature, (uint32_t)i);
+            g_crypt.bencrypt(buffer.data(), bufferPos, key);
             fin->addU16(bufferPos);
             fin->write(buffer.data(), bufferPos);
+
+            if (i % 5000 == 0 || i == m_spritesCount) {
+                std::cout << "\rEncrypting sprites: " << i << " / " << m_spritesCount << " (" << (i * 100 / m_spritesCount) << "%)" << std::flush;
+            }
         }
 
         fin->flush();
         fin->close();
+        std::cout << "\nSprites encrypted and shuffled successfully: " << fileName << std::endl;
     }
     catch (std::exception& e) {
         g_logger.error(stdext::format("Failed to save '%s': %s", fileName, e.what()));
@@ -300,6 +372,8 @@ void SpriteManager::unload()
 {
     m_spritesCount = 0;
     m_signature = 0;
+    m_isShuffled = false;
+    m_isAvsp = false;
     m_spritesFile = nullptr;
     m_sprites.clear();
 }
@@ -353,7 +427,9 @@ bool SpriteManager::loadCasualSpr(std::string file)
         m_spritesFile = g_resources.openFile(file, g_game.getFeature(Otc::GameDontCacheFiles));
 
         m_signature = m_spritesFile->getU32();
-        if (m_signature == *((uint32_t*)"OTV8")) {
+        if (m_signature == *((uint32_t*)"AVSP") || m_signature == *((uint32_t*)"OTV8")) {
+            m_isAvsp = (m_signature == *((uint32_t*)"AVSP"));
+            m_isShuffled = m_isAvsp;
             m_signature = m_spritesFile->getU32();
             m_spritesCount = m_spritesFile->getU32();
             m_sprites.resize(m_spritesCount + 1);
@@ -416,14 +492,20 @@ ImagePtr SpriteManager::getSpriteImageCasual(int id)
 {
     try {
         if (!m_sprites.empty()) {
-            if (id >= (int)m_sprites.size())
+            int lookupId = id;
+            if (m_isShuffled && m_spritesCount > 1) {
+                lookupId = (int)shuffleSpriteId((uint32_t)id, (uint32_t)m_spritesCount, true);
+            }
+
+            if (lookupId <= 0 || lookupId >= (int)m_sprites.size())
                 return nullptr;
-            auto& buffer = m_sprites[id];
+            auto& buffer = m_sprites[lookupId];
             if (buffer.size() < 5)
                 return nullptr;
             if (buffer[0] == 0) {
                 buffer[0] = 1;
-                g_crypt.bdecrypt(buffer.data() + 1, buffer.size() - 1, (uint64_t)m_signature + id);
+                uint64_t key = m_isAvsp ? getSpriteCryptoKey(m_signature, (uint32_t)lookupId) : ((uint64_t)m_signature + lookupId);
+                g_crypt.bdecrypt(buffer.data() + 1, buffer.size() - 1, key);
             }
 
             if (buffer[1] > 1) {

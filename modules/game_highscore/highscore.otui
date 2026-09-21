@@ -1,0 +1,230 @@
+HighScoreData < UIWidget
+  height: 21
+
+  Label
+    id: rank
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    width: 34
+    text-align: center
+    color: #ffd800
+    phantom: true
+
+  Label
+    id: name
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.bottom: parent.bottom
+    width: 168
+    text-align: left
+    color: #ffffff
+    phantom: true
+
+  Label
+    id: voc
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.bottom: parent.bottom
+    width: 74
+    text-align: left
+    color: #6eb5ff
+    phantom: true
+
+  Label
+    id: score
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    width: 82
+    margin-right: 8
+    text-align: right
+    color: #ffd800
+    phantom: true
+
+MainWindow
+  id: highscoreWindow
+  text: Highscores
+  size: 396 419
+  padding-top: 3
+  @onEscape: modules.game_highscore.hide()
+
+  Panel
+    id: content
+    anchors.fill: parent
+    margin-top: 16
+    padding: 12
+    background-color: #2f2f2f
+
+    Panel
+      id: filters
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 58
+
+      Label
+        id: categoryIcon
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 4
+        width: 14
+        text: "*"
+        color: #ffd800
+        text-align: center
+
+      Label
+        anchors.top: parent.top
+        anchors.left: categoryIcon.right
+        margin-top: 4
+        width: 62
+        text: Category
+        color: #ffffff
+
+      ComboBox
+        id: categoryBox
+        anchors.top: parent.top
+        anchors.left: prev.right
+        margin-left: 4
+        width: 126
+
+      Label
+        id: position
+        anchors.top: parent.top
+        anchors.left: categoryBox.right
+        anchors.right: parent.right
+        margin-left: 8
+        margin-top: 4
+        text: "Your position: -"
+        color: #ffd800
+
+      Label
+        anchors.top: categoryBox.bottom
+        anchors.left: parent.left
+        margin-top: 8
+        width: 48
+        text: "Search:"
+        color: #ffffff
+
+      TextEdit
+        id: searchEdit
+        anchors.top: categoryBox.bottom
+        anchors.left: prev.right
+        anchors.right: searchButton.left
+        margin-top: 5
+        margin-right: 5
+        height: 22
+
+      Button
+        id: searchButton
+        anchors.top: categoryBox.bottom
+        anchors.right: parent.right
+        margin-top: 5
+        width: 52
+        text: Search
+
+    FlatPanel
+      id: table
+      anchors.top: filters.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: footer.top
+      margin-top: 8
+      margin-bottom: 8
+      padding: 0
+      background-color: #202020cc
+
+      Panel
+        id: header
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: 22
+        background-color: #171717bb
+
+        Label
+          anchors.top: parent.top
+          anchors.left: parent.left
+          anchors.bottom: parent.bottom
+          width: 34
+          text: "#"
+          text-align: center
+          color: #ffffff
+
+        Label
+          anchors.top: parent.top
+          anchors.left: prev.right
+          anchors.bottom: parent.bottom
+          width: 168
+          text: Name
+          text-align: left
+          color: #ffffff
+
+        Label
+          anchors.top: parent.top
+          anchors.left: prev.right
+          anchors.bottom: parent.bottom
+          width: 74
+          text: Vocation
+          text-align: left
+          color: #ffffff
+
+        Label
+          id: scoreHeader
+          anchors.top: parent.top
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          width: 82
+          margin-right: 8
+          text: Level
+          text-align: right
+          color: #ffffff
+
+      Panel
+        id: data
+        anchors.top: header.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        padding: 0
+        layout:
+          type: verticalBox
+
+    Panel
+      id: footer
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: closeButton.top
+      height: 25
+      margin-bottom: 5
+
+      Button
+        id: prev
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        width: 34
+        text: <
+
+      Label
+        id: page
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        width: 112
+        text: "Page 1 / 1"
+        text-align: center
+        color: #ffffff
+
+      Button
+        id: next
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        width: 34
+        text: >
+
+    Button
+      id: closeButton
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.bottom: parent.bottom
+      width: 64
+      text: Close
+      @onClick: modules.game_highscore.hide()

@@ -1,0 +1,12 @@
+Module
+  name: statue_donation
+  description: Statue Donation - doacoes das nacoes + abas globais de EXP/SKILL (opcode 121)
+  author: avatar
+  website: None
+  autoload: true
+  autoload-priority: 1000
+  scripts: [ statue_donation ]
+  sandboxed: true
+  dependencies: [ game_interface ]
+  @onLoad: init()
+  @onUnload: terminate()

@@ -179,6 +179,8 @@ neededTranslations = {
   "Logout",
   "Look",
   "Magic Level",
+  "Bending Experience",
+  "Cooking",
   "Make sure that your client uses\nthe correct game protocol version",
   "Mana",
   "Manage hotkeys:",

@@ -1,0 +1,78 @@
+MainWindow
+  id: QrWindow
+  !text: tr('Escaneie o codigo abaixo!')
+  size: 350 430
+  @onEscape: modules.game_pix.cancelDonate()
+  
+  Label
+    id: text
+    text-align: center
+    text-wrap: true
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 5
+    width: 290
+    text-auto-resize: true
+
+  Button
+    id: close
+    size: 24 24
+    text: X
+    anchors.top: parent.top
+    anchors.right: parent.right
+    @onClick: modules.game_pix.cancelDonate()
+
+  UIButton
+    id: qrCode
+    size: 170 170
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: parent.top
+    margin-top: 55
+    opacity: 1.0
+    $hover !disabled:
+      !tooltip: tr('Clique para copiar o codigo Pix Copia e Cola')
+    @onClick: modules.game_pix.copyCode()
+
+  UIWidget
+    id: Loading
+    size: 48 48
+    image-source: assets/loading
+    anchors.centerIn: qrCode
+    visible: false
+
+  Label
+    id: copyLabel
+    !text: tr('Pix Copia e Cola:')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: qrCode.bottom
+    margin-top: 8
+
+  UITextEdit
+    id: qrCodeEdit
+    size: 270 70
+    image-source: assets/search 
+    image-border: 10
+    padding: 8 10 8 10
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: copyLabel.bottom
+    margin-top: 4
+    text-wrap: true
+
+  Button
+    id: copyButton
+    !text: tr('Copiar Codigo Pix')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: qrCodeEdit.bottom
+    margin-top: 8
+    width: 140
+    @onClick: modules.game_pix.copyCode()
+
+  Button
+    id: siteButton
+    !text: tr('Abrir no navegador')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: copyButton.bottom
+    margin-top: 5
+    width: 140
+    visible: false
+    @onClick: modules.game_pix.openSite()

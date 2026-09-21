@@ -11,15 +11,22 @@ effects:
     effect-displacement: opacity: 1, y: 45, x: -15
   398:
     effect-displacement: opacity: 1, y: 268, x: 268
+  430:
+    effect-displacement: x: 128, y: 128, opacity: 1
+items:
+  18222:
+    item-displacement: opacity: 1, y: -32, x: -32
 creatures:
   394:
-    outfit-displacement: West: 0 0, North: 0 0, East: 0 0, South: 0 0
+    outfit-displacement: East: 0 0, South: 0 0, West: 0 0, North: 0 0
   398:
-    outfit-displacement: West: 0 0, North: 0 0, East: 0 0, South: 0 0
+    outfit-displacement: East: 0 0, South: 0 0, West: 0 0, North: 0 0
+  430:
+    outfit-displacement: East: 0 0, South: 0 0, West: 0 0, North: 0 0
   1215:
-    outfit-displacement: West: 0 0, North: 0 0, East: 0 0, South: 0 0
+    outfit-displacement: East: 0 0, South: 0 0, West: 0 0, North: 0 0
   1279:
-    outfit-displacement: West: 62 45, North: 64 56, East: 32 43, South: 52 29
+    outfit-displacement: East: 32 43, South: 52 29, West: 62 45, North: 64 56
   1287:
     outfit-displacement: opacity: 1.0, North: 58 52, East: 53 48, South: 59 56, West: 56 51
   1302:
@@ -33,7 +40,4 @@ creatures:
   1345:
     outfit-displacement: opacity: 1.0, North: 7 0, East: 0 19, South: 7 0, West: 0 17
   1347:
-    outfit-displacement: West: 0 0, North: 0 0, East: 0 0, South: 0 0
-items:
-  18222:
-    item-displacement: opacity: 1, y: -32, x: -32
+    outfit-displacement: East: 0 0, South: 0 0, West: 0 0, North: 0 0

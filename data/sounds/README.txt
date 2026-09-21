@@ -52,7 +52,7 @@ Fogo:  Fire Whip, Fire Recover, Fire Kick, Fire Skyfall, Fire Jump,
        Fire Explosion, Fire Voltage, Fire Thunderstorm, Fire Discharge,
        Fire Conflagration
 
-Agua:  Water Whip, Water Recover, Water Explosion, Water Heal,
+Agua:  Water Wave, Water Recover, Water Explosion, Water Heal,
        Water Jump, Water IceSpikes, Water Res, Water Shards, Water Surf,
        Water Cannon, Water Regen, Water BloodControl, Water Punch,
        Water Dragon, Water Rain, Water Bubbles, Water Protect,
