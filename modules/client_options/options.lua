@@ -34,7 +34,7 @@ local defaultOptions = {
   skyClouds = true,
   dashWalk = false,
   turnDelay = 50,
-  walkSmoothing = true,
+  walkSmoothing = false,
   -- FUN: Toph Mode (aba que so' aparece para dobrador de terra)
   tophMode = false
 }

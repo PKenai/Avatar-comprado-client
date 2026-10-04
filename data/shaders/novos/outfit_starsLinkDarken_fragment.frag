@@ -74,7 +74,7 @@ void main()
 	vec3 colorRing = vec3(0.0);
 	vec2 translate = vec2(-0.5);
 	
-    vec2 uv = (gl_FragCoord -.5 *u_Resolution.xy) / u_Resolution.y;
+    vec2 uv = (gl_FragCoord.xy - .5 *u_Resolution.xy) / u_Resolution.y;
 	
     float m = 0.;
     uv *= SCALE;

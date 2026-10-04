@@ -474,9 +474,11 @@ end
 function OffsetManager.bindKeys()
   local rootPanel = modules.game_interface.getRootPanel()
 
-  g_keyboard.bindKeyDown('Ctrl+U', function()
-    OffsetManager.toggle()
-  end, rootPanel)
+  -- Ctrl+U removido (abria/fechava o Offset Manager sem querer durante o jogo).
+  -- A janela continua acessivel pelo botao 'Offset Manager' no menu lateral.
+  -- g_keyboard.bindKeyDown('Ctrl+U', function()
+  --   OffsetManager.toggle()
+  -- end, rootPanel)
 
   g_keyboard.bindKeyPress('Shift+Up', function()
     if offsetWindow and offsetWindow:isVisible() then
